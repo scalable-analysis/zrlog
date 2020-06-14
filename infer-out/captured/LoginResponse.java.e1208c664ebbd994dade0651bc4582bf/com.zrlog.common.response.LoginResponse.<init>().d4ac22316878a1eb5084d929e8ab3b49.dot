@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_1" [label="1: Start LoginResponse.<init>()\nFormals:  this:com.zrlog.common.response.LoginResponse*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_1" -> "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_4" ;
+"com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_2" [label="2: Exit LoginResponse.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 3]\n " shape="box"]
+	
+
+	 "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_3" -> "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_2" ;
+"com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_4" [label="4:  Call StandardResponse.<init>() \n   n$0=*&this:com.zrlog.common.response.LoginResponse* [line 3]\n  n$1=_fun_StandardResponse.<init>()(n$0:com.zrlog.common.response.LoginResponse*) [line 3]\n  NULLIFY(&this); [line 3]\n  EXIT_SCOPE(n$0,n$1,this); [line 3]\n " shape="box"]
+	
+
+	 "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_4" -> "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_5" ;
+	 "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_4" -> "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_3" [color="red" ];
+"com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_5" [label="5:  method_body \n   APPLY_ABSTRACTION; [line 3]\n " shape="box"]
+	
+
+	 "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_5" -> "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_2" ;
+	 "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_5" -> "com.zrlog.common.response.LoginResponse.<init>().d4ac22316878a1eb5084d929e8ab3b49_3" [color="red" ];
+}

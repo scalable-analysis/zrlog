@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_1" [label="1: Start Application.<init>()\nFormals:  this:com.zrlog.web.Application*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_1" -> "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_4" ;
+"com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_2" [label="2: Exit Application.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_3" -> "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_2" ;
+"com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_4" [label="4:  Call Object.<init>() \n   n$0=*&this:com.zrlog.web.Application* [line 9]\n  n$1=_fun_Object.<init>()(n$0:com.zrlog.web.Application*) [line 9]\n  NULLIFY(&this); [line 9]\n  EXIT_SCOPE(n$0,n$1,this); [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_4" -> "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_5" ;
+	 "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_4" -> "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_3" [color="red" ];
+"com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_5" [label="5:  method_body \n   APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_5" -> "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_2" ;
+	 "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_5" -> "com.zrlog.web.Application.<init>().28fcaa428ffbae4d809358fd0f6574cc_3" [color="red" ];
+}

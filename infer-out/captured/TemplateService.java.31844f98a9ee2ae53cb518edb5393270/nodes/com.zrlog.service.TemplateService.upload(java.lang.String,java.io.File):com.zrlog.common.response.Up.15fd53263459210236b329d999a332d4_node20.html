@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.TemplateService.upload(java.lang.String,java.io.File):com.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node20</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">20</a></h1></center>PROC: <a href="./../com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4.html">UploadTemplateResponse TemplateService.upload(String,File)</a> LINE: <a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">40</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node19.html"><span class='dangling with_tooltip'>N_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 
+NOT VISITED</span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node21.html"><span class='visited with_tooltip'>N_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$43=*&amp;$irvar10:java.lang.StringBuilder* [line 40];
+_=*n$43:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 40];
+n$45=*&amp;finalPath:java.lang.String* [line 40];
+n$46=_fun_StringBuilder StringBuilder.append(String)(n$43:java.lang.StringBuilder*,n$45:java.lang.String*) virtual [line 40];
+*&amp;$irvar11:java.lang.StringBuilder*=n$46 [line 40];
+</LISTING>
+<hr width="100%">
+<a name="session18" href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node20.html#session18">node20#session18</a>(<a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">40</a>) [compute pre] liveness 20
+<LISTING class='color_black'>JOIN
+
+LEFT:   { templateName, finalFile, $irvar11, response }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session19" href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node20.html#session19">node20#session19</a>(<a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">40</a>) [exec] liveness 20
+<LISTING class='color_black'>PRE STATE:
+{ templateName, finalFile, $irvar11, response }
+
+INSTR=  *&amp;$irvar11:java.lang.StringBuilder*=n$46 [line 40]; 
+
+STATE:
+{ n$46, templateName, finalFile, response }
+
+INSTR=  n$46=_fun_StringBuilder StringBuilder.append(String)(n$43:java.lang.StringBuilder*,n$45:java.lang.String*) virtual [line 40]; 
+
+STATE:
+{ n$43, n$45, templateName, finalFile, response }
+
+INSTR=  n$45=*&amp;finalPath:java.lang.String* [line 40]; 
+
+STATE:
+{ n$43, templateName, finalFile, response, finalPath }
+
+INSTR=  _=*n$43:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 40]; 
+
+STATE UNCHANGED
+
+INSTR=  n$43=*&amp;$irvar10:java.lang.StringBuilder* [line 40]; 
+
+STATE:
+{ templateName, finalFile, $irvar10, response, finalPath }
+
+</LISTING>
+<hr width="100%">
+<a name="session87" href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node20.html#session87">node20#session87</a>(<a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">40</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session88" href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node20.html#session88">node20#session88</a>(<a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">40</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ finalFile, $irvar10, response, finalPath },{ n$41, n$42 })
+
+INSTR=  n$43=*&amp;$irvar10:java.lang.StringBuilder* [line 40]; 
+
+STATE:
+({ n$43, finalFile, $irvar10, response, finalPath },{ n$41, n$42 })
+
+INSTR=  _=*n$43:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 40]; 
+
+STATE:
+({ _, n$43, finalFile, $irvar10, response, finalPath },{ n$41, n$42 })
+
+INSTR=  n$45=*&amp;finalPath:java.lang.String* [line 40]; 
+
+STATE:
+({ _, n$43, n$45, finalFile, $irvar10, response, finalPath },{ n$41, n$42 })
+
+INSTR=  n$46=_fun_StringBuilder StringBuilder.append(String)(n$43:java.lang.StringBuilder*,n$45:java.lang.String*) virtual [line 40]; 
+
+STATE:
+({ _, n$43, n$45, n$46, finalFile, $irvar10, response, finalPath },
+{ n$41, n$42 })
+
+INSTR=  *&amp;$irvar11:java.lang.StringBuilder*=n$46 [line 40]; 
+
+STATE:
+({ finalFile, $irvar11, response },
+{ _, n$43, n$45, n$46, $irvar10, finalPath })
+
+</LISTING>
+<hr width="100%">
+<a name="session34" href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node20.html#session34">node20#session34</a>(<a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">40</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session35" href="./../nodes/com.zrlog.service.TemplateService.upload%28java.lang.String%2Cjava.io.File%29%3Acom.zrlog.common.response.Up.15fd53263459210236b329d999a332d4_node20.html#session35">node20#session35</a>(<a href="./../../TemplateService.java.31844f98a9ee2ae53cb518edb5393270.html#LINE40">40</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$6 -&gt; { },
+  n$9 -&gt; { },
+  n$18 -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$22 -&gt; Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; *,
+  finalFile -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  response -&gt; { message -&gt; { } },
+  finalPath -&gt; { } }
+
+
+
+
+TAINTED_CALL2: (callee="StringBuilder StringBuilder.append(String)", caller="UploadTemplateResponse TemplateService.upload(String,File)")
+INSTR=  n$46 := StringBuilder StringBuilder.append(String)({ n$41,
+                                                             finalPath }) [line 40]; 
+
+STATE:
+{ n$6 -&gt; { },
+  n$9 -&gt; { },
+  n$18 -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$22 -&gt; Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; *,
+  n$46 -&gt; { },
+  finalFile -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  response -&gt; { message -&gt; { } },
+  finalPath -&gt; { } }
+
+
+INSTR=  NULLIFY(&amp;$irvar10); [line 40]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;finalPath); [line 40]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(finalPath); [line 40]; 
+
+STATE:
+{ n$6 -&gt; { },
+  n$9 -&gt; { },
+  n$18 -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$22 -&gt; Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; *,
+  n$46 -&gt; { },
+  finalFile -&gt; (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  response -&gt; { message -&gt; { } },
+  finalPath -&gt; { } }
+
+</LISTING>

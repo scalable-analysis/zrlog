@@ -1,0 +1,39 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_1" [label="1: Start boolean CommentService.isValidEmailAddress(String)\nFormals:  email:java.lang.String*\nLocals:  $irvar0:void m:java.util.regex.Matcher* p:java.util.regex.Pattern* ePattern:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_1" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_4" ;
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_2" [label="2: Exit boolean CommentService.isValidEmailAddress(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_3" [label="3:  exceptions sink \n   NULLIFY(&m); [line 26]\n  NULLIFY(&p); [line 26]\n  NULLIFY(&$irvar0); [line 26]\n  NULLIFY(&ePattern); [line 26]\n  EXIT_SCOPE(m,p,$irvar0,ePattern); [line 26]\n  APPLY_ABSTRACTION; [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_3" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_2" ;
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_4" [label="4:  method_body \n   *&ePattern:java.lang.Object*=\"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\\\\\\\[[0-9]{1,3}\\\\\\\\.[0-9]{1,3}\\\\\\\\.[0-9]{1,3}\\\\\\\\.[0-9]{1,3}\\\\\\\\])|(([a-zA-Z\\\\\\\\-0-9]+\\\\\\\\.)+[a-zA-Z]{2,}))$\" [line 23]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_4" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_5" ;
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_4" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_3" [color="red" ];
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_5" [label="5:  Call Pattern Pattern.compile(String) \n   n$0=*&ePattern:java.lang.Object* [line 24]\n  n$1=_fun_Pattern Pattern.compile(String)(n$0:java.lang.Object*) [line 24]\n  *&p:java.util.regex.Pattern*=n$1 [line 24]\n  NULLIFY(&ePattern); [line 24]\n  EXIT_SCOPE(n$0,n$1,ePattern); [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_5" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_6" ;
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_5" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_3" [color="red" ];
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_6" [label="6:  Call Matcher Pattern.matcher(CharSequence) \n   n$2=*&p:java.util.regex.Pattern* [line 25]\n  _=*n$2:java.util.regex.Pattern*(root java.util.regex.Pattern) [line 25]\n  n$4=*&email:java.lang.String* [line 25]\n  n$5=_fun_Matcher Pattern.matcher(CharSequence)(n$2:java.util.regex.Pattern*,n$4:java.lang.String*) virtual [line 25]\n  *&m:java.util.regex.Matcher*=n$5 [line 25]\n  NULLIFY(&p); [line 25]\n  NULLIFY(&email); [line 25]\n  EXIT_SCOPE(_,n$2,n$4,n$5,p,email); [line 25]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_6" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_7" ;
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_6" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_3" [color="red" ];
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_7" [label="7:  Call boolean Matcher.matches() \n   n$6=*&m:java.util.regex.Matcher* [line 26]\n  _=*n$6:java.util.regex.Matcher*(root java.util.regex.Matcher) [line 26]\n  n$8=_fun_boolean Matcher.matches()(n$6:java.util.regex.Matcher*) virtual [line 26]\n  *&$irvar0:_Bool=n$8 [line 26]\n  NULLIFY(&m); [line 26]\n  EXIT_SCOPE(_,n$6,n$8,m); [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_7" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_8" ;
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_7" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_3" [color="red" ];
+"com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_8" [label="8:  method_body \n   n$9=*&$irvar0:_Bool [line 26]\n  *&return:_Bool=n$9 [line 26]\n  NULLIFY(&$irvar0); [line 26]\n  EXIT_SCOPE(n$9,$irvar0); [line 26]\n  APPLY_ABSTRACTION; [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_8" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_2" ;
+	 "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_8" -> "com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf_3" [color="red" ];
+}

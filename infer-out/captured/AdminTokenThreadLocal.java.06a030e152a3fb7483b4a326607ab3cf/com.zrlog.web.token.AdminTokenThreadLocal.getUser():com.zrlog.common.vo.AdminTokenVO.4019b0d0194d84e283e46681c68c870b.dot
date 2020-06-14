@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_1" [label="1: Start AdminTokenVO AdminTokenThreadLocal.getUser()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_1" -> "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_4" ;
+"com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_2" [label="2: Exit AdminTokenVO AdminTokenThreadLocal.getUser() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 16]\n  EXIT_SCOPE($irvar0); [line 16]\n  APPLY_ABSTRACTION; [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_3" -> "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_2" ;
+"com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_4" [label="4:  Call Object ThreadLocal.get() \n   n$0=*&#GB<>$com.zrlog.web.token.AdminTokenThreadLocal.userThreadLocal:java.lang.ThreadLocal*(root com.zrlog.web.token.AdminTokenThreadLocal) [line 16]\n  _=*n$0:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 16]\n  n$2=_fun_Object ThreadLocal.get()(n$0:java.lang.ThreadLocal*) virtual [line 16]\n  *&$irvar0:java.lang.Object*=n$2 [line 16]\n  EXIT_SCOPE(_,n$0,n$2); [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_4" -> "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_5" ;
+	 "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_4" -> "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_5" [label="5:  method_body \n   n$3=*&$irvar0:java.lang.Object* [line 16]\n  n$4=_fun___cast(n$3:java.lang.Object*,sizeof(t=com.zrlog.common.vo.AdminTokenVO;sub_t=( sub )(cast)):void) [line 16]\n  *&return:com.zrlog.common.vo.AdminTokenVO*=n$4 [line 16]\n  NULLIFY(&$irvar0); [line 16]\n  EXIT_SCOPE(n$3,n$4,$irvar0); [line 16]\n  APPLY_ABSTRACTION; [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_5" -> "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_2" ;
+	 "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_5" -> "com.zrlog.web.token.AdminTokenThreadLocal.getUser():com.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_3" [color="red" ];
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile(java.io.File):void.33f8a2373a3fa5e953c453ce57b6dd9b</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960.html#LINE119">void PluginCoreProcess.tryDownloadPluginCoreFile(File)</a></h1></center>
+<a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:24 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:26 succs:2 exn:2 Instructions
+NULLIFY(&amp;CatchVar86); [line 130];
+NULLIFY(&amp;$irvar3); [line 130];
+NULLIFY(&amp;$irvar0); [line 130];
+NULLIFY(&amp;$irvar1); [line 130];
+NULLIFY(&amp;filePath); [line 130];
+NULLIFY(&amp;e); [line 130];
+EXIT_SCOPE(n$53,CatchVar86,$irvar3,$irvar0,$irvar1,filePath,e); [line 130];
+APPLY_ABSTRACTION; [line 130];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;serverFileName:java.io.File* [line 120];
+_=*n$0:java.io.File*(root java.io.File) [line 120];
+n$2=_fun_boolean File.exists()(n$0:java.io.File*) virtual [line 120];
+*&amp;$irvar0:_Bool=n$2 [line 120];
+EXIT_SCOPE(_,n$0,n$2); [line 120];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:_Bool [line 120];
+PRUNE(!(n$3 != 0), true); [line 120];
+NULLIFY(&amp;$irvar0); [line 120];
+EXIT_SCOPE(n$3,$irvar0); [line 120];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:24 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:_Bool [line 120];
+PRUNE((n$3 != 0), false); [line 120];
+NULLIFY(&amp;$irvar0); [line 120];
+EXIT_SCOPE(n$3,$irvar0); [line 120];
+APPLY_ABSTRACTION; [line 120];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:3 Instructions
+n$4=*&amp;serverFileName:java.io.File* [line 121];
+_=*n$4:java.io.File*(root java.io.File) [line 121];
+n$6=_fun_File File.getParentFile()(n$4:java.io.File*) virtual [line 121];
+*&amp;$irvar1:java.io.File*=n$6 [line 121];
+EXIT_SCOPE(_,n$4,n$6); [line 121];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;$irvar1:java.io.File* [line 121];
+_=*n$7:java.io.File*(root java.io.File) [line 121];
+n$9=_fun_boolean File.mkdirs()(n$7:java.io.File*) virtual [line 121];
+*&amp;$irvar2:_Bool=n$9 [line 121];
+NULLIFY(&amp;$irvar1); [line 121];
+NULLIFY(&amp;$irvar2); [line 121];
+EXIT_SCOPE(_,n$7,n$9,$irvar1,$irvar2); [line 121];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$10=*&amp;serverFileName:java.io.File* [line 122];
+_=*n$10:java.io.File*(root java.io.File) [line 122];
+n$12=_fun_File File.getParentFile()(n$10:java.io.File*) virtual [line 122];
+*&amp;$irvar3:java.io.File*=n$12 [line 122];
+NULLIFY(&amp;serverFileName); [line 122];
+EXIT_SCOPE(_,n$10,n$12,serverFileName); [line 122];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$13=*&amp;$irvar3:java.io.File* [line 122];
+_=*n$13:java.io.File*(root java.io.File) [line 122];
+n$15=_fun_String File.toString()(n$13:java.io.File*) virtual [line 122];
+*&amp;filePath:java.lang.String*=n$15 [line 122];
+NULLIFY(&amp;$irvar3); [line 122];
+EXIT_SCOPE(_,n$13,n$15,$irvar3); [line 122];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:27 Instructions
+n$16=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginCoreProcess) [line 124];
+_=*n$16:org.slf4j.Logger*(root org.slf4j.Logger) [line 124];
+n$18=_fun_void Logger.info(String)(n$16:org.slf4j.Logger*,"plugin-core.jar not exists will download from http://dl.zrlog.com/plugin/core/plugin-core.jar":java.lang.Object*) interface virtual [line 124];
+EXIT_SCOPE(_,n$16,n$18); [line 124];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:27 Instructions
+n$19=_fun_HttpUtil HttpUtil.getInstance()() [line 125];
+*&amp;$irvar4:com.hibegin.common.util.http.HttpUtil*=n$19 [line 125];
+EXIT_SCOPE(n$19); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:27 Instructions
+n$20=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 125];
+n$21=_fun_StringBuilder.&lt;init&gt;()(n$20:java.lang.StringBuilder*) [line 125];
+*&amp;$irvar5:java.lang.StringBuilder*=n$20 [line 125];
+EXIT_SCOPE(n$20,n$21); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:27 Instructions
+n$22=*&amp;$irvar5:java.lang.StringBuilder* [line 125];
+_=*n$22:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 125];
+n$24=_fun_StringBuilder StringBuilder.append(String)(n$22:java.lang.StringBuilder*,"http://dl.zrlog.com/plugin/core/plugin-core.jar?_=":java.lang.Object*) virtual [line 125];
+*&amp;$irvar6:java.lang.StringBuilder*=n$24 [line 125];
+NULLIFY(&amp;$irvar5); [line 125];
+EXIT_SCOPE(_,n$22,n$24,$irvar5); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:27 Instructions
+n$25=_fun_long System.currentTimeMillis()() [line 125];
+*&amp;$irvar7:long=n$25 [line 125];
+EXIT_SCOPE(n$25); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:27 Instructions
+n$26=*&amp;$irvar6:java.lang.StringBuilder* [line 125];
+_=*n$26:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 125];
+n$28=*&amp;$irvar7:long [line 125];
+n$29=_fun_StringBuilder StringBuilder.append(long)(n$26:java.lang.StringBuilder*,n$28:long) virtual [line 125];
+*&amp;$irvar8:java.lang.StringBuilder*=n$29 [line 125];
+NULLIFY(&amp;$irvar7); [line 125];
+NULLIFY(&amp;$irvar6); [line 125];
+EXIT_SCOPE(_,n$26,n$28,n$29,$irvar7,$irvar6); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:27 Instructions
+n$30=*&amp;$irvar8:java.lang.StringBuilder* [line 125];
+_=*n$30:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 125];
+n$32=_fun_String StringBuilder.toString()(n$30:java.lang.StringBuilder*) virtual [line 125];
+*&amp;$irvar9:java.lang.String*=n$32 [line 125];
+NULLIFY(&amp;$irvar8); [line 125];
+EXIT_SCOPE(_,n$30,n$32,$irvar8); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:27 Instructions
+n$33=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 125];
+n$34=_fun_HashMap.&lt;init&gt;()(n$33:java.util.HashMap*) [line 125];
+*&amp;$irvar10:java.util.HashMap*=n$33 [line 125];
+EXIT_SCOPE(n$33,n$34); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:27 Instructions
+n$35=_fun___new(sizeof(t=com.hibegin.common.util.http.handle.HttpFileHandle):com.hibegin.common.util.http.handle.HttpFileHandle*) [line 125];
+n$36=*&amp;filePath:java.lang.String* [line 125];
+n$37=_fun_HttpFileHandle.&lt;init&gt;(String)(n$35:com.hibegin.common.util.http.handle.HttpFileHandle*,n$36:java.lang.String*) [line 125];
+*&amp;$irvar11:com.hibegin.common.util.http.handle.HttpFileHandle*=n$35 [line 125];
+NULLIFY(&amp;filePath); [line 125];
+EXIT_SCOPE(n$35,n$36,n$37,filePath); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:27 Instructions
+n$38=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 125];
+n$39=_fun_HashMap.&lt;init&gt;()(n$38:java.util.HashMap*) [line 125];
+*&amp;$irvar12:java.util.HashMap*=n$38 [line 125];
+EXIT_SCOPE(n$38,n$39); [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:24 exn:27 Instructions
+n$40=*&amp;$irvar4:com.hibegin.common.util.http.HttpUtil* [line 125];
+_=*n$40:com.hibegin.common.util.http.HttpUtil*(root com.hibegin.common.util.http.HttpUtil) [line 125];
+n$42=*&amp;$irvar9:java.lang.String* [line 125];
+n$43=*&amp;$irvar10:java.util.HashMap* [line 125];
+n$44=*&amp;$irvar11:com.hibegin.common.util.http.handle.HttpFileHandle* [line 125];
+n$45=*&amp;$irvar12:java.util.HashMap* [line 125];
+n$46=_fun_HttpHandle HttpUtil.sendGetRequest(String,Map,HttpHandle,Map)(n$40:com.hibegin.common.util.http.HttpUtil*,n$42:java.lang.String*,n$43:java.util.HashMap*,n$44:com.hibegin.common.util.http.handle.HttpFileHandle*,n$45:java.util.HashMap*) virtual [line 125];
+*&amp;$irvar13:com.hibegin.common.util.http.handle.HttpHandle*=n$46 [line 125];
+NULLIFY(&amp;$irvar9); [line 125];
+NULLIFY(&amp;$irvar4); [line 125];
+NULLIFY(&amp;$irvar12); [line 125];
+NULLIFY(&amp;$irvar13); [line 125];
+NULLIFY(&amp;$irvar11); [line 125];
+NULLIFY(&amp;$irvar10); [line 125];
+EXIT_SCOPE(_,n$40,n$42,n$43,n$44,n$45,n$46,$irvar9,$irvar4,$irvar12,$irvar13,$irvar11,$irvar10); [line 125];
+APPLY_ABSTRACTION; [line 125];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:25 succs:23 exn:3 Instructions
+n$47=*&amp;CatchVar86:java.lang.Object* [line 126];
+*&amp;e:java.lang.Object*=n$47 [line 126];
+NULLIFY(&amp;CatchVar86); [line 126];
+EXIT_SCOPE(n$47,CatchVar86); [line 126];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$48=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginCoreProcess) [line 127];
+_=*n$48:org.slf4j.Logger*(root org.slf4j.Logger) [line 127];
+n$50=*&amp;e:java.lang.Object* [line 127];
+n$51=_fun_void Logger.warn(String,Throwable)(n$48:org.slf4j.Logger*,"download plugin core error":java.lang.Object*,n$50:java.lang.Object*) interface virtual [line 127];
+NULLIFY(&amp;e); [line 127];
+EXIT_SCOPE(_,n$48,n$50,n$51,e); [line 127];
+APPLY_ABSTRACTION; [line 127];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 21 6 succs:2 exn:3 Instructions
+APPLY_ABSTRACTION; [line 130];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:27 succs:22 exn:3 Conditional exception handler
+n$54=_fun___instanceof(n$53:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 126];
+PRUNE(n$54, true); [line 126];
+*&amp;CatchVar86:void=n$53 [line 126];
+EXIT_SCOPE(n$53,n$54); [line 126];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:27 succs:3 exn:3 Conditional exception handler
+n$54=_fun___instanceof(n$53:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 126];
+PRUNE(!n$54, false); [line 126];
+*&amp;return:void=EXN n$53 [line 126];
+EXIT_SCOPE(n$53,n$54); [line 126];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds: succs:25 26 exn:3 Instructions
+n$52=*&amp;return:void [line 126];
+*&amp;return:void=null [line 126];
+n$53=_fun___unwrap_exception(n$52:void) [line 126];
+NULLIFY(&amp;$irvar9); [line 126];
+NULLIFY(&amp;$irvar5); [line 126];
+NULLIFY(&amp;$irvar4); [line 126];
+NULLIFY(&amp;$irvar7); [line 126];
+NULLIFY(&amp;$irvar12); [line 126];
+NULLIFY(&amp;$irvar6); [line 126];
+NULLIFY(&amp;$irvar11); [line 126];
+NULLIFY(&amp;$irvar10); [line 126];
+NULLIFY(&amp;$irvar8); [line 126];
+NULLIFY(&amp;filePath); [line 126];
+EXIT_SCOPE(n$52,$irvar9,$irvar5,$irvar4,$irvar7,$irvar12,$irvar6,$irvar11,$irvar10,$irvar8,filePath); [line 126];
+</span></span></a><br />@
+
+<span class='color_black'>void void PluginCoreProcess.tryDownloadPluginCoreFile(File)(com.zrlog.web.plugin.PluginCoreProcess* this, java.io.File* serverFileName)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= void PluginCoreProcess.tryDownloadPluginCoreFile(File)
+; translation_unit= web/src/main/java/com/zrlog/web/plugin/PluginCoreProcess.java
+; access= Private
+; formals= [(this,com.zrlog.web.plugin.PluginCoreProcess*);  (serverFileName,
+            java.io.File*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/plugin/PluginCoreProcess.java:119
+; locals= [{ name= CatchVar86; typ= void; modify_in_block= false }; 
+           { name= $irvar13; typ= void; modify_in_block= false }; 
+           { name= $irvar12; typ= void; modify_in_block= false }; 
+           { name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= filePath; typ= java.lang.String*; modify_in_block= false }; 
+           { name= e; typ= java.io.IOException*; modify_in_block= false }]
+; ret_type= void 
+; proc_id= com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile(java.io.File):void }</pre>
+</body>
+</html>

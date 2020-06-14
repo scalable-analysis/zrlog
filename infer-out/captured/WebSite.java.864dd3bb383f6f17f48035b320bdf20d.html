@@ -1,0 +1,364 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>WebSite.java.864dd3bb383f6f17f48035b320bdf20d</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File data/src/main/java/com/zrlog/model/WebSite.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.model; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.jfinal.plugin.activerecord.Db; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.jfinal.plugin.activerecord.Model; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import java.util.HashMap; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import java.util.List; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import java.util.Map; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line"> * 存放全局的设置，比如网站标题，关键字，插件，主题的配置信息等，当字典表处理即可，对应数据库的website表 </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">public class WebSite extends Model&lt;WebSite&gt; { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.<init>%28%29.1d42d27191a5b4e8bedb27e84c8a9137_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.<init>%28%29.1d42d27191a5b4e8bedb27e84c8a9137_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.model.WebSite* [line 13];
+n$1=_fun_Model.&lt;init&gt;()(n$0:com.zrlog.model.WebSite*) [line 13];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.<init>%28%29.1d42d27191a5b4e8bedb27e84c8a9137_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.<init>%28%29.1d42d27191a5b4e8bedb27e84c8a9137_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.<init>%28%29.1d42d27191a5b4e8bedb27e84c8a9137_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/com.zrlog.model.WebSite.<init>%28%29.1d42d27191a5b4e8bedb27e84c8a9137.html">summary for WebSite.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    public static final String TABLE_NAME = &quot;website&quot;; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    public Map&lt;String, Object&gt; getWebSite() { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e.html">summary for Map WebSite.getWebSite()</a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">        Map&lt;String, Object&gt; webSites = new HashMap&lt;&gt;(); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 17];
+n$1=_fun_HashMap.&lt;init&gt;()(n$0:java.util.HashMap*) [line 17];
+*&amp;webSites:java.util.HashMap*=n$0 [line 17];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">        List&lt;WebSite&gt; lw = find(&quot;select * from &quot; + TABLE_NAME); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.model.WebSite* [line 18];
+_=*n$2:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 18];
+n$4=_fun_List Model.find(String)(n$2:com.zrlog.model.WebSite*,"select * from website":java.lang.Object*) virtual [line 18];
+*&amp;lw:java.util.List*=n$4 [line 18];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">        for (WebSite webSite : lw) { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;lw:java.util.List* [line 19];
+_=*n$5:java.util.List*(root java.util.List) [line 19];
+n$7=_fun_Iterator List.iterator()(n$5:java.util.List*) interface virtual [line 19];
+*&amp;$bcvar3:java.util.Iterator*=n$7 [line 19];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:22 6 succs:10 exn:3 Instructions
+n$8=*&amp;$bcvar3:java.util.Iterator* [line 19];
+_=*n$8:java.util.Iterator*(root java.util.Iterator) [line 19];
+n$10=_fun_boolean Iterator.hasNext()(n$8:java.util.Iterator*) interface virtual [line 19];
+*&amp;$irvar0:_Bool=n$10 [line 19];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node10.html"><span class='visited with_tooltip'>J_10<span class='tooltip'>node10 preds:7 succs:8 9 exn: Join
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:10 succs:11 exn:3 Conditional method_body
+n$11=*&amp;$irvar0:_Bool [line 19];
+PRUNE(!(n$11 == 0), true); [line 19];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:8 succs:12 exn:3 Instructions
+n$12=*&amp;$bcvar3:java.util.Iterator* [line 19];
+_=*n$12:java.util.Iterator*(root java.util.Iterator) [line 19];
+n$14=_fun_Object Iterator.next()(n$12:java.util.Iterator*) interface virtual [line 19];
+*&amp;$irvar1:java.lang.Object*=n$14 [line 19];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$15=*&amp;$irvar1:java.lang.Object* [line 19];
+n$16=_fun___cast(n$15:java.lang.Object*,sizeof(t=com.zrlog.model.WebSite;sub_t=( sub )(cast)):void) [line 19];
+*&amp;webSite:com.zrlog.model.WebSite*=n$16 [line 19];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:10 succs:23 exn:3 Conditional method_body
+n$11=*&amp;$irvar0:_Bool [line 19];
+PRUNE((n$11 == 0), false); [line 19];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">            webSites.put(webSite.getStr(&quot;name&quot;), webSite.get(&quot;value&quot;)); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$17=*&amp;webSite:com.zrlog.model.WebSite* [line 20];
+_=*n$17:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 20];
+n$19=_fun_String Model.getStr(String)(n$17:com.zrlog.model.WebSite*,"name":java.lang.Object*) virtual [line 20];
+*&amp;$irvar2:java.lang.String*=n$19 [line 20];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$20=*&amp;webSite:com.zrlog.model.WebSite* [line 20];
+_=*n$20:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 20];
+n$22=_fun_Object Model.get(String)(n$20:com.zrlog.model.WebSite*,"value":java.lang.Object*) virtual [line 20];
+*&amp;$irvar3:java.lang.Object*=n$22 [line 20];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$23=*&amp;webSites:java.util.HashMap* [line 20];
+_=*n$23:java.util.HashMap*(root java.util.HashMap) [line 20];
+n$25=*&amp;$irvar2:java.lang.String* [line 20];
+n$26=*&amp;$irvar3:java.lang.Object* [line 20];
+n$27=_fun_Object HashMap.put(Object,Object)(n$23:java.util.HashMap*,n$25:java.lang.String*,n$26:java.lang.Object*) interface virtual [line 20];
+*&amp;$irvar4:java.lang.Object*=n$27 [line 20];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">            webSites.put(webSite.getStr(&quot;name&quot;) + &quot;Remark&quot;, webSite.get(&quot;remark&quot;)); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$28=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 21];
+n$29=_fun_StringBuilder.&lt;init&gt;()(n$28:java.lang.StringBuilder*) [line 21];
+*&amp;$irvar5:java.lang.StringBuilder*=n$28 [line 21];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$30=*&amp;webSite:com.zrlog.model.WebSite* [line 21];
+_=*n$30:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 21];
+n$32=_fun_String Model.getStr(String)(n$30:com.zrlog.model.WebSite*,"name":java.lang.Object*) virtual [line 21];
+*&amp;$irvar6:java.lang.String*=n$32 [line 21];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$33=*&amp;$irvar5:java.lang.StringBuilder* [line 21];
+_=*n$33:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 21];
+n$35=*&amp;$irvar6:java.lang.String* [line 21];
+n$36=_fun_StringBuilder StringBuilder.append(String)(n$33:java.lang.StringBuilder*,n$35:java.lang.String*) virtual [line 21];
+*&amp;$irvar7:java.lang.StringBuilder*=n$36 [line 21];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$37=*&amp;$irvar7:java.lang.StringBuilder* [line 21];
+_=*n$37:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 21];
+n$39=_fun_StringBuilder StringBuilder.append(String)(n$37:java.lang.StringBuilder*,"Remark":java.lang.Object*) virtual [line 21];
+*&amp;$irvar8:java.lang.StringBuilder*=n$39 [line 21];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$40=*&amp;$irvar8:java.lang.StringBuilder* [line 21];
+_=*n$40:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 21];
+n$42=_fun_String StringBuilder.toString()(n$40:java.lang.StringBuilder*) virtual [line 21];
+*&amp;$irvar9:java.lang.String*=n$42 [line 21];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$43=*&amp;webSite:com.zrlog.model.WebSite* [line 21];
+_=*n$43:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 21];
+n$45=_fun_Object Model.get(String)(n$43:com.zrlog.model.WebSite*,"remark":java.lang.Object*) virtual [line 21];
+*&amp;$irvar10:java.lang.Object*=n$45 [line 21];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:7 exn:3 Instructions
+n$46=*&amp;webSites:java.util.HashMap* [line 21];
+_=*n$46:java.util.HashMap*(root java.util.HashMap) [line 21];
+n$48=*&amp;$irvar9:java.lang.String* [line 21];
+n$49=*&amp;$irvar10:java.lang.Object* [line 21];
+n$50=_fun_Object HashMap.put(Object,Object)(n$46:java.util.HashMap*,n$48:java.lang.String*,n$49:java.lang.Object*) interface virtual [line 21];
+*&amp;$irvar11:java.lang.Object*=n$50 [line 21];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">        return webSites; <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:9 succs:2 exn:3 Instructions
+n$51=*&amp;webSites:java.util.HashMap* [line 23];
+*&amp;return:java.util.Map*=n$51 [line 23];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:23 3 succs: exn: Exit
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getWebSite%28%29%3Ajava.util.Map.42acea7e4a26c514efd9b14dc50aee6e_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    public boolean updateByKV(String name, Object value) { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43.html">summary for boolean WebSite.updateByKV(String,Object)</a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">        if (Db.queryInt(&quot;select siteId from &quot; + TABLE_NAME + &quot; where name=?&quot;, name) != null) { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 27];
+*&amp;$irvar0:java.lang.Object*[_*_](*)=n$0 [line 27];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 27];
+n$2=*&amp;name:java.lang.String* [line 27];
+*n$1[0]:java.lang.String*=n$2 [line 27];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:3 Instructions
+n$3=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 27];
+n$4=_fun_Integer Db.queryInt(String,Object[])("select siteId from website where name=?":java.lang.Object*,n$3:java.lang.Object*[_*_](*)) [line 27];
+*&amp;$irvar1:java.lang.Integer*=n$4 [line 27];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:3 Conditional method_body
+n$5=*&amp;$irvar1:java.lang.Integer* [line 27];
+PRUNE(!(n$5 == null), true); [line 27];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:13 exn:3 Conditional method_body
+n$5=*&amp;$irvar1:java.lang.Integer* [line 27];
+PRUNE((n$5 == null), false); [line 27];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">            Db.update(&quot;update &quot; + TABLE_NAME + &quot; set value=? where name=?&quot;, value, name); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 exn:3 Instructions
+n$6=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 28];
+*&amp;$irvar2:java.lang.Object*[_*_](*)=n$6 [line 28];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$7=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 28];
+n$8=*&amp;value:java.lang.Object* [line 28];
+*n$7[0]:java.lang.Object*=n$8 [line 28];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$9=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 28];
+n$10=*&amp;name:java.lang.String* [line 28];
+*n$9[1]:java.lang.String*=n$10 [line 28];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:17 exn:3 Instructions
+n$11=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 28];
+n$12=_fun_int Db.update(String,Object[])("update website set value=? where name=?":java.lang.Object*,n$11:java.lang.Object*[_*_](*)) [line 28];
+*&amp;$irvar3:int=n$12 [line 28];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">            Db.update(&quot;insert &quot; + TABLE_NAME + &quot;(`value`,`name`) value(?,?)&quot;, value, name); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:8 succs:14 exn:3 Instructions
+n$13=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 30];
+*&amp;$irvar4:java.lang.Object*[_*_](*)=n$13 [line 30];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$14=*&amp;$irvar4:java.lang.Object*[_*_](*) [line 30];
+n$15=*&amp;value:java.lang.Object* [line 30];
+*n$14[0]:java.lang.Object*=n$15 [line 30];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$16=*&amp;$irvar4:java.lang.Object*[_*_](*) [line 30];
+n$17=*&amp;name:java.lang.String* [line 30];
+*n$16[1]:java.lang.String*=n$17 [line 30];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$18=*&amp;$irvar4:java.lang.Object*[_*_](*) [line 30];
+n$19=_fun_int Db.update(String,Object[])("insert website(`value`,`name`) value(?,?)":java.lang.Object*,n$18:java.lang.Object*[_*_](*)) [line 30];
+*&amp;$irvar5:int=n$19 [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">        return true; <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 12 succs:2 exn:3 Instructions
+*&amp;return:_Bool=1 [line 32];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:17 3 succs: exn: Exit
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">    public String getStringValueByName(String name) { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195.html">summary for String WebSite.getStringValueByName(String)</a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">            WebSite webSite = findFirst(&quot;select value from &quot; + TABLE_NAME + &quot; where name=?&quot;, name); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:16 Instructions
+n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 37];
+*&amp;$irvar0:java.lang.Object*[_*_](*)=n$0 [line 37];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:16 Instructions
+n$1=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 37];
+n$2=*&amp;name:java.lang.String* [line 37];
+*n$1[0]:java.lang.String*=n$2 [line 37];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:16 Instructions
+n$3=*&amp;this:com.zrlog.model.WebSite* [line 37];
+_=*n$3:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 37];
+n$5=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 37];
+n$6=_fun_Model Model.findFirst(String,Object[])(n$3:com.zrlog.model.WebSite*,"select value from website where name=?":java.lang.Object*,n$5:java.lang.Object*[_*_](*)) virtual [line 37];
+*&amp;$irvar1:com.jfinal.plugin.activerecord.Model*=n$6 [line 37];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 9 exn:16 Instructions
+n$7=*&amp;$irvar1:com.jfinal.plugin.activerecord.Model* [line 37];
+n$8=_fun___cast(n$7:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.WebSite;sub_t=( sub )(cast)):void) [line 37];
+*&amp;webSite:com.zrlog.model.WebSite*=n$8 [line 37];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">            if (webSite != null) { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:7 succs:10 exn:16 Conditional method_body
+n$9=*&amp;webSite:com.zrlog.model.WebSite* [line 38];
+PRUNE(!(n$9 == null), true); [line 38];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:7 succs:13 exn:16 Conditional method_body
+n$9=*&amp;webSite:com.zrlog.model.WebSite* [line 38];
+PRUNE((n$9 == null), false); [line 38];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">                return webSite.get(&quot;value&quot;); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:8 succs:11 exn:16 Instructions
+n$10=*&amp;webSite:com.zrlog.model.WebSite* [line 39];
+_=*n$10:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 39];
+n$12=_fun_Object Model.get(String)(n$10:com.zrlog.model.WebSite*,"value":java.lang.Object*) virtual [line 39];
+*&amp;$irvar2:java.lang.Object*=n$12 [line 39];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:2 exn:3 Instructions
+n$13=*&amp;$irvar2:java.lang.Object* [line 39];
+n$14=_fun___cast(n$13:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 39];
+*&amp;return:java.lang.String*=n$14 [line 39];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">        } catch (NullPointerException e) { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:14 succs:13 exn:3 Instructions
+n$15=*&amp;CatchVar35:java.lang.Object* [line 41];
+*&amp;$bcvar2:java.lang.Object*=n$15 [line 41];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:16 succs:12 exn:3 Conditional exception handler
+n$18=_fun___instanceof(n$17:java.lang.NullPointerException*,sizeof(t=java.lang.NullPointerException):void) [line 41];
+PRUNE(n$18, true); [line 41];
+*&amp;CatchVar35:java.lang.String*=n$17 [line 41];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:16 succs:3 exn:3 Conditional exception handler
+n$18=_fun___instanceof(n$17:java.lang.NullPointerException*,sizeof(t=java.lang.NullPointerException):void) [line 41];
+PRUNE(!n$18, false); [line 41];
+*&amp;return:java.lang.String*=EXN n$17 [line 41];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds: succs:14 15 exn:3 Instructions
+n$16=*&amp;return:java.lang.String* [line 41];
+*&amp;return:java.lang.String*=null [line 41];
+n$17=_fun___unwrap_exception(n$16:java.lang.String*) [line 41];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">            //ignore，比如在未安装时，会有该异常但是不影响逻辑 </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">        return &quot;&quot;; <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 9 succs:2 exn:3 Instructions
+*&amp;return:java.lang.String*="" [line 44];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:13 11 3 succs: exn: Exit
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getStringValueByName%28java.lang.String%29%3Ajava.lang.String.f266236fb85f82b51f88fcc70c12c195_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:15 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">    public boolean getBoolValueByName(String name) { <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce.html">summary for boolean WebSite.getBoolValueByName(String)</a></td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">        WebSite webSite = findFirst(&quot;select value from website where name=?&quot;, name); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 48];
+*&amp;$irvar0:java.lang.Object*[_*_](*)=n$0 [line 48];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 48];
+n$2=*&amp;name:java.lang.String* [line 48];
+*n$1[0]:java.lang.String*=n$2 [line 48];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;this:com.zrlog.model.WebSite* [line 48];
+_=*n$3:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 48];
+n$5=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 48];
+n$6=_fun_Model Model.findFirst(String,Object[])(n$3:com.zrlog.model.WebSite*,"select value from website where name=?":java.lang.Object*,n$5:java.lang.Object*[_*_](*)) virtual [line 48];
+*&amp;$irvar1:com.jfinal.plugin.activerecord.Model*=n$6 [line 48];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 9 exn:3 Instructions
+n$7=*&amp;$irvar1:com.jfinal.plugin.activerecord.Model* [line 48];
+n$8=_fun___cast(n$7:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.WebSite;sub_t=( sub )(cast)):void) [line 48];
+*&amp;webSite:com.zrlog.model.WebSite*=n$8 [line 48];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">        //数据库varchar导致这里使用1进行比较 </td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">        return webSite != null &amp;&amp; webSite.get(&quot;value&quot;) instanceof String &amp;&amp; &quot;1&quot;.equals(webSite.get(&quot;value&quot;)); <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:7 succs:10 exn:3 Conditional method_body
+n$9=*&amp;webSite:com.zrlog.model.WebSite* [line 50];
+PRUNE(!(n$9 == null), true); [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:8 succs:11 12 exn:3 Instructions
+n$10=*&amp;webSite:com.zrlog.model.WebSite* [line 50];
+_=*n$10:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 50];
+n$12=_fun_Object Model.get(String)(n$10:com.zrlog.model.WebSite*,"value":java.lang.Object*) virtual [line 50];
+*&amp;$irvar2:java.lang.Object*=n$12 [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:10 succs:13 exn:3 Conditional method_body
+n$13=*&amp;$irvar2:java.lang.Object* [line 50];
+n$14=_fun___instanceof(n$13:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(instof)):void) [line 50];
+PRUNE(!(n$14 == 0), true); [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:11 succs:14 exn:3 Instructions
+n$15=*&amp;webSite:com.zrlog.model.WebSite* [line 50];
+_=*n$15:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 50];
+n$17=_fun_Object Model.get(String)(n$15:com.zrlog.model.WebSite*,"value":java.lang.Object*) virtual [line 50];
+*&amp;$irvar3:java.lang.Object*=n$17 [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 16 exn:3 Instructions
+n$18=*&amp;$irvar3:java.lang.Object* [line 50];
+n$19=_fun_boolean String.equals(Object)("1":java.lang.Object*,n$18:java.lang.Object*) virtual [line 50];
+*&amp;$irvar4:_Bool=n$19 [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:14 succs:17 exn:3 Conditional method_body
+n$20=*&amp;$irvar4:_Bool [line 50];
+PRUNE(!(n$20 == 0), true); [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:15 succs:19 exn:3 Instructions
+*&amp;$T0_53:int=1 [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:14 succs:18 exn:3 Conditional method_body
+n$20=*&amp;$irvar4:_Bool [line 50];
+PRUNE((n$20 == 0), false); [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:10 succs:18 exn:3 Conditional method_body
+n$13=*&amp;$irvar2:java.lang.Object* [line 50];
+n$14=_fun___instanceof(n$13:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(instof)):void) [line 50];
+PRUNE((n$14 == 0), false); [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:7 succs:18 exn:3 Conditional method_body
+n$9=*&amp;webSite:com.zrlog.model.WebSite* [line 50];
+PRUNE((n$9 == null), false); [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:16 12 9 succs:19 exn:3 Instructions
+*&amp;$T0_53:int=0 [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 17 succs:2 exn:3 Instructions
+n$21=*&amp;$T0_53:int [line 50];
+*&amp;return:_Bool=n$21 [line 50];
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:19 3 succs: exn: Exit
+</span></span></a> <a href="./WebSite.java.864dd3bb383f6f17f48035b320bdf20d/nodes/com.zrlog.model.WebSite.getBoolValueByName%28java.lang.String%29%3Aboolean.52a0c89a3ccb88235328edf48d617cce_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.CommentService.save(com.zrlog.common.request.CreateCommentRequest):com.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">18</a></h1></center>PROC: <a href="./../com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f.html">CreateCommentResponse CommentService.save(CreateCommentRequest)</a> LINE: <a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node17.html"><span class='visited with_tooltip'>N_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node19.html"><span class='visited with_tooltip'>N_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$23=*&amp;$irvar5:java.lang.String* [line 42];
+n$24=*&amp;$irvar6:org.jsoup.safety.Whitelist* [line 42];
+n$25=_fun_String Jsoup.clean(String,Whitelist)(n$23:java.lang.String*,n$24:org.jsoup.safety.Whitelist*) [line 42];
+*&amp;comment:java.lang.String*=n$25 [line 42];
+</LISTING>
+<hr width="100%">
+<a name="session132" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session132">node18#session132</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [compute pre] liveness 18
+<LISTING class='color_black'>JOIN
+
+LEFT:   { createCommentResponse, comment, createCommentRequest }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session133" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session133">node18#session133</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [exec] liveness 18
+<LISTING class='color_black'>PRE STATE:
+{ createCommentResponse, comment, createCommentRequest }
+
+INSTR=  *&amp;comment:java.lang.String*=n$25 [line 42]; 
+
+STATE:
+{ n$25, createCommentResponse, createCommentRequest }
+
+INSTR=  n$25=_fun_String Jsoup.clean(String,Whitelist)(n$23:java.lang.String*,n$24:org.jsoup.safety.Whitelist*) [line 42]; 
+
+STATE:
+{ n$23, n$24, createCommentResponse, createCommentRequest }
+
+INSTR=  n$24=*&amp;$irvar6:org.jsoup.safety.Whitelist* [line 42]; 
+
+STATE:
+{ n$23, createCommentResponse, createCommentRequest, $irvar6 }
+
+INSTR=  n$23=*&amp;$irvar5:java.lang.String* [line 42]; 
+
+STATE:
+{ createCommentResponse, $irvar5, createCommentRequest, $irvar6 }
+
+</LISTING>
+<hr width="100%">
+<a name="session201" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session201">node18#session201</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session202" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session202">node18#session202</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  n$23=*&amp;$irvar5:java.lang.String* [line 42]; 
+
+STATE:
+({ n$23, createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  n$24=*&amp;$irvar6:org.jsoup.safety.Whitelist* [line 42]; 
+
+STATE:
+({ n$23, n$24, createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  n$25=_fun_String Jsoup.clean(String,Whitelist)(n$23:java.lang.String*,n$24:org.jsoup.safety.Whitelist*) [line 42]; 
+
+STATE:
+({ n$23, n$24, n$25, createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  *&amp;comment:java.lang.String*=n$25 [line 42]; 
+
+STATE:
+({ createCommentResponse, comment },{ n$23, n$24, n$25, $irvar5, $irvar6 })
+
+</LISTING>
+<hr width="100%">
+<a name="session132" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session132">node18#session132</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [compute pre] liveness 18
+<LISTING class='color_black'>JOIN
+
+LEFT:   { createCommentResponse, comment, createCommentRequest }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session133" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session133">node18#session133</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [exec] liveness 18
+<LISTING class='color_black'>PRE STATE:
+{ createCommentResponse, comment, createCommentRequest }
+
+INSTR=  *&amp;comment:java.lang.String*=n$25 [line 42]; 
+
+STATE:
+{ n$25, createCommentResponse, createCommentRequest }
+
+INSTR=  n$25=_fun_String Jsoup.clean(String,Whitelist)(n$23:java.lang.String*,n$24:org.jsoup.safety.Whitelist*) [line 42]; 
+
+STATE:
+{ n$23, n$24, createCommentResponse, createCommentRequest }
+
+INSTR=  n$24=*&amp;$irvar6:org.jsoup.safety.Whitelist* [line 42]; 
+
+STATE:
+{ n$23, createCommentResponse, createCommentRequest, $irvar6 }
+
+INSTR=  n$23=*&amp;$irvar5:java.lang.String* [line 42]; 
+
+STATE:
+{ createCommentResponse, $irvar5, createCommentRequest, $irvar6 }
+
+</LISTING>
+<hr width="100%">
+<a name="session30" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session30">node18#session30</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session31" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session31">node18#session31</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  createCommentResponse -&gt; { },
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+
+
+TAINTED_CALL1: (callee="String Jsoup.clean(String,Whitelist)", caller="CreateCommentResponse CommentService.save(CreateCommentRequest)")
+INSTR=  n$25 := String Jsoup.clean(String,Whitelist)({ n$21, n$22 }) [line 42]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+INSTR=  comment := n$25 [line 42]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+INSTR=  NULLIFY(&amp;$irvar5); [line 42]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar6); [line 42]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$25); [line 42]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+</LISTING>
+<hr width="100%">
+<a name="session201" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session201">node18#session201</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session202" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session202">node18#session202</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  n$23=*&amp;$irvar5:java.lang.String* [line 42]; 
+
+STATE:
+({ n$23, createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  n$24=*&amp;$irvar6:org.jsoup.safety.Whitelist* [line 42]; 
+
+STATE:
+({ n$23, n$24, createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  n$25=_fun_String Jsoup.clean(String,Whitelist)(n$23:java.lang.String*,n$24:org.jsoup.safety.Whitelist*) [line 42]; 
+
+STATE:
+({ n$23, n$24, n$25, createCommentResponse, $irvar5, $irvar6 },{ n$22 })
+
+INSTR=  *&amp;comment:java.lang.String*=n$25 [line 42]; 
+
+STATE:
+({ createCommentResponse, comment },{ n$23, n$24, n$25, $irvar5, $irvar6 })
+
+</LISTING>
+<hr width="100%">
+<a name="session30" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session30">node18#session30</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session31" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node18.html#session31">node18#session31</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE42">42</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  createCommentResponse -&gt; { },
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+
+
+TAINTED_CALL1: (callee="String Jsoup.clean(String,Whitelist)", caller="CreateCommentResponse CommentService.save(CreateCommentRequest)")
+INSTR=  n$25 := String Jsoup.clean(String,Whitelist)({ n$21, n$22 }) [line 42]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+INSTR=  comment := n$25 [line 42]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+INSTR=  NULLIFY(&amp;$irvar5); [line 42]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar6); [line 42]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$25); [line 42]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+</LISTING>

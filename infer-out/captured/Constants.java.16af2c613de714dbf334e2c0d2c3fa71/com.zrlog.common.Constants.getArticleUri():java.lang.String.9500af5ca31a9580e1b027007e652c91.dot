@@ -1,0 +1,65 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_1" [label="1: Start String Constants.getArticleUri()\nFormals: \nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void router:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_1" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_4" ;
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_2" [label="2: Exit String Constants.getArticleUri() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 84]\n  NULLIFY(&router); [line 84]\n  NULLIFY(&$irvar4); [line 84]\n  NULLIFY(&$irvar0); [line 84]\n  NULLIFY(&$irvar1); [line 84]\n  NULLIFY(&$irvar2); [line 84]\n  EXIT_SCOPE($irvar3,router,$irvar4,$irvar0,$irvar1,$irvar2); [line 84]\n  APPLY_ABSTRACTION; [line 84]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_2" ;
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_4" [label="4:  Call String Constants.getArticleRoute() \n   n$0=_fun_String Constants.getArticleRoute()() [line 80]\n  *&router:java.lang.String*=n$0 [line 80]\n  EXIT_SCOPE(n$0); [line 80]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_4" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_5" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_4" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_5" [label="5:  Call boolean StringUtils.isNotEmpty(String) \n   n$1=*&router:java.lang.String* [line 81]\n  n$2=_fun_boolean StringUtils.isNotEmpty(String)(n$1:java.lang.String*) [line 81]\n  *&$irvar0:_Bool=n$2 [line 81]\n  EXIT_SCOPE(n$1,n$2); [line 81]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_5" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_6" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_5" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_7" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_5" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_6" [label="6: Prune (true branch, if) \n   n$3=*&$irvar0:_Bool [line 81]\n  PRUNE(!(n$3 == 0), true); [line 81]\n  NULLIFY(&$irvar0); [line 81]\n  EXIT_SCOPE(n$3,$irvar0); [line 81]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_6" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_8" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_6" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_7" [label="7: Prune (false branch, if) \n   n$3=*&$irvar0:_Bool [line 81]\n  PRUNE((n$3 == 0), false); [line 81]\n  NULLIFY(&router); [line 81]\n  NULLIFY(&$irvar0); [line 81]\n  EXIT_SCOPE(n$3,router,$irvar0); [line 81]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_7" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_13" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_7" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_8" [label="8:  Call StringBuilder.<init>() \n   n$4=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 82]\n  n$5=_fun_StringBuilder.<init>()(n$4:java.lang.StringBuilder*) [line 82]\n  *&$irvar1:java.lang.StringBuilder*=n$4 [line 82]\n  EXIT_SCOPE(n$4,n$5); [line 82]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_8" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_9" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_8" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_9" [label="9:  Call StringBuilder StringBuilder.append(String) \n   n$6=*&$irvar1:java.lang.StringBuilder* [line 82]\n  _=*n$6:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 82]\n  n$8=*&router:java.lang.String* [line 82]\n  n$9=_fun_StringBuilder StringBuilder.append(String)(n$6:java.lang.StringBuilder*,n$8:java.lang.String*) virtual [line 82]\n  *&$irvar2:java.lang.StringBuilder*=n$9 [line 82]\n  NULLIFY(&router); [line 82]\n  NULLIFY(&$irvar1); [line 82]\n  EXIT_SCOPE(_,n$6,n$8,n$9,router,$irvar1); [line 82]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_9" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_10" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_9" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_10" [label="10:  Call StringBuilder StringBuilder.append(String) \n   n$10=*&$irvar2:java.lang.StringBuilder* [line 82]\n  _=*n$10:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 82]\n  n$12=_fun_StringBuilder StringBuilder.append(String)(n$10:java.lang.StringBuilder*,\"/\":java.lang.Object*) virtual [line 82]\n  *&$irvar3:java.lang.StringBuilder*=n$12 [line 82]\n  NULLIFY(&$irvar2); [line 82]\n  EXIT_SCOPE(_,n$10,n$12,$irvar2); [line 82]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_10" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_11" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_10" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_11" [label="11:  Call String StringBuilder.toString() \n   n$13=*&$irvar3:java.lang.StringBuilder* [line 82]\n  _=*n$13:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 82]\n  n$15=_fun_String StringBuilder.toString()(n$13:java.lang.StringBuilder*) virtual [line 82]\n  *&$irvar4:java.lang.String*=n$15 [line 82]\n  NULLIFY(&$irvar3); [line 82]\n  EXIT_SCOPE(_,n$13,n$15,$irvar3); [line 82]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_11" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_12" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_11" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_12" [label="12:  method_body \n   n$16=*&$irvar4:java.lang.String* [line 82]\n  *&return:java.lang.String*=n$16 [line 82]\n  NULLIFY(&$irvar4); [line 82]\n  EXIT_SCOPE(n$16,$irvar4); [line 82]\n  APPLY_ABSTRACTION; [line 82]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_12" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_2" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_12" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+"com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_13" [label="13:  method_body \n   *&return:java.lang.String*=\"\" [line 84]\n  APPLY_ABSTRACTION; [line 84]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_13" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_2" ;
+	 "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_13" -> "com.zrlog.common.Constants.getArticleUri():java.lang.String.9500af5ca31a9580e1b027007e652c91_3" [color="red" ];
+}

@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_1" [label="1: Start long Version.getFileSize()\nFormals:  this:com.zrlog.common.vo.Version*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_1" -> "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_4" ;
+"com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_2" [label="2: Exit long Version.getFileSize() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 74]\n " shape="box"]
+	
+
+	 "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_3" -> "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_2" ;
+"com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_4" [label="4:  method_body \n   n$0=*&this:com.zrlog.common.vo.Version* [line 74]\n  n$1=*n$0.fileSize:long(root com.zrlog.common.vo.Version) [line 74]\n  *&return:long=n$1 [line 74]\n  NULLIFY(&this); [line 74]\n  EXIT_SCOPE(n$0,n$1,this); [line 74]\n  APPLY_ABSTRACTION; [line 74]\n " shape="box"]
+	
+
+	 "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_4" -> "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_2" ;
+	 "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_4" -> "com.zrlog.common.vo.Version.getFileSize():long.046f5a739775634f91a38c6ce986fe9c_3" [color="red" ];
+}

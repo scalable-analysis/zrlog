@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.convertRequestBody(javax.servlet.ServletRequest,java.lang.Class):java.lang..57a5ed12167afb715bf7f6ad409a7cf5</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE36">Object ZrLogUtil.convertRequestBody(ServletRequest,Class)</a></h1></center>
+<a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:12 8 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:14 succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 42];
+NULLIFY(&amp;CatchVar23); [line 42];
+NULLIFY(&amp;e); [line 42];
+EXIT_SCOPE(n$23,$irvar3,CatchVar23,e); [line 42];
+APPLY_ABSTRACTION; [line 42];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:15 Instructions
+n$0=*&amp;request:javax.servlet.ServletRequest* [line 38];
+_=*n$0:javax.servlet.ServletRequest*(root javax.servlet.ServletRequest) [line 38];
+n$2=_fun_ServletInputStream ServletRequest.getInputStream()(n$0:javax.servlet.ServletRequest*) interface virtual [line 38];
+*&amp;$irvar0:javax.servlet.ServletInputStream*=n$2 [line 38];
+NULLIFY(&amp;request); [line 38];
+EXIT_SCOPE(_,n$0,n$2,request); [line 38];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:15 Instructions
+n$3=*&amp;$irvar0:javax.servlet.ServletInputStream* [line 38];
+n$4=_fun_String IOUtil.getStringInputStream(InputStream)(n$3:javax.servlet.ServletInputStream*) [line 38];
+*&amp;jsonStr:java.lang.String*=n$4 [line 38];
+NULLIFY(&amp;$irvar0); [line 38];
+EXIT_SCOPE(n$3,n$4,$irvar0); [line 38];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:15 Instructions
+n$5=_fun___new(sizeof(t=com.google.gson.Gson):com.google.gson.Gson*) [line 39];
+n$6=_fun_Gson.&lt;init&gt;()(n$5:com.google.gson.Gson*) [line 39];
+*&amp;$irvar1:com.google.gson.Gson*=n$5 [line 39];
+EXIT_SCOPE(n$5,n$6); [line 39];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:15 Instructions
+n$7=*&amp;$irvar1:com.google.gson.Gson* [line 39];
+_=*n$7:com.google.gson.Gson*(root com.google.gson.Gson) [line 39];
+n$9=*&amp;jsonStr:java.lang.String* [line 39];
+n$10=*&amp;clazz:java.lang.Class* [line 39];
+n$11=_fun_Object Gson.fromJson(String,Class)(n$7:com.google.gson.Gson*,n$9:java.lang.String*,n$10:java.lang.Class*) virtual [line 39];
+*&amp;$irvar2:java.lang.Object*=n$11 [line 39];
+NULLIFY(&amp;jsonStr); [line 39];
+NULLIFY(&amp;clazz); [line 39];
+NULLIFY(&amp;$irvar1); [line 39];
+EXIT_SCOPE(_,n$7,n$9,n$10,n$11,jsonStr,clazz,$irvar1); [line 39];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+n$12=*&amp;$irvar2:java.lang.Object* [line 39];
+*&amp;return:java.lang.Object*=n$12 [line 39];
+NULLIFY(&amp;$irvar2); [line 39];
+EXIT_SCOPE(n$12,$irvar2); [line 39];
+APPLY_ABSTRACTION; [line 39];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:13 succs:10 exn:3 Instructions
+n$13=*&amp;CatchVar23:java.lang.Object* [line 40];
+*&amp;e:java.lang.Object*=n$13 [line 40];
+NULLIFY(&amp;CatchVar23); [line 40];
+EXIT_SCOPE(n$13,CatchVar23); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$14=*&amp;#GB<>$com.zrlog.util.ZrLogUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.ZrLogUtil) [line 41];
+_=*n$14:org.slf4j.Logger*(root org.slf4j.Logger) [line 41];
+n$16=*&amp;e:java.lang.Object* [line 41];
+n$17=_fun_void Logger.info(String,Throwable)(n$14:org.slf4j.Logger*,"":java.lang.Object*,n$16:java.lang.Object*) interface virtual [line 41];
+EXIT_SCOPE(_,n$14,n$16,n$17); [line 41];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$18=_fun___new(sizeof(t=java.lang.RuntimeException):java.lang.RuntimeException*) [line 42];
+n$19=*&amp;e:java.lang.Object* [line 42];
+n$20=_fun_RuntimeException.&lt;init&gt;(Throwable)(n$18:java.lang.RuntimeException*,n$19:java.lang.Object*) [line 42];
+*&amp;$irvar3:java.lang.RuntimeException*=n$18 [line 42];
+NULLIFY(&amp;e); [line 42];
+EXIT_SCOPE(n$18,n$19,n$20,e); [line 42];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:2 exn:3 Instructions
+n$21=*&amp;$irvar3:java.lang.RuntimeException* [line 42];
+*&amp;return:java.lang.Object*=EXN n$21 [line 42];
+NULLIFY(&amp;$irvar3); [line 42];
+EXIT_SCOPE(n$21,$irvar3); [line 42];
+APPLY_ABSTRACTION; [line 42];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:15 succs:9 exn:3 Conditional exception handler
+n$24=_fun___instanceof(n$23:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 40];
+PRUNE(n$24, true); [line 40];
+*&amp;CatchVar23:java.lang.Object*=n$23 [line 40];
+EXIT_SCOPE(n$23,n$24); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:15 succs:3 exn:3 Conditional exception handler
+n$24=_fun___instanceof(n$23:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 40];
+PRUNE(!n$24, false); [line 40];
+*&amp;return:java.lang.Object*=EXN n$23 [line 40];
+EXIT_SCOPE(n$23,n$24); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertRequestBody%28javax.servlet.ServletRequest%2Cjava.lang.Class%29%3Ajava.lang..57a5ed12167afb715bf7f6ad409a7cf5_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds: succs:13 14 exn:3 Instructions
+n$22=*&amp;return:java.lang.Object* [line 40];
+*&amp;return:java.lang.Object*=null [line 40];
+n$23=_fun___unwrap_exception(n$22:java.lang.Object*) [line 40];
+NULLIFY(&amp;jsonStr); [line 40];
+NULLIFY(&amp;$irvar0); [line 40];
+NULLIFY(&amp;$irvar1); [line 40];
+NULLIFY(&amp;$irvar2); [line 40];
+EXIT_SCOPE(n$22,jsonStr,$irvar0,$irvar1,$irvar2); [line 40];
+</span></span></a><br />@
+
+<span class='color_black'>java.lang.Object* Object ZrLogUtil.convertRequestBody(ServletRequest,Class)(javax.servlet.ServletRequest* request, java.lang.Class* clazz)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= Object ZrLogUtil.convertRequestBody(ServletRequest,Class)
+; translation_unit= common/src/main/java/com/zrlog/util/ZrLogUtil.java
+; access= Public
+; formals= [(request,javax.servlet.ServletRequest*);  (clazz,
+            java.lang.Class*)]
+; is_defined= true
+; loc= common/src/main/java/com/zrlog/util/ZrLogUtil.java:36
+; locals= [{ name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= CatchVar23; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }; 
+           { name= jsonStr; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= java.lang.Object* 
+; proc_id= com.zrlog.util.ZrLogUtil.convertRequestBody(javax.servlet.ServletRequest,java.lang.Class):java.lang.Object }</pre>
+</body>
+</html>

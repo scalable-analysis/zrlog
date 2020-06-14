@@ -1,0 +1,659 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File common/src/main/java/com/zrlog/util/BlogBuildInfoUtil.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.util; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import org.slf4j.Logger; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import org.slf4j.LoggerFactory; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import java.io.IOException; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import java.io.InputStream; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import java.text.ParseException; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">import java.text.SimpleDateFormat; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">import java.util.Date; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">import java.util.Properties; </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line"> * 读取Zrlog构建信息，及build.properties。 </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line"> * 注 build.properties 为使用CI工具自动加入的，git代码仓库并没有该文件。 </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">public class BlogBuildInfoUtil { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<init>%28%29.0116c3f2dd4a4b5caab9123e45f84968_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<init>%28%29.0116c3f2dd4a4b5caab9123e45f84968_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.util.BlogBuildInfoUtil* [line 19];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.util.BlogBuildInfoUtil*) [line 19];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<init>%28%29.0116c3f2dd4a4b5caab9123e45f84968_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<init>%28%29.0116c3f2dd4a4b5caab9123e45f84968_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<init>%28%29.0116c3f2dd4a4b5caab9123e45f84968_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.<init>%28%29.0116c3f2dd4a4b5caab9123e45f84968.html">summary for BlogBuildInfoUtil.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(BlogBuildInfoUtil.class); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.util.BlogBuildInfoUtil:java.lang.Object*) [line 21];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 21];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:org.slf4j.Logger* [line 21];
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)=n$1 [line 21];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120.html">summary for void BlogBuildInfoUtil.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">     * 目前以git的commitId的前7位标记构建的Id </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    private static String buildId; </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    private static String version; </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">    private static Date time; </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">    private static String runMode = &quot;DEV&quot;; <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.runMode:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)="DEV" [line 29];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    static { </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">        Properties properties = new Properties(); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$2=_fun___new(sizeof(t=java.util.Properties):java.util.Properties*) [line 32];
+n$3=_fun_Properties.&lt;init&gt;()(n$2:java.util.Properties*) [line 32];
+*&amp;properties:java.util.Properties*=n$2 [line 32];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">        InputStream inputStream = BlogBuildInfoUtil.class.getResourceAsStream(&quot;/build.properties&quot;); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 10 exn:3 Instructions
+n$4=_fun_InputStream Class.getResourceAsStream(String)(com.zrlog.util.BlogBuildInfoUtil:java.lang.Object*,"/build.properties":java.lang.Object*) virtual [line 33];
+*&amp;inputStream:java.io.InputStream*=n$4 [line 33];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">        if (inputStream != null) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:8 succs:11 exn:3 Conditional method_body
+n$5=*&amp;inputStream:java.io.InputStream* [line 34];
+PRUNE(!(n$5 == null), true); [line 34];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 succs:63 64 exn:3 Conditional method_body
+n$5=*&amp;inputStream:java.io.InputStream* [line 34];
+PRUNE((n$5 == null), false); [line 34];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">            try { </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">                properties.load(inputStream); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:9 succs:12 exn:75 Instructions
+n$6=*&amp;properties:java.util.Properties* [line 36];
+_=*n$6:java.util.Properties*(root java.util.Properties) [line 36];
+n$8=*&amp;inputStream:java.io.InputStream* [line 36];
+n$9=_fun_void Properties.load(InputStream)(n$6:java.util.Properties*,n$8:java.io.InputStream*) virtual [line 36];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">                if (properties.get(&quot;buildId&quot;) != null) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 14 exn:75 Instructions
+n$10=*&amp;properties:java.util.Properties* [line 37];
+_=*n$10:java.util.Properties*(root java.util.Properties) [line 37];
+n$12=_fun_Object Hashtable.get(Object)(n$10:java.util.Properties*,"buildId":java.lang.Object*) virtual [line 37];
+*&amp;$irvar1:java.lang.Object*=n$12 [line 37];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:12 succs:15 exn:75 Conditional method_body
+n$13=*&amp;$irvar1:java.lang.Object* [line 37];
+PRUNE(!(n$13 == null), true); [line 37];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:12 succs:18 exn:75 Conditional method_body
+n$13=*&amp;$irvar1:java.lang.Object* [line 37];
+PRUNE((n$13 == null), false); [line 37];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">                    buildId = properties.get(&quot;buildId&quot;).toString(); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:13 succs:16 exn:75 Instructions
+n$14=*&amp;properties:java.util.Properties* [line 38];
+_=*n$14:java.util.Properties*(root java.util.Properties) [line 38];
+n$16=_fun_Object Hashtable.get(Object)(n$14:java.util.Properties*,"buildId":java.lang.Object*) virtual [line 38];
+*&amp;$irvar2:java.lang.Object*=n$16 [line 38];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:75 Instructions
+n$17=*&amp;$irvar2:java.lang.Object* [line 38];
+_=*n$17:java.lang.Object*(root java.lang.Object) [line 38];
+n$19=_fun_String Object.toString()(n$17:java.lang.Object*) virtual [line 38];
+*&amp;$irvar3:java.lang.String*=n$19 [line 38];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:75 Instructions
+n$20=*&amp;$irvar3:java.lang.String* [line 38];
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.buildId:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)=n$20 [line 38];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">                if (properties.get(&quot;version&quot;) != null &amp;&amp; !&quot;&quot;.equals(properties.get(&quot;version&quot;))) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 14 succs:19 20 exn:75 Instructions
+n$21=*&amp;properties:java.util.Properties* [line 40];
+_=*n$21:java.util.Properties*(root java.util.Properties) [line 40];
+n$23=_fun_Object Hashtable.get(Object)(n$21:java.util.Properties*,"version":java.lang.Object*) virtual [line 40];
+*&amp;$irvar4:java.lang.Object*=n$23 [line 40];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node19.html"><span class='visited with_tooltip'>C_19<span class='tooltip'>node19 preds:18 succs:21 exn:75 Conditional method_body
+n$24=*&amp;$irvar4:java.lang.Object* [line 40];
+PRUNE(!(n$24 == null), true); [line 40];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:19 succs:22 exn:75 Instructions
+n$25=*&amp;properties:java.util.Properties* [line 40];
+_=*n$25:java.util.Properties*(root java.util.Properties) [line 40];
+n$27=_fun_Object Hashtable.get(Object)(n$25:java.util.Properties*,"version":java.lang.Object*) virtual [line 40];
+*&amp;$irvar5:java.lang.Object*=n$27 [line 40];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 24 exn:75 Instructions
+n$28=*&amp;$irvar5:java.lang.Object* [line 40];
+n$29=_fun_boolean String.equals(Object)("":java.lang.Object*,n$28:java.lang.Object*) virtual [line 40];
+*&amp;$irvar6:_Bool=n$29 [line 40];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node23.html"><span class='visited with_tooltip'>C_23<span class='tooltip'>node23 preds:22 succs:25 exn:75 Conditional method_body
+n$30=*&amp;$irvar6:_Bool [line 40];
+PRUNE(!(n$30 != 0), true); [line 40];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node24.html"><span class='visited with_tooltip'>C_24<span class='tooltip'>node24 preds:22 succs:28 exn:75 Conditional method_body
+n$30=*&amp;$irvar6:_Bool [line 40];
+PRUNE((n$30 != 0), false); [line 40];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node20.html"><span class='visited with_tooltip'>C_20<span class='tooltip'>node20 preds:18 succs:28 exn:75 Conditional method_body
+n$24=*&amp;$irvar4:java.lang.Object* [line 40];
+PRUNE((n$24 == null), false); [line 40];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">                    version = properties.get(&quot;version&quot;).toString(); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:23 succs:26 exn:75 Instructions
+n$31=*&amp;properties:java.util.Properties* [line 41];
+_=*n$31:java.util.Properties*(root java.util.Properties) [line 41];
+n$33=_fun_Object Hashtable.get(Object)(n$31:java.util.Properties*,"version":java.lang.Object*) virtual [line 41];
+*&amp;$irvar7:java.lang.Object*=n$33 [line 41];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:75 Instructions
+n$34=*&amp;$irvar7:java.lang.Object* [line 41];
+_=*n$34:java.lang.Object*(root java.lang.Object) [line 41];
+n$36=_fun_String Object.toString()(n$34:java.lang.Object*) virtual [line 41];
+*&amp;$irvar8:java.lang.String*=n$36 [line 41];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:75 Instructions
+n$37=*&amp;$irvar8:java.lang.String* [line 41];
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.version:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)=n$37 [line 41];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">                if (properties.get(&quot;buildTime&quot;) != null &amp;&amp; !&quot;&quot;.equals(properties.get(&quot;buildTime&quot;))) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 24 20 succs:29 30 exn:75 Instructions
+n$38=*&amp;properties:java.util.Properties* [line 43];
+_=*n$38:java.util.Properties*(root java.util.Properties) [line 43];
+n$40=_fun_Object Hashtable.get(Object)(n$38:java.util.Properties*,"buildTime":java.lang.Object*) virtual [line 43];
+*&amp;$irvar9:java.lang.Object*=n$40 [line 43];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node29.html"><span class='visited with_tooltip'>C_29<span class='tooltip'>node29 preds:28 succs:31 exn:75 Conditional method_body
+n$41=*&amp;$irvar9:java.lang.Object* [line 43];
+PRUNE(!(n$41 == null), true); [line 43];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:29 succs:32 exn:75 Instructions
+n$42=*&amp;properties:java.util.Properties* [line 43];
+_=*n$42:java.util.Properties*(root java.util.Properties) [line 43];
+n$44=_fun_Object Hashtable.get(Object)(n$42:java.util.Properties*,"buildTime":java.lang.Object*) virtual [line 43];
+*&amp;$irvar10:java.lang.Object*=n$44 [line 43];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 34 exn:75 Instructions
+n$45=*&amp;$irvar10:java.lang.Object* [line 43];
+n$46=_fun_boolean String.equals(Object)("":java.lang.Object*,n$45:java.lang.Object*) virtual [line 43];
+*&amp;$irvar11:_Bool=n$46 [line 43];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node33.html"><span class='visited with_tooltip'>C_33<span class='tooltip'>node33 preds:32 succs:35 exn:75 Conditional method_body
+n$47=*&amp;$irvar11:_Bool [line 43];
+PRUNE(!(n$47 != 0), true); [line 43];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node34.html"><span class='visited with_tooltip'>C_34<span class='tooltip'>node34 preds:32 succs:40 exn:75 Conditional method_body
+n$47=*&amp;$irvar11:_Bool [line 43];
+PRUNE((n$47 != 0), false); [line 43];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node30.html"><span class='visited with_tooltip'>C_30<span class='tooltip'>node30 preds:28 succs:40 exn:75 Conditional method_body
+n$41=*&amp;$irvar9:java.lang.Object* [line 43];
+PRUNE((n$41 == null), false); [line 43];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">                    time = new SimpleDateFormat(Constants.DATE_FORMAT_PATTERN).parse(properties.get(&quot;buildTime&quot;).toString()); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:33 succs:36 exn:75 Instructions
+n$48=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 44];
+n$49=_fun_SimpleDateFormat.&lt;init&gt;(String)(n$48:java.text.SimpleDateFormat*,"yyyy-MM-dd HH:mm:ssXXX":java.lang.Object*) [line 44];
+*&amp;$irvar12:java.text.SimpleDateFormat*=n$48 [line 44];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:37 exn:75 Instructions
+n$50=*&amp;properties:java.util.Properties* [line 44];
+_=*n$50:java.util.Properties*(root java.util.Properties) [line 44];
+n$52=_fun_Object Hashtable.get(Object)(n$50:java.util.Properties*,"buildTime":java.lang.Object*) virtual [line 44];
+*&amp;$irvar13:java.lang.Object*=n$52 [line 44];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:36 succs:38 exn:75 Instructions
+n$53=*&amp;$irvar13:java.lang.Object* [line 44];
+_=*n$53:java.lang.Object*(root java.lang.Object) [line 44];
+n$55=_fun_String Object.toString()(n$53:java.lang.Object*) virtual [line 44];
+*&amp;$irvar14:java.lang.String*=n$55 [line 44];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 exn:75 Instructions
+n$56=*&amp;$irvar12:java.text.SimpleDateFormat* [line 44];
+_=*n$56:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 44];
+n$58=*&amp;$irvar14:java.lang.String* [line 44];
+n$59=_fun_Date DateFormat.parse(String)(n$56:java.text.SimpleDateFormat*,n$58:java.lang.String*) virtual [line 44];
+*&amp;$irvar15:java.util.Date*=n$59 [line 44];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 succs:40 exn:75 Instructions
+n$60=*&amp;$irvar15:java.util.Date* [line 44];
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.time:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)=n$60 [line 44];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">                if (properties.get(&quot;runMode&quot;) != null &amp;&amp; !&quot;&quot;.equals(properties.get(&quot;runMode&quot;))) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 34 30 succs:41 42 exn:75 Instructions
+n$61=*&amp;properties:java.util.Properties* [line 46];
+_=*n$61:java.util.Properties*(root java.util.Properties) [line 46];
+n$63=_fun_Object Hashtable.get(Object)(n$61:java.util.Properties*,"runMode":java.lang.Object*) virtual [line 46];
+*&amp;$irvar16:java.lang.Object*=n$63 [line 46];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node41.html"><span class='visited with_tooltip'>C_41<span class='tooltip'>node41 preds:40 succs:43 exn:75 Conditional method_body
+n$64=*&amp;$irvar16:java.lang.Object* [line 46];
+PRUNE(!(n$64 == null), true); [line 46];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:41 succs:44 exn:75 Instructions
+n$65=*&amp;properties:java.util.Properties* [line 46];
+_=*n$65:java.util.Properties*(root java.util.Properties) [line 46];
+n$67=_fun_Object Hashtable.get(Object)(n$65:java.util.Properties*,"runMode":java.lang.Object*) virtual [line 46];
+*&amp;$irvar17:java.lang.Object*=n$67 [line 46];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 46 exn:75 Instructions
+n$68=*&amp;$irvar17:java.lang.Object* [line 46];
+n$69=_fun_boolean String.equals(Object)("":java.lang.Object*,n$68:java.lang.Object*) virtual [line 46];
+*&amp;$irvar18:_Bool=n$69 [line 46];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node45.html"><span class='visited with_tooltip'>C_45<span class='tooltip'>node45 preds:44 succs:47 exn:75 Conditional method_body
+n$70=*&amp;$irvar18:_Bool [line 46];
+PRUNE(!(n$70 != 0), true); [line 46];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node46.html"><span class='visited with_tooltip'>C_46<span class='tooltip'>node46 preds:44 succs:50 exn:75 Conditional method_body
+n$70=*&amp;$irvar18:_Bool [line 46];
+PRUNE((n$70 != 0), false); [line 46];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node42.html"><span class='visited with_tooltip'>C_42<span class='tooltip'>node42 preds:40 succs:50 exn:75 Conditional method_body
+n$64=*&amp;$irvar16:java.lang.Object* [line 46];
+PRUNE((n$64 == null), false); [line 46];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">                    runMode = properties.get(&quot;runMode&quot;).toString(); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:45 succs:48 exn:75 Instructions
+n$71=*&amp;properties:java.util.Properties* [line 47];
+_=*n$71:java.util.Properties*(root java.util.Properties) [line 47];
+n$73=_fun_Object Hashtable.get(Object)(n$71:java.util.Properties*,"runMode":java.lang.Object*) virtual [line 47];
+*&amp;$irvar19:java.lang.Object*=n$73 [line 47];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:75 Instructions
+n$74=*&amp;$irvar19:java.lang.Object* [line 47];
+_=*n$74:java.lang.Object*(root java.lang.Object) [line 47];
+n$76=_fun_String Object.toString()(n$74:java.lang.Object*) virtual [line 47];
+*&amp;$irvar20:java.lang.String*=n$76 [line 47];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:50 exn:75 Instructions
+n$77=*&amp;$irvar20:java.lang.String* [line 47];
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.runMode:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)=n$77 [line 47];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">            } catch (IOException | ParseException e) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node53.html"><span class='visited with_tooltip'>I_53<span class='tooltip'>node53 preds:73 71 succs:54 exn:80 Instructions
+n$86=*&amp;CatchVar198:java.lang.Object* [line 49];
+*&amp;e:java.lang.Object*=n$86 [line 49];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node71.html"><span class='visited with_tooltip'>C_71<span class='tooltip'>node71 preds:74 succs:53 exn:3 Conditional exception handler
+n$113=_fun___instanceof(n$112:java.text.ParseException*,sizeof(t=java.text.ParseException):void) [line 49];
+PRUNE(n$113, true); [line 49];
+*&amp;CatchVar198:void=n$112 [line 49];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node72.html"><span class='visited with_tooltip'>C_72<span class='tooltip'>node72 preds:74 succs:70 exn:3 Conditional exception handler
+n$113=_fun___instanceof(n$112:java.text.ParseException*,sizeof(t=java.text.ParseException):void) [line 49];
+PRUNE(!n$113, false); [line 49];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node73.html"><span class='visited with_tooltip'>C_73<span class='tooltip'>node73 preds:75 succs:53 exn:3 Conditional exception handler
+n$114=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 49];
+PRUNE(n$114, true); [line 49];
+*&amp;CatchVar198:void=n$112 [line 49];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node74.html"><span class='visited with_tooltip'>C_74<span class='tooltip'>node74 preds:75 succs:71 72 exn:3 Conditional exception handler
+n$114=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 49];
+PRUNE(!n$114, false); [line 49];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node75.html"><span class='visited with_tooltip'>I_75<span class='tooltip'>node75 preds: succs:73 74 exn:3 Instructions
+n$111=*&amp;return:void [line 49];
+*&amp;return:void=null [line 49];
+n$112=_fun___unwrap_exception(n$111:void) [line 49];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">                LOGGER.error(&quot;doRead stream error&quot;, e); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node54.html"><span class='visited with_tooltip'>I_54<span class='tooltip'>node54 preds:53 succs:55 exn:80 Instructions
+n$87=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 50];
+_=*n$87:org.slf4j.Logger*(root org.slf4j.Logger) [line 50];
+n$89=*&amp;e:java.lang.Object* [line 50];
+n$90=_fun_void Logger.error(String,Throwable)(n$87:org.slf4j.Logger*,"doRead stream error":java.lang.Object*,n$89:java.lang.Object*) interface virtual [line 50];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">            } finally { </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">                try { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node58.html"><span class='visited with_tooltip'>I_58<span class='tooltip'>node58 preds:79 70 succs:59 exn:3 Instructions
+n$99=*&amp;CatchVar232:java.lang.Object* [line 52];
+*&amp;$bcvar3:java.lang.Object*=n$99 [line 52];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node70.html"><span class='visited with_tooltip'>I_70<span class='tooltip'>node70 preds:72 succs:58 exn:3 Instructions
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node79.html"><span class='visited with_tooltip'>I_79<span class='tooltip'>node79 preds:80 succs:58 exn:3 Instructions
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node80.html"><span class='visited with_tooltip'>I_80<span class='tooltip'>node80 preds: succs:79 exn:3 Instructions
+n$111=*&amp;return:void [line 52];
+*&amp;return:void=null [line 52];
+n$112=_fun___unwrap_exception(n$111:void) [line 52];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">                    inputStream.close(); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 46 42 succs:63 64 exn:78 Instructions
+n$78=*&amp;inputStream:java.io.InputStream* [line 53];
+_=*n$78:java.io.InputStream*(root java.io.InputStream) [line 53];
+n$80=_fun_void InputStream.close()(n$78:java.io.InputStream*) virtual [line 53];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:54 succs:63 64 exn:83 Instructions
+n$91=*&amp;inputStream:java.io.InputStream* [line 53];
+_=*n$91:java.io.InputStream*(root java.io.InputStream) [line 53];
+n$93=_fun_void InputStream.close()(n$91:java.io.InputStream*) virtual [line 53];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node59.html"><span class='visited with_tooltip'>I_59<span class='tooltip'>node59 preds:58 succs:62 exn:86 Instructions
+n$100=*&amp;inputStream:java.io.InputStream* [line 53];
+_=*n$100:java.io.InputStream*(root java.io.InputStream) [line 53];
+n$102=_fun_void InputStream.close()(n$100:java.io.InputStream*) virtual [line 53];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">                } catch (IOException e) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node51.html"><span class='visited with_tooltip'>I_51<span class='tooltip'>node51 preds:76 succs:52 exn:3 Instructions
+n$81=*&amp;CatchVar183:java.lang.Object* [line 54];
+*&amp;e:java.lang.Object*=n$81 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:81 succs:57 exn:3 Instructions
+n$94=*&amp;CatchVar217:java.lang.Object* [line 54];
+*&amp;e:java.lang.Object*=n$94 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node60.html"><span class='visited with_tooltip'>I_60<span class='tooltip'>node60 preds:84 succs:61 exn:3 Instructions
+n$103=*&amp;CatchVar240:java.lang.Object* [line 54];
+*&amp;e:java.lang.Object*=n$103 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node76.html"><span class='visited with_tooltip'>C_76<span class='tooltip'>node76 preds:78 succs:51 exn:3 Conditional exception handler
+n$115=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 54];
+PRUNE(n$115, true); [line 54];
+*&amp;CatchVar183:void=n$112 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node77.html"><span class='visited with_tooltip'>C_77<span class='tooltip'>node77 preds:78 succs:3 exn:3 Conditional exception handler
+n$115=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 54];
+PRUNE(!n$115, false); [line 54];
+*&amp;return:void=EXN n$112 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node78.html"><span class='visited with_tooltip'>I_78<span class='tooltip'>node78 preds: succs:76 77 exn:3 Instructions
+n$111=*&amp;return:void [line 54];
+*&amp;return:void=null [line 54];
+n$112=_fun___unwrap_exception(n$111:void) [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node81.html"><span class='visited with_tooltip'>C_81<span class='tooltip'>node81 preds:83 succs:56 exn:3 Conditional exception handler
+n$116=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 54];
+PRUNE(n$116, true); [line 54];
+*&amp;CatchVar217:void=n$112 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node82.html"><span class='visited with_tooltip'>C_82<span class='tooltip'>node82 preds:83 succs:3 exn:3 Conditional exception handler
+n$116=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 54];
+PRUNE(!n$116, false); [line 54];
+*&amp;return:void=EXN n$112 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node83.html"><span class='visited with_tooltip'>I_83<span class='tooltip'>node83 preds: succs:81 82 exn:3 Instructions
+n$111=*&amp;return:void [line 54];
+*&amp;return:void=null [line 54];
+n$112=_fun___unwrap_exception(n$111:void) [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node84.html"><span class='visited with_tooltip'>C_84<span class='tooltip'>node84 preds:86 succs:60 exn:3 Conditional exception handler
+n$117=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 54];
+PRUNE(n$117, true); [line 54];
+*&amp;CatchVar240:void=n$112 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node85.html"><span class='visited with_tooltip'>C_85<span class='tooltip'>node85 preds:86 succs:3 exn:3 Conditional exception handler
+n$117=_fun___instanceof(n$112:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 54];
+PRUNE(!n$117, false); [line 54];
+*&amp;return:void=EXN n$112 [line 54];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node86.html"><span class='visited with_tooltip'>I_86<span class='tooltip'>node86 preds: succs:84 85 exn:3 Instructions
+n$111=*&amp;return:void [line 54];
+*&amp;return:void=null [line 54];
+n$112=_fun___unwrap_exception(n$111:void) [line 54];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">                    LOGGER.error(&quot;close stream error&quot;, e); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node52.html"><span class='visited with_tooltip'>I_52<span class='tooltip'>node52 preds:51 succs:63 64 exn:3 Instructions
+n$82=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 55];
+_=*n$82:org.slf4j.Logger*(root org.slf4j.Logger) [line 55];
+n$84=*&amp;e:java.lang.Object* [line 55];
+n$85=_fun_void Logger.error(String,Throwable)(n$82:org.slf4j.Logger*,"close stream error":java.lang.Object*,n$84:java.lang.Object*) interface virtual [line 55];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:56 succs:63 64 exn:3 Instructions
+n$95=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 55];
+_=*n$95:org.slf4j.Logger*(root org.slf4j.Logger) [line 55];
+n$97=*&amp;e:java.lang.Object* [line 55];
+n$98=_fun_void Logger.error(String,Throwable)(n$95:org.slf4j.Logger*,"close stream error":java.lang.Object*,n$97:java.lang.Object*) interface virtual [line 55];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node61.html"><span class='visited with_tooltip'>I_61<span class='tooltip'>node61 preds:60 succs:62 exn:3 Instructions
+n$104=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 55];
+_=*n$104:org.slf4j.Logger*(root org.slf4j.Logger) [line 55];
+n$106=*&amp;e:java.lang.Object* [line 55];
+n$107=_fun_void Logger.error(String,Throwable)(n$104:org.slf4j.Logger*,"close stream error":java.lang.Object*,n$106:java.lang.Object*) interface virtual [line 55];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">            } <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds:61 59 succs:2 exn:3 Instructions
+n$108=*&amp;$bcvar3:java.lang.Object* [line 57];
+*&amp;return:void=EXN n$108 [line 57];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">        if (buildId == null) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node63.html"><span class='visited with_tooltip'>C_63<span class='tooltip'>node63 preds:57 55 52 50 10 succs:65 exn:3 Conditional method_body
+n$109=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.buildId:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 59];
+PRUNE(!(n$109 != null), true); [line 59];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node64.html"><span class='visited with_tooltip'>C_64<span class='tooltip'>node64 preds:57 55 52 50 10 succs:66 67 exn:3 Conditional method_body
+n$109=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.buildId:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 59];
+PRUNE((n$109 != null), false); [line 59];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">            buildId = &quot;0000000&quot;; <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node65.html"><span class='visited with_tooltip'>I_65<span class='tooltip'>node65 preds:63 succs:66 67 exn:3 Instructions
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.buildId:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)="0000000" [line 60];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">        if (version == null) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node66.html"><span class='visited with_tooltip'>C_66<span class='tooltip'>node66 preds:65 64 succs:68 exn:3 Conditional method_body
+n$110=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.version:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 62];
+PRUNE(!(n$110 != null), true); [line 62];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node67.html"><span class='visited with_tooltip'>C_67<span class='tooltip'>node67 preds:65 64 succs:69 exn:3 Conditional method_body
+n$110=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.version:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 62];
+PRUNE((n$110 != null), false); [line 62];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">            version = &quot;1.0.0-SNAPSHOT&quot;; <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node68.html"><span class='visited with_tooltip'>I_68<span class='tooltip'>node68 preds:66 succs:69 exn:3 Instructions
+*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.version:com.zrlog.util.BlogBuildInfoUtil(root com.zrlog.util.BlogBuildInfoUtil)="1.0.0-SNAPSHOT" [line 63];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">    } <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node69.html"><span class='visited with_tooltip'>I_69<span class='tooltip'>node69 preds:68 67 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:69 62 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.<clinit>%28%29%3Avoid.a2035f91d74c93f0c8d49aeecde5f120_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:85 82 77 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">    public static String getBuildId() { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getBuildId%28%29%3Ajava.lang.String.0fb3c34f2ea7395bbcfb757309697720_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.getBuildId%28%29%3Ajava.lang.String.0fb3c34f2ea7395bbcfb757309697720.html">summary for String BlogBuildInfoUtil.getBuildId()</a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">        return buildId; <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getBuildId%28%29%3Ajava.lang.String.0fb3c34f2ea7395bbcfb757309697720_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.buildId:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 68];
+*&amp;return:java.lang.String*=n$0 [line 68];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getBuildId%28%29%3Ajava.lang.String.0fb3c34f2ea7395bbcfb757309697720_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getBuildId%28%29%3Ajava.lang.String.0fb3c34f2ea7395bbcfb757309697720_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">    public static String getVersion() { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getVersion%28%29%3Ajava.lang.String.f6a4ccaa18026a2b587773bafc547673_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.getVersion%28%29%3Ajava.lang.String.f6a4ccaa18026a2b587773bafc547673.html">summary for String BlogBuildInfoUtil.getVersion()</a></td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">        return version; <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getVersion%28%29%3Ajava.lang.String.f6a4ccaa18026a2b587773bafc547673_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.version:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 72];
+*&amp;return:java.lang.String*=n$0 [line 72];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getVersion%28%29%3Ajava.lang.String.f6a4ccaa18026a2b587773bafc547673_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getVersion%28%29%3Ajava.lang.String.f6a4ccaa18026a2b587773bafc547673_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">    public static Date getTime() { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d.html">summary for Date BlogBuildInfoUtil.getTime()</a></td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">        //仅存在开发环境为空 </td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">        if (time == null) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.time:java.util.Date*(root com.zrlog.util.BlogBuildInfoUtil) [line 77];
+PRUNE(!(n$0 != null), true); [line 77];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:8 exn:3 Conditional method_body
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.time:java.util.Date*(root com.zrlog.util.BlogBuildInfoUtil) [line 77];
+PRUNE((n$0 != null), false); [line 77];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">            return new Date(); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:7 exn:3 Instructions
+n$1=_fun___new(sizeof(t=java.util.Date):java.util.Date*) [line 78];
+n$2=_fun_Date.&lt;init&gt;()(n$1:java.util.Date*) [line 78];
+*&amp;$irvar0:java.util.Date*=n$1 [line 78];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+n$3=*&amp;$irvar0:java.util.Date* [line 78];
+*&amp;return:java.util.Date*=n$3 [line 78];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">        return time; <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:5 succs:2 exn:3 Instructions
+n$4=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.time:java.util.Date*(root com.zrlog.util.BlogBuildInfoUtil) [line 80];
+*&amp;return:java.util.Date*=n$4 [line 80];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 7 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getTime%28%29%3Ajava.util.Date.9d3abc9dbbabeebb29b2eb181baf8e4d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">    public static String getRunMode() { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getRunMode%28%29%3Ajava.lang.String.f5aefc275f4cea42126d285493764d2a_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.getRunMode%28%29%3Ajava.lang.String.f5aefc275f4cea42126d285493764d2a.html">summary for String BlogBuildInfoUtil.getRunMode()</a></td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">        return runMode; <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getRunMode%28%29%3Ajava.lang.String.f5aefc275f4cea42126d285493764d2a_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.runMode:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 84];
+*&amp;return:java.lang.String*=n$0 [line 84];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getRunMode%28%29%3Ajava.lang.String.f5aefc275f4cea42126d285493764d2a_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.getRunMode%28%29%3Ajava.lang.String.f5aefc275f4cea42126d285493764d2a_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">    public static boolean isRelease() { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isRelease%28%29%3Aboolean.b834a4e64ffa39801f3490877f1c0f3f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.isRelease%28%29%3Aboolean.b834a4e64ffa39801f3490877f1c0f3f.html">summary for boolean BlogBuildInfoUtil.isRelease()</a></td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">        return &quot;RELEASE&quot;.equalsIgnoreCase(runMode); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isRelease%28%29%3Aboolean.b834a4e64ffa39801f3490877f1c0f3f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.runMode:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 88];
+n$1=_fun_boolean String.equalsIgnoreCase(String)("RELEASE":java.lang.Object*,n$0:java.lang.String*) virtual [line 88];
+*&amp;$irvar0:_Bool=n$1 [line 88];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isRelease%28%29%3Aboolean.b834a4e64ffa39801f3490877f1c0f3f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$2=*&amp;$irvar0:_Bool [line 88];
+*&amp;return:_Bool=n$2 [line 88];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isRelease%28%29%3Aboolean.b834a4e64ffa39801f3490877f1c0f3f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isRelease%28%29%3Aboolean.b834a4e64ffa39801f3490877f1c0f3f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">    public static boolean isPreview() { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isPreview%28%29%3Aboolean.820ae5c42c0cb6d8acbac5ba85db5a27_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.isPreview%28%29%3Aboolean.820ae5c42c0cb6d8acbac5ba85db5a27.html">summary for boolean BlogBuildInfoUtil.isPreview()</a></td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">        return &quot;PREVIEW&quot;.equalsIgnoreCase(runMode); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isPreview%28%29%3Aboolean.820ae5c42c0cb6d8acbac5ba85db5a27_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.runMode:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 92];
+n$1=_fun_boolean String.equalsIgnoreCase(String)("PREVIEW":java.lang.Object*,n$0:java.lang.String*) virtual [line 92];
+*&amp;$irvar0:_Bool=n$1 [line 92];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isPreview%28%29%3Aboolean.820ae5c42c0cb6d8acbac5ba85db5a27_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$2=*&amp;$irvar0:_Bool [line 92];
+*&amp;return:_Bool=n$2 [line 92];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isPreview%28%29%3Aboolean.820ae5c42c0cb6d8acbac5ba85db5a27_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isPreview%28%29%3Aboolean.820ae5c42c0cb6d8acbac5ba85db5a27_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">    public static boolean isDev() { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isDev%28%29%3Aboolean.2ee2c16491eb32ca4b14d110312972ce_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.isDev%28%29%3Aboolean.2ee2c16491eb32ca4b14d110312972ce.html">summary for boolean BlogBuildInfoUtil.isDev()</a></td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">        return &quot;DEV&quot;.equalsIgnoreCase(runMode); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isDev%28%29%3Aboolean.2ee2c16491eb32ca4b14d110312972ce_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.runMode:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 96];
+n$1=_fun_boolean String.equalsIgnoreCase(String)("DEV":java.lang.Object*,n$0:java.lang.String*) virtual [line 96];
+*&amp;$irvar0:_Bool=n$1 [line 96];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isDev%28%29%3Aboolean.2ee2c16491eb32ca4b14d110312972ce_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$2=*&amp;$irvar0:_Bool [line 96];
+*&amp;return:_Bool=n$2 [line 96];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isDev%28%29%3Aboolean.2ee2c16491eb32ca4b14d110312972ce_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.isDev%28%29%3Aboolean.2ee2c16491eb32ca4b14d110312972ce_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">    public static void main(String[] args) { <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2.html">summary for void BlogBuildInfoUtil.main(String[])</a></td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">        LOGGER.info(&quot;isRelease = &quot; + isRelease()); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 100];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 100];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 100];
+n$2=_fun_StringBuilder.&lt;init&gt;()(n$1:java.lang.StringBuilder*) [line 100];
+*&amp;$irvar1:java.lang.StringBuilder*=n$1 [line 100];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;$irvar1:java.lang.StringBuilder* [line 100];
+_=*n$3:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100];
+n$5=_fun_StringBuilder StringBuilder.append(String)(n$3:java.lang.StringBuilder*,"isRelease = ":java.lang.Object*) virtual [line 100];
+*&amp;$irvar2:java.lang.StringBuilder*=n$5 [line 100];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=_fun_boolean BlogBuildInfoUtil.isRelease()() [line 100];
+*&amp;$irvar3:_Bool=n$6 [line 100];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;$irvar2:java.lang.StringBuilder* [line 100];
+_=*n$7:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100];
+n$9=*&amp;$irvar3:_Bool [line 100];
+n$10=_fun_StringBuilder StringBuilder.append(boolean)(n$7:java.lang.StringBuilder*,n$9:_Bool) virtual [line 100];
+*&amp;$irvar4:java.lang.StringBuilder*=n$10 [line 100];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$11=*&amp;$irvar4:java.lang.StringBuilder* [line 100];
+_=*n$11:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100];
+n$13=_fun_String StringBuilder.toString()(n$11:java.lang.StringBuilder*) virtual [line 100];
+*&amp;$irvar5:java.lang.String*=n$13 [line 100];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$14=*&amp;$irvar0:org.slf4j.Logger* [line 100];
+_=*n$14:org.slf4j.Logger*(root org.slf4j.Logger) [line 100];
+n$16=*&amp;$irvar5:java.lang.String* [line 100];
+n$17=_fun_void Logger.info(String)(n$14:org.slf4j.Logger*,n$16:java.lang.String*) interface virtual [line 100];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">        LOGGER.info(&quot;version = &quot; + getVersion()); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$18=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 101];
+*&amp;$irvar6:org.slf4j.Logger*=n$18 [line 101];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$19=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 101];
+n$20=_fun_StringBuilder.&lt;init&gt;()(n$19:java.lang.StringBuilder*) [line 101];
+*&amp;$irvar7:java.lang.StringBuilder*=n$19 [line 101];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$21=*&amp;$irvar7:java.lang.StringBuilder* [line 101];
+_=*n$21:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 101];
+n$23=_fun_StringBuilder StringBuilder.append(String)(n$21:java.lang.StringBuilder*,"version = ":java.lang.Object*) virtual [line 101];
+*&amp;$irvar8:java.lang.StringBuilder*=n$23 [line 101];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$24=_fun_String BlogBuildInfoUtil.getVersion()() [line 101];
+*&amp;$irvar9:java.lang.String*=n$24 [line 101];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$25=*&amp;$irvar8:java.lang.StringBuilder* [line 101];
+_=*n$25:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 101];
+n$27=*&amp;$irvar9:java.lang.String* [line 101];
+n$28=_fun_StringBuilder StringBuilder.append(String)(n$25:java.lang.StringBuilder*,n$27:java.lang.String*) virtual [line 101];
+*&amp;$irvar10:java.lang.StringBuilder*=n$28 [line 101];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$29=*&amp;$irvar10:java.lang.StringBuilder* [line 101];
+_=*n$29:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 101];
+n$31=_fun_String StringBuilder.toString()(n$29:java.lang.StringBuilder*) virtual [line 101];
+*&amp;$irvar11:java.lang.String*=n$31 [line 101];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$32=*&amp;$irvar6:org.slf4j.Logger* [line 101];
+_=*n$32:org.slf4j.Logger*(root org.slf4j.Logger) [line 101];
+n$34=*&amp;$irvar11:java.lang.String* [line 101];
+n$35=_fun_void Logger.info(String)(n$32:org.slf4j.Logger*,n$34:java.lang.String*) interface virtual [line 101];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line">        LOGGER.info(&quot;buildId = &quot; + getBuildId()); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$36=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 102];
+*&amp;$irvar12:org.slf4j.Logger*=n$36 [line 102];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$37=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 102];
+n$38=_fun_StringBuilder.&lt;init&gt;()(n$37:java.lang.StringBuilder*) [line 102];
+*&amp;$irvar13:java.lang.StringBuilder*=n$37 [line 102];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$39=*&amp;$irvar13:java.lang.StringBuilder* [line 102];
+_=*n$39:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 102];
+n$41=_fun_StringBuilder StringBuilder.append(String)(n$39:java.lang.StringBuilder*,"buildId = ":java.lang.Object*) virtual [line 102];
+*&amp;$irvar14:java.lang.StringBuilder*=n$41 [line 102];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$42=_fun_String BlogBuildInfoUtil.getBuildId()() [line 102];
+*&amp;$irvar15:java.lang.String*=n$42 [line 102];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$43=*&amp;$irvar14:java.lang.StringBuilder* [line 102];
+_=*n$43:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 102];
+n$45=*&amp;$irvar15:java.lang.String* [line 102];
+n$46=_fun_StringBuilder StringBuilder.append(String)(n$43:java.lang.StringBuilder*,n$45:java.lang.String*) virtual [line 102];
+*&amp;$irvar16:java.lang.StringBuilder*=n$46 [line 102];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$47=*&amp;$irvar16:java.lang.StringBuilder* [line 102];
+_=*n$47:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 102];
+n$49=_fun_String StringBuilder.toString()(n$47:java.lang.StringBuilder*) virtual [line 102];
+*&amp;$irvar17:java.lang.String*=n$49 [line 102];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$50=*&amp;$irvar12:org.slf4j.Logger* [line 102];
+_=*n$50:org.slf4j.Logger*(root org.slf4j.Logger) [line 102];
+n$52=*&amp;$irvar17:java.lang.String* [line 102];
+n$53=_fun_void Logger.info(String)(n$50:org.slf4j.Logger*,n$52:java.lang.String*) interface virtual [line 102];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">        LOGGER.info(&quot;time = &quot; + getTime()); <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$54=*&amp;#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 103];
+*&amp;$irvar18:org.slf4j.Logger*=n$54 [line 103];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$55=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 103];
+n$56=_fun_StringBuilder.&lt;init&gt;()(n$55:java.lang.StringBuilder*) [line 103];
+*&amp;$irvar19:java.lang.StringBuilder*=n$55 [line 103];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:3 Instructions
+n$57=*&amp;$irvar19:java.lang.StringBuilder* [line 103];
+_=*n$57:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 103];
+n$59=_fun_StringBuilder StringBuilder.append(String)(n$57:java.lang.StringBuilder*,"time = ":java.lang.Object*) virtual [line 103];
+*&amp;$irvar20:java.lang.StringBuilder*=n$59 [line 103];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$60=_fun_Date BlogBuildInfoUtil.getTime()() [line 103];
+*&amp;$irvar21:java.util.Date*=n$60 [line 103];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$61=*&amp;$irvar20:java.lang.StringBuilder* [line 103];
+_=*n$61:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 103];
+n$63=*&amp;$irvar21:java.util.Date* [line 103];
+n$64=_fun_StringBuilder StringBuilder.append(Object)(n$61:java.lang.StringBuilder*,n$63:java.util.Date*) virtual [line 103];
+*&amp;$irvar22:java.lang.StringBuilder*=n$64 [line 103];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$65=*&amp;$irvar22:java.lang.StringBuilder* [line 103];
+_=*n$65:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 103];
+n$67=_fun_String StringBuilder.toString()(n$65:java.lang.StringBuilder*) virtual [line 103];
+*&amp;$irvar23:java.lang.String*=n$67 [line 103];
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$68=*&amp;$irvar18:org.slf4j.Logger* [line 103];
+_=*n$68:org.slf4j.Logger*(root org.slf4j.Logger) [line 103];
+n$70=*&amp;$irvar23:java.lang.String* [line 103];
+n$71=_fun_void Logger.info(String)(n$68:org.slf4j.Logger*,n$70:java.lang.String*) interface virtual [line 103];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE104">104</td><td class="line">    } <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:32 3 succs: exn: Exit
+</span></span></a> <a href="./BlogBuildInfoUtil.java.d387a3c7413940dc32dc54b455c4ab43/nodes/com.zrlog.util.BlogBuildInfoUtil.main%28java.lang.String%5B%5D%29%3Avoid.9e10048258723f8ed96682459abc5ba2_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE105">105</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

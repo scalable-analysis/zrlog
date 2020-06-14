@@ -1,0 +1,1096 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.ArticleService.getFirstImgUrl(java.lang.String,com.zrlog.common.vo.AdminTokenVO):j.e8175b2b7552eace109ea1c2731a8cb4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ArticleService.java.e7e76b6abbd95fc03781360f41de35fc.html#LINE175">String ArticleService.getFirstImgUrl(String,AdminTokenVO)</a></h1></center>
+<a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:118 115 101 7 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:126 123 120 succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 228];
+NULLIFY(&amp;url); [line 228];
+NULLIFY(&amp;CatchVar538); [line 228];
+NULLIFY(&amp;$irvar0); [line 228];
+NULLIFY(&amp;CatchVar456); [line 228];
+NULLIFY(&amp;$irvar1); [line 228];
+NULLIFY(&amp;$irvar2); [line 228];
+NULLIFY(&amp;elements); [line 228];
+NULLIFY(&amp;e); [line 228];
+EXIT_SCOPE(n$289,$irvar3,url,CatchVar538,$irvar0,CatchVar456,$irvar1,$irvar2,elements,e); [line 228];
+APPLY_ABSTRACTION; [line 228];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;htmlContent:java.lang.String* [line 176];
+n$1=_fun_boolean StringUtils.isEmpty(String)(n$0:java.lang.String*) [line 176];
+*&amp;$irvar0:_Bool=n$1 [line 176];
+EXIT_SCOPE(n$0,n$1); [line 176];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$2=*&amp;$irvar0:_Bool [line 176];
+PRUNE(!(n$2 == 0), true); [line 176];
+NULLIFY(&amp;$irvar0); [line 176];
+EXIT_SCOPE(n$2,$irvar0); [line 176];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:8 exn:3 Conditional method_body
+n$2=*&amp;$irvar0:_Bool [line 176];
+PRUNE((n$2 == 0), false); [line 176];
+NULLIFY(&amp;$irvar0); [line 176];
+EXIT_SCOPE(n$2,$irvar0); [line 176];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:2 exn:3 Instructions
+*&amp;return:java.lang.String*="" [line 177];
+APPLY_ABSTRACTION; [line 177];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:9 exn:3 Instructions
+n$3=*&amp;htmlContent:java.lang.String* [line 179];
+n$4=_fun_Document Jsoup.parse(String)(n$3:java.lang.String*) [line 179];
+*&amp;$irvar1:org.jsoup.nodes.Document*=n$4 [line 179];
+NULLIFY(&amp;htmlContent); [line 179];
+EXIT_SCOPE(n$3,n$4,htmlContent); [line 179];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$5=*&amp;$irvar1:org.jsoup.nodes.Document* [line 179];
+_=*n$5:org.jsoup.nodes.Document*(root org.jsoup.nodes.Document) [line 179];
+n$7=_fun_Elements Element.select(String)(n$5:org.jsoup.nodes.Document*,"img":java.lang.Object*) virtual [line 179];
+*&amp;elements:org.jsoup.select.Elements*=n$7 [line 179];
+NULLIFY(&amp;$irvar1); [line 179];
+EXIT_SCOPE(_,n$5,n$7,$irvar1); [line 179];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 12 exn:3 Instructions
+n$8=*&amp;elements:org.jsoup.select.Elements* [line 180];
+_=*n$8:org.jsoup.select.Elements*(root org.jsoup.select.Elements) [line 180];
+n$10=_fun_boolean ArrayList.isEmpty()(n$8:org.jsoup.select.Elements*) virtual [line 180];
+*&amp;$irvar2:_Bool=n$10 [line 180];
+EXIT_SCOPE(_,n$8,n$10); [line 180];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:10 succs:13 exn:3 Conditional method_body
+n$11=*&amp;$irvar2:_Bool [line 180];
+PRUNE(!(n$11 != 0), true); [line 180];
+NULLIFY(&amp;$irvar2); [line 180];
+EXIT_SCOPE(n$11,$irvar2); [line 180];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:10 succs:118 exn:3 Conditional method_body
+n$11=*&amp;$irvar2:_Bool [line 180];
+PRUNE((n$11 != 0), false); [line 180];
+NULLIFY(&amp;$irvar2); [line 180];
+NULLIFY(&amp;elements); [line 180];
+EXIT_SCOPE(n$11,$irvar2,elements); [line 180];
+APPLY_ABSTRACTION; [line 180];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:11 succs:14 exn:3 Instructions
+n$12=*&amp;elements:org.jsoup.select.Elements* [line 181];
+_=*n$12:org.jsoup.select.Elements*(root org.jsoup.select.Elements) [line 181];
+n$14=_fun_Element Elements.first()(n$12:org.jsoup.select.Elements*) virtual [line 181];
+*&amp;$irvar3:org.jsoup.nodes.Element*=n$14 [line 181];
+NULLIFY(&amp;elements); [line 181];
+EXIT_SCOPE(_,n$12,n$14,elements); [line 181];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$15=*&amp;$irvar3:org.jsoup.nodes.Element* [line 181];
+_=*n$15:org.jsoup.nodes.Element*(root org.jsoup.nodes.Element) [line 181];
+n$17=_fun_String Node.attr(String)(n$15:org.jsoup.nodes.Element*,"src":java.lang.Object*) virtual [line 181];
+*&amp;url:java.lang.String*=n$17 [line 181];
+NULLIFY(&amp;$irvar3); [line 181];
+EXIT_SCOPE(_,n$15,n$17,$irvar3); [line 181];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:121 Instructions
+n$18=_fun_JFinal JFinal.me()() [line 184];
+*&amp;$irvar4:com.jfinal.core.JFinal*=n$18 [line 184];
+EXIT_SCOPE(n$18); [line 184];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:121 Instructions
+n$19=*&amp;$irvar4:com.jfinal.core.JFinal* [line 184];
+_=*n$19:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 184];
+n$21=_fun_Constants JFinal.getConstants()(n$19:com.jfinal.core.JFinal*) virtual [line 184];
+*&amp;$irvar5:com.jfinal.config.Constants*=n$21 [line 184];
+NULLIFY(&amp;$irvar4); [line 184];
+EXIT_SCOPE(_,n$19,n$21,$irvar4); [line 184];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:121 Instructions
+n$22=*&amp;$irvar5:com.jfinal.config.Constants* [line 184];
+_=*n$22:com.jfinal.config.Constants*(root com.jfinal.config.Constants) [line 184];
+n$24=_fun_String Constants.getBaseUploadPath()(n$22:com.jfinal.config.Constants*) virtual [line 184];
+*&amp;$irvar6:java.lang.String*=n$24 [line 184];
+NULLIFY(&amp;$irvar5); [line 184];
+EXIT_SCOPE(_,n$22,n$24,$irvar5); [line 184];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:121 Instructions
+n$25=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 184];
+n$26=*&amp;$irvar6:java.lang.String* [line 184];
+n$27=_fun_File.&lt;init&gt;(String)(n$25:java.io.File*,n$26:java.lang.String*) [line 184];
+*&amp;$irvar7:java.io.File*=n$25 [line 184];
+NULLIFY(&amp;$irvar6); [line 184];
+EXIT_SCOPE(n$25,n$26,n$27,$irvar6); [line 184];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:121 Instructions
+n$28=*&amp;$irvar7:java.io.File* [line 184];
+_=*n$28:java.io.File*(root java.io.File) [line 184];
+n$30=_fun_boolean File.mkdirs()(n$28:java.io.File*) virtual [line 184];
+*&amp;$irvar8:_Bool=n$30 [line 184];
+NULLIFY(&amp;$irvar7); [line 184];
+NULLIFY(&amp;$irvar8); [line 184];
+EXIT_SCOPE(_,n$28,n$30,$irvar7,$irvar8); [line 184];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:121 Instructions
+n$31=*&amp;url:java.lang.String* [line 185];
+*&amp;path:java.lang.String*=n$31 [line 185];
+EXIT_SCOPE(n$31); [line 185];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 23 exn:121 Instructions
+n$32=*&amp;url:java.lang.String* [line 188];
+_=*n$32:java.lang.String*(root java.lang.String) [line 188];
+n$34=_fun_boolean String.startsWith(String)(n$32:java.lang.String*,"https://":java.lang.Object*) virtual [line 188];
+*&amp;$irvar9:_Bool=n$34 [line 188];
+EXIT_SCOPE(_,n$32,n$34); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node22.html"><span class='visited with_tooltip'>C_22<span class='tooltip'>node22 preds:21 succs:24 exn:121 Conditional method_body
+n$35=*&amp;$irvar9:_Bool [line 188];
+PRUNE(!(n$35 != 0), true); [line 188];
+NULLIFY(&amp;$irvar9); [line 188];
+EXIT_SCOPE(n$35,$irvar9); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node23.html"><span class='visited with_tooltip'>C_23<span class='tooltip'>node23 preds:21 succs:27 exn:121 Conditional method_body
+n$35=*&amp;$irvar9:_Bool [line 188];
+PRUNE((n$35 != 0), false); [line 188];
+NULLIFY(&amp;$irvar9); [line 188];
+NULLIFY(&amp;path); [line 188];
+EXIT_SCOPE(n$35,$irvar9,path); [line 188];
+APPLY_ABSTRACTION; [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:22 succs:25 26 exn:121 Instructions
+n$36=*&amp;url:java.lang.String* [line 188];
+_=*n$36:java.lang.String*(root java.lang.String) [line 188];
+n$38=_fun_boolean String.startsWith(String)(n$36:java.lang.String*,"http://":java.lang.Object*) virtual [line 188];
+*&amp;$irvar10:_Bool=n$38 [line 188];
+EXIT_SCOPE(_,n$36,n$38); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:24 succs:27 exn:121 Conditional method_body
+n$39=*&amp;$irvar10:_Bool [line 188];
+PRUNE(!(n$39 == 0), true); [line 188];
+NULLIFY(&amp;path); [line 188];
+NULLIFY(&amp;$irvar10); [line 188];
+EXIT_SCOPE(n$39,path,$irvar10); [line 188];
+APPLY_ABSTRACTION; [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:24 succs:55 exn:121 Conditional method_body
+n$39=*&amp;$irvar10:_Bool [line 188];
+PRUNE((n$39 == 0), false); [line 188];
+NULLIFY(&amp;$irvar10); [line 188];
+EXIT_SCOPE(n$39,$irvar10); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:25 23 succs:28 exn:121 Instructions
+n$40=_fun___new(sizeof(t=java.net.URL):java.net.URL*) [line 189];
+n$41=*&amp;url:java.lang.String* [line 189];
+n$42=_fun_URL.&lt;init&gt;(String)(n$40:java.net.URL*,n$41:java.lang.String*) [line 189];
+*&amp;$irvar11:java.net.URL*=n$40 [line 189];
+EXIT_SCOPE(n$40,n$41,n$42); [line 189];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:121 Instructions
+n$43=*&amp;$irvar11:java.net.URL* [line 189];
+_=*n$43:java.net.URL*(root java.net.URL) [line 189];
+n$45=_fun_String URL.getPath()(n$43:java.net.URL*) virtual [line 189];
+*&amp;path:java.lang.String*=n$45 [line 189];
+NULLIFY(&amp;$irvar11); [line 189];
+EXIT_SCOPE(_,n$43,n$45,$irvar11); [line 189];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 31 exn:121 Instructions
+n$46=*&amp;path:java.lang.String* [line 190];
+_=*n$46:java.lang.String*(root java.lang.String) [line 190];
+n$48=_fun_boolean String.startsWith(String)(n$46:java.lang.String*,"/attached/":java.lang.Object*) virtual [line 190];
+*&amp;$irvar12:_Bool=n$48 [line 190];
+EXIT_SCOPE(_,n$46,n$48); [line 190];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node30.html"><span class='visited with_tooltip'>C_30<span class='tooltip'>node30 preds:29 succs:32 exn:121 Conditional method_body
+n$49=*&amp;$irvar12:_Bool [line 190];
+PRUNE(!(n$49 != 0), true); [line 190];
+NULLIFY(&amp;$irvar12); [line 190];
+EXIT_SCOPE(n$49,$irvar12); [line 190];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node31.html"><span class='visited with_tooltip'>C_31<span class='tooltip'>node31 preds:29 succs:37 exn:121 Conditional method_body
+n$49=*&amp;$irvar12:_Bool [line 190];
+PRUNE((n$49 != 0), false); [line 190];
+NULLIFY(&amp;$irvar12); [line 190];
+EXIT_SCOPE(n$49,$irvar12); [line 190];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:30 succs:33 exn:121 Instructions
+n$50=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 191];
+n$51=_fun_StringBuilder.&lt;init&gt;()(n$50:java.lang.StringBuilder*) [line 191];
+*&amp;$irvar13:java.lang.StringBuilder*=n$50 [line 191];
+EXIT_SCOPE(n$50,n$51); [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:121 Instructions
+n$52=*&amp;$irvar13:java.lang.StringBuilder* [line 191];
+_=*n$52:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 191];
+n$54=_fun_StringBuilder StringBuilder.append(String)(n$52:java.lang.StringBuilder*,"/attached/":java.lang.Object*) virtual [line 191];
+*&amp;$irvar14:java.lang.StringBuilder*=n$54 [line 191];
+NULLIFY(&amp;$irvar13); [line 191];
+EXIT_SCOPE(_,n$52,n$54,$irvar13); [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:121 Instructions
+n$55=*&amp;$irvar14:java.lang.StringBuilder* [line 191];
+_=*n$55:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 191];
+n$57=*&amp;path:java.lang.String* [line 191];
+n$58=_fun_StringBuilder StringBuilder.append(String)(n$55:java.lang.StringBuilder*,n$57:java.lang.String*) virtual [line 191];
+*&amp;$irvar15:java.lang.StringBuilder*=n$58 [line 191];
+NULLIFY(&amp;path); [line 191];
+NULLIFY(&amp;$irvar14); [line 191];
+EXIT_SCOPE(_,n$55,n$57,n$58,path,$irvar14); [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:36 exn:121 Instructions
+n$59=*&amp;$irvar15:java.lang.StringBuilder* [line 191];
+_=*n$59:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 191];
+n$61=_fun_String StringBuilder.toString()(n$59:java.lang.StringBuilder*) virtual [line 191];
+*&amp;$irvar16:java.lang.String*=n$61 [line 191];
+NULLIFY(&amp;$irvar15); [line 191];
+EXIT_SCOPE(_,n$59,n$61,$irvar15); [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:39 exn:121 Instructions
+n$62=*&amp;$irvar16:java.lang.String* [line 191];
+_=*n$62:java.lang.String*(root java.lang.String) [line 191];
+n$64=_fun_String String.replace(CharSequence,CharSequence)(n$62:java.lang.String*,"//":java.lang.Object*,"/":java.lang.Object*) virtual [line 191];
+*&amp;path:java.lang.String*=n$64 [line 191];
+NULLIFY(&amp;$irvar16); [line 191];
+EXIT_SCOPE(_,n$62,n$64,$irvar16); [line 191];
+APPLY_ABSTRACTION; [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:31 succs:38 exn:121 Instructions
+n$65=*&amp;path:java.lang.String* [line 193];
+_=*n$65:java.lang.String*(root java.lang.String) [line 193];
+n$67=_fun_String String.replace(CharSequence,CharSequence)(n$65:java.lang.String*,"//":java.lang.Object*,"/":java.lang.Object*) virtual [line 193];
+*&amp;$irvar17:java.lang.String*=n$67 [line 193];
+NULLIFY(&amp;path); [line 193];
+EXIT_SCOPE(_,n$65,n$67,path); [line 193];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 exn:121 Instructions
+n$68=*&amp;$irvar17:java.lang.String* [line 193];
+*&amp;path:java.lang.String*=n$68 [line 193];
+NULLIFY(&amp;$irvar17); [line 193];
+EXIT_SCOPE(n$68,$irvar17); [line 193];
+APPLY_ABSTRACTION; [line 193];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 36 succs:40 exn:121 Instructions
+n$69=*&amp;this:com.zrlog.service.ArticleService* [line 195];
+n$70=*&amp;url:java.lang.String* [line 195];
+n$71=_fun_byte[] ArticleService.getRequestBodyBytes(String)(n$69:com.zrlog.service.ArticleService*,n$70:java.lang.String*) [line 195];
+*&amp;bytes:signed char[_*_](*)=n$71 [line 195];
+NULLIFY(&amp;this); [line 195];
+EXIT_SCOPE(n$69,n$70,n$71,this); [line 195];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 succs:41 exn:121 Instructions
+n$72=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 196];
+n$73=_fun_StringBuilder.&lt;init&gt;()(n$72:java.lang.StringBuilder*) [line 196];
+*&amp;$irvar18:java.lang.StringBuilder*=n$72 [line 196];
+EXIT_SCOPE(n$72,n$73); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:40 succs:42 exn:121 Instructions
+n$74=*&amp;path:java.lang.String* [line 196];
+_=*n$74:java.lang.String*(root java.lang.String) [line 196];
+n$76=_fun_int String.indexOf(int)(n$74:java.lang.String*,46:int) virtual [line 196];
+*&amp;$irvar19:int=n$76 [line 196];
+EXIT_SCOPE(_,n$74,n$76); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:121 Instructions
+n$77=*&amp;path:java.lang.String* [line 196];
+_=*n$77:java.lang.String*(root java.lang.String) [line 196];
+n$79=*&amp;$irvar19:int [line 196];
+n$80=_fun_String String.substring(int,int)(n$77:java.lang.String*,0:int,n$79:int) virtual [line 196];
+*&amp;$irvar20:java.lang.String*=n$80 [line 196];
+NULLIFY(&amp;$irvar19); [line 196];
+EXIT_SCOPE(_,n$77,n$79,n$80,$irvar19); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:121 Instructions
+n$81=*&amp;$irvar18:java.lang.StringBuilder* [line 196];
+_=*n$81:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 196];
+n$83=*&amp;$irvar20:java.lang.String* [line 196];
+n$84=_fun_StringBuilder StringBuilder.append(String)(n$81:java.lang.StringBuilder*,n$83:java.lang.String*) virtual [line 196];
+*&amp;$irvar21:java.lang.StringBuilder*=n$84 [line 196];
+NULLIFY(&amp;$irvar18); [line 196];
+NULLIFY(&amp;$irvar20); [line 196];
+EXIT_SCOPE(_,n$81,n$83,n$84,$irvar18,$irvar20); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 exn:121 Instructions
+n$85=*&amp;$irvar21:java.lang.StringBuilder* [line 196];
+_=*n$85:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 196];
+n$87=_fun_StringBuilder StringBuilder.append(String)(n$85:java.lang.StringBuilder*,"_thumbnail":java.lang.Object*) virtual [line 196];
+*&amp;$irvar22:java.lang.StringBuilder*=n$87 [line 196];
+NULLIFY(&amp;$irvar21); [line 196];
+EXIT_SCOPE(_,n$85,n$87,$irvar21); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:44 succs:46 exn:121 Instructions
+n$88=*&amp;path:java.lang.String* [line 196];
+_=*n$88:java.lang.String*(root java.lang.String) [line 196];
+n$90=_fun_int String.indexOf(int)(n$88:java.lang.String*,46:int) virtual [line 196];
+*&amp;$irvar23:int=n$90 [line 196];
+EXIT_SCOPE(_,n$88,n$90); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 exn:121 Instructions
+n$91=*&amp;path:java.lang.String* [line 196];
+_=*n$91:java.lang.String*(root java.lang.String) [line 196];
+n$93=*&amp;$irvar23:int [line 196];
+n$94=_fun_String String.substring(int)(n$91:java.lang.String*,n$93:int) virtual [line 196];
+*&amp;$irvar24:java.lang.String*=n$94 [line 196];
+NULLIFY(&amp;path); [line 196];
+NULLIFY(&amp;$irvar23); [line 196];
+EXIT_SCOPE(_,n$91,n$93,n$94,path,$irvar23); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:121 Instructions
+n$95=*&amp;$irvar22:java.lang.StringBuilder* [line 196];
+_=*n$95:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 196];
+n$97=*&amp;$irvar24:java.lang.String* [line 196];
+n$98=_fun_StringBuilder StringBuilder.append(String)(n$95:java.lang.StringBuilder*,n$97:java.lang.String*) virtual [line 196];
+*&amp;$irvar25:java.lang.StringBuilder*=n$98 [line 196];
+NULLIFY(&amp;$irvar22); [line 196];
+NULLIFY(&amp;$irvar24); [line 196];
+EXIT_SCOPE(_,n$95,n$97,n$98,$irvar22,$irvar24); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:121 Instructions
+n$99=*&amp;$irvar25:java.lang.StringBuilder* [line 196];
+_=*n$99:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 196];
+n$101=_fun_String StringBuilder.toString()(n$99:java.lang.StringBuilder*) virtual [line 196];
+*&amp;path:java.lang.String*=n$101 [line 196];
+NULLIFY(&amp;$irvar25); [line 196];
+EXIT_SCOPE(_,n$99,n$101,$irvar25); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:50 exn:121 Instructions
+n$102=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 197];
+n$103=_fun_StringBuilder.&lt;init&gt;()(n$102:java.lang.StringBuilder*) [line 197];
+*&amp;$irvar26:java.lang.StringBuilder*=n$102 [line 197];
+EXIT_SCOPE(n$102,n$103); [line 197];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 succs:51 exn:121 Instructions
+n$104=_fun_String PathKit.getWebRootPath()() [line 197];
+*&amp;$irvar27:java.lang.String*=n$104 [line 197];
+EXIT_SCOPE(n$104); [line 197];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node51.html"><span class='visited with_tooltip'>I_51<span class='tooltip'>node51 preds:50 succs:52 exn:121 Instructions
+n$105=*&amp;$irvar26:java.lang.StringBuilder* [line 197];
+_=*n$105:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 197];
+n$107=*&amp;$irvar27:java.lang.String* [line 197];
+n$108=_fun_StringBuilder StringBuilder.append(String)(n$105:java.lang.StringBuilder*,n$107:java.lang.String*) virtual [line 197];
+*&amp;$irvar28:java.lang.StringBuilder*=n$108 [line 197];
+NULLIFY(&amp;$irvar26); [line 197];
+NULLIFY(&amp;$irvar27); [line 197];
+EXIT_SCOPE(_,n$105,n$107,n$108,$irvar26,$irvar27); [line 197];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node52.html"><span class='visited with_tooltip'>I_52<span class='tooltip'>node52 preds:51 succs:53 exn:121 Instructions
+n$109=*&amp;$irvar28:java.lang.StringBuilder* [line 197];
+_=*n$109:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 197];
+n$111=*&amp;path:java.lang.String* [line 197];
+n$112=_fun_StringBuilder StringBuilder.append(String)(n$109:java.lang.StringBuilder*,n$111:java.lang.String*) virtual [line 197];
+*&amp;$irvar29:java.lang.StringBuilder*=n$112 [line 197];
+NULLIFY(&amp;$irvar28); [line 197];
+EXIT_SCOPE(_,n$109,n$111,n$112,$irvar28); [line 197];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node53.html"><span class='visited with_tooltip'>I_53<span class='tooltip'>node53 preds:52 succs:54 exn:121 Instructions
+n$113=*&amp;$irvar29:java.lang.StringBuilder* [line 197];
+_=*n$113:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 197];
+n$115=_fun_String StringBuilder.toString()(n$113:java.lang.StringBuilder*) virtual [line 197];
+*&amp;$irvar30:java.lang.String*=n$115 [line 197];
+NULLIFY(&amp;$irvar29); [line 197];
+EXIT_SCOPE(_,n$113,n$115,$irvar29); [line 197];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node54.html"><span class='visited with_tooltip'>I_54<span class='tooltip'>node54 preds:53 succs:80 exn:121 Instructions
+n$116=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 197];
+n$117=*&amp;$irvar30:java.lang.String* [line 197];
+n$118=_fun_File.&lt;init&gt;(String)(n$116:java.io.File*,n$117:java.lang.String*) [line 197];
+*&amp;thumbnailFile:java.io.File*=n$116 [line 197];
+NULLIFY(&amp;$irvar30); [line 197];
+EXIT_SCOPE(n$116,n$117,n$118,$irvar30); [line 197];
+APPLY_ABSTRACTION; [line 197];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:26 succs:56 exn:121 Instructions
+n$119=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 199];
+n$120=_fun_StringBuilder.&lt;init&gt;()(n$119:java.lang.StringBuilder*) [line 199];
+*&amp;$irvar31:java.lang.StringBuilder*=n$119 [line 199];
+EXIT_SCOPE(n$119,n$120); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:55 succs:57 exn:121 Instructions
+n$121=_fun_String PathKit.getWebRootPath()() [line 199];
+*&amp;$irvar32:java.lang.String*=n$121 [line 199];
+EXIT_SCOPE(n$121); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:56 succs:58 exn:121 Instructions
+n$122=*&amp;$irvar31:java.lang.StringBuilder* [line 199];
+_=*n$122:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 199];
+n$124=*&amp;$irvar32:java.lang.String* [line 199];
+n$125=_fun_StringBuilder StringBuilder.append(String)(n$122:java.lang.StringBuilder*,n$124:java.lang.String*) virtual [line 199];
+*&amp;$irvar33:java.lang.StringBuilder*=n$125 [line 199];
+NULLIFY(&amp;$irvar31); [line 199];
+NULLIFY(&amp;$irvar32); [line 199];
+EXIT_SCOPE(_,n$122,n$124,n$125,$irvar31,$irvar32); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node58.html"><span class='visited with_tooltip'>I_58<span class='tooltip'>node58 preds:57 succs:59 exn:121 Instructions
+n$126=_fun_JFinal JFinal.me()() [line 199];
+*&amp;$irvar34:com.jfinal.core.JFinal*=n$126 [line 199];
+EXIT_SCOPE(n$126); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node59.html"><span class='visited with_tooltip'>I_59<span class='tooltip'>node59 preds:58 succs:60 exn:121 Instructions
+n$127=*&amp;$irvar34:com.jfinal.core.JFinal* [line 199];
+_=*n$127:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 199];
+n$129=_fun_String JFinal.getContextPath()(n$127:com.jfinal.core.JFinal*) virtual [line 199];
+*&amp;$irvar35:java.lang.String*=n$129 [line 199];
+NULLIFY(&amp;$irvar34); [line 199];
+EXIT_SCOPE(_,n$127,n$129,$irvar34); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node60.html"><span class='visited with_tooltip'>I_60<span class='tooltip'>node60 preds:59 succs:61 exn:121 Instructions
+n$130=*&amp;url:java.lang.String* [line 199];
+_=*n$130:java.lang.String*(root java.lang.String) [line 199];
+n$132=*&amp;$irvar35:java.lang.String* [line 199];
+n$133=_fun_String String.replace(CharSequence,CharSequence)(n$130:java.lang.String*,n$132:java.lang.String*,"":java.lang.Object*) virtual [line 199];
+*&amp;$irvar36:java.lang.String*=n$133 [line 199];
+NULLIFY(&amp;$irvar35); [line 199];
+EXIT_SCOPE(_,n$130,n$132,n$133,$irvar35); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node61.html"><span class='visited with_tooltip'>I_61<span class='tooltip'>node61 preds:60 succs:62 exn:121 Instructions
+n$134=*&amp;$irvar33:java.lang.StringBuilder* [line 199];
+_=*n$134:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 199];
+n$136=*&amp;$irvar36:java.lang.String* [line 199];
+n$137=_fun_StringBuilder StringBuilder.append(String)(n$134:java.lang.StringBuilder*,n$136:java.lang.String*) virtual [line 199];
+*&amp;$irvar37:java.lang.StringBuilder*=n$137 [line 199];
+NULLIFY(&amp;$irvar36); [line 199];
+NULLIFY(&amp;$irvar33); [line 199];
+EXIT_SCOPE(_,n$134,n$136,n$137,$irvar36,$irvar33); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds:61 succs:63 exn:121 Instructions
+n$138=*&amp;$irvar37:java.lang.StringBuilder* [line 199];
+_=*n$138:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 199];
+n$140=_fun_String StringBuilder.toString()(n$138:java.lang.StringBuilder*) virtual [line 199];
+*&amp;$irvar38:java.lang.String*=n$140 [line 199];
+NULLIFY(&amp;$irvar37); [line 199];
+EXIT_SCOPE(_,n$138,n$140,$irvar37); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node63.html"><span class='visited with_tooltip'>I_63<span class='tooltip'>node63 preds:62 succs:64 exn:121 Instructions
+n$141=_fun___new(sizeof(t=java.io.FileInputStream):java.io.FileInputStream*) [line 199];
+n$142=*&amp;$irvar38:java.lang.String* [line 199];
+n$143=_fun_FileInputStream.&lt;init&gt;(String)(n$141:java.io.FileInputStream*,n$142:java.lang.String*) [line 199];
+*&amp;$irvar39:java.io.FileInputStream*=n$141 [line 199];
+NULLIFY(&amp;$irvar38); [line 199];
+EXIT_SCOPE(n$141,n$142,n$143,$irvar38); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node64.html"><span class='visited with_tooltip'>I_64<span class='tooltip'>node64 preds:63 succs:65 exn:121 Instructions
+n$144=*&amp;$irvar39:java.io.FileInputStream* [line 199];
+n$145=_fun_byte[] IOUtil.getByteByInputStream(InputStream)(n$144:java.io.FileInputStream*) [line 199];
+*&amp;bytes:signed char[_*_](*)=n$145 [line 199];
+NULLIFY(&amp;$irvar39); [line 199];
+EXIT_SCOPE(n$144,n$145,$irvar39); [line 199];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node65.html"><span class='visited with_tooltip'>I_65<span class='tooltip'>node65 preds:64 succs:66 exn:121 Instructions
+n$146=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 200];
+n$147=_fun_StringBuilder.&lt;init&gt;()(n$146:java.lang.StringBuilder*) [line 200];
+*&amp;$irvar40:java.lang.StringBuilder*=n$146 [line 200];
+EXIT_SCOPE(n$146,n$147); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node66.html"><span class='visited with_tooltip'>I_66<span class='tooltip'>node66 preds:65 succs:67 exn:121 Instructions
+n$148=*&amp;url:java.lang.String* [line 200];
+_=*n$148:java.lang.String*(root java.lang.String) [line 200];
+n$150=_fun_int String.indexOf(int)(n$148:java.lang.String*,46:int) virtual [line 200];
+*&amp;$irvar41:int=n$150 [line 200];
+EXIT_SCOPE(_,n$148,n$150); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node67.html"><span class='visited with_tooltip'>I_67<span class='tooltip'>node67 preds:66 succs:68 exn:121 Instructions
+n$151=*&amp;url:java.lang.String* [line 200];
+_=*n$151:java.lang.String*(root java.lang.String) [line 200];
+n$153=*&amp;$irvar41:int [line 200];
+n$154=_fun_String String.substring(int,int)(n$151:java.lang.String*,0:int,n$153:int) virtual [line 200];
+*&amp;$irvar42:java.lang.String*=n$154 [line 200];
+NULLIFY(&amp;$irvar41); [line 200];
+EXIT_SCOPE(_,n$151,n$153,n$154,$irvar41); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node68.html"><span class='visited with_tooltip'>I_68<span class='tooltip'>node68 preds:67 succs:69 exn:121 Instructions
+n$155=*&amp;$irvar40:java.lang.StringBuilder* [line 200];
+_=*n$155:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 200];
+n$157=*&amp;$irvar42:java.lang.String* [line 200];
+n$158=_fun_StringBuilder StringBuilder.append(String)(n$155:java.lang.StringBuilder*,n$157:java.lang.String*) virtual [line 200];
+*&amp;$irvar43:java.lang.StringBuilder*=n$158 [line 200];
+NULLIFY(&amp;$irvar42); [line 200];
+NULLIFY(&amp;$irvar40); [line 200];
+EXIT_SCOPE(_,n$155,n$157,n$158,$irvar42,$irvar40); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node69.html"><span class='visited with_tooltip'>I_69<span class='tooltip'>node69 preds:68 succs:70 exn:121 Instructions
+n$159=*&amp;$irvar43:java.lang.StringBuilder* [line 200];
+_=*n$159:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 200];
+n$161=_fun_StringBuilder StringBuilder.append(String)(n$159:java.lang.StringBuilder*,"_thumbnail":java.lang.Object*) virtual [line 200];
+*&amp;$irvar44:java.lang.StringBuilder*=n$161 [line 200];
+NULLIFY(&amp;$irvar43); [line 200];
+EXIT_SCOPE(_,n$159,n$161,$irvar43); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node70.html"><span class='visited with_tooltip'>I_70<span class='tooltip'>node70 preds:69 succs:71 exn:121 Instructions
+n$162=*&amp;path:java.lang.String* [line 200];
+_=*n$162:java.lang.String*(root java.lang.String) [line 200];
+n$164=_fun_int String.indexOf(int)(n$162:java.lang.String*,46:int) virtual [line 200];
+*&amp;$irvar45:int=n$164 [line 200];
+NULLIFY(&amp;path); [line 200];
+EXIT_SCOPE(_,n$162,n$164,path); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node71.html"><span class='visited with_tooltip'>I_71<span class='tooltip'>node71 preds:70 succs:72 exn:121 Instructions
+n$165=*&amp;url:java.lang.String* [line 200];
+_=*n$165:java.lang.String*(root java.lang.String) [line 200];
+n$167=*&amp;$irvar45:int [line 200];
+n$168=_fun_String String.substring(int)(n$165:java.lang.String*,n$167:int) virtual [line 200];
+*&amp;$irvar46:java.lang.String*=n$168 [line 200];
+NULLIFY(&amp;$irvar45); [line 200];
+EXIT_SCOPE(_,n$165,n$167,n$168,$irvar45); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node72.html"><span class='visited with_tooltip'>I_72<span class='tooltip'>node72 preds:71 succs:73 exn:121 Instructions
+n$169=*&amp;$irvar44:java.lang.StringBuilder* [line 200];
+_=*n$169:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 200];
+n$171=*&amp;$irvar46:java.lang.String* [line 200];
+n$172=_fun_StringBuilder StringBuilder.append(String)(n$169:java.lang.StringBuilder*,n$171:java.lang.String*) virtual [line 200];
+*&amp;$irvar47:java.lang.StringBuilder*=n$172 [line 200];
+NULLIFY(&amp;$irvar46); [line 200];
+NULLIFY(&amp;$irvar44); [line 200];
+EXIT_SCOPE(_,n$169,n$171,n$172,$irvar46,$irvar44); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node73.html"><span class='visited with_tooltip'>I_73<span class='tooltip'>node73 preds:72 succs:74 exn:121 Instructions
+n$173=*&amp;$irvar47:java.lang.StringBuilder* [line 200];
+_=*n$173:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 200];
+n$175=_fun_String StringBuilder.toString()(n$173:java.lang.StringBuilder*) virtual [line 200];
+*&amp;path:java.lang.String*=n$175 [line 200];
+NULLIFY(&amp;$irvar47); [line 200];
+EXIT_SCOPE(_,n$173,n$175,$irvar47); [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node74.html"><span class='visited with_tooltip'>I_74<span class='tooltip'>node74 preds:73 succs:75 exn:121 Instructions
+n$176=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 201];
+n$177=_fun_StringBuilder.&lt;init&gt;()(n$176:java.lang.StringBuilder*) [line 201];
+*&amp;$irvar48:java.lang.StringBuilder*=n$176 [line 201];
+EXIT_SCOPE(n$176,n$177); [line 201];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node75.html"><span class='visited with_tooltip'>I_75<span class='tooltip'>node75 preds:74 succs:76 exn:121 Instructions
+n$178=_fun_String PathKit.getWebRootPath()() [line 201];
+*&amp;$irvar49:java.lang.String*=n$178 [line 201];
+EXIT_SCOPE(n$178); [line 201];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node76.html"><span class='visited with_tooltip'>I_76<span class='tooltip'>node76 preds:75 succs:77 exn:121 Instructions
+n$179=*&amp;$irvar48:java.lang.StringBuilder* [line 201];
+_=*n$179:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 201];
+n$181=*&amp;$irvar49:java.lang.String* [line 201];
+n$182=_fun_StringBuilder StringBuilder.append(String)(n$179:java.lang.StringBuilder*,n$181:java.lang.String*) virtual [line 201];
+*&amp;$irvar50:java.lang.StringBuilder*=n$182 [line 201];
+NULLIFY(&amp;$irvar48); [line 201];
+NULLIFY(&amp;$irvar49); [line 201];
+EXIT_SCOPE(_,n$179,n$181,n$182,$irvar48,$irvar49); [line 201];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node77.html"><span class='visited with_tooltip'>I_77<span class='tooltip'>node77 preds:76 succs:78 exn:121 Instructions
+n$183=*&amp;$irvar50:java.lang.StringBuilder* [line 201];
+_=*n$183:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 201];
+n$185=*&amp;path:java.lang.String* [line 201];
+n$186=_fun_StringBuilder StringBuilder.append(String)(n$183:java.lang.StringBuilder*,n$185:java.lang.String*) virtual [line 201];
+*&amp;$irvar51:java.lang.StringBuilder*=n$186 [line 201];
+NULLIFY(&amp;$irvar50); [line 201];
+EXIT_SCOPE(_,n$183,n$185,n$186,$irvar50); [line 201];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node78.html"><span class='visited with_tooltip'>I_78<span class='tooltip'>node78 preds:77 succs:79 exn:121 Instructions
+n$187=*&amp;$irvar51:java.lang.StringBuilder* [line 201];
+_=*n$187:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 201];
+n$189=_fun_String StringBuilder.toString()(n$187:java.lang.StringBuilder*) virtual [line 201];
+*&amp;$irvar52:java.lang.String*=n$189 [line 201];
+NULLIFY(&amp;$irvar51); [line 201];
+EXIT_SCOPE(_,n$187,n$189,$irvar51); [line 201];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node79.html"><span class='visited with_tooltip'>I_79<span class='tooltip'>node79 preds:78 succs:80 exn:121 Instructions
+n$190=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 201];
+n$191=*&amp;$irvar52:java.lang.String* [line 201];
+n$192=_fun_File.&lt;init&gt;(String)(n$190:java.io.File*,n$191:java.lang.String*) [line 201];
+*&amp;thumbnailFile:java.io.File*=n$190 [line 201];
+NULLIFY(&amp;$irvar52); [line 201];
+EXIT_SCOPE(n$190,n$191,n$192,$irvar52); [line 201];
+APPLY_ABSTRACTION; [line 201];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node80.html"><span class='visited with_tooltip'>I_80<span class='tooltip'>node80 preds:79 54 succs:81 exn:121 Instructions
+*&amp;height:int=-1 [line 203];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node81.html"><span class='visited with_tooltip'>I_81<span class='tooltip'>node81 preds:80 succs:82 83 exn:121 Instructions
+*&amp;width:int=-1 [line 204];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node82.html"><span class='visited with_tooltip'>C_82<span class='tooltip'>node82 preds:81 succs:84 exn:121 Conditional method_body
+n$193=*&amp;bytes:signed char[_*_](*) [line 205];
+_=*n$193:int(root signed char[_*_]) [line 205];
+n$195=_fun___get_array_length(n$193:signed char[_*_](*)) [line 205];
+PRUNE(!(n$195  &lt;=  0), true); [line 205];
+EXIT_SCOPE(_,n$193,n$195); [line 205];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node83.html"><span class='visited with_tooltip'>C_83<span class='tooltip'>node83 preds:81 succs:118 exn:121 Conditional method_body
+n$193=*&amp;bytes:signed char[_*_](*) [line 205];
+_=*n$193:int(root signed char[_*_]) [line 205];
+n$195=_fun___get_array_length(n$193:signed char[_*_](*)) [line 205];
+PRUNE((n$195  &lt;=  0), false); [line 205];
+NULLIFY(&amp;thumbnailFile); [line 205];
+NULLIFY(&amp;url); [line 205];
+NULLIFY(&amp;width); [line 205];
+NULLIFY(&amp;path); [line 205];
+NULLIFY(&amp;bytes); [line 205];
+NULLIFY(&amp;height); [line 205];
+EXIT_SCOPE(_,n$193,n$195,thumbnailFile,url,width,path,bytes,height); [line 205];
+APPLY_ABSTRACTION; [line 205];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node84.html"><span class='visited with_tooltip'>I_84<span class='tooltip'>node84 preds:82 succs:85 exn:129 Instructions
+n$196=*&amp;thumbnailFile:java.io.File* [line 207];
+_=*n$196:java.io.File*(root java.io.File) [line 207];
+n$198=_fun_String File.getName()(n$196:java.io.File*) virtual [line 207];
+*&amp;$irvar53:java.lang.String*=n$198 [line 207];
+EXIT_SCOPE(_,n$196,n$198); [line 207];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node85.html"><span class='visited with_tooltip'>I_85<span class='tooltip'>node85 preds:84 succs:86 exn:129 Instructions
+n$199=*&amp;thumbnailFile:java.io.File* [line 207];
+_=*n$199:java.io.File*(root java.io.File) [line 207];
+n$201=_fun_String File.getName()(n$199:java.io.File*) virtual [line 207];
+*&amp;$irvar54:java.lang.String*=n$201 [line 207];
+EXIT_SCOPE(_,n$199,n$201); [line 207];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node86.html"><span class='visited with_tooltip'>I_86<span class='tooltip'>node86 preds:85 succs:87 exn:129 Instructions
+n$202=*&amp;$irvar54:java.lang.String* [line 207];
+_=*n$202:java.lang.String*(root java.lang.String) [line 207];
+n$204=_fun_int String.lastIndexOf(int)(n$202:java.lang.String*,46:int) virtual [line 207];
+*&amp;$irvar55:int=n$204 [line 207];
+NULLIFY(&amp;$irvar54); [line 207];
+EXIT_SCOPE(_,n$202,n$204,$irvar54); [line 207];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node87.html"><span class='visited with_tooltip'>I_87<span class='tooltip'>node87 preds:86 succs:88 exn:129 Instructions
+n$205=*&amp;$irvar53:java.lang.String* [line 207];
+_=*n$205:java.lang.String*(root java.lang.String) [line 207];
+n$207=*&amp;$irvar55:int [line 207];
+n$208=_fun_String String.substring(int)(n$205:java.lang.String*,n$207:int) virtual [line 207];
+*&amp;extName:java.lang.String*=n$208 [line 207];
+NULLIFY(&amp;$irvar55); [line 207];
+NULLIFY(&amp;$irvar53); [line 207];
+EXIT_SCOPE(_,n$205,n$207,n$208,$irvar55,$irvar53); [line 207];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node88.html"><span class='visited with_tooltip'>I_88<span class='tooltip'>node88 preds:87 succs:89 exn:129 Instructions
+n$209=*&amp;thumbnailFile:java.io.File* [line 209];
+_=*n$209:java.io.File*(root java.io.File) [line 209];
+n$211=_fun_File File.getParentFile()(n$209:java.io.File*) virtual [line 209];
+*&amp;$irvar56:java.io.File*=n$211 [line 209];
+EXIT_SCOPE(_,n$209,n$211); [line 209];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node89.html"><span class='visited with_tooltip'>I_89<span class='tooltip'>node89 preds:88 succs:90 exn:129 Instructions
+n$212=*&amp;$irvar56:java.io.File* [line 209];
+_=*n$212:java.io.File*(root java.io.File) [line 209];
+n$214=_fun_boolean File.mkdirs()(n$212:java.io.File*) virtual [line 209];
+*&amp;$irvar57:_Bool=n$214 [line 209];
+NULLIFY(&amp;$irvar56); [line 209];
+NULLIFY(&amp;$irvar57); [line 209];
+EXIT_SCOPE(_,n$212,n$214,$irvar56,$irvar57); [line 209];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node90.html"><span class='visited with_tooltip'>I_90<span class='tooltip'>node90 preds:89 succs:91 92 exn:129 Instructions
+n$215=*&amp;extName:java.lang.String* [line 210];
+n$216=_fun_boolean String.equalsIgnoreCase(String)(".gif":java.lang.Object*,n$215:java.lang.String*) virtual [line 210];
+*&amp;$irvar58:_Bool=n$216 [line 210];
+NULLIFY(&amp;extName); [line 210];
+EXIT_SCOPE(n$215,n$216,extName); [line 210];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node91.html"><span class='visited with_tooltip'>C_91<span class='tooltip'>node91 preds:90 succs:93 exn:129 Conditional method_body
+n$217=*&amp;$irvar58:_Bool [line 210];
+PRUNE(!(n$217 != 0), true); [line 210];
+NULLIFY(&amp;width); [line 210];
+NULLIFY(&amp;$irvar58); [line 210];
+NULLIFY(&amp;height); [line 210];
+EXIT_SCOPE(n$217,width,$irvar58,height); [line 210];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node92.html"><span class='visited with_tooltip'>C_92<span class='tooltip'>node92 preds:90 succs:98 exn:129 Conditional method_body
+n$217=*&amp;$irvar58:_Bool [line 210];
+PRUNE((n$217 != 0), false); [line 210];
+NULLIFY(&amp;$irvar58); [line 210];
+EXIT_SCOPE(n$217,$irvar58); [line 210];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node93.html"><span class='visited with_tooltip'>I_93<span class='tooltip'>node93 preds:91 succs:94 exn:129 Instructions
+n$218=*&amp;bytes:signed char[_*_](*) [line 211];
+n$219=_fun_byte[] ThumbnailUtil.jpeg(byte[],float)(n$218:signed char[_*_](*),1.:float) [line 211];
+*&amp;$irvar59:signed char[_*_](*)=n$219 [line 211];
+NULLIFY(&amp;bytes); [line 211];
+EXIT_SCOPE(n$218,n$219,bytes); [line 211];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node94.html"><span class='visited with_tooltip'>I_94<span class='tooltip'>node94 preds:93 succs:95 exn:129 Instructions
+n$220=*&amp;$irvar59:signed char[_*_](*) [line 211];
+n$221=*&amp;thumbnailFile:java.io.File* [line 211];
+n$222=_fun_void IOUtil.writeBytesToFile(byte[],File)(n$220:signed char[_*_](*),n$221:java.io.File*) [line 211];
+NULLIFY(&amp;$irvar59); [line 211];
+EXIT_SCOPE(n$220,n$221,n$222,$irvar59); [line 211];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node95.html"><span class='visited with_tooltip'>I_95<span class='tooltip'>node95 preds:94 succs:96 exn:129 Instructions
+n$223=*&amp;thumbnailFile:java.io.File* [line 212];
+n$224=_fun_BufferedImage ImageIO.read(File)(n$223:java.io.File*) [line 212];
+*&amp;bimg:java.awt.image.BufferedImage*=n$224 [line 212];
+EXIT_SCOPE(n$223,n$224); [line 212];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node96.html"><span class='visited with_tooltip'>I_96<span class='tooltip'>node96 preds:95 succs:97 exn:129 Instructions
+n$225=*&amp;bimg:java.awt.image.BufferedImage* [line 213];
+_=*n$225:java.awt.image.BufferedImage*(root java.awt.image.BufferedImage) [line 213];
+n$227=_fun_int BufferedImage.getHeight()(n$225:java.awt.image.BufferedImage*) virtual [line 213];
+*&amp;height:int=n$227 [line 213];
+EXIT_SCOPE(_,n$225,n$227); [line 213];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node97.html"><span class='visited with_tooltip'>I_97<span class='tooltip'>node97 preds:96 succs:102 exn:129 Instructions
+n$228=*&amp;bimg:java.awt.image.BufferedImage* [line 214];
+_=*n$228:java.awt.image.BufferedImage*(root java.awt.image.BufferedImage) [line 214];
+n$230=_fun_int BufferedImage.getWidth()(n$228:java.awt.image.BufferedImage*) virtual [line 214];
+*&amp;width:int=n$230 [line 214];
+NULLIFY(&amp;bimg); [line 214];
+EXIT_SCOPE(_,n$228,n$230,bimg); [line 214];
+APPLY_ABSTRACTION; [line 214];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node98.html"><span class='visited with_tooltip'>I_98<span class='tooltip'>node98 preds:92 succs:102 exn:129 Instructions
+n$231=*&amp;bytes:signed char[_*_](*) [line 216];
+n$232=*&amp;thumbnailFile:java.io.File* [line 216];
+n$233=_fun_void IOUtil.writeBytesToFile(byte[],File)(n$231:signed char[_*_](*),n$232:java.io.File*) [line 216];
+NULLIFY(&amp;bytes); [line 216];
+EXIT_SCOPE(n$231,n$232,n$233,bytes); [line 216];
+APPLY_ABSTRACTION; [line 216];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node99.html"><span class='visited with_tooltip'>I_99<span class='tooltip'>node99 preds:127 succs:100 exn:121 Instructions
+n$234=*&amp;CatchVar456:java.lang.Object* [line 218];
+*&amp;e:java.lang.Object*=n$234 [line 218];
+NULLIFY(&amp;CatchVar456); [line 218];
+EXIT_SCOPE(n$234,CatchVar456); [line 218];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node100.html"><span class='visited with_tooltip'>I_100<span class='tooltip'>node100 preds:99 succs:101 exn:121 Instructions
+n$235=*&amp;#GB<>$com.zrlog.service.ArticleService.LOGGER:org.slf4j.Logger*(root com.zrlog.service.ArticleService) [line 219];
+_=*n$235:org.slf4j.Logger*(root org.slf4j.Logger) [line 219];
+n$237=*&amp;e:java.lang.Object* [line 219];
+n$238=_fun_void Logger.error(String,Throwable)(n$235:org.slf4j.Logger*,"generation jpeg thumbnail error ":java.lang.Object*,n$237:java.lang.Object*) interface virtual [line 219];
+NULLIFY(&amp;e); [line 219];
+EXIT_SCOPE(_,n$235,n$237,n$238,e); [line 219];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node101.html"><span class='visited with_tooltip'>I_101<span class='tooltip'>node101 preds:100 succs:2 exn:3 Instructions
+n$239=*&amp;url:java.lang.String* [line 220];
+*&amp;return:java.lang.String*=n$239 [line 220];
+NULLIFY(&amp;url); [line 220];
+EXIT_SCOPE(n$239,url); [line 220];
+APPLY_ABSTRACTION; [line 220];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node102.html"><span class='visited with_tooltip'>I_102<span class='tooltip'>node102 preds:98 97 succs:103 exn:124 Instructions
+n$240=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 222];
+n$241=_fun_StringBuilder.&lt;init&gt;()(n$240:java.lang.StringBuilder*) [line 222];
+*&amp;$irvar60:java.lang.StringBuilder*=n$240 [line 222];
+NULLIFY(&amp;url); [line 222];
+EXIT_SCOPE(n$240,n$241,url); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node103.html"><span class='visited with_tooltip'>I_103<span class='tooltip'>node103 preds:102 succs:104 exn:124 Instructions
+n$242=_fun___new(sizeof(t=com.zrlog.service.UploadService):com.zrlog.service.UploadService*) [line 222];
+n$243=_fun_UploadService.&lt;init&gt;()(n$242:com.zrlog.service.UploadService*) [line 222];
+*&amp;$irvar61:com.zrlog.service.UploadService*=n$242 [line 222];
+EXIT_SCOPE(n$242,n$243); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node104.html"><span class='visited with_tooltip'>I_104<span class='tooltip'>node104 preds:103 succs:105 exn:124 Instructions
+n$244=_fun_JFinal JFinal.me()() [line 222];
+*&amp;$irvar62:com.jfinal.core.JFinal*=n$244 [line 222];
+EXIT_SCOPE(n$244); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node105.html"><span class='visited with_tooltip'>I_105<span class='tooltip'>node105 preds:104 succs:106 exn:124 Instructions
+n$245=*&amp;$irvar62:com.jfinal.core.JFinal* [line 222];
+_=*n$245:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 222];
+n$247=_fun_String JFinal.getContextPath()(n$245:com.jfinal.core.JFinal*) virtual [line 222];
+*&amp;$irvar63:java.lang.String*=n$247 [line 222];
+NULLIFY(&amp;$irvar62); [line 222];
+EXIT_SCOPE(_,n$245,n$247,$irvar62); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node106.html"><span class='visited with_tooltip'>I_106<span class='tooltip'>node106 preds:105 succs:107 exn:124 Instructions
+n$248=*&amp;thumbnailFile:java.io.File* [line 222];
+_=*n$248:java.io.File*(root java.io.File) [line 222];
+n$250=_fun_String File.getPath()(n$248:java.io.File*) virtual [line 222];
+*&amp;$irvar64:java.lang.String*=n$250 [line 222];
+NULLIFY(&amp;thumbnailFile); [line 222];
+EXIT_SCOPE(_,n$248,n$250,thumbnailFile); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node107.html"><span class='visited with_tooltip'>I_107<span class='tooltip'>node107 preds:106 succs:108 exn:124 Instructions
+n$251=*&amp;$irvar61:com.zrlog.service.UploadService* [line 222];
+_=*n$251:com.zrlog.service.UploadService*(root com.zrlog.service.UploadService) [line 222];
+n$253=*&amp;$irvar63:java.lang.String* [line 222];
+n$254=*&amp;path:java.lang.String* [line 222];
+n$255=*&amp;$irvar64:java.lang.String* [line 222];
+n$256=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 222];
+n$257=_fun_UploadFileResponse UploadService.getCloudUrl(String,String,String,HttpServletRequest,AdminTokenVO)(n$251:com.zrlog.service.UploadService*,n$253:java.lang.String*,n$254:java.lang.String*,n$255:java.lang.String*,null:java.lang.Object*,n$256:com.zrlog.common.vo.AdminTokenVO*) virtual [line 222];
+*&amp;$irvar65:com.zrlog.common.response.UploadFileResponse*=n$257 [line 222];
+NULLIFY(&amp;adminTokenVO); [line 222];
+NULLIFY(&amp;$irvar63); [line 222];
+NULLIFY(&amp;path); [line 222];
+NULLIFY(&amp;$irvar64); [line 222];
+NULLIFY(&amp;$irvar61); [line 222];
+EXIT_SCOPE(_,n$251,n$253,n$254,n$255,n$256,n$257,adminTokenVO,$irvar63,path,$irvar64,$irvar61); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node108.html"><span class='visited with_tooltip'>I_108<span class='tooltip'>node108 preds:107 succs:109 exn:124 Instructions
+n$258=*&amp;$irvar65:com.zrlog.common.response.UploadFileResponse* [line 222];
+_=*n$258:com.zrlog.common.response.UploadFileResponse*(root com.zrlog.common.response.UploadFileResponse) [line 222];
+n$260=_fun_String UploadFileResponse.getUrl()(n$258:com.zrlog.common.response.UploadFileResponse*) virtual [line 222];
+*&amp;$irvar66:java.lang.String*=n$260 [line 222];
+NULLIFY(&amp;$irvar65); [line 222];
+EXIT_SCOPE(_,n$258,n$260,$irvar65); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node109.html"><span class='visited with_tooltip'>I_109<span class='tooltip'>node109 preds:108 succs:110 exn:124 Instructions
+n$261=*&amp;$irvar60:java.lang.StringBuilder* [line 222];
+_=*n$261:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 222];
+n$263=*&amp;$irvar66:java.lang.String* [line 222];
+n$264=_fun_StringBuilder StringBuilder.append(String)(n$261:java.lang.StringBuilder*,n$263:java.lang.String*) virtual [line 222];
+*&amp;$irvar67:java.lang.StringBuilder*=n$264 [line 222];
+NULLIFY(&amp;$irvar66); [line 222];
+NULLIFY(&amp;$irvar60); [line 222];
+EXIT_SCOPE(_,n$261,n$263,n$264,$irvar66,$irvar60); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node110.html"><span class='visited with_tooltip'>I_110<span class='tooltip'>node110 preds:109 succs:111 exn:124 Instructions
+n$265=*&amp;$irvar67:java.lang.StringBuilder* [line 222];
+_=*n$265:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 222];
+n$267=_fun_StringBuilder StringBuilder.append(String)(n$265:java.lang.StringBuilder*,"?h=":java.lang.Object*) virtual [line 222];
+*&amp;$irvar68:java.lang.StringBuilder*=n$267 [line 222];
+NULLIFY(&amp;$irvar67); [line 222];
+EXIT_SCOPE(_,n$265,n$267,$irvar67); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node111.html"><span class='visited with_tooltip'>I_111<span class='tooltip'>node111 preds:110 succs:112 exn:124 Instructions
+n$268=*&amp;$irvar68:java.lang.StringBuilder* [line 222];
+_=*n$268:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 222];
+n$270=*&amp;height:int [line 222];
+n$271=_fun_StringBuilder StringBuilder.append(int)(n$268:java.lang.StringBuilder*,n$270:int) virtual [line 222];
+*&amp;$irvar69:java.lang.StringBuilder*=n$271 [line 222];
+NULLIFY(&amp;$irvar68); [line 222];
+NULLIFY(&amp;height); [line 222];
+EXIT_SCOPE(_,n$268,n$270,n$271,$irvar68,height); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node112.html"><span class='visited with_tooltip'>I_112<span class='tooltip'>node112 preds:111 succs:113 exn:124 Instructions
+n$272=*&amp;$irvar69:java.lang.StringBuilder* [line 222];
+_=*n$272:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 222];
+n$274=_fun_StringBuilder StringBuilder.append(String)(n$272:java.lang.StringBuilder*,"&w=":java.lang.Object*) virtual [line 222];
+*&amp;$irvar70:java.lang.StringBuilder*=n$274 [line 222];
+NULLIFY(&amp;$irvar69); [line 222];
+EXIT_SCOPE(_,n$272,n$274,$irvar69); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node113.html"><span class='visited with_tooltip'>I_113<span class='tooltip'>node113 preds:112 succs:114 exn:124 Instructions
+n$275=*&amp;$irvar70:java.lang.StringBuilder* [line 222];
+_=*n$275:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 222];
+n$277=*&amp;width:int [line 222];
+n$278=_fun_StringBuilder StringBuilder.append(int)(n$275:java.lang.StringBuilder*,n$277:int) virtual [line 222];
+*&amp;$irvar71:java.lang.StringBuilder*=n$278 [line 222];
+NULLIFY(&amp;width); [line 222];
+NULLIFY(&amp;$irvar70); [line 222];
+EXIT_SCOPE(_,n$275,n$277,n$278,width,$irvar70); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node114.html"><span class='visited with_tooltip'>I_114<span class='tooltip'>node114 preds:113 succs:115 exn:124 Instructions
+n$279=*&amp;$irvar71:java.lang.StringBuilder* [line 222];
+_=*n$279:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 222];
+n$281=_fun_String StringBuilder.toString()(n$279:java.lang.StringBuilder*) virtual [line 222];
+*&amp;$irvar72:java.lang.String*=n$281 [line 222];
+NULLIFY(&amp;$irvar71); [line 222];
+EXIT_SCOPE(_,n$279,n$281,$irvar71); [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node115.html"><span class='visited with_tooltip'>I_115<span class='tooltip'>node115 preds:114 succs:2 exn:3 Instructions
+n$282=*&amp;$irvar72:java.lang.String* [line 222];
+*&amp;return:java.lang.String*=n$282 [line 222];
+NULLIFY(&amp;$irvar72); [line 222];
+EXIT_SCOPE(n$282,$irvar72); [line 222];
+APPLY_ABSTRACTION; [line 222];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node116.html"><span class='visited with_tooltip'>I_116<span class='tooltip'>node116 preds:125 122 119 succs:117 exn:3 Instructions
+n$283=*&amp;CatchVar538:java.lang.Object* [line 224];
+*&amp;e:java.lang.Object*=n$283 [line 224];
+NULLIFY(&amp;CatchVar538); [line 224];
+EXIT_SCOPE(n$283,CatchVar538); [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node117.html"><span class='visited with_tooltip'>I_117<span class='tooltip'>node117 preds:116 succs:118 exn:3 Instructions
+n$284=*&amp;#GB<>$com.zrlog.service.ArticleService.LOGGER:org.slf4j.Logger*(root com.zrlog.service.ArticleService) [line 225];
+_=*n$284:org.slf4j.Logger*(root org.slf4j.Logger) [line 225];
+n$286=*&amp;e:java.lang.Object* [line 225];
+n$287=_fun_void Logger.error(String,Throwable)(n$284:org.slf4j.Logger*,"":java.lang.Object*,n$286:java.lang.Object*) interface virtual [line 225];
+NULLIFY(&amp;e); [line 225];
+EXIT_SCOPE(_,n$284,n$286,n$287,e); [line 225];
+APPLY_ABSTRACTION; [line 225];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node118.html"><span class='visited with_tooltip'>I_118<span class='tooltip'>node118 preds:117 83 12 succs:2 exn:3 Instructions
+*&amp;return:java.lang.String*=null [line 228];
+APPLY_ABSTRACTION; [line 228];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node119.html"><span class='visited with_tooltip'>C_119<span class='tooltip'>node119 preds:121 succs:116 exn:3 Conditional exception handler
+n$290=_fun___instanceof(n$289:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 224];
+PRUNE(n$290, true); [line 224];
+*&amp;CatchVar538:java.lang.String*=n$289 [line 224];
+EXIT_SCOPE(n$289,n$290); [line 224];
+APPLY_ABSTRACTION; [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node120.html"><span class='visited with_tooltip'>C_120<span class='tooltip'>node120 preds:121 succs:3 exn:3 Conditional exception handler
+n$290=_fun___instanceof(n$289:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 224];
+PRUNE(!n$290, false); [line 224];
+*&amp;return:java.lang.String*=EXN n$289 [line 224];
+EXIT_SCOPE(n$289,n$290); [line 224];
+APPLY_ABSTRACTION; [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node121.html"><span class='visited with_tooltip'>I_121<span class='tooltip'>node121 preds: succs:119 120 exn:3 Instructions
+n$288=*&amp;return:java.lang.String* [line 224];
+*&amp;return:java.lang.String*=null [line 224];
+n$289=_fun___unwrap_exception(n$288:java.lang.String*) [line 224];
+NULLIFY(&amp;$irvar31); [line 224];
+NULLIFY(&amp;$irvar26); [line 224];
+NULLIFY(&amp;$irvar22); [line 224];
+NULLIFY(&amp;$irvar30); [line 224];
+NULLIFY(&amp;$irvar29); [line 224];
+NULLIFY(&amp;$irvar25); [line 224];
+NULLIFY(&amp;thumbnailFile); [line 224];
+NULLIFY(&amp;$irvar42); [line 224];
+NULLIFY(&amp;$irvar9); [line 224];
+NULLIFY(&amp;$irvar17); [line 224];
+NULLIFY(&amp;url); [line 224];
+NULLIFY(&amp;$irvar43); [line 224];
+NULLIFY(&amp;$irvar40); [line 224];
+NULLIFY(&amp;$irvar52); [line 224];
+NULLIFY(&amp;width); [line 224];
+NULLIFY(&amp;$irvar18); [line 224];
+NULLIFY(&amp;$irvar35); [line 224];
+NULLIFY(&amp;$irvar5); [line 224];
+NULLIFY(&amp;$irvar39); [line 224];
+NULLIFY(&amp;$irvar16); [line 224];
+NULLIFY(&amp;$irvar48); [line 224];
+NULLIFY(&amp;$irvar46); [line 224];
+NULLIFY(&amp;$irvar4); [line 224];
+NULLIFY(&amp;$irvar7); [line 224];
+NULLIFY(&amp;$irvar12); [line 224];
+NULLIFY(&amp;$irvar45); [line 224];
+NULLIFY(&amp;$irvar28); [line 224];
+NULLIFY(&amp;$irvar36); [line 224];
+NULLIFY(&amp;$irvar19); [line 224];
+NULLIFY(&amp;$irvar21); [line 224];
+NULLIFY(&amp;path); [line 224];
+NULLIFY(&amp;$irvar20); [line 224];
+NULLIFY(&amp;bytes); [line 224];
+NULLIFY(&amp;$irvar38); [line 224];
+NULLIFY(&amp;$irvar34); [line 224];
+NULLIFY(&amp;$irvar6); [line 224];
+NULLIFY(&amp;$irvar41); [line 224];
+NULLIFY(&amp;$irvar51); [line 224];
+NULLIFY(&amp;$irvar47); [line 224];
+NULLIFY(&amp;$irvar37); [line 224];
+NULLIFY(&amp;$irvar23); [line 224];
+NULLIFY(&amp;$irvar44); [line 224];
+NULLIFY(&amp;$irvar13); [line 224];
+NULLIFY(&amp;$irvar11); [line 224];
+NULLIFY(&amp;$irvar10); [line 224];
+NULLIFY(&amp;$irvar24); [line 224];
+NULLIFY(&amp;height); [line 224];
+NULLIFY(&amp;$irvar32); [line 224];
+NULLIFY(&amp;$irvar27); [line 224];
+NULLIFY(&amp;$irvar50); [line 224];
+NULLIFY(&amp;$irvar33); [line 224];
+NULLIFY(&amp;$irvar15); [line 224];
+NULLIFY(&amp;e); [line 224];
+NULLIFY(&amp;$irvar49); [line 224];
+NULLIFY(&amp;$irvar14); [line 224];
+EXIT_SCOPE(n$288,$irvar31,$irvar26,$irvar22,$irvar30,$irvar29,$irvar25,thumbnailFile,$irvar42,$irvar9,$irvar17,url,$irvar43,$irvar40,$irvar52,width,$irvar18,$irvar35,$irvar5,$irvar39,$irvar16,$irvar48,$irvar46,$irvar4,$irvar7,$irvar12,$irvar45,$irvar28,$irvar36,$irvar19,$irvar21,path,$irvar20,bytes,$irvar38,$irvar34,$irvar6,$irvar41,$irvar51,$irvar47,$irvar37,$irvar23,$irvar44,$irvar13,$irvar11,$irvar10,$irvar24,height,$irvar32,$irvar27,$irvar50,$irvar33,$irvar15,e,$irvar49,$irvar14); [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node122.html"><span class='visited with_tooltip'>C_122<span class='tooltip'>node122 preds:124 succs:116 exn:3 Conditional exception handler
+n$291=_fun___instanceof(n$289:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 224];
+PRUNE(n$291, true); [line 224];
+*&amp;CatchVar538:java.lang.String*=n$289 [line 224];
+EXIT_SCOPE(n$289,n$291); [line 224];
+APPLY_ABSTRACTION; [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node123.html"><span class='visited with_tooltip'>C_123<span class='tooltip'>node123 preds:124 succs:3 exn:3 Conditional exception handler
+n$291=_fun___instanceof(n$289:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 224];
+PRUNE(!n$291, false); [line 224];
+*&amp;return:java.lang.String*=EXN n$289 [line 224];
+EXIT_SCOPE(n$289,n$291); [line 224];
+APPLY_ABSTRACTION; [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node124.html"><span class='visited with_tooltip'>I_124<span class='tooltip'>node124 preds: succs:122 123 exn:3 Instructions
+n$288=*&amp;return:java.lang.String* [line 224];
+*&amp;return:java.lang.String*=null [line 224];
+n$289=_fun___unwrap_exception(n$288:java.lang.String*) [line 224];
+NULLIFY(&amp;$irvar66); [line 224];
+NULLIFY(&amp;thumbnailFile); [line 224];
+NULLIFY(&amp;$irvar63); [line 224];
+NULLIFY(&amp;width); [line 224];
+NULLIFY(&amp;$irvar60); [line 224];
+NULLIFY(&amp;$irvar70); [line 224];
+NULLIFY(&amp;$irvar62); [line 224];
+NULLIFY(&amp;path); [line 224];
+NULLIFY(&amp;$irvar68); [line 224];
+NULLIFY(&amp;height); [line 224];
+NULLIFY(&amp;$irvar67); [line 224];
+NULLIFY(&amp;$irvar71); [line 224];
+NULLIFY(&amp;$irvar72); [line 224];
+NULLIFY(&amp;$irvar69); [line 224];
+NULLIFY(&amp;$irvar64); [line 224];
+NULLIFY(&amp;$irvar65); [line 224];
+NULLIFY(&amp;$irvar61); [line 224];
+EXIT_SCOPE(n$288,$irvar66,thumbnailFile,$irvar63,width,$irvar60,$irvar70,$irvar62,path,$irvar68,height,$irvar67,$irvar71,$irvar72,$irvar69,$irvar64,$irvar65,$irvar61); [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node125.html"><span class='visited with_tooltip'>C_125<span class='tooltip'>node125 preds:128 succs:116 exn:3 Conditional exception handler
+n$292=_fun___instanceof(n$289:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 224];
+PRUNE(n$292, true); [line 224];
+*&amp;CatchVar538:java.lang.String*=n$289 [line 224];
+EXIT_SCOPE(n$289,n$292); [line 224];
+APPLY_ABSTRACTION; [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node126.html"><span class='visited with_tooltip'>C_126<span class='tooltip'>node126 preds:128 succs:3 exn:3 Conditional exception handler
+n$292=_fun___instanceof(n$289:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 224];
+PRUNE(!n$292, false); [line 224];
+*&amp;return:java.lang.String*=EXN n$289 [line 224];
+EXIT_SCOPE(n$289,n$292); [line 224];
+APPLY_ABSTRACTION; [line 224];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node127.html"><span class='visited with_tooltip'>C_127<span class='tooltip'>node127 preds:129 succs:99 exn:3 Conditional exception handler
+n$293=_fun___instanceof(n$289:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 218];
+PRUNE(n$293, true); [line 218];
+*&amp;CatchVar456:java.lang.String*=n$289 [line 218];
+EXIT_SCOPE(n$289,n$293); [line 218];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node128.html"><span class='visited with_tooltip'>C_128<span class='tooltip'>node128 preds:129 succs:125 126 exn:3 Conditional exception handler
+n$293=_fun___instanceof(n$289:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 218];
+PRUNE(!n$293, false); [line 218];
+NULLIFY(&amp;url); [line 218];
+EXIT_SCOPE(n$293,url); [line 218];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.getFirstImgUrl%28java.lang.String%2Ccom.zrlog.common.vo.AdminTokenVO%29%3Aj.e8175b2b7552eace109ea1c2731a8cb4_node129.html"><span class='visited with_tooltip'>I_129<span class='tooltip'>node129 preds: succs:127 128 exn:3 Instructions
+n$288=*&amp;return:java.lang.String* [line 218];
+*&amp;return:java.lang.String*=null [line 218];
+n$289=_fun___unwrap_exception(n$288:java.lang.String*) [line 218];
+NULLIFY(&amp;thumbnailFile); [line 218];
+NULLIFY(&amp;$irvar56); [line 218];
+NULLIFY(&amp;width); [line 218];
+NULLIFY(&amp;bimg); [line 218];
+NULLIFY(&amp;$irvar54); [line 218];
+NULLIFY(&amp;$irvar58); [line 218];
+NULLIFY(&amp;$irvar55); [line 218];
+NULLIFY(&amp;$irvar53); [line 218];
+NULLIFY(&amp;path); [line 218];
+NULLIFY(&amp;$irvar59); [line 218];
+NULLIFY(&amp;bytes); [line 218];
+NULLIFY(&amp;height); [line 218];
+NULLIFY(&amp;extName); [line 218];
+EXIT_SCOPE(n$288,thumbnailFile,$irvar56,width,bimg,$irvar54,$irvar58,$irvar55,$irvar53,path,$irvar59,bytes,height,extName); [line 218];
+</span></span></a><br />@
+
+<span class='color_black'>java.lang.String* String ArticleService.getFirstImgUrl(String,AdminTokenVO)(com.zrlog.service.ArticleService* this, java.lang.String* htmlContent, com.zrlog.common.vo.AdminTokenVO* adminTokenVO)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { @val$1 -> (Footprint({ common.Constants.pluginServer*,
+                                   util.BlogBuildInfoUtil.version,
+                                   @val$2.protocol,
+                                   @val$1* }) + Sanitizers({ StringConcatenation }) ~> { CreateFile(File.<init>(String) at line 197),
+                                                                    CreateFile(File.<init>(String) at line 201) }, *),
+            @val$2 -> { protocol -> (Footprint({ common.Constants.pluginServer*,
+                                                 util.BlogBuildInfoUtil.version,
+                                                 @val$2.protocol,
+                                                 @val$1* }) + Sanitizers({ StringConcatenation }) ~> { CreateFile(File.<init>(String) at line 197),
+                                                                    CreateFile(File.<init>(String) at line 201) }, *) },
+            util.BlogBuildInfoUtil -> { version -> (Footprint({ common.Constants.pluginServer*,
+                                                                util.BlogBuildInfoUtil.version,
+                                                                @val$2.protocol,
+                                                                @val$1* }) + Sanitizers({ StringConcatenation }) ~> { CreateFile(File.<init>(String) at line 197),
+                                                                    CreateFile(File.<init>(String) at line 201) }, *) },
+            return -> (Footprint({ common.Constants.pluginServer*,
+                                   util.BlogBuildInfoUtil.version,
+                                   @val$2.protocol,
+                                   @val$1* }) + Sanitizers({ StringConcatenation }) ~> { CreateFile(File.<init>(String) at line 197),
+                                                                    CreateFile(File.<init>(String) at line 201) }, *),
+            common.Constants -> { pluginServer -> (Footprint({ common.Constants.pluginServer*,
+                                                               util.BlogBuildInfoUtil.version,
+                                                               @val$2.protocol,
+                                                               @val$1* }) + Sanitizers({ StringConcatenation }) ~> { CreateFile(File.<init>(String) at line 197),
+                                                                    CreateFile(File.<init>(String) at line 201) }, *) } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= String ArticleService.getFirstImgUrl(String,AdminTokenVO)
+; translation_unit= service/src/main/java/com/zrlog/service/ArticleService.java
+; access= Public
+; formals= [(this,com.zrlog.service.ArticleService*);  (htmlContent,
+            java.lang.String*);  (adminTokenVO,
+            com.zrlog.common.vo.AdminTokenVO*)]
+; is_defined= true
+; loc= service/src/main/java/com/zrlog/service/ArticleService.java:175
+; locals= [{ name= CatchVar538; typ= void; modify_in_block= false }; 
+           { name= $irvar72; typ= void; modify_in_block= false }; 
+           { name= $irvar71; typ= void; modify_in_block= false }; 
+           { name= $irvar70; typ= void; modify_in_block= false }; 
+           { name= $irvar69; typ= void; modify_in_block= false }; 
+           { name= $irvar68; typ= void; modify_in_block= false }; 
+           { name= $irvar67; typ= void; modify_in_block= false }; 
+           { name= $irvar66; typ= void; modify_in_block= false }; 
+           { name= $irvar65; typ= void; modify_in_block= false }; 
+           { name= $irvar64; typ= void; modify_in_block= false }; 
+           { name= $irvar63; typ= void; modify_in_block= false }; 
+           { name= $irvar62; typ= void; modify_in_block= false }; 
+           { name= $irvar61; typ= void; modify_in_block= false }; 
+           { name= $irvar60; typ= void; modify_in_block= false }; 
+           { name= CatchVar456; typ= void; modify_in_block= false }; 
+           { name= $irvar59; typ= void; modify_in_block= false }; 
+           { name= $irvar58; typ= void; modify_in_block= false }; 
+           { name= $irvar57; typ= void; modify_in_block= false }; 
+           { name= $irvar56; typ= void; modify_in_block= false }; 
+           { name= $irvar55; typ= void; modify_in_block= false }; 
+           { name= $irvar54; typ= void; modify_in_block= false }; 
+           { name= $irvar53; typ= void; modify_in_block= false }; 
+           { name= $irvar52; typ= void; modify_in_block= false }; 
+           { name= $irvar51; typ= void; modify_in_block= false }; 
+           { name= $irvar50; typ= void; modify_in_block= false }; 
+           { name= $irvar49; typ= void; modify_in_block= false }; 
+           { name= $irvar48; typ= void; modify_in_block= false }; 
+           { name= $irvar47; typ= void; modify_in_block= false }; 
+           { name= $irvar46; typ= void; modify_in_block= false }; 
+           { name= $irvar45; typ= void; modify_in_block= false }; 
+           { name= $irvar44; typ= void; modify_in_block= false }; 
+           { name= $irvar43; typ= void; modify_in_block= false }; 
+           { name= $irvar42; typ= void; modify_in_block= false }; 
+           { name= $irvar41; typ= void; modify_in_block= false }; 
+           { name= $irvar40; typ= void; modify_in_block= false }; 
+           { name= $irvar39; typ= void; modify_in_block= false }; 
+           { name= $irvar38; typ= void; modify_in_block= false }; 
+           { name= $irvar37; typ= void; modify_in_block= false }; 
+           { name= $irvar36; typ= void; modify_in_block= false }; 
+           { name= $irvar35; typ= void; modify_in_block= false }; 
+           { name= $irvar34; typ= void; modify_in_block= false }; 
+           { name= $irvar33; typ= void; modify_in_block= false }; 
+           { name= $irvar32; typ= void; modify_in_block= false }; 
+           { name= $irvar31; typ= void; modify_in_block= false }; 
+           { name= $irvar30; typ= void; modify_in_block= false }; 
+           { name= $irvar29; typ= void; modify_in_block= false }; 
+           { name= $irvar28; typ= void; modify_in_block= false }; 
+           { name= $irvar27; typ= void; modify_in_block= false }; 
+           { name= $irvar26; typ= void; modify_in_block= false }; 
+           { name= $irvar25; typ= void; modify_in_block= false }; 
+           { name= $irvar24; typ= void; modify_in_block= false }; 
+           { name= $irvar23; typ= void; modify_in_block= false }; 
+           { name= $irvar22; typ= void; modify_in_block= false }; 
+           { name= $irvar21; typ= void; modify_in_block= false }; 
+           { name= $irvar20; typ= void; modify_in_block= false }; 
+           { name= $irvar19; typ= void; modify_in_block= false }; 
+           { name= $irvar18; typ= void; modify_in_block= false }; 
+           { name= $irvar17; typ= void; modify_in_block= false }; 
+           { name= $irvar16; typ= void; modify_in_block= false }; 
+           { name= $irvar15; typ= void; modify_in_block= false }; 
+           { name= $irvar14; typ= void; modify_in_block= false }; 
+           { name= $irvar13; typ= void; modify_in_block= false }; 
+           { name= $irvar12; typ= void; modify_in_block= false }; 
+           { name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= elements; typ= org.jsoup.select.Elements*; modify_in_block= false }; 
+           { name= url; typ= java.lang.String*; modify_in_block= false }; 
+           { name= width; typ= int; modify_in_block= false }; 
+           { name= height; typ= int; modify_in_block= false }; 
+           { name= path; typ= java.lang.String*; modify_in_block= false }; 
+           { name= e; typ= java.io.IOException*; modify_in_block= false }; 
+           { name= extName; typ= java.lang.String*; modify_in_block= false }; 
+           { name= bimg; typ= java.awt.image.BufferedImage*; modify_in_block= false }; 
+           { name= bytes; typ= signed char[_*_](*); modify_in_block= false }; 
+           { name= thumbnailFile; typ= java.io.File*; modify_in_block= false }]
+; ret_type= java.lang.String* 
+; proc_id= com.zrlog.service.ArticleService.getFirstImgUrl(java.lang.String,com.zrlog.common.vo.AdminTokenVO):java.lang.String }</pre>
+</body>
+</html>

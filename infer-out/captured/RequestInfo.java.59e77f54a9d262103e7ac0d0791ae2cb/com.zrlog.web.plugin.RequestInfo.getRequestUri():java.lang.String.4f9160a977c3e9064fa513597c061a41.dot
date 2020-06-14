@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_1" [label="1: Start String RequestInfo.getRequestUri()\nFormals:  this:com.zrlog.web.plugin.RequestInfo*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_1" -> "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_4" ;
+"com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_2" [label="2: Exit String RequestInfo.getRequestUri() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_3" -> "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_2" ;
+"com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_4" [label="4:  method_body \n   n$0=*&this:com.zrlog.web.plugin.RequestInfo* [line 29]\n  n$1=*n$0.requestUri:java.lang.String*(root com.zrlog.web.plugin.RequestInfo) [line 29]\n  *&return:java.lang.String*=n$1 [line 29]\n  NULLIFY(&this); [line 29]\n  EXIT_SCOPE(n$0,n$1,this); [line 29]\n  APPLY_ABSTRACTION; [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_4" -> "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_2" ;
+	 "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_4" -> "com.zrlog.web.plugin.RequestInfo.getRequestUri():java.lang.String.4f9160a977c3e9064fa513597c061a41_3" [color="red" ];
+}

@@ -1,0 +1,59 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_1" [label="1: Start void BlogFrontendFreeMarkerRender.<clinit>()\nFormals: \nLocals:  $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_1" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_4" ;
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_2" [label="2: Exit void BlogFrontendFreeMarkerRender.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 14]\n  NULLIFY(&$irvar5); [line 14]\n  NULLIFY(&$irvar4); [line 14]\n  NULLIFY(&$irvar0); [line 14]\n  NULLIFY(&$irvar1); [line 14]\n  NULLIFY(&$irvar2); [line 14]\n  EXIT_SCOPE($irvar3,$irvar5,$irvar4,$irvar0,$irvar1,$irvar2); [line 14]\n  APPLY_ABSTRACTION; [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_2" ;
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_4" [label="4:  Call StringBuilder.<init>() \n   n$0=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 13]\n  n$1=_fun_StringBuilder.<init>()(n$0:java.lang.StringBuilder*) [line 13]\n  *&$irvar0:java.lang.StringBuilder*=n$0 [line 13]\n  EXIT_SCOPE(n$0,n$1); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_4" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_5" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_4" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_5" [label="5:  Call StringBuilder StringBuilder.append(String) \n   n$2=*&$irvar0:java.lang.StringBuilder* [line 13]\n  _=*n$2:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 13]\n  n$4=_fun_StringBuilder StringBuilder.append(String)(n$2:java.lang.StringBuilder*,\"text/html; charset=\":java.lang.Object*) virtual [line 13]\n  *&$irvar1:java.lang.StringBuilder*=n$4 [line 13]\n  NULLIFY(&$irvar0); [line 13]\n  EXIT_SCOPE(_,n$2,n$4,$irvar0); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_5" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_6" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_5" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_6" [label="6:  Call String Render.getEncoding() \n   n$5=_fun_String Render.getEncoding()() [line 13]\n  *&$irvar2:java.lang.String*=n$5 [line 13]\n  EXIT_SCOPE(n$5); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_6" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_7" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_6" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_7" [label="7:  Call StringBuilder StringBuilder.append(String) \n   n$6=*&$irvar1:java.lang.StringBuilder* [line 13]\n  _=*n$6:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 13]\n  n$8=*&$irvar2:java.lang.String* [line 13]\n  n$9=_fun_StringBuilder StringBuilder.append(String)(n$6:java.lang.StringBuilder*,n$8:java.lang.String*) virtual [line 13]\n  *&$irvar3:java.lang.StringBuilder*=n$9 [line 13]\n  NULLIFY(&$irvar1); [line 13]\n  NULLIFY(&$irvar2); [line 13]\n  EXIT_SCOPE(_,n$6,n$8,n$9,$irvar1,$irvar2); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_7" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_8" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_7" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_8" [label="8:  Call String StringBuilder.toString() \n   n$10=*&$irvar3:java.lang.StringBuilder* [line 13]\n  _=*n$10:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 13]\n  n$12=_fun_String StringBuilder.toString()(n$10:java.lang.StringBuilder*) virtual [line 13]\n  *&$irvar4:java.lang.String*=n$12 [line 13]\n  NULLIFY(&$irvar3); [line 13]\n  EXIT_SCOPE(_,n$10,n$12,$irvar3); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_8" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_9" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_8" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_9" [label="9:  method_body \n   n$13=*&$irvar4:java.lang.String* [line 13]\n  *&#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.contentType:com.zrlog.web.render.BlogFrontendFreeMarkerRender(root com.zrlog.web.render.BlogFrontendFreeMarkerRender)=n$13 [line 13]\n  NULLIFY(&$irvar4); [line 13]\n  EXIT_SCOPE(n$13,$irvar4); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_9" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_10" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_9" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_10" [label="10:  Call Configuration.<init>() \n   n$14=_fun___new(sizeof(t=freemarker.template.Configuration):freemarker.template.Configuration*) [line 14]\n  n$15=_fun_Configuration.<init>()(n$14:freemarker.template.Configuration*) [line 14]\n  *&$irvar5:freemarker.template.Configuration*=n$14 [line 14]\n  EXIT_SCOPE(n$14,n$15); [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_10" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_11" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_10" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_11" [label="11:  method_body \n   n$16=*&$irvar5:freemarker.template.Configuration* [line 14]\n  *&#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:com.zrlog.web.render.BlogFrontendFreeMarkerRender(root com.zrlog.web.render.BlogFrontendFreeMarkerRender)=n$16 [line 14]\n  NULLIFY(&$irvar5); [line 14]\n  EXIT_SCOPE(n$16,$irvar5); [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_11" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_12" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_11" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_12" [label="12:  method_body \n   APPLY_ABSTRACTION; [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_12" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_2" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_12" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>():void.6e618b503a221149eedf4651c59451cd_3" [color="red" ];
+}

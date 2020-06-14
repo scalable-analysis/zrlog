@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE116">String AdminTokenService.getDomain(HttpServletRequest)</a></h1></center>
+<a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:10 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;host); [line 122];
+NULLIFY(&amp;$irvar0); [line 122];
+NULLIFY(&amp;idx); [line 122];
+EXIT_SCOPE(host,$irvar0,idx); [line 122];
+APPLY_ABSTRACTION; [line 122];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;request:javax.servlet.http.HttpServletRequest* [line 117];
+_=*n$0:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 117];
+n$2=_fun_String HttpServletRequest.getHeader(String)(n$0:javax.servlet.http.HttpServletRequest*,"Host":java.lang.Object*) interface virtual [line 117];
+*&amp;host:java.lang.String*=n$2 [line 117];
+NULLIFY(&amp;request); [line 117];
+EXIT_SCOPE(_,n$0,n$2,request); [line 117];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:3 Instructions
+n$3=*&amp;host:java.lang.String* [line 118];
+_=*n$3:java.lang.String*(root java.lang.String) [line 118];
+n$5=_fun_int String.indexOf(int)(n$3:java.lang.String*,58:int) virtual [line 118];
+*&amp;idx:int=n$5 [line 118];
+EXIT_SCOPE(_,n$3,n$5); [line 118];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 exn:3 Conditional method_body
+n$6=*&amp;idx:int [line 119];
+PRUNE(!(n$6 == -1), true); [line 119];
+EXIT_SCOPE(n$6); [line 119];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:10 exn:3 Conditional method_body
+n$6=*&amp;idx:int [line 119];
+PRUNE((n$6 == -1), false); [line 119];
+NULLIFY(&amp;idx); [line 119];
+EXIT_SCOPE(n$6,idx); [line 119];
+APPLY_ABSTRACTION; [line 119];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:9 exn:3 Instructions
+n$7=*&amp;host:java.lang.String* [line 120];
+_=*n$7:java.lang.String*(root java.lang.String) [line 120];
+n$9=*&amp;idx:int [line 120];
+n$10=_fun_String String.substring(int,int)(n$7:java.lang.String*,0:int,n$9:int) virtual [line 120];
+*&amp;$irvar0:java.lang.String*=n$10 [line 120];
+NULLIFY(&amp;host); [line 120];
+NULLIFY(&amp;idx); [line 120];
+EXIT_SCOPE(_,n$7,n$9,n$10,host,idx); [line 120];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$11=*&amp;$irvar0:java.lang.String* [line 120];
+*&amp;host:java.lang.String*=n$11 [line 120];
+NULLIFY(&amp;$irvar0); [line 120];
+EXIT_SCOPE(n$11,$irvar0); [line 120];
+APPLY_ABSTRACTION; [line 120];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getDomain%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.Str.650aaa9f6d3c2556fa9fae8463845296_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 7 succs:2 exn:3 Instructions
+n$12=*&amp;host:java.lang.String* [line 122];
+*&amp;return:java.lang.String*=n$12 [line 122];
+NULLIFY(&amp;host); [line 122];
+EXIT_SCOPE(n$12,host); [line 122];
+APPLY_ABSTRACTION; [line 122];
+</span></span></a><br />@
+
+<span class='color_black'>java.lang.String* String AdminTokenService.getDomain(HttpServletRequest)(com.zrlog.web.token.AdminTokenService* this, javax.servlet.http.HttpServletRequest* request)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= String AdminTokenService.getDomain(HttpServletRequest)
+; translation_unit= web/src/main/java/com/zrlog/web/token/AdminTokenService.java
+; access= Private
+; formals= [(this,com.zrlog.web.token.AdminTokenService*);  (request,
+            javax.servlet.http.HttpServletRequest*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/token/AdminTokenService.java:116
+; locals= [{ name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= idx; typ= int; modify_in_block= false }; 
+           { name= host; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= java.lang.String* 
+; proc_id= com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.String }</pre>
+</body>
+</html>

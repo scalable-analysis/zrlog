@@ -1,0 +1,86 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_1" [label="1: Start Long Constants.getSessionTimeout()\nFormals: \nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void sessionTimeoutString:java.lang.String* sessionTimeout:long \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_1" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_4" ;
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_2" [label="2: Exit Long Constants.getSessionTimeout() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [label="3:  exceptions sink \n   NULLIFY(&sessionTimeout); [line 109]\n  NULLIFY(&$irvar3); [line 109]\n  NULLIFY(&sessionTimeoutString); [line 109]\n  NULLIFY(&$irvar4); [line 109]\n  NULLIFY(&$irvar0); [line 109]\n  NULLIFY(&$irvar1); [line 109]\n  NULLIFY(&$irvar2); [line 109]\n  EXIT_SCOPE(sessionTimeout,$irvar3,sessionTimeoutString,$irvar4,$irvar0,$irvar1,$irvar2); [line 109]\n  APPLY_ABSTRACTION; [line 109]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_2" ;
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_4" [label="4:  Call Object Map.get(Object) \n   n$0=*&#GB<>$com.zrlog.common.Constants.WEB_SITE:java.util.Map*(root com.zrlog.common.Constants) [line 98]\n  _=*n$0:java.util.Map*(root java.util.Map) [line 98]\n  n$2=_fun_Object Map.get(Object)(n$0:java.util.Map*,\"session_timeout\":java.lang.Object*) interface virtual [line 98]\n  *&$irvar0:java.lang.Object*=n$2 [line 98]\n  EXIT_SCOPE(_,n$0,n$2); [line 98]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_4" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_5" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_4" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_5" [label="5:  method_body \n   n$3=*&$irvar0:java.lang.Object* [line 98]\n  n$4=_fun___cast(n$3:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 98]\n  *&sessionTimeoutString:java.lang.String*=n$4 [line 98]\n  NULLIFY(&$irvar0); [line 98]\n  EXIT_SCOPE(n$3,n$4,$irvar0); [line 98]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_5" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_6" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_5" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_6" [label="6:  Call boolean StringUtils.isEmpty(String) \n   n$5=*&sessionTimeoutString:java.lang.String* [line 100]\n  n$6=_fun_boolean StringUtils.isEmpty(String)(n$5:java.lang.String*) [line 100]\n  *&$irvar1:_Bool=n$6 [line 100]\n  EXIT_SCOPE(n$5,n$6); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_6" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_7" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_6" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_8" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_6" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_7" [label="7: Prune (true branch, if) \n   n$7=*&$irvar1:_Bool [line 100]\n  PRUNE(!(n$7 != 0), true); [line 100]\n  NULLIFY(&$irvar1); [line 100]\n  EXIT_SCOPE(n$7,$irvar1); [line 100]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_7" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_9" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_7" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_8" [label="8: Prune (false branch, if) \n   n$7=*&$irvar1:_Bool [line 100]\n  PRUNE((n$7 != 0), false); [line 100]\n  NULLIFY(&sessionTimeoutString); [line 100]\n  NULLIFY(&$irvar1); [line 100]\n  EXIT_SCOPE(n$7,sessionTimeoutString,$irvar1); [line 100]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_8" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_15" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_8" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_9" [label="9:  Call Long Long.valueOf(String) \n   n$8=*&sessionTimeoutString:java.lang.String* [line 102]\n  n$9=_fun_Long Long.valueOf(String)(n$8:java.lang.String*) [line 102]\n  *&$irvar2:java.lang.Long*=n$9 [line 102]\n  NULLIFY(&sessionTimeoutString); [line 102]\n  EXIT_SCOPE(n$8,n$9,sessionTimeoutString); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_9" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_10" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_9" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_10" [label="10:  Call long Long.longValue() \n   n$10=*&$irvar2:java.lang.Long* [line 102]\n  _=*n$10:java.lang.Long*(root java.lang.Long) [line 102]\n  n$12=_fun_long Long.longValue()(n$10:java.lang.Long*) virtual [line 102]\n  *&$irvar3:long=n$12 [line 102]\n  NULLIFY(&$irvar2); [line 102]\n  EXIT_SCOPE(_,n$10,n$12,$irvar2); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_10" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_11" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_10" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_11" [label="11:  method_body \n   n$13=*&$irvar3:long [line 102]\n  *&sessionTimeout:long=((n$13 * 60) * 1000) [line 102]\n  NULLIFY(&$irvar3); [line 102]\n  EXIT_SCOPE(n$13,$irvar3); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_11" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_12" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_11" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_13" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_11" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_12" [label="12: Prune (true branch, if) \n   n$14=*&sessionTimeout:long [line 103]\n  PRUNE(!(n$14 > 0), true); [line 103]\n  NULLIFY(&sessionTimeout); [line 103]\n  EXIT_SCOPE(n$14,sessionTimeout); [line 103]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_12" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_14" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_12" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_13" [label="13: Prune (false branch, if) \n   n$14=*&sessionTimeout:long [line 103]\n  PRUNE((n$14 > 0), false); [line 103]\n  EXIT_SCOPE(n$14); [line 103]\n  APPLY_ABSTRACTION; [line 103]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_13" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_16" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_13" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_14" [label="14:  method_body \n   *&sessionTimeout:long=86400000 [line 104]\n  APPLY_ABSTRACTION; [line 104]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_14" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_16" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_14" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_15" [label="15:  method_body \n   *&sessionTimeout:long=86400000 [line 107]\n  APPLY_ABSTRACTION; [line 107]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_15" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_16" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_15" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_16" [label="16:  Call Long Long.valueOf(long) \n   n$15=*&sessionTimeout:long [line 109]\n  n$16=_fun_Long Long.valueOf(long)(n$15:long) [line 109]\n  *&$irvar4:java.lang.Long*=n$16 [line 109]\n  NULLIFY(&sessionTimeout); [line 109]\n  EXIT_SCOPE(n$15,n$16,sessionTimeout); [line 109]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_16" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_17" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_16" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+"com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_17" [label="17:  method_body \n   n$17=*&$irvar4:java.lang.Long* [line 109]\n  *&return:java.lang.Long*=n$17 [line 109]\n  NULLIFY(&$irvar4); [line 109]\n  EXIT_SCOPE(n$17,$irvar4); [line 109]\n  APPLY_ABSTRACTION; [line 109]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_17" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_2" ;
+	 "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_17" -> "com.zrlog.common.Constants.getSessionTimeout():java.lang.Long.0582f84aabd6832a5a8959423cc27295_3" [color="red" ];
+}

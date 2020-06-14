@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>TypeController.java.2ef1acc692633947a01f51b5b02ecb71</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/controller/admin/api/TypeController.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.controller.admin.api; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.zrlog.common.response.UpdateRecordResponse; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.zrlog.model.Type; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.zrlog.web.annotation.RefreshCache; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.zrlog.web.controller.BaseController; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import java.util.Map; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">public class TypeController extends BaseController { <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.<init>%28%29.3227c5029605732a9e43bafdd467cab2_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.<init>%28%29.3227c5029605732a9e43bafdd467cab2_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 10];
+n$1=_fun_BaseController.&lt;init&gt;()(n$0:com.zrlog.web.controller.admin.api.TypeController*) [line 10];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.<init>%28%29.3227c5029605732a9e43bafdd467cab2_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.<init>%28%29.3227c5029605732a9e43bafdd467cab2_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.<init>%28%29.3227c5029605732a9e43bafdd467cab2_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/com.zrlog.web.controller.admin.api.TypeController.<init>%28%29.3227c5029605732a9e43bafdd467cab2.html">summary for TypeController.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    @RefreshCache </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">    public UpdateRecordResponse delete() { <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14.html">summary for UpdateRecordResponse TypeController.delete()</a></td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">        return new UpdateRecordResponse(new Type().deleteById(getPara(&quot;id&quot;))); <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.model.Type):com.zrlog.model.Type*) [line 13];
+n$1=_fun_Type.&lt;init&gt;()(n$0:com.zrlog.model.Type*) [line 13];
+*&amp;$irvar0:com.zrlog.model.Type*=n$0 [line 13];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 13];
+_=*n$2:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 13];
+n$4=_fun_String Controller.getPara(String)(n$2:com.zrlog.web.controller.admin.api.TypeController*,"id":java.lang.Object*) virtual [line 13];
+*&amp;$irvar1:java.lang.String*=n$4 [line 13];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;$irvar0:com.zrlog.model.Type* [line 13];
+_=*n$5:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 13];
+n$7=*&amp;$irvar1:java.lang.String* [line 13];
+n$8=_fun_boolean Model.deleteById(Object)(n$5:com.zrlog.model.Type*,n$7:java.lang.String*) virtual [line 13];
+*&amp;$irvar2:_Bool=n$8 [line 13];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$9=*&amp;$irvar2:_Bool [line 13];
+n$10=_fun_Boolean Boolean.valueOf(boolean)(n$9:_Bool) [line 13];
+*&amp;$irvar3:java.lang.Boolean*=n$10 [line 13];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$11=_fun___new(sizeof(t=com.zrlog.common.response.UpdateRecordResponse):com.zrlog.common.response.UpdateRecordResponse*) [line 13];
+n$12=*&amp;$irvar3:java.lang.Boolean* [line 13];
+n$13=_fun_UpdateRecordResponse.&lt;init&gt;(Boolean)(n$11:com.zrlog.common.response.UpdateRecordResponse*,n$12:java.lang.Boolean*) [line 13];
+*&amp;$irvar4:com.zrlog.common.response.UpdateRecordResponse*=n$11 [line 13];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:2 exn:3 Instructions
+n$14=*&amp;$irvar4:com.zrlog.common.response.UpdateRecordResponse* [line 13];
+*&amp;return:com.zrlog.common.response.UpdateRecordResponse*=n$14 [line 13];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:9 3 succs: exn: Exit
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.delete%28%29%3Acom.zrlog.common.response.UpdateRecordRes.d47adbf2e0f9f612fc1b075c413f0b14_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    public Map index() { <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634.html">summary for Map TypeController.index()</a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">        return new Type().find(getPageable()); <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.model.Type):com.zrlog.model.Type*) [line 17];
+n$1=_fun_Type.&lt;init&gt;()(n$0:com.zrlog.model.Type*) [line 17];
+*&amp;$irvar0:com.zrlog.model.Type*=n$0 [line 17];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 17];
+_=*n$2:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 17];
+n$4=_fun_PageableRequest BaseController.getPageable()(n$2:com.zrlog.web.controller.admin.api.TypeController*) virtual [line 17];
+*&amp;$irvar1:com.zrlog.common.request.PageableRequest*=n$4 [line 17];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;$irvar0:com.zrlog.model.Type* [line 17];
+_=*n$5:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 17];
+n$7=*&amp;$irvar1:com.zrlog.common.request.PageableRequest* [line 17];
+n$8=_fun_Map Type.find(PageableRequest)(n$5:com.zrlog.model.Type*,n$7:com.zrlog.common.request.PageableRequest*) virtual [line 17];
+*&amp;$irvar2:java.util.Map*=n$8 [line 17];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+n$9=*&amp;$irvar2:java.util.Map* [line 17];
+*&amp;return:java.util.Map*=n$9 [line 17];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.index%28%29%3Ajava.util.Map.38ded7d1e7d86798cb360632ae063634_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">    @RefreshCache </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    public UpdateRecordResponse add() { <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278.html">summary for UpdateRecordResponse TypeController.add()</a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        return new UpdateRecordResponse(new Type().set(&quot;typeName&quot;, getPara(&quot;typeName&quot;)) <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.model.Type):com.zrlog.model.Type*) [line 22];
+n$1=_fun_Type.&lt;init&gt;()(n$0:com.zrlog.model.Type*) [line 22];
+*&amp;$irvar0:com.zrlog.model.Type*=n$0 [line 22];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 22];
+_=*n$2:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 22];
+n$4=_fun_String Controller.getPara(String)(n$2:com.zrlog.web.controller.admin.api.TypeController*,"typeName":java.lang.Object*) virtual [line 22];
+*&amp;$irvar1:java.lang.String*=n$4 [line 22];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;$irvar0:com.zrlog.model.Type* [line 22];
+_=*n$5:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 22];
+n$7=*&amp;$irvar1:java.lang.String* [line 22];
+n$8=_fun_Model Model.set(String,Object)(n$5:com.zrlog.model.Type*,"typeName":java.lang.Object*,n$7:java.lang.String*) virtual [line 22];
+*&amp;$irvar2:com.jfinal.plugin.activerecord.Model*=n$8 [line 22];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:2 exn:3 Instructions
+n$34=*&amp;$irvar9:com.zrlog.common.response.UpdateRecordResponse* [line 22];
+*&amp;return:com.zrlog.common.response.UpdateRecordResponse*=n$34 [line 22];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">                .set(&quot;alias&quot;, getPara(&quot;alias&quot;)) <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$9=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 23];
+_=*n$9:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 23];
+n$11=_fun_String Controller.getPara(String)(n$9:com.zrlog.web.controller.admin.api.TypeController*,"alias":java.lang.Object*) virtual [line 23];
+*&amp;$irvar3:java.lang.String*=n$11 [line 23];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$12=*&amp;$irvar2:com.jfinal.plugin.activerecord.Model* [line 23];
+n$13=_fun___cast(n$12:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Type;sub_t=( sub )(cast)):void) [line 23];
+_=*n$13:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 23];
+n$15=*&amp;$irvar3:java.lang.String* [line 23];
+n$16=_fun_Model Model.set(String,Object)(n$13:com.zrlog.model.Type*,"alias":java.lang.Object*,n$15:java.lang.String*) virtual [line 23];
+*&amp;$irvar4:com.jfinal.plugin.activerecord.Model*=n$16 [line 23];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">                .set(&quot;remark&quot;, getPara(&quot;remark&quot;)).save()); <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$17=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 24];
+_=*n$17:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 24];
+n$19=_fun_String Controller.getPara(String)(n$17:com.zrlog.web.controller.admin.api.TypeController*,"remark":java.lang.Object*) virtual [line 24];
+*&amp;$irvar5:java.lang.String*=n$19 [line 24];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$20=*&amp;$irvar4:com.jfinal.plugin.activerecord.Model* [line 24];
+n$21=_fun___cast(n$20:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Type;sub_t=( sub )(cast)):void) [line 24];
+_=*n$21:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 24];
+n$23=*&amp;$irvar5:java.lang.String* [line 24];
+n$24=_fun_Model Model.set(String,Object)(n$21:com.zrlog.model.Type*,"remark":java.lang.Object*,n$23:java.lang.String*) virtual [line 24];
+*&amp;$irvar6:com.jfinal.plugin.activerecord.Model*=n$24 [line 24];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$25=*&amp;$irvar6:com.jfinal.plugin.activerecord.Model* [line 24];
+n$26=_fun___cast(n$25:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Type;sub_t=( sub )(cast)):void) [line 24];
+_=*n$26:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 24];
+n$28=_fun_boolean Model.save()(n$26:com.zrlog.model.Type*) virtual [line 24];
+*&amp;$irvar7:_Bool=n$28 [line 24];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$29=*&amp;$irvar7:_Bool [line 24];
+n$30=_fun_Boolean Boolean.valueOf(boolean)(n$29:_Bool) [line 24];
+*&amp;$irvar8:java.lang.Boolean*=n$30 [line 24];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$31=_fun___new(sizeof(t=com.zrlog.common.response.UpdateRecordResponse):com.zrlog.common.response.UpdateRecordResponse*) [line 24];
+n$32=*&amp;$irvar8:java.lang.Boolean* [line 24];
+n$33=_fun_UpdateRecordResponse.&lt;init&gt;(Boolean)(n$31:com.zrlog.common.response.UpdateRecordResponse*,n$32:java.lang.Boolean*) [line 24];
+*&amp;$irvar9:com.zrlog.common.response.UpdateRecordResponse*=n$31 [line 24];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:14 3 succs: exn: Exit
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.add%28%29%3Acom.zrlog.common.response.UpdateRecordRespon.836bcb4fe7b15a17eaa89f25dab6f278_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    @RefreshCache </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">    public UpdateRecordResponse update() { <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638.html">summary for UpdateRecordResponse TypeController.update()</a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">        return new UpdateRecordResponse(new Type().set(&quot;typeId&quot;, getPara(&quot;id&quot;)) <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.model.Type):com.zrlog.model.Type*) [line 29];
+n$1=_fun_Type.&lt;init&gt;()(n$0:com.zrlog.model.Type*) [line 29];
+*&amp;$irvar0:com.zrlog.model.Type*=n$0 [line 29];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 29];
+_=*n$2:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 29];
+n$4=_fun_String Controller.getPara(String)(n$2:com.zrlog.web.controller.admin.api.TypeController*,"id":java.lang.Object*) virtual [line 29];
+*&amp;$irvar1:java.lang.String*=n$4 [line 29];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;$irvar0:com.zrlog.model.Type* [line 29];
+_=*n$5:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 29];
+n$7=*&amp;$irvar1:java.lang.String* [line 29];
+n$8=_fun_Model Model.set(String,Object)(n$5:com.zrlog.model.Type*,"typeId":java.lang.Object*,n$7:java.lang.String*) virtual [line 29];
+*&amp;$irvar2:com.jfinal.plugin.activerecord.Model*=n$8 [line 29];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:2 exn:3 Instructions
+n$42=*&amp;$irvar11:com.zrlog.common.response.UpdateRecordResponse* [line 29];
+*&amp;return:com.zrlog.common.response.UpdateRecordResponse*=n$42 [line 29];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">                .set(&quot;typeName&quot;, getPara(&quot;typeName&quot;)) <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$9=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 30];
+_=*n$9:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 30];
+n$11=_fun_String Controller.getPara(String)(n$9:com.zrlog.web.controller.admin.api.TypeController*,"typeName":java.lang.Object*) virtual [line 30];
+*&amp;$irvar3:java.lang.String*=n$11 [line 30];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$12=*&amp;$irvar2:com.jfinal.plugin.activerecord.Model* [line 30];
+n$13=_fun___cast(n$12:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Type;sub_t=( sub )(cast)):void) [line 30];
+_=*n$13:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 30];
+n$15=*&amp;$irvar3:java.lang.String* [line 30];
+n$16=_fun_Model Model.set(String,Object)(n$13:com.zrlog.model.Type*,"typeName":java.lang.Object*,n$15:java.lang.String*) virtual [line 30];
+*&amp;$irvar4:com.jfinal.plugin.activerecord.Model*=n$16 [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">                .set(&quot;alias&quot;, getPara(&quot;alias&quot;)) <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$17=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 31];
+_=*n$17:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 31];
+n$19=_fun_String Controller.getPara(String)(n$17:com.zrlog.web.controller.admin.api.TypeController*,"alias":java.lang.Object*) virtual [line 31];
+*&amp;$irvar5:java.lang.String*=n$19 [line 31];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$20=*&amp;$irvar4:com.jfinal.plugin.activerecord.Model* [line 31];
+n$21=_fun___cast(n$20:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Type;sub_t=( sub )(cast)):void) [line 31];
+_=*n$21:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 31];
+n$23=*&amp;$irvar5:java.lang.String* [line 31];
+n$24=_fun_Model Model.set(String,Object)(n$21:com.zrlog.model.Type*,"alias":java.lang.Object*,n$23:java.lang.String*) virtual [line 31];
+*&amp;$irvar6:com.jfinal.plugin.activerecord.Model*=n$24 [line 31];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">                .set(&quot;remark&quot;, getPara(&quot;remark&quot;)).update()); <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$25=*&amp;this:com.zrlog.web.controller.admin.api.TypeController* [line 32];
+_=*n$25:com.zrlog.web.controller.admin.api.TypeController*(root com.zrlog.web.controller.admin.api.TypeController) [line 32];
+n$27=_fun_String Controller.getPara(String)(n$25:com.zrlog.web.controller.admin.api.TypeController*,"remark":java.lang.Object*) virtual [line 32];
+*&amp;$irvar7:java.lang.String*=n$27 [line 32];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$28=*&amp;$irvar6:com.jfinal.plugin.activerecord.Model* [line 32];
+n$29=_fun___cast(n$28:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Type;sub_t=( sub )(cast)):void) [line 32];
+_=*n$29:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 32];
+n$31=*&amp;$irvar7:java.lang.String* [line 32];
+n$32=_fun_Model Model.set(String,Object)(n$29:com.zrlog.model.Type*,"remark":java.lang.Object*,n$31:java.lang.String*) virtual [line 32];
+*&amp;$irvar8:com.jfinal.plugin.activerecord.Model*=n$32 [line 32];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$33=*&amp;$irvar8:com.jfinal.plugin.activerecord.Model* [line 32];
+n$34=_fun___cast(n$33:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Type;sub_t=( sub )(cast)):void) [line 32];
+_=*n$34:com.zrlog.model.Type*(root com.zrlog.model.Type) [line 32];
+n$36=_fun_boolean Model.update()(n$34:com.zrlog.model.Type*) virtual [line 32];
+*&amp;$irvar9:_Bool=n$36 [line 32];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$37=*&amp;$irvar9:_Bool [line 32];
+n$38=_fun_Boolean Boolean.valueOf(boolean)(n$37:_Bool) [line 32];
+*&amp;$irvar10:java.lang.Boolean*=n$38 [line 32];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$39=_fun___new(sizeof(t=com.zrlog.common.response.UpdateRecordResponse):com.zrlog.common.response.UpdateRecordResponse*) [line 32];
+n$40=*&amp;$irvar10:java.lang.Boolean* [line 32];
+n$41=_fun_UpdateRecordResponse.&lt;init&gt;(Boolean)(n$39:com.zrlog.common.response.UpdateRecordResponse*,n$40:java.lang.Boolean*) [line 32];
+*&amp;$irvar11:com.zrlog.common.response.UpdateRecordResponse*=n$39 [line 32];
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:16 3 succs: exn: Exit
+</span></span></a> <a href="./TypeController.java.2ef1acc692633947a01f51b5b02ecb71/nodes/com.zrlog.web.controller.admin.api.TypeController.update%28%29%3Acom.zrlog.common.response.UpdateRecordRes.8149485fe9192b358f5304ea2c594638_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

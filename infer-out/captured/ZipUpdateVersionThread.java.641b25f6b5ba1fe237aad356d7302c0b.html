@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/plugin/ZipUpdateVersionThread.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.plugin; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.hibegin.common.util.ExceptionUtils; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import org.slf4j.Logger; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import org.slf4j.LoggerFactory; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import java.io.File; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import java.io.Serializable; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import java.util.UUID; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> * 更新Zrlog，具体的流程看 run() 里面有详细流程。本质就是合成新war包，然后替换掉war包。 </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">public class ZipUpdateVersionThread extends Thread implements Serializable, UpdateVersionHandler { </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(ZipUpdateVersionThread.class); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<clinit>%28%29%3Avoid.eaf0f8bc4e7a0a8c18439ecf20fe76b3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<clinit>%28%29%3Avoid.eaf0f8bc4e7a0a8c18439ecf20fe76b3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.plugin.ZipUpdateVersionThread:java.lang.Object*) [line 16];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 16];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<clinit>%28%29%3Avoid.eaf0f8bc4e7a0a8c18439ecf20fe76b3_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:org.slf4j.Logger* [line 16];
+*&amp;#GB<>$com.zrlog.web.plugin.ZipUpdateVersionThread.LOGGER:com.zrlog.web.plugin.ZipUpdateVersionThread(root com.zrlog.web.plugin.ZipUpdateVersionThread)=n$1 [line 16];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<clinit>%28%29%3Avoid.eaf0f8bc4e7a0a8c18439ecf20fe76b3_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<clinit>%28%29%3Avoid.eaf0f8bc4e7a0a8c18439ecf20fe76b3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<clinit>%28%29%3Avoid.eaf0f8bc4e7a0a8c18439ecf20fe76b3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/com.zrlog.web.plugin.ZipUpdateVersionThread.<clinit>%28%29%3Avoid.eaf0f8bc4e7a0a8c18439ecf20fe76b3.html">summary for void ZipUpdateVersionThread.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">    private File file; </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    private StringBuilder sb = new StringBuilder(); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 19];
+n$3=_fun_StringBuilder.&lt;init&gt;()(n$2:java.lang.StringBuilder*) [line 19];
+*&amp;$irvar0:java.lang.StringBuilder*=n$2 [line 19];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 19];
+n$5=*&amp;$irvar0:java.lang.StringBuilder* [line 19];
+*n$4.sb:com.zrlog.web.plugin.ZipUpdateVersionThread(root com.zrlog.web.plugin.ZipUpdateVersionThread)=n$5 [line 19];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">    private boolean finish; </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    private File tempFilePath; </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    public ZipUpdateVersionThread(File file) { <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 23];
+n$1=_fun_Thread.&lt;init&gt;()(n$0:com.zrlog.web.plugin.ZipUpdateVersionThread*) [line 23];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c.html">summary for ZipUpdateVersionThread.&lt;init&gt;(File)</a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">        this.file = file; <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 24];
+n$7=*&amp;file:java.io.File* [line 24];
+*n$6.file:com.zrlog.web.plugin.ZipUpdateVersionThread(root com.zrlog.web.plugin.ZipUpdateVersionThread)=n$7 [line 24];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">        tempFilePath = new File(System.getProperty(&quot;java.io.tmpdir&quot;) + File.separator + UUID.randomUUID().toString()); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$8=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 25];
+n$9=_fun_StringBuilder.&lt;init&gt;()(n$8:java.lang.StringBuilder*) [line 25];
+*&amp;$irvar1:java.lang.StringBuilder*=n$8 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$10=_fun_String System.getProperty(String)("java.io.tmpdir":java.lang.Object*) [line 25];
+*&amp;$irvar2:java.lang.String*=n$10 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$11=*&amp;$irvar1:java.lang.StringBuilder* [line 25];
+_=*n$11:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$13=*&amp;$irvar2:java.lang.String* [line 25];
+n$14=_fun_StringBuilder StringBuilder.append(String)(n$11:java.lang.StringBuilder*,n$13:java.lang.String*) virtual [line 25];
+*&amp;$irvar3:java.lang.StringBuilder*=n$14 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$15=*&amp;$irvar3:java.lang.StringBuilder* [line 25];
+_=*n$15:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$17=*&amp;#GB<>$java.io.File.separator:java.lang.String*(root java.io.File) [line 25];
+n$18=_fun_StringBuilder StringBuilder.append(String)(n$15:java.lang.StringBuilder*,n$17:java.lang.String*) virtual [line 25];
+*&amp;$irvar4:java.lang.StringBuilder*=n$18 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$19=_fun_UUID UUID.randomUUID()() [line 25];
+*&amp;$irvar5:java.util.UUID*=n$19 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$20=*&amp;$irvar5:java.util.UUID* [line 25];
+_=*n$20:java.util.UUID*(root java.util.UUID) [line 25];
+n$22=_fun_String UUID.toString()(n$20:java.util.UUID*) virtual [line 25];
+*&amp;$irvar6:java.lang.String*=n$22 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$23=*&amp;$irvar4:java.lang.StringBuilder* [line 25];
+_=*n$23:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$25=*&amp;$irvar6:java.lang.String* [line 25];
+n$26=_fun_StringBuilder StringBuilder.append(String)(n$23:java.lang.StringBuilder*,n$25:java.lang.String*) virtual [line 25];
+*&amp;$irvar7:java.lang.StringBuilder*=n$26 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$27=*&amp;$irvar7:java.lang.StringBuilder* [line 25];
+_=*n$27:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$29=_fun_String StringBuilder.toString()(n$27:java.lang.StringBuilder*) virtual [line 25];
+*&amp;$irvar8:java.lang.String*=n$29 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$30=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 25];
+n$31=*&amp;$irvar8:java.lang.String* [line 25];
+n$32=_fun_File.&lt;init&gt;(String)(n$30:java.io.File*,n$31:java.lang.String*) [line 25];
+*&amp;$irvar9:java.io.File*=n$30 [line 25];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$33=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 25];
+n$34=*&amp;$irvar9:java.io.File* [line 25];
+*n$33.tempFilePath:com.zrlog.web.plugin.ZipUpdateVersionThread(root com.zrlog.web.plugin.ZipUpdateVersionThread)=n$34 [line 25];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">        tempFilePath.mkdirs(); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$35=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 26];
+n$36=*n$35.tempFilePath:java.io.File*(root com.zrlog.web.plugin.ZipUpdateVersionThread) [line 26];
+_=*n$36:java.io.File*(root java.io.File) [line 26];
+n$38=_fun_boolean File.mkdirs()(n$36:java.io.File*) virtual [line 26];
+*&amp;$irvar10:_Bool=n$38 [line 26];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    } <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:2 exn:3 Instructions
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:19 3 succs: exn: Exit
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.<init>%28java.io.File%29.f5139a327c17f41a872f4d0984d91e2c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">    private void updateProcessMsg(String str) { <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242.html">summary for void ZipUpdateVersionThread.updateProcessMsg(String)</a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        LOGGER.info(str); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.plugin.ZipUpdateVersionThread.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.ZipUpdateVersionThread) [line 30];
+_=*n$0:org.slf4j.Logger*(root org.slf4j.Logger) [line 30];
+n$2=*&amp;str:java.lang.String* [line 30];
+n$3=_fun_void Logger.info(String)(n$0:org.slf4j.Logger*,n$2:java.lang.String*) interface virtual [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">        sb.append(&quot;&lt;p&gt;&quot;).append(str).append(&quot;&lt;/p&gt;&quot;); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 31];
+n$5=*n$4.sb:java.lang.StringBuilder*(root com.zrlog.web.plugin.ZipUpdateVersionThread) [line 31];
+_=*n$5:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 31];
+n$7=_fun_StringBuilder StringBuilder.append(String)(n$5:java.lang.StringBuilder*,"<p>":java.lang.Object*) virtual [line 31];
+*&amp;$irvar0:java.lang.StringBuilder*=n$7 [line 31];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$8=*&amp;$irvar0:java.lang.StringBuilder* [line 31];
+_=*n$8:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 31];
+n$10=*&amp;str:java.lang.String* [line 31];
+n$11=_fun_StringBuilder StringBuilder.append(String)(n$8:java.lang.StringBuilder*,n$10:java.lang.String*) virtual [line 31];
+*&amp;$irvar1:java.lang.StringBuilder*=n$11 [line 31];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$12=*&amp;$irvar1:java.lang.StringBuilder* [line 31];
+_=*n$12:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 31];
+n$14=_fun_StringBuilder StringBuilder.append(String)(n$12:java.lang.StringBuilder*,"</p>":java.lang.Object*) virtual [line 31];
+*&amp;$irvar2:java.lang.StringBuilder*=n$14 [line 31];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">    } <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessMsg%28java.lang.String%29%3Avoid.ea333922bc1fad15b5bf13e10a472242_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">    private void updateProcessErrorMsg(Throwable e) { <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017.html">summary for void ZipUpdateVersionThread.updateProcessErrorMsg(Throwable)</a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">        LOGGER.error(&quot;&quot;,e); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.plugin.ZipUpdateVersionThread.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.ZipUpdateVersionThread) [line 35];
+_=*n$0:org.slf4j.Logger*(root org.slf4j.Logger) [line 35];
+n$2=*&amp;e:java.lang.Throwable* [line 35];
+n$3=_fun_void Logger.error(String,Throwable)(n$0:org.slf4j.Logger*,"":java.lang.Object*,n$2:java.lang.Throwable*) interface virtual [line 35];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">        sb.append(&quot;&lt;pre style='color:red'&gt;&quot;).append(ExceptionUtils.recordStackTraceMsg(e)).append(&quot;&lt;/pre&gt;&quot;); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 36];
+n$5=*n$4.sb:java.lang.StringBuilder*(root com.zrlog.web.plugin.ZipUpdateVersionThread) [line 36];
+_=*n$5:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 36];
+n$7=_fun_StringBuilder StringBuilder.append(String)(n$5:java.lang.StringBuilder*,"<pre style='color:red'>":java.lang.Object*) virtual [line 36];
+*&amp;$irvar0:java.lang.StringBuilder*=n$7 [line 36];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$8=*&amp;e:java.lang.Throwable* [line 36];
+n$9=_fun_String ExceptionUtils.recordStackTraceMsg(Throwable)(n$8:java.lang.Throwable*) [line 36];
+*&amp;$irvar1:java.lang.String*=n$9 [line 36];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$10=*&amp;$irvar0:java.lang.StringBuilder* [line 36];
+_=*n$10:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 36];
+n$12=*&amp;$irvar1:java.lang.String* [line 36];
+n$13=_fun_StringBuilder StringBuilder.append(String)(n$10:java.lang.StringBuilder*,n$12:java.lang.String*) virtual [line 36];
+*&amp;$irvar2:java.lang.StringBuilder*=n$13 [line 36];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$14=*&amp;$irvar2:java.lang.StringBuilder* [line 36];
+_=*n$14:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 36];
+n$16=_fun_StringBuilder StringBuilder.append(String)(n$14:java.lang.StringBuilder*,"</pre>":java.lang.Object*) virtual [line 36];
+*&amp;$irvar3:java.lang.StringBuilder*=n$16 [line 36];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">    } <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:2 exn:3 Instructions
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:9 3 succs: exn: Exit
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.updateProcessErrorMsg%28java.lang.Throwable%29%3Avoid.ebbba69cb69e7d50ed68452242f18017_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">    public void run() { </td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">        /*try { </td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">            String warName = getWarNameAndBackup(); </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">            File upgradeWarFile = generatorUpgradeWarFile(warName); </td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">            doUpgrade(warName, upgradeWarFile); </td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">        } catch (Exception e) { </td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">            LOGGER.error(&quot;&quot;, e); </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">            updateProcessErrorMsg(e); </td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">        } finally { </td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">            FileUtils.deleteFile(tempFilePath.toString()); </td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">        finish = true;*/ </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">    } <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.run%28%29%3Avoid.89a0db4d80b554283e36ffb8eaff341d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.run%28%29%3Avoid.89a0db4d80b554283e36ffb8eaff341d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.run%28%29%3Avoid.89a0db4d80b554283e36ffb8eaff341d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.run%28%29%3Avoid.89a0db4d80b554283e36ffb8eaff341d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/com.zrlog.web.plugin.ZipUpdateVersionThread.run%28%29%3Avoid.89a0db4d80b554283e36ffb8eaff341d.html">summary for void ZipUpdateVersionThread.run()</a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">    /*private void doUpgrade(String warName, File upgradeWarFile) { </td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">        File currentRunWarFile = new File(new File(PathKit.getWebRootPath()).getParentFile() + warName); </td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">        currentRunWarFile.delete(); </td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">        FileUtils.moveOrCopyFile(upgradeWarFile.toString(), currentRunWarFile.toString(), true); </td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">        updateProcessMsg(&quot;覆盖更新包 &quot; + currentRunWarFile); </td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">    private File generatorUpgradeWarFile(String warName) throws IOException { </td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">        ZipUtil.unZip(file.toString(), tempFilePath + File.separator); </td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">        updateProcessMsg(&quot;解压安装包 &quot; + file); </td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">        Map&lt;String, String&gt; copyFileMap = new LinkedHashMap&lt;&gt;(); </td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">        copyFileMap.put(PathKit.getWebRootPath() + &quot;/WEB-INF/db.properties&quot;, tempFilePath + &quot;/WEB-INF/&quot;); </td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">        copyFileMap.put(PathKit.getWebRootPath() + &quot;/WEB-INF/install.lock&quot;, tempFilePath + &quot;/WEB-INF/&quot;); </td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">        copyFileMap.put(PathKit.getWebRootPath() + Constants.ATTACHED_FOLDER, tempFilePath.toString()); </td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">        copyFileMap.put(PathKit.getWebRootPath() + &quot;/favicon.ico&quot;, tempFilePath.toString()); </td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">        copyFileMap.put(PathKit.getWebRootPath() + &quot;/error&quot;, tempFilePath.toString()); </td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">        fillTemplateCopyInfo(tempFilePath, copyFileMap); </td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">        doCopy(copyFileMap); </td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">        List&lt;File&gt; fileList = new ArrayList&lt;&gt;(); </td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">        fileList.add(tempFilePath); </td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">        File tempWarFile = new File(tempFilePath.getParent() + File.separator + warName); </td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">        JarPackageUtil.inJar(fileList, tempFilePath + File.separator, tempWarFile.toString()); </td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">        updateProcessMsg(&quot;合成更新包 &quot; + tempWarFile); </td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">        return tempWarFile; </td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">    private void fillTemplateCopyInfo(File tempFilePath, Map&lt;String, String&gt; copyFileMap) { </td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">        File templatePath = new File(PathKit.getWebRootPath() + Constants.TEMPLATE_BASE_PATH); </td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">        File[] templates = templatePath.listFiles(); </td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">        if (templates != null &amp;&amp; templates.length &gt; 0) { </td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">            for (File template : templates) { </td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line">                if (template.isDirectory() &amp;&amp; template.toString().substring(PathKit.getWebRootPath().length()).startsWith(Constants.DEFAULT_TEMPLATE_PATH)) { </td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">                    //skip default template folder </td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">                    continue; </td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line">                copyFileMap.put(template.toString(), tempFilePath + File.separator + Constants.TEMPLATE_BASE_PATH); </td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">    private void doCopy(Map&lt;String, String&gt; pathMap) { </td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">        for (Map.Entry&lt;String, String&gt; entry : pathMap.entrySet()) { </td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">            if (new File(entry.getKey()).exists()) { </td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line">                FileUtils.moveOrCopyFolder(entry.getKey(), entry.getValue(), false); </td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">    private String getWarNameAndBackup() { </td></tr>
+<tr><td class="num" id="LINE104">104</td><td class="line">        String warName; </td></tr>
+<tr><td class="num" id="LINE105">105</td><td class="line">        String contextPath = JFinal.me().getServletContext().getContextPath(); </td></tr>
+<tr><td class="num" id="LINE106">106</td><td class="line">        if (&quot;/&quot;.equals(contextPath) || &quot;&quot;.equals(contextPath)) { </td></tr>
+<tr><td class="num" id="LINE107">107</td><td class="line">            warName = &quot;/ROOT.war&quot;; </td></tr>
+<tr><td class="num" id="LINE108">108</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE109">109</td><td class="line">            warName = contextPath + &quot;.war&quot;; </td></tr>
+<tr><td class="num" id="LINE110">110</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE111">111</td><td class="line">        String backupFolder = new File(PathKit.getWebRootPath()).getParentFile().getParentFile() + File.separator + &quot;backup&quot; + File.separator + new SimpleDateFormat(&quot;yyyy-MM-dd_HH_mm&quot;).format(new Date()) + File.separator; </td></tr>
+<tr><td class="num" id="LINE112">112</td><td class="line">        new File(backupFolder).mkdirs(); </td></tr>
+<tr><td class="num" id="LINE113">113</td><td class="line">        FileUtils.moveOrCopyFolder(PathKit.getWebRootPath(), backupFolder, false); </td></tr>
+<tr><td class="num" id="LINE114">114</td><td class="line">        String warPath = new File(PathKit.getWebRootPath()).getParent() + File.separator + warName; </td></tr>
+<tr><td class="num" id="LINE115">115</td><td class="line">        if (new File(warPath).exists()) { </td></tr>
+<tr><td class="num" id="LINE116">116</td><td class="line">            FileUtils.moveOrCopyFolder(warPath, backupFolder, false); </td></tr>
+<tr><td class="num" id="LINE117">117</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE118">118</td><td class="line">        updateProcessMsg(&quot;备份当前版本到 &quot; + backupFolder); </td></tr>
+<tr><td class="num" id="LINE119">119</td><td class="line">        return warName; </td></tr>
+<tr><td class="num" id="LINE120">120</td><td class="line">    }*/ </td></tr>
+<tr><td class="num" id="LINE121">121</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE122">122</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE123">123</td><td class="line">     * 提示更新进度 </td></tr>
+<tr><td class="num" id="LINE124">124</td><td class="line">     * </td></tr>
+<tr><td class="num" id="LINE125">125</td><td class="line">     * @return </td></tr>
+<tr><td class="num" id="LINE126">126</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE127">127</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE128">128</td><td class="line">    public String getMessage() { <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.getMessage%28%29%3Ajava.lang.String.d93ce0b56be4951540bfa5127504ad64_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/com.zrlog.web.plugin.ZipUpdateVersionThread.getMessage%28%29%3Ajava.lang.String.d93ce0b56be4951540bfa5127504ad64.html">summary for String ZipUpdateVersionThread.getMessage()</a></td></tr>
+<tr><td class="num" id="LINE129">129</td><td class="line">        return sb.toString(); <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.getMessage%28%29%3Ajava.lang.String.d93ce0b56be4951540bfa5127504ad64_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 129];
+n$1=*n$0.sb:java.lang.StringBuilder*(root com.zrlog.web.plugin.ZipUpdateVersionThread) [line 129];
+_=*n$1:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 129];
+n$3=_fun_String StringBuilder.toString()(n$1:java.lang.StringBuilder*) virtual [line 129];
+*&amp;$irvar0:java.lang.String*=n$3 [line 129];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.getMessage%28%29%3Ajava.lang.String.d93ce0b56be4951540bfa5127504ad64_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$4=*&amp;$irvar0:java.lang.String* [line 129];
+*&amp;return:java.lang.String*=n$4 [line 129];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.getMessage%28%29%3Ajava.lang.String.d93ce0b56be4951540bfa5127504ad64_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.getMessage%28%29%3Ajava.lang.String.d93ce0b56be4951540bfa5127504ad64_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE130">130</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE131">131</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE132">132</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE133">133</td><td class="line">    public boolean isFinish() { <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.isFinish%28%29%3Aboolean.105d381cdddfd2f38946ae9bf35f0b29_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/com.zrlog.web.plugin.ZipUpdateVersionThread.isFinish%28%29%3Aboolean.105d381cdddfd2f38946ae9bf35f0b29.html">summary for boolean ZipUpdateVersionThread.isFinish()</a></td></tr>
+<tr><td class="num" id="LINE134">134</td><td class="line">        return finish; <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.isFinish%28%29%3Aboolean.105d381cdddfd2f38946ae9bf35f0b29_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.ZipUpdateVersionThread* [line 134];
+n$1=*n$0.finish:_Bool(root com.zrlog.web.plugin.ZipUpdateVersionThread) [line 134];
+*&amp;return:_Bool=n$1 [line 134];
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.isFinish%28%29%3Aboolean.105d381cdddfd2f38946ae9bf35f0b29_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./ZipUpdateVersionThread.java.641b25f6b5ba1fe237aad356d7302c0b/nodes/com.zrlog.web.plugin.ZipUpdateVersionThread.isFinish%28%29%3Aboolean.105d381cdddfd2f38946ae9bf35f0b29_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE135">135</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE136">136</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE137">137</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

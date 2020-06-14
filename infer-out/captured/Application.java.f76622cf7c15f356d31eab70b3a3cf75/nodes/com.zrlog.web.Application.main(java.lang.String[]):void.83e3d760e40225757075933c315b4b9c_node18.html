@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.Application.main(java.lang.String[]):void.83e3d760e40225757075933c315b4b9c_node18</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">18</a></h1></center>PROC: <a href="./../com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c.html">void Application.main(String[])</a> LINE: <a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">27</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node17.html"><span class='visited with_tooltip'>N_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node19.html"><span class='visited with_tooltip'>N_19<span class='tooltip'>node19 preds:18 succs:21 exn:3 </span></span></a> <a href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node20.html"><span class='visited with_tooltip'>N_20<span class='tooltip'>node20 preds:18 succs:22 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$15=*&amp;tomcat:org.apache.catalina.startup.Tomcat* [line 27];
+_=*n$15:org.apache.catalina.startup.Tomcat*(root org.apache.catalina.startup.Tomcat) [line 27];
+n$17=_fun_Connector Tomcat.getConnector()(n$15:org.apache.catalina.startup.Tomcat*) virtual [line 27];
+*&amp;$irvar2:org.apache.catalina.connector.Connector*=n$17 [line 27];
+</LISTING>
+<hr width="100%">
+<a name="session76" href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node18.html#session76">node18#session76</a>(<a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">27</a>) [compute pre] liveness 18
+<LISTING class='color_black'>JOIN
+
+LEFT:   { io.File, webappDirLocation, common.Constants, tomcat }
+RIGHT:  { io.File, webappDirLocation, common.Constants, tomcat }
+RESULT: { io.File, webappDirLocation, common.Constants, tomcat }
+
+JOIN
+
+LEFT:   { io.File, webappDirLocation, common.Constants, tomcat }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session77" href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node18.html#session77">node18#session77</a>(<a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">27</a>) [exec] liveness 18
+<LISTING class='color_black'>PRE STATE:
+{ io.File, webappDirLocation, common.Constants, tomcat }
+
+INSTR=  *&amp;$irvar2:org.apache.catalina.connector.Connector*=n$17 [line 27]; 
+
+STATE:
+{ n$17, io.File, webappDirLocation, common.Constants, tomcat }
+
+INSTR=  n$17=_fun_Connector Tomcat.getConnector()(n$15:org.apache.catalina.startup.Tomcat*) virtual [line 27]; 
+
+STATE:
+{ n$15, io.File, webappDirLocation, common.Constants, tomcat }
+
+INSTR=  _=*n$15:org.apache.catalina.startup.Tomcat*(root org.apache.catalina.startup.Tomcat) [line 27]; 
+
+STATE UNCHANGED
+
+INSTR=  n$15=*&amp;tomcat:org.apache.catalina.startup.Tomcat* [line 27]; 
+
+STATE:
+{ io.File, webappDirLocation, common.Constants, tomcat }
+
+</LISTING>
+<hr width="100%">
+<a name="session137" href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node18.html#session137">node18#session137</a>(<a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">27</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session138" href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node18.html#session138">node18#session138</a>(<a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">27</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ webappDirLocation, tomcat },{ _, n$11, n$13, n$14, $irvar1 })
+
+INSTR=  n$15=*&amp;tomcat:org.apache.catalina.startup.Tomcat* [line 27]; 
+
+STATE:
+({ n$15, webappDirLocation, tomcat },{ _, n$11, n$13, n$14, $irvar1 })
+
+INSTR=  _=*n$15:org.apache.catalina.startup.Tomcat*(root org.apache.catalina.startup.Tomcat) [line 27]; 
+
+STATE:
+({ _, n$15, webappDirLocation, tomcat },{ _, n$11, n$13, n$14, $irvar1 })
+
+INSTR=  n$17=_fun_Connector Tomcat.getConnector()(n$15:org.apache.catalina.startup.Tomcat*) virtual [line 27]; 
+
+STATE:
+({ _, n$15, n$17, webappDirLocation, tomcat },
+{ _, n$11, n$13, n$14, $irvar1 })
+
+INSTR=  *&amp;$irvar2:org.apache.catalina.connector.Connector*=n$17 [line 27]; 
+
+STATE:
+({ webappDirLocation, tomcat },{ _, n$15, n$17, $irvar2 })
+
+</LISTING>
+<hr width="100%">
+<a name="session30" href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node18.html#session30">node18#session30</a>(<a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">27</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session31" href="./../nodes/com.zrlog.web.Application.main%28java.lang.String%5B%5D%29%3Avoid.83e3d760e40225757075933c315b4b9c_node18.html#session31">node18#session31</a>(<a href="./../../Application.java.f76622cf7c15f356d31eab70b3a3cf75.html#LINE27">27</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ webappDirLocation -&gt; { }, webPort -&gt; { }, tomcat -&gt; { } }
+
+
+
+INSTR=  n$17 := Connector Tomcat.getConnector()({ tomcat }) [line 27]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;$irvar2); [line 27]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$17); [line 27]; 
+
+STATE:
+{ webappDirLocation -&gt; { }, webPort -&gt; { }, tomcat -&gt; { } }
+
+</LISTING>

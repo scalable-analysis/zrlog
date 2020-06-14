@@ -1,0 +1,39 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_1" [label="1: Start void PluginCoreProcess.registerShutdownHook()\nFormals:  this:com.zrlog.web.plugin.PluginCoreProcess*\nLocals:  $irvar1:void $irvar0:void rt:java.lang.Runtime* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_1" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_4" ;
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_2" [label="2: Exit void PluginCoreProcess.registerShutdownHook() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_3" [label="3:  exceptions sink \n   NULLIFY(&rt); [line 138]\n  NULLIFY(&$irvar0); [line 138]\n  NULLIFY(&$irvar1); [line 138]\n  EXIT_SCOPE(rt,$irvar0,$irvar1); [line 138]\n  APPLY_ABSTRACTION; [line 138]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_3" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_2" ;
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_4" [label="4:  Call Runtime Runtime.getRuntime() \n   n$0=_fun_Runtime Runtime.getRuntime()() [line 136]\n  *&rt:java.lang.Runtime*=n$0 [line 136]\n  EXIT_SCOPE(n$0); [line 136]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_4" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_5" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_4" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_5" [label="5:  Call Runnable PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10(PluginCoreProcess) \n   n$1=*&this:com.zrlog.web.plugin.PluginCoreProcess* [line 137]\n  n$2=_fun_Runnable PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10(PluginCoreProcess)(n$1:com.zrlog.web.plugin.PluginCoreProcess*) [line 137]\n  *&$irvar0:java.lang.Runnable*=n$2 [line 137]\n  NULLIFY(&this); [line 137]\n  EXIT_SCOPE(n$1,n$2,this); [line 137]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_5" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_6" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_5" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_6" [label="6:  Call Thread.<init>(Runnable) \n   n$3=_fun___new(sizeof(t=java.lang.Thread):java.lang.Thread*) [line 137]\n  n$4=*&$irvar0:java.lang.Runnable* [line 137]\n  n$5=_fun_Thread.<init>(Runnable)(n$3:java.lang.Thread*,n$4:java.lang.Runnable*) [line 137]\n  *&$irvar1:java.lang.Thread*=n$3 [line 137]\n  NULLIFY(&$irvar0); [line 137]\n  EXIT_SCOPE(n$3,n$4,n$5,$irvar0); [line 137]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_6" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_7" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_6" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_7" [label="7:  Call void Runtime.addShutdownHook(Thread) \n   n$6=*&rt:java.lang.Runtime* [line 137]\n  _=*n$6:java.lang.Runtime*(root java.lang.Runtime) [line 137]\n  n$8=*&$irvar1:java.lang.Thread* [line 137]\n  n$9=_fun_void Runtime.addShutdownHook(Thread)(n$6:java.lang.Runtime*,n$8:java.lang.Thread*) virtual [line 137]\n  NULLIFY(&rt); [line 137]\n  NULLIFY(&$irvar1); [line 137]\n  EXIT_SCOPE(_,n$6,n$8,n$9,rt,$irvar1); [line 137]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_7" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_8" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_7" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_8" [label="8:  method_body \n   APPLY_ABSTRACTION; [line 138]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_8" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_2" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_8" -> "com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook():void.89a1f2b9240a4d6c68b5a57b6f9a962f_3" [color="red" ];
+}

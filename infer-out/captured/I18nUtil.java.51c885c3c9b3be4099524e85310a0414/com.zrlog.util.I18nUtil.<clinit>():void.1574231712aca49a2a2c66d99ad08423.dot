@@ -1,0 +1,54 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_1" [label="1: Start void I18nUtil.<clinit>()\nFormals: \nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_1" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_4" ;
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_2" [label="2: Exit void I18nUtil.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 27]\n  NULLIFY(&$irvar1); [line 27]\n  NULLIFY(&$irvar2); [line 27]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 27]\n  APPLY_ABSTRACTION; [line 27]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_2" ;
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_4" [label="4:  Call Logger LoggerFactory.getLogger(Class) \n   n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.util.I18nUtil:java.lang.Object*) [line 21]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 21]\n  EXIT_SCOPE(n$0); [line 21]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_4" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_5" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_4" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_5" [label="5:  method_body \n   n$1=*&$irvar0:org.slf4j.Logger* [line 21]\n  *&#GB<>$com.zrlog.util.I18nUtil.LOGGER:com.zrlog.util.I18nUtil(root com.zrlog.util.I18nUtil)=n$1 [line 21]\n  NULLIFY(&$irvar0); [line 21]\n  EXIT_SCOPE(n$1,$irvar0); [line 21]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_5" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_6" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_5" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_6" [label="6:  Call HashMap.<init>() \n   n$2=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 22]\n  n$3=_fun_HashMap.<init>()(n$2:java.util.HashMap*) [line 22]\n  *&$irvar1:java.util.HashMap*=n$2 [line 22]\n  EXIT_SCOPE(n$2,n$3); [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_6" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_7" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_6" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_7" [label="7:  method_body \n   n$4=*&$irvar1:java.util.HashMap* [line 22]\n  *&#GB<>$com.zrlog.util.I18nUtil.I18N_RES_MAP:com.zrlog.util.I18nUtil(root com.zrlog.util.I18nUtil)=n$4 [line 22]\n  NULLIFY(&$irvar1); [line 22]\n  EXIT_SCOPE(n$4,$irvar1); [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_7" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_8" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_7" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_8" [label="8:  Call ThreadLocal.<init>() \n   n$5=_fun___new(sizeof(t=java.lang.ThreadLocal):java.lang.ThreadLocal*) [line 23]\n  n$6=_fun_ThreadLocal.<init>()(n$5:java.lang.ThreadLocal*) [line 23]\n  *&$irvar2:java.lang.ThreadLocal*=n$5 [line 23]\n  EXIT_SCOPE(n$5,n$6); [line 23]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_8" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_9" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_8" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_9" [label="9:  method_body \n   n$7=*&$irvar2:java.lang.ThreadLocal* [line 23]\n  *&#GB<>$com.zrlog.util.I18nUtil.threadLocal:com.zrlog.util.I18nUtil(root com.zrlog.util.I18nUtil)=n$7 [line 23]\n  NULLIFY(&$irvar2); [line 23]\n  EXIT_SCOPE(n$7,$irvar2); [line 23]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_9" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_10" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_9" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_10" [label="10:  Call void I18nUtil.reloadSystemI18N() \n   n$8=_fun_void I18nUtil.reloadSystemI18N()() [line 26]\n  EXIT_SCOPE(n$8); [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_10" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_11" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_10" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+"com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_11" [label="11:  method_body \n   APPLY_ABSTRACTION; [line 27]\n " shape="box"]
+	
+
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_11" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_2" ;
+	 "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_11" -> "com.zrlog.util.I18nUtil.<clinit>():void.1574231712aca49a2a2c66d99ad08423_3" [color="red" ];
+}

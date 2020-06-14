@@ -1,0 +1,596 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Log.find(int,int,java.lang.String,java.lang.String,java.lang.String):java.util.Map.9e1507efe66ebd73c011396c73f0862d_node72</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">72</a></h1></center>PROC: <a href="./../com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d.html">Map Log.find(int,int,String,String,String)</a> LINE: <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node71.html"><span class='visited with_tooltip'>N_71<span class='tooltip'>node71 preds:70 succs:72 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node73.html"><span class='visited with_tooltip'>N_73<span class='tooltip'>node73 preds:72 succs:74 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$127=*&amp;$irvar36:java.lang.StringBuilder* [line 143];
+_=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 143];
+n$129=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,"select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId":java.lang.Object*) virtual [line 143];
+*&amp;$irvar37:java.lang.StringBuilder*=n$129 [line 143];
+</LISTING>
+<hr width="100%">
+<a name="session34" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session34">node72#session34</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] liveness 72
+<LISTING class='color_black'>JOIN
+
+LEFT:   { params,
+          pageSort,
+          data,
+          pageSize,
+          searchParam,
+          $irvar37,
+          page,
+          searchKeywords,
+          this }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session35" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session35">node72#session35</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] liveness 72
+<LISTING class='color_black'>PRE STATE:
+{ params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  $irvar37,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  *&amp;$irvar37:java.lang.StringBuilder*=n$129 [line 143]; 
+
+STATE:
+{ n$129,
+  params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  n$129=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,&quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot;:java.lang.Object*) virtual [line 143]; 
+
+STATE:
+{ n$127,
+  params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  _=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 143]; 
+
+STATE UNCHANGED
+
+INSTR=  n$127=*&amp;$irvar36:java.lang.StringBuilder* [line 143]; 
+
+STATE:
+{ params,
+  pageSort,
+  data,
+  pageSize,
+  $irvar36,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+</LISTING>
+<hr width="100%">
+<a name="session34" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session34">node72#session34</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] liveness 72
+<LISTING class='color_black'>JOIN
+
+LEFT:   { params,
+          pageSort,
+          data,
+          pageSize,
+          searchParam,
+          $irvar37,
+          page,
+          searchKeywords,
+          this }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session35" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session35">node72#session35</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] liveness 72
+<LISTING class='color_black'>PRE STATE:
+{ params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  $irvar37,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  *&amp;$irvar37:java.lang.StringBuilder*=n$129 [line 143]; 
+
+STATE:
+{ n$129,
+  params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  n$129=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,&quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot;:java.lang.Object*) virtual [line 143]; 
+
+STATE:
+{ n$127,
+  params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  _=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 143]; 
+
+STATE UNCHANGED
+
+INSTR=  n$127=*&amp;$irvar36:java.lang.StringBuilder* [line 143]; 
+
+STATE:
+{ params,
+  pageSort,
+  data,
+  pageSize,
+  $irvar36,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+</LISTING>
+<hr width="100%">
+<a name="session311" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session311">node72#session311</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session312" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session312">node72#session312</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  n$127=*&amp;$irvar36:java.lang.StringBuilder* [line 143]; 
+
+STATE:
+({ n$127, params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  _=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 143]; 
+
+STATE:
+({ _, n$127, params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  n$129=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,&quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot;:java.lang.Object*) virtual [line 143]; 
+
+STATE:
+({ _,
+   n$127,
+   n$129,
+   params,
+   pageSort,
+   data,
+   $irvar36,
+   searchParam,
+   searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  *&amp;$irvar37:java.lang.StringBuilder*=n$129 [line 143]; 
+
+STATE:
+({ params, pageSort, data, searchParam, $irvar37, searchKeywords },
+{ _, n$127, n$129, $irvar36 })
+
+</LISTING>
+<hr width="100%">
+<a name="session34" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session34">node72#session34</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] liveness 72
+<LISTING class='color_black'>JOIN
+
+LEFT:   { params,
+          pageSort,
+          data,
+          pageSize,
+          searchParam,
+          $irvar37,
+          page,
+          searchKeywords,
+          this }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session35" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session35">node72#session35</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] liveness 72
+<LISTING class='color_black'>PRE STATE:
+{ params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  $irvar37,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  *&amp;$irvar37:java.lang.StringBuilder*=n$129 [line 143]; 
+
+STATE:
+{ n$129,
+  params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  n$129=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,&quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot;:java.lang.Object*) virtual [line 143]; 
+
+STATE:
+{ n$127,
+  params,
+  pageSort,
+  data,
+  pageSize,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+INSTR=  _=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 143]; 
+
+STATE UNCHANGED
+
+INSTR=  n$127=*&amp;$irvar36:java.lang.StringBuilder* [line 143]; 
+
+STATE:
+{ params,
+  pageSort,
+  data,
+  pageSize,
+  $irvar36,
+  searchParam,
+  page,
+  searchKeywords,
+  this }
+
+</LISTING>
+<hr width="100%">
+<a name="session311" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session311">node72#session311</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session312" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session312">node72#session312</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  n$127=*&amp;$irvar36:java.lang.StringBuilder* [line 143]; 
+
+STATE:
+({ n$127, params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  _=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 143]; 
+
+STATE:
+({ _, n$127, params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  n$129=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,&quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot;:java.lang.Object*) virtual [line 143]; 
+
+STATE:
+({ _,
+   n$127,
+   n$129,
+   params,
+   pageSort,
+   data,
+   $irvar36,
+   searchParam,
+   searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  *&amp;$irvar37:java.lang.StringBuilder*=n$129 [line 143]; 
+
+STATE:
+({ params, pageSort, data, searchParam, $irvar37, searchKeywords },
+{ _, n$127, n$129, $irvar36 })
+
+</LISTING>
+<hr width="100%">
+<a name="session311" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session311">node72#session311</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session312" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session312">node72#session312</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  n$127=*&amp;$irvar36:java.lang.StringBuilder* [line 143]; 
+
+STATE:
+({ n$127, params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  _=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 143]; 
+
+STATE:
+({ _, n$127, params, pageSort, data, $irvar36, searchParam, searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  n$129=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,&quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot;:java.lang.Object*) virtual [line 143]; 
+
+STATE:
+({ _,
+   n$127,
+   n$129,
+   params,
+   pageSort,
+   data,
+   $irvar36,
+   searchParam,
+   searchKeywords },
+{ n$125, n$126 })
+
+INSTR=  *&amp;$irvar37:java.lang.StringBuilder*=n$129 [line 143]; 
+
+STATE:
+({ params, pageSort, data, searchParam, $irvar37, searchKeywords },
+{ _, n$127, n$129, $irvar36 })
+
+</LISTING>
+<hr width="100%">
+<a name="session138" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session138">node72#session138</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session139" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session139">node72#session139</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$13 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$20 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$39 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$42 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$55 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$58 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$61 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$95 -&gt; { },
+  n$99 -&gt; { },
+  n$102 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$106 -&gt; Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$109 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$112 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  params -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  pageSort -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sortField -&gt; Footprint({ @val$5 }) ~&gt; ?,
+  data -&gt; { },
+  searchParam -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  searchKeywords -&gt; { } }
+
+
+
+TAINTED_CALL2: (callee="StringBuilder StringBuilder.append(String)", caller="Map Log.find(int,int,String,String,String)")
+INSTR=  n$129 := StringBuilder StringBuilder.append(String)({ n$125,
+                                                              &quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot; }) [line 143]; 
+
+STATE:
+{ n$13 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$20 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$39 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$42 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$55 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$58 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$61 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$95 -&gt; { },
+  n$99 -&gt; { },
+  n$102 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$106 -&gt; Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$109 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$112 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  n$129 -&gt; { },
+  params -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  pageSort -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sortField -&gt; Footprint({ @val$5 }) ~&gt; ?,
+  data -&gt; { },
+  searchParam -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  searchKeywords -&gt; { } }
+
+
+INSTR=  NULLIFY(&amp;$irvar36); [line 143]; 
+
+STATE UNCHANGED
+
+
+</LISTING>
+<hr width="100%">
+<a name="session138" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session138">node72#session138</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session139" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session139">node72#session139</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$13 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$20 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$39 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$42 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$55 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$58 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$61 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$95 -&gt; { },
+  n$99 -&gt; { },
+  n$102 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$106 -&gt; Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$109 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$112 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  params -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  pageSort -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sortField -&gt; Footprint({ @val$5 }) ~&gt; ?,
+  data -&gt; { },
+  searchParam -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  searchKeywords -&gt; { } }
+
+
+
+TAINTED_CALL2: (callee="StringBuilder StringBuilder.append(String)", caller="Map Log.find(int,int,String,String,String)")
+INSTR=  n$129 := StringBuilder StringBuilder.append(String)({ n$125,
+                                                              &quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot; }) [line 143]; 
+
+STATE:
+{ n$13 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$20 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$39 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$42 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$55 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$58 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$61 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$95 -&gt; { },
+  n$99 -&gt; { },
+  n$102 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$106 -&gt; Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$109 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$112 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  n$129 -&gt; { },
+  params -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  pageSort -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sortField -&gt; Footprint({ @val$5 }) ~&gt; ?,
+  data -&gt; { },
+  searchParam -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  searchKeywords -&gt; { } }
+
+
+INSTR=  NULLIFY(&amp;$irvar36); [line 143]; 
+
+STATE UNCHANGED
+
+
+</LISTING>
+<hr width="100%">
+<a name="session138" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session138">node72#session138</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session139" href="./../nodes/com.zrlog.model.Log.find%28int%2Cint%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang.String%29%3Ajava.util.Map.9e1507efe66ebd73c011396c73f0862d_node72.html#session139">node72#session139</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE143">143</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$13 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$20 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$39 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$42 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$55 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$58 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$61 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$95 -&gt; { },
+  n$99 -&gt; { },
+  n$102 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$106 -&gt; Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$109 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$112 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  params -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  pageSort -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sortField -&gt; Footprint({ @val$5 }) ~&gt; ?,
+  data -&gt; { },
+  searchParam -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  searchKeywords -&gt; { } }
+
+
+
+TAINTED_CALL2: (callee="StringBuilder StringBuilder.append(String)", caller="Map Log.find(int,int,String,String,String)")
+INSTR=  n$129 := StringBuilder StringBuilder.append(String)({ n$125,
+                                                              &quot;select l.*,l.privacy privacy,t.typeName,l.logId as id,l.last_update_date as lastUpdateDate,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId ) commentSize from log l inner join user u inner join type t where u.userId=l.userId&quot; }) [line 143]; 
+
+STATE:
+{ n$13 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$20 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$39 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$42 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$55 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$58 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$61 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$95 -&gt; { },
+  n$99 -&gt; { },
+  n$102 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$106 -&gt; Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$109 -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$112 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  n$129 -&gt; { },
+  params -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  pageSort -&gt; (Footprint({ @val$4* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sortField -&gt; Footprint({ @val$5 }) ~&gt; ?,
+  data -&gt; { },
+  searchParam -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  searchKeywords -&gt; { } }
+
+
+INSTR=  NULLIFY(&amp;$irvar36); [line 143]; 
+
+STATE UNCHANGED
+
+
+</LISTING>

@@ -1,0 +1,54 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_1" [label="1: Start void ZrLogConfig.<clinit>()\nFormals: \nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_1" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_4" ;
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_2" [label="2: Exit void ZrLogConfig.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 65]\n  NULLIFY(&$irvar1); [line 65]\n  NULLIFY(&$irvar2); [line 65]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 65]\n  APPLY_ABSTRACTION; [line 65]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_2" ;
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_4" [label="4:  Call Logger LoggerFactory.getLogger(Class) \n   n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.config.ZrLogConfig:java.lang.Object*) [line 52]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 52]\n  EXIT_SCOPE(n$0); [line 52]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_4" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_5" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_4" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_5" [label="5:  method_body \n   n$1=*&$irvar0:org.slf4j.Logger* [line 52]\n  *&#GB<>$com.zrlog.web.config.ZrLogConfig.LOGGER:com.zrlog.web.config.ZrLogConfig(root com.zrlog.web.config.ZrLogConfig)=n$1 [line 52]\n  NULLIFY(&$irvar0); [line 52]\n  EXIT_SCOPE(n$1,$irvar0); [line 52]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_5" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_6" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_5" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_6" [label="6:  method_body \n   *&#GB<>$com.zrlog.web.config.ZrLogConfig.JDBC_URL_BASE_QUERY_PARAM:com.zrlog.web.config.ZrLogConfig(root com.zrlog.web.config.ZrLogConfig)=\"characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=GMT\" [line 56]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_6" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_7" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_6" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_7" [label="7:  Call Properties.<init>() \n   n$2=_fun___new(sizeof(t=java.util.Properties):java.util.Properties*) [line 60]\n  n$3=_fun_Properties.<init>()(n$2:java.util.Properties*) [line 60]\n  *&$irvar1:java.util.Properties*=n$2 [line 60]\n  EXIT_SCOPE(n$2,n$3); [line 60]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_7" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_8" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_7" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_8" [label="8:  method_body \n   n$4=*&$irvar1:java.util.Properties* [line 60]\n  *&#GB<>$com.zrlog.web.config.ZrLogConfig.blogProperties:com.zrlog.web.config.ZrLogConfig(root com.zrlog.web.config.ZrLogConfig)=n$4 [line 60]\n  NULLIFY(&$irvar1); [line 60]\n  EXIT_SCOPE(n$4,$irvar1); [line 60]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_8" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_9" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_8" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_9" [label="9:  Call Properties System.getProperties() \n   n$5=_fun_Properties System.getProperties()() [line 65]\n  *&$irvar2:java.util.Properties*=n$5 [line 65]\n  EXIT_SCOPE(n$5); [line 65]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_9" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_10" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_9" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_10" [label="10:  method_body \n   n$6=*&$irvar2:java.util.Properties* [line 65]\n  *&#GB<>$com.zrlog.web.config.ZrLogConfig.SYSTEM_PROP:com.zrlog.web.config.ZrLogConfig(root com.zrlog.web.config.ZrLogConfig)=n$6 [line 65]\n  NULLIFY(&$irvar2); [line 65]\n  EXIT_SCOPE(n$6,$irvar2); [line 65]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_10" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_11" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_10" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_11" [label="11:  method_body \n   APPLY_ABSTRACTION; [line 65]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_11" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_2" ;
+	 "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_11" -> "com.zrlog.web.config.ZrLogConfig.<clinit>():void.6b0ab63e458e931393a8eeb068c01156_3" [color="red" ];
+}

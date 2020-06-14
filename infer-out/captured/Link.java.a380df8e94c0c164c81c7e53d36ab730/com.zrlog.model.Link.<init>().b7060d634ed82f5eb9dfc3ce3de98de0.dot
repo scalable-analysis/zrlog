@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_1" [label="1: Start Link.<init>()\nFormals:  this:com.zrlog.model.Link*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_1" -> "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_4" ;
+"com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_2" [label="2: Exit Link.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_3" -> "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_2" ;
+"com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_4" [label="4:  Call Model.<init>() \n   n$0=*&this:com.zrlog.model.Link* [line 13]\n  n$1=_fun_Model.<init>()(n$0:com.zrlog.model.Link*) [line 13]\n  NULLIFY(&this); [line 13]\n  EXIT_SCOPE(n$0,n$1,this); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_4" -> "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_5" ;
+	 "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_4" -> "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_3" [color="red" ];
+"com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_5" [label="5:  method_body \n   APPLY_ABSTRACTION; [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_5" -> "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_2" ;
+	 "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_5" -> "com.zrlog.model.Link.<init>().b7060d634ed82f5eb9dfc3ce3de98de0_3" [color="red" ];
+}

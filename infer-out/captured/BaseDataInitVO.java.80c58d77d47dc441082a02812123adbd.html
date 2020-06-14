@@ -1,0 +1,413 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/cache/vo/BaseDataInitVO.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.cache.vo; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.zrlog.model.*; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import java.io.Serializable; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import java.util.List; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import java.util.Map; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line"> * 程序初始化的数据（及全局的数据），存放了标签，分类，网站设置等信息。 </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">public class BaseDataInitVO implements Serializable { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.<init>%28%29.15d7159735767541bf58d91c1a2d534c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.<init>%28%29.15d7159735767541bf58d91c1a2d534c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 12];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.cache.vo.BaseDataInitVO*) [line 12];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.<init>%28%29.15d7159735767541bf58d91c1a2d534c_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.<init>%28%29.15d7159735767541bf58d91c1a2d534c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.<init>%28%29.15d7159735767541bf58d91c1a2d534c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.<init>%28%29.15d7159735767541bf58d91c1a2d534c.html">summary for BaseDataInitVO.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    private List&lt;Tag&gt; tags; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    private List&lt;Type&gt; types; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    private List&lt;Link&gt; links; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    private List&lt;Plugin&gt; plugins; </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">    private Map&lt;String, Long&gt; archives; </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    private List&lt;Archive&gt; archiveList; </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">    private Map&lt;String, Object&gt; webSite; </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    private List&lt;Log&gt; hotLogs; </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">    private List&lt;LogNav&gt; logNavs; </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    private Map&lt;Map&lt;String, Object&gt;, List&lt;Log&gt;&gt; indexHotLogs; </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    private Statistics statistics; </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    public List&lt;Tag&gt; getTags() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTags%28%29%3Ajava.util.List.8470deddf558ab9738f0787c2df1f5f3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getTags%28%29%3Ajava.util.List.8470deddf558ab9738f0787c2df1f5f3.html">summary for List BaseDataInitVO.getTags()</a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">        return tags; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTags%28%29%3Ajava.util.List.8470deddf558ab9738f0787c2df1f5f3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 27];
+n$1=*n$0.tags:java.util.List*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 27];
+*&amp;return:java.util.List*=n$1 [line 27];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTags%28%29%3Ajava.util.List.8470deddf558ab9738f0787c2df1f5f3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTags%28%29%3Ajava.util.List.8470deddf558ab9738f0787c2df1f5f3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">    public void setTags(List&lt;Tag&gt; tags) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTags%28java.util.List%29%3Avoid.4a31fac138523dd9104686e6a98319dd_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setTags%28java.util.List%29%3Avoid.4a31fac138523dd9104686e6a98319dd.html">summary for void BaseDataInitVO.setTags(List)</a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">        this.tags = tags; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTags%28java.util.List%29%3Avoid.4a31fac138523dd9104686e6a98319dd_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 31];
+n$1=*&amp;tags:java.util.List* [line 31];
+*n$0.tags:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 31];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTags%28java.util.List%29%3Avoid.4a31fac138523dd9104686e6a98319dd_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTags%28java.util.List%29%3Avoid.4a31fac138523dd9104686e6a98319dd_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTags%28java.util.List%29%3Avoid.4a31fac138523dd9104686e6a98319dd_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">    public List&lt;Type&gt; getTypes() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTypes%28%29%3Ajava.util.List.28744f81a22db85025e7912e30244751_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getTypes%28%29%3Ajava.util.List.28744f81a22db85025e7912e30244751.html">summary for List BaseDataInitVO.getTypes()</a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">        return types; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTypes%28%29%3Ajava.util.List.28744f81a22db85025e7912e30244751_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 35];
+n$1=*n$0.types:java.util.List*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 35];
+*&amp;return:java.util.List*=n$1 [line 35];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTypes%28%29%3Ajava.util.List.28744f81a22db85025e7912e30244751_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getTypes%28%29%3Ajava.util.List.28744f81a22db85025e7912e30244751_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">    public void setTypes(List&lt;Type&gt; types) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTypes%28java.util.List%29%3Avoid.5c03488df871cf7ee3c8fb3e894aa84f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setTypes%28java.util.List%29%3Avoid.5c03488df871cf7ee3c8fb3e894aa84f.html">summary for void BaseDataInitVO.setTypes(List)</a></td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">        this.types = types; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTypes%28java.util.List%29%3Avoid.5c03488df871cf7ee3c8fb3e894aa84f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 39];
+n$1=*&amp;types:java.util.List* [line 39];
+*n$0.types:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 39];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTypes%28java.util.List%29%3Avoid.5c03488df871cf7ee3c8fb3e894aa84f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTypes%28java.util.List%29%3Avoid.5c03488df871cf7ee3c8fb3e894aa84f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setTypes%28java.util.List%29%3Avoid.5c03488df871cf7ee3c8fb3e894aa84f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">    public List&lt;Link&gt; getLinks() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLinks%28%29%3Ajava.util.List.0822c5d6d229abedc55f786167d45b42_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getLinks%28%29%3Ajava.util.List.0822c5d6d229abedc55f786167d45b42.html">summary for List BaseDataInitVO.getLinks()</a></td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">        return links; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLinks%28%29%3Ajava.util.List.0822c5d6d229abedc55f786167d45b42_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 43];
+n$1=*n$0.links:java.util.List*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 43];
+*&amp;return:java.util.List*=n$1 [line 43];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLinks%28%29%3Ajava.util.List.0822c5d6d229abedc55f786167d45b42_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLinks%28%29%3Ajava.util.List.0822c5d6d229abedc55f786167d45b42_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">    public void setLinks(List&lt;Link&gt; links) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLinks%28java.util.List%29%3Avoid.b651a99d10186bd06855a215071a576d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setLinks%28java.util.List%29%3Avoid.b651a99d10186bd06855a215071a576d.html">summary for void BaseDataInitVO.setLinks(List)</a></td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">        this.links = links; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLinks%28java.util.List%29%3Avoid.b651a99d10186bd06855a215071a576d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 47];
+n$1=*&amp;links:java.util.List* [line 47];
+*n$0.links:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 47];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLinks%28java.util.List%29%3Avoid.b651a99d10186bd06855a215071a576d_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLinks%28java.util.List%29%3Avoid.b651a99d10186bd06855a215071a576d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLinks%28java.util.List%29%3Avoid.b651a99d10186bd06855a215071a576d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">    public List&lt;Plugin&gt; getPlugins() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getPlugins%28%29%3Ajava.util.List.a8e679b7c309ea5fc53f1837eb3bbcec_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getPlugins%28%29%3Ajava.util.List.a8e679b7c309ea5fc53f1837eb3bbcec.html">summary for List BaseDataInitVO.getPlugins()</a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">        return plugins; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getPlugins%28%29%3Ajava.util.List.a8e679b7c309ea5fc53f1837eb3bbcec_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 51];
+n$1=*n$0.plugins:java.util.List*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 51];
+*&amp;return:java.util.List*=n$1 [line 51];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getPlugins%28%29%3Ajava.util.List.a8e679b7c309ea5fc53f1837eb3bbcec_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getPlugins%28%29%3Ajava.util.List.a8e679b7c309ea5fc53f1837eb3bbcec_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">    public void setPlugins(List&lt;Plugin&gt; plugins) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setPlugins%28java.util.List%29%3Avoid.facb28c98c511ec7f095a51893634bad_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setPlugins%28java.util.List%29%3Avoid.facb28c98c511ec7f095a51893634bad.html">summary for void BaseDataInitVO.setPlugins(List)</a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">        this.plugins = plugins; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setPlugins%28java.util.List%29%3Avoid.facb28c98c511ec7f095a51893634bad_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 55];
+n$1=*&amp;plugins:java.util.List* [line 55];
+*n$0.plugins:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 55];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setPlugins%28java.util.List%29%3Avoid.facb28c98c511ec7f095a51893634bad_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setPlugins%28java.util.List%29%3Avoid.facb28c98c511ec7f095a51893634bad_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setPlugins%28java.util.List%29%3Avoid.facb28c98c511ec7f095a51893634bad_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">    public Map&lt;String, Long&gt; getArchives() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchives%28%29%3Ajava.util.Map.b27e6987989d3e53425725ddeb906981_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getArchives%28%29%3Ajava.util.Map.b27e6987989d3e53425725ddeb906981.html">summary for Map BaseDataInitVO.getArchives()</a></td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">        return archives; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchives%28%29%3Ajava.util.Map.b27e6987989d3e53425725ddeb906981_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 59];
+n$1=*n$0.archives:java.util.Map*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 59];
+*&amp;return:java.util.Map*=n$1 [line 59];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchives%28%29%3Ajava.util.Map.b27e6987989d3e53425725ddeb906981_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchives%28%29%3Ajava.util.Map.b27e6987989d3e53425725ddeb906981_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">    public void setArchives(Map&lt;String, Long&gt; archives) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchives%28java.util.Map%29%3Avoid.21e558db6f95ed81cd500b667625a3c7_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setArchives%28java.util.Map%29%3Avoid.21e558db6f95ed81cd500b667625a3c7.html">summary for void BaseDataInitVO.setArchives(Map)</a></td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">        this.archives = archives; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchives%28java.util.Map%29%3Avoid.21e558db6f95ed81cd500b667625a3c7_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 63];
+n$1=*&amp;archives:java.util.Map* [line 63];
+*n$0.archives:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 63];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchives%28java.util.Map%29%3Avoid.21e558db6f95ed81cd500b667625a3c7_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchives%28java.util.Map%29%3Avoid.21e558db6f95ed81cd500b667625a3c7_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchives%28java.util.Map%29%3Avoid.21e558db6f95ed81cd500b667625a3c7_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">    public Map&lt;String, Object&gt; getWebSite() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getWebSite%28%29%3Ajava.util.Map.3704a6db3d76ae18359553719f2ce25c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getWebSite%28%29%3Ajava.util.Map.3704a6db3d76ae18359553719f2ce25c.html">summary for Map BaseDataInitVO.getWebSite()</a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">        return webSite; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getWebSite%28%29%3Ajava.util.Map.3704a6db3d76ae18359553719f2ce25c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 67];
+n$1=*n$0.webSite:java.util.Map*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 67];
+*&amp;return:java.util.Map*=n$1 [line 67];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getWebSite%28%29%3Ajava.util.Map.3704a6db3d76ae18359553719f2ce25c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getWebSite%28%29%3Ajava.util.Map.3704a6db3d76ae18359553719f2ce25c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">    public void setWebSite(Map&lt;String, Object&gt; webSite) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setWebSite%28java.util.Map%29%3Avoid.d9e01bd55364d7a7b13d629bafbdc972_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setWebSite%28java.util.Map%29%3Avoid.d9e01bd55364d7a7b13d629bafbdc972.html">summary for void BaseDataInitVO.setWebSite(Map)</a></td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">        this.webSite = webSite; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setWebSite%28java.util.Map%29%3Avoid.d9e01bd55364d7a7b13d629bafbdc972_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 71];
+n$1=*&amp;webSite:java.util.Map* [line 71];
+*n$0.webSite:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 71];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setWebSite%28java.util.Map%29%3Avoid.d9e01bd55364d7a7b13d629bafbdc972_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setWebSite%28java.util.Map%29%3Avoid.d9e01bd55364d7a7b13d629bafbdc972_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setWebSite%28java.util.Map%29%3Avoid.d9e01bd55364d7a7b13d629bafbdc972_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">    public List&lt;Log&gt; getHotLogs() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getHotLogs%28%29%3Ajava.util.List.decb69145ba73eae8da4c27bd874ad1e_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getHotLogs%28%29%3Ajava.util.List.decb69145ba73eae8da4c27bd874ad1e.html">summary for List BaseDataInitVO.getHotLogs()</a></td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">        return hotLogs; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getHotLogs%28%29%3Ajava.util.List.decb69145ba73eae8da4c27bd874ad1e_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 75];
+n$1=*n$0.hotLogs:java.util.List*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 75];
+*&amp;return:java.util.List*=n$1 [line 75];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getHotLogs%28%29%3Ajava.util.List.decb69145ba73eae8da4c27bd874ad1e_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getHotLogs%28%29%3Ajava.util.List.decb69145ba73eae8da4c27bd874ad1e_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">    public void setHotLogs(List&lt;Log&gt; hotLogs) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setHotLogs%28java.util.List%29%3Avoid.f9a9127194080d0a66e08bc639a471b1_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setHotLogs%28java.util.List%29%3Avoid.f9a9127194080d0a66e08bc639a471b1.html">summary for void BaseDataInitVO.setHotLogs(List)</a></td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">        this.hotLogs = hotLogs; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setHotLogs%28java.util.List%29%3Avoid.f9a9127194080d0a66e08bc639a471b1_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 79];
+n$1=*&amp;hotLogs:java.util.List* [line 79];
+*n$0.hotLogs:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 79];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setHotLogs%28java.util.List%29%3Avoid.f9a9127194080d0a66e08bc639a471b1_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setHotLogs%28java.util.List%29%3Avoid.f9a9127194080d0a66e08bc639a471b1_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setHotLogs%28java.util.List%29%3Avoid.f9a9127194080d0a66e08bc639a471b1_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">    public List&lt;LogNav&gt; getLogNavs() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLogNavs%28%29%3Ajava.util.List.dc19df0aa50113acc1a469f810c6f33d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getLogNavs%28%29%3Ajava.util.List.dc19df0aa50113acc1a469f810c6f33d.html">summary for List BaseDataInitVO.getLogNavs()</a></td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">        return logNavs; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLogNavs%28%29%3Ajava.util.List.dc19df0aa50113acc1a469f810c6f33d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 83];
+n$1=*n$0.logNavs:java.util.List*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 83];
+*&amp;return:java.util.List*=n$1 [line 83];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLogNavs%28%29%3Ajava.util.List.dc19df0aa50113acc1a469f810c6f33d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getLogNavs%28%29%3Ajava.util.List.dc19df0aa50113acc1a469f810c6f33d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line">    public void setLogNavs(List&lt;LogNav&gt; logNavs) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLogNavs%28java.util.List%29%3Avoid.4b25093cd5d026c50d3b1561102c035f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setLogNavs%28java.util.List%29%3Avoid.4b25093cd5d026c50d3b1561102c035f.html">summary for void BaseDataInitVO.setLogNavs(List)</a></td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">        this.logNavs = logNavs; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLogNavs%28java.util.List%29%3Avoid.4b25093cd5d026c50d3b1561102c035f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 87];
+n$1=*&amp;logNavs:java.util.List* [line 87];
+*n$0.logNavs:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 87];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLogNavs%28java.util.List%29%3Avoid.4b25093cd5d026c50d3b1561102c035f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLogNavs%28java.util.List%29%3Avoid.4b25093cd5d026c50d3b1561102c035f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setLogNavs%28java.util.List%29%3Avoid.4b25093cd5d026c50d3b1561102c035f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line">    public Map&lt;Map&lt;String, Object&gt;, List&lt;Log&gt;&gt; getIndexHotLogs() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getIndexHotLogs%28%29%3Ajava.util.Map.725564fc7fb913a3c4371cba9271441c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getIndexHotLogs%28%29%3Ajava.util.Map.725564fc7fb913a3c4371cba9271441c.html">summary for Map BaseDataInitVO.getIndexHotLogs()</a></td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">        return indexHotLogs; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getIndexHotLogs%28%29%3Ajava.util.Map.725564fc7fb913a3c4371cba9271441c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 91];
+n$1=*n$0.indexHotLogs:java.util.Map*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 91];
+*&amp;return:java.util.Map*=n$1 [line 91];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getIndexHotLogs%28%29%3Ajava.util.Map.725564fc7fb913a3c4371cba9271441c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getIndexHotLogs%28%29%3Ajava.util.Map.725564fc7fb913a3c4371cba9271441c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line">    public void setIndexHotLogs(Map&lt;Map&lt;String, Object&gt;, List&lt;Log&gt;&gt; indexHotLogs) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setIndexHotLogs%28java.util.Map%29%3Avoid.8eada23fc816ed61e023ff1fc1b7bb12_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setIndexHotLogs%28java.util.Map%29%3Avoid.8eada23fc816ed61e023ff1fc1b7bb12.html">summary for void BaseDataInitVO.setIndexHotLogs(Map)</a></td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">        this.indexHotLogs = indexHotLogs; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setIndexHotLogs%28java.util.Map%29%3Avoid.8eada23fc816ed61e023ff1fc1b7bb12_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 95];
+n$1=*&amp;indexHotLogs:java.util.Map* [line 95];
+*n$0.indexHotLogs:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 95];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setIndexHotLogs%28java.util.Map%29%3Avoid.8eada23fc816ed61e023ff1fc1b7bb12_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setIndexHotLogs%28java.util.Map%29%3Avoid.8eada23fc816ed61e023ff1fc1b7bb12_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setIndexHotLogs%28java.util.Map%29%3Avoid.8eada23fc816ed61e023ff1fc1b7bb12_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line">    public List&lt;Archive&gt; getArchiveList() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchiveList%28%29%3Ajava.util.List.e246c04612b36fe49dd96b6343ade50c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getArchiveList%28%29%3Ajava.util.List.e246c04612b36fe49dd96b6343ade50c.html">summary for List BaseDataInitVO.getArchiveList()</a></td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">        return archiveList; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchiveList%28%29%3Ajava.util.List.e246c04612b36fe49dd96b6343ade50c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 99];
+n$1=*n$0.archiveList:java.util.List*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 99];
+*&amp;return:java.util.List*=n$1 [line 99];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchiveList%28%29%3Ajava.util.List.e246c04612b36fe49dd96b6343ade50c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getArchiveList%28%29%3Ajava.util.List.e246c04612b36fe49dd96b6343ade50c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line">    public void setArchiveList(List&lt;Archive&gt; archiveList) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchiveList%28java.util.List%29%3Avoid.071ff5e9f8fb566d5ace11e0bed4d1cd_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setArchiveList%28java.util.List%29%3Avoid.071ff5e9f8fb566d5ace11e0bed4d1cd.html">summary for void BaseDataInitVO.setArchiveList(List)</a></td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">        this.archiveList = archiveList; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchiveList%28java.util.List%29%3Avoid.071ff5e9f8fb566d5ace11e0bed4d1cd_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 103];
+n$1=*&amp;archiveList:java.util.List* [line 103];
+*n$0.archiveList:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 103];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE104">104</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchiveList%28java.util.List%29%3Avoid.071ff5e9f8fb566d5ace11e0bed4d1cd_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchiveList%28java.util.List%29%3Avoid.071ff5e9f8fb566d5ace11e0bed4d1cd_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setArchiveList%28java.util.List%29%3Avoid.071ff5e9f8fb566d5ace11e0bed4d1cd_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE105">105</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE106">106</td><td class="line">    public Statistics getStatistics() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getStatistics%28%29%3Acom.zrlog.web.cache.vo.BaseDataInitVO%24Statisti.26509c7e8ab2f20e132b469f68069a60_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.getStatistics%28%29%3Acom.zrlog.web.cache.vo.BaseDataInitVO%24Statisti.26509c7e8ab2f20e132b469f68069a60.html">summary for BaseDataInitVO$Statistics BaseDataInitVO.getStatistics()</a></td></tr>
+<tr><td class="num" id="LINE107">107</td><td class="line">        return statistics; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getStatistics%28%29%3Acom.zrlog.web.cache.vo.BaseDataInitVO%24Statisti.26509c7e8ab2f20e132b469f68069a60_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 107];
+n$1=*n$0.statistics:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics*(root com.zrlog.web.cache.vo.BaseDataInitVO) [line 107];
+*&amp;return:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics*=n$1 [line 107];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getStatistics%28%29%3Acom.zrlog.web.cache.vo.BaseDataInitVO%24Statisti.26509c7e8ab2f20e132b469f68069a60_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.getStatistics%28%29%3Acom.zrlog.web.cache.vo.BaseDataInitVO%24Statisti.26509c7e8ab2f20e132b469f68069a60_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE108">108</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE109">109</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE110">110</td><td class="line">    public void setStatistics(Statistics statistics) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setStatistics%28com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.137846bb2f9f95c7f4807a78545f49f0_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO.setStatistics%28com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.137846bb2f9f95c7f4807a78545f49f0.html">summary for void BaseDataInitVO.setStatistics(BaseDataInitVO$Statistics)</a></td></tr>
+<tr><td class="num" id="LINE111">111</td><td class="line">        this.statistics = statistics; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setStatistics%28com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.137846bb2f9f95c7f4807a78545f49f0_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO* [line 111];
+n$1=*&amp;statistics:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 111];
+*n$0.statistics:com.zrlog.web.cache.vo.BaseDataInitVO(root com.zrlog.web.cache.vo.BaseDataInitVO)=n$1 [line 111];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE112">112</td><td class="line">    } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setStatistics%28com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.137846bb2f9f95c7f4807a78545f49f0_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setStatistics%28com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.137846bb2f9f95c7f4807a78545f49f0_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO.setStatistics%28com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.137846bb2f9f95c7f4807a78545f49f0_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE113">113</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE114">114</td><td class="line">    public static class Statistics implements Serializable { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.<init>%28%29.c59d31bda3163d9773da6436835ec6ed_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.<init>%28%29.c59d31bda3163d9773da6436835ec6ed_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 114];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics*) [line 114];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.<init>%28%29.c59d31bda3163d9773da6436835ec6ed_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.<init>%28%29.c59d31bda3163d9773da6436835ec6ed_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.<init>%28%29.c59d31bda3163d9773da6436835ec6ed_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.<init>%28%29.c59d31bda3163d9773da6436835ec6ed.html">summary for BaseDataInitVO$Statistics.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE115">115</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE116">116</td><td class="line">        private long totalArticleSize; </td></tr>
+<tr><td class="num" id="LINE117">117</td><td class="line">        private long totalTagSize; </td></tr>
+<tr><td class="num" id="LINE118">118</td><td class="line">        private long totalTypeSize; </td></tr>
+<tr><td class="num" id="LINE119">119</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE120">120</td><td class="line">        public long getTotalArticleSize() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalArticleSize%28%29%3Along.af56972094e2cdb020942cc007fd54db_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalArticleSize%28%29%3Along.af56972094e2cdb020942cc007fd54db.html">summary for long BaseDataInitVO$Statistics.getTotalArticleSize()</a></td></tr>
+<tr><td class="num" id="LINE121">121</td><td class="line">            return totalArticleSize; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalArticleSize%28%29%3Along.af56972094e2cdb020942cc007fd54db_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 121];
+n$1=*n$0.totalArticleSize:long(root com.zrlog.web.cache.vo.BaseDataInitVO$Statistics) [line 121];
+*&amp;return:long=n$1 [line 121];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalArticleSize%28%29%3Along.af56972094e2cdb020942cc007fd54db_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalArticleSize%28%29%3Along.af56972094e2cdb020942cc007fd54db_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE122">122</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE123">123</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE124">124</td><td class="line">        public void setTotalArticleSize(long totalArticleSize) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalArticleSize%28long%29%3Avoid.72ec2f0830eac697a5bd2fc4635f8e9f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalArticleSize%28long%29%3Avoid.72ec2f0830eac697a5bd2fc4635f8e9f.html">summary for void BaseDataInitVO$Statistics.setTotalArticleSize(long)</a></td></tr>
+<tr><td class="num" id="LINE125">125</td><td class="line">            this.totalArticleSize = totalArticleSize; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalArticleSize%28long%29%3Avoid.72ec2f0830eac697a5bd2fc4635f8e9f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 125];
+n$1=*&amp;totalArticleSize:long [line 125];
+*n$0.totalArticleSize:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics(root com.zrlog.web.cache.vo.BaseDataInitVO$Statistics)=n$1 [line 125];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE126">126</td><td class="line">        } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalArticleSize%28long%29%3Avoid.72ec2f0830eac697a5bd2fc4635f8e9f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalArticleSize%28long%29%3Avoid.72ec2f0830eac697a5bd2fc4635f8e9f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalArticleSize%28long%29%3Avoid.72ec2f0830eac697a5bd2fc4635f8e9f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE127">127</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE128">128</td><td class="line">        public long getTotalTagSize() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTagSize%28%29%3Along.c037c73048cdbc9af91db4cfebcf345d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTagSize%28%29%3Along.c037c73048cdbc9af91db4cfebcf345d.html">summary for long BaseDataInitVO$Statistics.getTotalTagSize()</a></td></tr>
+<tr><td class="num" id="LINE129">129</td><td class="line">            return totalTagSize; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTagSize%28%29%3Along.c037c73048cdbc9af91db4cfebcf345d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 129];
+n$1=*n$0.totalTagSize:long(root com.zrlog.web.cache.vo.BaseDataInitVO$Statistics) [line 129];
+*&amp;return:long=n$1 [line 129];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTagSize%28%29%3Along.c037c73048cdbc9af91db4cfebcf345d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTagSize%28%29%3Along.c037c73048cdbc9af91db4cfebcf345d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE130">130</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE131">131</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE132">132</td><td class="line">        public void setTotalTagSize(long totalTagSize) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTagSize%28long%29%3Avoid.e1e49ffe0e049dc94ec7b03719f47acd_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTagSize%28long%29%3Avoid.e1e49ffe0e049dc94ec7b03719f47acd.html">summary for void BaseDataInitVO$Statistics.setTotalTagSize(long)</a></td></tr>
+<tr><td class="num" id="LINE133">133</td><td class="line">            this.totalTagSize = totalTagSize; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTagSize%28long%29%3Avoid.e1e49ffe0e049dc94ec7b03719f47acd_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 133];
+n$1=*&amp;totalTagSize:long [line 133];
+*n$0.totalTagSize:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics(root com.zrlog.web.cache.vo.BaseDataInitVO$Statistics)=n$1 [line 133];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE134">134</td><td class="line">        } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTagSize%28long%29%3Avoid.e1e49ffe0e049dc94ec7b03719f47acd_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTagSize%28long%29%3Avoid.e1e49ffe0e049dc94ec7b03719f47acd_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTagSize%28long%29%3Avoid.e1e49ffe0e049dc94ec7b03719f47acd_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE135">135</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE136">136</td><td class="line">        public long getTotalTypeSize() { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTypeSize%28%29%3Along.73977132211d76dd6df4aa5807307137_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTypeSize%28%29%3Along.73977132211d76dd6df4aa5807307137.html">summary for long BaseDataInitVO$Statistics.getTotalTypeSize()</a></td></tr>
+<tr><td class="num" id="LINE137">137</td><td class="line">            return totalTypeSize; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTypeSize%28%29%3Along.73977132211d76dd6df4aa5807307137_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 137];
+n$1=*n$0.totalTypeSize:long(root com.zrlog.web.cache.vo.BaseDataInitVO$Statistics) [line 137];
+*&amp;return:long=n$1 [line 137];
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTypeSize%28%29%3Along.73977132211d76dd6df4aa5807307137_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.getTotalTypeSize%28%29%3Along.73977132211d76dd6df4aa5807307137_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE138">138</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE139">139</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE140">140</td><td class="line">        public void setTotalTypeSize(long totalTypeSize) { <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTypeSize%28long%29%3Avoid.0bab47857a37dd527c984b1770c49525_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTypeSize%28long%29%3Avoid.0bab47857a37dd527c984b1770c49525.html">summary for void BaseDataInitVO$Statistics.setTotalTypeSize(long)</a></td></tr>
+<tr><td class="num" id="LINE141">141</td><td class="line">            this.totalTypeSize = totalTypeSize; <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTypeSize%28long%29%3Avoid.0bab47857a37dd527c984b1770c49525_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics* [line 141];
+n$1=*&amp;totalTypeSize:long [line 141];
+*n$0.totalTypeSize:com.zrlog.web.cache.vo.BaseDataInitVO$Statistics(root com.zrlog.web.cache.vo.BaseDataInitVO$Statistics)=n$1 [line 141];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE142">142</td><td class="line">        } <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTypeSize%28long%29%3Avoid.0bab47857a37dd527c984b1770c49525_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTypeSize%28long%29%3Avoid.0bab47857a37dd527c984b1770c49525_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BaseDataInitVO.java.80c58d77d47dc441082a02812123adbd/nodes/com.zrlog.web.cache.vo.BaseDataInitVO%24Statistics.setTotalTypeSize%28long%29%3Avoid.0bab47857a37dd527c984b1770c49525_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE143">143</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE144">144</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

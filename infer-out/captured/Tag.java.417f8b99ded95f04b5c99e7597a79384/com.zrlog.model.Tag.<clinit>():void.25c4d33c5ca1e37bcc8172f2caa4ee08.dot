@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_1" [label="1: Start void Tag.<clinit>()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_1" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_4" ;
+"com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_2" [label="2: Exit void Tag.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 16]\n  EXIT_SCOPE($irvar0); [line 16]\n  APPLY_ABSTRACTION; [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_3" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_2" ;
+"com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_4" [label="4:  Call Logger LoggerFactory.getLogger(Class) \n   n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.model.Tag:java.lang.Object*) [line 16]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 16]\n  EXIT_SCOPE(n$0); [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_4" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_5" ;
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_4" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_3" [color="red" ];
+"com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_5" [label="5:  method_body \n   n$1=*&$irvar0:org.slf4j.Logger* [line 16]\n  *&#GB<>$com.zrlog.model.Tag.LOGGER:com.zrlog.model.Tag(root com.zrlog.model.Tag)=n$1 [line 16]\n  NULLIFY(&$irvar0); [line 16]\n  EXIT_SCOPE(n$1,$irvar0); [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_5" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_6" ;
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_5" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_3" [color="red" ];
+"com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_6" [label="6:  method_body \n   APPLY_ABSTRACTION; [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_6" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_2" ;
+	 "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_6" -> "com.zrlog.model.Tag.<clinit>():void.25c4d33c5ca1e37bcc8172f2caa4ee08_3" [color="red" ];
+}

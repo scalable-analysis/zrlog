@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.interceptor.AdminInterceptor.adminPermission(com.jfinal.aop.Invocation):void.56ef7d7b131a4b4a915e00a8452150cf_node13</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">13</a></h1></center>PROC: <a href="./../com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf.html">void AdminInterceptor.adminPermission(Invocation)</a> LINE: <a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node12.html"><span class='visited with_tooltip'>N_12<span class='tooltip'>node12 preds:11 succs:13 exn:76 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node14.html"><span class='visited with_tooltip'>N_14<span class='tooltip'>node14 preds:13 succs:15 exn:76 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node76.html"><span class='visited with_tooltip'>N_76<span class='tooltip'>node76 preds: succs:74 75 exn:3 </span></span></a><br>
+<LISTING class='color_green'>n$20=*&amp;$irvar2:com.zrlog.model.User* [line 64];
+_=*n$20:com.zrlog.model.User*(root com.zrlog.model.User) [line 64];
+n$22=*&amp;$irvar4:java.lang.Integer* [line 64];
+n$23=_fun_Model Model.findById(Object)(n$20:com.zrlog.model.User*,n$22:java.lang.Integer*) virtual [line 64];
+*&amp;$irvar5:com.jfinal.plugin.activerecord.Model*=n$23 [line 64];
+</LISTING>
+<hr width="100%">
+<a name="session148" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session148">node13#session148</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [compute pre] liveness 13
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session149" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session149">node13#session149</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [exec] liveness 13
+<LISTING class='color_black'>PRE STATE:
+{ controller, adminTokenVO, $irvar5, ai, this }
+
+INSTR=  *&amp;$irvar5:com.jfinal.plugin.activerecord.Model*=n$23 [line 64]; 
+
+STATE:
+{ n$23, controller, adminTokenVO, ai, this }
+
+INSTR=  n$23=_fun_Model Model.findById(Object)(n$20:com.zrlog.model.User*,n$22:java.lang.Integer*) virtual [line 64]; 
+
+STATE:
+{ n$20, n$22, controller, adminTokenVO, ai, this }
+
+INSTR=  n$22=*&amp;$irvar4:java.lang.Integer* [line 64]; 
+
+STATE:
+{ n$20, controller, adminTokenVO, $irvar4, ai, this }
+
+INSTR=  _=*n$20:com.zrlog.model.User*(root com.zrlog.model.User) [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  n$20=*&amp;$irvar2:com.zrlog.model.User* [line 64]; 
+
+STATE:
+{ controller, adminTokenVO, $irvar4, ai, $irvar2, this }
+
+</LISTING>
+<hr width="100%">
+<a name="session194" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session194">node13#session194</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [compute pre] liveness 13
+<LISTING class='color_black'>JOIN
+
+LEFT:   { controller, adminTokenVO, $irvar5, ai, this }
+RIGHT:  { interceptor.AdminInterceptor, CatchVar242, return, ai, this }
+RESULT: { controller,
+          adminTokenVO,
+          $irvar5,
+          interceptor.AdminInterceptor,
+          CatchVar242,
+          return,
+          ai,
+          this }
+
+</LISTING>
+<hr width="100%">
+<a name="session195" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session195">node13#session195</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [exec] liveness 13
+<LISTING class='color_black'>PRE STATE:
+{ controller,
+  adminTokenVO,
+  $irvar5,
+  interceptor.AdminInterceptor,
+  CatchVar242,
+  return,
+  ai,
+  this }
+
+INSTR=  *&amp;$irvar5:com.jfinal.plugin.activerecord.Model*=n$23 [line 64]; 
+
+STATE:
+{ n$23,
+  controller,
+  adminTokenVO,
+  interceptor.AdminInterceptor,
+  CatchVar242,
+  return,
+  ai,
+  this }
+
+INSTR=  n$23=_fun_Model Model.findById(Object)(n$20:com.zrlog.model.User*,n$22:java.lang.Integer*) virtual [line 64]; 
+
+STATE:
+{ n$20,
+  n$22,
+  controller,
+  adminTokenVO,
+  interceptor.AdminInterceptor,
+  CatchVar242,
+  return,
+  ai,
+  this }
+
+INSTR=  n$22=*&amp;$irvar4:java.lang.Integer* [line 64]; 
+
+STATE:
+{ n$20,
+  controller,
+  adminTokenVO,
+  interceptor.AdminInterceptor,
+  $irvar4,
+  CatchVar242,
+  return,
+  ai,
+  this }
+
+INSTR=  _=*n$20:com.zrlog.model.User*(root com.zrlog.model.User) [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  n$20=*&amp;$irvar2:com.zrlog.model.User* [line 64]; 
+
+STATE:
+{ controller,
+  adminTokenVO,
+  interceptor.AdminInterceptor,
+  $irvar4,
+  CatchVar242,
+  return,
+  ai,
+  $irvar2,
+  this }
+
+</LISTING>
+<hr width="100%">
+<a name="session200" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session200">node13#session200</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [compute pre] liveness 13
+<LISTING class='color_black'>JOIN
+
+LEFT:   { controller,
+          adminTokenVO,
+          $irvar5,
+          interceptor.AdminInterceptor,
+          CatchVar242,
+          return,
+          ai,
+          this }
+RIGHT:  { interceptor.AdminInterceptor, CatchVar242, return, ai, this }
+RESULT: { controller,
+          adminTokenVO,
+          $irvar5,
+          interceptor.AdminInterceptor,
+          CatchVar242,
+          return,
+          ai,
+          this }
+
+</LISTING>
+<hr width="100%">
+<a name="session201" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session201">node13#session201</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [exec] liveness 13
+<LISTING class='color_black'>Fixpoint reached.
+
+</LISTING>
+<hr width="100%">
+<a name="session368" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session368">node13#session368</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [compute pre] liveness 13
+<LISTING class='color_black'>JOIN
+
+LEFT:   { controller,
+          adminTokenVO,
+          $irvar5,
+          interceptor.AdminInterceptor,
+          CatchVar242,
+          return,
+          ai,
+          this }
+RIGHT:  { interceptor.AdminInterceptor, CatchVar242, return, ai, this }
+RESULT: { controller,
+          adminTokenVO,
+          $irvar5,
+          interceptor.AdminInterceptor,
+          CatchVar242,
+          return,
+          ai,
+          this }
+
+</LISTING>
+<hr width="100%">
+<a name="session369" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session369">node13#session369</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [exec] liveness 13
+<LISTING class='color_black'>Fixpoint reached.
+
+</LISTING>
+<hr width="100%">
+<a name="session493" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session493">node13#session493</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session494" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session494">node13#session494</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ controller, adminTokenVO, $irvar4, $irvar2 },{ n$18, n$19, $irvar3 })
+
+INSTR=  n$20=*&amp;$irvar2:com.zrlog.model.User* [line 64]; 
+
+STATE:
+({ n$20, controller, adminTokenVO, $irvar4, $irvar2 },
+{ n$18, n$19, $irvar3 })
+
+INSTR=  _=*n$20:com.zrlog.model.User*(root com.zrlog.model.User) [line 64]; 
+
+STATE:
+({ _, n$20, controller, adminTokenVO, $irvar4, $irvar2 },
+{ n$18, n$19, $irvar3 })
+
+INSTR=  n$22=*&amp;$irvar4:java.lang.Integer* [line 64]; 
+
+STATE:
+({ _, n$20, n$22, controller, adminTokenVO, $irvar4, $irvar2 },
+{ n$18, n$19, $irvar3 })
+
+INSTR=  n$23=_fun_Model Model.findById(Object)(n$20:com.zrlog.model.User*,n$22:java.lang.Integer*) virtual [line 64]; 
+
+STATE:
+({ _, n$20, n$22, n$23, controller, adminTokenVO, $irvar4, $irvar2 },
+{ n$18, n$19, $irvar3 })
+
+INSTR=  *&amp;$irvar5:com.jfinal.plugin.activerecord.Model*=n$23 [line 64]; 
+
+STATE:
+({ controller, adminTokenVO, $irvar5 },
+{ _, n$20, n$22, n$23, $irvar4, $irvar2 })
+
+</LISTING>
+<hr width="100%">
+<a name="session20" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session20">node13#session20</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session21" href="./../nodes/com.zrlog.web.interceptor.AdminInterceptor.adminPermission%28com.jfinal.aop.Invocation%29%3Avoid.56ef7d7b131a4b4a915e00a8452150cf_node13.html#session21">node13#session21</a>(<a href="./../../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE64">64</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$7 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 61) } + Footprint({ }) ~&gt; ?, *),
+  n$11 -&gt; { },
+  n$17 -&gt; { },
+  controller -&gt; { },
+  adminTokenVO -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }) }
+
+
+
+
+INSTR=  n$23 := Model Model.findById(Object)({ n$13, n$19 }) [line 64]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;$irvar4); [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar2); [line 64]; 
+
+STATE UNCHANGED
+
+
+</LISTING>

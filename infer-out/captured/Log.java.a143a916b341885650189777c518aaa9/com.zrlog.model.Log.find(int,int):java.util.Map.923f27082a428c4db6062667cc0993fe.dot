@@ -1,0 +1,139 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_1" [label="1: Start Map Log.find(int,int)\nFormals:  this:com.zrlog.model.Log* page:int pageSize:int\nLocals:  $irvar14:void $irvar13:void $irvar12:void $irvar11:void $irvar10:void $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void sql:java.lang.String* data:java.util.Map* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_1" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_4" ;
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_2" [label="2: Exit Map Log.find(int,int) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 100]\n  NULLIFY(&data); [line 100]\n  NULLIFY(&$irvar5); [line 100]\n  NULLIFY(&$irvar4); [line 100]\n  NULLIFY(&$irvar7); [line 100]\n  NULLIFY(&$irvar12); [line 100]\n  NULLIFY(&sql); [line 100]\n  NULLIFY(&$irvar6); [line 100]\n  NULLIFY(&$irvar0); [line 100]\n  NULLIFY(&$irvar13); [line 100]\n  NULLIFY(&$irvar11); [line 100]\n  NULLIFY(&$irvar10); [line 100]\n  NULLIFY(&$irvar8); [line 100]\n  NULLIFY(&$irvar1); [line 100]\n  NULLIFY(&$irvar2); [line 100]\n  NULLIFY(&$irvar14); [line 100]\n  EXIT_SCOPE($irvar3,data,$irvar5,$irvar4,$irvar7,$irvar12,sql,$irvar6,$irvar0,$irvar13,$irvar11,$irvar10,$irvar8,$irvar1,$irvar2,$irvar14); [line 100]\n  APPLY_ABSTRACTION; [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_2" ;
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_4" [label="4:  Call HashMap.<init>() \n   n$0=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 94]\n  n$1=_fun_HashMap.<init>()(n$0:java.util.HashMap*) [line 94]\n  *&data:java.util.HashMap*=n$0 [line 94]\n  EXIT_SCOPE(n$0,n$1); [line 94]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_4" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_5" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_4" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_5" [label="5:  method_body \n   *&sql:java.lang.Object*=\"select l.*,t.typeName,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId) commentSize from log l inner join user u inner join type t where rubbish=? and privacy=? and u.userId=l.userId and t.typeid=l.typeid  order by l.logId desc limit  ?,?\" [line 95]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_5" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_6" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_5" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_6" [label="6:  method_body \n   n$2=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[4]):java.lang.Object*[_*_](*)) [line 97]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$2 [line 97]\n  EXIT_SCOPE(n$2); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_6" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_7" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_6" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_7" [label="7:  method_body \n   n$3=*&this:com.zrlog.model.Log* [line 97]\n  n$4=*n$3.rubbish:_Bool(root com.zrlog.model.Log) [line 97]\n  *&$irvar1:_Bool=n$4 [line 97]\n  EXIT_SCOPE(n$3,n$4); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_7" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_8" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_7" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_8" [label="8:  Call Boolean Boolean.valueOf(boolean) \n   n$5=*&$irvar1:_Bool [line 97]\n  n$6=_fun_Boolean Boolean.valueOf(boolean)(n$5:_Bool) [line 97]\n  *&$irvar2:java.lang.Boolean*=n$6 [line 97]\n  NULLIFY(&$irvar1); [line 97]\n  EXIT_SCOPE(n$5,n$6,$irvar1); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_8" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_9" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_8" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_9" [label="9:  method_body \n   n$7=*&$irvar0:java.lang.Object*[_*_](*) [line 97]\n  n$8=*&$irvar2:java.lang.Boolean* [line 97]\n  *n$7[0]:java.lang.Boolean*=n$8 [line 97]\n  NULLIFY(&$irvar2); [line 97]\n  EXIT_SCOPE(n$7,n$8,$irvar2); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_9" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_10" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_9" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_10" [label="10:  method_body \n   n$9=*&this:com.zrlog.model.Log* [line 97]\n  n$10=*n$9.privacy:_Bool(root com.zrlog.model.Log) [line 97]\n  *&$irvar3:_Bool=n$10 [line 97]\n  EXIT_SCOPE(n$9,n$10); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_10" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_11" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_10" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_11" [label="11:  Call Boolean Boolean.valueOf(boolean) \n   n$11=*&$irvar3:_Bool [line 97]\n  n$12=_fun_Boolean Boolean.valueOf(boolean)(n$11:_Bool) [line 97]\n  *&$irvar4:java.lang.Boolean*=n$12 [line 97]\n  NULLIFY(&$irvar3); [line 97]\n  EXIT_SCOPE(n$11,n$12,$irvar3); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_11" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_12" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_11" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_12" [label="12:  method_body \n   n$13=*&$irvar0:java.lang.Object*[_*_](*) [line 97]\n  n$14=*&$irvar4:java.lang.Boolean* [line 97]\n  *n$13[1]:java.lang.Boolean*=n$14 [line 97]\n  NULLIFY(&$irvar4); [line 97]\n  EXIT_SCOPE(n$13,n$14,$irvar4); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_12" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_13" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_12" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_13" [label="13:  Call int ParseUtil.getFirstRecord(int,int) \n   n$15=*&page:int [line 97]\n  n$16=*&pageSize:int [line 97]\n  n$17=_fun_int ParseUtil.getFirstRecord(int,int)(n$15:int,n$16:int) [line 97]\n  *&$irvar5:int=n$17 [line 97]\n  EXIT_SCOPE(n$15,n$16,n$17); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_13" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_14" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_13" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_14" [label="14:  Call Integer Integer.valueOf(int) \n   n$18=*&$irvar5:int [line 97]\n  n$19=_fun_Integer Integer.valueOf(int)(n$18:int) [line 97]\n  *&$irvar6:java.lang.Integer*=n$19 [line 97]\n  NULLIFY(&$irvar5); [line 97]\n  EXIT_SCOPE(n$18,n$19,$irvar5); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_14" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_15" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_14" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_15" [label="15:  method_body \n   n$20=*&$irvar0:java.lang.Object*[_*_](*) [line 97]\n  n$21=*&$irvar6:java.lang.Integer* [line 97]\n  *n$20[2]:java.lang.Integer*=n$21 [line 97]\n  NULLIFY(&$irvar6); [line 97]\n  EXIT_SCOPE(n$20,n$21,$irvar6); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_15" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_16" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_15" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_16" [label="16:  Call Integer Integer.valueOf(int) \n   n$22=*&pageSize:int [line 97]\n  n$23=_fun_Integer Integer.valueOf(int)(n$22:int) [line 97]\n  *&$irvar7:java.lang.Integer*=n$23 [line 97]\n  EXIT_SCOPE(n$22,n$23); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_16" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_17" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_16" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_17" [label="17:  method_body \n   n$24=*&$irvar0:java.lang.Object*[_*_](*) [line 97]\n  n$25=*&$irvar7:java.lang.Integer* [line 97]\n  *n$24[3]:java.lang.Integer*=n$25 [line 97]\n  NULLIFY(&$irvar7); [line 97]\n  EXIT_SCOPE(n$24,n$25,$irvar7); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_17" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_18" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_17" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_18" [label="18:  Call List Model.find(String,Object[]) \n   n$26=*&this:com.zrlog.model.Log* [line 97]\n  _=*n$26:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 97]\n  n$28=*&sql:java.lang.Object* [line 97]\n  n$29=*&$irvar0:java.lang.Object*[_*_](*) [line 97]\n  n$30=_fun_List Model.find(String,Object[])(n$26:com.zrlog.model.Log*,n$28:java.lang.Object*,n$29:java.lang.Object*[_*_](*)) virtual [line 97]\n  *&$irvar8:java.util.List*=n$30 [line 97]\n  NULLIFY(&sql); [line 97]\n  NULLIFY(&$irvar0); [line 97]\n  EXIT_SCOPE(_,n$26,n$28,n$29,n$30,sql,$irvar0); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_18" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_19" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_18" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_19" [label="19:  Call Object HashMap.put(Object,Object) \n   n$31=*&data:java.util.HashMap* [line 97]\n  _=*n$31:java.util.HashMap*(root java.util.HashMap) [line 97]\n  n$33=*&$irvar8:java.util.List* [line 97]\n  n$34=_fun_Object HashMap.put(Object,Object)(n$31:java.util.HashMap*,\"rows\":java.lang.Object*,n$33:java.util.List*) interface virtual [line 97]\n  *&$irvar9:java.lang.Object*=n$34 [line 97]\n  NULLIFY(&$irvar9); [line 97]\n  NULLIFY(&$irvar8); [line 97]\n  EXIT_SCOPE(_,n$31,n$33,n$34,$irvar9,$irvar8); [line 97]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_19" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_20" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_19" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_20" [label="20:  method_body \n   n$35=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 98]\n  *&$irvar10:java.lang.Object*[_*_](*)=n$35 [line 98]\n  EXIT_SCOPE(n$35); [line 98]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_20" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_21" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_20" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_21" [label="21:  method_body \n   n$36=*&this:com.zrlog.model.Log* [line 99]\n  n$37=*n$36.rubbish:_Bool(root com.zrlog.model.Log) [line 99]\n  *&$irvar11:_Bool=n$37 [line 99]\n  EXIT_SCOPE(n$36,n$37); [line 99]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_21" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_22" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_21" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_22" [label="22:  Call Boolean Boolean.valueOf(boolean) \n   n$38=*&$irvar11:_Bool [line 99]\n  n$39=_fun_Boolean Boolean.valueOf(boolean)(n$38:_Bool) [line 99]\n  *&$irvar12:java.lang.Boolean*=n$39 [line 99]\n  NULLIFY(&$irvar11); [line 99]\n  EXIT_SCOPE(n$38,n$39,$irvar11); [line 99]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_22" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_23" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_22" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_23" [label="23:  method_body \n   n$40=*&$irvar10:java.lang.Object*[_*_](*) [line 99]\n  n$41=*&$irvar12:java.lang.Boolean* [line 99]\n  *n$40[0]:java.lang.Boolean*=n$41 [line 99]\n  NULLIFY(&$irvar12); [line 99]\n  EXIT_SCOPE(n$40,n$41,$irvar12); [line 99]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_23" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_24" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_23" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_24" [label="24:  method_body \n   n$42=*&this:com.zrlog.model.Log* [line 99]\n  n$43=*n$42.privacy:_Bool(root com.zrlog.model.Log) [line 99]\n  *&$irvar13:_Bool=n$43 [line 99]\n  EXIT_SCOPE(n$42,n$43); [line 99]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_24" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_25" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_24" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_25" [label="25:  Call Boolean Boolean.valueOf(boolean) \n   n$44=*&$irvar13:_Bool [line 99]\n  n$45=_fun_Boolean Boolean.valueOf(boolean)(n$44:_Bool) [line 99]\n  *&$irvar14:java.lang.Boolean*=n$45 [line 99]\n  NULLIFY(&$irvar13); [line 99]\n  EXIT_SCOPE(n$44,n$45,$irvar13); [line 99]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_25" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_26" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_25" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_26" [label="26:  method_body \n   n$46=*&$irvar10:java.lang.Object*[_*_](*) [line 99]\n  n$47=*&$irvar14:java.lang.Boolean* [line 99]\n  *n$46[1]:java.lang.Boolean*=n$47 [line 99]\n  NULLIFY(&$irvar14); [line 99]\n  EXIT_SCOPE(n$46,n$47,$irvar14); [line 99]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_26" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_27" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_26" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_27" [label="27:  Call void ModelUtil.fillPageData(Model,int,int,String,Map,Object[]) \n   n$48=*&this:com.zrlog.model.Log* [line 98]\n  n$49=*&page:int [line 98]\n  n$50=*&pageSize:int [line 98]\n  n$51=*&data:java.util.HashMap* [line 98]\n  n$52=*&$irvar10:java.lang.Object*[_*_](*) [line 98]\n  n$53=_fun_void ModelUtil.fillPageData(Model,int,int,String,Map,Object[])(n$48:com.zrlog.model.Log*,n$49:int,n$50:int,\"from log l inner join user u where rubbish=? and privacy=? and u.userId=l.userId \":java.lang.Object*,n$51:java.util.HashMap*,n$52:java.lang.Object*[_*_](*)) [line 98]\n  NULLIFY(&pageSize); [line 98]\n  NULLIFY(&page); [line 98]\n  NULLIFY(&$irvar10); [line 98]\n  NULLIFY(&this); [line 98]\n  EXIT_SCOPE(n$48,n$49,n$50,n$51,n$52,n$53,pageSize,page,$irvar10,this); [line 98]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_27" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_28" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_27" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+"com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_28" [label="28:  method_body \n   n$54=*&data:java.util.HashMap* [line 100]\n  *&return:java.util.Map*=n$54 [line 100]\n  NULLIFY(&data); [line 100]\n  EXIT_SCOPE(n$54,data); [line 100]\n  APPLY_ABSTRACTION; [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_28" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_2" ;
+	 "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_28" -> "com.zrlog.model.Log.find(int,int):java.util.Map.923f27082a428c4db6062667cc0993fe_3" [color="red" ];
+}

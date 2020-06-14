@@ -1,0 +1,505 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag(org.htmlcleaner.HtmlCleaner,java..8ebe4df312681a2fca8161ad1f38fac6</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ResponseRenderPrintWriter.java.ceb4dd4fa689f77a675f9e4760042a00.html#LINE140">void ResponseRenderPrintWriter.parseCustomHtmlTag(HtmlCleaner,Map,TagNode,String)</a></h1></center>
+<a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:53 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:55 succs:2 exn:2 Instructions
+NULLIFY(&amp;tmp); [line 162];
+NULLIFY(&amp;$irvar3); [line 162];
+NULLIFY(&amp;$irvar9); [line 162];
+NULLIFY(&amp;content); [line 162];
+NULLIFY(&amp;$irvar5); [line 162];
+NULLIFY(&amp;serializer); [line 162];
+NULLIFY(&amp;$irvar4); [line 162];
+NULLIFY(&amp;$irvar7); [line 162];
+NULLIFY(&amp;CatchVar256); [line 162];
+NULLIFY(&amp;$irvar6); [line 162];
+NULLIFY(&amp;$irvar0); [line 162];
+NULLIFY(&amp;stringWriter); [line 162];
+NULLIFY(&amp;$irvar1); [line 162];
+NULLIFY(&amp;$irvar2); [line 162];
+NULLIFY(&amp;e); [line 162];
+EXIT_SCOPE(n$136,tmp,$irvar3,$irvar9,content,$irvar5,serializer,$irvar4,$irvar7,CatchVar256,$irvar6,$irvar0,stringWriter,$irvar1,$irvar2,e); [line 162];
+APPLY_ABSTRACTION; [line 162];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;tagName:java.lang.String* [line 141];
+n$1=_fun_boolean String.equals(Object)("plugin":java.lang.Object*,n$0:java.lang.String*) virtual [line 141];
+*&amp;$irvar0:_Bool=n$1 [line 141];
+NULLIFY(&amp;tagName); [line 141];
+EXIT_SCOPE(n$0,n$1,tagName); [line 141];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$2=*&amp;$irvar0:_Bool [line 141];
+PRUNE(!(n$2 == 0), true); [line 141];
+NULLIFY(&amp;$irvar0); [line 141];
+EXIT_SCOPE(n$2,$irvar0); [line 141];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:53 exn:3 Conditional method_body
+n$2=*&amp;$irvar0:_Bool [line 141];
+PRUNE((n$2 == 0), false); [line 141];
+NULLIFY(&amp;$irvar0); [line 141];
+EXIT_SCOPE(n$2,$irvar0); [line 141];
+APPLY_ABSTRACTION; [line 141];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 9 exn:3 Instructions
+n$3=*&amp;tag:org.htmlcleaner.TagNode* [line 141];
+_=*n$3:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 141];
+n$5=_fun_boolean TagNode.hasAttribute(String)(n$3:org.htmlcleaner.TagNode*,"name":java.lang.Object*) virtual [line 141];
+*&amp;$irvar1:_Bool=n$5 [line 141];
+EXIT_SCOPE(_,n$3,n$5); [line 141];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:7 succs:10 exn:3 Conditional method_body
+n$6=*&amp;$irvar1:_Bool [line 141];
+PRUNE(!(n$6 == 0), true); [line 141];
+NULLIFY(&amp;$irvar1); [line 141];
+EXIT_SCOPE(n$6,$irvar1); [line 141];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:7 succs:53 exn:3 Conditional method_body
+n$6=*&amp;$irvar1:_Bool [line 141];
+PRUNE((n$6 == 0), false); [line 141];
+NULLIFY(&amp;$irvar1); [line 141];
+EXIT_SCOPE(n$6,$irvar1); [line 141];
+APPLY_ABSTRACTION; [line 141];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:8 succs:11 exn:3 Instructions
+n$7=*&amp;tag:org.htmlcleaner.TagNode* [line 142];
+_=*n$7:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 142];
+n$9=_fun_void TagNode.setForeignMarkup(boolean)(n$7:org.htmlcleaner.TagNode*,1:int) virtual [line 142];
+EXIT_SCOPE(_,n$7,n$9); [line 142];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$10=*&amp;tag:org.htmlcleaner.TagNode* [line 143];
+_=*n$10:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 143];
+n$12=_fun_Map TagNode.getAttributes()(n$10:org.htmlcleaner.TagNode*) virtual [line 143];
+*&amp;$irvar2:java.util.Map*=n$12 [line 143];
+EXIT_SCOPE(_,n$10,n$12); [line 143];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$13=_fun___new(sizeof(t=java.util.LinkedHashMap):java.util.LinkedHashMap*) [line 143];
+n$14=*&amp;$irvar2:java.util.Map* [line 143];
+n$15=_fun_LinkedHashMap.&lt;init&gt;(Map)(n$13:java.util.LinkedHashMap*,n$14:java.util.Map*) [line 143];
+*&amp;tmp:java.util.LinkedHashMap*=n$13 [line 143];
+NULLIFY(&amp;$irvar2); [line 143];
+EXIT_SCOPE(n$13,n$14,n$15,$irvar2); [line 143];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$16=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 144];
+n$17=_fun_StringBuilder.&lt;init&gt;()(n$16:java.lang.StringBuilder*) [line 144];
+*&amp;$irvar3:java.lang.StringBuilder*=n$16 [line 144];
+EXIT_SCOPE(n$16,n$17); [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$18=_fun_long System.currentTimeMillis()() [line 144];
+*&amp;$irvar4:long=n$18 [line 144];
+EXIT_SCOPE(n$18); [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$19=*&amp;$irvar3:java.lang.StringBuilder* [line 144];
+_=*n$19:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 144];
+n$21=*&amp;$irvar4:long [line 144];
+n$22=_fun_StringBuilder StringBuilder.append(long)(n$19:java.lang.StringBuilder*,n$21:long) virtual [line 144];
+*&amp;$irvar5:java.lang.StringBuilder*=n$22 [line 144];
+NULLIFY(&amp;$irvar3); [line 144];
+NULLIFY(&amp;$irvar4); [line 144];
+EXIT_SCOPE(_,n$19,n$21,n$22,$irvar3,$irvar4); [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$23=*&amp;$irvar5:java.lang.StringBuilder* [line 144];
+_=*n$23:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 144];
+n$25=_fun_StringBuilder StringBuilder.append(String)(n$23:java.lang.StringBuilder*,"":java.lang.Object*) virtual [line 144];
+*&amp;$irvar6:java.lang.StringBuilder*=n$25 [line 144];
+NULLIFY(&amp;$irvar5); [line 144];
+EXIT_SCOPE(_,n$23,n$25,$irvar5); [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$26=*&amp;$irvar6:java.lang.StringBuilder* [line 144];
+_=*n$26:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 144];
+n$28=_fun_String StringBuilder.toString()(n$26:java.lang.StringBuilder*) virtual [line 144];
+*&amp;$irvar7:java.lang.String*=n$28 [line 144];
+NULLIFY(&amp;$irvar6); [line 144];
+EXIT_SCOPE(_,n$26,n$28,$irvar6); [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$29=*&amp;tmp:java.util.LinkedHashMap* [line 144];
+_=*n$29:java.util.LinkedHashMap*(root java.util.LinkedHashMap) [line 144];
+n$31=*&amp;$irvar7:java.lang.String* [line 144];
+n$32=_fun_Object HashMap.put(Object,Object)(n$29:java.util.LinkedHashMap*,"_tmp":java.lang.Object*,n$31:java.lang.String*) interface virtual [line 144];
+*&amp;$irvar8:java.lang.Object*=n$32 [line 144];
+NULLIFY(&amp;$irvar7); [line 144];
+NULLIFY(&amp;$irvar8); [line 144];
+EXIT_SCOPE(_,n$29,n$31,n$32,$irvar7,$irvar8); [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$33=*&amp;tag:org.htmlcleaner.TagNode* [line 145];
+_=*n$33:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 145];
+n$35=*&amp;tmp:java.util.LinkedHashMap* [line 145];
+n$36=_fun_void TagNode.setAttributes(Map)(n$33:org.htmlcleaner.TagNode*,n$35:java.util.LinkedHashMap*) virtual [line 145];
+NULLIFY(&amp;tmp); [line 145];
+EXIT_SCOPE(_,n$33,n$35,n$36,tmp); [line 145];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$37=*&amp;htmlCleaner:org.htmlcleaner.HtmlCleaner* [line 146];
+_=*n$37:org.htmlcleaner.HtmlCleaner*(root org.htmlcleaner.HtmlCleaner) [line 146];
+n$39=_fun_CleanerProperties HtmlCleaner.getProperties()(n$37:org.htmlcleaner.HtmlCleaner*) virtual [line 146];
+*&amp;$irvar9:org.htmlcleaner.CleanerProperties*=n$39 [line 146];
+NULLIFY(&amp;htmlCleaner); [line 146];
+EXIT_SCOPE(_,n$37,n$39,htmlCleaner); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$40=_fun___new(sizeof(t=org.htmlcleaner.SimpleHtmlSerializer):org.htmlcleaner.SimpleHtmlSerializer*) [line 146];
+n$41=*&amp;$irvar9:org.htmlcleaner.CleanerProperties* [line 146];
+n$42=_fun_SimpleHtmlSerializer.&lt;init&gt;(CleanerProperties)(n$40:org.htmlcleaner.SimpleHtmlSerializer*,n$41:org.htmlcleaner.CleanerProperties*) [line 146];
+*&amp;serializer:org.htmlcleaner.SimpleHtmlSerializer*=n$40 [line 146];
+NULLIFY(&amp;$irvar9); [line 146];
+EXIT_SCOPE(n$40,n$41,n$42,$irvar9); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$43=_fun___new(sizeof(t=java.io.StringWriter):java.io.StringWriter*) [line 147];
+n$44=_fun_StringWriter.&lt;init&gt;()(n$43:java.io.StringWriter*) [line 147];
+*&amp;stringWriter:java.io.StringWriter*=n$43 [line 147];
+EXIT_SCOPE(n$43,n$44); [line 147];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$45=*&amp;tag:org.htmlcleaner.TagNode* [line 148];
+_=*n$45:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 148];
+n$47=*&amp;serializer:org.htmlcleaner.SimpleHtmlSerializer* [line 148];
+n$48=*&amp;stringWriter:java.io.StringWriter* [line 148];
+n$49=_fun_void TagNode.serialize(Serializer,Writer)(n$45:org.htmlcleaner.TagNode*,n$47:org.htmlcleaner.SimpleHtmlSerializer*,n$48:java.io.StringWriter*) virtual [line 148];
+NULLIFY(&amp;serializer); [line 148];
+EXIT_SCOPE(_,n$45,n$47,n$48,n$49,serializer); [line 148];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$50=*&amp;stringWriter:java.io.StringWriter* [line 149];
+_=*n$50:java.io.StringWriter*(root java.io.StringWriter) [line 149];
+n$52=_fun_String StringWriter.toString()(n$50:java.io.StringWriter*) virtual [line 149];
+*&amp;content:java.lang.String*=n$52 [line 149];
+NULLIFY(&amp;stringWriter); [line 149];
+EXIT_SCOPE(_,n$50,n$52,stringWriter); [line 149];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:56 Instructions
+n$53=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 151];
+n$54=_fun_StringBuilder.&lt;init&gt;()(n$53:java.lang.StringBuilder*) [line 151];
+*&amp;$irvar10:java.lang.StringBuilder*=n$53 [line 151];
+EXIT_SCOPE(n$53,n$54); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:56 Instructions
+n$55=*&amp;$irvar10:java.lang.StringBuilder* [line 151];
+_=*n$55:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 151];
+n$57=_fun_StringBuilder StringBuilder.append(String)(n$55:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 151];
+*&amp;$irvar11:java.lang.StringBuilder*=n$57 [line 151];
+NULLIFY(&amp;$irvar10); [line 151];
+EXIT_SCOPE(_,n$55,n$57,$irvar10); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:56 Instructions
+n$58=*&amp;tag:org.htmlcleaner.TagNode* [line 151];
+_=*n$58:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 151];
+n$60=_fun_String TagNode.getAttributeByName(String)(n$58:org.htmlcleaner.TagNode*,"name":java.lang.Object*) virtual [line 151];
+*&amp;$irvar12:java.lang.String*=n$60 [line 151];
+EXIT_SCOPE(_,n$58,n$60); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:56 Instructions
+n$61=*&amp;$irvar11:java.lang.StringBuilder* [line 151];
+_=*n$61:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 151];
+n$63=*&amp;$irvar12:java.lang.String* [line 151];
+n$64=_fun_StringBuilder StringBuilder.append(String)(n$61:java.lang.StringBuilder*,n$63:java.lang.String*) virtual [line 151];
+*&amp;$irvar13:java.lang.StringBuilder*=n$64 [line 151];
+NULLIFY(&amp;$irvar12); [line 151];
+NULLIFY(&amp;$irvar11); [line 151];
+EXIT_SCOPE(_,n$61,n$63,n$64,$irvar12,$irvar11); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:56 Instructions
+n$65=*&amp;$irvar13:java.lang.StringBuilder* [line 151];
+_=*n$65:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 151];
+n$67=_fun_StringBuilder StringBuilder.append(String)(n$65:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 151];
+*&amp;$irvar14:java.lang.StringBuilder*=n$67 [line 151];
+NULLIFY(&amp;$irvar13); [line 151];
+EXIT_SCOPE(_,n$65,n$67,$irvar13); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:56 Instructions
+n$68=*&amp;tag:org.htmlcleaner.TagNode* [line 151];
+_=*n$68:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 151];
+n$70=_fun_String TagNode.getAttributeByName(String)(n$68:org.htmlcleaner.TagNode*,"view":java.lang.Object*) virtual [line 151];
+*&amp;$irvar15:java.lang.String*=n$70 [line 151];
+EXIT_SCOPE(_,n$68,n$70); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:56 Instructions
+n$71=*&amp;$irvar14:java.lang.StringBuilder* [line 151];
+_=*n$71:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 151];
+n$73=*&amp;$irvar15:java.lang.String* [line 151];
+n$74=_fun_StringBuilder StringBuilder.append(String)(n$71:java.lang.StringBuilder*,n$73:java.lang.String*) virtual [line 151];
+*&amp;$irvar16:java.lang.StringBuilder*=n$74 [line 151];
+NULLIFY(&amp;$irvar15); [line 151];
+NULLIFY(&amp;$irvar14); [line 151];
+EXIT_SCOPE(_,n$71,n$73,n$74,$irvar15,$irvar14); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:56 Instructions
+n$75=*&amp;$irvar16:java.lang.StringBuilder* [line 151];
+_=*n$75:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 151];
+n$77=_fun_String StringBuilder.toString()(n$75:java.lang.StringBuilder*) virtual [line 151];
+*&amp;url:java.lang.String*=n$77 [line 151];
+NULLIFY(&amp;$irvar16); [line 151];
+EXIT_SCOPE(_,n$75,n$77,$irvar16); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 35 exn:56 Instructions
+n$78=*&amp;tag:org.htmlcleaner.TagNode* [line 152];
+_=*n$78:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 152];
+n$80=_fun_boolean TagNode.hasAttribute(String)(n$78:org.htmlcleaner.TagNode*,"param":java.lang.Object*) virtual [line 152];
+*&amp;$irvar17:_Bool=n$80 [line 152];
+EXIT_SCOPE(_,n$78,n$80); [line 152];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node34.html"><span class='visited with_tooltip'>C_34<span class='tooltip'>node34 preds:33 succs:36 exn:56 Conditional method_body
+n$81=*&amp;$irvar17:_Bool [line 152];
+PRUNE(!(n$81 == 0), true); [line 152];
+NULLIFY(&amp;$irvar17); [line 152];
+EXIT_SCOPE(n$81,$irvar17); [line 152];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node35.html"><span class='visited with_tooltip'>C_35<span class='tooltip'>node35 preds:33 succs:42 exn:56 Conditional method_body
+n$81=*&amp;$irvar17:_Bool [line 152];
+PRUNE((n$81 == 0), false); [line 152];
+NULLIFY(&amp;$irvar17); [line 152];
+EXIT_SCOPE(n$81,$irvar17); [line 152];
+APPLY_ABSTRACTION; [line 152];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:34 succs:37 exn:56 Instructions
+n$82=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 153];
+n$83=_fun_StringBuilder.&lt;init&gt;()(n$82:java.lang.StringBuilder*) [line 153];
+*&amp;$irvar18:java.lang.StringBuilder*=n$82 [line 153];
+EXIT_SCOPE(n$82,n$83); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:36 succs:38 exn:56 Instructions
+n$84=*&amp;$irvar18:java.lang.StringBuilder* [line 153];
+_=*n$84:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 153];
+n$86=*&amp;url:java.lang.String* [line 153];
+n$87=_fun_StringBuilder StringBuilder.append(String)(n$84:java.lang.StringBuilder*,n$86:java.lang.String*) virtual [line 153];
+*&amp;$irvar19:java.lang.StringBuilder*=n$87 [line 153];
+NULLIFY(&amp;url); [line 153];
+NULLIFY(&amp;$irvar18); [line 153];
+EXIT_SCOPE(_,n$84,n$86,n$87,url,$irvar18); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 exn:56 Instructions
+n$88=*&amp;$irvar19:java.lang.StringBuilder* [line 153];
+_=*n$88:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 153];
+n$90=_fun_StringBuilder StringBuilder.append(String)(n$88:java.lang.StringBuilder*,"?":java.lang.Object*) virtual [line 153];
+*&amp;$irvar20:java.lang.StringBuilder*=n$90 [line 153];
+NULLIFY(&amp;$irvar19); [line 153];
+EXIT_SCOPE(_,n$88,n$90,$irvar19); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 succs:40 exn:56 Instructions
+n$91=*&amp;tag:org.htmlcleaner.TagNode* [line 153];
+_=*n$91:org.htmlcleaner.TagNode*(root org.htmlcleaner.TagNode) [line 153];
+n$93=_fun_String TagNode.getAttributeByName(String)(n$91:org.htmlcleaner.TagNode*,"param":java.lang.Object*) virtual [line 153];
+*&amp;$irvar21:java.lang.String*=n$93 [line 153];
+NULLIFY(&amp;tag); [line 153];
+EXIT_SCOPE(_,n$91,n$93,tag); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 succs:41 exn:56 Instructions
+n$94=*&amp;$irvar20:java.lang.StringBuilder* [line 153];
+_=*n$94:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 153];
+n$96=*&amp;$irvar21:java.lang.String* [line 153];
+n$97=_fun_StringBuilder StringBuilder.append(String)(n$94:java.lang.StringBuilder*,n$96:java.lang.String*) virtual [line 153];
+*&amp;$irvar22:java.lang.StringBuilder*=n$97 [line 153];
+NULLIFY(&amp;$irvar21); [line 153];
+NULLIFY(&amp;$irvar20); [line 153];
+EXIT_SCOPE(_,n$94,n$96,n$97,$irvar21,$irvar20); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:40 succs:42 exn:56 Instructions
+n$98=*&amp;$irvar22:java.lang.StringBuilder* [line 153];
+_=*n$98:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 153];
+n$100=_fun_String StringBuilder.toString()(n$98:java.lang.StringBuilder*) virtual [line 153];
+*&amp;url:java.lang.String*=n$100 [line 153];
+NULLIFY(&amp;$irvar22); [line 153];
+EXIT_SCOPE(_,n$98,n$100,$irvar22); [line 153];
+APPLY_ABSTRACTION; [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 35 succs:43 exn:56 Instructions
+n$101=*&amp;this:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 155];
+n$102=*n$101.adminTokenVO:com.zrlog.common.vo.AdminTokenVO*(root com.zrlog.web.handler.ResponseRenderPrintWriter) [line 155];
+*&amp;$irvar24:com.zrlog.common.vo.AdminTokenVO*=n$102 [line 155];
+EXIT_SCOPE(n$101,n$102); [line 155];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:56 Instructions
+n$103=*&amp;this:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 155];
+n$104=*n$103.request:javax.servlet.http.HttpServletRequest*(root com.zrlog.web.handler.ResponseRenderPrintWriter) [line 155];
+*&amp;$irvar23:javax.servlet.http.HttpServletRequest*=n$104 [line 155];
+NULLIFY(&amp;this); [line 155];
+EXIT_SCOPE(n$103,n$104,this); [line 155];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 exn:56 Instructions
+n$105=*&amp;url:java.lang.String* [line 155];
+n$106=*&amp;$irvar23:javax.servlet.http.HttpServletRequest* [line 155];
+n$107=*&amp;$irvar24:com.zrlog.common.vo.AdminTokenVO* [line 155];
+n$108=_fun_CloseResponseHandle PluginHelper.getContext(String,String,HttpServletRequest,boolean,AdminTokenVO)(n$105:java.lang.String*,"GET":java.lang.Object*,n$106:javax.servlet.http.HttpServletRequest*,0:int,n$107:com.zrlog.common.vo.AdminTokenVO*) [line 155];
+*&amp;handle:com.hibegin.common.util.http.handle.CloseResponseHandle*=n$108 [line 155];
+NULLIFY(&amp;url); [line 155];
+NULLIFY(&amp;$irvar23); [line 155];
+NULLIFY(&amp;$irvar24); [line 155];
+EXIT_SCOPE(n$105,n$106,n$107,n$108,url,$irvar23,$irvar24); [line 155];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:44 succs:46 exn:56 Instructions
+n$109=*&amp;handle:com.hibegin.common.util.http.handle.CloseResponseHandle* [line 156];
+_=*n$109:com.hibegin.common.util.http.handle.CloseResponseHandle*(root com.hibegin.common.util.http.handle.CloseResponseHandle) [line 156];
+n$111=_fun_Object HttpHandle.getT()(n$109:com.hibegin.common.util.http.handle.CloseResponseHandle*) virtual [line 156];
+*&amp;$irvar25:java.lang.Object*=n$111 [line 156];
+NULLIFY(&amp;handle); [line 156];
+EXIT_SCOPE(_,n$109,n$111,handle); [line 156];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 exn:56 Instructions
+n$112=*&amp;$irvar25:java.lang.Object* [line 156];
+n$113=_fun___cast(n$112:java.lang.Object*,sizeof(t=org.apache.http.client.methods.CloseableHttpResponse;sub_t=( sub )(cast)):void) [line 156];
+_=*n$113:org.apache.http.client.methods.CloseableHttpResponse*(root org.apache.http.client.methods.CloseableHttpResponse) [line 156];
+n$115=_fun_HttpEntity CloseableHttpResponse.getEntity()(n$113:org.apache.http.client.methods.CloseableHttpResponse*) interface virtual [line 156];
+*&amp;$irvar26:org.apache.http.HttpEntity*=n$115 [line 156];
+NULLIFY(&amp;$irvar25); [line 156];
+EXIT_SCOPE(_,n$112,n$113,n$115,$irvar25); [line 156];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:56 Instructions
+n$116=*&amp;$irvar26:org.apache.http.HttpEntity* [line 156];
+_=*n$116:org.apache.http.HttpEntity*(root org.apache.http.HttpEntity) [line 156];
+n$118=_fun_InputStream HttpEntity.getContent()(n$116:org.apache.http.HttpEntity*) interface virtual [line 156];
+*&amp;$irvar27:java.io.InputStream*=n$118 [line 156];
+NULLIFY(&amp;$irvar26); [line 156];
+EXIT_SCOPE(_,n$116,n$118,$irvar26); [line 156];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:56 Instructions
+n$119=*&amp;$irvar27:java.io.InputStream* [line 156];
+n$120=_fun_byte[] IOUtil.getByteByInputStream(InputStream)(n$119:java.io.InputStream*) [line 156];
+*&amp;bytes:signed char[_*_](*)=n$120 [line 156];
+NULLIFY(&amp;$irvar27); [line 156];
+EXIT_SCOPE(n$119,n$120,$irvar27); [line 156];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:50 exn:56 Instructions
+n$121=_fun___new(sizeof(t=java.lang.String):java.lang.String*) [line 157];
+n$122=*&amp;bytes:signed char[_*_](*) [line 157];
+n$123=*&amp;#GB<>$java.nio.charset.StandardCharsets.UTF_8:java.nio.charset.Charset*(root java.nio.charset.StandardCharsets) [line 157];
+n$124=_fun_String.&lt;init&gt;(byte[],Charset)(n$121:java.lang.String*,n$122:signed char[_*_](*),n$123:java.nio.charset.Charset*) [line 157];
+*&amp;$irvar28:java.lang.String*=n$121 [line 157];
+NULLIFY(&amp;bytes); [line 157];
+EXIT_SCOPE(n$121,n$122,n$123,n$124,bytes); [line 157];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 succs:53 exn:56 Instructions
+n$125=*&amp;plugin:java.util.Map* [line 157];
+_=*n$125:java.util.Map*(root java.util.Map) [line 157];
+n$127=*&amp;content:java.lang.String* [line 157];
+n$128=*&amp;$irvar28:java.lang.String* [line 157];
+n$129=_fun_Object Map.put(Object,Object)(n$125:java.util.Map*,n$127:java.lang.String*,n$128:java.lang.String*) interface virtual [line 157];
+*&amp;$irvar29:java.lang.Object*=n$129 [line 157];
+NULLIFY(&amp;$irvar29); [line 157];
+NULLIFY(&amp;content); [line 157];
+NULLIFY(&amp;$irvar28); [line 157];
+NULLIFY(&amp;plugin); [line 157];
+EXIT_SCOPE(_,n$125,n$127,n$128,n$129,$irvar29,content,$irvar28,plugin); [line 157];
+APPLY_ABSTRACTION; [line 157];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node51.html"><span class='visited with_tooltip'>I_51<span class='tooltip'>node51 preds:54 succs:52 exn:3 Instructions
+n$130=*&amp;CatchVar256:java.lang.Object* [line 158];
+*&amp;e:java.lang.Object*=n$130 [line 158];
+NULLIFY(&amp;CatchVar256); [line 158];
+EXIT_SCOPE(n$130,CatchVar256); [line 158];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node52.html"><span class='visited with_tooltip'>I_52<span class='tooltip'>node52 preds:51 succs:53 exn:3 Instructions
+n$131=*&amp;#GB<>$com.zrlog.web.handler.ResponseRenderPrintWriter.LOGGER:org.slf4j.Logger*(root com.zrlog.web.handler.ResponseRenderPrintWriter) [line 159];
+_=*n$131:org.slf4j.Logger*(root org.slf4j.Logger) [line 159];
+n$133=*&amp;e:java.lang.Object* [line 159];
+n$134=_fun_void Logger.error(String,Throwable)(n$131:org.slf4j.Logger*,"":java.lang.Object*,n$133:java.lang.Object*) interface virtual [line 159];
+NULLIFY(&amp;e); [line 159];
+EXIT_SCOPE(_,n$131,n$133,n$134,e); [line 159];
+APPLY_ABSTRACTION; [line 159];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node53.html"><span class='visited with_tooltip'>I_53<span class='tooltip'>node53 preds:52 50 9 6 succs:2 exn:3 Instructions
+APPLY_ABSTRACTION; [line 162];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node54.html"><span class='visited with_tooltip'>C_54<span class='tooltip'>node54 preds:56 succs:51 exn:3 Conditional exception handler
+n$137=_fun___instanceof(n$136:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 158];
+PRUNE(n$137, true); [line 158];
+*&amp;CatchVar256:void=n$136 [line 158];
+EXIT_SCOPE(n$136,n$137); [line 158];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node55.html"><span class='visited with_tooltip'>C_55<span class='tooltip'>node55 preds:56 succs:3 exn:3 Conditional exception handler
+n$137=_fun___instanceof(n$136:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 158];
+PRUNE(!n$137, false); [line 158];
+*&amp;return:void=EXN n$136 [line 158];
+EXIT_SCOPE(n$136,n$137); [line 158];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag%28org.htmlcleaner.HtmlCleaner%2Cjava..8ebe4df312681a2fca8161ad1f38fac6_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds: succs:54 55 exn:3 Instructions
+n$135=*&amp;return:void [line 158];
+*&amp;return:void=null [line 158];
+n$136=_fun___unwrap_exception(n$135:void) [line 158];
+NULLIFY(&amp;$irvar26); [line 158];
+NULLIFY(&amp;$irvar22); [line 158];
+NULLIFY(&amp;$irvar25); [line 158];
+NULLIFY(&amp;content); [line 158];
+NULLIFY(&amp;$irvar17); [line 158];
+NULLIFY(&amp;url); [line 158];
+NULLIFY(&amp;$irvar18); [line 158];
+NULLIFY(&amp;$irvar16); [line 158];
+NULLIFY(&amp;$irvar12); [line 158];
+NULLIFY(&amp;$irvar28); [line 158];
+NULLIFY(&amp;$irvar19); [line 158];
+NULLIFY(&amp;$irvar21); [line 158];
+NULLIFY(&amp;$irvar20); [line 158];
+NULLIFY(&amp;bytes); [line 158];
+NULLIFY(&amp;$irvar23); [line 158];
+NULLIFY(&amp;$irvar13); [line 158];
+NULLIFY(&amp;$irvar11); [line 158];
+NULLIFY(&amp;$irvar10); [line 158];
+NULLIFY(&amp;$irvar24); [line 158];
+NULLIFY(&amp;$irvar27); [line 158];
+NULLIFY(&amp;$irvar15); [line 158];
+NULLIFY(&amp;handle); [line 158];
+NULLIFY(&amp;$irvar14); [line 158];
+EXIT_SCOPE(n$135,$irvar26,$irvar22,$irvar25,content,$irvar17,url,$irvar18,$irvar16,$irvar12,$irvar28,$irvar19,$irvar21,$irvar20,bytes,$irvar23,$irvar13,$irvar11,$irvar10,$irvar24,$irvar27,$irvar15,handle,$irvar14); [line 158];
+</span></span></a><br />@
+
+<span class='color_black'>void void ResponseRenderPrintWriter.parseCustomHtmlTag(HtmlCleaner,Map,TagNode,String)(com.zrlog.web.handler.ResponseRenderPrintWriter* this, org.htmlcleaner.HtmlCleaner* htmlCleaner, java.util.Map* plugin, org.htmlcleaner.TagNode* tag, java.lang.String* tagName)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { util.PluginHelper -> (Footprint({ util.PluginHelper }) ~> ?, { LOGGER -> (Footprint({ util.PluginHelper.LOGGER*,
+                                                                    common.Constants.pluginServer,
+                                                                    util.BlogBuildInfoUtil.version,
+                                                                    @val$0.adminTokenVO.protocol }) + Sanitizers({ StringConcatenation }) ~> ?, *) }) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= void ResponseRenderPrintWriter.parseCustomHtmlTag(HtmlCleaner,Map,TagNode,String)
+; translation_unit= web/src/main/java/com/zrlog/web/handler/ResponseRenderPrintWriter.java
+; access= Private
+; exceptions= [java.io.IOException]
+; formals= [(this,com.zrlog.web.handler.ResponseRenderPrintWriter*); 
+            (htmlCleaner,org.htmlcleaner.HtmlCleaner*);  (plugin,
+            java.util.Map*);  (tag,org.htmlcleaner.TagNode*);  (tagName,
+            java.lang.String*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/handler/ResponseRenderPrintWriter.java:140
+; locals= [{ name= CatchVar256; typ= void; modify_in_block= false }; 
+           { name= $irvar29; typ= void; modify_in_block= false }; 
+           { name= $irvar28; typ= void; modify_in_block= false }; 
+           { name= $irvar27; typ= void; modify_in_block= false }; 
+           { name= $irvar26; typ= void; modify_in_block= false }; 
+           { name= $irvar25; typ= void; modify_in_block= false }; 
+           { name= $irvar24; typ= void; modify_in_block= false }; 
+           { name= $irvar23; typ= void; modify_in_block= false }; 
+           { name= $irvar22; typ= void; modify_in_block= false }; 
+           { name= $irvar21; typ= void; modify_in_block= false }; 
+           { name= $irvar20; typ= void; modify_in_block= false }; 
+           { name= $irvar19; typ= void; modify_in_block= false }; 
+           { name= $irvar18; typ= void; modify_in_block= false }; 
+           { name= $irvar17; typ= void; modify_in_block= false }; 
+           { name= $irvar16; typ= void; modify_in_block= false }; 
+           { name= $irvar15; typ= void; modify_in_block= false }; 
+           { name= $irvar14; typ= void; modify_in_block= false }; 
+           { name= $irvar13; typ= void; modify_in_block= false }; 
+           { name= $irvar12; typ= void; modify_in_block= false }; 
+           { name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= content; typ= java.lang.String*; modify_in_block= false }; 
+           { name= stringWriter; typ= java.io.StringWriter*; modify_in_block= false }; 
+           { name= serializer; typ= org.htmlcleaner.SimpleHtmlSerializer*; modify_in_block= false }; 
+           { name= tmp; typ= java.util.Map*; modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }; 
+           { name= bytes; typ= signed char[_*_](*); modify_in_block= false }; 
+           { name= handle; typ= com.hibegin.common.util.http.handle.CloseResponseHandle*; modify_in_block= false }; 
+           { name= url; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= void 
+; proc_id= com.zrlog.web.handler.ResponseRenderPrintWriter.parseCustomHtmlTag(org.htmlcleaner.HtmlCleaner,java.util.Map,org.htmlcleaner.TagNode,java.lang.String):void }</pre>
+</body>
+</html>

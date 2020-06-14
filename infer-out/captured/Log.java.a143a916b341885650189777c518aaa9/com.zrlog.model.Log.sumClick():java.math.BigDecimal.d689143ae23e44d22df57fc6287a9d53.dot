@@ -1,0 +1,55 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_1" [label="1: Start BigDecimal Log.sumClick()\nFormals:  this:com.zrlog.model.Log*\nLocals:  $T0_31:void $irvar1:void $irvar0:void sum:java.math.BigDecimal* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_1" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_4" ;
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_2" [label="2: Exit BigDecimal Log.sumClick() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 227]\n  NULLIFY(&sum); [line 227]\n  NULLIFY(&$T0_31); [line 227]\n  NULLIFY(&$irvar1); [line 227]\n  EXIT_SCOPE($irvar0,sum,$T0_31,$irvar1); [line 227]\n  APPLY_ABSTRACTION; [line 227]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_2" ;
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_4" [label="4:  Call Model Model.findFirst(String) \n   n$0=*&this:com.zrlog.model.Log* [line 226]\n  _=*n$0:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 226]\n  n$2=_fun_Model Model.findFirst(String)(n$0:com.zrlog.model.Log*,\"select sum(click) from log\":java.lang.Object*) virtual [line 226]\n  *&$irvar0:com.jfinal.plugin.activerecord.Model*=n$2 [line 226]\n  NULLIFY(&this); [line 226]\n  EXIT_SCOPE(_,n$0,n$2,this); [line 226]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_4" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_5" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_4" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_5" [label="5:  Call BigDecimal Model.getBigDecimal(String) \n   n$3=*&$irvar0:com.jfinal.plugin.activerecord.Model* [line 226]\n  n$4=_fun___cast(n$3:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 226]\n  _=*n$4:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 226]\n  n$6=_fun_BigDecimal Model.getBigDecimal(String)(n$4:com.zrlog.model.Log*,\"sum(click)\":java.lang.Object*) virtual [line 226]\n  *&sum:java.math.BigDecimal*=n$6 [line 226]\n  NULLIFY(&$irvar0); [line 226]\n  EXIT_SCOPE(_,n$3,n$4,n$6,$irvar0); [line 226]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_5" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_6" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_5" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_7" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_5" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_6" [label="6: Prune (true branch, if) \n   n$7=*&sum:java.math.BigDecimal* [line 227]\n  PRUNE(!(n$7 != null), true); [line 227]\n  NULLIFY(&sum); [line 227]\n  EXIT_SCOPE(n$7,sum); [line 227]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_6" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_8" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_6" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_7" [label="7: Prune (false branch, if) \n   n$7=*&sum:java.math.BigDecimal* [line 227]\n  PRUNE((n$7 != null), false); [line 227]\n  EXIT_SCOPE(n$7); [line 227]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_7" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_10" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_7" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_8" [label="8:  Call BigDecimal.<init>(int) \n   n$8=_fun___new(sizeof(t=java.math.BigDecimal):java.math.BigDecimal*) [line 227]\n  n$9=_fun_BigDecimal.<init>(int)(n$8:java.math.BigDecimal*,0:int) [line 227]\n  *&$irvar1:java.math.BigDecimal*=n$8 [line 227]\n  EXIT_SCOPE(n$8,n$9); [line 227]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_8" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_9" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_8" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_9" [label="9:  method_body \n   n$10=*&$irvar1:java.math.BigDecimal* [line 227]\n  *&$T0_31:java.math.BigDecimal*=n$10 [line 227]\n  NULLIFY(&$irvar1); [line 227]\n  EXIT_SCOPE(n$10,$irvar1); [line 227]\n  APPLY_ABSTRACTION; [line 227]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_9" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_11" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_9" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_10" [label="10:  method_body \n   n$11=*&sum:java.math.BigDecimal* [line 227]\n  *&$T0_31:java.math.BigDecimal*=n$11 [line 227]\n  NULLIFY(&sum); [line 227]\n  EXIT_SCOPE(n$11,sum); [line 227]\n  APPLY_ABSTRACTION; [line 227]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_10" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_11" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_10" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+"com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_11" [label="11:  method_body \n   n$12=*&$T0_31:java.math.BigDecimal* [line 227]\n  *&return:java.math.BigDecimal*=n$12 [line 227]\n  NULLIFY(&$T0_31); [line 227]\n  EXIT_SCOPE(n$12,$T0_31); [line 227]\n  APPLY_ABSTRACTION; [line 227]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_11" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_2" ;
+	 "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_11" -> "com.zrlog.model.Log.sumClick():java.math.BigDecimal.d689143ae23e44d22df57fc6287a9d53_3" [color="red" ];
+}

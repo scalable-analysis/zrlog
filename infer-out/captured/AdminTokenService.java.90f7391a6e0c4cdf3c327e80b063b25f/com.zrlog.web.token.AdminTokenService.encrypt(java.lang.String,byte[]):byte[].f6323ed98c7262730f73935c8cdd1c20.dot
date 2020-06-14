@@ -1,0 +1,64 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_1" [label="1: Start byte[] AdminTokenService.encrypt(String,byte[])\nFormals:  secretKey:java.lang.String* value:signed char[_*_](*)\nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void newSecretKey:java.lang.String* cipher:javax.crypto.Cipher* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_1" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_4" ;
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_2" [label="2: Exit byte[] AdminTokenService.encrypt(String,byte[]) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 47]\n  NULLIFY(&newSecretKey); [line 47]\n  NULLIFY(&$irvar4); [line 47]\n  NULLIFY(&cipher); [line 47]\n  NULLIFY(&$irvar0); [line 47]\n  NULLIFY(&$irvar1); [line 47]\n  NULLIFY(&$irvar2); [line 47]\n  EXIT_SCOPE($irvar3,newSecretKey,$irvar4,cipher,$irvar0,$irvar1,$irvar2); [line 47]\n  APPLY_ABSTRACTION; [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_2" ;
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_4" [label="4:  Call Cipher Cipher.getInstance(String) \n   n$0=_fun_Cipher Cipher.getInstance(String)(\"AES/CBC/PKCS5PADDING\":java.lang.Object*) [line 42]\n  *&cipher:javax.crypto.Cipher*=n$0 [line 42]\n  EXIT_SCOPE(n$0); [line 42]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_4" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_5" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_4" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_5" [label="5:  Call String SecurityUtils.md5(String) \n   n$1=*&secretKey:java.lang.String* [line 44]\n  n$2=_fun_String SecurityUtils.md5(String)(n$1:java.lang.String*) [line 44]\n  *&$irvar0:java.lang.String*=n$2 [line 44]\n  NULLIFY(&secretKey); [line 44]\n  EXIT_SCOPE(n$1,n$2,secretKey); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_5" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_6" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_5" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_6" [label="6:  Call String String.substring(int,int) \n   n$3=*&$irvar0:java.lang.String* [line 44]\n  _=*n$3:java.lang.String*(root java.lang.String) [line 44]\n  n$5=_fun_String String.substring(int,int)(n$3:java.lang.String*,8:int,24:int) virtual [line 44]\n  *&newSecretKey:java.lang.String*=n$5 [line 44]\n  NULLIFY(&$irvar0); [line 44]\n  EXIT_SCOPE(_,n$3,n$5,$irvar0); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_6" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_7" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_6" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_7" [label="7:  Call byte[] String.getBytes(String) \n   n$6=*&newSecretKey:java.lang.String* [line 45]\n  _=*n$6:java.lang.String*(root java.lang.String) [line 45]\n  n$8=_fun_byte[] String.getBytes(String)(n$6:java.lang.String*,\"UTF-8\":java.lang.Object*) virtual [line 45]\n  *&$irvar1:signed char[_*_](*)=n$8 [line 45]\n  NULLIFY(&newSecretKey); [line 45]\n  EXIT_SCOPE(_,n$6,n$8,newSecretKey); [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_7" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_8" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_7" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_8" [label="8:  Call SecretKeySpec.<init>(byte[],String) \n   n$9=_fun___new(sizeof(t=javax.crypto.spec.SecretKeySpec):javax.crypto.spec.SecretKeySpec*) [line 45]\n  n$10=*&$irvar1:signed char[_*_](*) [line 45]\n  n$11=_fun_SecretKeySpec.<init>(byte[],String)(n$9:javax.crypto.spec.SecretKeySpec*,n$10:signed char[_*_](*),\"AES\":java.lang.Object*) [line 45]\n  *&$irvar2:javax.crypto.spec.SecretKeySpec*=n$9 [line 45]\n  NULLIFY(&$irvar1); [line 45]\n  EXIT_SCOPE(n$9,n$10,n$11,$irvar1); [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_8" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_9" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_8" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_9" [label="9:  method_body \n   n$12=*&$irvar2:javax.crypto.spec.SecretKeySpec* [line 45]\n  *&#GB<>$com.zrlog.web.token.AdminTokenService.secretKeySpec:com.zrlog.web.token.AdminTokenService(root com.zrlog.web.token.AdminTokenService)=n$12 [line 45]\n  NULLIFY(&$irvar2); [line 45]\n  EXIT_SCOPE(n$12,$irvar2); [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_9" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_10" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_9" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_10" [label="10:  method_body \n   n$13=*&#GB<>$com.zrlog.web.token.AdminTokenService.secretKeySpec:javax.crypto.spec.SecretKeySpec*(root com.zrlog.web.token.AdminTokenService) [line 46]\n  *&$irvar3:javax.crypto.spec.SecretKeySpec*=n$13 [line 46]\n  EXIT_SCOPE(n$13); [line 46]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_10" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_11" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_10" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_11" [label="11:  Call void Cipher.init(int,Key,AlgorithmParameterSpec) \n   n$14=*&cipher:javax.crypto.Cipher* [line 46]\n  _=*n$14:javax.crypto.Cipher*(root javax.crypto.Cipher) [line 46]\n  n$16=*&$irvar3:javax.crypto.spec.SecretKeySpec* [line 46]\n  n$17=*&#GB<>$com.zrlog.web.token.AdminTokenService.iv:javax.crypto.spec.IvParameterSpec*(root com.zrlog.web.token.AdminTokenService) [line 46]\n  n$18=_fun_void Cipher.init(int,Key,AlgorithmParameterSpec)(n$14:javax.crypto.Cipher*,1:int,n$16:javax.crypto.spec.SecretKeySpec*,n$17:javax.crypto.spec.IvParameterSpec*) virtual [line 46]\n  NULLIFY(&$irvar3); [line 46]\n  EXIT_SCOPE(_,n$14,n$16,n$17,n$18,$irvar3); [line 46]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_11" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_12" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_11" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_12" [label="12:  Call byte[] Cipher.doFinal(byte[]) \n   n$19=*&cipher:javax.crypto.Cipher* [line 47]\n  _=*n$19:javax.crypto.Cipher*(root javax.crypto.Cipher) [line 47]\n  n$21=*&value:signed char[_*_](*) [line 47]\n  n$22=_fun_byte[] Cipher.doFinal(byte[])(n$19:javax.crypto.Cipher*,n$21:signed char[_*_](*)) virtual [line 47]\n  *&$irvar4:signed char[_*_](*)=n$22 [line 47]\n  NULLIFY(&cipher); [line 47]\n  NULLIFY(&value); [line 47]\n  EXIT_SCOPE(_,n$19,n$21,n$22,cipher,value); [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_12" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_13" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_12" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_13" [label="13:  method_body \n   n$23=*&$irvar4:signed char[_*_](*) [line 47]\n  *&return:signed char[_*_](*)=n$23 [line 47]\n  NULLIFY(&$irvar4); [line 47]\n  EXIT_SCOPE(n$23,$irvar4); [line 47]\n  APPLY_ABSTRACTION; [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_13" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_2" ;
+	 "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_13" -> "com.zrlog.web.token.AdminTokenService.encrypt(java.lang.String,byte[]):byte[].f6323ed98c7262730f73935c8cdd1c20_3" [color="red" ];
+}

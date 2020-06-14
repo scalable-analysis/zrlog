@@ -1,0 +1,71 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_1" [label="1: Start boolean ResponseRenderPrintWriter.isIncludePageEndTag(String)\nFormals:  this:com.zrlog.web.handler.ResponseRenderPrintWriter* str:java.lang.String*\nLocals:  $T0_31:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_1" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_4" ;
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_2" [label="2: Exit boolean ResponseRenderPrintWriter.isIncludePageEndTag(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 44]\n  NULLIFY(&$irvar0); [line 44]\n  NULLIFY(&$T0_31); [line 44]\n  NULLIFY(&$irvar1); [line 44]\n  NULLIFY(&$irvar2); [line 44]\n  EXIT_SCOPE($irvar3,$irvar0,$T0_31,$irvar1,$irvar2); [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_2" ;
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_4" [label="4:  Call String String.trim() \n   n$0=*&str:java.lang.String* [line 44]\n  _=*n$0:java.lang.String*(root java.lang.String) [line 44]\n  n$2=_fun_String String.trim()(n$0:java.lang.String*) virtual [line 44]\n  *&$irvar0:java.lang.String*=n$2 [line 44]\n  EXIT_SCOPE(_,n$0,n$2); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_4" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_5" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_4" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_5" [label="5:  Call boolean String.endsWith(String) \n   n$3=*&$irvar0:java.lang.String* [line 44]\n  _=*n$3:java.lang.String*(root java.lang.String) [line 44]\n  n$5=_fun_boolean String.endsWith(String)(n$3:java.lang.String*,\"</html>\":java.lang.Object*) virtual [line 44]\n  *&$irvar1:_Bool=n$5 [line 44]\n  NULLIFY(&$irvar0); [line 44]\n  EXIT_SCOPE(_,n$3,n$5,$irvar0); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_5" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_6" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_5" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_7" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_5" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_6" [label="6: Prune (true branch, if) \n   n$6=*&$irvar1:_Bool [line 44]\n  PRUNE(!(n$6 != 0), true); [line 44]\n  NULLIFY(&$irvar1); [line 44]\n  EXIT_SCOPE(n$6,$irvar1); [line 44]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_6" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_8" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_6" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_7" [label="7: Prune (false branch, if) \n   n$6=*&$irvar1:_Bool [line 44]\n  PRUNE((n$6 != 0), false); [line 44]\n  NULLIFY(&$irvar1); [line 44]\n  EXIT_SCOPE(n$6,$irvar1); [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_7" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_12" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_7" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_8" [label="8:  Call String String.trim() \n   n$7=*&str:java.lang.String* [line 44]\n  _=*n$7:java.lang.String*(root java.lang.String) [line 44]\n  n$9=_fun_String String.trim()(n$7:java.lang.String*) virtual [line 44]\n  *&$irvar2:java.lang.String*=n$9 [line 44]\n  NULLIFY(&str); [line 44]\n  EXIT_SCOPE(_,n$7,n$9,str); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_8" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_9" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_8" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_9" [label="9:  Call boolean String.endsWith(String) \n   n$10=*&$irvar2:java.lang.String* [line 44]\n  _=*n$10:java.lang.String*(root java.lang.String) [line 44]\n  n$12=*&this:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 44]\n  n$13=*n$12.endFlag:java.lang.String*(root com.zrlog.web.handler.ResponseRenderPrintWriter) [line 44]\n  n$14=_fun_boolean String.endsWith(String)(n$10:java.lang.String*,n$13:java.lang.String*) virtual [line 44]\n  *&$irvar3:_Bool=n$14 [line 44]\n  NULLIFY(&$irvar2); [line 44]\n  NULLIFY(&this); [line 44]\n  EXIT_SCOPE(_,n$10,n$12,n$13,n$14,$irvar2,this); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_9" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_10" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_9" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_11" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_9" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_10" [label="10: Prune (true branch, if) \n   n$15=*&$irvar3:_Bool [line 44]\n  PRUNE(!(n$15 == 0), true); [line 44]\n  NULLIFY(&$irvar3); [line 44]\n  EXIT_SCOPE(n$15,$irvar3); [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_10" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_12" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_10" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_11" [label="11: Prune (false branch, if) \n   n$15=*&$irvar3:_Bool [line 44]\n  PRUNE((n$15 == 0), false); [line 44]\n  NULLIFY(&$irvar3); [line 44]\n  EXIT_SCOPE(n$15,$irvar3); [line 44]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_11" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_13" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_11" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_12" [label="12:  method_body \n   *&$T0_31:int=1 [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_12" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_14" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_12" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_13" [label="13:  method_body \n   *&$T0_31:int=0 [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_13" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_14" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_13" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+"com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_14" [label="14:  method_body \n   n$16=*&$T0_31:int [line 44]\n  *&return:_Bool=n$16 [line 44]\n  NULLIFY(&$T0_31); [line 44]\n  EXIT_SCOPE(n$16,$T0_31); [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_14" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_2" ;
+	 "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_14" -> "com.zrlog.web.handler.ResponseRenderPrintWriter.isIncludePageEndTag(java.lang.String):boolean.225017c71315676525b815842b1c9a5f_3" [color="red" ];
+}

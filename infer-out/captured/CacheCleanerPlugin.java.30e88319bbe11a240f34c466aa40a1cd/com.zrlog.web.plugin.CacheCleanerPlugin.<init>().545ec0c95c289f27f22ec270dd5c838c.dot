@@ -1,0 +1,49 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_1" [label="1: Start CacheCleanerPlugin.<init>()\nFormals:  this:com.zrlog.web.plugin.CacheCleanerPlugin*\nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_1" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_4" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_2" [label="2: Exit CacheCleanerPlugin.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 25]\n  NULLIFY(&$irvar1); [line 25]\n  NULLIFY(&$irvar2); [line 25]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 25]\n  APPLY_ABSTRACTION; [line 25]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_2" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_4" [label="4:  Call Object.<init>() \n   n$0=*&this:com.zrlog.web.plugin.CacheCleanerPlugin* [line 17]\n  n$1=_fun_Object.<init>()(n$0:com.zrlog.web.plugin.CacheCleanerPlugin*) [line 17]\n  EXIT_SCOPE(n$0,n$1); [line 17]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_5" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_5" [label="5:  Call ThreadFactory CacheCleanerPlugin.callsite_com.zrlog.web.plugin.CacheCleanerPlugin$Lambda$_1_10() \n   n$2=_fun_ThreadFactory CacheCleanerPlugin.callsite_com.zrlog.web.plugin.CacheCleanerPlugin$Lambda$_1_10()() [line 19]\n  *&$irvar0:java.util.concurrent.ThreadFactory*=n$2 [line 19]\n  EXIT_SCOPE(n$2); [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_6" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_6" [label="6:  Call ScheduledThreadPoolExecutor.<init>(int,ThreadFactory) \n   n$3=_fun___new(sizeof(t=java.util.concurrent.ScheduledThreadPoolExecutor):java.util.concurrent.ScheduledThreadPoolExecutor*) [line 19]\n  n$4=*&$irvar0:java.util.concurrent.ThreadFactory* [line 19]\n  n$5=_fun_ScheduledThreadPoolExecutor.<init>(int,ThreadFactory)(n$3:java.util.concurrent.ScheduledThreadPoolExecutor*,1:int,n$4:java.util.concurrent.ThreadFactory*) [line 19]\n  *&$irvar1:java.util.concurrent.ScheduledThreadPoolExecutor*=n$3 [line 19]\n  NULLIFY(&$irvar0); [line 19]\n  EXIT_SCOPE(n$3,n$4,n$5,$irvar0); [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_6" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_7" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_6" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_7" [label="7:  method_body \n   n$6=*&this:com.zrlog.web.plugin.CacheCleanerPlugin* [line 19]\n  n$7=*&$irvar1:java.util.concurrent.ScheduledThreadPoolExecutor* [line 19]\n  *n$6.scheduledThreadPoolExecutor:com.zrlog.web.plugin.CacheCleanerPlugin(root com.zrlog.web.plugin.CacheCleanerPlugin)=n$7 [line 19]\n  NULLIFY(&$irvar1); [line 19]\n  EXIT_SCOPE(n$6,n$7,$irvar1); [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_7" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_8" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_7" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_8" [label="8:  Call CacheService.<init>() \n   n$8=_fun___new(sizeof(t=com.zrlog.web.cache.CacheService):com.zrlog.web.cache.CacheService*) [line 25]\n  n$9=_fun_CacheService.<init>()(n$8:com.zrlog.web.cache.CacheService*) [line 25]\n  *&$irvar2:com.zrlog.web.cache.CacheService*=n$8 [line 25]\n  EXIT_SCOPE(n$8,n$9); [line 25]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_8" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_9" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_8" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_9" [label="9:  method_body \n   n$10=*&this:com.zrlog.web.plugin.CacheCleanerPlugin* [line 25]\n  n$11=*&$irvar2:com.zrlog.web.cache.CacheService* [line 25]\n  *n$10.cacheService:com.zrlog.web.plugin.CacheCleanerPlugin(root com.zrlog.web.plugin.CacheCleanerPlugin)=n$11 [line 25]\n  NULLIFY(&$irvar2); [line 25]\n  NULLIFY(&this); [line 25]\n  EXIT_SCOPE(n$10,n$11,$irvar2,this); [line 25]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_9" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_10" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_9" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_10" [label="10:  method_body \n   APPLY_ABSTRACTION; [line 25]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_10" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_2" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_10" -> "com.zrlog.web.plugin.CacheCleanerPlugin.<init>().545ec0c95c289f27f22ec270dd5c838c_3" [color="red" ];
+}

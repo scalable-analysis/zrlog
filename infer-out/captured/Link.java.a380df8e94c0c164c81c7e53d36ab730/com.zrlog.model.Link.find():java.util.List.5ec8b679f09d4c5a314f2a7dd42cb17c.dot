@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_1" [label="1: Start List Link.find()\nFormals:  this:com.zrlog.model.Link*\nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_1" -> "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_4" ;
+"com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_2" [label="2: Exit List Link.find() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 17]\n  EXIT_SCOPE($irvar0); [line 17]\n  APPLY_ABSTRACTION; [line 17]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_3" -> "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_2" ;
+"com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_4" [label="4:  Call List Model.find(String) \n   n$0=*&this:com.zrlog.model.Link* [line 17]\n  _=*n$0:com.zrlog.model.Link*(root com.zrlog.model.Link) [line 17]\n  n$2=_fun_List Model.find(String)(n$0:com.zrlog.model.Link*,\"select linkName,linkId as id,sort,url,alt from link order by sort\":java.lang.Object*) virtual [line 17]\n  *&$irvar0:java.util.List*=n$2 [line 17]\n  NULLIFY(&this); [line 17]\n  EXIT_SCOPE(_,n$0,n$2,this); [line 17]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_4" -> "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_5" ;
+	 "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_4" -> "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_3" [color="red" ];
+"com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_5" [label="5:  method_body \n   n$3=*&$irvar0:java.util.List* [line 17]\n  *&return:java.util.List*=n$3 [line 17]\n  NULLIFY(&$irvar0); [line 17]\n  EXIT_SCOPE(n$3,$irvar0); [line 17]\n  APPLY_ABSTRACTION; [line 17]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_5" -> "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_2" ;
+	 "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_5" -> "com.zrlog.model.Link.find():java.util.List.5ec8b679f09d4c5a314f2a7dd42cb17c_3" [color="red" ];
+}

@@ -1,0 +1,1085 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/plugin/PluginCoreProcess.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.plugin; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.hibegin.common.util.CmdUtil; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.hibegin.common.util.http.HttpUtil; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.hibegin.common.util.http.handle.HttpFileHandle; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import org.slf4j.Logger; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import org.slf4j.LoggerFactory; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import java.io.*; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">import java.util.HashMap; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">import java.util.Random; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">public class PluginCoreProcess { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24300%28com.zrlog.web.plugin.PluginCoreProcess%29%3Aboolean.40a26190943ab71f08085b12f1ceff45_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24200%28%29%3Aorg.slf4j.Logger.e8a52480928a2d01265c20c55496c80c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24102%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.lang.P.e3f28ee233829cf60792814349ca6cd8_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24100%28com.zrlog.web.plugin.PluginCoreProcess%29%3Ajava.lang..9a1607ab3e2c8b12041071a19d64fc50_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24000%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.Fil.2ea7fb50fab0045c49476ef7c0a30cc3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24300%28com.zrlog.web.plugin.PluginCoreProcess%29%3Aboolean.40a26190943ab71f08085b12f1ceff45_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;x0:com.zrlog.web.plugin.PluginCoreProcess* [line 14];
+n$1=*n$0.canStart:_Bool(root com.zrlog.web.plugin.PluginCoreProcess) [line 14];
+*&amp;return:_Bool=n$1 [line 14];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24200%28%29%3Aorg.slf4j.Logger.e8a52480928a2d01265c20c55496c80c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginCoreProcess) [line 14];
+*&amp;return:org.slf4j.Logger*=n$0 [line 14];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24102%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.lang.P.e3f28ee233829cf60792814349ca6cd8_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;x0:com.zrlog.web.plugin.PluginCoreProcess* [line 14];
+n$1=*&amp;x1:java.lang.Process* [line 14];
+*n$0.pr:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=n$1 [line 14];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24100%28com.zrlog.web.plugin.PluginCoreProcess%29%3Ajava.lang..9a1607ab3e2c8b12041071a19d64fc50_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;x0:com.zrlog.web.plugin.PluginCoreProcess* [line 14];
+n$1=*n$0.pr:java.lang.Process*(root com.zrlog.web.plugin.PluginCoreProcess) [line 14];
+*&amp;return:java.lang.Process*=n$1 [line 14];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24000%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.Fil.2ea7fb50fab0045c49476ef7c0a30cc3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;x0:com.zrlog.web.plugin.PluginCoreProcess* [line 14];
+n$1=*&amp;x1:java.io.File* [line 14];
+n$2=_fun_void PluginCoreProcess.tryDownloadPluginCoreFile(File)(n$0:com.zrlog.web.plugin.PluginCoreProcess*,n$1:java.io.File*) [line 14];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24300%28com.zrlog.web.plugin.PluginCoreProcess%29%3Aboolean.40a26190943ab71f08085b12f1ceff45_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24200%28%29%3Aorg.slf4j.Logger.e8a52480928a2d01265c20c55496c80c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24100%28com.zrlog.web.plugin.PluginCoreProcess%29%3Ajava.lang..9a1607ab3e2c8b12041071a19d64fc50_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24102%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.lang.P.e3f28ee233829cf60792814349ca6cd8_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$2=*&amp;x1:java.lang.Process* [line 14];
+*&amp;return:java.lang.Process*=n$2 [line 14];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24000%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.Fil.2ea7fb50fab0045c49476ef7c0a30cc3_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24102%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.lang.P.e3f28ee233829cf60792814349ca6cd8_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24000%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.Fil.2ea7fb50fab0045c49476ef7c0a30cc3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24300%28com.zrlog.web.plugin.PluginCoreProcess%29%3Aboolean.40a26190943ab71f08085b12f1ceff45_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24200%28%29%3Aorg.slf4j.Logger.e8a52480928a2d01265c20c55496c80c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24102%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.lang.P.e3f28ee233829cf60792814349ca6cd8_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24100%28com.zrlog.web.plugin.PluginCoreProcess%29%3Ajava.lang..9a1607ab3e2c8b12041071a19d64fc50_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access%24000%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.Fil.2ea7fb50fab0045c49476ef7c0a30cc3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.access%24300%28com.zrlog.web.plugin.PluginCoreProcess%29%3Aboolean.40a26190943ab71f08085b12f1ceff45.html">summary for boolean PluginCoreProcess.access$300(PluginCoreProcess)</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.access%24200%28%29%3Aorg.slf4j.Logger.e8a52480928a2d01265c20c55496c80c.html">summary for Logger PluginCoreProcess.access$200()</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.access%24102%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.lang.P.e3f28ee233829cf60792814349ca6cd8.html">summary for Process PluginCoreProcess.access$102(PluginCoreProcess,Process)</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.access%24100%28com.zrlog.web.plugin.PluginCoreProcess%29%3Ajava.lang..9a1607ab3e2c8b12041071a19d64fc50.html">summary for Process PluginCoreProcess.access$100(PluginCoreProcess)</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.access%24000%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.Fil.2ea7fb50fab0045c49476ef7c0a30cc3.html">summary for void PluginCoreProcess.access$000(PluginCoreProcess,File)</a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(PluginCoreProcess.class); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.plugin.PluginCoreProcess:java.lang.Object*) [line 16];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 16];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:org.slf4j.Logger* [line 16];
+*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=n$1 [line 16];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f.html">summary for void PluginCoreProcess.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">     * 插件服务的下载地址 </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    private static final String PLUGIN_CORE_DOWNLOAD_URL = Constants.ZRLOG_RESOURCE_DOWNLOAD_URL + &quot;/plugin/core/plugin-core.jar&quot;; </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    private Process pr; </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    private boolean canStart = true; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<init>%28%29.8572c929608c49702a3be1ceb8a9c2bd_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 24];
+*n$2.canStart:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=1 [line 24];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    private static PluginCoreProcess instance = new PluginCoreProcess(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$2=_fun___new(sizeof(t=com.zrlog.web.plugin.PluginCoreProcess):com.zrlog.web.plugin.PluginCoreProcess*) [line 25];
+n$3=_fun_PluginCoreProcess.&lt;init&gt;()(n$2:com.zrlog.web.plugin.PluginCoreProcess*) [line 25];
+*&amp;$irvar1:com.zrlog.web.plugin.PluginCoreProcess*=n$2 [line 25];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$4=*&amp;$irvar1:com.zrlog.web.plugin.PluginCoreProcess* [line 25];
+*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.instance:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=n$4 [line 25];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<clinit>%28%29%3Avoid.476fae63e33b6ffb1db76b974fe87e0f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    private PluginCoreProcess() { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<init>%28%29.8572c929608c49702a3be1ceb8a9c2bd_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<init>%28%29.8572c929608c49702a3be1ceb8a9c2bd_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 27];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.plugin.PluginCoreProcess*) [line 27];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.<init>%28%29.8572c929608c49702a3be1ceb8a9c2bd.html">summary for PluginCoreProcess.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">    } <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<init>%28%29.8572c929608c49702a3be1ceb8a9c2bd_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<init>%28%29.8572c929608c49702a3be1ceb8a9c2bd_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.<init>%28%29.8572c929608c49702a3be1ceb8a9c2bd_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">    public static PluginCoreProcess getInstance() { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.getInstance%28%29%3Acom.zrlog.web.plugin.PluginCoreProcess.28d374aa79738fdf20764ef964e2837a_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.getInstance%28%29%3Acom.zrlog.web.plugin.PluginCoreProcess.28d374aa79738fdf20764ef964e2837a.html">summary for PluginCoreProcess PluginCoreProcess.getInstance()</a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">        return instance; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.getInstance%28%29%3Acom.zrlog.web.plugin.PluginCoreProcess.28d374aa79738fdf20764ef964e2837a_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.instance:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess) [line 31];
+*&amp;return:com.zrlog.web.plugin.PluginCoreProcess*=n$0 [line 31];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.getInstance%28%29%3Acom.zrlog.web.plugin.PluginCoreProcess.28d374aa79738fdf20764ef964e2837a_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.getInstance%28%29%3Acom.zrlog.web.plugin.PluginCoreProcess.28d374aa79738fdf20764ef964e2837a_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">     * plugin-core 目前会监听2个TCP端口，一个用于和Zrlog通信，另一个用于和插件通信 </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">     * </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">     * @param pluginCoreFile plugin-core.jar 存放的物理路径 </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">     * @param dbProperties </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">     * @param pluginJvmArgs </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">     * @param runtimePath    plugin-core的运行目录 </td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">     * @param runTimeVersion zrlog目前的版本 </td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">     * @return </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">    public int pluginServerStart(final File pluginCoreFile, final String dbProperties, final String pluginJvmArgs, <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad.html">summary for int PluginCoreProcess.pluginServerStart(File,String,String,String,String)</a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">                                 final String runtimePath, final String runTimeVersion) { </td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">        canStart = true; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 46];
+*n$0.canStart:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=1 [line 46];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">        //简单处理，为了能在一个服务器上面启动多个Zrlog程序，使用Random端口的方式，（感兴趣可以算算概率） </td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">        final int randomServerPort = new Random().nextInt(10000) + 20000; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=_fun___new(sizeof(t=java.util.Random):java.util.Random*) [line 48];
+n$2=_fun_Random.&lt;init&gt;()(n$1:java.util.Random*) [line 48];
+*&amp;$irvar0:java.util.Random*=n$1 [line 48];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;$irvar0:java.util.Random* [line 48];
+_=*n$3:java.util.Random*(root java.util.Random) [line 48];
+n$5=_fun_int Random.nextInt(int)(n$3:java.util.Random*,10000:int) virtual [line 48];
+*&amp;$irvar1:int=n$5 [line 48];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;$irvar1:int [line 48];
+*&amp;randomServerPort:int=(n$6 + 20000) [line 48];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">        final int randomMasterPort = randomServerPort + 20000; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;randomServerPort:int [line 49];
+*&amp;randomMasterPort:int=(n$7 + 20000) [line 49];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">        final int randomListenPort = randomServerPort + 30000; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$8=*&amp;randomServerPort:int [line 50];
+*&amp;randomListenPort:int=(n$8 + 30000) [line 50];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">            registerShutdownHook(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:22 Instructions
+n$9=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 52];
+n$10=_fun_void PluginCoreProcess.registerShutdownHook()(n$9:com.zrlog.web.plugin.PluginCoreProcess*) [line 52];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">            if (pluginCoreFile.getName().endsWith(&quot;.jar&quot;)) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:22 Instructions
+n$11=*&amp;pluginCoreFile:java.io.File* [line 53];
+_=*n$11:java.io.File*(root java.io.File) [line 53];
+n$13=_fun_String File.getName()(n$11:java.io.File*) virtual [line 53];
+*&amp;$irvar2:java.lang.String*=n$13 [line 53];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 14 exn:22 Instructions
+n$14=*&amp;$irvar2:java.lang.String* [line 53];
+_=*n$14:java.lang.String*(root java.lang.String) [line 53];
+n$16=_fun_boolean String.endsWith(String)(n$14:java.lang.String*,".jar":java.lang.Object*) virtual [line 53];
+*&amp;$irvar3:_Bool=n$16 [line 53];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:12 succs:15 exn:22 Conditional method_body
+n$17=*&amp;$irvar3:_Bool [line 53];
+PRUNE(!(n$17 == 0), true); [line 53];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:12 succs:19 exn:22 Conditional method_body
+n$17=*&amp;$irvar3:_Bool [line 53];
+PRUNE((n$17 == 0), false); [line 53];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">                new Thread() { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$1=*&amp;this$0:com.zrlog.web.plugin.PluginCoreProcess* [line 54];
+*n$0.this$0:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$1 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$3=*&amp;$bcvar2:java.io.File* [line 54];
+*n$2.val$pluginCoreFile:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$3 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$5=*&amp;$bcvar3:java.lang.String* [line 54];
+*n$4.val$pluginJvmArgs:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$5 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$7=*&amp;$bcvar4:int [line 54];
+*n$6.val$randomServerPort:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$7 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$8=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$9=*&amp;$bcvar5:int [line 54];
+*n$8.val$randomMasterPort:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$9 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$10=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$11=*&amp;$bcvar6:java.lang.String* [line 54];
+*n$10.val$dbProperties:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$11 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$12=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$13=*&amp;$bcvar7:int [line 54];
+*n$12.val$randomListenPort:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$13 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$14=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$15=*&amp;$bcvar8:java.lang.String* [line 54];
+*n$14.val$runtimePath:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$15 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$16=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$17=*&amp;$bcvar9:java.lang.String* [line 54];
+*n$16.val$runTimeVersion:com.zrlog.web.plugin.PluginCoreProcess$1(root com.zrlog.web.plugin.PluginCoreProcess$1)=n$17 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$18=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 54];
+n$19=_fun_Thread.&lt;init&gt;()(n$18:com.zrlog.web.plugin.PluginCoreProcess$1*) [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:13 succs:16 exn:22 Instructions
+n$18=_fun___new(sizeof(t=com.zrlog.web.plugin.PluginCoreProcess$1):com.zrlog.web.plugin.PluginCoreProcess$1*) [line 54];
+n$19=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 54];
+n$20=*&amp;pluginCoreFile:java.io.File* [line 54];
+n$21=*&amp;pluginJvmArgs:java.lang.String* [line 54];
+n$22=*&amp;randomServerPort:int [line 54];
+n$23=*&amp;randomMasterPort:int [line 54];
+n$24=*&amp;dbProperties:java.lang.String* [line 54];
+n$25=*&amp;randomListenPort:int [line 54];
+n$26=*&amp;runtimePath:java.lang.String* [line 54];
+n$27=*&amp;runTimeVersion:java.lang.String* [line 54];
+n$28=_fun_PluginCoreProcess$1.&lt;init&gt;(PluginCoreProcess,File,String,int,int,String,int,String,String)(n$18:com.zrlog.web.plugin.PluginCoreProcess$1*,n$19:com.zrlog.web.plugin.PluginCoreProcess*,n$20:java.io.File*,n$21:java.lang.String*,n$22:int,n$23:int,n$24:java.lang.String*,n$25:int,n$26:java.lang.String*,n$27:java.lang.String*) [line 54];
+*&amp;$irvar4:com.zrlog.web.plugin.PluginCoreProcess$1*=n$18 [line 54];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:14 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241.<init>%28com.zrlog.web.plugin.PluginCoreProcess%2Cjava.io.File%2C.5f43684348804ddb2195e0acde050e14.html">summary for PluginCoreProcess$1.&lt;init&gt;(PluginCoreProcess,File,String,int,int,String,int,String,String)</a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">                    @Override </td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">                    public void run() { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47.html">summary for void PluginCoreProcess$1.run()</a></td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">                        while (true) { </td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">                            tryDownloadPluginCoreFile(pluginCoreFile); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:77 1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 58];
+n$1=*n$0.val$pluginCoreFile:java.io.File*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 58];
+*&amp;$irvar1:java.io.File*=n$1 [line 58];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 58];
+n$3=*n$2.this$0:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 58];
+*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess*=n$3 [line 58];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess* [line 58];
+n$5=*&amp;$irvar1:java.io.File* [line 58];
+n$6=_fun_void PluginCoreProcess.access$000(PluginCoreProcess,File)(n$4:com.zrlog.web.plugin.PluginCoreProcess*,n$5:java.io.File*) [line 58];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">                            String javaHome = System.getProperty(&quot;java.home&quot;).replace(&quot;\\&quot;, &quot;/&quot;); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$7=_fun_String System.getProperty(String)("java.home":java.lang.Object*) [line 59];
+*&amp;$irvar2:java.lang.String*=n$7 [line 59];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$8=*&amp;$irvar2:java.lang.String* [line 59];
+_=*n$8:java.lang.String*(root java.lang.String) [line 59];
+n$10=_fun_String String.replace(CharSequence,CharSequence)(n$8:java.lang.String*,"\\\\":java.lang.Object*,"/":java.lang.Object*) virtual [line 59];
+*&amp;javaHome:java.lang.String*=n$10 [line 59];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">                            String java = javaHome + &quot;/bin/java&quot;; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$11=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 60];
+n$12=_fun_StringBuilder.&lt;init&gt;()(n$11:java.lang.StringBuilder*) [line 60];
+*&amp;$irvar3:java.lang.StringBuilder*=n$11 [line 60];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$13=*&amp;$irvar3:java.lang.StringBuilder* [line 60];
+_=*n$13:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 60];
+n$15=*&amp;javaHome:java.lang.String* [line 60];
+n$16=_fun_StringBuilder StringBuilder.append(String)(n$13:java.lang.StringBuilder*,n$15:java.lang.String*) virtual [line 60];
+*&amp;$irvar4:java.lang.StringBuilder*=n$16 [line 60];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$17=*&amp;$irvar4:java.lang.StringBuilder* [line 60];
+_=*n$17:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 60];
+n$19=_fun_StringBuilder StringBuilder.append(String)(n$17:java.lang.StringBuilder*,"/bin/java":java.lang.Object*) virtual [line 60];
+*&amp;$irvar5:java.lang.StringBuilder*=n$19 [line 60];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$20=*&amp;$irvar5:java.lang.StringBuilder* [line 60];
+_=*n$20:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 60];
+n$22=_fun_String StringBuilder.toString()(n$20:java.lang.StringBuilder*) virtual [line 60];
+*&amp;java:java.lang.String*=n$22 [line 60];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">                            if (java.contains(&quot; &quot;)) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:16 exn:3 Instructions
+n$23=*&amp;java:java.lang.String* [line 61];
+_=*n$23:java.lang.String*(root java.lang.String) [line 61];
+n$25=_fun_boolean String.contains(CharSequence)(n$23:java.lang.String*," ":java.lang.Object*) virtual [line 61];
+*&amp;$irvar6:_Bool=n$25 [line 61];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node16.html"><span class='visited with_tooltip'>J_16<span class='tooltip'>node16 preds:13 succs:14 15 exn: Join
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:16 succs:17 exn:3 Conditional method_body
+n$26=*&amp;$irvar6:_Bool [line 61];
+PRUNE(!(n$26 == 0), true); [line 61];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:16 succs:18 exn:3 Conditional method_body
+n$26=*&amp;$irvar6:_Bool [line 61];
+PRUNE((n$26 == 0), false); [line 61];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">                                java = &quot;java&quot;; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:14 succs:18 exn:3 Instructions
+*&amp;java:java.lang.Object*="java" [line 62];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">                            } </td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">                            pr = CmdUtil.getProcess(java, pluginJvmArgs, &quot;-Duser.dir=&quot; + pluginCoreFile.getParent(), &quot;-jar&quot;, pluginCoreFile, randomServerPort, <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 15 succs:19 exn:3 Instructions
+n$27=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[11]):java.lang.Object*[_*_](*)) [line 64];
+*&amp;$irvar7:java.lang.Object*[_*_](*)=n$27 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$28=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 64];
+n$29=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 64];
+n$30=*n$29.val$pluginJvmArgs:java.lang.String*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 64];
+*n$28[0]:java.lang.String*=n$30 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$31=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 64];
+n$32=*n$31.this$0:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 64];
+*&amp;$irvar8:com.zrlog.web.plugin.PluginCoreProcess*=n$32 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$33=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 64];
+n$34=_fun_StringBuilder.&lt;init&gt;()(n$33:java.lang.StringBuilder*) [line 64];
+*&amp;$irvar9:java.lang.StringBuilder*=n$33 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$35=*&amp;$irvar9:java.lang.StringBuilder* [line 64];
+_=*n$35:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 64];
+n$37=_fun_StringBuilder StringBuilder.append(String)(n$35:java.lang.StringBuilder*,"-Duser.dir=":java.lang.Object*) virtual [line 64];
+*&amp;$irvar10:java.lang.StringBuilder*=n$37 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$38=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 64];
+n$39=*n$38.val$pluginCoreFile:java.io.File*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 64];
+_=*n$39:java.io.File*(root java.io.File) [line 64];
+n$41=_fun_String File.getParent()(n$39:java.io.File*) virtual [line 64];
+*&amp;$irvar11:java.lang.String*=n$41 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$42=*&amp;$irvar10:java.lang.StringBuilder* [line 64];
+_=*n$42:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 64];
+n$44=*&amp;$irvar11:java.lang.String* [line 64];
+n$45=_fun_StringBuilder StringBuilder.append(String)(n$42:java.lang.StringBuilder*,n$44:java.lang.String*) virtual [line 64];
+*&amp;$irvar12:java.lang.StringBuilder*=n$45 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$46=*&amp;$irvar12:java.lang.StringBuilder* [line 64];
+_=*n$46:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 64];
+n$48=_fun_String StringBuilder.toString()(n$46:java.lang.StringBuilder*) virtual [line 64];
+*&amp;$irvar13:java.lang.String*=n$48 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$49=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 64];
+n$50=*&amp;$irvar13:java.lang.String* [line 64];
+*n$49[1]:java.lang.String*=n$50 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:3 Instructions
+n$51=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 64];
+*n$51[2]:java.lang.Object*="-jar" [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$52=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 64];
+n$53=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 64];
+n$54=*n$53.val$pluginCoreFile:java.io.File*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 64];
+*n$52[3]:java.io.File*=n$54 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$55=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 64];
+n$56=*n$55.val$randomServerPort:int(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 64];
+*&amp;$irvar14:int=n$56 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$57=*&amp;$irvar14:int [line 64];
+n$58=_fun_Integer Integer.valueOf(int)(n$57:int) [line 64];
+*&amp;$irvar15:java.lang.Integer*=n$58 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$59=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 64];
+n$60=*&amp;$irvar15:java.lang.Integer* [line 64];
+*n$59[4]:java.lang.Integer*=n$60 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:3 Instructions
+n$100=*&amp;java:java.lang.Object* [line 64];
+n$101=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 64];
+n$102=_fun_Process CmdUtil.getProcess(String,Object[])(n$100:java.lang.Object*,n$101:java.lang.Object*[_*_](*)) [line 64];
+*&amp;$irvar25:java.lang.Process*=n$102 [line 64];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:3 Instructions
+n$103=*&amp;$irvar8:com.zrlog.web.plugin.PluginCoreProcess* [line 64];
+n$104=*&amp;$irvar25:java.lang.Process* [line 64];
+n$105=_fun_Process PluginCoreProcess.access$102(PluginCoreProcess,Process)(n$103:com.zrlog.web.plugin.PluginCoreProcess*,n$104:java.lang.Process*) [line 64];
+*&amp;$irvar26:java.lang.Process*=n$105 [line 64];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">                                    randomMasterPort, dbProperties, pluginCoreFile.getParent() + &quot;/jars&quot;, randomListenPort, runtimePath, runTimeVersion); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:3 Instructions
+n$61=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 65];
+n$62=*n$61.val$randomMasterPort:int(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 65];
+*&amp;$irvar16:int=n$62 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:3 Instructions
+n$63=*&amp;$irvar16:int [line 65];
+n$64=_fun_Integer Integer.valueOf(int)(n$63:int) [line 65];
+*&amp;$irvar17:java.lang.Integer*=n$64 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:3 Instructions
+n$65=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 65];
+n$66=*&amp;$irvar17:java.lang.Integer* [line 65];
+*n$65[5]:java.lang.Integer*=n$66 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:36 exn:3 Instructions
+n$67=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 65];
+n$68=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 65];
+n$69=*n$68.val$dbProperties:java.lang.String*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 65];
+*n$67[6]:java.lang.String*=n$69 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:37 exn:3 Instructions
+n$70=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 65];
+n$71=_fun_StringBuilder.&lt;init&gt;()(n$70:java.lang.StringBuilder*) [line 65];
+*&amp;$irvar18:java.lang.StringBuilder*=n$70 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:36 succs:38 exn:3 Instructions
+n$72=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 65];
+n$73=*n$72.val$pluginCoreFile:java.io.File*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 65];
+_=*n$73:java.io.File*(root java.io.File) [line 65];
+n$75=_fun_String File.getParent()(n$73:java.io.File*) virtual [line 65];
+*&amp;$irvar19:java.lang.String*=n$75 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 exn:3 Instructions
+n$76=*&amp;$irvar18:java.lang.StringBuilder* [line 65];
+_=*n$76:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 65];
+n$78=*&amp;$irvar19:java.lang.String* [line 65];
+n$79=_fun_StringBuilder StringBuilder.append(String)(n$76:java.lang.StringBuilder*,n$78:java.lang.String*) virtual [line 65];
+*&amp;$irvar20:java.lang.StringBuilder*=n$79 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 succs:40 exn:3 Instructions
+n$80=*&amp;$irvar20:java.lang.StringBuilder* [line 65];
+_=*n$80:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 65];
+n$82=_fun_StringBuilder StringBuilder.append(String)(n$80:java.lang.StringBuilder*,"/jars":java.lang.Object*) virtual [line 65];
+*&amp;$irvar21:java.lang.StringBuilder*=n$82 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 succs:41 exn:3 Instructions
+n$83=*&amp;$irvar21:java.lang.StringBuilder* [line 65];
+_=*n$83:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 65];
+n$85=_fun_String StringBuilder.toString()(n$83:java.lang.StringBuilder*) virtual [line 65];
+*&amp;$irvar22:java.lang.String*=n$85 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:40 succs:42 exn:3 Instructions
+n$86=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 65];
+n$87=*&amp;$irvar22:java.lang.String* [line 65];
+*n$86[7]:java.lang.String*=n$87 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:3 Instructions
+n$88=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 65];
+n$89=*n$88.val$randomListenPort:int(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 65];
+*&amp;$irvar23:int=n$89 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:3 Instructions
+n$90=*&amp;$irvar23:int [line 65];
+n$91=_fun_Integer Integer.valueOf(int)(n$90:int) [line 65];
+*&amp;$irvar24:java.lang.Integer*=n$91 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 exn:3 Instructions
+n$92=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 65];
+n$93=*&amp;$irvar24:java.lang.Integer* [line 65];
+*n$92[8]:java.lang.Integer*=n$93 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:44 succs:46 exn:3 Instructions
+n$94=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 65];
+n$95=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 65];
+n$96=*n$95.val$runtimePath:java.lang.String*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 65];
+*n$94[9]:java.lang.String*=n$96 [line 65];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 exn:3 Instructions
+n$97=*&amp;$irvar7:java.lang.Object*[_*_](*) [line 65];
+n$98=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 65];
+n$99=*n$98.val$runTimeVersion:java.lang.String*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 65];
+*n$97[10]:java.lang.String*=n$99 [line 65];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">                            PluginGhostThread pluginGhostThread = new PluginGhostThread(&quot;127.0.0.1&quot;, randomListenPort); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:50 exn:3 Instructions
+n$106=_fun___new(sizeof(t=com.zrlog.web.plugin.PluginGhostThread):com.zrlog.web.plugin.PluginGhostThread*) [line 66];
+n$107=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 66];
+n$108=*n$107.val$randomListenPort:int(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 66];
+n$109=_fun_PluginGhostThread.&lt;init&gt;(String,int)(n$106:com.zrlog.web.plugin.PluginGhostThread*,"127.0.0.1":java.lang.Object*,n$108:int) [line 66];
+*&amp;pluginGhostThread:com.zrlog.web.plugin.PluginGhostThread*=n$106 [line 66];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">                            if (pr != null) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 succs:51 exn:3 Instructions
+n$110=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 67];
+n$111=*n$110.this$0:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 67];
+*&amp;$irvar27:com.zrlog.web.plugin.PluginCoreProcess*=n$111 [line 67];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node51.html"><span class='visited with_tooltip'>I_51<span class='tooltip'>node51 preds:50 succs:54 exn:3 Instructions
+n$112=*&amp;$irvar27:com.zrlog.web.plugin.PluginCoreProcess* [line 67];
+n$113=_fun_Process PluginCoreProcess.access$100(PluginCoreProcess)(n$112:com.zrlog.web.plugin.PluginCoreProcess*) [line 67];
+*&amp;$irvar28:java.lang.Process*=n$113 [line 67];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node54.html"><span class='visited with_tooltip'>J_54<span class='tooltip'>node54 preds:51 succs:52 53 exn: Join
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node52.html"><span class='visited with_tooltip'>C_52<span class='tooltip'>node52 preds:54 succs:55 exn:3 Conditional method_body
+n$114=*&amp;$irvar28:java.lang.Process* [line 67];
+PRUNE(!(n$114 == null), true); [line 67];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node53.html"><span class='visited with_tooltip'>C_53<span class='tooltip'>node53 preds:54 succs:63 exn:3 Conditional method_body
+n$114=*&amp;$irvar28:java.lang.Process* [line 67];
+PRUNE((n$114 == null), false); [line 67];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">                                printInputStreamWithThread(pr.getInputStream(), pluginCoreFile, pluginGhostThread); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:52 succs:56 exn:3 Instructions
+n$115=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 68];
+n$116=*n$115.this$0:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 68];
+*&amp;$irvar29:com.zrlog.web.plugin.PluginCoreProcess*=n$116 [line 68];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:55 succs:57 exn:3 Instructions
+n$117=*&amp;$irvar29:com.zrlog.web.plugin.PluginCoreProcess* [line 68];
+n$118=_fun_Process PluginCoreProcess.access$100(PluginCoreProcess)(n$117:com.zrlog.web.plugin.PluginCoreProcess*) [line 68];
+*&amp;$irvar30:java.lang.Process*=n$118 [line 68];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:56 succs:58 exn:3 Instructions
+n$119=*&amp;$irvar30:java.lang.Process* [line 68];
+_=*n$119:java.lang.Process*(root java.lang.Process) [line 68];
+n$121=_fun_InputStream Process.getInputStream()(n$119:java.lang.Process*) virtual [line 68];
+*&amp;$irvar31:java.io.InputStream*=n$121 [line 68];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node58.html"><span class='visited with_tooltip'>I_58<span class='tooltip'>node58 preds:57 succs:59 exn:3 Instructions
+n$122=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 68];
+n$123=*&amp;$irvar31:java.io.InputStream* [line 68];
+n$124=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 68];
+n$125=*n$124.val$pluginCoreFile:java.io.File*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 68];
+n$126=*&amp;pluginGhostThread:com.zrlog.web.plugin.PluginGhostThread* [line 68];
+n$127=_fun_void PluginCoreProcess$1.printInputStreamWithThread(InputStream,File,PluginGhostThread)(n$122:com.zrlog.web.plugin.PluginCoreProcess$1*,n$123:java.io.InputStream*,n$125:java.io.File*,n$126:com.zrlog.web.plugin.PluginGhostThread*) [line 68];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">                                printInputStreamWithThread(pr.getErrorStream(), pluginCoreFile, pluginGhostThread); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node59.html"><span class='visited with_tooltip'>I_59<span class='tooltip'>node59 preds:58 succs:60 exn:3 Instructions
+n$128=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 69];
+n$129=*n$128.this$0:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 69];
+*&amp;$irvar32:com.zrlog.web.plugin.PluginCoreProcess*=n$129 [line 69];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node60.html"><span class='visited with_tooltip'>I_60<span class='tooltip'>node60 preds:59 succs:61 exn:3 Instructions
+n$130=*&amp;$irvar32:com.zrlog.web.plugin.PluginCoreProcess* [line 69];
+n$131=_fun_Process PluginCoreProcess.access$100(PluginCoreProcess)(n$130:com.zrlog.web.plugin.PluginCoreProcess*) [line 69];
+*&amp;$irvar33:java.lang.Process*=n$131 [line 69];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node61.html"><span class='visited with_tooltip'>I_61<span class='tooltip'>node61 preds:60 succs:62 exn:3 Instructions
+n$132=*&amp;$irvar33:java.lang.Process* [line 69];
+_=*n$132:java.lang.Process*(root java.lang.Process) [line 69];
+n$134=_fun_InputStream Process.getErrorStream()(n$132:java.lang.Process*) virtual [line 69];
+*&amp;$irvar34:java.io.InputStream*=n$134 [line 69];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds:61 succs:63 exn:3 Instructions
+n$135=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 69];
+n$136=*&amp;$irvar34:java.io.InputStream* [line 69];
+n$137=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 69];
+n$138=*n$137.val$pluginCoreFile:java.io.File*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 69];
+n$139=*&amp;pluginGhostThread:com.zrlog.web.plugin.PluginGhostThread* [line 69];
+n$140=_fun_void PluginCoreProcess$1.printInputStreamWithThread(InputStream,File,PluginGhostThread)(n$135:com.zrlog.web.plugin.PluginCoreProcess$1*,n$136:java.io.InputStream*,n$138:java.io.File*,n$139:com.zrlog.web.plugin.PluginGhostThread*) [line 69];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">                            } </td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">                            try { </td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">                                //待插件启动 </td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">                                Thread.sleep(2000); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node63.html"><span class='visited with_tooltip'>I_63<span class='tooltip'>node63 preds:62 53 succs:65 exn:82 Instructions
+n$141=_fun_void Thread.sleep(long)(2000:long) [line 73];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">                            } catch (InterruptedException e) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node64.html"><span class='visited with_tooltip'>I_64<span class='tooltip'>node64 preds:80 succs:65 exn:3 Instructions
+n$142=*&amp;CatchVar275:java.lang.Object* [line 74];
+*&amp;$bcvar4:java.lang.Object*=n$142 [line 74];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node80.html"><span class='visited with_tooltip'>C_80<span class='tooltip'>node80 preds:82 succs:64 exn:3 Conditional exception handler
+n$164=_fun___instanceof(n$163:java.lang.InterruptedException*,sizeof(t=java.lang.InterruptedException):void) [line 74];
+PRUNE(n$164, true); [line 74];
+*&amp;CatchVar275:void=n$163 [line 74];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node81.html"><span class='visited with_tooltip'>C_81<span class='tooltip'>node81 preds:82 succs:3 exn:3 Conditional exception handler
+n$164=_fun___instanceof(n$163:java.lang.InterruptedException*,sizeof(t=java.lang.InterruptedException):void) [line 74];
+PRUNE(!n$164, false); [line 74];
+*&amp;return:void=EXN n$163 [line 74];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node82.html"><span class='visited with_tooltip'>I_82<span class='tooltip'>node82 preds: succs:80 81 exn:3 Instructions
+n$162=*&amp;return:void [line 74];
+*&amp;return:void=null [line 74];
+n$163=_fun___unwrap_exception(n$162:void) [line 74];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">                                //ignore </td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">                            } </td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">                            pluginGhostThread.start(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node65.html"><span class='visited with_tooltip'>I_65<span class='tooltip'>node65 preds:64 63 succs:66 exn:3 Instructions
+n$143=*&amp;pluginGhostThread:com.zrlog.web.plugin.PluginGhostThread* [line 77];
+_=*n$143:com.zrlog.web.plugin.PluginGhostThread*(root com.zrlog.web.plugin.PluginGhostThread) [line 77];
+n$145=_fun_void Thread.start()(n$143:com.zrlog.web.plugin.PluginGhostThread*) virtual [line 77];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">                            while (!pluginGhostThread.isStop()) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node66.html"><span class='visited with_tooltip'>I_66<span class='tooltip'>node66 preds:73 70 65 succs:69 exn:3 Instructions
+n$146=*&amp;pluginGhostThread:com.zrlog.web.plugin.PluginGhostThread* [line 78];
+_=*n$146:com.zrlog.web.plugin.PluginGhostThread*(root com.zrlog.web.plugin.PluginGhostThread) [line 78];
+n$148=_fun_boolean PluginGhostThread.isStop()(n$146:com.zrlog.web.plugin.PluginGhostThread*) virtual [line 78];
+*&amp;$irvar35:_Bool=n$148 [line 78];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node69.html"><span class='visited with_tooltip'>J_69<span class='tooltip'>node69 preds:66 succs:67 68 exn: Join
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node67.html"><span class='visited with_tooltip'>C_67<span class='tooltip'>node67 preds:69 succs:70 exn:3 Conditional method_body
+n$149=*&amp;$irvar35:_Bool [line 78];
+PRUNE(!(n$149 != 0), true); [line 78];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node68.html"><span class='visited with_tooltip'>C_68<span class='tooltip'>node68 preds:69 succs:74 exn:3 Conditional method_body
+n$149=*&amp;$irvar35:_Bool [line 78];
+PRUNE((n$149 != 0), false); [line 78];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">                                try { </td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">                                    Thread.sleep(1000); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node70.html"><span class='visited with_tooltip'>I_70<span class='tooltip'>node70 preds:67 succs:66 exn:85 Instructions
+n$150=_fun_void Thread.sleep(long)(1000:long) [line 80];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">                                } catch (InterruptedException e) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node71.html"><span class='visited with_tooltip'>I_71<span class='tooltip'>node71 preds:83 succs:72 exn:3 Instructions
+n$151=*&amp;CatchVar297:java.lang.Object* [line 81];
+*&amp;e:java.lang.Object*=n$151 [line 81];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node83.html"><span class='visited with_tooltip'>C_83<span class='tooltip'>node83 preds:85 succs:71 exn:3 Conditional exception handler
+n$165=_fun___instanceof(n$163:java.lang.InterruptedException*,sizeof(t=java.lang.InterruptedException):void) [line 81];
+PRUNE(n$165, true); [line 81];
+*&amp;CatchVar297:void=n$163 [line 81];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node84.html"><span class='visited with_tooltip'>C_84<span class='tooltip'>node84 preds:85 succs:3 exn:3 Conditional exception handler
+n$165=_fun___instanceof(n$163:java.lang.InterruptedException*,sizeof(t=java.lang.InterruptedException):void) [line 81];
+PRUNE(!n$165, false); [line 81];
+*&amp;return:void=EXN n$163 [line 81];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node85.html"><span class='visited with_tooltip'>I_85<span class='tooltip'>node85 preds: succs:83 84 exn:3 Instructions
+n$162=*&amp;return:void [line 81];
+*&amp;return:void=null [line 81];
+n$163=_fun___unwrap_exception(n$162:void) [line 81];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">                                    LOGGER.error(&quot;&quot;, e); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node72.html"><span class='visited with_tooltip'>I_72<span class='tooltip'>node72 preds:71 succs:73 exn:3 Instructions
+n$152=_fun_Logger PluginCoreProcess.access$200()() [line 82];
+*&amp;$irvar36:org.slf4j.Logger*=n$152 [line 82];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node73.html"><span class='visited with_tooltip'>I_73<span class='tooltip'>node73 preds:72 succs:66 exn:3 Instructions
+n$153=*&amp;$irvar36:org.slf4j.Logger* [line 82];
+_=*n$153:org.slf4j.Logger*(root org.slf4j.Logger) [line 82];
+n$155=*&amp;e:java.lang.Object* [line 82];
+n$156=_fun_void Logger.error(String,Throwable)(n$153:org.slf4j.Logger*,"":java.lang.Object*,n$155:java.lang.Object*) interface virtual [line 82];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">                                } </td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">                            } </td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">                            if (!canStart) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node74.html"><span class='visited with_tooltip'>I_74<span class='tooltip'>node74 preds:68 succs:75 exn:3 Instructions
+n$157=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1* [line 85];
+n$158=*n$157.this$0:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 85];
+*&amp;$irvar37:com.zrlog.web.plugin.PluginCoreProcess*=n$158 [line 85];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node75.html"><span class='visited with_tooltip'>I_75<span class='tooltip'>node75 preds:74 succs:78 exn:3 Instructions
+n$159=*&amp;$irvar37:com.zrlog.web.plugin.PluginCoreProcess* [line 85];
+n$160=_fun_boolean PluginCoreProcess.access$300(PluginCoreProcess)(n$159:com.zrlog.web.plugin.PluginCoreProcess*) [line 85];
+*&amp;$irvar38:_Bool=n$160 [line 85];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node78.html"><span class='visited with_tooltip'>J_78<span class='tooltip'>node78 preds:75 succs:76 77 exn: Join
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node77.html"><span class='visited with_tooltip'>C_77<span class='tooltip'>node77 preds:78 succs:4 exn:3 Conditional method_body
+n$161=*&amp;$irvar38:_Bool [line 85];
+PRUNE((n$161 != 0), false); [line 85];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node76.html"><span class='visited with_tooltip'>C_76<span class='tooltip'>node76 preds:78 succs:79 exn:3 Conditional method_body
+n$161=*&amp;$irvar38:_Bool [line 85];
+PRUNE(!(n$161 != 0), true); [line 85];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line">                                break; </td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">                            } </td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">                        } </td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">                    } <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node79.html"><span class='visited with_tooltip'>I_79<span class='tooltip'>node79 preds:76 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:79 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.run%28%29%3Avoid.5179041664fd2776e6ea25b45c31bc47_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:84 81 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">                    private void printInputStreamWithThread(final InputStream in, final File serverFileName, final PluginGhostThread pluginGhostThread) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e.html">summary for void PluginCoreProcess$1.printInputStreamWithThread(InputStream,File,PluginGhostThread)</a></td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">                        new Thread(() -&gt; { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.callsite_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3.677cc0177efd7f6233c756f3635c126d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.access_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.f5613fa81e8fa83570124f2dab2ad89c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+n$1=*n$0.arg3:com.zrlog.web.plugin.PluginGhostThread*(root com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7) [line 92];
+*&amp;$irvar2:com.zrlog.web.plugin.PluginGhostThread*=n$1 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;in:java.io.InputStream* [line 92];
+n$1=*&amp;serverFileName:java.io.File* [line 92];
+n$2=*&amp;pluginGhostThread:com.zrlog.web.plugin.PluginGhostThread* [line 92];
+n$3=_fun_Runnable PluginCoreProcess$1.callsite_com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7(InputStream,File,PluginGhostThread)(n$0:java.io.InputStream*,n$1:java.io.File*,n$2:com.zrlog.web.plugin.PluginGhostThread*) [line 92];
+*&amp;$irvar0:java.lang.Runnable*=n$3 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.callsite_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3.677cc0177efd7f6233c756f3635c126d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7):com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7*) [line 92];
+n$1=*&amp;$bcvar0:java.io.InputStream* [line 92];
+n$2=*&amp;$bcvar1:java.io.File* [line 92];
+n$3=*&amp;$bcvar2:com.zrlog.web.plugin.PluginGhostThread* [line 92];
+n$4=_fun_PluginCoreProcess$1$Lambda$_3_7.&lt;init&gt;(InputStream,File,PluginGhostThread)(n$0:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7*,n$1:java.io.InputStream*,n$2:java.io.File*,n$3:com.zrlog.web.plugin.PluginGhostThread*) [line 92];
+*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7*=n$0 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.access_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.f5613fa81e8fa83570124f2dab2ad89c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;$bcvar0:java.io.InputStream* [line 92];
+n$1=*&amp;$bcvar1:java.io.File* [line 92];
+n$2=*&amp;$bcvar2:com.zrlog.web.plugin.PluginGhostThread* [line 92];
+n$3=_fun_void PluginCoreProcess$1.lambda$printInputStreamWithThread$0(InputStream,File,PluginGhostThread)(n$0:java.io.InputStream*,n$1:java.io.File*,n$2:com.zrlog.web.plugin.PluginGhostThread*) [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7*) [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+n$3=*n$2.arg2:java.io.File*(root com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7) [line 92];
+*&amp;$irvar1:java.io.File*=n$3 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$4=_fun___new(sizeof(t=java.lang.Thread):java.lang.Thread*) [line 92];
+n$5=*&amp;$irvar0:java.lang.Runnable* [line 92];
+n$6=_fun_Thread.&lt;init&gt;(Runnable)(n$4:java.lang.Thread*,n$5:java.lang.Runnable*) [line 92];
+*&amp;$irvar1:java.lang.Thread*=n$4 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.callsite_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3.677cc0177efd7f6233c756f3635c126d_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$5=*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+*&amp;return:java.lang.Runnable*=n$5 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.access_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.f5613fa81e8fa83570124f2dab2ad89c_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+n$3=*&amp;$bcvar1:java.io.InputStream* [line 92];
+*n$2.arg1:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7(root com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7)=n$3 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.callsite_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3.677cc0177efd7f6233c756f3635c126d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.access_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.f5613fa81e8fa83570124f2dab2ad89c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+n$5=*n$4.arg1:java.io.InputStream*(root com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7) [line 92];
+*&amp;$irvar0:java.io.InputStream*=n$5 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+n$5=*&amp;$bcvar2:java.io.File* [line 92];
+*n$4.arg2:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7(root com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7)=n$5 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;$irvar0:java.io.InputStream* [line 92];
+n$7=*&amp;$irvar1:java.io.File* [line 92];
+n$8=*&amp;$irvar2:com.zrlog.web.plugin.PluginGhostThread* [line 92];
+n$9=_fun_void PluginCoreProcess$1.access_com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7(InputStream,File,PluginGhostThread)(n$6:java.io.InputStream*,n$7:java.io.File*,n$8:com.zrlog.web.plugin.PluginGhostThread*) [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7* [line 92];
+n$7=*&amp;$bcvar3:com.zrlog.web.plugin.PluginGhostThread* [line 92];
+*n$6.arg3:com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7(root com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7)=n$7 [line 92];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.callsite_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3.677cc0177efd7f6233c756f3635c126d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.access_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.f5613fa81e8fa83570124f2dab2ad89c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.run%28%29%3Avoid.878864ddfb9abd0c7a44ab967e0f39ab.html">summary for void PluginCoreProcess$1$Lambda$_3_7.run()</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241.callsite_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3.677cc0177efd7f6233c756f3635c126d.html">summary for Runnable PluginCoreProcess$1.callsite_com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7(InputStream,File,PluginGhostThread)</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241.access_com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.f5613fa81e8fa83570124f2dab2ad89c.html">summary for void PluginCoreProcess$1.access_com.zrlog.web.plugin.PluginCoreProcess$1$Lambda$_3_7(InputStream,File,PluginGhostThread)</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241%24Lambda%24_3_7.<init>%28java.io.InputStream%2Cjava.io.File%2Ccom.zrl.298c723fc3fa68631677c58bf999076a.html">summary for PluginCoreProcess$1$Lambda$_3_7.&lt;init&gt;(InputStream,File,PluginGhostThread)</a></td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line">                            BufferedReader br = new BufferedReader(new InputStreamReader(in)); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.io.InputStreamReader):java.io.InputStreamReader*) [line 93];
+n$1=*&amp;in:java.io.InputStream* [line 93];
+n$2=_fun_InputStreamReader.&lt;init&gt;(InputStream)(n$0:java.io.InputStreamReader*,n$1:java.io.InputStream*) [line 93];
+n$3=_fun___set_file_attribute(n$0:java.io.InputStreamReader*) [line 93];
+*&amp;$irvar0:java.io.InputStreamReader*=n$0 [line 93];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$4=_fun___new(sizeof(t=java.io.BufferedReader):java.io.BufferedReader*) [line 93];
+n$5=*&amp;$irvar0:java.io.InputStreamReader* [line 93];
+n$6=_fun_BufferedReader.&lt;init&gt;(Reader)(n$4:java.io.BufferedReader*,n$5:java.io.InputStreamReader*) [line 93];
+*&amp;br:java.io.BufferedReader*=n$4 [line 93];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393.html">summary for void PluginCoreProcess$1.lambda$printInputStreamWithThread$0(InputStream,File,PluginGhostThread)</a></td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line">                            String str; </td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">                            try { </td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">                                str = br.readLine(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:27 Instructions
+n$7=*&amp;br:java.io.BufferedReader* [line 96];
+_=*n$7:java.io.BufferedReader*(root java.io.BufferedReader) [line 96];
+n$9=_fun_String BufferedReader.readLine()(n$7:java.io.BufferedReader*) virtual [line 96];
+*&amp;str:java.lang.String*=n$9 [line 96];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">                                if (str != null &amp;&amp; str.startsWith(&quot;Error: Invalid or corrupt jarfile&quot;)) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:27 Conditional method_body
+n$10=*&amp;str:java.lang.String* [line 97];
+PRUNE(!(n$10 == null), true); [line 97];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 11 exn:27 Instructions
+n$11=*&amp;str:java.lang.String* [line 97];
+_=*n$11:java.lang.String*(root java.lang.String) [line 97];
+n$13=_fun_boolean String.startsWith(String)(n$11:java.lang.String*,"Error: Invalid or corrupt jarfile":java.lang.Object*) virtual [line 97];
+*&amp;$irvar1:_Bool=n$13 [line 97];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:9 succs:12 exn:27 Conditional method_body
+n$14=*&amp;$irvar1:_Bool [line 97];
+PRUNE(!(n$14 == 0), true); [line 97];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:9 succs:15 exn:27 Conditional method_body
+n$14=*&amp;$irvar1:_Bool [line 97];
+PRUNE((n$14 == 0), false); [line 97];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:15 exn:27 Conditional method_body
+n$10=*&amp;str:java.lang.String* [line 97];
+PRUNE((n$10 == null), false); [line 97];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line">                                    System.out.println(str); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 exn:27 Instructions
+n$15=*&amp;#GB<>$java.lang.System.out:java.io.PrintStream*(root java.lang.System) [line 98];
+_=*n$15:java.io.PrintStream*(root java.io.PrintStream) [line 98];
+n$17=*&amp;str:java.lang.String* [line 98];
+n$18=_fun_void PrintStream.println(String)(n$15:java.io.PrintStream*,n$17:java.lang.String*) virtual [line 98];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">                                    serverFileName.delete(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:27 Instructions
+n$19=*&amp;serverFileName:java.io.File* [line 99];
+_=*n$19:java.io.File*(root java.io.File) [line 99];
+n$21=_fun_boolean File.delete()(n$19:java.io.File*) virtual [line 99];
+*&amp;$irvar2:_Bool=n$21 [line 99];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">                                    pluginGhostThread.setStop(true); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:27 Instructions
+n$22=*&amp;pluginGhostThread:com.zrlog.web.plugin.PluginGhostThread* [line 100];
+_=*n$22:com.zrlog.web.plugin.PluginGhostThread*(root com.zrlog.web.plugin.PluginGhostThread) [line 100];
+n$24=_fun_void PluginGhostThread.setStop(boolean)(n$22:com.zrlog.web.plugin.PluginGhostThread*,1:int) virtual [line 100];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">                                } </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line">                                while ((str = br.readLine()) != null) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:20 14 11 8 succs:16 exn:27 Instructions
+n$25=*&amp;br:java.io.BufferedReader* [line 102];
+_=*n$25:java.io.BufferedReader*(root java.io.BufferedReader) [line 102];
+n$27=_fun_String BufferedReader.readLine()(n$25:java.io.BufferedReader*) virtual [line 102];
+*&amp;$irvar3:java.lang.String*=n$27 [line 102];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:19 exn:27 Instructions
+n$28=*&amp;$irvar3:java.lang.String* [line 102];
+*&amp;str:java.lang.String*=n$28 [line 102];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node19.html"><span class='visited with_tooltip'>J_19<span class='tooltip'>node19 preds:16 succs:17 18 exn: Join
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:19 succs:20 exn:27 Conditional method_body
+n$29=*&amp;$irvar3:java.lang.String* [line 102];
+PRUNE(!(n$29 == null), true); [line 102];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:19 succs:24 exn:27 Conditional method_body
+n$29=*&amp;$irvar3:java.lang.String* [line 102];
+PRUNE((n$29 == null), false); [line 102];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">                                    System.out.println(str); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:17 succs:15 exn:27 Instructions
+n$30=*&amp;#GB<>$java.lang.System.out:java.io.PrintStream*(root java.lang.System) [line 103];
+_=*n$30:java.io.PrintStream*(root java.io.PrintStream) [line 103];
+n$32=*&amp;str:java.lang.String* [line 103];
+n$33=_fun_void PrintStream.println(String)(n$30:java.io.PrintStream*,n$32:java.lang.String*) virtual [line 103];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE104">104</td><td class="line">                                } </td></tr>
+<tr><td class="num" id="LINE105">105</td><td class="line">                            } catch (IOException e) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:25 succs:22 exn:3 Instructions
+n$34=*&amp;CatchVar79:java.lang.Object* [line 105];
+*&amp;e:java.lang.Object*=n$34 [line 105];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:27 succs:21 exn:3 Conditional exception handler
+n$42=_fun___instanceof(n$41:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 105];
+PRUNE(n$42, true); [line 105];
+*&amp;CatchVar79:void=n$41 [line 105];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:27 succs:3 exn:3 Conditional exception handler
+n$42=_fun___instanceof(n$41:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 105];
+PRUNE(!n$42, false); [line 105];
+*&amp;return:void=EXN n$41 [line 105];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds: succs:25 26 exn:3 Instructions
+n$40=*&amp;return:void [line 105];
+*&amp;return:void=null [line 105];
+n$41=_fun___unwrap_exception(n$40:void) [line 105];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE106">106</td><td class="line">                                LOGGER.error(&quot;plugin output error&quot;, e); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$35=_fun_Logger PluginCoreProcess.access$200()() [line 106];
+*&amp;$irvar4:org.slf4j.Logger*=n$35 [line 106];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$36=*&amp;$irvar4:org.slf4j.Logger* [line 106];
+_=*n$36:org.slf4j.Logger*(root org.slf4j.Logger) [line 106];
+n$38=*&amp;e:java.lang.Object* [line 106];
+n$39=_fun_void Logger.error(String,Throwable)(n$36:org.slf4j.Logger*,"plugin output error":java.lang.Object*,n$38:java.lang.Object*) interface virtual [line 106];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE107">107</td><td class="line">                            } </td></tr>
+<tr><td class="num" id="LINE108">108</td><td class="line">                        }).start(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$7=*&amp;$irvar1:java.lang.Thread* [line 108];
+_=*n$7:java.lang.Thread*(root java.lang.Thread) [line 108];
+n$9=_fun_void Thread.start()(n$7:java.lang.Thread*) virtual [line 108];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 18 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:24 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.lambda%24printInputStreamWithThread%240%28java.io.InputStream%2Cjav.0c3d9605255b1df3d87ca166eba88393_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:26 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE109">109</td><td class="line">                    } <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%241.printInputStreamWithThread%28java.io.InputStream%2Cjava.io.File.06b373c39a7a4bd49d323a9e3b17447e_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE110">110</td><td class="line">                }.start(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:19 exn:22 Instructions
+n$29=*&amp;$irvar4:com.zrlog.web.plugin.PluginCoreProcess$1* [line 110];
+_=*n$29:com.zrlog.web.plugin.PluginCoreProcess$1*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 110];
+n$31=_fun_void Thread.start()(n$29:com.zrlog.web.plugin.PluginCoreProcess$1*) virtual [line 110];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE111">111</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE112">112</td><td class="line">        } catch (Exception e) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:20 succs:18 exn:3 Instructions
+n$32=*&amp;CatchVar83:java.lang.Object* [line 112];
+*&amp;e:java.lang.Object*=n$32 [line 112];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node20.html"><span class='visited with_tooltip'>C_20<span class='tooltip'>node20 preds:22 succs:17 exn:3 Conditional exception handler
+n$40=_fun___instanceof(n$39:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 112];
+PRUNE(n$40, true); [line 112];
+*&amp;CatchVar83:int=n$39 [line 112];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node21.html"><span class='visited with_tooltip'>C_21<span class='tooltip'>node21 preds:22 succs:3 exn:3 Conditional exception handler
+n$40=_fun___instanceof(n$39:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 112];
+PRUNE(!n$40, false); [line 112];
+*&amp;return:int=EXN n$39 [line 112];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds: succs:20 21 exn:3 Instructions
+n$38=*&amp;return:int [line 112];
+*&amp;return:int=null [line 112];
+n$39=_fun___unwrap_exception(n$38:int) [line 112];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE113">113</td><td class="line">            LOGGER.warn(&quot;start plugin exception &quot;, e); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$33=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginCoreProcess) [line 113];
+_=*n$33:org.slf4j.Logger*(root org.slf4j.Logger) [line 113];
+n$35=*&amp;e:java.lang.Object* [line 113];
+n$36=_fun_void Logger.warn(String,Throwable)(n$33:org.slf4j.Logger*,"start plugin exception ":java.lang.Object*,n$35:java.lang.Object*) interface virtual [line 113];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE114">114</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE115">115</td><td class="line">        return randomServerPort; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 16 14 succs:2 exn:3 Instructions
+n$37=*&amp;randomServerPort:int [line 115];
+*&amp;return:int=n$37 [line 115];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:19 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:21 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE116">116</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE117">117</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE118">118</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE119">119</td><td class="line">    private void tryDownloadPluginCoreFile(File serverFileName) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b.html">summary for void PluginCoreProcess.tryDownloadPluginCoreFile(File)</a></td></tr>
+<tr><td class="num" id="LINE120">120</td><td class="line">        if (!serverFileName.exists()) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;serverFileName:java.io.File* [line 120];
+_=*n$0:java.io.File*(root java.io.File) [line 120];
+n$2=_fun_boolean File.exists()(n$0:java.io.File*) virtual [line 120];
+*&amp;$irvar0:_Bool=n$2 [line 120];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:_Bool [line 120];
+PRUNE(!(n$3 != 0), true); [line 120];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:24 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:_Bool [line 120];
+PRUNE((n$3 != 0), false); [line 120];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE121">121</td><td class="line">            serverFileName.getParentFile().mkdirs(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:3 Instructions
+n$4=*&amp;serverFileName:java.io.File* [line 121];
+_=*n$4:java.io.File*(root java.io.File) [line 121];
+n$6=_fun_File File.getParentFile()(n$4:java.io.File*) virtual [line 121];
+*&amp;$irvar1:java.io.File*=n$6 [line 121];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;$irvar1:java.io.File* [line 121];
+_=*n$7:java.io.File*(root java.io.File) [line 121];
+n$9=_fun_boolean File.mkdirs()(n$7:java.io.File*) virtual [line 121];
+*&amp;$irvar2:_Bool=n$9 [line 121];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE122">122</td><td class="line">            String filePath = serverFileName.getParentFile().toString(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$10=*&amp;serverFileName:java.io.File* [line 122];
+_=*n$10:java.io.File*(root java.io.File) [line 122];
+n$12=_fun_File File.getParentFile()(n$10:java.io.File*) virtual [line 122];
+*&amp;$irvar3:java.io.File*=n$12 [line 122];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$13=*&amp;$irvar3:java.io.File* [line 122];
+_=*n$13:java.io.File*(root java.io.File) [line 122];
+n$15=_fun_String File.toString()(n$13:java.io.File*) virtual [line 122];
+*&amp;filePath:java.lang.String*=n$15 [line 122];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE123">123</td><td class="line">            try { </td></tr>
+<tr><td class="num" id="LINE124">124</td><td class="line">                LOGGER.info(&quot;plugin-core.jar not exists will download from &quot; + PLUGIN_CORE_DOWNLOAD_URL); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:27 Instructions
+n$16=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginCoreProcess) [line 124];
+_=*n$16:org.slf4j.Logger*(root org.slf4j.Logger) [line 124];
+n$18=_fun_void Logger.info(String)(n$16:org.slf4j.Logger*,"plugin-core.jar not exists will download from http://dl.zrlog.com/plugin/core/plugin-core.jar":java.lang.Object*) interface virtual [line 124];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE125">125</td><td class="line">                HttpUtil.getInstance().sendGetRequest(PLUGIN_CORE_DOWNLOAD_URL + &quot;?_=&quot; + System.currentTimeMillis(), new HashMap&lt;&gt;(), new HttpFileHandle(filePath), new HashMap&lt;&gt;()); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:27 Instructions
+n$19=_fun_HttpUtil HttpUtil.getInstance()() [line 125];
+*&amp;$irvar4:com.hibegin.common.util.http.HttpUtil*=n$19 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:27 Instructions
+n$20=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 125];
+n$21=_fun_StringBuilder.&lt;init&gt;()(n$20:java.lang.StringBuilder*) [line 125];
+*&amp;$irvar5:java.lang.StringBuilder*=n$20 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:27 Instructions
+n$22=*&amp;$irvar5:java.lang.StringBuilder* [line 125];
+_=*n$22:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 125];
+n$24=_fun_StringBuilder StringBuilder.append(String)(n$22:java.lang.StringBuilder*,"http://dl.zrlog.com/plugin/core/plugin-core.jar?_=":java.lang.Object*) virtual [line 125];
+*&amp;$irvar6:java.lang.StringBuilder*=n$24 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:27 Instructions
+n$25=_fun_long System.currentTimeMillis()() [line 125];
+*&amp;$irvar7:long=n$25 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:27 Instructions
+n$26=*&amp;$irvar6:java.lang.StringBuilder* [line 125];
+_=*n$26:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 125];
+n$28=*&amp;$irvar7:long [line 125];
+n$29=_fun_StringBuilder StringBuilder.append(long)(n$26:java.lang.StringBuilder*,n$28:long) virtual [line 125];
+*&amp;$irvar8:java.lang.StringBuilder*=n$29 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:27 Instructions
+n$30=*&amp;$irvar8:java.lang.StringBuilder* [line 125];
+_=*n$30:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 125];
+n$32=_fun_String StringBuilder.toString()(n$30:java.lang.StringBuilder*) virtual [line 125];
+*&amp;$irvar9:java.lang.String*=n$32 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:27 Instructions
+n$33=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 125];
+n$34=_fun_HashMap.&lt;init&gt;()(n$33:java.util.HashMap*) [line 125];
+*&amp;$irvar10:java.util.HashMap*=n$33 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:27 Instructions
+n$35=_fun___new(sizeof(t=com.hibegin.common.util.http.handle.HttpFileHandle):com.hibegin.common.util.http.handle.HttpFileHandle*) [line 125];
+n$36=*&amp;filePath:java.lang.String* [line 125];
+n$37=_fun_HttpFileHandle.&lt;init&gt;(String)(n$35:com.hibegin.common.util.http.handle.HttpFileHandle*,n$36:java.lang.String*) [line 125];
+*&amp;$irvar11:com.hibegin.common.util.http.handle.HttpFileHandle*=n$35 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:27 Instructions
+n$38=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 125];
+n$39=_fun_HashMap.&lt;init&gt;()(n$38:java.util.HashMap*) [line 125];
+*&amp;$irvar12:java.util.HashMap*=n$38 [line 125];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:24 exn:27 Instructions
+n$40=*&amp;$irvar4:com.hibegin.common.util.http.HttpUtil* [line 125];
+_=*n$40:com.hibegin.common.util.http.HttpUtil*(root com.hibegin.common.util.http.HttpUtil) [line 125];
+n$42=*&amp;$irvar9:java.lang.String* [line 125];
+n$43=*&amp;$irvar10:java.util.HashMap* [line 125];
+n$44=*&amp;$irvar11:com.hibegin.common.util.http.handle.HttpFileHandle* [line 125];
+n$45=*&amp;$irvar12:java.util.HashMap* [line 125];
+n$46=_fun_HttpHandle HttpUtil.sendGetRequest(String,Map,HttpHandle,Map)(n$40:com.hibegin.common.util.http.HttpUtil*,n$42:java.lang.String*,n$43:java.util.HashMap*,n$44:com.hibegin.common.util.http.handle.HttpFileHandle*,n$45:java.util.HashMap*) virtual [line 125];
+*&amp;$irvar13:com.hibegin.common.util.http.handle.HttpHandle*=n$46 [line 125];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE126">126</td><td class="line">            } catch (IOException e) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:25 succs:23 exn:3 Instructions
+n$47=*&amp;CatchVar86:java.lang.Object* [line 126];
+*&amp;e:java.lang.Object*=n$47 [line 126];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:27 succs:22 exn:3 Conditional exception handler
+n$54=_fun___instanceof(n$53:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 126];
+PRUNE(n$54, true); [line 126];
+*&amp;CatchVar86:void=n$53 [line 126];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:27 succs:3 exn:3 Conditional exception handler
+n$54=_fun___instanceof(n$53:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 126];
+PRUNE(!n$54, false); [line 126];
+*&amp;return:void=EXN n$53 [line 126];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds: succs:25 26 exn:3 Instructions
+n$52=*&amp;return:void [line 126];
+*&amp;return:void=null [line 126];
+n$53=_fun___unwrap_exception(n$52:void) [line 126];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE127">127</td><td class="line">                LOGGER.warn(&quot;download plugin core error&quot;, e); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$48=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginCoreProcess) [line 127];
+_=*n$48:org.slf4j.Logger*(root org.slf4j.Logger) [line 127];
+n$50=*&amp;e:java.lang.Object* [line 127];
+n$51=_fun_void Logger.warn(String,Throwable)(n$48:org.slf4j.Logger*,"download plugin core error":java.lang.Object*,n$50:java.lang.Object*) interface virtual [line 127];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE128">128</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE129">129</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE130">130</td><td class="line">    } <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 21 6 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:24 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.tryDownloadPluginCoreFile%28java.io.File%29%3Avoid.33f8a2373a3fa5e953c453ce57b6dd9b_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:26 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE131">131</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE132">132</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE133">133</td><td class="line">     * Zrlog异常终止后，停止对应的插件服务。 </td></tr>
+<tr><td class="num" id="LINE134">134</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE135">135</td><td class="line">    private void registerShutdownHook() { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f.html">summary for void PluginCoreProcess.registerShutdownHook()</a></td></tr>
+<tr><td class="num" id="LINE136">136</td><td class="line">        Runtime rt = Runtime.getRuntime(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Runtime Runtime.getRuntime()() [line 136];
+*&amp;rt:java.lang.Runtime*=n$0 [line 136];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE137">137</td><td class="line">        rt.addShutdownHook(new Thread(this::stopPluginCore)); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.run%28%29%3Avoid.aa7b644ea417924aa925a799823e7472_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.848e5b99311bc97419cbb37fb9d01282_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10%28c.5c0106383b20a2191553a9c654013cbc_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.<init>%28com.zrlog.web.plugin.PluginCoreProcess%29.ee09430d3de4b07e9bbb8d875aa613f2_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.run%28%29%3Avoid.aa7b644ea417924aa925a799823e7472_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10* [line 137];
+n$1=*n$0.arg1:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10) [line 137];
+*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess*=n$1 [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.848e5b99311bc97419cbb37fb9d01282_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10):com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10*) [line 137];
+n$1=*&amp;$bcvar0:com.zrlog.web.plugin.PluginCoreProcess* [line 137];
+n$2=_fun_PluginCoreProcess$Lambda$_10_10.&lt;init&gt;(PluginCoreProcess)(n$0:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10*,n$1:com.zrlog.web.plugin.PluginCoreProcess*) [line 137];
+*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10*=n$0 [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10%28c.5c0106383b20a2191553a9c654013cbc_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;$bcvar0:com.zrlog.web.plugin.PluginCoreProcess* [line 137];
+_=*n$0:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess) [line 137];
+n$2=_fun_void PluginCoreProcess.stopPluginCore()(n$0:com.zrlog.web.plugin.PluginCoreProcess*) virtual [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.<init>%28com.zrlog.web.plugin.PluginCoreProcess%29.ee09430d3de4b07e9bbb8d875aa613f2_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10* [line 137];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10*) [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.run%28%29%3Avoid.aa7b644ea417924aa925a799823e7472_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess* [line 137];
+n$3=_fun_void PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10(PluginCoreProcess)(n$2:com.zrlog.web.plugin.PluginCoreProcess*) [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 137];
+n$2=_fun_Runnable PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10(PluginCoreProcess)(n$1:com.zrlog.web.plugin.PluginCoreProcess*) [line 137];
+*&amp;$irvar0:java.lang.Runnable*=n$2 [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.848e5b99311bc97419cbb37fb9d01282_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$3=*&amp;$irvar0:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10* [line 137];
+*&amp;return:java.lang.Runnable*=n$3 [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10%28c.5c0106383b20a2191553a9c654013cbc_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.<init>%28com.zrlog.web.plugin.PluginCoreProcess%29.ee09430d3de4b07e9bbb8d875aa613f2_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10* [line 137];
+n$3=*&amp;$bcvar1:com.zrlog.web.plugin.PluginCoreProcess* [line 137];
+*n$2.arg1:com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10(root com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10)=n$3 [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.848e5b99311bc97419cbb37fb9d01282_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10%28c.5c0106383b20a2191553a9c654013cbc_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.run%28%29%3Avoid.aa7b644ea417924aa925a799823e7472_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=_fun___new(sizeof(t=java.lang.Thread):java.lang.Thread*) [line 137];
+n$4=*&amp;$irvar0:java.lang.Runnable* [line 137];
+n$5=_fun_Thread.&lt;init&gt;(Runnable)(n$3:java.lang.Thread*,n$4:java.lang.Runnable*) [line 137];
+*&amp;$irvar1:java.lang.Thread*=n$3 [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.<init>%28com.zrlog.web.plugin.PluginCoreProcess%29.ee09430d3de4b07e9bbb8d875aa613f2_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.run%28%29%3Avoid.aa7b644ea417924aa925a799823e7472_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.<init>%28com.zrlog.web.plugin.PluginCoreProcess%29.ee09430d3de4b07e9bbb8d875aa613f2_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;rt:java.lang.Runtime* [line 137];
+_=*n$6:java.lang.Runtime*(root java.lang.Runtime) [line 137];
+n$8=*&amp;$irvar1:java.lang.Thread* [line 137];
+n$9=_fun_void Runtime.addShutdownHook(Thread)(n$6:java.lang.Runtime*,n$8:java.lang.Thread*) virtual [line 137];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.run%28%29%3Avoid.aa7b644ea417924aa925a799823e7472_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.848e5b99311bc97419cbb37fb9d01282_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10%28c.5c0106383b20a2191553a9c654013cbc_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.<init>%28com.zrlog.web.plugin.PluginCoreProcess%29.ee09430d3de4b07e9bbb8d875aa613f2_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.run%28%29%3Avoid.aa7b644ea417924aa925a799823e7472.html">summary for void PluginCoreProcess$Lambda$_10_10.run()</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.848e5b99311bc97419cbb37fb9d01282.html">summary for Runnable PluginCoreProcess.callsite_com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10(PluginCoreProcess)</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10%28c.5c0106383b20a2191553a9c654013cbc.html">summary for void PluginCoreProcess.access_com.zrlog.web.plugin.PluginCoreProcess$Lambda$_10_10(PluginCoreProcess)</a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess%24Lambda%24_10_10.<init>%28com.zrlog.web.plugin.PluginCoreProcess%29.ee09430d3de4b07e9bbb8d875aa613f2.html">summary for PluginCoreProcess$Lambda$_10_10.&lt;init&gt;(PluginCoreProcess)</a></td></tr>
+<tr><td class="num" id="LINE138">138</td><td class="line">    } <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.registerShutdownHook%28%29%3Avoid.89a1f2b9240a4d6c68b5a57b6f9a962f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE139">139</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE140">140</td><td class="line">    public void stopPluginCore() { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db.html">summary for void PluginCoreProcess.stopPluginCore()</a></td></tr>
+<tr><td class="num" id="LINE141">141</td><td class="line">        if (pr != null) { <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 141];
+n$1=*n$0.pr:java.lang.Process*(root com.zrlog.web.plugin.PluginCoreProcess) [line 141];
+PRUNE(!(n$1 == null), true); [line 141];
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:7 exn:3 Conditional method_body
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 141];
+n$1=*n$0.pr:java.lang.Process*(root com.zrlog.web.plugin.PluginCoreProcess) [line 141];
+PRUNE((n$1 == null), false); [line 141];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE142">142</td><td class="line">            pr.destroy(); <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:7 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 142];
+n$3=*n$2.pr:java.lang.Process*(root com.zrlog.web.plugin.PluginCoreProcess) [line 142];
+_=*n$3:java.lang.Process*(root java.lang.Process) [line 142];
+n$5=_fun_void Process.destroy()(n$3:java.lang.Process*) virtual [line 142];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE143">143</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE144">144</td><td class="line">        canStart = false; <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 5 succs:8 exn:3 Instructions
+n$6=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 144];
+*n$6.canStart:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=0 [line 144];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE145">145</td><td class="line">    } <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960/nodes/com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore%28%29%3Avoid.db2f5ef2e9987a97a823973900f634db_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE146">146</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

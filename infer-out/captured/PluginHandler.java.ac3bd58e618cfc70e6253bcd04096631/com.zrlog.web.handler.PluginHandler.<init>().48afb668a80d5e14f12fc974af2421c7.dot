@@ -1,0 +1,64 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_1" [label="1: Start PluginHandler.<init>()\nFormals:  this:com.zrlog.web.handler.PluginHandler*\nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_1" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_4" ;
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_2" [label="2: Exit PluginHandler.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 33]\n  NULLIFY(&$irvar1); [line 33]\n  NULLIFY(&$irvar2); [line 33]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 33]\n  APPLY_ABSTRACTION; [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_2" ;
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_4" [label="4:  Call Handler.<init>() \n   n$0=*&this:com.zrlog.web.handler.PluginHandler* [line 27]\n  n$1=_fun_Handler.<init>()(n$0:com.zrlog.web.handler.PluginHandler*) [line 27]\n  EXIT_SCOPE(n$0,n$1); [line 27]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_4" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_5" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_4" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_5" [label="5:  Call AdminTokenService.<init>() \n   n$2=_fun___new(sizeof(t=com.zrlog.web.token.AdminTokenService):com.zrlog.web.token.AdminTokenService*) [line 31]\n  n$3=_fun_AdminTokenService.<init>()(n$2:com.zrlog.web.token.AdminTokenService*) [line 31]\n  *&$irvar0:com.zrlog.web.token.AdminTokenService*=n$2 [line 31]\n  EXIT_SCOPE(n$2,n$3); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_5" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_6" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_5" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_6" [label="6:  method_body \n   n$4=*&this:com.zrlog.web.handler.PluginHandler* [line 31]\n  n$5=*&$irvar0:com.zrlog.web.token.AdminTokenService* [line 31]\n  *n$4.adminTokenService:com.zrlog.web.handler.PluginHandler(root com.zrlog.web.handler.PluginHandler)=n$5 [line 31]\n  NULLIFY(&$irvar0); [line 31]\n  EXIT_SCOPE(n$4,n$5,$irvar0); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_6" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_7" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_6" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_7" [label="7:  method_body \n   n$6=_fun___new_array(sizeof(t=java.lang.String*[_*_];len=[3]):java.lang.String*[_*_](*)) [line 33]\n  *&$irvar1:java.lang.String*[_*_](*)=n$6 [line 33]\n  EXIT_SCOPE(n$6); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_7" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_8" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_7" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_8" [label="8:  method_body \n   n$7=*&$irvar1:java.lang.String*[_*_](*) [line 33]\n  *n$7[0]:java.lang.Object*=\"/admin/plugins/\" [line 33]\n  EXIT_SCOPE(n$7); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_8" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_9" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_8" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_9" [label="9:  method_body \n   n$8=*&$irvar1:java.lang.String*[_*_](*) [line 33]\n  *n$8[1]:java.lang.Object*=\"/plugin/\" [line 33]\n  EXIT_SCOPE(n$8); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_9" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_10" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_9" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_10" [label="10:  method_body \n   n$9=*&$irvar1:java.lang.String*[_*_](*) [line 33]\n  *n$9[2]:java.lang.Object*=\"/p/\" [line 33]\n  EXIT_SCOPE(n$9); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_10" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_11" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_10" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_11" [label="11:  Call List Arrays.asList(Object[]) \n   n$10=*&$irvar1:java.lang.String*[_*_](*) [line 33]\n  n$11=_fun_List Arrays.asList(Object[])(n$10:java.lang.String*[_*_](*)) [line 33]\n  *&$irvar2:java.util.List*=n$11 [line 33]\n  NULLIFY(&$irvar1); [line 33]\n  EXIT_SCOPE(n$10,n$11,$irvar1); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_11" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_12" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_11" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_12" [label="12:  method_body \n   n$12=*&this:com.zrlog.web.handler.PluginHandler* [line 33]\n  n$13=*&$irvar2:java.util.List* [line 33]\n  *n$12.pluginHandlerPaths:com.zrlog.web.handler.PluginHandler(root com.zrlog.web.handler.PluginHandler)=n$13 [line 33]\n  NULLIFY(&$irvar2); [line 33]\n  NULLIFY(&this); [line 33]\n  EXIT_SCOPE(n$12,n$13,$irvar2,this); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_12" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_13" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_12" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_13" [label="13:  method_body \n   APPLY_ABSTRACTION; [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_13" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_2" ;
+	 "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_13" -> "com.zrlog.web.handler.PluginHandler.<init>().48afb668a80d5e14f12fc974af2421c7_3" [color="red" ];
+}

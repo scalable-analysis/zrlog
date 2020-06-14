@@ -1,0 +1,137 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_1" [label="1: Start String BaseController.getTemplatePath()\nFormals:  this:com.zrlog.web.controller.BaseController*\nLocals:  $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $T0_24:void $irvar0:void previewTheme:java.lang.String* templatePath:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_1" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_4" ;
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_2" [label="2: Exit String BaseController.getTemplatePath() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [label="3:  exceptions sink \n   NULLIFY(&templatePath); [line 40]\n  NULLIFY(&$irvar3); [line 40]\n  NULLIFY(&$irvar9); [line 40]\n  NULLIFY(&previewTheme); [line 40]\n  NULLIFY(&$irvar5); [line 40]\n  NULLIFY(&$T0_24); [line 40]\n  NULLIFY(&$irvar4); [line 40]\n  NULLIFY(&$irvar7); [line 40]\n  NULLIFY(&$irvar6); [line 40]\n  NULLIFY(&$irvar0); [line 40]\n  NULLIFY(&$irvar8); [line 40]\n  NULLIFY(&$irvar1); [line 40]\n  NULLIFY(&$irvar2); [line 40]\n  EXIT_SCOPE(templatePath,$irvar3,$irvar9,previewTheme,$irvar5,$T0_24,$irvar4,$irvar7,$irvar6,$irvar0,$irvar8,$irvar1,$irvar2); [line 40]\n  APPLY_ABSTRACTION; [line 40]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_2" ;
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_4" [label="4:  Call Object Map.get(Object) \n   n$0=*&#GB<>$com.zrlog.common.Constants.WEB_SITE:java.util.Map*(root com.zrlog.common.Constants) [line 31]\n  _=*n$0:java.util.Map*(root java.util.Map) [line 31]\n  n$2=_fun_Object Map.get(Object)(n$0:java.util.Map*,\"template\":java.lang.Object*) interface virtual [line 31]\n  *&$irvar0:java.lang.Object*=n$2 [line 31]\n  EXIT_SCOPE(_,n$0,n$2); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_4" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_5" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_4" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_5" [label="5:  Call String Object.toString() \n   n$3=*&$irvar0:java.lang.Object* [line 31]\n  _=*n$3:java.lang.Object*(root java.lang.Object) [line 31]\n  n$5=_fun_String Object.toString()(n$3:java.lang.Object*) virtual [line 31]\n  *&templatePath:java.lang.String*=n$5 [line 31]\n  NULLIFY(&$irvar0); [line 31]\n  EXIT_SCOPE(_,n$3,n$5,$irvar0); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_5" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_6" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_5" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_7" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_5" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_6" [label="6: Prune (true branch, if) \n   n$6=*&templatePath:java.lang.String* [line 32]\n  PRUNE(!(n$6 != null), true); [line 32]\n  NULLIFY(&templatePath); [line 32]\n  EXIT_SCOPE(n$6,templatePath); [line 32]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_6" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_8" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_6" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_7" [label="7: Prune (false branch, if) \n   n$6=*&templatePath:java.lang.String* [line 32]\n  PRUNE((n$6 != null), false); [line 32]\n  EXIT_SCOPE(n$6); [line 32]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_7" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_9" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_7" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_8" [label="8:  method_body \n   *&$T0_24:java.lang.Object*=\"/include/templates/default\" [line 32]\n  APPLY_ABSTRACTION; [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_8" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_10" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_8" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_9" [label="9:  method_body \n   n$7=*&templatePath:java.lang.String* [line 32]\n  *&$T0_24:java.lang.String*=n$7 [line 32]\n  NULLIFY(&templatePath); [line 32]\n  EXIT_SCOPE(n$7,templatePath); [line 32]\n  APPLY_ABSTRACTION; [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_9" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_10" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_9" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_10" [label="10:  method_body \n   n$8=*&$T0_24:java.lang.String* [line 32]\n  *&templatePath:java.lang.String*=n$8 [line 32]\n  NULLIFY(&$T0_24); [line 32]\n  EXIT_SCOPE(n$8,$T0_24); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_10" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_11" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_10" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_11" [label="11:  Call HttpServletRequest Controller.getRequest() \n   n$9=*&this:com.zrlog.web.controller.BaseController* [line 33]\n  _=*n$9:com.zrlog.web.controller.BaseController*(root com.zrlog.web.controller.BaseController) [line 33]\n  n$11=_fun_HttpServletRequest Controller.getRequest()(n$9:com.zrlog.web.controller.BaseController*) virtual [line 33]\n  *&$irvar1:javax.servlet.http.HttpServletRequest*=n$11 [line 33]\n  NULLIFY(&this); [line 33]\n  EXIT_SCOPE(_,n$9,n$11,this); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_11" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_12" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_11" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_12" [label="12:  Call Cookie[] HttpServletRequest.getCookies() \n   n$12=*&$irvar1:javax.servlet.http.HttpServletRequest* [line 33]\n  _=*n$12:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 33]\n  n$14=_fun_Cookie[] HttpServletRequest.getCookies()(n$12:javax.servlet.http.HttpServletRequest*) interface virtual [line 33]\n  *&$irvar2:javax.servlet.http.Cookie*[_*_](*)=n$14 [line 33]\n  NULLIFY(&$irvar1); [line 33]\n  EXIT_SCOPE(_,n$12,n$14,$irvar1); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_12" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_13" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_12" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_13" [label="13:  Call String TemplateHelper.getTemplatePathByCookie(Cookie[]) \n   n$15=*&$irvar2:javax.servlet.http.Cookie*[_*_](*) [line 33]\n  n$16=_fun_String TemplateHelper.getTemplatePathByCookie(Cookie[])(n$15:javax.servlet.http.Cookie*[_*_](*)) [line 33]\n  *&previewTheme:java.lang.String*=n$16 [line 33]\n  NULLIFY(&$irvar2); [line 33]\n  EXIT_SCOPE(n$15,n$16,$irvar2); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_13" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_14" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_13" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_15" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_13" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_14" [label="14: Prune (true branch, if) \n   n$17=*&previewTheme:java.lang.String* [line 34]\n  PRUNE(!(n$17 == null), true); [line 34]\n  NULLIFY(&templatePath); [line 34]\n  EXIT_SCOPE(n$17,templatePath); [line 34]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_14" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_16" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_14" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_15" [label="15: Prune (false branch, if) \n   n$17=*&previewTheme:java.lang.String* [line 34]\n  PRUNE((n$17 == null), false); [line 34]\n  NULLIFY(&previewTheme); [line 34]\n  EXIT_SCOPE(n$17,previewTheme); [line 34]\n  APPLY_ABSTRACTION; [line 34]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_15" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_17" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_15" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_16" [label="16:  method_body \n   n$18=*&previewTheme:java.lang.String* [line 35]\n  *&templatePath:java.lang.String*=n$18 [line 35]\n  NULLIFY(&previewTheme); [line 35]\n  EXIT_SCOPE(n$18,previewTheme); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_16" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_17" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_16" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_17" [label="17:  Call StringBuilder.<init>() \n   n$19=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 37]\n  n$20=_fun_StringBuilder.<init>()(n$19:java.lang.StringBuilder*) [line 37]\n  *&$irvar3:java.lang.StringBuilder*=n$19 [line 37]\n  EXIT_SCOPE(n$19,n$20); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_17" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_18" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_17" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_18" [label="18:  Call String PathKit.getWebRootPath() \n   n$21=_fun_String PathKit.getWebRootPath()() [line 37]\n  *&$irvar4:java.lang.String*=n$21 [line 37]\n  EXIT_SCOPE(n$21); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_18" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_19" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_18" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_19" [label="19:  Call StringBuilder StringBuilder.append(String) \n   n$22=*&$irvar3:java.lang.StringBuilder* [line 37]\n  _=*n$22:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37]\n  n$24=*&$irvar4:java.lang.String* [line 37]\n  n$25=_fun_StringBuilder StringBuilder.append(String)(n$22:java.lang.StringBuilder*,n$24:java.lang.String*) virtual [line 37]\n  *&$irvar5:java.lang.StringBuilder*=n$25 [line 37]\n  NULLIFY(&$irvar3); [line 37]\n  NULLIFY(&$irvar4); [line 37]\n  EXIT_SCOPE(_,n$22,n$24,n$25,$irvar3,$irvar4); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_19" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_20" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_19" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_20" [label="20:  Call StringBuilder StringBuilder.append(String) \n   n$26=*&$irvar5:java.lang.StringBuilder* [line 37]\n  _=*n$26:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37]\n  n$28=*&templatePath:java.lang.String* [line 37]\n  n$29=_fun_StringBuilder StringBuilder.append(String)(n$26:java.lang.StringBuilder*,n$28:java.lang.String*) virtual [line 37]\n  *&$irvar6:java.lang.StringBuilder*=n$29 [line 37]\n  NULLIFY(&$irvar5); [line 37]\n  EXIT_SCOPE(_,n$26,n$28,n$29,$irvar5); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_20" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_21" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_20" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_21" [label="21:  Call String StringBuilder.toString() \n   n$30=*&$irvar6:java.lang.StringBuilder* [line 37]\n  _=*n$30:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37]\n  n$32=_fun_String StringBuilder.toString()(n$30:java.lang.StringBuilder*) virtual [line 37]\n  *&$irvar7:java.lang.String*=n$32 [line 37]\n  NULLIFY(&$irvar6); [line 37]\n  EXIT_SCOPE(_,n$30,n$32,$irvar6); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_21" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_22" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_21" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_22" [label="22:  Call File.<init>(String) \n   n$33=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 37]\n  n$34=*&$irvar7:java.lang.String* [line 37]\n  n$35=_fun_File.<init>(String)(n$33:java.io.File*,n$34:java.lang.String*) [line 37]\n  *&$irvar8:java.io.File*=n$33 [line 37]\n  NULLIFY(&$irvar7); [line 37]\n  EXIT_SCOPE(n$33,n$34,n$35,$irvar7); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_22" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_23" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_22" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_23" [label="23:  Call boolean File.exists() \n   n$36=*&$irvar8:java.io.File* [line 37]\n  _=*n$36:java.io.File*(root java.io.File) [line 37]\n  n$38=_fun_boolean File.exists()(n$36:java.io.File*) virtual [line 37]\n  *&$irvar9:_Bool=n$38 [line 37]\n  NULLIFY(&$irvar8); [line 37]\n  EXIT_SCOPE(_,n$36,n$38,$irvar8); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_23" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_24" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_23" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_25" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_23" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_24" [label="24: Prune (true branch, if) \n   n$39=*&$irvar9:_Bool [line 37]\n  PRUNE(!(n$39 != 0), true); [line 37]\n  NULLIFY(&templatePath); [line 37]\n  NULLIFY(&$irvar9); [line 37]\n  EXIT_SCOPE(n$39,templatePath,$irvar9); [line 37]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_24" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_26" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_24" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_25" [label="25: Prune (false branch, if) \n   n$39=*&$irvar9:_Bool [line 37]\n  PRUNE((n$39 != 0), false); [line 37]\n  NULLIFY(&$irvar9); [line 37]\n  EXIT_SCOPE(n$39,$irvar9); [line 37]\n  APPLY_ABSTRACTION; [line 37]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_25" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_27" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_25" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_26" [label="26:  method_body \n   *&templatePath:java.lang.Object*=\"/include/templates/default\" [line 38]\n  APPLY_ABSTRACTION; [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_26" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_27" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_26" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+"com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_27" [label="27:  method_body \n   n$40=*&templatePath:java.lang.Object* [line 40]\n  *&return:java.lang.String*=n$40 [line 40]\n  NULLIFY(&templatePath); [line 40]\n  EXIT_SCOPE(n$40,templatePath); [line 40]\n  APPLY_ABSTRACTION; [line 40]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_27" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_2" ;
+	 "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_27" -> "com.zrlog.web.controller.BaseController.getTemplatePath():java.lang.String.005c5127fa703d6707b42e4d56f43721_3" [color="red" ];
+}

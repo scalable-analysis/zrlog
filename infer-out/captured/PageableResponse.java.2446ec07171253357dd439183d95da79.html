@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>PageableResponse.java.2446ec07171253357dd439183d95da79</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File common/src/main/java/com/zrlog/common/response/PageableResponse.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.common.response; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import java.util.ArrayList; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import java.util.List; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">public class PageableResponse&lt;T&gt; extends StandardResponse { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 6];
+n$1=_fun_StandardResponse.&lt;init&gt;()(n$0:com.zrlog.common.response.PageableResponse*) [line 6];
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9.html">summary for PageableResponse.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">    private long total; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">    private long records; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">    private long page; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    private List&lt;T&gt; rows = new ArrayList&lt;&gt;(); <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=_fun___new(sizeof(t=java.util.ArrayList):java.util.ArrayList*) [line 11];
+n$3=_fun_ArrayList.&lt;init&gt;()(n$2:java.util.ArrayList*) [line 11];
+*&amp;$irvar0:java.util.ArrayList*=n$2 [line 11];
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.common.response.PageableResponse* [line 11];
+n$5=*&amp;$irvar0:java.util.ArrayList* [line 11];
+*n$4.rows:com.zrlog.common.response.PageableResponse(root com.zrlog.common.response.PageableResponse)=n$5 [line 11];
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.<init>%28%29.f5f7e66b7a4d66c44b569037b1d6cac9_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    public long getTotal() { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getTotal%28%29%3Along.91d62fc5529c87b4f20257911329de9d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.getTotal%28%29%3Along.91d62fc5529c87b4f20257911329de9d.html">summary for long PageableResponse.getTotal()</a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">        return total; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getTotal%28%29%3Along.91d62fc5529c87b4f20257911329de9d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 14];
+n$1=*n$0.total:long(root com.zrlog.common.response.PageableResponse) [line 14];
+*&amp;return:long=n$1 [line 14];
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getTotal%28%29%3Along.91d62fc5529c87b4f20257911329de9d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getTotal%28%29%3Along.91d62fc5529c87b4f20257911329de9d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    public void setTotal(long total) { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setTotal%28long%29%3Avoid.acb965f4655034986d5c06e06a6b3fee_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.setTotal%28long%29%3Avoid.acb965f4655034986d5c06e06a6b3fee.html">summary for void PageableResponse.setTotal(long)</a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">        this.total = total; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setTotal%28long%29%3Avoid.acb965f4655034986d5c06e06a6b3fee_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 18];
+n$1=*&amp;total:long [line 18];
+*n$0.total:com.zrlog.common.response.PageableResponse(root com.zrlog.common.response.PageableResponse)=n$1 [line 18];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    } <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setTotal%28long%29%3Avoid.acb965f4655034986d5c06e06a6b3fee_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setTotal%28long%29%3Avoid.acb965f4655034986d5c06e06a6b3fee_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setTotal%28long%29%3Avoid.acb965f4655034986d5c06e06a6b3fee_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    public List&lt;T&gt; getRows() { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRows%28%29%3Ajava.util.List.b2437d7ae3830f4a4cb362a8f5e8cfe6_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.getRows%28%29%3Ajava.util.List.b2437d7ae3830f4a4cb362a8f5e8cfe6.html">summary for List PageableResponse.getRows()</a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        return rows; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRows%28%29%3Ajava.util.List.b2437d7ae3830f4a4cb362a8f5e8cfe6_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 22];
+n$1=*n$0.rows:java.util.List*(root com.zrlog.common.response.PageableResponse) [line 22];
+*&amp;return:java.util.List*=n$1 [line 22];
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRows%28%29%3Ajava.util.List.b2437d7ae3830f4a4cb362a8f5e8cfe6_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRows%28%29%3Ajava.util.List.b2437d7ae3830f4a4cb362a8f5e8cfe6_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    public void setRows(List&lt;T&gt; rows) { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRows%28java.util.List%29%3Avoid.7b13571d4646cea2eee1b856ed46b6ac_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.setRows%28java.util.List%29%3Avoid.7b13571d4646cea2eee1b856ed46b6ac.html">summary for void PageableResponse.setRows(List)</a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">        this.rows = rows; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRows%28java.util.List%29%3Avoid.7b13571d4646cea2eee1b856ed46b6ac_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 26];
+n$1=*&amp;rows:java.util.List* [line 26];
+*n$0.rows:com.zrlog.common.response.PageableResponse(root com.zrlog.common.response.PageableResponse)=n$1 [line 26];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    } <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRows%28java.util.List%29%3Avoid.7b13571d4646cea2eee1b856ed46b6ac_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRows%28java.util.List%29%3Avoid.7b13571d4646cea2eee1b856ed46b6ac_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRows%28java.util.List%29%3Avoid.7b13571d4646cea2eee1b856ed46b6ac_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">    public long getRecords() { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRecords%28%29%3Along.a56f51105c06da5c47dc611bbc49dc37_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.getRecords%28%29%3Along.a56f51105c06da5c47dc611bbc49dc37.html">summary for long PageableResponse.getRecords()</a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        return records; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRecords%28%29%3Along.a56f51105c06da5c47dc611bbc49dc37_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 30];
+n$1=*n$0.records:long(root com.zrlog.common.response.PageableResponse) [line 30];
+*&amp;return:long=n$1 [line 30];
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRecords%28%29%3Along.a56f51105c06da5c47dc611bbc49dc37_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getRecords%28%29%3Along.a56f51105c06da5c47dc611bbc49dc37_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    public void setRecords(long records) { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRecords%28long%29%3Avoid.d49c0148e34d19285bd6d7f2589834b1_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.setRecords%28long%29%3Avoid.d49c0148e34d19285bd6d7f2589834b1.html">summary for void PageableResponse.setRecords(long)</a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">        this.records = records; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRecords%28long%29%3Avoid.d49c0148e34d19285bd6d7f2589834b1_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 34];
+n$1=*&amp;records:long [line 34];
+*n$0.records:com.zrlog.common.response.PageableResponse(root com.zrlog.common.response.PageableResponse)=n$1 [line 34];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">    } <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRecords%28long%29%3Avoid.d49c0148e34d19285bd6d7f2589834b1_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRecords%28long%29%3Avoid.d49c0148e34d19285bd6d7f2589834b1_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setRecords%28long%29%3Avoid.d49c0148e34d19285bd6d7f2589834b1_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">    public long getPage() { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getPage%28%29%3Along.4af698cd6a6a0b3f18266fae4532dbc8_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.getPage%28%29%3Along.4af698cd6a6a0b3f18266fae4532dbc8.html">summary for long PageableResponse.getPage()</a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">        return page; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getPage%28%29%3Along.4af698cd6a6a0b3f18266fae4532dbc8_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 38];
+n$1=*n$0.page:long(root com.zrlog.common.response.PageableResponse) [line 38];
+*&amp;return:long=n$1 [line 38];
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getPage%28%29%3Along.4af698cd6a6a0b3f18266fae4532dbc8_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.getPage%28%29%3Along.4af698cd6a6a0b3f18266fae4532dbc8_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">    public void setPage(long page) { <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setPage%28long%29%3Avoid.6fd86d71ea76b2e1a453d621e8219be3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/com.zrlog.common.response.PageableResponse.setPage%28long%29%3Avoid.6fd86d71ea76b2e1a453d621e8219be3.html">summary for void PageableResponse.setPage(long)</a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">        this.page = page; <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setPage%28long%29%3Avoid.6fd86d71ea76b2e1a453d621e8219be3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.response.PageableResponse* [line 42];
+n$1=*&amp;page:long [line 42];
+*n$0.page:com.zrlog.common.response.PageableResponse(root com.zrlog.common.response.PageableResponse)=n$1 [line 42];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">    } <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setPage%28long%29%3Avoid.6fd86d71ea76b2e1a453d621e8219be3_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setPage%28long%29%3Avoid.6fd86d71ea76b2e1a453d621e8219be3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PageableResponse.java.2446ec07171253357dd439183d95da79/nodes/com.zrlog.common.response.PageableResponse.setPage%28long%29%3Avoid.6fd86d71ea76b2e1a453d621e8219be3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

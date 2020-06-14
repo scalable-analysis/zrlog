@@ -1,0 +1,34 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_1" [label="1: Start Outline.<init>()\nFormals:  this:com.zrlog.common.vo.Outline*\nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_1" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_4" ;
+"com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_2" [label="2: Exit Outline.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 8]\n  EXIT_SCOPE($irvar0); [line 8]\n  APPLY_ABSTRACTION; [line 8]\n " shape="box"]
+	
+
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_3" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_2" ;
+"com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_4" [label="4:  Call Object.<init>() \n   n$0=*&this:com.zrlog.common.vo.Outline* [line 3]\n  n$1=_fun_Object.<init>()(n$0:com.zrlog.common.vo.Outline*) [line 3]\n  EXIT_SCOPE(n$0,n$1); [line 3]\n " shape="box"]
+	
+
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_4" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_5" ;
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_4" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_3" [color="red" ];
+"com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_5" [label="5:  Call OutlineVO.<init>() \n   n$2=_fun___new(sizeof(t=com.zrlog.common.vo.OutlineVO):com.zrlog.common.vo.OutlineVO*) [line 8]\n  n$3=_fun_OutlineVO.<init>()(n$2:com.zrlog.common.vo.OutlineVO*) [line 8]\n  *&$irvar0:com.zrlog.common.vo.OutlineVO*=n$2 [line 8]\n  EXIT_SCOPE(n$2,n$3); [line 8]\n " shape="box"]
+	
+
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_5" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_6" ;
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_5" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_3" [color="red" ];
+"com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_6" [label="6:  method_body \n   n$4=*&this:com.zrlog.common.vo.Outline* [line 8]\n  n$5=*&$irvar0:com.zrlog.common.vo.OutlineVO* [line 8]\n  *n$4.children:com.zrlog.common.vo.Outline(root com.zrlog.common.vo.Outline)=n$5 [line 8]\n  NULLIFY(&$irvar0); [line 8]\n  NULLIFY(&this); [line 8]\n  EXIT_SCOPE(n$4,n$5,$irvar0,this); [line 8]\n " shape="box"]
+	
+
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_6" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_7" ;
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_6" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_3" [color="red" ];
+"com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_7" [label="7:  method_body \n   APPLY_ABSTRACTION; [line 8]\n " shape="box"]
+	
+
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_7" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_2" ;
+	 "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_7" -> "com.zrlog.common.vo.Outline.<init>().b4c8305779f594b37b217edf490152ef_3" [color="red" ];
+}

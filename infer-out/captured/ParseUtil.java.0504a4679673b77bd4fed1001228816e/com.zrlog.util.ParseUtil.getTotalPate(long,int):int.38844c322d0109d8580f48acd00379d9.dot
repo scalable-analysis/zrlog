@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_1" [label="1: Start int ParseUtil.getTotalPate(long,int)\nFormals:  count:long pageSize:int\nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_1" -> "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_4" ;
+"com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_2" [label="2: Exit int ParseUtil.getTotalPate(long,int) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 24]\n  EXIT_SCOPE($irvar0); [line 24]\n  APPLY_ABSTRACTION; [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_3" -> "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_2" ;
+"com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_4" [label="4:  Call double Math.ceil(double) \n   n$0=*&count:long [line 24]\n  n$1=*&pageSize:int [line 24]\n  n$2=_fun_double Math.ceil(double)(((double)n$0 / ((double)n$1 * 1.)):double) [line 24]\n  *&$irvar0:double=n$2 [line 24]\n  NULLIFY(&pageSize); [line 24]\n  NULLIFY(&count); [line 24]\n  EXIT_SCOPE(n$0,n$1,n$2,pageSize,count); [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_4" -> "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_5" ;
+	 "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_4" -> "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_3" [color="red" ];
+"com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_5" [label="5:  method_body \n   n$3=*&$irvar0:double [line 24]\n  *&return:int=(int)n$3 [line 24]\n  NULLIFY(&$irvar0); [line 24]\n  EXIT_SCOPE(n$3,$irvar0); [line 24]\n  APPLY_ABSTRACTION; [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_5" -> "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_2" ;
+	 "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_5" -> "com.zrlog.util.ParseUtil.getTotalPate(long,int):int.38844c322d0109d8580f48acd00379d9_3" [color="red" ];
+}

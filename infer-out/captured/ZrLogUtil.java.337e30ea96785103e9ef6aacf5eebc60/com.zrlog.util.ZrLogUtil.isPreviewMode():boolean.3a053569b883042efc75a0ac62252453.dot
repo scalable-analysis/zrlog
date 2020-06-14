@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_1" [label="1: Start boolean ZrLogUtil.isPreviewMode()\nFormals: \nLocals:  $irvar0:void value:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_1" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_4" ;
+"com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_2" [label="2: Exit boolean ZrLogUtil.isPreviewMode() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 223]\n  NULLIFY(&value); [line 223]\n  EXIT_SCOPE($irvar0,value); [line 223]\n  APPLY_ABSTRACTION; [line 223]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_3" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_2" ;
+"com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_4" [label="4:  Call String System.getenv(String) \n   n$0=_fun_String System.getenv(String)(\"PREVIEW_MODE\":java.lang.Object*) [line 222]\n  *&value:java.lang.String*=n$0 [line 222]\n  EXIT_SCOPE(n$0); [line 222]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_4" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_5" ;
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_4" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_5" [label="5:  Call boolean String.equalsIgnoreCase(String) \n   n$1=*&value:java.lang.String* [line 223]\n  n$2=_fun_boolean String.equalsIgnoreCase(String)(\"true\":java.lang.Object*,n$1:java.lang.String*) virtual [line 223]\n  *&$irvar0:_Bool=n$2 [line 223]\n  NULLIFY(&value); [line 223]\n  EXIT_SCOPE(n$1,n$2,value); [line 223]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_5" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_6" ;
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_5" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_6" [label="6:  method_body \n   n$3=*&$irvar0:_Bool [line 223]\n  *&return:_Bool=n$3 [line 223]\n  NULLIFY(&$irvar0); [line 223]\n  EXIT_SCOPE(n$3,$irvar0); [line 223]\n  APPLY_ABSTRACTION; [line 223]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_6" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_2" ;
+	 "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_6" -> "com.zrlog.util.ZrLogUtil.isPreviewMode():boolean.3a053569b883042efc75a0ac62252453_3" [color="red" ];
+}

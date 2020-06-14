@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.plugin.RequestStatisticsPlugin.save():void.eacd111bdeea3192e994b659e857dfb1_node12</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">12</a></h1></center>PROC: <a href="./../com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1.html">void RequestStatisticsPlugin.save()</a> LINE: <a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">117</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node11.html"><span class='visited with_tooltip'>N_11<span class='tooltip'>node11 preds:10 succs:12 exn:19 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node13.html"><span class='visited with_tooltip'>N_13<span class='tooltip'>node13 preds:12 succs:17 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node19.html"><span class='visited with_tooltip'>N_19<span class='tooltip'>node19 preds: succs:18 exn:3 </span></span></a><br>
+<LISTING class='color_green'>n$24=*&amp;$irvar4:com.zrlog.model.WebSite* [line 117];
+_=*n$24:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 117];
+n$26=*&amp;$irvar6:java.lang.String* [line 117];
+n$27=_fun_boolean WebSite.updateByKV(String,Object)(n$24:com.zrlog.model.WebSite*,"article_request_statistics":java.lang.Object*,n$26:java.lang.String*) virtual [line 117];
+*&amp;$irvar7:_Bool=n$27 [line 117];
+</LISTING>
+<hr width="100%">
+<a name="session18" href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node12.html#session18">node12#session18</a>(<a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">117</a>) [compute pre] liveness 12
+<LISTING class='color_black'>JOIN
+
+LEFT:   { this }
+RIGHT:  { return, this, CatchVar69 }
+RESULT: = RIGHT
+
+</LISTING>
+<hr width="100%">
+<a name="session19" href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node12.html#session19">node12#session19</a>(<a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">117</a>) [exec] liveness 12
+<LISTING class='color_black'>PRE STATE:
+{ return, this, CatchVar69 }
+
+INSTR=  *&amp;$irvar7:_Bool=n$27 [line 117]; 
+
+STATE:
+{ n$27, return, this, CatchVar69 }
+
+INSTR=  n$27=_fun_boolean WebSite.updateByKV(String,Object)(n$24:com.zrlog.model.WebSite*,&quot;article_request_statistics&quot;:java.lang.Object*,n$26:java.lang.String*) virtual [line 117]; 
+
+STATE:
+{ n$24, n$26, return, this, CatchVar69 }
+
+INSTR=  n$26=*&amp;$irvar6:java.lang.String* [line 117]; 
+
+STATE:
+{ n$24, $irvar6, return, this, CatchVar69 }
+
+INSTR=  _=*n$24:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 117]; 
+
+STATE UNCHANGED
+
+INSTR=  n$24=*&amp;$irvar4:com.zrlog.model.WebSite* [line 117]; 
+
+STATE:
+{ $irvar4, $irvar6, return, this, CatchVar69 }
+
+</LISTING>
+<hr width="100%">
+<a name="session55" href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node12.html#session55">node12#session55</a>(<a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">117</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session56" href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node12.html#session56">node12#session56</a>(<a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">117</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $irvar4, $irvar6 },
+{ _, n$20, n$22, n$23, $irvar5, plugin.RequestStatisticsPlugin })
+
+INSTR=  n$24=*&amp;$irvar4:com.zrlog.model.WebSite* [line 117]; 
+
+STATE:
+({ n$24, $irvar4, $irvar6 },
+{ _, n$20, n$22, n$23, $irvar5, plugin.RequestStatisticsPlugin })
+
+INSTR=  _=*n$24:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 117]; 
+
+STATE:
+({ _, n$24, $irvar4, $irvar6 },
+{ _, n$20, n$22, n$23, $irvar5, plugin.RequestStatisticsPlugin })
+
+INSTR=  n$26=*&amp;$irvar6:java.lang.String* [line 117]; 
+
+STATE:
+({ _, n$24, n$26, $irvar4, $irvar6 },
+{ _, n$20, n$22, n$23, $irvar5, plugin.RequestStatisticsPlugin })
+
+INSTR=  n$27=_fun_boolean WebSite.updateByKV(String,Object)(n$24:com.zrlog.model.WebSite*,&quot;article_request_statistics&quot;:java.lang.Object*,n$26:java.lang.String*) virtual [line 117]; 
+
+STATE:
+({ _, n$24, n$26, n$27, $irvar4, $irvar6 },
+{ _, n$20, n$22, n$23, $irvar5, plugin.RequestStatisticsPlugin })
+
+INSTR=  *&amp;$irvar7:_Bool=n$27 [line 117]; 
+
+STATE:
+({ },{ _, n$24, n$26, n$27, $irvar4, $irvar7, $irvar6 })
+
+</LISTING>
+<hr width="100%">
+<a name="session18" href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node12.html#session18">node12#session18</a>(<a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">117</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session19" href="./../nodes/com.zrlog.web.plugin.RequestStatisticsPlugin.save%28%29%3Avoid.eacd111bdeea3192e994b659e857dfb1_node12.html#session19">node12#session19</a>(<a href="./../../RequestStatisticsPlugin.java.a799d114572644c4ca1f2d99f6d24bb4.html#LINE117">117</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$15 -&gt; { } }
+
+
+
+
+INSTR=  n$27 := boolean WebSite.updateByKV(String,Object)({ n$16,
+                                                            &quot;article_request_statistics&quot;,
+                                                            n$23 }) [line 117]; 
+
+STATE:
+{ n$15 -&gt; { }, n$27 -&gt; { } }
+
+
+INSTR=  NULLIFY(&amp;$irvar4); [line 117]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar7); [line 117]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar6); [line 117]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$27); [line 117]; 
+
+STATE:
+{ n$15 -&gt; { }, n$27 -&gt; { } }
+
+</LISTING>

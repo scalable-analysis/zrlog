@@ -1,0 +1,39 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_1" [label="1: Start UpdateRecordResponse CommentService.read(ReadCommentRequest)\nFormals:  this:com.zrlog.service.CommentService* commentRequest:com.zrlog.common.request.ReadCommentRequest*\nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_1" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_4" ;
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_2" [label="2: Exit UpdateRecordResponse CommentService.read(ReadCommentRequest) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 94]\n  NULLIFY(&$irvar1); [line 94]\n  NULLIFY(&$irvar2); [line 94]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 94]\n  APPLY_ABSTRACTION; [line 94]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_3" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_2" ;
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_4" [label="4:  Call Comment.<init>() \n   n$0=_fun___new(sizeof(t=com.zrlog.model.Comment):com.zrlog.model.Comment*) [line 93]\n  n$1=_fun_Comment.<init>()(n$0:com.zrlog.model.Comment*) [line 93]\n  *&$irvar0:com.zrlog.model.Comment*=n$0 [line 93]\n  EXIT_SCOPE(n$0,n$1); [line 93]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_4" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_5" ;
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_4" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_3" [color="red" ];
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_5" [label="5:  Call long ReadCommentRequest.getId() \n   n$2=*&commentRequest:com.zrlog.common.request.ReadCommentRequest* [line 93]\n  _=*n$2:com.zrlog.common.request.ReadCommentRequest*(root com.zrlog.common.request.ReadCommentRequest) [line 93]\n  n$4=_fun_long ReadCommentRequest.getId()(n$2:com.zrlog.common.request.ReadCommentRequest*) virtual [line 93]\n  *&$irvar1:long=n$4 [line 93]\n  NULLIFY(&commentRequest); [line 93]\n  EXIT_SCOPE(_,n$2,n$4,commentRequest); [line 93]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_5" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_6" ;
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_5" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_3" [color="red" ];
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_6" [label="6:  Call void Comment.doRead(long) \n   n$5=*&$irvar0:com.zrlog.model.Comment* [line 93]\n  _=*n$5:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 93]\n  n$7=*&$irvar1:long [line 93]\n  n$8=_fun_void Comment.doRead(long)(n$5:com.zrlog.model.Comment*,n$7:long) virtual [line 93]\n  NULLIFY(&$irvar0); [line 93]\n  NULLIFY(&$irvar1); [line 93]\n  EXIT_SCOPE(_,n$5,n$7,n$8,$irvar0,$irvar1); [line 93]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_6" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_7" ;
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_6" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_3" [color="red" ];
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_7" [label="7:  Call UpdateRecordResponse.<init>() \n   n$9=_fun___new(sizeof(t=com.zrlog.common.response.UpdateRecordResponse):com.zrlog.common.response.UpdateRecordResponse*) [line 94]\n  n$10=_fun_UpdateRecordResponse.<init>()(n$9:com.zrlog.common.response.UpdateRecordResponse*) [line 94]\n  *&$irvar2:com.zrlog.common.response.UpdateRecordResponse*=n$9 [line 94]\n  EXIT_SCOPE(n$9,n$10); [line 94]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_7" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_8" ;
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_7" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_3" [color="red" ];
+"com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_8" [label="8:  method_body \n   n$11=*&$irvar2:com.zrlog.common.response.UpdateRecordResponse* [line 94]\n  *&return:com.zrlog.common.response.UpdateRecordResponse*=n$11 [line 94]\n  NULLIFY(&$irvar2); [line 94]\n  EXIT_SCOPE(n$11,$irvar2); [line 94]\n  APPLY_ABSTRACTION; [line 94]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_8" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_2" ;
+	 "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_8" -> "com.zrlog.service.CommentService.read(com.zrlog.common.request.ReadCommentRequest):com.zrlog.common..c7fef838ad3f505df1c89e964b2b333f_3" [color="red" ];
+}

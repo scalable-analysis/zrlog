@@ -1,0 +1,468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/plugin/UpdateVersionTimerTask.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.plugin; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.google.gson.Gson; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.hibegin.common.util.http.HttpUtil; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.zrlog.common.vo.Version; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import com.zrlog.util.BlogBuildInfoUtil; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import com.zrlog.util.ZrLogUtil; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import org.slf4j.Logger; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import org.slf4j.LoggerFactory; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">import java.io.IOException; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">import java.text.ParseException; </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">import java.text.SimpleDateFormat; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">import java.util.Date; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">import java.util.TimerTask; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line"> * 定时检查是否有新的更新包可用，原则比较简单，比对服务器罪行buildId和war包的构建时间（与resources/build.properties对比） </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line"> * 注意 开发环境没有这个文件 </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">class UpdateVersionTimerTask extends TimerTask { </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(UpdateVersionTimerTask.class); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<clinit>%28%29%3Avoid.cbd727707a49d5b6ecb0d8b98c05d4da_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<clinit>%28%29%3Avoid.cbd727707a49d5b6ecb0d8b98c05d4da_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.plugin.UpdateVersionTimerTask:java.lang.Object*) [line 24];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 24];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<clinit>%28%29%3Avoid.cbd727707a49d5b6ecb0d8b98c05d4da_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:org.slf4j.Logger* [line 24];
+*&amp;#GB<>$com.zrlog.web.plugin.UpdateVersionTimerTask.LOGGER:com.zrlog.web.plugin.UpdateVersionTimerTask(root com.zrlog.web.plugin.UpdateVersionTimerTask)=n$1 [line 24];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<clinit>%28%29%3Avoid.cbd727707a49d5b6ecb0d8b98c05d4da_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<clinit>%28%29%3Avoid.cbd727707a49d5b6ecb0d8b98c05d4da_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<clinit>%28%29%3Avoid.cbd727707a49d5b6ecb0d8b98c05d4da_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/com.zrlog.web.plugin.UpdateVersionTimerTask.<clinit>%28%29%3Avoid.cbd727707a49d5b6ecb0d8b98c05d4da.html">summary for void UpdateVersionTimerTask.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    private boolean checkPreview; </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    private Version version; </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">    UpdateVersionTimerTask(boolean checkPreview) { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<init>%28boolean%29.a41c4035ebdcd8ff20808efe8479a0ee_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<init>%28boolean%29.a41c4035ebdcd8ff20808efe8479a0ee_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 29];
+n$1=_fun_TimerTask.&lt;init&gt;()(n$0:com.zrlog.web.plugin.UpdateVersionTimerTask*) [line 29];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/com.zrlog.web.plugin.UpdateVersionTimerTask.<init>%28boolean%29.a41c4035ebdcd8ff20808efe8479a0ee.html">summary for UpdateVersionTimerTask.&lt;init&gt;(boolean)</a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        this.checkPreview = checkPreview; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<init>%28boolean%29.a41c4035ebdcd8ff20808efe8479a0ee_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 30];
+n$3=*&amp;checkPreview:_Bool [line 30];
+*n$2.checkPreview:com.zrlog.web.plugin.UpdateVersionTimerTask(root com.zrlog.web.plugin.UpdateVersionTimerTask)=n$3 [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    } <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<init>%28boolean%29.a41c4035ebdcd8ff20808efe8479a0ee_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<init>%28boolean%29.a41c4035ebdcd8ff20808efe8479a0ee_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.<init>%28boolean%29.a41c4035ebdcd8ff20808efe8479a0ee_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">    public void run() { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e.html">summary for void UpdateVersionTimerTask.run()</a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">            this.version = fetchLastVersion(checkPreview); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:11 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 36];
+_=*n$0:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 36];
+n$2=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 36];
+n$3=*n$2.checkPreview:_Bool(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 36];
+n$4=_fun_Version UpdateVersionTimerTask.fetchLastVersion(boolean)(n$0:com.zrlog.web.plugin.UpdateVersionTimerTask*,n$3:_Bool) virtual [line 36];
+*&amp;$irvar0:com.zrlog.common.vo.Version*=n$4 [line 36];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:8 exn:11 Instructions
+n$5=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 36];
+n$6=*&amp;$irvar0:com.zrlog.common.vo.Version* [line 36];
+*n$5.version:com.zrlog.web.plugin.UpdateVersionTimerTask(root com.zrlog.web.plugin.UpdateVersionTimerTask)=n$6 [line 36];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">        } catch (Exception e) { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:9 succs:7 exn:3 Instructions
+n$7=*&amp;CatchVar15:java.lang.Object* [line 37];
+*&amp;e:java.lang.Object*=n$7 [line 37];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:11 succs:6 exn:3 Conditional exception handler
+n$14=_fun___instanceof(n$13:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 37];
+PRUNE(n$14, true); [line 37];
+*&amp;CatchVar15:void=n$13 [line 37];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:11 succs:3 exn:3 Conditional exception handler
+n$14=_fun___instanceof(n$13:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 37];
+PRUNE(!n$14, false); [line 37];
+*&amp;return:void=EXN n$13 [line 37];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds: succs:9 10 exn:3 Instructions
+n$12=*&amp;return:void [line 37];
+*&amp;return:void=null [line 37];
+n$13=_fun___unwrap_exception(n$12:void) [line 37];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">            LOGGER.error(&quot;&quot;,e); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$8=*&amp;#GB<>$com.zrlog.web.plugin.UpdateVersionTimerTask.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 38];
+_=*n$8:org.slf4j.Logger*(root org.slf4j.Logger) [line 38];
+n$10=*&amp;e:java.lang.Object* [line 38];
+n$11=_fun_void Logger.error(String,Throwable)(n$8:org.slf4j.Logger*,"":java.lang.Object*,n$10:java.lang.Object*) interface virtual [line 38];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">    } <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.run%28%29%3Avoid.a23812f2cef1c85e188ca5ef2dc5749e_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:10 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">    Version fetchLastVersion(boolean ckPreview) throws IOException, ParseException { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc.html">summary for Version UpdateVersionTimerTask.fetchLastVersion(boolean)</a></td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">        String versionUrl; </td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">        if (ckPreview) { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;ckPreview:_Bool [line 44];
+PRUNE(!(n$0 == 0), true); [line 44];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:7 exn:3 Conditional method_body
+n$0=*&amp;ckPreview:_Bool [line 44];
+PRUNE((n$0 == 0), false); [line 44];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">            versionUrl = Constants.ZRLOG_RESOURCE_DOWNLOAD_URL + &quot;/preview/last.version.json&quot;; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:8 exn:3 Instructions
+*&amp;versionUrl:java.lang.Object*="http://dl.zrlog.com/preview/last.version.json" [line 45];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">            versionUrl = Constants.ZRLOG_RESOURCE_DOWNLOAD_URL + &quot;/release/last.version.json&quot;; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:3 Instructions
+*&amp;versionUrl:java.lang.Object*="http://dl.zrlog.com/release/last.version.json" [line 47];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">        Version lastVersion = getVersion(versionUrl); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 6 succs:9 exn:3 Instructions
+n$1=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 49];
+n$2=*&amp;versionUrl:java.lang.Object* [line 49];
+n$3=_fun_Version UpdateVersionTimerTask.getVersion(String)(n$1:com.zrlog.web.plugin.UpdateVersionTimerTask*,n$2:java.lang.Object*) [line 49];
+*&amp;lastVersion:com.zrlog.common.vo.Version*=n$3 [line 49];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">        Date buildDate = new SimpleDateFormat(Constants.DATE_FORMAT_PATTERN).parse(lastVersion.getReleaseDate()); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$4=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 50];
+n$5=_fun_SimpleDateFormat.&lt;init&gt;(String)(n$4:java.text.SimpleDateFormat*,"yyyy-MM-dd HH:mm:ssXXX":java.lang.Object*) [line 50];
+*&amp;$irvar0:java.text.SimpleDateFormat*=n$4 [line 50];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$6=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 50];
+_=*n$6:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 50];
+n$8=_fun_String Version.getReleaseDate()(n$6:com.zrlog.common.vo.Version*) virtual [line 50];
+*&amp;$irvar1:java.lang.String*=n$8 [line 50];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 13 exn:3 Instructions
+n$9=*&amp;$irvar0:java.text.SimpleDateFormat* [line 50];
+_=*n$9:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 50];
+n$11=*&amp;$irvar1:java.lang.String* [line 50];
+n$12=_fun_Date DateFormat.parse(String)(n$9:java.text.SimpleDateFormat*,n$11:java.lang.String*) virtual [line 50];
+*&amp;buildDate:java.util.Date*=n$12 [line 50];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">        //如果已是最新预览版，那么尝试检查正式版本 </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">        if (checkPreview &amp;&amp; !ZrLogUtil.greatThenCurrentVersion(lastVersion.getBuildId(), buildDate, lastVersion.getVersion())) { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:11 succs:14 exn:3 Conditional method_body
+n$13=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 52];
+n$14=*n$13.checkPreview:_Bool(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 52];
+PRUNE(!(n$14 == 0), true); [line 52];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:12 succs:15 exn:3 Instructions
+n$15=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 52];
+_=*n$15:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 52];
+n$17=_fun_String Version.getBuildId()(n$15:com.zrlog.common.vo.Version*) virtual [line 52];
+*&amp;$irvar2:java.lang.String*=n$17 [line 52];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$18=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 52];
+_=*n$18:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 52];
+n$20=_fun_String Version.getVersion()(n$18:com.zrlog.common.vo.Version*) virtual [line 52];
+*&amp;$irvar3:java.lang.String*=n$20 [line 52];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 18 exn:3 Instructions
+n$21=*&amp;$irvar2:java.lang.String* [line 52];
+n$22=*&amp;buildDate:java.util.Date* [line 52];
+n$23=*&amp;$irvar3:java.lang.String* [line 52];
+n$24=_fun_boolean ZrLogUtil.greatThenCurrentVersion(String,Date,String)(n$21:java.lang.String*,n$22:java.util.Date*,n$23:java.lang.String*) [line 52];
+*&amp;$irvar4:_Bool=n$24 [line 52];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:16 succs:19 exn:3 Conditional method_body
+n$25=*&amp;$irvar4:_Bool [line 52];
+PRUNE(!(n$25 != 0), true); [line 52];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:16 succs:23 exn:3 Conditional method_body
+n$25=*&amp;$irvar4:_Bool [line 52];
+PRUNE((n$25 != 0), false); [line 52];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:11 succs:23 exn:3 Conditional method_body
+n$13=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 52];
+n$14=*n$13.checkPreview:_Bool(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 52];
+PRUNE((n$14 == 0), false); [line 52];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">            lastVersion = getVersion(Constants.ZRLOG_RESOURCE_DOWNLOAD_URL + &quot;/release/last.version.json&quot;); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:17 succs:20 exn:3 Instructions
+n$26=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 53];
+n$27=_fun_Version UpdateVersionTimerTask.getVersion(String)(n$26:com.zrlog.web.plugin.UpdateVersionTimerTask*,"http://dl.zrlog.com/release/last.version.json":java.lang.Object*) [line 53];
+*&amp;lastVersion:com.zrlog.common.vo.Version*=n$27 [line 53];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">            buildDate = new SimpleDateFormat(Constants.DATE_FORMAT_PATTERN).parse(lastVersion.getReleaseDate()); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$28=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 54];
+n$29=_fun_SimpleDateFormat.&lt;init&gt;(String)(n$28:java.text.SimpleDateFormat*,"yyyy-MM-dd HH:mm:ssXXX":java.lang.Object*) [line 54];
+*&amp;$irvar5:java.text.SimpleDateFormat*=n$28 [line 54];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$30=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 54];
+_=*n$30:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 54];
+n$32=_fun_String Version.getReleaseDate()(n$30:com.zrlog.common.vo.Version*) virtual [line 54];
+*&amp;$irvar6:java.lang.String*=n$32 [line 54];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$33=*&amp;$irvar5:java.text.SimpleDateFormat* [line 54];
+_=*n$33:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 54];
+n$35=*&amp;$irvar6:java.lang.String* [line 54];
+n$36=_fun_Date DateFormat.parse(String)(n$33:java.text.SimpleDateFormat*,n$35:java.lang.String*) virtual [line 54];
+*&amp;buildDate:java.util.Date*=n$36 [line 54];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">        if (ZrLogUtil.greatThenCurrentVersion(lastVersion.getBuildId(), buildDate, lastVersion.getVersion())) { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 18 13 succs:24 exn:3 Instructions
+n$37=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 56];
+_=*n$37:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 56];
+n$39=_fun_String Version.getBuildId()(n$37:com.zrlog.common.vo.Version*) virtual [line 56];
+*&amp;$irvar7:java.lang.String*=n$39 [line 56];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$40=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 56];
+_=*n$40:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 56];
+n$42=_fun_String Version.getVersion()(n$40:com.zrlog.common.vo.Version*) virtual [line 56];
+*&amp;$irvar8:java.lang.String*=n$42 [line 56];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 27 exn:3 Instructions
+n$43=*&amp;$irvar7:java.lang.String* [line 56];
+n$44=*&amp;buildDate:java.util.Date* [line 56];
+n$45=*&amp;$irvar8:java.lang.String* [line 56];
+n$46=_fun_boolean ZrLogUtil.greatThenCurrentVersion(String,Date,String)(n$43:java.lang.String*,n$44:java.util.Date*,n$45:java.lang.String*) [line 56];
+*&amp;$irvar9:_Bool=n$46 [line 56];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:25 succs:28 exn:3 Conditional method_body
+n$47=*&amp;$irvar9:_Bool [line 56];
+PRUNE(!(n$47 == 0), true); [line 56];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node27.html"><span class='visited with_tooltip'>C_27<span class='tooltip'>node27 preds:25 succs:45 exn:3 Conditional method_body
+n$47=*&amp;$irvar9:_Bool [line 56];
+PRUNE((n$47 == 0), false); [line 56];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">            LOGGER.info(&quot;ZrLog New update found new [&quot; + lastVersion.getVersion() + &quot;-&quot; + lastVersion.getBuildId() + &quot;]&quot;); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:26 succs:29 exn:3 Instructions
+n$48=*&amp;#GB<>$com.zrlog.web.plugin.UpdateVersionTimerTask.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 57];
+*&amp;$irvar10:org.slf4j.Logger*=n$48 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$49=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 57];
+n$50=_fun_StringBuilder.&lt;init&gt;()(n$49:java.lang.StringBuilder*) [line 57];
+*&amp;$irvar11:java.lang.StringBuilder*=n$49 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$51=*&amp;$irvar11:java.lang.StringBuilder* [line 57];
+_=*n$51:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 57];
+n$53=_fun_StringBuilder StringBuilder.append(String)(n$51:java.lang.StringBuilder*,"ZrLog New update found new [":java.lang.Object*) virtual [line 57];
+*&amp;$irvar12:java.lang.StringBuilder*=n$53 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$54=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 57];
+_=*n$54:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 57];
+n$56=_fun_String Version.getVersion()(n$54:com.zrlog.common.vo.Version*) virtual [line 57];
+*&amp;$irvar13:java.lang.String*=n$56 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:3 Instructions
+n$57=*&amp;$irvar12:java.lang.StringBuilder* [line 57];
+_=*n$57:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 57];
+n$59=*&amp;$irvar13:java.lang.String* [line 57];
+n$60=_fun_StringBuilder StringBuilder.append(String)(n$57:java.lang.StringBuilder*,n$59:java.lang.String*) virtual [line 57];
+*&amp;$irvar14:java.lang.StringBuilder*=n$60 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:3 Instructions
+n$61=*&amp;$irvar14:java.lang.StringBuilder* [line 57];
+_=*n$61:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 57];
+n$63=_fun_StringBuilder StringBuilder.append(String)(n$61:java.lang.StringBuilder*,"-":java.lang.Object*) virtual [line 57];
+*&amp;$irvar15:java.lang.StringBuilder*=n$63 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:3 Instructions
+n$64=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 57];
+_=*n$64:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 57];
+n$66=_fun_String Version.getBuildId()(n$64:com.zrlog.common.vo.Version*) virtual [line 57];
+*&amp;$irvar16:java.lang.String*=n$66 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:36 exn:3 Instructions
+n$67=*&amp;$irvar15:java.lang.StringBuilder* [line 57];
+_=*n$67:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 57];
+n$69=*&amp;$irvar16:java.lang.String* [line 57];
+n$70=_fun_StringBuilder StringBuilder.append(String)(n$67:java.lang.StringBuilder*,n$69:java.lang.String*) virtual [line 57];
+*&amp;$irvar17:java.lang.StringBuilder*=n$70 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:37 exn:3 Instructions
+n$71=*&amp;$irvar17:java.lang.StringBuilder* [line 57];
+_=*n$71:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 57];
+n$73=_fun_StringBuilder StringBuilder.append(String)(n$71:java.lang.StringBuilder*,"]":java.lang.Object*) virtual [line 57];
+*&amp;$irvar18:java.lang.StringBuilder*=n$73 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:36 succs:38 exn:3 Instructions
+n$74=*&amp;$irvar18:java.lang.StringBuilder* [line 57];
+_=*n$74:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 57];
+n$76=_fun_String StringBuilder.toString()(n$74:java.lang.StringBuilder*) virtual [line 57];
+*&amp;$irvar19:java.lang.String*=n$76 [line 57];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 exn:3 Instructions
+n$77=*&amp;$irvar10:org.slf4j.Logger* [line 57];
+_=*n$77:org.slf4j.Logger*(root org.slf4j.Logger) [line 57];
+n$79=*&amp;$irvar19:java.lang.String* [line 57];
+n$80=_fun_void Logger.info(String)(n$77:org.slf4j.Logger*,n$79:java.lang.String*) interface virtual [line 57];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">            this.version = lastVersion; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 succs:40 exn:3 Instructions
+n$81=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 58];
+n$82=*&amp;lastVersion:com.zrlog.common.vo.Version* [line 58];
+*n$81.version:com.zrlog.web.plugin.UpdateVersionTimerTask(root com.zrlog.web.plugin.UpdateVersionTimerTask)=n$82 [line 58];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">            version.setReleaseDate(new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm&quot;).format(buildDate)); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 succs:41 exn:3 Instructions
+n$83=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 59];
+n$84=*n$83.version:com.zrlog.common.vo.Version*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 59];
+*&amp;$irvar20:com.zrlog.common.vo.Version*=n$84 [line 59];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:40 succs:42 exn:3 Instructions
+n$85=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 59];
+n$86=_fun_SimpleDateFormat.&lt;init&gt;(String)(n$85:java.text.SimpleDateFormat*,"yyyy-MM-dd HH:mm":java.lang.Object*) [line 59];
+*&amp;$irvar21:java.text.SimpleDateFormat*=n$85 [line 59];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:3 Instructions
+n$87=*&amp;$irvar21:java.text.SimpleDateFormat* [line 59];
+_=*n$87:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 59];
+n$89=*&amp;buildDate:java.util.Date* [line 59];
+n$90=_fun_String DateFormat.format(Date)(n$87:java.text.SimpleDateFormat*,n$89:java.util.Date*) virtual [line 59];
+*&amp;$irvar22:java.lang.String*=n$90 [line 59];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:3 Instructions
+n$91=*&amp;$irvar20:com.zrlog.common.vo.Version* [line 59];
+_=*n$91:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 59];
+n$93=*&amp;$irvar22:java.lang.String* [line 59];
+n$94=_fun_void Version.setReleaseDate(String)(n$91:com.zrlog.common.vo.Version*,n$93:java.lang.String*) virtual [line 59];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">            return version; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:2 exn:3 Instructions
+n$95=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 60];
+n$96=*n$95.version:com.zrlog.common.vo.Version*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 60];
+*&amp;return:com.zrlog.common.vo.Version*=n$96 [line 60];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">        return null; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:27 succs:2 exn:3 Instructions
+*&amp;return:com.zrlog.common.vo.Version*=null [line 62];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:45 44 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">    private Version getVersion(String versionUrl) throws IOException { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8.html">summary for Version UpdateVersionTimerTask.getVersion(String)</a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">        String txtContent = HttpUtil.getInstance().getTextByUrl(versionUrl + &quot;?_&quot; + System.currentTimeMillis() + &quot;&amp;v=&quot; + BlogBuildInfoUtil.getBuildId()).trim(); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_HttpUtil HttpUtil.getInstance()() [line 66];
+*&amp;$irvar0:com.hibegin.common.util.http.HttpUtil*=n$0 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 66];
+n$2=_fun_StringBuilder.&lt;init&gt;()(n$1:java.lang.StringBuilder*) [line 66];
+*&amp;$irvar1:java.lang.StringBuilder*=n$1 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;$irvar1:java.lang.StringBuilder* [line 66];
+_=*n$3:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$5=*&amp;versionUrl:java.lang.String* [line 66];
+n$6=_fun_StringBuilder StringBuilder.append(String)(n$3:java.lang.StringBuilder*,n$5:java.lang.String*) virtual [line 66];
+*&amp;$irvar2:java.lang.StringBuilder*=n$6 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$7=*&amp;$irvar2:java.lang.StringBuilder* [line 66];
+_=*n$7:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$9=_fun_StringBuilder StringBuilder.append(String)(n$7:java.lang.StringBuilder*,"?_":java.lang.Object*) virtual [line 66];
+*&amp;$irvar3:java.lang.StringBuilder*=n$9 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$10=_fun_long System.currentTimeMillis()() [line 66];
+*&amp;$irvar4:long=n$10 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$11=*&amp;$irvar3:java.lang.StringBuilder* [line 66];
+_=*n$11:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$13=*&amp;$irvar4:long [line 66];
+n$14=_fun_StringBuilder StringBuilder.append(long)(n$11:java.lang.StringBuilder*,n$13:long) virtual [line 66];
+*&amp;$irvar5:java.lang.StringBuilder*=n$14 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$15=*&amp;$irvar5:java.lang.StringBuilder* [line 66];
+_=*n$15:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$17=_fun_StringBuilder StringBuilder.append(String)(n$15:java.lang.StringBuilder*,"&v=":java.lang.Object*) virtual [line 66];
+*&amp;$irvar6:java.lang.StringBuilder*=n$17 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$18=_fun_String BlogBuildInfoUtil.getBuildId()() [line 66];
+*&amp;$irvar7:java.lang.String*=n$18 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$19=*&amp;$irvar6:java.lang.StringBuilder* [line 66];
+_=*n$19:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$21=*&amp;$irvar7:java.lang.String* [line 66];
+n$22=_fun_StringBuilder StringBuilder.append(String)(n$19:java.lang.StringBuilder*,n$21:java.lang.String*) virtual [line 66];
+*&amp;$irvar8:java.lang.StringBuilder*=n$22 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$23=*&amp;$irvar8:java.lang.StringBuilder* [line 66];
+_=*n$23:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$25=_fun_String StringBuilder.toString()(n$23:java.lang.StringBuilder*) virtual [line 66];
+*&amp;$irvar9:java.lang.String*=n$25 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$26=*&amp;$irvar0:com.hibegin.common.util.http.HttpUtil* [line 66];
+_=*n$26:com.hibegin.common.util.http.HttpUtil*(root com.hibegin.common.util.http.HttpUtil) [line 66];
+n$28=*&amp;$irvar9:java.lang.String* [line 66];
+n$29=_fun_String HttpUtil.getTextByUrl(String)(n$26:com.hibegin.common.util.http.HttpUtil*,n$28:java.lang.String*) virtual [line 66];
+*&amp;$irvar10:java.lang.String*=n$29 [line 66];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$30=*&amp;$irvar10:java.lang.String* [line 66];
+_=*n$30:java.lang.String*(root java.lang.String) [line 66];
+n$32=_fun_String String.trim()(n$30:java.lang.String*) virtual [line 66];
+*&amp;txtContent:java.lang.String*=n$32 [line 66];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">        Version tLastVersion = new Gson().fromJson(txtContent, Version.class); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$33=_fun___new(sizeof(t=com.google.gson.Gson):com.google.gson.Gson*) [line 67];
+n$34=_fun_Gson.&lt;init&gt;()(n$33:com.google.gson.Gson*) [line 67];
+*&amp;$irvar11:com.google.gson.Gson*=n$33 [line 67];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$35=*&amp;$irvar11:com.google.gson.Gson* [line 67];
+_=*n$35:com.google.gson.Gson*(root com.google.gson.Gson) [line 67];
+n$37=*&amp;txtContent:java.lang.String* [line 67];
+n$38=_fun_Object Gson.fromJson(String,Class)(n$35:com.google.gson.Gson*,n$37:java.lang.String*,com.zrlog.common.vo.Version:java.lang.Object*) virtual [line 67];
+*&amp;$irvar12:java.lang.Object*=n$38 [line 67];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$39=*&amp;$irvar12:java.lang.Object* [line 67];
+n$40=_fun___cast(n$39:java.lang.Object*,sizeof(t=com.zrlog.common.vo.Version;sub_t=( sub )(cast)):void) [line 67];
+*&amp;tLastVersion:com.zrlog.common.vo.Version*=n$40 [line 67];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">        //手动设置对应ChangeLog </td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">        tLastVersion.setChangeLog(UpdateVersionPlugin.getChangeLog(tLastVersion.getVersion(), tLastVersion.getBuildId())); <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$41=*&amp;tLastVersion:com.zrlog.common.vo.Version* [line 69];
+_=*n$41:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 69];
+n$43=_fun_String Version.getVersion()(n$41:com.zrlog.common.vo.Version*) virtual [line 69];
+*&amp;$irvar13:java.lang.String*=n$43 [line 69];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$44=*&amp;tLastVersion:com.zrlog.common.vo.Version* [line 69];
+_=*n$44:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 69];
+n$46=_fun_String Version.getBuildId()(n$44:com.zrlog.common.vo.Version*) virtual [line 69];
+*&amp;$irvar14:java.lang.String*=n$46 [line 69];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$47=*&amp;$irvar13:java.lang.String* [line 69];
+n$48=*&amp;$irvar14:java.lang.String* [line 69];
+n$49=_fun_String UpdateVersionPlugin.getChangeLog(String,String)(n$47:java.lang.String*,n$48:java.lang.String*) [line 69];
+*&amp;$irvar15:java.lang.String*=n$49 [line 69];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$50=*&amp;tLastVersion:com.zrlog.common.vo.Version* [line 69];
+_=*n$50:com.zrlog.common.vo.Version*(root com.zrlog.common.vo.Version) [line 69];
+n$52=*&amp;$irvar15:java.lang.String* [line 69];
+n$53=_fun_void Version.setChangeLog(String)(n$50:com.zrlog.common.vo.Version*,n$52:java.lang.String*) virtual [line 69];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">        return tLastVersion; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:2 exn:3 Instructions
+n$54=*&amp;tLastVersion:com.zrlog.common.vo.Version* [line 70];
+*&amp;return:com.zrlog.common.vo.Version*=n$54 [line 70];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:23 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28java.lang.String%29%3Acom.zrlog.common.vo.Version.51eeb3e6ec5c3e726e62408433f5c1e8_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">    public Version getVersion() { <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28%29%3Acom.zrlog.common.vo.Version.ab3c63ec7a292c77ba1dd792745029e8_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28%29%3Acom.zrlog.common.vo.Version.ab3c63ec7a292c77ba1dd792745029e8.html">summary for Version UpdateVersionTimerTask.getVersion()</a></td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">        return version; <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28%29%3Acom.zrlog.common.vo.Version.ab3c63ec7a292c77ba1dd792745029e8_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 74];
+n$1=*n$0.version:com.zrlog.common.vo.Version*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 74];
+*&amp;return:com.zrlog.common.vo.Version*=n$1 [line 74];
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28%29%3Acom.zrlog.common.vo.Version.ab3c63ec7a292c77ba1dd792745029e8_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0/nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.getVersion%28%29%3Acom.zrlog.common.vo.Version.ab3c63ec7a292c77ba1dd792745029e8_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/render/BlogFrontendFreeMarkerRender.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.render; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.jfinal.render.FreeMarkerRender; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.jfinal.render.Render; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.jfinal.render.RenderException; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import freemarker.template.*; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import javax.servlet.ServletContext; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import java.io.PrintWriter; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import java.util.*; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">public class BlogFrontendFreeMarkerRender extends Render { </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    private static final String contentType = &quot;text/html; charset=&quot; + getEncoding(); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 13];
+n$1=_fun_StringBuilder.&lt;init&gt;()(n$0:java.lang.StringBuilder*) [line 13];
+*&amp;$irvar0:java.lang.StringBuilder*=n$0 [line 13];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:java.lang.StringBuilder* [line 13];
+_=*n$2:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 13];
+n$4=_fun_StringBuilder StringBuilder.append(String)(n$2:java.lang.StringBuilder*,"text/html; charset=":java.lang.Object*) virtual [line 13];
+*&amp;$irvar1:java.lang.StringBuilder*=n$4 [line 13];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=_fun_String Render.getEncoding()() [line 13];
+*&amp;$irvar2:java.lang.String*=n$5 [line 13];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;$irvar1:java.lang.StringBuilder* [line 13];
+_=*n$6:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 13];
+n$8=*&amp;$irvar2:java.lang.String* [line 13];
+n$9=_fun_StringBuilder StringBuilder.append(String)(n$6:java.lang.StringBuilder*,n$8:java.lang.String*) virtual [line 13];
+*&amp;$irvar3:java.lang.StringBuilder*=n$9 [line 13];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$10=*&amp;$irvar3:java.lang.StringBuilder* [line 13];
+_=*n$10:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 13];
+n$12=_fun_String StringBuilder.toString()(n$10:java.lang.StringBuilder*) virtual [line 13];
+*&amp;$irvar4:java.lang.String*=n$12 [line 13];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$13=*&amp;$irvar4:java.lang.String* [line 13];
+*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.contentType:com.zrlog.web.render.BlogFrontendFreeMarkerRender(root com.zrlog.web.render.BlogFrontendFreeMarkerRender)=n$13 [line 13];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd.html">summary for void BlogFrontendFreeMarkerRender.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    private static final Configuration config = new Configuration(); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$14=_fun___new(sizeof(t=freemarker.template.Configuration):freemarker.template.Configuration*) [line 14];
+n$15=_fun_Configuration.&lt;init&gt;()(n$14:freemarker.template.Configuration*) [line 14];
+*&amp;$irvar5:freemarker.template.Configuration*=n$14 [line 14];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$16=*&amp;$irvar5:freemarker.template.Configuration* [line 14];
+*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:com.zrlog.web.render.BlogFrontendFreeMarkerRender(root com.zrlog.web.render.BlogFrontendFreeMarkerRender)=n$16 [line 14];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:12 3 succs: exn: Exit
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<clinit>%28%29%3Avoid.6e618b503a221149eedf4651c59451cd_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    public BlogFrontendFreeMarkerRender(String view) { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<init>%28java.lang.String%29.ee5cfc002eee6f254acd32d969bd1ee0_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<init>%28java.lang.String%29.ee5cfc002eee6f254acd32d969bd1ee0_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 16];
+n$1=_fun_Render.&lt;init&gt;()(n$0:com.zrlog.web.render.BlogFrontendFreeMarkerRender*) [line 16];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<init>%28java.lang.String%29.ee5cfc002eee6f254acd32d969bd1ee0.html">summary for BlogFrontendFreeMarkerRender.&lt;init&gt;(String)</a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">        this.view = view; <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<init>%28java.lang.String%29.ee5cfc002eee6f254acd32d969bd1ee0_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 17];
+n$3=*&amp;view:java.lang.String* [line 17];
+*n$2.view:com.zrlog.web.render.BlogFrontendFreeMarkerRender(root com.zrlog.web.render.BlogFrontendFreeMarkerRender)=n$3 [line 17];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">    } <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<init>%28java.lang.String%29.ee5cfc002eee6f254acd32d969bd1ee0_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<init>%28java.lang.String%29.ee5cfc002eee6f254acd32d969bd1ee0_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.<init>%28java.lang.String%29.ee5cfc002eee6f254acd32d969bd1ee0_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">     * freemarker can not load freemarker.properies automatically </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    public static Configuration getConfiguration() { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getConfiguration%28%29%3Afreemarker.template.Configurati.d8a39db89cae0d2e672ea1a949304ab2_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getConfiguration%28%29%3Afreemarker.template.Configurati.d8a39db89cae0d2e672ea1a949304ab2.html">summary for Configuration BlogFrontendFreeMarkerRender.getConfiguration()</a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">        return config; <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getConfiguration%28%29%3Afreemarker.template.Configurati.d8a39db89cae0d2e672ea1a949304ab2_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 24];
+*&amp;return:freemarker.template.Configuration*=n$0 [line 24];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getConfiguration%28%29%3Afreemarker.template.Configurati.d8a39db89cae0d2e672ea1a949304ab2_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getConfiguration%28%29%3Afreemarker.template.Configurati.d8a39db89cae0d2e672ea1a949304ab2_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    public static void setProperties(Properties properties) { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4.html">summary for void BlogFrontendFreeMarkerRender.setProperties(Properties)</a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">            FreeMarkerRender.getConfiguration().setSettings(properties); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:12 Instructions
+n$0=_fun_Configuration FreeMarkerRender.getConfiguration()() [line 29];
+*&amp;$irvar0:freemarker.template.Configuration*=n$0 [line 29];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:9 exn:12 Instructions
+n$1=*&amp;$irvar0:freemarker.template.Configuration* [line 29];
+_=*n$1:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 29];
+n$3=*&amp;properties:java.util.Properties* [line 29];
+n$4=_fun_void Configurable.setSettings(Properties)(n$1:freemarker.template.Configuration*,n$3:java.util.Properties*) virtual [line 29];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        } catch (TemplateException e) { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:10 succs:7 exn:3 Instructions
+n$5=*&amp;CatchVar10:java.lang.Object* [line 30];
+*&amp;e:java.lang.Object*=n$5 [line 30];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:12 succs:6 exn:3 Conditional exception handler
+n$12=_fun___instanceof(n$11:freemarker.template.TemplateException*,sizeof(t=freemarker.template.TemplateException):void) [line 30];
+PRUNE(n$12, true); [line 30];
+*&amp;CatchVar10:void=n$11 [line 30];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:12 succs:3 exn:3 Conditional exception handler
+n$12=_fun___instanceof(n$11:freemarker.template.TemplateException*,sizeof(t=freemarker.template.TemplateException):void) [line 30];
+PRUNE(!n$12, false); [line 30];
+*&amp;return:void=EXN n$11 [line 30];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds: succs:10 11 exn:3 Instructions
+n$10=*&amp;return:void [line 30];
+*&amp;return:void=null [line 30];
+n$11=_fun___unwrap_exception(n$10:void) [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">            throw new RuntimeException(e); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=_fun___new(sizeof(t=java.lang.RuntimeException):java.lang.RuntimeException*) [line 31];
+n$7=*&amp;e:java.lang.Object* [line 31];
+n$8=_fun_RuntimeException.&lt;init&gt;(Throwable)(n$6:java.lang.RuntimeException*,n$7:java.lang.Object*) [line 31];
+*&amp;$irvar1:java.lang.RuntimeException*=n$6 [line 31];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+n$9=*&amp;$irvar1:java.lang.RuntimeException* [line 31];
+*&amp;return:void=EXN n$9 [line 31];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    } <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:9 8 3 succs: exn: Exit
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties%28java.util.Properties%29%3Avoid.5668c76253c64498a4a094836933e4f4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:11 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">    public static void init(ServletContext servletContext, Locale locale, int template_update_delay) { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb.html">summary for void BlogFrontendFreeMarkerRender.init(ServletContext,Locale,int)</a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">        // Initialize the FreeMarker configuration; </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">        // - Create a configuration instance </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">        // config = new Configuration(); </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">        // - Templates are stoted in the WEB-INF/templates directory of the Web app. </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">        config.setServletContextForTemplateLoading(servletContext, &quot;/&quot;);	// &quot;WEB-INF/templates&quot; <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 40];
+_=*n$0:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 40];
+n$2=*&amp;servletContext:javax.servlet.ServletContext* [line 40];
+n$3=_fun_void Configuration.setServletContextForTemplateLoading(Object,String)(n$0:freemarker.template.Configuration*,n$2:javax.servlet.ServletContext*,"/":java.lang.Object*) virtual [line 40];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">        // - Set update dealy to 0 for now, to ease debugging and testing. </td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">        //   Higher value should be used in production environment. </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">        if (getDevMode()) { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:3 Instructions
+n$4=_fun_boolean Render.getDevMode()() [line 44];
+*&amp;$irvar0:_Bool=n$4 [line 44];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 exn:3 Conditional method_body
+n$5=*&amp;$irvar0:_Bool [line 44];
+PRUNE(!(n$5 == 0), true); [line 44];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:9 exn:3 Conditional method_body
+n$5=*&amp;$irvar0:_Bool [line 44];
+PRUNE((n$5 == 0), false); [line 44];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">            config.setTemplateUpdateDelay(0); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:10 exn:3 Instructions
+n$6=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 45];
+_=*n$6:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 45];
+n$8=_fun_void Configuration.setTemplateUpdateDelay(int)(n$6:freemarker.template.Configuration*,0:int) virtual [line 45];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">        else { </td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">            config.setTemplateUpdateDelay(template_update_delay); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 exn:3 Instructions
+n$9=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 48];
+_=*n$9:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 48];
+n$11=*&amp;template_update_delay:int [line 48];
+n$12=_fun_void Configuration.setTemplateUpdateDelay(int)(n$9:freemarker.template.Configuration*,n$11:int) virtual [line 48];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">        // - Set an error handler that prints errors so they are readable with </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">        //   a HTML browser. </td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">        // config.setTemplateExceptionHandler(TemplateExceptionHandler.HTML_DEBUG_HANDLER); </td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">        config.setTemplateExceptionHandler(TemplateExceptionHandler.RETHROW_HANDLER); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 8 succs:11 exn:3 Instructions
+n$13=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 54];
+*&amp;$irvar1:freemarker.template.Configuration*=n$13 [line 54];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$14=*&amp;$irvar1:freemarker.template.Configuration* [line 54];
+_=*n$14:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 54];
+n$16=*&amp;#GB<>$freemarker.template.TemplateExceptionHandler.RETHROW_HANDLER:freemarker.template.TemplateExceptionHandler*(root freemarker.template.TemplateExceptionHandler) [line 54];
+n$17=_fun_void Configuration.setTemplateExceptionHandler(TemplateExceptionHandler)(n$14:freemarker.template.Configuration*,n$16:freemarker.template.TemplateExceptionHandler*) virtual [line 54];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">        // - Use beans wrapper (recommmended for most applications) </td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">        config.setObjectWrapper(ObjectWrapper.BEANS_WRAPPER); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$18=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 57];
+*&amp;$irvar2:freemarker.template.Configuration*=n$18 [line 57];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$19=*&amp;$irvar2:freemarker.template.Configuration* [line 57];
+_=*n$19:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 57];
+n$21=*&amp;#GB<>$freemarker.template.ObjectWrapper.BEANS_WRAPPER:freemarker.template.ObjectWrapper*(root freemarker.template.ObjectWrapper) [line 57];
+n$22=_fun_void Configuration.setObjectWrapper(ObjectWrapper)(n$19:freemarker.template.Configuration*,n$21:freemarker.template.ObjectWrapper*) virtual [line 57];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">        // - Set the default charset of the template files </td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">        config.setDefaultEncoding(getEncoding());		// config.setDefaultEncoding(&quot;ISO-8859-1&quot;); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$23=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 59];
+*&amp;$irvar3:freemarker.template.Configuration*=n$23 [line 59];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$24=_fun_String Render.getEncoding()() [line 59];
+*&amp;$irvar4:java.lang.String*=n$24 [line 59];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$25=*&amp;$irvar3:freemarker.template.Configuration* [line 59];
+_=*n$25:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 59];
+n$27=*&amp;$irvar4:java.lang.String* [line 59];
+n$28=_fun_void Configuration.setDefaultEncoding(String)(n$25:freemarker.template.Configuration*,n$27:java.lang.String*) virtual [line 59];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">        // - Set the charset of the output. This is actually just a hint, that </td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">        //   templates may require for URL encoding and for generating META element </td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">        //   that uses http-equiv=&quot;Content-type&quot;. </td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">        config.setOutputEncoding(getEncoding());			// config.setOutputEncoding(&quot;UTF-8&quot;); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$29=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 63];
+*&amp;$irvar5:freemarker.template.Configuration*=n$29 [line 63];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$30=_fun_String Render.getEncoding()() [line 63];
+*&amp;$irvar6:java.lang.String*=n$30 [line 63];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$31=*&amp;$irvar5:freemarker.template.Configuration* [line 63];
+_=*n$31:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 63];
+n$33=*&amp;$irvar6:java.lang.String* [line 63];
+n$34=_fun_void Configurable.setOutputEncoding(String)(n$31:freemarker.template.Configuration*,n$33:java.lang.String*) virtual [line 63];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">        // - Set the default locale </td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">        config.setLocale(locale /* Locale.CHINA */ );		// config.setLocale(Locale.US); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$35=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 65];
+_=*n$35:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 65];
+n$37=*&amp;locale:java.util.Locale* [line 65];
+n$38=_fun_void Configurable.setLocale(Locale)(n$35:freemarker.template.Configuration*,n$37:java.util.Locale*) virtual [line 65];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">        config.setLocalizedLookup(false); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$39=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 66];
+_=*n$39:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 66];
+n$41=_fun_void Configuration.setLocalizedLookup(boolean)(n$39:freemarker.template.Configuration*,0:int) virtual [line 66];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">        // 去掉int型输出时的逗号, 例如: 123,456 </td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">        // config.setNumberFormat(&quot;#&quot;);		// config.setNumberFormat(&quot;0&quot;); 也可以 </td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">        config.setNumberFormat(&quot;#0.#####&quot;); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$42=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 70];
+_=*n$42:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 70];
+n$44=_fun_void Configurable.setNumberFormat(String)(n$42:freemarker.template.Configuration*,"#0.#####":java.lang.Object*) virtual [line 70];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">        config.setDateFormat(&quot;yyyy-MM-dd&quot;); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$45=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 71];
+_=*n$45:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 71];
+n$47=_fun_void Configurable.setDateFormat(String)(n$45:freemarker.template.Configuration*,"yyyy-MM-dd":java.lang.Object*) virtual [line 71];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">        config.setTimeFormat(&quot;HH:mm:ss&quot;); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$48=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 72];
+_=*n$48:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 72];
+n$50=_fun_void Configurable.setTimeFormat(String)(n$48:freemarker.template.Configuration*,"HH:mm:ss":java.lang.Object*) virtual [line 72];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">        config.setDateTimeFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$51=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 73];
+_=*n$51:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 73];
+n$53=_fun_void Configurable.setDateTimeFormat(String)(n$51:freemarker.template.Configuration*,"yyyy-MM-dd HH:mm:ss":java.lang.Object*) virtual [line 73];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">    } <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:26 3 succs: exn: Exit
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.init%28javax.servlet.ServletContext%2Cjava.util.Locale.5fb089128efa5e4565291cb0db9285eb_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">     * 继承类可通过覆盖此方法改变 contentType，从而重用 freemarker 模板功能 </td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">     * 例如利用 freemarker 实现 FreeMarkerXmlRender 生成 Xml 内容 </td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">    public String getContentType() { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getContentType%28%29%3Ajava.lang.String.abafa2acd58967fc973df4b0f06f4575_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getContentType%28%29%3Ajava.lang.String.abafa2acd58967fc973df4b0f06f4575.html">summary for String BlogFrontendFreeMarkerRender.getContentType()</a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">        return contentType; <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getContentType%28%29%3Ajava.lang.String.abafa2acd58967fc973df4b0f06f4575_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.contentType:java.lang.String*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 81];
+*&amp;return:java.lang.String*=n$0 [line 81];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getContentType%28%29%3Ajava.lang.String.abafa2acd58967fc973df4b0f06f4575_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.getContentType%28%29%3Ajava.lang.String.abafa2acd58967fc973df4b0f06f4575_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">    @SuppressWarnings({&quot;unchecked&quot;, &quot;rawtypes&quot;}) </td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">    public void render() { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc.html">summary for void BlogFrontendFreeMarkerRender.render()</a></td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line">        response.setContentType(getContentType()); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 86];
+n$1=*n$0.response:javax.servlet.http.HttpServletResponse*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 86];
+*&amp;$irvar1:javax.servlet.http.HttpServletResponse*=n$1 [line 86];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 86];
+_=*n$2:com.zrlog.web.render.BlogFrontendFreeMarkerRender*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 86];
+n$4=_fun_String BlogFrontendFreeMarkerRender.getContentType()(n$2:com.zrlog.web.render.BlogFrontendFreeMarkerRender*) virtual [line 86];
+*&amp;$irvar0:java.lang.String*=n$4 [line 86];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;$irvar1:javax.servlet.http.HttpServletResponse* [line 86];
+_=*n$5:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 86];
+n$7=*&amp;$irvar0:java.lang.String* [line 86];
+n$8=_fun_void HttpServletResponse.setContentType(String)(n$5:javax.servlet.http.HttpServletResponse*,n$7:java.lang.String*) interface virtual [line 86];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">        Map data = new HashMap(); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$9=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 88];
+n$10=_fun_HashMap.&lt;init&gt;()(n$9:java.util.HashMap*) [line 88];
+*&amp;data:java.util.HashMap*=n$9 [line 88];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">        for (Enumeration&lt;String&gt; attrs = request.getAttributeNames(); attrs.hasMoreElements();) { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$11=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 89];
+n$12=*n$11.request:javax.servlet.http.HttpServletRequest*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 89];
+_=*n$12:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 89];
+n$14=_fun_Enumeration HttpServletRequest.getAttributeNames()(n$12:javax.servlet.http.HttpServletRequest*) interface virtual [line 89];
+*&amp;attrs:java.util.Enumeration*=n$14 [line 89];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:16 8 succs:12 exn:3 Instructions
+n$15=*&amp;attrs:java.util.Enumeration* [line 89];
+_=*n$15:java.util.Enumeration*(root java.util.Enumeration) [line 89];
+n$17=_fun_boolean Enumeration.hasMoreElements()(n$15:java.util.Enumeration*) interface virtual [line 89];
+*&amp;$irvar2:_Bool=n$17 [line 89];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node12.html"><span class='visited with_tooltip'>J_12<span class='tooltip'>node12 preds:9 succs:10 11 exn: Join
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:12 succs:13 exn:3 Conditional method_body
+n$18=*&amp;$irvar2:_Bool [line 89];
+PRUNE(!(n$18 == 0), true); [line 89];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:12 succs:17 exn:3 Conditional method_body
+n$18=*&amp;$irvar2:_Bool [line 89];
+PRUNE((n$18 == 0), false); [line 89];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line">            String attrName = attrs.nextElement(); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:10 succs:14 exn:3 Instructions
+n$19=*&amp;attrs:java.util.Enumeration* [line 90];
+_=*n$19:java.util.Enumeration*(root java.util.Enumeration) [line 90];
+n$21=_fun_Object Enumeration.nextElement()(n$19:java.util.Enumeration*) interface virtual [line 90];
+*&amp;$irvar3:java.lang.Object*=n$21 [line 90];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$22=*&amp;$irvar3:java.lang.Object* [line 90];
+n$23=_fun___cast(n$22:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 90];
+*&amp;attrName:java.lang.String*=n$23 [line 90];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">            data.put(attrName, request.getAttribute(attrName)); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$24=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 91];
+n$25=*n$24.request:javax.servlet.http.HttpServletRequest*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 91];
+_=*n$25:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 91];
+n$27=*&amp;attrName:java.lang.String* [line 91];
+n$28=_fun_Object HttpServletRequest.getAttribute(String)(n$25:javax.servlet.http.HttpServletRequest*,n$27:java.lang.String*) interface virtual [line 91];
+*&amp;$irvar4:java.lang.Object*=n$28 [line 91];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:9 exn:3 Instructions
+n$29=*&amp;data:java.util.HashMap* [line 91];
+_=*n$29:java.util.HashMap*(root java.util.HashMap) [line 91];
+n$31=*&amp;attrName:java.lang.String* [line 91];
+n$32=*&amp;$irvar4:java.lang.Object* [line 91];
+n$33=_fun_Object HashMap.put(Object,Object)(n$29:java.util.HashMap*,n$31:java.lang.String*,n$32:java.lang.Object*) interface virtual [line 91];
+*&amp;$irvar5:java.lang.Object*=n$33 [line 91];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line">        PrintWriter writer = null; <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:11 succs:18 exn:3 Instructions
+*&amp;writer:java.lang.Object*=null [line 94];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">            Template template = config.getTemplate(view); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:27 Instructions
+n$34=*&amp;#GB<>$com.zrlog.web.render.BlogFrontendFreeMarkerRender.config:freemarker.template.Configuration*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 96];
+_=*n$34:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 96];
+n$36=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 96];
+n$37=*n$36.view:java.lang.String*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 96];
+n$38=_fun_Template Configuration.getTemplate(String)(n$34:freemarker.template.Configuration*,n$37:java.lang.String*) virtual [line 96];
+*&amp;template:freemarker.template.Template*=n$38 [line 96];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">            writer = response.getWriter(); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:27 Instructions
+n$39=*&amp;this:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 97];
+n$40=*n$39.response:javax.servlet.http.HttpServletResponse*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 97];
+_=*n$40:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 97];
+n$42=_fun_PrintWriter HttpServletResponse.getWriter()(n$40:javax.servlet.http.HttpServletResponse*) interface virtual [line 97];
+*&amp;writer:java.io.PrintWriter*=n$42 [line 97];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line">            template.process(data, writer);		// Merge the data-model and the template <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:24 exn:27 Instructions
+n$43=*&amp;template:freemarker.template.Template* [line 98];
+_=*n$43:freemarker.template.Template*(root freemarker.template.Template) [line 98];
+n$45=*&amp;data:java.util.HashMap* [line 98];
+n$46=*&amp;writer:java.io.PrintWriter* [line 98];
+n$47=_fun_void Template.process(Object,Writer)(n$43:freemarker.template.Template*,n$45:java.util.HashMap*,n$46:java.io.PrintWriter*) virtual [line 98];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">        } catch (Exception e) { <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:25 succs:22 exn:3 Instructions
+n$48=*&amp;CatchVar103:java.lang.Object* [line 99];
+*&amp;e:java.lang.Object*=n$48 [line 99];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:27 succs:21 exn:3 Conditional exception handler
+n$55=_fun___instanceof(n$54:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 99];
+PRUNE(n$55, true); [line 99];
+*&amp;CatchVar103:void=n$54 [line 99];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:27 succs:3 exn:3 Conditional exception handler
+n$55=_fun___instanceof(n$54:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 99];
+PRUNE(!n$55, false); [line 99];
+*&amp;return:void=EXN n$54 [line 99];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds: succs:25 26 exn:3 Instructions
+n$53=*&amp;return:void [line 99];
+*&amp;return:void=null [line 99];
+n$54=_fun___unwrap_exception(n$53:void) [line 99];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">            throw new RenderException(e); <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$49=_fun___new(sizeof(t=com.jfinal.render.RenderException):com.jfinal.render.RenderException*) [line 100];
+n$50=*&amp;e:java.lang.Object* [line 100];
+n$51=_fun_RenderException.&lt;init&gt;(Throwable)(n$49:com.jfinal.render.RenderException*,n$50:java.lang.Object*) [line 100];
+*&amp;$irvar6:com.jfinal.render.RenderException*=n$49 [line 100];
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:2 exn:3 Instructions
+n$52=*&amp;$irvar6:com.jfinal.render.RenderException* [line 100];
+*&amp;return:void=EXN n$52 [line 100];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line">    } <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:20 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:24 23 3 succs: exn: Exit
+</span></span></a> <a href="./BlogFrontendFreeMarkerRender.java.8e82fddf5513f204afa32d40b814b4a0/nodes/com.zrlog.web.render.BlogFrontendFreeMarkerRender.render%28%29%3Avoid.2b942f8ab6f46040013cae2d06e1f1fc_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:26 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

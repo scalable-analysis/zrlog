@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion(boolean):com.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">22</a></h1></center>PROC: <a href="./../com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc.html">Version UpdateVersionTimerTask.fetchLastVersion(boolean)</a> LINE: <a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">54</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node21.html"><span class='visited with_tooltip'>N_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node23.html"><span class='visited with_tooltip'>N_23<span class='tooltip'>node23 preds:22 18 13 succs:24 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$33=*&amp;$irvar5:java.text.SimpleDateFormat* [line 54];
+_=*n$33:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 54];
+n$35=*&amp;$irvar6:java.lang.String* [line 54];
+n$36=_fun_Date DateFormat.parse(String)(n$33:java.text.SimpleDateFormat*,n$35:java.lang.String*) virtual [line 54];
+*&amp;buildDate:java.util.Date*=n$36 [line 54];
+</LISTING>
+<hr width="100%">
+<a name="session54" href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22.html#session54">node22#session54</a>(<a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">54</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { buildDate, lastVersion, this, plugin.UpdateVersionTimerTask }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session55" href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22.html#session55">node22#session55</a>(<a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">54</a>) [exec] liveness 22
+<LISTING class='color_black'>PRE STATE:
+{ buildDate, lastVersion, this, plugin.UpdateVersionTimerTask }
+
+INSTR=  *&amp;buildDate:java.util.Date*=n$36 [line 54]; 
+
+STATE:
+{ n$36, lastVersion, this, plugin.UpdateVersionTimerTask }
+
+INSTR=  n$36=_fun_Date DateFormat.parse(String)(n$33:java.text.SimpleDateFormat*,n$35:java.lang.String*) virtual [line 54]; 
+
+STATE:
+{ n$33, n$35, lastVersion, this, plugin.UpdateVersionTimerTask }
+
+INSTR=  n$35=*&amp;$irvar6:java.lang.String* [line 54]; 
+
+STATE:
+{ n$33, $irvar6, lastVersion, this, plugin.UpdateVersionTimerTask }
+
+INSTR=  _=*n$33:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 54]; 
+
+STATE UNCHANGED
+
+INSTR=  n$33=*&amp;$irvar5:java.text.SimpleDateFormat* [line 54]; 
+
+STATE:
+{ $irvar5, $irvar6, lastVersion, this, plugin.UpdateVersionTimerTask }
+
+</LISTING>
+<hr width="100%">
+<a name="session127" href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22.html#session127">node22#session127</a>(<a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">54</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session128" href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22.html#session128">node22#session128</a>(<a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">54</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $irvar5, $irvar6, lastVersion },{ _, n$30, n$32 })
+
+INSTR=  n$33=*&amp;$irvar5:java.text.SimpleDateFormat* [line 54]; 
+
+STATE:
+({ n$33, $irvar5, $irvar6, lastVersion },{ _, n$30, n$32 })
+
+INSTR=  _=*n$33:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 54]; 
+
+STATE:
+({ _, n$33, $irvar5, $irvar6, lastVersion },{ _, n$30, n$32 })
+
+INSTR=  n$35=*&amp;$irvar6:java.lang.String* [line 54]; 
+
+STATE:
+({ _, n$33, n$35, $irvar5, $irvar6, lastVersion },{ _, n$30, n$32 })
+
+INSTR=  n$36=_fun_Date DateFormat.parse(String)(n$33:java.text.SimpleDateFormat*,n$35:java.lang.String*) virtual [line 54]; 
+
+STATE:
+({ _, n$33, n$35, n$36, $irvar5, $irvar6, lastVersion },{ _, n$30, n$32 })
+
+INSTR=  *&amp;buildDate:java.util.Date*=n$36 [line 54]; 
+
+STATE:
+({ buildDate, lastVersion },{ _, n$33, n$35, n$36, $irvar5, $irvar6 })
+
+</LISTING>
+<hr width="100%">
+<a name="session38" href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22.html#session38">node22#session38</a>(<a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">54</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session39" href="./../nodes/com.zrlog.web.plugin.UpdateVersionTimerTask.fetchLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.f3649fd385ff7f48536a8c2ce16ea2cc_node22.html#session39">node22#session39</a>(<a href="./../../UpdateVersionTimerTask.java.f2004df67ef6e86d7d569fe0433387f0.html#LINE54">54</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$3 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$4 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$8 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$12 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$20 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$24 -&gt; { },
+  n$27 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  versionUrl -&gt; { },
+  buildDate -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  lastVersion -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) }
+
+
+
+
+TAINTED_CALL1: (callee="Date DateFormat.parse(String)", caller="Version UpdateVersionTimerTask.fetchLastVersion(boolean)")
+TAINTED_CALL1: (callee="Date DateFormat.parse(String)", caller="Version UpdateVersionTimerTask.fetchLastVersion(boolean)")
+INSTR=  n$36 := Date DateFormat.parse(String)({ n$28, n$32 }) [line 54]; 
+
+STATE:
+{ n$3 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$4 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$8 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$12 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$20 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$24 -&gt; { },
+  n$27 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$28 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$36 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  versionUrl -&gt; { },
+  buildDate -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  lastVersion -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) }
+
+INSTR=  buildDate := n$36 [line 54]; 
+
+STATE:
+{ n$3 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$4 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$8 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$12 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$20 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$24 -&gt; { },
+  n$27 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$28 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$36 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  versionUrl -&gt; { },
+  buildDate -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  lastVersion -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) }
+
+INSTR=  NULLIFY(&amp;$irvar5); [line 54]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar6); [line 54]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$36); [line 54]; 
+
+STATE:
+{ n$3 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$4 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$8 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$12 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$17 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$20 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$24 -&gt; { },
+  n$27 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$28 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$32 -&gt; Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$36 -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  versionUrl -&gt; { },
+  buildDate -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  lastVersion -&gt; (Footprint({ util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) }
+
+INSTR=  APPLY_ABSTRACTION; [line 54]; 
+
+STATE UNCHANGED
+
+</LISTING>

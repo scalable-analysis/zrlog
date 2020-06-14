@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Log.adminCount():long.af8eca2a3509d24f9f83412111536be4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../Log.java.a143a916b341885650189777c518aaa9.html#LINE238">long Log.adminCount()</a></h1></center>
+<a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 239];
+NULLIFY(&amp;$irvar0); [line 239];
+NULLIFY(&amp;$irvar1); [line 239];
+NULLIFY(&amp;$irvar2); [line 239];
+EXIT_SCOPE($irvar3,$irvar0,$irvar1,$irvar2); [line 239];
+APPLY_ABSTRACTION; [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.model.Log* [line 239];
+_=*n$0:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 239];
+n$2=_fun_Model Model.findFirst(String)(n$0:com.zrlog.model.Log*,"select count(1) as count from log":java.lang.Object*) virtual [line 239];
+*&amp;$irvar0:com.jfinal.plugin.activerecord.Model*=n$2 [line 239];
+NULLIFY(&amp;this); [line 239];
+EXIT_SCOPE(_,n$0,n$2,this); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=_fun_Integer Integer.valueOf(int)(0:int) [line 239];
+*&amp;$irvar1:java.lang.Integer*=n$3 [line 239];
+EXIT_SCOPE(n$3); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;$irvar0:com.jfinal.plugin.activerecord.Model* [line 239];
+n$5=_fun___cast(n$4:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 239];
+_=*n$5:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 239];
+n$7=*&amp;$irvar1:java.lang.Integer* [line 239];
+n$8=_fun_Object Model.get(String,Object)(n$5:com.zrlog.model.Log*,"count":java.lang.Object*,n$7:java.lang.Integer*) virtual [line 239];
+*&amp;$irvar2:java.lang.Object*=n$8 [line 239];
+NULLIFY(&amp;$irvar0); [line 239];
+NULLIFY(&amp;$irvar1); [line 239];
+EXIT_SCOPE(_,n$4,n$5,n$7,n$8,$irvar0,$irvar1); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$9=*&amp;$irvar2:java.lang.Object* [line 239];
+n$10=_fun___cast(n$9:java.lang.Object*,sizeof(t=java.lang.Long;sub_t=( sub )(cast)):void) [line 239];
+_=*n$10:java.lang.Long*(root java.lang.Long) [line 239];
+n$12=_fun_long Long.longValue()(n$10:java.lang.Long*) virtual [line 239];
+*&amp;$irvar3:long=n$12 [line 239];
+NULLIFY(&amp;$irvar2); [line 239];
+EXIT_SCOPE(_,n$9,n$10,n$12,$irvar2); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminCount%28%29%3Along.af8eca2a3509d24f9f83412111536be4_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+n$13=*&amp;$irvar3:long [line 239];
+*&amp;return:long=n$13 [line 239];
+NULLIFY(&amp;$irvar3); [line 239];
+EXIT_SCOPE(n$13,$irvar3); [line 239];
+APPLY_ABSTRACTION; [line 239];
+</span></span></a><br />@
+
+<span class='color_black'>long long Log.adminCount()(com.zrlog.model.Log* this)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= long Log.adminCount()
+; translation_unit= data/src/main/java/com/zrlog/model/Log.java
+; access= Public
+; formals= [(this,com.zrlog.model.Log*)]
+; is_defined= true
+; loc= data/src/main/java/com/zrlog/model/Log.java:238
+; locals= [{ name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }]
+; ret_type= long 
+; proc_id= com.zrlog.model.Log.adminCount():long }</pre>
+</body>
+</html>

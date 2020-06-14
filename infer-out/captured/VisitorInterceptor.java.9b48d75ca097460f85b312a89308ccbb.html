@@ -1,0 +1,932 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/interceptor/VisitorInterceptor.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.interceptor; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.jfinal.aop.Interceptor; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.jfinal.aop.Invocation; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.jfinal.core.Controller; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.jfinal.core.JFinal; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import com.jfinal.json.Json; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import com.jfinal.kit.PathKit; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import com.jfinal.render.FreeMarkerRender; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import com.zrlog.common.response.ApiStandardResponse; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">import com.zrlog.common.vo.TemplateVO; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">import com.zrlog.service.TemplateService; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">import com.zrlog.util.ZrLogUtil; </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">import com.zrlog.web.config.ZrLogConfig; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">import com.zrlog.web.handler.GlobalResourceHandler; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">import com.zrlog.web.render.BlogFrontendFreeMarkerRender; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">import java.io.File; </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">import java.util.Enumeration; </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">import java.util.LinkedHashMap; </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">import java.util.Map; </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line"> * 目前这里分为3种情况， </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line"> * 1. /post / 前台页面，扩展其他页面请使用 /** 这样的。 </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line"> * 2. /install 用于安装向导的路由 </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line"> * 3. /api 用于将文章相关的数据数据转化JSON数据 </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">class VisitorInterceptor implements Interceptor { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.<init>%28%29.6ff26c9006258630eae6eedb70ca7dc3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.<init>%28%29.6ff26c9006258630eae6eedb70ca7dc3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.interceptor.VisitorInterceptor* [line 29];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.interceptor.VisitorInterceptor*) [line 29];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.<init>%28%29.6ff26c9006258630eae6eedb70ca7dc3_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.<init>%28%29.6ff26c9006258630eae6eedb70ca7dc3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.<init>%28%29.6ff26c9006258630eae6eedb70ca7dc3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/com.zrlog.web.interceptor.VisitorInterceptor.<init>%28%29.6ff26c9006258630eae6eedb70ca7dc3.html">summary for VisitorInterceptor.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">    public void intercept(Invocation ai) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71.html">summary for void VisitorInterceptor.intercept(Invocation)</a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">        String actionKey = ai.getActionKey(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;ai:com.jfinal.aop.Invocation* [line 33];
+_=*n$0:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 33];
+n$2=_fun_String Invocation.getActionKey()(n$0:com.jfinal.aop.Invocation*) virtual [line 33];
+*&amp;actionKey:java.lang.String*=n$2 [line 33];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">        if (actionKey.startsWith(&quot;/install&quot;)) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:3 Instructions
+n$3=*&amp;actionKey:java.lang.String* [line 34];
+_=*n$3:java.lang.String*(root java.lang.String) [line 34];
+n$5=_fun_boolean String.startsWith(String)(n$3:java.lang.String*,"/install":java.lang.Object*) virtual [line 34];
+*&amp;$irvar0:_Bool=n$5 [line 34];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 exn:3 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 34];
+PRUNE(!(n$6 == 0), true); [line 34];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:9 exn:3 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 34];
+PRUNE((n$6 == 0), false); [line 34];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">            installPermission(ai); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:20 exn:3 Instructions
+n$7=*&amp;this:com.zrlog.web.interceptor.VisitorInterceptor* [line 35];
+n$8=*&amp;ai:com.jfinal.aop.Invocation* [line 35];
+n$9=_fun_void VisitorInterceptor.installPermission(Invocation)(n$7:com.zrlog.web.interceptor.VisitorInterceptor*,n$8:com.jfinal.aop.Invocation*) [line 35];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">            if (ZrLogConfig.isInstalled()) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 11 exn:3 Instructions
+n$10=_fun_boolean ZrLogConfig.isInstalled()() [line 37];
+*&amp;$irvar1:_Bool=n$10 [line 37];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:9 succs:12 exn:3 Conditional method_body
+n$11=*&amp;$irvar1:_Bool [line 37];
+PRUNE(!(n$11 == 0), true); [line 37];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:9 succs:20 exn:3 Conditional method_body
+n$11=*&amp;$irvar1:_Bool [line 37];
+PRUNE((n$11 == 0), false); [line 37];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">                if (actionKey.startsWith(&quot;/api&quot;)) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 14 exn:3 Instructions
+n$12=*&amp;actionKey:java.lang.String* [line 38];
+_=*n$12:java.lang.String*(root java.lang.String) [line 38];
+n$14=_fun_boolean String.startsWith(String)(n$12:java.lang.String*,"/api":java.lang.Object*) virtual [line 38];
+*&amp;$irvar2:_Bool=n$14 [line 38];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:12 succs:15 exn:3 Conditional method_body
+n$15=*&amp;$irvar2:_Bool [line 38];
+PRUNE(!(n$15 == 0), true); [line 38];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:12 succs:16 exn:3 Conditional method_body
+n$15=*&amp;$irvar2:_Bool [line 38];
+PRUNE((n$15 == 0), false); [line 38];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">                    apiPermission(ai); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:13 succs:20 exn:3 Instructions
+n$16=*&amp;this:com.zrlog.web.interceptor.VisitorInterceptor* [line 39];
+n$17=*&amp;ai:com.jfinal.aop.Invocation* [line 39];
+n$18=_fun_void VisitorInterceptor.apiPermission(Invocation)(n$16:com.zrlog.web.interceptor.VisitorInterceptor*,n$17:com.jfinal.aop.Invocation*) [line 39];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">                } else if (actionKey.startsWith(&quot;/&quot;)) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:14 succs:17 18 exn:3 Instructions
+n$19=*&amp;actionKey:java.lang.String* [line 40];
+_=*n$19:java.lang.String*(root java.lang.String) [line 40];
+n$21=_fun_boolean String.startsWith(String)(n$19:java.lang.String*,"/":java.lang.Object*) virtual [line 40];
+*&amp;$irvar3:_Bool=n$21 [line 40];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:16 succs:19 exn:3 Conditional method_body
+n$22=*&amp;$irvar3:_Bool [line 40];
+PRUNE(!(n$22 == 0), true); [line 40];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:16 succs:20 exn:3 Conditional method_body
+n$22=*&amp;$irvar3:_Bool [line 40];
+PRUNE((n$22 == 0), false); [line 40];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">                    visitorPermission(ai); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:17 succs:20 exn:3 Instructions
+n$23=*&amp;this:com.zrlog.web.interceptor.VisitorInterceptor* [line 41];
+n$24=*&amp;ai:com.jfinal.aop.Invocation* [line 41];
+n$25=_fun_void VisitorInterceptor.visitorPermission(Invocation)(n$23:com.zrlog.web.interceptor.VisitorInterceptor*,n$24:com.jfinal.aop.Invocation*) [line 41];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">    } <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 18 15 11 8 succs:2 exn:3 Instructions
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:20 3 succs: exn: Exit
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.23c9ba90332291d27427bad241baaf71_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">     * 查询出来的文章数据存放在request域里面，通过判断Key，选择对应需要渲染的模板文件 </td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">     * </td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">     * @param ai </td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">    private void visitorPermission(Invocation ai) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74.html">summary for void VisitorInterceptor.visitorPermission(Invocation)</a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">        ai.invoke(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;ai:com.jfinal.aop.Invocation* [line 53];
+_=*n$0:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 53];
+n$2=_fun_void Invocation.invoke()(n$0:com.jfinal.aop.Invocation*) virtual [line 53];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">        String templateName = ai.getReturnValue(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=*&amp;ai:com.jfinal.aop.Invocation* [line 54];
+_=*n$3:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 54];
+n$5=_fun_Object Invocation.getReturnValue()(n$3:com.jfinal.aop.Invocation*) virtual [line 54];
+*&amp;$irvar0:java.lang.Object*=n$5 [line 54];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:3 Instructions
+n$6=*&amp;$irvar0:java.lang.Object* [line 54];
+n$7=_fun___cast(n$6:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 54];
+*&amp;templateName:java.lang.String*=n$7 [line 54];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">        if (templateName == null) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:3 Conditional method_body
+n$8=*&amp;templateName:java.lang.String* [line 55];
+PRUNE(!(n$8 != null), true); [line 55];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:10 exn:3 Conditional method_body
+n$8=*&amp;templateName:java.lang.String* [line 55];
+PRUNE((n$8 != null), false); [line 55];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">            return; <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:2 exn:3 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">        GlobalResourceHandler.printUserTime(&quot;Template before&quot;); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:8 succs:11 exn:3 Instructions
+n$9=_fun_void GlobalResourceHandler.printUserTime(String)("Template before":java.lang.Object*) [line 58];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">        String templatePath = TemplateHelper.fullTemplateInfo(ai.getController(), true); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$10=*&amp;ai:com.jfinal.aop.Invocation* [line 59];
+_=*n$10:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 59];
+n$12=_fun_Controller Invocation.getController()(n$10:com.jfinal.aop.Invocation*) virtual [line 59];
+*&amp;$irvar1:com.jfinal.core.Controller*=n$12 [line 59];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$13=*&amp;$irvar1:com.jfinal.core.Controller* [line 59];
+n$14=_fun_String TemplateHelper.fullTemplateInfo(Controller,boolean)(n$13:com.jfinal.core.Controller*,1:int) [line 59];
+*&amp;templatePath:java.lang.String*=n$14 [line 59];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">        GlobalResourceHandler.printUserTime(&quot;Template after&quot;); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$15=_fun_void GlobalResourceHandler.printUserTime(String)("Template after":java.lang.Object*) [line 60];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">        TemplateVO templateVO = new TemplateService().getTemplateVO(JFinal.me().getContextPath(), new File(PathKit.getWebRootPath() + templatePath)); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$16=_fun___new(sizeof(t=com.zrlog.service.TemplateService):com.zrlog.service.TemplateService*) [line 61];
+n$17=_fun_TemplateService.&lt;init&gt;()(n$16:com.zrlog.service.TemplateService*) [line 61];
+*&amp;$irvar2:com.zrlog.service.TemplateService*=n$16 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$18=_fun_JFinal JFinal.me()() [line 61];
+*&amp;$irvar3:com.jfinal.core.JFinal*=n$18 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$19=*&amp;$irvar3:com.jfinal.core.JFinal* [line 61];
+_=*n$19:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 61];
+n$21=_fun_String JFinal.getContextPath()(n$19:com.jfinal.core.JFinal*) virtual [line 61];
+*&amp;$irvar4:java.lang.String*=n$21 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$22=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 61];
+n$23=_fun_StringBuilder.&lt;init&gt;()(n$22:java.lang.StringBuilder*) [line 61];
+*&amp;$irvar5:java.lang.StringBuilder*=n$22 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$24=_fun_String PathKit.getWebRootPath()() [line 61];
+*&amp;$irvar6:java.lang.String*=n$24 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$25=*&amp;$irvar5:java.lang.StringBuilder* [line 61];
+_=*n$25:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$27=*&amp;$irvar6:java.lang.String* [line 61];
+n$28=_fun_StringBuilder StringBuilder.append(String)(n$25:java.lang.StringBuilder*,n$27:java.lang.String*) virtual [line 61];
+*&amp;$irvar7:java.lang.StringBuilder*=n$28 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$29=*&amp;$irvar7:java.lang.StringBuilder* [line 61];
+_=*n$29:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$31=*&amp;templatePath:java.lang.String* [line 61];
+n$32=_fun_StringBuilder StringBuilder.append(String)(n$29:java.lang.StringBuilder*,n$31:java.lang.String*) virtual [line 61];
+*&amp;$irvar8:java.lang.StringBuilder*=n$32 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$33=*&amp;$irvar8:java.lang.StringBuilder* [line 61];
+_=*n$33:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$35=_fun_String StringBuilder.toString()(n$33:java.lang.StringBuilder*) virtual [line 61];
+*&amp;$irvar9:java.lang.String*=n$35 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$36=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 61];
+n$37=*&amp;$irvar9:java.lang.String* [line 61];
+n$38=_fun_File.&lt;init&gt;(String)(n$36:java.io.File*,n$37:java.lang.String*) [line 61];
+*&amp;$irvar10:java.io.File*=n$36 [line 61];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$39=*&amp;$irvar2:com.zrlog.service.TemplateService* [line 61];
+_=*n$39:com.zrlog.service.TemplateService*(root com.zrlog.service.TemplateService) [line 61];
+n$41=*&amp;$irvar4:java.lang.String* [line 61];
+n$42=*&amp;$irvar10:java.io.File* [line 61];
+n$43=_fun_TemplateVO TemplateService.getTemplateVO(String,File)(n$39:com.zrlog.service.TemplateService*,n$41:java.lang.String*,n$42:java.io.File*) virtual [line 61];
+*&amp;templateVO:com.zrlog.common.vo.TemplateVO*=n$43 [line 61];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">        String ext = ZrLogUtil.getViewExt(templateVO.getViewType()); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$44=*&amp;templateVO:com.zrlog.common.vo.TemplateVO* [line 62];
+_=*n$44:com.zrlog.common.vo.TemplateVO*(root com.zrlog.common.vo.TemplateVO) [line 62];
+n$46=_fun_String TemplateVO.getViewType()(n$44:com.zrlog.common.vo.TemplateVO*) virtual [line 62];
+*&amp;$irvar11:java.lang.String*=n$46 [line 62];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$47=*&amp;$irvar11:java.lang.String* [line 62];
+n$48=_fun_String ZrLogUtil.getViewExt(String)(n$47:java.lang.String*) [line 62];
+*&amp;ext:java.lang.String*=n$48 [line 62];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">        if (ai.getController().getAttr(&quot;log&quot;) != null) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$49=*&amp;ai:com.jfinal.aop.Invocation* [line 63];
+_=*n$49:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 63];
+n$51=_fun_Controller Invocation.getController()(n$49:com.jfinal.aop.Invocation*) virtual [line 63];
+*&amp;$irvar12:com.jfinal.core.Controller*=n$51 [line 63];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 29 exn:3 Instructions
+n$52=*&amp;$irvar12:com.jfinal.core.Controller* [line 63];
+_=*n$52:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 63];
+n$54=_fun_Object Controller.getAttr(String)(n$52:com.jfinal.core.Controller*,"log":java.lang.Object*) virtual [line 63];
+*&amp;$irvar13:java.lang.Object*=n$54 [line 63];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node28.html"><span class='visited with_tooltip'>C_28<span class='tooltip'>node28 preds:27 succs:30 exn:3 Conditional method_body
+n$55=*&amp;$irvar13:java.lang.Object* [line 63];
+PRUNE(!(n$55 == null), true); [line 63];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node29.html"><span class='visited with_tooltip'>C_29<span class='tooltip'>node29 preds:27 succs:33 exn:3 Conditional method_body
+n$55=*&amp;$irvar13:java.lang.Object* [line 63];
+PRUNE((n$55 == null), false); [line 63];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">            ai.getController().setAttr(&quot;pageLevel&quot;, 1); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:28 succs:31 exn:3 Instructions
+n$56=*&amp;ai:com.jfinal.aop.Invocation* [line 64];
+_=*n$56:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 64];
+n$58=_fun_Controller Invocation.getController()(n$56:com.jfinal.aop.Invocation*) virtual [line 64];
+*&amp;$irvar14:com.jfinal.core.Controller*=n$58 [line 64];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$59=_fun_Integer Integer.valueOf(int)(1:int) [line 64];
+*&amp;$irvar15:java.lang.Integer*=n$59 [line 64];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:63 exn:3 Instructions
+n$60=*&amp;$irvar14:com.jfinal.core.Controller* [line 64];
+_=*n$60:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 64];
+n$62=*&amp;$irvar15:java.lang.Integer* [line 64];
+n$63=_fun_Controller Controller.setAttr(String,Object)(n$60:com.jfinal.core.Controller*,"pageLevel":java.lang.Object*,n$62:java.lang.Integer*) virtual [line 64];
+*&amp;$irvar16:com.jfinal.core.Controller*=n$63 [line 64];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">        } else if (ai.getController().getAttr(&quot;data&quot;) != null) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:29 succs:34 exn:3 Instructions
+n$64=*&amp;ai:com.jfinal.aop.Invocation* [line 65];
+_=*n$64:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 65];
+n$66=_fun_Controller Invocation.getController()(n$64:com.jfinal.aop.Invocation*) virtual [line 65];
+*&amp;$irvar17:com.jfinal.core.Controller*=n$66 [line 65];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 36 exn:3 Instructions
+n$67=*&amp;$irvar17:com.jfinal.core.Controller* [line 65];
+_=*n$67:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 65];
+n$69=_fun_Object Controller.getAttr(String)(n$67:com.jfinal.core.Controller*,"data":java.lang.Object*) virtual [line 65];
+*&amp;$irvar18:java.lang.Object*=n$69 [line 65];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node35.html"><span class='visited with_tooltip'>C_35<span class='tooltip'>node35 preds:34 succs:37 exn:3 Conditional method_body
+n$70=*&amp;$irvar18:java.lang.Object* [line 65];
+PRUNE(!(n$70 == null), true); [line 65];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node36.html"><span class='visited with_tooltip'>C_36<span class='tooltip'>node36 preds:34 succs:60 exn:3 Conditional method_body
+n$70=*&amp;$irvar18:java.lang.Object* [line 65];
+PRUNE((n$70 == null), false); [line 65];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">            if (&quot;/&quot;.equals(ai.getActionKey()) &amp;&amp; new File(PathKit.getWebRootPath() + templatePath + &quot;/&quot; + templateName + ext).exists()) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:35 succs:38 exn:3 Instructions
+n$71=*&amp;ai:com.jfinal.aop.Invocation* [line 66];
+_=*n$71:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 66];
+n$73=_fun_String Invocation.getActionKey()(n$71:com.jfinal.aop.Invocation*) virtual [line 66];
+*&amp;$irvar19:java.lang.String*=n$73 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 40 exn:3 Instructions
+n$74=*&amp;$irvar19:java.lang.String* [line 66];
+n$75=_fun_boolean String.equals(Object)("/":java.lang.Object*,n$74:java.lang.String*) virtual [line 66];
+*&amp;$irvar20:_Bool=n$75 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node39.html"><span class='visited with_tooltip'>C_39<span class='tooltip'>node39 preds:38 succs:41 exn:3 Conditional method_body
+n$76=*&amp;$irvar20:_Bool [line 66];
+PRUNE(!(n$76 == 0), true); [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:39 succs:42 exn:3 Instructions
+n$77=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 66];
+n$78=_fun_StringBuilder.&lt;init&gt;()(n$77:java.lang.StringBuilder*) [line 66];
+*&amp;$irvar21:java.lang.StringBuilder*=n$77 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:3 Instructions
+n$79=_fun_String PathKit.getWebRootPath()() [line 66];
+*&amp;$irvar22:java.lang.String*=n$79 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:3 Instructions
+n$80=*&amp;$irvar21:java.lang.StringBuilder* [line 66];
+_=*n$80:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$82=*&amp;$irvar22:java.lang.String* [line 66];
+n$83=_fun_StringBuilder StringBuilder.append(String)(n$80:java.lang.StringBuilder*,n$82:java.lang.String*) virtual [line 66];
+*&amp;$irvar23:java.lang.StringBuilder*=n$83 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 exn:3 Instructions
+n$84=*&amp;$irvar23:java.lang.StringBuilder* [line 66];
+_=*n$84:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$86=*&amp;templatePath:java.lang.String* [line 66];
+n$87=_fun_StringBuilder StringBuilder.append(String)(n$84:java.lang.StringBuilder*,n$86:java.lang.String*) virtual [line 66];
+*&amp;$irvar24:java.lang.StringBuilder*=n$87 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:44 succs:46 exn:3 Instructions
+n$88=*&amp;$irvar24:java.lang.StringBuilder* [line 66];
+_=*n$88:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$90=_fun_StringBuilder StringBuilder.append(String)(n$88:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 66];
+*&amp;$irvar25:java.lang.StringBuilder*=n$90 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 exn:3 Instructions
+n$91=*&amp;$irvar25:java.lang.StringBuilder* [line 66];
+_=*n$91:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$93=*&amp;templateName:java.lang.String* [line 66];
+n$94=_fun_StringBuilder StringBuilder.append(String)(n$91:java.lang.StringBuilder*,n$93:java.lang.String*) virtual [line 66];
+*&amp;$irvar26:java.lang.StringBuilder*=n$94 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:3 Instructions
+n$95=*&amp;$irvar26:java.lang.StringBuilder* [line 66];
+_=*n$95:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$97=*&amp;ext:java.lang.String* [line 66];
+n$98=_fun_StringBuilder StringBuilder.append(String)(n$95:java.lang.StringBuilder*,n$97:java.lang.String*) virtual [line 66];
+*&amp;$irvar27:java.lang.StringBuilder*=n$98 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:3 Instructions
+n$99=*&amp;$irvar27:java.lang.StringBuilder* [line 66];
+_=*n$99:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 66];
+n$101=_fun_String StringBuilder.toString()(n$99:java.lang.StringBuilder*) virtual [line 66];
+*&amp;$irvar28:java.lang.String*=n$101 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:50 exn:3 Instructions
+n$102=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 66];
+n$103=*&amp;$irvar28:java.lang.String* [line 66];
+n$104=_fun_File.&lt;init&gt;(String)(n$102:java.io.File*,n$103:java.lang.String*) [line 66];
+*&amp;$irvar29:java.io.File*=n$102 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 succs:51 52 exn:3 Instructions
+n$105=*&amp;$irvar29:java.io.File* [line 66];
+_=*n$105:java.io.File*(root java.io.File) [line 66];
+n$107=_fun_boolean File.exists()(n$105:java.io.File*) virtual [line 66];
+*&amp;$irvar30:_Bool=n$107 [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node51.html"><span class='visited with_tooltip'>C_51<span class='tooltip'>node51 preds:50 succs:53 exn:3 Conditional method_body
+n$108=*&amp;$irvar30:_Bool [line 66];
+PRUNE(!(n$108 == 0), true); [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node52.html"><span class='visited with_tooltip'>C_52<span class='tooltip'>node52 preds:50 succs:56 exn:3 Conditional method_body
+n$108=*&amp;$irvar30:_Bool [line 66];
+PRUNE((n$108 == 0), false); [line 66];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node40.html"><span class='visited with_tooltip'>C_40<span class='tooltip'>node40 preds:38 succs:56 exn:3 Conditional method_body
+n$76=*&amp;$irvar20:_Bool [line 66];
+PRUNE((n$76 == 0), false); [line 66];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">                ai.getController().setAttr(&quot;pageLevel&quot;, 2); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node53.html"><span class='visited with_tooltip'>I_53<span class='tooltip'>node53 preds:51 succs:54 exn:3 Instructions
+n$109=*&amp;ai:com.jfinal.aop.Invocation* [line 67];
+_=*n$109:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 67];
+n$111=_fun_Controller Invocation.getController()(n$109:com.jfinal.aop.Invocation*) virtual [line 67];
+*&amp;$irvar31:com.jfinal.core.Controller*=n$111 [line 67];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node54.html"><span class='visited with_tooltip'>I_54<span class='tooltip'>node54 preds:53 succs:55 exn:3 Instructions
+n$112=_fun_Integer Integer.valueOf(int)(2:int) [line 67];
+*&amp;$irvar32:java.lang.Integer*=n$112 [line 67];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:54 succs:63 exn:3 Instructions
+n$113=*&amp;$irvar31:com.jfinal.core.Controller* [line 67];
+_=*n$113:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 67];
+n$115=*&amp;$irvar32:java.lang.Integer* [line 67];
+n$116=_fun_Controller Controller.setAttr(String,Object)(n$113:com.jfinal.core.Controller*,"pageLevel":java.lang.Object*,n$115:java.lang.Integer*) virtual [line 67];
+*&amp;$irvar33:com.jfinal.core.Controller*=n$116 [line 67];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">            } else { </td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">                templateName = &quot;page&quot;; <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:52 40 succs:57 exn:3 Instructions
+*&amp;templateName:java.lang.Object*="page" [line 69];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">                ai.getController().setAttr(&quot;pageLevel&quot;, 1); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:56 succs:58 exn:3 Instructions
+n$117=*&amp;ai:com.jfinal.aop.Invocation* [line 70];
+_=*n$117:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 70];
+n$119=_fun_Controller Invocation.getController()(n$117:com.jfinal.aop.Invocation*) virtual [line 70];
+*&amp;$irvar34:com.jfinal.core.Controller*=n$119 [line 70];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node58.html"><span class='visited with_tooltip'>I_58<span class='tooltip'>node58 preds:57 succs:59 exn:3 Instructions
+n$120=_fun_Integer Integer.valueOf(int)(1:int) [line 70];
+*&amp;$irvar35:java.lang.Integer*=n$120 [line 70];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node59.html"><span class='visited with_tooltip'>I_59<span class='tooltip'>node59 preds:58 succs:63 exn:3 Instructions
+n$121=*&amp;$irvar34:com.jfinal.core.Controller* [line 70];
+_=*n$121:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 70];
+n$123=*&amp;$irvar35:java.lang.Integer* [line 70];
+n$124=_fun_Controller Controller.setAttr(String,Object)(n$121:com.jfinal.core.Controller*,"pageLevel":java.lang.Object*,n$123:java.lang.Integer*) virtual [line 70];
+*&amp;$irvar36:com.jfinal.core.Controller*=n$124 [line 70];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">            ai.getController().setAttr(&quot;pageLevel&quot;, 2); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node60.html"><span class='visited with_tooltip'>I_60<span class='tooltip'>node60 preds:36 succs:61 exn:3 Instructions
+n$125=*&amp;ai:com.jfinal.aop.Invocation* [line 73];
+_=*n$125:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 73];
+n$127=_fun_Controller Invocation.getController()(n$125:com.jfinal.aop.Invocation*) virtual [line 73];
+*&amp;$irvar37:com.jfinal.core.Controller*=n$127 [line 73];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node61.html"><span class='visited with_tooltip'>I_61<span class='tooltip'>node61 preds:60 succs:62 exn:3 Instructions
+n$128=_fun_Integer Integer.valueOf(int)(2:int) [line 73];
+*&amp;$irvar38:java.lang.Integer*=n$128 [line 73];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds:61 succs:63 exn:3 Instructions
+n$129=*&amp;$irvar37:com.jfinal.core.Controller* [line 73];
+_=*n$129:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 73];
+n$131=*&amp;$irvar38:java.lang.Integer* [line 73];
+n$132=_fun_Controller Controller.setAttr(String,Object)(n$129:com.jfinal.core.Controller*,"pageLevel":java.lang.Object*,n$131:java.lang.Integer*) virtual [line 73];
+*&amp;$irvar39:com.jfinal.core.Controller*=n$132 [line 73];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">        fullDevData(ai.getController()); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node63.html"><span class='visited with_tooltip'>I_63<span class='tooltip'>node63 preds:62 59 55 32 succs:64 exn:3 Instructions
+n$133=*&amp;ai:com.jfinal.aop.Invocation* [line 75];
+_=*n$133:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 75];
+n$135=_fun_Controller Invocation.getController()(n$133:com.jfinal.aop.Invocation*) virtual [line 75];
+*&amp;$irvar40:com.jfinal.core.Controller*=n$135 [line 75];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node64.html"><span class='visited with_tooltip'>I_64<span class='tooltip'>node64 preds:63 succs:65 exn:3 Instructions
+n$136=*&amp;this:com.zrlog.web.interceptor.VisitorInterceptor* [line 75];
+n$137=*&amp;$irvar40:com.jfinal.core.Controller* [line 75];
+n$138=_fun_void VisitorInterceptor.fullDevData(Controller)(n$136:com.zrlog.web.interceptor.VisitorInterceptor*,n$137:com.jfinal.core.Controller*) [line 75];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">        String viewPath = templatePath + &quot;/&quot; + templateName + ext; <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node65.html"><span class='visited with_tooltip'>I_65<span class='tooltip'>node65 preds:64 succs:66 exn:3 Instructions
+n$139=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 76];
+n$140=_fun_StringBuilder.&lt;init&gt;()(n$139:java.lang.StringBuilder*) [line 76];
+*&amp;$irvar41:java.lang.StringBuilder*=n$139 [line 76];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node66.html"><span class='visited with_tooltip'>I_66<span class='tooltip'>node66 preds:65 succs:67 exn:3 Instructions
+n$141=*&amp;$irvar41:java.lang.StringBuilder* [line 76];
+_=*n$141:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 76];
+n$143=*&amp;templatePath:java.lang.String* [line 76];
+n$144=_fun_StringBuilder StringBuilder.append(String)(n$141:java.lang.StringBuilder*,n$143:java.lang.String*) virtual [line 76];
+*&amp;$irvar42:java.lang.StringBuilder*=n$144 [line 76];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node67.html"><span class='visited with_tooltip'>I_67<span class='tooltip'>node67 preds:66 succs:68 exn:3 Instructions
+n$145=*&amp;$irvar42:java.lang.StringBuilder* [line 76];
+_=*n$145:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 76];
+n$147=_fun_StringBuilder StringBuilder.append(String)(n$145:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 76];
+*&amp;$irvar43:java.lang.StringBuilder*=n$147 [line 76];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node68.html"><span class='visited with_tooltip'>I_68<span class='tooltip'>node68 preds:67 succs:69 exn:3 Instructions
+n$148=*&amp;$irvar43:java.lang.StringBuilder* [line 76];
+_=*n$148:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 76];
+n$150=*&amp;templateName:java.lang.Object* [line 76];
+n$151=_fun_StringBuilder StringBuilder.append(String)(n$148:java.lang.StringBuilder*,n$150:java.lang.Object*) virtual [line 76];
+*&amp;$irvar44:java.lang.StringBuilder*=n$151 [line 76];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node69.html"><span class='visited with_tooltip'>I_69<span class='tooltip'>node69 preds:68 succs:70 exn:3 Instructions
+n$152=*&amp;$irvar44:java.lang.StringBuilder* [line 76];
+_=*n$152:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 76];
+n$154=*&amp;ext:java.lang.String* [line 76];
+n$155=_fun_StringBuilder StringBuilder.append(String)(n$152:java.lang.StringBuilder*,n$154:java.lang.String*) virtual [line 76];
+*&amp;$irvar45:java.lang.StringBuilder*=n$155 [line 76];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node70.html"><span class='visited with_tooltip'>I_70<span class='tooltip'>node70 preds:69 succs:71 exn:3 Instructions
+n$156=*&amp;$irvar45:java.lang.StringBuilder* [line 76];
+_=*n$156:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 76];
+n$158=_fun_String StringBuilder.toString()(n$156:java.lang.StringBuilder*) virtual [line 76];
+*&amp;viewPath:java.lang.String*=n$158 [line 76];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">        if (ext.equals(&quot;.ftl&quot;)) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node71.html"><span class='visited with_tooltip'>I_71<span class='tooltip'>node71 preds:70 succs:72 73 exn:3 Instructions
+n$159=*&amp;ext:java.lang.String* [line 77];
+_=*n$159:java.lang.String*(root java.lang.String) [line 77];
+n$161=_fun_boolean String.equals(Object)(n$159:java.lang.String*,".ftl":java.lang.Object*) virtual [line 77];
+*&amp;$irvar46:_Bool=n$161 [line 77];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node72.html"><span class='visited with_tooltip'>C_72<span class='tooltip'>node72 preds:71 succs:74 exn:3 Conditional method_body
+n$162=*&amp;$irvar46:_Bool [line 77];
+PRUNE(!(n$162 == 0), true); [line 77];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node73.html"><span class='visited with_tooltip'>C_73<span class='tooltip'>node73 preds:71 succs:82 exn:3 Conditional method_body
+n$162=*&amp;$irvar46:_Bool [line 77];
+PRUNE((n$162 == 0), false); [line 77];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">            BlogFrontendFreeMarkerRender render = new BlogFrontendFreeMarkerRender(viewPath); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node74.html"><span class='visited with_tooltip'>I_74<span class='tooltip'>node74 preds:72 succs:75 exn:3 Instructions
+n$163=_fun___new(sizeof(t=com.zrlog.web.render.BlogFrontendFreeMarkerRender):com.zrlog.web.render.BlogFrontendFreeMarkerRender*) [line 78];
+n$164=*&amp;viewPath:java.lang.String* [line 78];
+n$165=_fun_BlogFrontendFreeMarkerRender.&lt;init&gt;(String)(n$163:com.zrlog.web.render.BlogFrontendFreeMarkerRender*,n$164:java.lang.String*) [line 78];
+*&amp;render:com.zrlog.web.render.BlogFrontendFreeMarkerRender*=n$163 [line 78];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">            render.setContext(ai.getController().getRequest(), ai.getController().getResponse()); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node75.html"><span class='visited with_tooltip'>I_75<span class='tooltip'>node75 preds:74 succs:76 exn:3 Instructions
+n$166=*&amp;ai:com.jfinal.aop.Invocation* [line 79];
+_=*n$166:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 79];
+n$168=_fun_Controller Invocation.getController()(n$166:com.jfinal.aop.Invocation*) virtual [line 79];
+*&amp;$irvar47:com.jfinal.core.Controller*=n$168 [line 79];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node76.html"><span class='visited with_tooltip'>I_76<span class='tooltip'>node76 preds:75 succs:77 exn:3 Instructions
+n$169=*&amp;$irvar47:com.jfinal.core.Controller* [line 79];
+_=*n$169:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 79];
+n$171=_fun_HttpServletRequest Controller.getRequest()(n$169:com.jfinal.core.Controller*) virtual [line 79];
+*&amp;$irvar48:javax.servlet.http.HttpServletRequest*=n$171 [line 79];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node77.html"><span class='visited with_tooltip'>I_77<span class='tooltip'>node77 preds:76 succs:78 exn:3 Instructions
+n$172=*&amp;ai:com.jfinal.aop.Invocation* [line 79];
+_=*n$172:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 79];
+n$174=_fun_Controller Invocation.getController()(n$172:com.jfinal.aop.Invocation*) virtual [line 79];
+*&amp;$irvar49:com.jfinal.core.Controller*=n$174 [line 79];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node78.html"><span class='visited with_tooltip'>I_78<span class='tooltip'>node78 preds:77 succs:79 exn:3 Instructions
+n$175=*&amp;$irvar49:com.jfinal.core.Controller* [line 79];
+_=*n$175:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 79];
+n$177=_fun_HttpServletResponse Controller.getResponse()(n$175:com.jfinal.core.Controller*) virtual [line 79];
+*&amp;$irvar50:javax.servlet.http.HttpServletResponse*=n$177 [line 79];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node79.html"><span class='visited with_tooltip'>I_79<span class='tooltip'>node79 preds:78 succs:80 exn:3 Instructions
+n$178=*&amp;render:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 79];
+_=*n$178:com.zrlog.web.render.BlogFrontendFreeMarkerRender*(root com.zrlog.web.render.BlogFrontendFreeMarkerRender) [line 79];
+n$180=*&amp;$irvar48:javax.servlet.http.HttpServletRequest* [line 79];
+n$181=*&amp;$irvar50:javax.servlet.http.HttpServletResponse* [line 79];
+n$182=_fun_Render Render.setContext(HttpServletRequest,HttpServletResponse)(n$178:com.zrlog.web.render.BlogFrontendFreeMarkerRender*,n$180:javax.servlet.http.HttpServletRequest*,n$181:javax.servlet.http.HttpServletResponse*) virtual [line 79];
+*&amp;$irvar51:com.jfinal.render.Render*=n$182 [line 79];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">            ai.getController().render(render); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node80.html"><span class='visited with_tooltip'>I_80<span class='tooltip'>node80 preds:79 succs:81 exn:3 Instructions
+n$183=*&amp;ai:com.jfinal.aop.Invocation* [line 80];
+_=*n$183:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 80];
+n$185=_fun_Controller Invocation.getController()(n$183:com.jfinal.aop.Invocation*) virtual [line 80];
+*&amp;$irvar52:com.jfinal.core.Controller*=n$185 [line 80];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node81.html"><span class='visited with_tooltip'>I_81<span class='tooltip'>node81 preds:80 succs:84 exn:3 Instructions
+n$186=*&amp;$irvar52:com.jfinal.core.Controller* [line 80];
+_=*n$186:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 80];
+n$188=*&amp;render:com.zrlog.web.render.BlogFrontendFreeMarkerRender* [line 80];
+n$189=_fun_void Controller.render(Render)(n$186:com.jfinal.core.Controller*,n$188:com.zrlog.web.render.BlogFrontendFreeMarkerRender*) virtual [line 80];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">            ai.getController().render(viewPath); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node82.html"><span class='visited with_tooltip'>I_82<span class='tooltip'>node82 preds:73 succs:83 exn:3 Instructions
+n$190=*&amp;ai:com.jfinal.aop.Invocation* [line 82];
+_=*n$190:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 82];
+n$192=_fun_Controller Invocation.getController()(n$190:com.jfinal.aop.Invocation*) virtual [line 82];
+*&amp;$irvar53:com.jfinal.core.Controller*=n$192 [line 82];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node83.html"><span class='visited with_tooltip'>I_83<span class='tooltip'>node83 preds:82 succs:84 exn:3 Instructions
+n$193=*&amp;$irvar53:com.jfinal.core.Controller* [line 82];
+_=*n$193:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 82];
+n$195=*&amp;viewPath:java.lang.String* [line 82];
+n$196=_fun_void Controller.render(String)(n$193:com.jfinal.core.Controller*,n$195:java.lang.String*) virtual [line 82];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">    } <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node84.html"><span class='visited with_tooltip'>I_84<span class='tooltip'>node84 preds:83 81 succs:2 exn:3 Instructions
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:84 9 3 succs: exn: Exit
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.visitorPermission%28com.jfinal.aop.Invocation%29%3Avoid.0ab6b1b1033eef6899757c3a3c65ab74_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">     * 方便开发环境使用，将Servlet的Request域的数据转化JSON字符串，配合dev.jsp使用，定制主题更加方便 </td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">     * </td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line">     * @param controller </td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">    private void fullDevData(Controller controller) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040.html">summary for void VisitorInterceptor.fullDevData(Controller)</a></td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line">        boolean dev = JFinal.me().getConstants().getDevMode(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_JFinal JFinal.me()() [line 93];
+*&amp;$irvar0:com.jfinal.core.JFinal*=n$0 [line 93];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:com.jfinal.core.JFinal* [line 93];
+_=*n$1:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 93];
+n$3=_fun_Constants JFinal.getConstants()(n$1:com.jfinal.core.JFinal*) virtual [line 93];
+*&amp;$irvar1:com.jfinal.config.Constants*=n$3 [line 93];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;$irvar1:com.jfinal.config.Constants* [line 93];
+_=*n$4:com.jfinal.config.Constants*(root com.jfinal.config.Constants) [line 93];
+n$6=_fun_boolean Constants.getDevMode()(n$4:com.jfinal.config.Constants*) virtual [line 93];
+*&amp;dev:_Bool=n$6 [line 93];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line">        controller.setAttr(&quot;dev&quot;, dev); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$7=*&amp;dev:_Bool [line 94];
+n$8=_fun_Boolean Boolean.valueOf(boolean)(n$7:_Bool) [line 94];
+*&amp;$irvar2:java.lang.Boolean*=n$8 [line 94];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 10 exn:3 Instructions
+n$9=*&amp;controller:com.jfinal.core.Controller* [line 94];
+_=*n$9:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 94];
+n$11=*&amp;$irvar2:java.lang.Boolean* [line 94];
+n$12=_fun_Controller Controller.setAttr(String,Object)(n$9:com.jfinal.core.Controller*,"dev":java.lang.Object*,n$11:java.lang.Boolean*) virtual [line 94];
+*&amp;$irvar3:com.jfinal.core.Controller*=n$12 [line 94];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">        if (dev) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:8 succs:11 exn:3 Conditional method_body
+n$13=*&amp;dev:_Bool [line 95];
+PRUNE(!(n$13 == 0), true); [line 95];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 succs:24 exn:3 Conditional method_body
+n$13=*&amp;dev:_Bool [line 95];
+PRUNE((n$13 == 0), false); [line 95];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">            Map&lt;String, Object&gt; attrMap = new LinkedHashMap&lt;&gt;(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:9 succs:12 exn:3 Instructions
+n$14=_fun___new(sizeof(t=java.util.LinkedHashMap):java.util.LinkedHashMap*) [line 96];
+n$15=_fun_LinkedHashMap.&lt;init&gt;()(n$14:java.util.LinkedHashMap*) [line 96];
+*&amp;attrMap:java.util.LinkedHashMap*=n$14 [line 96];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">            Enumeration&lt;String&gt; enumerations = controller.getAttrNames(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$16=*&amp;controller:com.jfinal.core.Controller* [line 97];
+_=*n$16:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 97];
+n$18=_fun_Enumeration Controller.getAttrNames()(n$16:com.jfinal.core.Controller*) virtual [line 97];
+*&amp;enumerations:java.util.Enumeration*=n$18 [line 97];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line">            while (enumerations.hasMoreElements()) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:20 12 succs:16 exn:3 Instructions
+n$19=*&amp;enumerations:java.util.Enumeration* [line 98];
+_=*n$19:java.util.Enumeration*(root java.util.Enumeration) [line 98];
+n$21=_fun_boolean Enumeration.hasMoreElements()(n$19:java.util.Enumeration*) interface virtual [line 98];
+*&amp;$irvar4:_Bool=n$21 [line 98];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node16.html"><span class='visited with_tooltip'>J_16<span class='tooltip'>node16 preds:13 succs:14 15 exn: Join
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:16 succs:17 exn:3 Conditional method_body
+n$22=*&amp;$irvar4:_Bool [line 98];
+PRUNE(!(n$22 == 0), true); [line 98];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:16 succs:21 exn:3 Conditional method_body
+n$22=*&amp;$irvar4:_Bool [line 98];
+PRUNE((n$22 == 0), false); [line 98];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">                String key = enumerations.nextElement(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:14 succs:18 exn:3 Instructions
+n$23=*&amp;enumerations:java.util.Enumeration* [line 99];
+_=*n$23:java.util.Enumeration*(root java.util.Enumeration) [line 99];
+n$25=_fun_Object Enumeration.nextElement()(n$23:java.util.Enumeration*) interface virtual [line 99];
+*&amp;$irvar5:java.lang.Object*=n$25 [line 99];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$26=*&amp;$irvar5:java.lang.Object* [line 99];
+n$27=_fun___cast(n$26:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 99];
+*&amp;key:java.lang.String*=n$27 [line 99];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">                attrMap.put(key, controller.getAttr(key)); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$28=*&amp;controller:com.jfinal.core.Controller* [line 100];
+_=*n$28:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 100];
+n$30=*&amp;key:java.lang.String* [line 100];
+n$31=_fun_Object Controller.getAttr(String)(n$28:com.jfinal.core.Controller*,n$30:java.lang.String*) virtual [line 100];
+*&amp;$irvar6:java.lang.Object*=n$31 [line 100];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:13 exn:3 Instructions
+n$32=*&amp;attrMap:java.util.LinkedHashMap* [line 100];
+_=*n$32:java.util.LinkedHashMap*(root java.util.LinkedHashMap) [line 100];
+n$34=*&amp;key:java.lang.String* [line 100];
+n$35=*&amp;$irvar6:java.lang.Object* [line 100];
+n$36=_fun_Object HashMap.put(Object,Object)(n$32:java.util.LinkedHashMap*,n$34:java.lang.String*,n$35:java.lang.Object*) interface virtual [line 100];
+*&amp;$irvar7:java.lang.Object*=n$36 [line 100];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line">            controller.setAttr(&quot;requestScopeJsonString&quot;, Json.getJson().toJson(attrMap)); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:15 succs:22 exn:3 Instructions
+n$37=_fun_Json Json.getJson()() [line 102];
+*&amp;$irvar8:com.jfinal.json.Json*=n$37 [line 102];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$38=*&amp;$irvar8:com.jfinal.json.Json* [line 102];
+_=*n$38:com.jfinal.json.Json*(root com.jfinal.json.Json) [line 102];
+n$40=*&amp;attrMap:java.util.LinkedHashMap* [line 102];
+n$41=_fun_String Json.toJson(Object)(n$38:com.jfinal.json.Json*,n$40:java.util.LinkedHashMap*) virtual [line 102];
+*&amp;$irvar9:java.lang.String*=n$41 [line 102];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$42=*&amp;controller:com.jfinal.core.Controller* [line 102];
+_=*n$42:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 102];
+n$44=*&amp;$irvar9:java.lang.String* [line 102];
+n$45=_fun_Controller Controller.setAttr(String,Object)(n$42:com.jfinal.core.Controller*,"requestScopeJsonString":java.lang.Object*,n$44:java.lang.String*) virtual [line 102];
+*&amp;$irvar10:com.jfinal.core.Controller*=n$45 [line 102];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE104">104</td><td class="line">    } <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 10 succs:2 exn:3 Instructions
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:24 3 succs: exn: Exit
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.fullDevData%28com.jfinal.core.Controller%29%3Avoid.855113fd0aaafa2d1c501c24926ce040_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE105">105</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE106">106</td><td class="line">    private void apiPermission(Invocation ai) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51.html">summary for void VisitorInterceptor.apiPermission(Invocation)</a></td></tr>
+<tr><td class="num" id="LINE107">107</td><td class="line">        ai.invoke(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;ai:com.jfinal.aop.Invocation* [line 107];
+_=*n$0:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 107];
+n$2=_fun_void Invocation.invoke()(n$0:com.jfinal.aop.Invocation*) virtual [line 107];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE108">108</td><td class="line">        ApiStandardResponse apiStandardResponse = new ApiStandardResponse(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=_fun___new(sizeof(t=com.zrlog.common.response.ApiStandardResponse):com.zrlog.common.response.ApiStandardResponse*) [line 108];
+n$4=_fun_ApiStandardResponse.&lt;init&gt;()(n$3:com.zrlog.common.response.ApiStandardResponse*) [line 108];
+*&amp;apiStandardResponse:com.zrlog.common.response.ApiStandardResponse*=n$3 [line 108];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE109">109</td><td class="line">        if (ai.getController().getAttr(&quot;log&quot;) != null) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;ai:com.jfinal.aop.Invocation* [line 109];
+_=*n$5:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 109];
+n$7=_fun_Controller Invocation.getController()(n$5:com.jfinal.aop.Invocation*) virtual [line 109];
+*&amp;$irvar0:com.jfinal.core.Controller*=n$7 [line 109];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 9 exn:3 Instructions
+n$8=*&amp;$irvar0:com.jfinal.core.Controller* [line 109];
+_=*n$8:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 109];
+n$10=_fun_Object Controller.getAttr(String)(n$8:com.jfinal.core.Controller*,"log":java.lang.Object*) virtual [line 109];
+*&amp;$irvar1:java.lang.Object*=n$10 [line 109];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:7 succs:10 exn:3 Conditional method_body
+n$11=*&amp;$irvar1:java.lang.Object* [line 109];
+PRUNE(!(n$11 == null), true); [line 109];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:7 succs:13 exn:3 Conditional method_body
+n$11=*&amp;$irvar1:java.lang.Object* [line 109];
+PRUNE((n$11 == null), false); [line 109];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE110">110</td><td class="line">            apiStandardResponse.setData((Object) ai.getController().getAttr(&quot;log&quot;)); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:8 succs:11 exn:3 Instructions
+n$12=*&amp;ai:com.jfinal.aop.Invocation* [line 110];
+_=*n$12:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 110];
+n$14=_fun_Controller Invocation.getController()(n$12:com.jfinal.aop.Invocation*) virtual [line 110];
+*&amp;$irvar2:com.jfinal.core.Controller*=n$14 [line 110];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$15=*&amp;$irvar2:com.jfinal.core.Controller* [line 110];
+_=*n$15:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 110];
+n$17=_fun_Object Controller.getAttr(String)(n$15:com.jfinal.core.Controller*,"log":java.lang.Object*) virtual [line 110];
+*&amp;$irvar3:java.lang.Object*=n$17 [line 110];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:22 exn:3 Instructions
+n$18=*&amp;apiStandardResponse:com.zrlog.common.response.ApiStandardResponse* [line 110];
+_=*n$18:com.zrlog.common.response.ApiStandardResponse*(root com.zrlog.common.response.ApiStandardResponse) [line 110];
+n$20=*&amp;$irvar3:java.lang.Object* [line 110];
+n$21=_fun_void ApiStandardResponse.setData(Object)(n$18:com.zrlog.common.response.ApiStandardResponse*,n$20:java.lang.Object*) virtual [line 110];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE111">111</td><td class="line">        } else if (ai.getController().getAttr(&quot;data&quot;) != null) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:9 succs:14 exn:3 Instructions
+n$22=*&amp;ai:com.jfinal.aop.Invocation* [line 111];
+_=*n$22:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 111];
+n$24=_fun_Controller Invocation.getController()(n$22:com.jfinal.aop.Invocation*) virtual [line 111];
+*&amp;$irvar4:com.jfinal.core.Controller*=n$24 [line 111];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 16 exn:3 Instructions
+n$25=*&amp;$irvar4:com.jfinal.core.Controller* [line 111];
+_=*n$25:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 111];
+n$27=_fun_Object Controller.getAttr(String)(n$25:com.jfinal.core.Controller*,"data":java.lang.Object*) virtual [line 111];
+*&amp;$irvar5:java.lang.Object*=n$27 [line 111];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:14 succs:17 exn:3 Conditional method_body
+n$28=*&amp;$irvar5:java.lang.Object* [line 111];
+PRUNE(!(n$28 == null), true); [line 111];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:14 succs:20 exn:3 Conditional method_body
+n$28=*&amp;$irvar5:java.lang.Object* [line 111];
+PRUNE((n$28 == null), false); [line 111];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE112">112</td><td class="line">            apiStandardResponse.setData((Object) ai.getController().getAttr(&quot;data&quot;)); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:15 succs:18 exn:3 Instructions
+n$29=*&amp;ai:com.jfinal.aop.Invocation* [line 112];
+_=*n$29:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 112];
+n$31=_fun_Controller Invocation.getController()(n$29:com.jfinal.aop.Invocation*) virtual [line 112];
+*&amp;$irvar6:com.jfinal.core.Controller*=n$31 [line 112];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$32=*&amp;$irvar6:com.jfinal.core.Controller* [line 112];
+_=*n$32:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 112];
+n$34=_fun_Object Controller.getAttr(String)(n$32:com.jfinal.core.Controller*,"data":java.lang.Object*) virtual [line 112];
+*&amp;$irvar7:java.lang.Object*=n$34 [line 112];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:22 exn:3 Instructions
+n$35=*&amp;apiStandardResponse:com.zrlog.common.response.ApiStandardResponse* [line 112];
+_=*n$35:com.zrlog.common.response.ApiStandardResponse*(root com.zrlog.common.response.ApiStandardResponse) [line 112];
+n$37=*&amp;$irvar7:java.lang.Object* [line 112];
+n$38=_fun_void ApiStandardResponse.setData(Object)(n$35:com.zrlog.common.response.ApiStandardResponse*,n$37:java.lang.Object*) virtual [line 112];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE113">113</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE114">114</td><td class="line">            apiStandardResponse.setError(1); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:16 succs:21 exn:3 Instructions
+n$39=*&amp;apiStandardResponse:com.zrlog.common.response.ApiStandardResponse* [line 114];
+_=*n$39:com.zrlog.common.response.ApiStandardResponse*(root com.zrlog.common.response.ApiStandardResponse) [line 114];
+n$41=_fun_void StandardResponse.setError(int)(n$39:com.zrlog.common.response.ApiStandardResponse*,1:int) virtual [line 114];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE115">115</td><td class="line">            apiStandardResponse.setMessage(&quot;not found&quot;); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$42=*&amp;apiStandardResponse:com.zrlog.common.response.ApiStandardResponse* [line 115];
+_=*n$42:com.zrlog.common.response.ApiStandardResponse*(root com.zrlog.common.response.ApiStandardResponse) [line 115];
+n$44=_fun_void StandardResponse.setMessage(String)(n$42:com.zrlog.common.response.ApiStandardResponse*,"not found":java.lang.Object*) virtual [line 115];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE116">116</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE117">117</td><td class="line">        ai.getController().renderJson(apiStandardResponse); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 19 12 succs:23 exn:3 Instructions
+n$45=*&amp;ai:com.jfinal.aop.Invocation* [line 117];
+_=*n$45:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 117];
+n$47=_fun_Controller Invocation.getController()(n$45:com.jfinal.aop.Invocation*) virtual [line 117];
+*&amp;$irvar8:com.jfinal.core.Controller*=n$47 [line 117];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$48=*&amp;$irvar8:com.jfinal.core.Controller* [line 117];
+_=*n$48:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 117];
+n$50=*&amp;apiStandardResponse:com.zrlog.common.response.ApiStandardResponse* [line 117];
+n$51=_fun_void Controller.renderJson(Object)(n$48:com.jfinal.core.Controller*,n$50:com.zrlog.common.response.ApiStandardResponse*) virtual [line 117];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE118">118</td><td class="line">    } <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:2 exn:3 Instructions
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:24 3 succs: exn: Exit
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.apiPermission%28com.jfinal.aop.Invocation%29%3Avoid.e8db187aac3d798a8a119e9fcf490c51_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE119">119</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE120">120</td><td class="line">    private void installPermission(Invocation ai) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0.html">summary for void VisitorInterceptor.installPermission(Invocation)</a></td></tr>
+<tr><td class="num" id="LINE121">121</td><td class="line">        String template = null; <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+*&amp;template:java.lang.Object*=null [line 121];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE122">122</td><td class="line">        if (!ZrLogConfig.isInstalled()) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:3 Instructions
+n$0=_fun_boolean ZrLogConfig.isInstalled()() [line 122];
+*&amp;$irvar0:_Bool=n$0 [line 122];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 exn:3 Conditional method_body
+n$1=*&amp;$irvar0:_Bool [line 122];
+PRUNE(!(n$1 != 0), true); [line 122];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:14 exn:3 Conditional method_body
+n$1=*&amp;$irvar0:_Bool [line 122];
+PRUNE((n$1 != 0), false); [line 122];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE123">123</td><td class="line">            ai.invoke(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:9 exn:3 Instructions
+n$2=*&amp;ai:com.jfinal.aop.Invocation* [line 123];
+_=*n$2:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 123];
+n$4=_fun_void Invocation.invoke()(n$2:com.jfinal.aop.Invocation*) virtual [line 123];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE124">124</td><td class="line">            if (ai.getReturnValue() != null) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 11 exn:3 Instructions
+n$5=*&amp;ai:com.jfinal.aop.Invocation* [line 124];
+_=*n$5:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 124];
+n$7=_fun_Object Invocation.getReturnValue()(n$5:com.jfinal.aop.Invocation*) virtual [line 124];
+*&amp;$irvar1:java.lang.Object*=n$7 [line 124];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:9 succs:12 exn:3 Conditional method_body
+n$8=*&amp;$irvar1:java.lang.Object* [line 124];
+PRUNE(!(n$8 == null), true); [line 124];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:9 succs:21 22 exn:3 Conditional method_body
+n$8=*&amp;$irvar1:java.lang.Object* [line 124];
+PRUNE((n$8 == null), false); [line 124];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE125">125</td><td class="line">                template = ai.getReturnValue(); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 exn:3 Instructions
+n$9=*&amp;ai:com.jfinal.aop.Invocation* [line 125];
+_=*n$9:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 125];
+n$11=_fun_Object Invocation.getReturnValue()(n$9:com.jfinal.aop.Invocation*) virtual [line 125];
+*&amp;$irvar2:java.lang.Object*=n$11 [line 125];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:21 22 exn:3 Instructions
+n$12=*&amp;$irvar2:java.lang.Object* [line 125];
+n$13=_fun___cast(n$12:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 125];
+*&amp;template:java.lang.String*=n$13 [line 125];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE126">126</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE127">127</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE128">128</td><td class="line">            ai.getController().getRequest().setAttribute(&quot;errorMsg&quot;, ((Map) ai.getController().getRequest().getAttribute(&quot;_res&quot;)).get(&quot;installed&quot;)); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:7 succs:15 exn:3 Instructions
+n$14=*&amp;ai:com.jfinal.aop.Invocation* [line 128];
+_=*n$14:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 128];
+n$16=_fun_Controller Invocation.getController()(n$14:com.jfinal.aop.Invocation*) virtual [line 128];
+*&amp;$irvar3:com.jfinal.core.Controller*=n$16 [line 128];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$17=*&amp;$irvar3:com.jfinal.core.Controller* [line 128];
+_=*n$17:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 128];
+n$19=_fun_HttpServletRequest Controller.getRequest()(n$17:com.jfinal.core.Controller*) virtual [line 128];
+*&amp;$irvar4:javax.servlet.http.HttpServletRequest*=n$19 [line 128];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$20=*&amp;ai:com.jfinal.aop.Invocation* [line 128];
+_=*n$20:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 128];
+n$22=_fun_Controller Invocation.getController()(n$20:com.jfinal.aop.Invocation*) virtual [line 128];
+*&amp;$irvar5:com.jfinal.core.Controller*=n$22 [line 128];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$23=*&amp;$irvar5:com.jfinal.core.Controller* [line 128];
+_=*n$23:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 128];
+n$25=_fun_HttpServletRequest Controller.getRequest()(n$23:com.jfinal.core.Controller*) virtual [line 128];
+*&amp;$irvar6:javax.servlet.http.HttpServletRequest*=n$25 [line 128];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$26=*&amp;$irvar6:javax.servlet.http.HttpServletRequest* [line 128];
+_=*n$26:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 128];
+n$28=_fun_Object HttpServletRequest.getAttribute(String)(n$26:javax.servlet.http.HttpServletRequest*,"_res":java.lang.Object*) interface virtual [line 128];
+*&amp;$irvar7:java.lang.Object*=n$28 [line 128];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$29=*&amp;$irvar7:java.lang.Object* [line 128];
+n$30=_fun___cast(n$29:java.lang.Object*,sizeof(t=java.util.Map;sub_t=( sub )(cast)):void) [line 128];
+_=*n$30:java.util.Map*(root java.util.Map) [line 128];
+n$32=_fun_Object Map.get(Object)(n$30:java.util.Map*,"installed":java.lang.Object*) interface virtual [line 128];
+*&amp;$irvar8:java.lang.Object*=n$32 [line 128];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 22 exn:3 Instructions
+n$33=*&amp;$irvar4:javax.servlet.http.HttpServletRequest* [line 128];
+_=*n$33:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 128];
+n$35=*&amp;$irvar8:java.lang.Object* [line 128];
+n$36=_fun_void HttpServletRequest.setAttribute(String,Object)(n$33:javax.servlet.http.HttpServletRequest*,"errorMsg":java.lang.Object*,n$35:java.lang.Object*) interface virtual [line 128];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE129">129</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE130">130</td><td class="line">        if (template == null) { <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node21.html"><span class='visited with_tooltip'>C_21<span class='tooltip'>node21 preds:20 13 11 succs:23 exn:3 Conditional method_body
+n$37=*&amp;template:java.lang.String* [line 130];
+PRUNE(!(n$37 != null), true); [line 130];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node22.html"><span class='visited with_tooltip'>C_22<span class='tooltip'>node22 preds:20 13 11 succs:24 exn:3 Conditional method_body
+n$37=*&amp;template:java.lang.String* [line 130];
+PRUNE((n$37 != null), false); [line 130];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE131">131</td><td class="line">            template = &quot;/install/forbidden&quot;; <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:21 succs:24 exn:3 Instructions
+*&amp;template:java.lang.Object*="/install/forbidden" [line 131];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE132">132</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE133">133</td><td class="line">        ai.getController().setAttr(&quot;currentViewName&quot;, template.substring(&quot;/install/&quot;.length())); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 22 succs:25 exn:3 Instructions
+n$38=*&amp;ai:com.jfinal.aop.Invocation* [line 133];
+_=*n$38:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 133];
+n$40=_fun_Controller Invocation.getController()(n$38:com.jfinal.aop.Invocation*) virtual [line 133];
+*&amp;$irvar9:com.jfinal.core.Controller*=n$40 [line 133];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$41=_fun_int String.length()("/install/":java.lang.Object*) virtual [line 133];
+*&amp;$irvar10:int=n$41 [line 133];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$42=*&amp;template:java.lang.Object* [line 133];
+_=*n$42:java.lang.Object*(root java.lang.Object) [line 133];
+n$44=*&amp;$irvar10:int [line 133];
+n$45=_fun_String String.substring(int)(n$42:java.lang.Object*,n$44:int) virtual [line 133];
+*&amp;$irvar11:java.lang.String*=n$45 [line 133];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:3 Instructions
+n$46=*&amp;$irvar9:com.jfinal.core.Controller* [line 133];
+_=*n$46:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 133];
+n$48=*&amp;$irvar11:java.lang.String* [line 133];
+n$49=_fun_Controller Controller.setAttr(String,Object)(n$46:com.jfinal.core.Controller*,"currentViewName":java.lang.Object*,n$48:java.lang.String*) virtual [line 133];
+*&amp;$irvar12:com.jfinal.core.Controller*=n$49 [line 133];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE134">134</td><td class="line">        ai.getController().render(new FreeMarkerRender(template + &quot;.ftl&quot;)); <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$50=*&amp;ai:com.jfinal.aop.Invocation* [line 134];
+_=*n$50:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 134];
+n$52=_fun_Controller Invocation.getController()(n$50:com.jfinal.aop.Invocation*) virtual [line 134];
+*&amp;$irvar13:com.jfinal.core.Controller*=n$52 [line 134];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$53=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 134];
+n$54=_fun_StringBuilder.&lt;init&gt;()(n$53:java.lang.StringBuilder*) [line 134];
+*&amp;$irvar14:java.lang.StringBuilder*=n$53 [line 134];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$55=*&amp;$irvar14:java.lang.StringBuilder* [line 134];
+_=*n$55:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 134];
+n$57=*&amp;template:java.lang.Object* [line 134];
+n$58=_fun_StringBuilder StringBuilder.append(String)(n$55:java.lang.StringBuilder*,n$57:java.lang.Object*) virtual [line 134];
+*&amp;$irvar15:java.lang.StringBuilder*=n$58 [line 134];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$59=*&amp;$irvar15:java.lang.StringBuilder* [line 134];
+_=*n$59:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 134];
+n$61=_fun_StringBuilder StringBuilder.append(String)(n$59:java.lang.StringBuilder*,".ftl":java.lang.Object*) virtual [line 134];
+*&amp;$irvar16:java.lang.StringBuilder*=n$61 [line 134];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:3 Instructions
+n$62=*&amp;$irvar16:java.lang.StringBuilder* [line 134];
+_=*n$62:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 134];
+n$64=_fun_String StringBuilder.toString()(n$62:java.lang.StringBuilder*) virtual [line 134];
+*&amp;$irvar17:java.lang.String*=n$64 [line 134];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:3 Instructions
+n$65=_fun___new(sizeof(t=com.jfinal.render.FreeMarkerRender):com.jfinal.render.FreeMarkerRender*) [line 134];
+n$66=*&amp;$irvar17:java.lang.String* [line 134];
+n$67=_fun_FreeMarkerRender.&lt;init&gt;(String)(n$65:com.jfinal.render.FreeMarkerRender*,n$66:java.lang.String*) [line 134];
+*&amp;$irvar18:com.jfinal.render.FreeMarkerRender*=n$65 [line 134];
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:3 Instructions
+n$68=*&amp;$irvar13:com.jfinal.core.Controller* [line 134];
+_=*n$68:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 134];
+n$70=*&amp;$irvar18:com.jfinal.render.FreeMarkerRender* [line 134];
+n$71=_fun_void Controller.render(Render)(n$68:com.jfinal.core.Controller*,n$70:com.jfinal.render.FreeMarkerRender*) virtual [line 134];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE135">135</td><td class="line">    } <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:2 exn:3 Instructions
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:35 3 succs: exn: Exit
+</span></span></a> <a href="./VisitorInterceptor.java.9b48d75ca097460f85b312a89308ccbb/nodes/com.zrlog.web.interceptor.VisitorInterceptor.installPermission%28com.jfinal.aop.Invocation%29%3Avoid.9f03e7840fa56b20249d85dd53363aa0_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE136">136</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

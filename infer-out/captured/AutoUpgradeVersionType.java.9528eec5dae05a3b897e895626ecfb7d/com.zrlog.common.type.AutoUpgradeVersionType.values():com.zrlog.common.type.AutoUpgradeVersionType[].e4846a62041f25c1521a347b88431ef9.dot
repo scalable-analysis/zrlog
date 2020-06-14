@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_1" [label="1: Start AutoUpgradeVersionType[] AutoUpgradeVersionType.values()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_1" -> "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_4" ;
+"com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_2" [label="2: Exit AutoUpgradeVersionType[] AutoUpgradeVersionType.values() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 9]\n  EXIT_SCOPE($irvar0); [line 9]\n  APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_3" -> "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_2" ;
+"com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_4" [label="4:  Call Object Object.clone() \n   n$0=*&#GB<>$com.zrlog.common.type.AutoUpgradeVersionType.$VALUES:com.zrlog.common.type.AutoUpgradeVersionType*[_*_](*)(root com.zrlog.common.type.AutoUpgradeVersionType) [line 9]\n  _=*n$0:com.zrlog.common.type.AutoUpgradeVersionType*[_*_](*)(root com.zrlog.common.type.AutoUpgradeVersionType*[_*_]) [line 9]\n  n$2=_fun_Object Object.clone()(n$0:com.zrlog.common.type.AutoUpgradeVersionType*[_*_](*)) virtual [line 9]\n  *&$irvar0:java.lang.Object*=n$2 [line 9]\n  EXIT_SCOPE(_,n$0,n$2); [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_4" -> "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_5" ;
+	 "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_4" -> "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_3" [color="red" ];
+"com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_5" [label="5:  method_body \n   n$3=*&$irvar0:java.lang.Object* [line 9]\n  n$4=_fun___cast(n$3:java.lang.Object*,sizeof(t=com.zrlog.common.type.AutoUpgradeVersionType*[_*_];sub_t=( sub )(cast)):void) [line 9]\n  *&return:com.zrlog.common.type.AutoUpgradeVersionType*[_*_](*)=n$4 [line 9]\n  NULLIFY(&$irvar0); [line 9]\n  EXIT_SCOPE(n$3,n$4,$irvar0); [line 9]\n  APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_5" -> "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_2" ;
+	 "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_5" -> "com.zrlog.common.type.AutoUpgradeVersionType.values():com.zrlog.common.type.AutoUpgradeVersionType[].e4846a62041f25c1521a347b88431ef9_3" [color="red" ];
+}

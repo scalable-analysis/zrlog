@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_1" [label="1: Start WebSite.<init>()\nFormals:  this:com.zrlog.model.WebSite*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_1" -> "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_4" ;
+"com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_2" [label="2: Exit WebSite.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_3" -> "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_2" ;
+"com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_4" [label="4:  Call Model.<init>() \n   n$0=*&this:com.zrlog.model.WebSite* [line 13]\n  n$1=_fun_Model.<init>()(n$0:com.zrlog.model.WebSite*) [line 13]\n  NULLIFY(&this); [line 13]\n  EXIT_SCOPE(n$0,n$1,this); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_4" -> "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_5" ;
+	 "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_4" -> "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_3" [color="red" ];
+"com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_5" [label="5:  method_body \n   APPLY_ABSTRACTION; [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_5" -> "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_2" ;
+	 "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_5" -> "com.zrlog.model.WebSite.<init>().1d42d27191a5b4e8bedb27e84c8a9137_3" [color="red" ];
+}

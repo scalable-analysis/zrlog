@@ -1,0 +1,76 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_1" [label="1: Start int Constants.getAutoDigestLength()\nFormals: \nLocals:  $bcvar1:void CatchVar26:void $irvar2:void $irvar1:void $irvar0:void dbSettingSize:java.lang.Object* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_1" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_4" ;
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_2" [label="2: Exit int Constants.getAutoDigestLength() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [label="3:  exceptions sink \n   NULLIFY(&CatchVar26); [line 121]\n  NULLIFY(&dbSettingSize); [line 121]\n  EXIT_SCOPE(n$15,CatchVar26,dbSettingSize); [line 121]\n  APPLY_ABSTRACTION; [line 121]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_2" ;
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_4" [label="4:  Call Object Map.get(Object) \n   n$0=*&#GB<>$com.zrlog.common.Constants.WEB_SITE:java.util.Map*(root com.zrlog.common.Constants) [line 113]\n  _=*n$0:java.util.Map*(root java.util.Map) [line 113]\n  n$2=_fun_Object Map.get(Object)(n$0:java.util.Map*,\"article_auto_digest_length\":java.lang.Object*) interface virtual [line 113]\n  *&dbSettingSize:java.lang.Object*=n$2 [line 113]\n  EXIT_SCOPE(_,n$0,n$2); [line 113]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_4" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_5" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_4" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_6" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_4" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_5" [label="5: Prune (true branch, if) \n   n$3=*&dbSettingSize:java.lang.Object* [line 114]\n  PRUNE(!(n$3 == null), true); [line 114]\n  EXIT_SCOPE(n$3); [line 114]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_5" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_7" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_5" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_6" [label="6: Prune (false branch, if) \n   n$3=*&dbSettingSize:java.lang.Object* [line 114]\n  PRUNE((n$3 == null), false); [line 114]\n  NULLIFY(&dbSettingSize); [line 114]\n  EXIT_SCOPE(n$3,dbSettingSize); [line 114]\n  APPLY_ABSTRACTION; [line 114]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_6" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_12" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_6" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_7" [label="7:  Call String Object.toString() \n   n$4=*&dbSettingSize:java.lang.Object* [line 116]\n  _=*n$4:java.lang.Object*(root java.lang.Object) [line 116]\n  n$6=_fun_String Object.toString()(n$4:java.lang.Object*) virtual [line 116]\n  *&$irvar0:java.lang.String*=n$6 [line 116]\n  NULLIFY(&dbSettingSize); [line 116]\n  EXIT_SCOPE(_,n$4,n$6,dbSettingSize); [line 116]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_7" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_8" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_7" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_15" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_8" [label="8:  Call Integer Integer.valueOf(String) \n   n$7=*&$irvar0:java.lang.String* [line 116]\n  n$8=_fun_Integer Integer.valueOf(String)(n$7:java.lang.String*) [line 116]\n  *&$irvar1:java.lang.Integer*=n$8 [line 116]\n  NULLIFY(&$irvar0); [line 116]\n  EXIT_SCOPE(n$7,n$8,$irvar0); [line 116]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_8" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_9" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_8" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_15" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_9" [label="9:  Call int Integer.intValue() \n   n$9=*&$irvar1:java.lang.Integer* [line 116]\n  _=*n$9:java.lang.Integer*(root java.lang.Integer) [line 116]\n  n$11=_fun_int Integer.intValue()(n$9:java.lang.Integer*) virtual [line 116]\n  *&$irvar2:int=n$11 [line 116]\n  NULLIFY(&$irvar1); [line 116]\n  EXIT_SCOPE(_,n$9,n$11,$irvar1); [line 116]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_9" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_10" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_9" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_15" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_10" [label="10:  method_body \n   n$12=*&$irvar2:int [line 116]\n  *&return:int=n$12 [line 116]\n  NULLIFY(&$irvar2); [line 116]\n  EXIT_SCOPE(n$12,$irvar2); [line 116]\n  APPLY_ABSTRACTION; [line 116]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_10" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_2" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_10" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_11" [label="11:  method_body \n   n$13=*&CatchVar26:java.lang.Object* [line 117]\n  *&$bcvar1:java.lang.Object*=n$13 [line 117]\n  NULLIFY(&CatchVar26); [line 117]\n  NULLIFY(&$bcvar1); [line 117]\n  EXIT_SCOPE(n$13,CatchVar26,$bcvar1); [line 117]\n  APPLY_ABSTRACTION; [line 117]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_11" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_12" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_11" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_12" [label="12:  method_body \n   *&return:int=100 [line 121]\n  APPLY_ABSTRACTION; [line 121]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_12" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_2" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_12" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_13" [label="13: Prune (true branch, switch) \n   n$16=_fun___instanceof(n$15:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 117]\n  PRUNE(n$16, true); [line 117]\n  *&CatchVar26:int=n$15 [line 117]\n  EXIT_SCOPE(n$15,n$16); [line 117]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_13" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_11" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_13" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_14" [label="14: Prune (false branch, switch) \n   n$16=_fun___instanceof(n$15:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 117]\n  PRUNE(!n$16, false); [line 117]\n  *&return:int=EXN n$15 [line 117]\n  EXIT_SCOPE(n$15,n$16); [line 117]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_14" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_14" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+"com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_15" [label="15:  exception handler \n   n$14=*&return:int [line 117]\n  *&return:int=null [line 117]\n  n$15=_fun___unwrap_exception(n$14:int) [line 117]\n  NULLIFY(&$irvar0); [line 117]\n  NULLIFY(&$irvar1); [line 117]\n  NULLIFY(&$irvar2); [line 117]\n  EXIT_SCOPE(n$14,$irvar0,$irvar1,$irvar2); [line 117]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_15" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_13" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_15" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_14" ;
+	 "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_15" -> "com.zrlog.common.Constants.getAutoDigestLength():int.da461b6623b79bcaaa3b1ef38f67ebce_3" [color="red" ];
+}

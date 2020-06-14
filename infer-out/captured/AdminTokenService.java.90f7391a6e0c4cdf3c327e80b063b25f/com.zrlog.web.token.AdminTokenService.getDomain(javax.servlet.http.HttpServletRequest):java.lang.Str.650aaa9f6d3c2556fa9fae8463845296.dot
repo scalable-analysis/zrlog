@@ -1,0 +1,50 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_1" [label="1: Start String AdminTokenService.getDomain(HttpServletRequest)\nFormals:  this:com.zrlog.web.token.AdminTokenService* request:javax.servlet.http.HttpServletRequest*\nLocals:  $irvar0:void idx:int host:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_1" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_4" ;
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_2" [label="2: Exit String AdminTokenService.getDomain(HttpServletRequest) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [label="3:  exceptions sink \n   NULLIFY(&host); [line 122]\n  NULLIFY(&$irvar0); [line 122]\n  NULLIFY(&idx); [line 122]\n  EXIT_SCOPE(host,$irvar0,idx); [line 122]\n  APPLY_ABSTRACTION; [line 122]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_2" ;
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_4" [label="4:  Call String HttpServletRequest.getHeader(String) \n   n$0=*&request:javax.servlet.http.HttpServletRequest* [line 117]\n  _=*n$0:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 117]\n  n$2=_fun_String HttpServletRequest.getHeader(String)(n$0:javax.servlet.http.HttpServletRequest*,\"Host\":java.lang.Object*) interface virtual [line 117]\n  *&host:java.lang.String*=n$2 [line 117]\n  NULLIFY(&request); [line 117]\n  EXIT_SCOPE(_,n$0,n$2,request); [line 117]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_4" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_5" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_4" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_5" [label="5:  Call int String.indexOf(int) \n   n$3=*&host:java.lang.String* [line 118]\n  _=*n$3:java.lang.String*(root java.lang.String) [line 118]\n  n$5=_fun_int String.indexOf(int)(n$3:java.lang.String*,58:int) virtual [line 118]\n  *&idx:int=n$5 [line 118]\n  EXIT_SCOPE(_,n$3,n$5); [line 118]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_5" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_6" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_5" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_7" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_5" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_6" [label="6: Prune (true branch, if) \n   n$6=*&idx:int [line 119]\n  PRUNE(!(n$6 == -1), true); [line 119]\n  EXIT_SCOPE(n$6); [line 119]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_6" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_8" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_6" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_7" [label="7: Prune (false branch, if) \n   n$6=*&idx:int [line 119]\n  PRUNE((n$6 == -1), false); [line 119]\n  NULLIFY(&idx); [line 119]\n  EXIT_SCOPE(n$6,idx); [line 119]\n  APPLY_ABSTRACTION; [line 119]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_7" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_10" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_7" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_8" [label="8:  Call String String.substring(int,int) \n   n$7=*&host:java.lang.String* [line 120]\n  _=*n$7:java.lang.String*(root java.lang.String) [line 120]\n  n$9=*&idx:int [line 120]\n  n$10=_fun_String String.substring(int,int)(n$7:java.lang.String*,0:int,n$9:int) virtual [line 120]\n  *&$irvar0:java.lang.String*=n$10 [line 120]\n  NULLIFY(&host); [line 120]\n  NULLIFY(&idx); [line 120]\n  EXIT_SCOPE(_,n$7,n$9,n$10,host,idx); [line 120]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_8" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_9" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_8" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_9" [label="9:  method_body \n   n$11=*&$irvar0:java.lang.String* [line 120]\n  *&host:java.lang.String*=n$11 [line 120]\n  NULLIFY(&$irvar0); [line 120]\n  EXIT_SCOPE(n$11,$irvar0); [line 120]\n  APPLY_ABSTRACTION; [line 120]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_9" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_10" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_9" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_10" [label="10:  method_body \n   n$12=*&host:java.lang.String* [line 122]\n  *&return:java.lang.String*=n$12 [line 122]\n  NULLIFY(&host); [line 122]\n  EXIT_SCOPE(n$12,host); [line 122]\n  APPLY_ABSTRACTION; [line 122]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_10" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_2" ;
+	 "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_10" -> "com.zrlog.web.token.AdminTokenService.getDomain(javax.servlet.http.HttpServletRequest):java.lang.Str.650aaa9f6d3c2556fa9fae8463845296_3" [color="red" ];
+}

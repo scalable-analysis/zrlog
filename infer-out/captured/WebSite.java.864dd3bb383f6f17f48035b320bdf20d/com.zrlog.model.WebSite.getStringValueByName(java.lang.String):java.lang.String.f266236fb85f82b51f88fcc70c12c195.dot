@@ -1,0 +1,81 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_1" [label="1: Start String WebSite.getStringValueByName(String)\nFormals:  this:com.zrlog.model.WebSite* name:java.lang.String*\nLocals:  $bcvar2:void CatchVar35:void $irvar2:void $irvar1:void $irvar0:void webSite:com.zrlog.model.WebSite* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_1" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_4" ;
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_2" [label="2: Exit String WebSite.getStringValueByName(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" [label="3:  exceptions sink \n   NULLIFY(&CatchVar35); [line 44]\n  EXIT_SCOPE(n$17,CatchVar35); [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_2" ;
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_4" [label="4:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 37]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 37]\n  EXIT_SCOPE(n$0); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_4" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_5" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_4" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_5" [label="5:  method_body \n   n$1=*&$irvar0:java.lang.Object*[_*_](*) [line 37]\n  n$2=*&name:java.lang.String* [line 37]\n  *n$1[0]:java.lang.String*=n$2 [line 37]\n  NULLIFY(&name); [line 37]\n  EXIT_SCOPE(n$1,n$2,name); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_5" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_6" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_5" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_6" [label="6:  Call Model Model.findFirst(String,Object[]) \n   n$3=*&this:com.zrlog.model.WebSite* [line 37]\n  _=*n$3:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 37]\n  n$5=*&$irvar0:java.lang.Object*[_*_](*) [line 37]\n  n$6=_fun_Model Model.findFirst(String,Object[])(n$3:com.zrlog.model.WebSite*,\"select value from website where name=?\":java.lang.Object*,n$5:java.lang.Object*[_*_](*)) virtual [line 37]\n  *&$irvar1:com.jfinal.plugin.activerecord.Model*=n$6 [line 37]\n  NULLIFY(&$irvar0); [line 37]\n  NULLIFY(&this); [line 37]\n  EXIT_SCOPE(_,n$3,n$5,n$6,$irvar0,this); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_6" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_7" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_6" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_7" [label="7:  method_body \n   n$7=*&$irvar1:com.jfinal.plugin.activerecord.Model* [line 37]\n  n$8=_fun___cast(n$7:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.WebSite;sub_t=( sub )(cast)):void) [line 37]\n  *&webSite:com.zrlog.model.WebSite*=n$8 [line 37]\n  NULLIFY(&$irvar1); [line 37]\n  EXIT_SCOPE(n$7,n$8,$irvar1); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_7" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_8" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_7" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_9" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_7" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_8" [label="8: Prune (true branch, if) \n   n$9=*&webSite:com.zrlog.model.WebSite* [line 38]\n  PRUNE(!(n$9 == null), true); [line 38]\n  EXIT_SCOPE(n$9); [line 38]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_8" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_10" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_8" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_9" [label="9: Prune (false branch, if) \n   n$9=*&webSite:com.zrlog.model.WebSite* [line 38]\n  PRUNE((n$9 == null), false); [line 38]\n  NULLIFY(&webSite); [line 38]\n  EXIT_SCOPE(n$9,webSite); [line 38]\n  APPLY_ABSTRACTION; [line 38]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_9" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_13" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_9" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_10" [label="10:  Call Object Model.get(String) \n   n$10=*&webSite:com.zrlog.model.WebSite* [line 39]\n  _=*n$10:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 39]\n  n$12=_fun_Object Model.get(String)(n$10:com.zrlog.model.WebSite*,\"value\":java.lang.Object*) virtual [line 39]\n  *&$irvar2:java.lang.Object*=n$12 [line 39]\n  NULLIFY(&webSite); [line 39]\n  EXIT_SCOPE(_,n$10,n$12,webSite); [line 39]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_10" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_11" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_10" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_11" [label="11:  method_body \n   n$13=*&$irvar2:java.lang.Object* [line 39]\n  n$14=_fun___cast(n$13:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 39]\n  *&return:java.lang.String*=n$14 [line 39]\n  NULLIFY(&$irvar2); [line 39]\n  EXIT_SCOPE(n$13,n$14,$irvar2); [line 39]\n  APPLY_ABSTRACTION; [line 39]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_11" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_2" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_11" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_12" [label="12:  method_body \n   n$15=*&CatchVar35:java.lang.Object* [line 41]\n  *&$bcvar2:java.lang.Object*=n$15 [line 41]\n  NULLIFY(&CatchVar35); [line 41]\n  NULLIFY(&$bcvar2); [line 41]\n  EXIT_SCOPE(n$15,CatchVar35,$bcvar2); [line 41]\n  APPLY_ABSTRACTION; [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_12" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_13" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_12" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_13" [label="13:  method_body \n   *&return:java.lang.String*=\"\" [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_13" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_2" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_13" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_14" [label="14: Prune (true branch, switch) \n   n$18=_fun___instanceof(n$17:java.lang.NullPointerException*,sizeof(t=java.lang.NullPointerException):void) [line 41]\n  PRUNE(n$18, true); [line 41]\n  *&CatchVar35:java.lang.String*=n$17 [line 41]\n  EXIT_SCOPE(n$17,n$18); [line 41]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_14" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_12" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_14" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_15" [label="15: Prune (false branch, switch) \n   n$18=_fun___instanceof(n$17:java.lang.NullPointerException*,sizeof(t=java.lang.NullPointerException):void) [line 41]\n  PRUNE(!n$18, false); [line 41]\n  *&return:java.lang.String*=EXN n$17 [line 41]\n  EXIT_SCOPE(n$17,n$18); [line 41]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_15" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_15" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" [color="red" ];
+"com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" [label="16:  exception handler \n   n$16=*&return:java.lang.String* [line 41]\n  *&return:java.lang.String*=null [line 41]\n  n$17=_fun___unwrap_exception(n$16:java.lang.String*) [line 41]\n  NULLIFY(&$irvar0); [line 41]\n  NULLIFY(&$irvar1); [line 41]\n  NULLIFY(&webSite); [line 41]\n  NULLIFY(&$irvar2); [line 41]\n  EXIT_SCOPE(n$16,$irvar0,$irvar1,webSite,$irvar2); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_14" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_15" ;
+	 "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_16" -> "com.zrlog.model.WebSite.getStringValueByName(java.lang.String):java.lang.String.f266236fb85f82b51f88fcc70c12c195_3" [color="red" ];
+}

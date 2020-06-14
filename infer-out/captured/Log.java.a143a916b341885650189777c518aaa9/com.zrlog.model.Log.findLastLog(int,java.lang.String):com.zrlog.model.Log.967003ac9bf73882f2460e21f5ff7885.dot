@@ -1,0 +1,115 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_1" [label="1: Start Log Log.findLastLog(int,String)\nFormals:  this:com.zrlog.model.Log* id:int notFoundDesc:java.lang.String*\nLocals:  $irvar10:void $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void log:com.zrlog.model.Log* lastLogSql:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_1" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_4" ;
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_2" [label="2: Exit Log Log.findLastLog(int,String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 73]\n  NULLIFY(&$irvar9); [line 73]\n  NULLIFY(&$irvar5); [line 73]\n  NULLIFY(&log); [line 73]\n  NULLIFY(&$irvar4); [line 73]\n  NULLIFY(&$irvar7); [line 73]\n  NULLIFY(&$irvar6); [line 73]\n  NULLIFY(&$irvar0); [line 73]\n  NULLIFY(&lastLogSql); [line 73]\n  NULLIFY(&$irvar10); [line 73]\n  NULLIFY(&$irvar8); [line 73]\n  NULLIFY(&$irvar1); [line 73]\n  NULLIFY(&$irvar2); [line 73]\n  EXIT_SCOPE($irvar3,$irvar9,$irvar5,log,$irvar4,$irvar7,$irvar6,$irvar0,lastLogSql,$irvar10,$irvar8,$irvar1,$irvar2); [line 73]\n  APPLY_ABSTRACTION; [line 73]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_2" ;
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_4" [label="4:  method_body \n   *&lastLogSql:java.lang.Object*=\"select l.alias as alias,l.title as title from log l where rubbish=? and privacy=? and l.logId<? order by logId desc\" [line 68]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_4" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_5" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_4" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_5" [label="5:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[3]):java.lang.Object*[_*_](*)) [line 69]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 69]\n  EXIT_SCOPE(n$0); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_5" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_6" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_5" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_6" [label="6:  method_body \n   n$1=*&this:com.zrlog.model.Log* [line 69]\n  n$2=*n$1.rubbish:_Bool(root com.zrlog.model.Log) [line 69]\n  *&$irvar1:_Bool=n$2 [line 69]\n  EXIT_SCOPE(n$1,n$2); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_6" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_7" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_6" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_7" [label="7:  Call Boolean Boolean.valueOf(boolean) \n   n$3=*&$irvar1:_Bool [line 69]\n  n$4=_fun_Boolean Boolean.valueOf(boolean)(n$3:_Bool) [line 69]\n  *&$irvar2:java.lang.Boolean*=n$4 [line 69]\n  NULLIFY(&$irvar1); [line 69]\n  EXIT_SCOPE(n$3,n$4,$irvar1); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_7" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_8" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_7" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_8" [label="8:  method_body \n   n$5=*&$irvar0:java.lang.Object*[_*_](*) [line 69]\n  n$6=*&$irvar2:java.lang.Boolean* [line 69]\n  *n$5[0]:java.lang.Boolean*=n$6 [line 69]\n  NULLIFY(&$irvar2); [line 69]\n  EXIT_SCOPE(n$5,n$6,$irvar2); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_8" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_9" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_8" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_9" [label="9:  method_body \n   n$7=*&this:com.zrlog.model.Log* [line 69]\n  n$8=*n$7.privacy:_Bool(root com.zrlog.model.Log) [line 69]\n  *&$irvar3:_Bool=n$8 [line 69]\n  EXIT_SCOPE(n$7,n$8); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_9" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_10" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_9" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_10" [label="10:  Call Boolean Boolean.valueOf(boolean) \n   n$9=*&$irvar3:_Bool [line 69]\n  n$10=_fun_Boolean Boolean.valueOf(boolean)(n$9:_Bool) [line 69]\n  *&$irvar4:java.lang.Boolean*=n$10 [line 69]\n  NULLIFY(&$irvar3); [line 69]\n  EXIT_SCOPE(n$9,n$10,$irvar3); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_10" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_11" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_10" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_11" [label="11:  method_body \n   n$11=*&$irvar0:java.lang.Object*[_*_](*) [line 69]\n  n$12=*&$irvar4:java.lang.Boolean* [line 69]\n  *n$11[1]:java.lang.Boolean*=n$12 [line 69]\n  NULLIFY(&$irvar4); [line 69]\n  EXIT_SCOPE(n$11,n$12,$irvar4); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_11" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_12" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_11" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_12" [label="12:  Call Integer Integer.valueOf(int) \n   n$13=*&id:int [line 69]\n  n$14=_fun_Integer Integer.valueOf(int)(n$13:int) [line 69]\n  *&$irvar5:java.lang.Integer*=n$14 [line 69]\n  EXIT_SCOPE(n$13,n$14); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_12" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_13" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_12" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_13" [label="13:  method_body \n   n$15=*&$irvar0:java.lang.Object*[_*_](*) [line 69]\n  n$16=*&$irvar5:java.lang.Integer* [line 69]\n  *n$15[2]:java.lang.Integer*=n$16 [line 69]\n  NULLIFY(&$irvar5); [line 69]\n  EXIT_SCOPE(n$15,n$16,$irvar5); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_13" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_14" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_13" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_14" [label="14:  Call Model Model.findFirst(String,Object[]) \n   n$17=*&this:com.zrlog.model.Log* [line 69]\n  _=*n$17:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 69]\n  n$19=*&lastLogSql:java.lang.Object* [line 69]\n  n$20=*&$irvar0:java.lang.Object*[_*_](*) [line 69]\n  n$21=_fun_Model Model.findFirst(String,Object[])(n$17:com.zrlog.model.Log*,n$19:java.lang.Object*,n$20:java.lang.Object*[_*_](*)) virtual [line 69]\n  *&$irvar6:com.jfinal.plugin.activerecord.Model*=n$21 [line 69]\n  NULLIFY(&$irvar0); [line 69]\n  NULLIFY(&lastLogSql); [line 69]\n  NULLIFY(&this); [line 69]\n  EXIT_SCOPE(_,n$17,n$19,n$20,n$21,$irvar0,lastLogSql,this); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_14" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_15" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_14" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_15" [label="15:  method_body \n   n$22=*&$irvar6:com.jfinal.plugin.activerecord.Model* [line 69]\n  n$23=_fun___cast(n$22:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 69]\n  *&log:com.zrlog.model.Log*=n$23 [line 69]\n  NULLIFY(&$irvar6); [line 69]\n  EXIT_SCOPE(n$22,n$23,$irvar6); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_15" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_16" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_15" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_17" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_15" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_16" [label="16: Prune (true branch, if) \n   n$24=*&log:com.zrlog.model.Log* [line 70]\n  PRUNE(!(n$24 != null), true); [line 70]\n  NULLIFY(&log); [line 70]\n  EXIT_SCOPE(n$24,log); [line 70]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_16" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_18" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_16" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_17" [label="17: Prune (false branch, if) \n   n$24=*&log:com.zrlog.model.Log* [line 70]\n  PRUNE((n$24 != null), false); [line 70]\n  EXIT_SCOPE(n$24); [line 70]\n  APPLY_ABSTRACTION; [line 70]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_17" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_23" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_17" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_18" [label="18:  Call Log.<init>() \n   n$25=_fun___new(sizeof(t=com.zrlog.model.Log):com.zrlog.model.Log*) [line 71]\n  n$26=_fun_Log.<init>()(n$25:com.zrlog.model.Log*) [line 71]\n  *&$irvar7:com.zrlog.model.Log*=n$25 [line 71]\n  EXIT_SCOPE(n$25,n$26); [line 71]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_18" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_19" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_18" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_19" [label="19:  Call Integer Integer.valueOf(int) \n   n$27=*&id:int [line 71]\n  n$28=_fun_Integer Integer.valueOf(int)(n$27:int) [line 71]\n  *&$irvar8:java.lang.Integer*=n$28 [line 71]\n  NULLIFY(&id); [line 71]\n  EXIT_SCOPE(n$27,n$28,id); [line 71]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_19" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_20" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_19" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_20" [label="20:  Call Model Model.set(String,Object) \n   n$29=*&$irvar7:com.zrlog.model.Log* [line 71]\n  _=*n$29:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 71]\n  n$31=*&$irvar8:java.lang.Integer* [line 71]\n  n$32=_fun_Model Model.set(String,Object)(n$29:com.zrlog.model.Log*,\"alias\":java.lang.Object*,n$31:java.lang.Integer*) virtual [line 71]\n  *&$irvar9:com.jfinal.plugin.activerecord.Model*=n$32 [line 71]\n  NULLIFY(&$irvar7); [line 71]\n  NULLIFY(&$irvar8); [line 71]\n  EXIT_SCOPE(_,n$29,n$31,n$32,$irvar7,$irvar8); [line 71]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_20" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_21" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_20" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_21" [label="21:  Call Model Model.set(String,Object) \n   n$33=*&$irvar9:com.jfinal.plugin.activerecord.Model* [line 71]\n  n$34=_fun___cast(n$33:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 71]\n  _=*n$34:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 71]\n  n$36=*&notFoundDesc:java.lang.String* [line 71]\n  n$37=_fun_Model Model.set(String,Object)(n$34:com.zrlog.model.Log*,\"title\":java.lang.Object*,n$36:java.lang.String*) virtual [line 71]\n  *&$irvar10:com.jfinal.plugin.activerecord.Model*=n$37 [line 71]\n  NULLIFY(&$irvar9); [line 71]\n  NULLIFY(&notFoundDesc); [line 71]\n  EXIT_SCOPE(_,n$33,n$34,n$36,n$37,$irvar9,notFoundDesc); [line 71]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_21" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_22" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_21" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_22" [label="22:  method_body \n   n$38=*&$irvar10:com.jfinal.plugin.activerecord.Model* [line 71]\n  n$39=_fun___cast(n$38:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 71]\n  *&log:com.zrlog.model.Log*=n$39 [line 71]\n  NULLIFY(&$irvar10); [line 71]\n  EXIT_SCOPE(n$38,n$39,$irvar10); [line 71]\n  APPLY_ABSTRACTION; [line 71]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_22" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_23" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_22" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+"com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_23" [label="23:  method_body \n   n$40=*&log:com.zrlog.model.Log* [line 73]\n  *&return:com.zrlog.model.Log*=n$40 [line 73]\n  NULLIFY(&log); [line 73]\n  EXIT_SCOPE(n$40,log); [line 73]\n  APPLY_ABSTRACTION; [line 73]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_23" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_2" ;
+	 "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_23" -> "com.zrlog.model.Log.findLastLog(int,java.lang.String):com.zrlog.model.Log.967003ac9bf73882f2460e21f5ff7885_3" [color="red" ];
+}

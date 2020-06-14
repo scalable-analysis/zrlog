@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.controller.admin.api.TemplateController.apply():com.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../TemplateController.java.9c8b2054540f57b5bbc741fe2973b8bb.html#LINE27">WebSiteSettingUpdateResponse TemplateController.apply()</a></h1></center>
+<a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:14 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;webSiteSettingUpdateResponse); [line 36];
+NULLIFY(&amp;$irvar0); [line 36];
+NULLIFY(&amp;cookie); [line 36];
+NULLIFY(&amp;template); [line 36];
+NULLIFY(&amp;$irvar2); [line 36];
+EXIT_SCOPE(webSiteSettingUpdateResponse,$irvar0,cookie,template,$irvar2); [line 36];
+APPLY_ABSTRACTION; [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.controller.admin.api.TemplateController* [line 28];
+_=*n$0:com.zrlog.web.controller.admin.api.TemplateController*(root com.zrlog.web.controller.admin.api.TemplateController) [line 28];
+n$2=_fun_String Controller.getPara(String)(n$0:com.zrlog.web.controller.admin.api.TemplateController*,"template":java.lang.Object*) virtual [line 28];
+*&amp;template:java.lang.String*=n$2 [line 28];
+EXIT_SCOPE(_,n$0,n$2); [line 28];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=_fun___new(sizeof(t=com.zrlog.model.WebSite):com.zrlog.model.WebSite*) [line 29];
+n$4=_fun_WebSite.&lt;init&gt;()(n$3:com.zrlog.model.WebSite*) [line 29];
+*&amp;$irvar0:com.zrlog.model.WebSite*=n$3 [line 29];
+EXIT_SCOPE(n$3,n$4); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=*&amp;$irvar0:com.zrlog.model.WebSite* [line 29];
+_=*n$5:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 29];
+n$7=*&amp;template:java.lang.String* [line 29];
+n$8=_fun_boolean WebSite.updateByKV(String,Object)(n$5:com.zrlog.model.WebSite*,"template":java.lang.Object*,n$7:java.lang.String*) virtual [line 29];
+*&amp;$irvar1:_Bool=n$8 [line 29];
+NULLIFY(&amp;$irvar0); [line 29];
+NULLIFY(&amp;$irvar1); [line 29];
+NULLIFY(&amp;template); [line 29];
+EXIT_SCOPE(_,n$5,n$7,n$8,$irvar0,$irvar1,template); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$9=_fun___new(sizeof(t=com.zrlog.common.response.WebSiteSettingUpdateResponse):com.zrlog.common.response.WebSiteSettingUpdateResponse*) [line 30];
+n$10=_fun_WebSiteSettingUpdateResponse.&lt;init&gt;()(n$9:com.zrlog.common.response.WebSiteSettingUpdateResponse*) [line 30];
+*&amp;webSiteSettingUpdateResponse:com.zrlog.common.response.WebSiteSettingUpdateResponse*=n$9 [line 30];
+EXIT_SCOPE(n$9,n$10); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$11=*&amp;webSiteSettingUpdateResponse:com.zrlog.common.response.WebSiteSettingUpdateResponse* [line 31];
+_=*n$11:com.zrlog.common.response.WebSiteSettingUpdateResponse*(root com.zrlog.common.response.WebSiteSettingUpdateResponse) [line 31];
+n$13=_fun_void StandardResponse.setError(int)(n$11:com.zrlog.common.response.WebSiteSettingUpdateResponse*,0:int) virtual [line 31];
+EXIT_SCOPE(_,n$11,n$13); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$14=_fun___new(sizeof(t=javax.servlet.http.Cookie):javax.servlet.http.Cookie*) [line 32];
+n$15=_fun_Cookie.&lt;init&gt;(String,String)(n$14:javax.servlet.http.Cookie*,"template":java.lang.Object*,"":java.lang.Object*) [line 32];
+*&amp;cookie:javax.servlet.http.Cookie*=n$14 [line 32];
+EXIT_SCOPE(n$14,n$15); [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$16=*&amp;cookie:javax.servlet.http.Cookie* [line 33];
+_=*n$16:javax.servlet.http.Cookie*(root javax.servlet.http.Cookie) [line 33];
+n$18=_fun_void Cookie.setPath(String)(n$16:javax.servlet.http.Cookie*,"/":java.lang.Object*) virtual [line 33];
+EXIT_SCOPE(_,n$16,n$18); [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$19=*&amp;cookie:javax.servlet.http.Cookie* [line 34];
+_=*n$19:javax.servlet.http.Cookie*(root javax.servlet.http.Cookie) [line 34];
+n$21=_fun_void Cookie.setMaxAge(int)(n$19:javax.servlet.http.Cookie*,0:int) virtual [line 34];
+EXIT_SCOPE(_,n$19,n$21); [line 34];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$22=*&amp;this:com.zrlog.web.controller.admin.api.TemplateController* [line 35];
+_=*n$22:com.zrlog.web.controller.admin.api.TemplateController*(root com.zrlog.web.controller.admin.api.TemplateController) [line 35];
+n$24=_fun_HttpServletResponse Controller.getResponse()(n$22:com.zrlog.web.controller.admin.api.TemplateController*) virtual [line 35];
+*&amp;$irvar2:javax.servlet.http.HttpServletResponse*=n$24 [line 35];
+NULLIFY(&amp;this); [line 35];
+EXIT_SCOPE(_,n$22,n$24,this); [line 35];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$25=*&amp;$irvar2:javax.servlet.http.HttpServletResponse* [line 35];
+_=*n$25:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 35];
+n$27=*&amp;cookie:javax.servlet.http.Cookie* [line 35];
+n$28=_fun_void HttpServletResponse.addCookie(Cookie)(n$25:javax.servlet.http.HttpServletResponse*,n$27:javax.servlet.http.Cookie*) interface virtual [line 35];
+NULLIFY(&amp;cookie); [line 35];
+NULLIFY(&amp;$irvar2); [line 35];
+EXIT_SCOPE(_,n$25,n$27,n$28,cookie,$irvar2); [line 35];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.api.TemplateController.apply%28%29%3Acom.zrlog.common.response.WebSiteSetti.eb2dc5b3fc90473b6e6669442546d9de_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:2 exn:3 Instructions
+n$29=*&amp;webSiteSettingUpdateResponse:com.zrlog.common.response.WebSiteSettingUpdateResponse* [line 36];
+*&amp;return:com.zrlog.common.response.WebSiteSettingUpdateResponse*=n$29 [line 36];
+NULLIFY(&amp;webSiteSettingUpdateResponse); [line 36];
+EXIT_SCOPE(n$29,webSiteSettingUpdateResponse); [line 36];
+APPLY_ABSTRACTION; [line 36];
+</span></span></a><br />@
+
+<span class='color_black'>com.zrlog.common.response.WebSiteSettingUpdateResponse* WebSiteSettingUpdateResponse TemplateController.apply()(com.zrlog.web.controller.admin.api.TemplateController* this)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { error -> { } } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= WebSiteSettingUpdateResponse TemplateController.apply()
+; translation_unit= web/src/main/java/com/zrlog/web/controller/admin/api/TemplateController.java
+; access= Public
+; formals= [(this,com.zrlog.web.controller.admin.api.TemplateController*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/controller/admin/api/TemplateController.java:27
+; locals= [{ name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= cookie; typ= javax.servlet.http.Cookie*; modify_in_block= false }; 
+           { name= webSiteSettingUpdateResponse; typ= com.zrlog.common.response.WebSiteSettingUpdateResponse*; modify_in_block= false }; 
+           { name= template; typ= java.lang.String*; modify_in_block= false }]
+; method_annotation= <_com.zrlog.web.annotation.RefreshCache> ()
+; ret_type= com.zrlog.common.response.WebSiteSettingUpdateResponse* 
+; proc_id= com.zrlog.web.controller.admin.api.TemplateController.apply():com.zrlog.common.response.WebSiteSettingUpdateResponse }</pre>
+</body>
+</html>

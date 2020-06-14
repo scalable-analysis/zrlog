@@ -1,0 +1,44 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_1" [label="1: Start AdminPageController.<init>()\nFormals:  this:com.zrlog.web.controller.admin.page.AdminPageController*\nLocals:  $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_1" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_4" ;
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_2" [label="2: Exit AdminPageController.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 30]\n  NULLIFY(&$irvar1); [line 30]\n  EXIT_SCOPE($irvar0,$irvar1); [line 30]\n  APPLY_ABSTRACTION; [line 30]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_2" ;
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_4" [label="4:  Call BaseController.<init>() \n   n$0=*&this:com.zrlog.web.controller.admin.page.AdminPageController* [line 24]\n  n$1=_fun_BaseController.<init>()(n$0:com.zrlog.web.controller.admin.page.AdminPageController*) [line 24]\n  EXIT_SCOPE(n$0,n$1); [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_4" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_5" ;
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_4" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" [color="red" ];
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_5" [label="5:  Call AdminTokenService.<init>() \n   n$2=_fun___new(sizeof(t=com.zrlog.web.token.AdminTokenService):com.zrlog.web.token.AdminTokenService*) [line 28]\n  n$3=_fun_AdminTokenService.<init>()(n$2:com.zrlog.web.token.AdminTokenService*) [line 28]\n  *&$irvar0:com.zrlog.web.token.AdminTokenService*=n$2 [line 28]\n  EXIT_SCOPE(n$2,n$3); [line 28]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_5" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_6" ;
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_5" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" [color="red" ];
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_6" [label="6:  method_body \n   n$4=*&this:com.zrlog.web.controller.admin.page.AdminPageController* [line 28]\n  n$5=*&$irvar0:com.zrlog.web.token.AdminTokenService* [line 28]\n  *n$4.adminTokenService:com.zrlog.web.controller.admin.page.AdminPageController(root com.zrlog.web.controller.admin.page.AdminPageController)=n$5 [line 28]\n  NULLIFY(&$irvar0); [line 28]\n  EXIT_SCOPE(n$4,n$5,$irvar0); [line 28]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_6" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_7" ;
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_6" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" [color="red" ];
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_7" [label="7:  Call TemplateService.<init>() \n   n$6=_fun___new(sizeof(t=com.zrlog.service.TemplateService):com.zrlog.service.TemplateService*) [line 30]\n  n$7=_fun_TemplateService.<init>()(n$6:com.zrlog.service.TemplateService*) [line 30]\n  *&$irvar1:com.zrlog.service.TemplateService*=n$6 [line 30]\n  EXIT_SCOPE(n$6,n$7); [line 30]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_7" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_8" ;
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_7" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" [color="red" ];
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_8" [label="8:  method_body \n   n$8=*&this:com.zrlog.web.controller.admin.page.AdminPageController* [line 30]\n  n$9=*&$irvar1:com.zrlog.service.TemplateService* [line 30]\n  *n$8.templateService:com.zrlog.web.controller.admin.page.AdminPageController(root com.zrlog.web.controller.admin.page.AdminPageController)=n$9 [line 30]\n  NULLIFY(&$irvar1); [line 30]\n  NULLIFY(&this); [line 30]\n  EXIT_SCOPE(n$8,n$9,$irvar1,this); [line 30]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_8" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_9" ;
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_8" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" [color="red" ];
+"com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_9" [label="9:  method_body \n   APPLY_ABSTRACTION; [line 30]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_9" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_2" ;
+	 "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_9" -> "com.zrlog.web.controller.admin.page.AdminPageController.<init>().b349d7d02d78db3df591a5ed5ad0118e_3" [color="red" ];
+}

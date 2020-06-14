@@ -1,0 +1,34 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_1" [label="1: Start String ArticleService.getPlainSearchText(String)\nFormals:  this:com.zrlog.service.ArticleService* content:java.lang.String*\nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_1" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_4" ;
+"com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_2" [label="2: Exit String ArticleService.getPlainSearchText(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 238]\n  NULLIFY(&$irvar1); [line 238]\n  NULLIFY(&$irvar2); [line 238]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 238]\n  APPLY_ABSTRACTION; [line 238]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_3" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_2" ;
+"com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_4" [label="4:  Call Document Jsoup.parse(String) \n   n$0=*&content:java.lang.String* [line 238]\n  n$1=_fun_Document Jsoup.parse(String)(n$0:java.lang.String*) [line 238]\n  *&$irvar0:org.jsoup.nodes.Document*=n$1 [line 238]\n  NULLIFY(&content); [line 238]\n  EXIT_SCOPE(n$0,n$1,content); [line 238]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_4" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_5" ;
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_4" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_3" [color="red" ];
+"com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_5" [label="5:  Call Element Document.body() \n   n$2=*&$irvar0:org.jsoup.nodes.Document* [line 238]\n  _=*n$2:org.jsoup.nodes.Document*(root org.jsoup.nodes.Document) [line 238]\n  n$4=_fun_Element Document.body()(n$2:org.jsoup.nodes.Document*) virtual [line 238]\n  *&$irvar1:org.jsoup.nodes.Element*=n$4 [line 238]\n  NULLIFY(&$irvar0); [line 238]\n  EXIT_SCOPE(_,n$2,n$4,$irvar0); [line 238]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_5" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_6" ;
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_5" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_3" [color="red" ];
+"com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_6" [label="6:  Call String Element.text() \n   n$5=*&$irvar1:org.jsoup.nodes.Element* [line 238]\n  _=*n$5:org.jsoup.nodes.Element*(root org.jsoup.nodes.Element) [line 238]\n  n$7=_fun_String Element.text()(n$5:org.jsoup.nodes.Element*) virtual [line 238]\n  *&$irvar2:java.lang.String*=n$7 [line 238]\n  NULLIFY(&$irvar1); [line 238]\n  EXIT_SCOPE(_,n$5,n$7,$irvar1); [line 238]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_6" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_7" ;
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_6" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_3" [color="red" ];
+"com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_7" [label="7:  method_body \n   n$8=*&$irvar2:java.lang.String* [line 238]\n  *&return:java.lang.String*=n$8 [line 238]\n  NULLIFY(&$irvar2); [line 238]\n  EXIT_SCOPE(n$8,$irvar2); [line 238]\n  APPLY_ABSTRACTION; [line 238]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_7" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_2" ;
+	 "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_7" -> "com.zrlog.service.ArticleService.getPlainSearchText(java.lang.String):java.lang.String.9a989eb12f7577e97219c46d15d8964e_3" [color="red" ];
+}

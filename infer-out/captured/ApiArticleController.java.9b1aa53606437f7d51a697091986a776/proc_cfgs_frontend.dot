@@ -1,0 +1,76 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_1" [label="1: Start ApiArticleController.<init>()\nFormals:  this:com.zrlog.web.controller.blog.ApiArticleController*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_1" -> "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_4" ;
+"com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_2" [label="2: Exit ApiArticleController.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_3" -> "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_2" ;
+"com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_4" [label="4:  Call ArticleController.<init>() \n   n$0=*&this:com.zrlog.web.controller.blog.ApiArticleController* [line 6]\n  n$1=_fun_ArticleController.<init>()(n$0:com.zrlog.web.controller.blog.ApiArticleController*) [line 6]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_4" -> "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_5" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_4" -> "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_3" [color="red" ];
+"com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_5" [label="5:  method_body \n  " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_5" -> "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_2" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_5" -> "com.zrlog.web.controller.blog.ApiArticleController.<init>().dcf26d5703f9281e0110133a5e59df1c_3" [color="red" ];
+"com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_1" [label="1: Start void ApiArticleController.addComment()\nFormals:  this:com.zrlog.web.controller.blog.ApiArticleController*\nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_1" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_4" ;
+"com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_2" [label="2: Exit void ApiArticleController.addComment() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_3" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_2" ;
+"com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_4" [label="4:  Call CreateCommentResponse ArticleController.saveComment() \n   n$0=*&this:com.zrlog.web.controller.blog.ApiArticleController* [line 15]\n  n$1=_fun_CreateCommentResponse ArticleController.saveComment()(n$0:com.zrlog.web.controller.blog.ApiArticleController*) [line 15]\n  *&$irvar0:com.zrlog.common.response.CreateCommentResponse*=n$1 [line 15]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_4" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_5" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_4" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_3" [color="red" ];
+"com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_5" [label="5:  Call void Controller.renderJson(Object) \n   n$2=*&this:com.zrlog.web.controller.blog.ApiArticleController* [line 15]\n  _=*n$2:com.zrlog.web.controller.blog.ApiArticleController*(root com.zrlog.web.controller.blog.ApiArticleController) [line 15]\n  n$4=*&$irvar0:com.zrlog.common.response.CreateCommentResponse* [line 15]\n  n$5=_fun_void Controller.renderJson(Object)(n$2:com.zrlog.web.controller.blog.ApiArticleController*,n$4:com.zrlog.common.response.CreateCommentResponse*) virtual [line 15]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_5" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_6" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_5" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_3" [color="red" ];
+"com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_6" [label="6:  method_body \n  " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_6" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_2" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_6" -> "com.zrlog.web.controller.blog.ApiArticleController.addComment():void.bbbd93570f38097e35d192f35432c9b7_3" [color="red" ];
+"com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_1" [label="1: Start String ApiArticleController.detail()\nFormals:  this:com.zrlog.web.controller.blog.ApiArticleController*\nLocals:  $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_1" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_4" ;
+"com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_2" [label="2: Exit String ApiArticleController.detail() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_3" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_2" ;
+"com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_4" [label="4:  Call String Controller.getPara(String) \n   n$0=*&this:com.zrlog.web.controller.blog.ApiArticleController* [line 10]\n  _=*n$0:com.zrlog.web.controller.blog.ApiArticleController*(root com.zrlog.web.controller.blog.ApiArticleController) [line 10]\n  n$2=_fun_String Controller.getPara(String)(n$0:com.zrlog.web.controller.blog.ApiArticleController*,\"id\":java.lang.Object*) virtual [line 10]\n  *&$irvar0:java.lang.String*=n$2 [line 10]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_4" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_5" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_4" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_3" [color="red" ];
+"com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_5" [label="5:  Call String ArticleController.detail(Object) \n   n$3=*&this:com.zrlog.web.controller.blog.ApiArticleController* [line 10]\n  n$4=*&$irvar0:java.lang.String* [line 10]\n  n$5=_fun_String ArticleController.detail(Object)(n$3:com.zrlog.web.controller.blog.ApiArticleController*,n$4:java.lang.String*) [line 10]\n  *&$irvar1:java.lang.String*=n$5 [line 10]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_5" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_6" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_5" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_3" [color="red" ];
+"com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_6" [label="6:  method_body \n   n$6=*&$irvar1:java.lang.String* [line 10]\n  *&return:java.lang.String*=n$6 [line 10]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_6" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_2" ;
+	 "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_6" -> "com.zrlog.web.controller.blog.ApiArticleController.detail():java.lang.String.ccf316ed68a0c1f8efdefe387aa9e3fd_3" [color="red" ];
+}

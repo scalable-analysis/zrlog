@@ -1,0 +1,44 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_1" [label="1: Start String InstallController.index()\nFormals:  this:com.zrlog.web.controller.blog.InstallController*\nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_1" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_4" ;
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_2" [label="2: Exit String InstallController.index() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 68]\n  NULLIFY(&$irvar0); [line 68]\n  NULLIFY(&$irvar1); [line 68]\n  NULLIFY(&$irvar2); [line 68]\n  EXIT_SCOPE($irvar3,$irvar0,$irvar1,$irvar2); [line 68]\n  APPLY_ABSTRACTION; [line 68]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_2" ;
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_4" [label="4:  Call String Properties.getProperty(String) \n   n$0=*&#GB<>$com.zrlog.web.config.ZrLogConfig.SYSTEM_PROP:java.util.Properties*(root com.zrlog.web.config.ZrLogConfig) [line 67]\n  _=*n$0:java.util.Properties*(root java.util.Properties) [line 67]\n  n$2=_fun_String Properties.getProperty(String)(n$0:java.util.Properties*,\"file.encoding\":java.lang.Object*) virtual [line 67]\n  *&$irvar0:java.lang.String*=n$2 [line 67]\n  EXIT_SCOPE(_,n$0,n$2); [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_4" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_5" ;
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_4" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" [color="red" ];
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_5" [label="5:  Call String String.toLowerCase() \n   n$3=*&$irvar0:java.lang.String* [line 67]\n  _=*n$3:java.lang.String*(root java.lang.String) [line 67]\n  n$5=_fun_String String.toLowerCase()(n$3:java.lang.String*) virtual [line 67]\n  *&$irvar1:java.lang.String*=n$5 [line 67]\n  NULLIFY(&$irvar0); [line 67]\n  EXIT_SCOPE(_,n$3,n$5,$irvar0); [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_5" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_6" ;
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_5" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" [color="red" ];
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_6" [label="6:  Call boolean String.startsWith(String) \n   n$6=*&$irvar1:java.lang.String* [line 67]\n  _=*n$6:java.lang.String*(root java.lang.String) [line 67]\n  n$8=_fun_boolean String.startsWith(String)(n$6:java.lang.String*,\"utf\":java.lang.Object*) virtual [line 67]\n  *&$irvar2:_Bool=n$8 [line 67]\n  NULLIFY(&$irvar1); [line 67]\n  EXIT_SCOPE(_,n$6,n$8,$irvar1); [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_6" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_7" ;
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_6" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" [color="red" ];
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_7" [label="7:  Call Boolean Boolean.valueOf(boolean) \n   n$9=*&$irvar2:_Bool [line 67]\n  n$10=_fun_Boolean Boolean.valueOf(boolean)(n$9:_Bool) [line 67]\n  *&$irvar3:java.lang.Boolean*=n$10 [line 67]\n  NULLIFY(&$irvar2); [line 67]\n  EXIT_SCOPE(n$9,n$10,$irvar2); [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_7" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_8" ;
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_7" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" [color="red" ];
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_8" [label="8:  Call Controller Controller.setAttr(String,Object) \n   n$11=*&this:com.zrlog.web.controller.blog.InstallController* [line 67]\n  _=*n$11:com.zrlog.web.controller.blog.InstallController*(root com.zrlog.web.controller.blog.InstallController) [line 67]\n  n$13=*&$irvar3:java.lang.Boolean* [line 67]\n  n$14=_fun_Controller Controller.setAttr(String,Object)(n$11:com.zrlog.web.controller.blog.InstallController*,\"isUTF\":java.lang.Object*,n$13:java.lang.Boolean*) virtual [line 67]\n  *&$irvar4:com.jfinal.core.Controller*=n$14 [line 67]\n  NULLIFY(&$irvar3); [line 67]\n  NULLIFY(&$irvar4); [line 67]\n  NULLIFY(&this); [line 67]\n  EXIT_SCOPE(_,n$11,n$13,n$14,$irvar3,$irvar4,this); [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_8" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_9" ;
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_8" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" [color="red" ];
+"com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_9" [label="9:  method_body \n   *&return:java.lang.String*=\"/install/index\" [line 68]\n  APPLY_ABSTRACTION; [line 68]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_9" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_2" ;
+	 "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_9" -> "com.zrlog.web.controller.blog.InstallController.index():java.lang.String.a976aa302437cad29530ee937a0047c5_3" [color="red" ];
+}

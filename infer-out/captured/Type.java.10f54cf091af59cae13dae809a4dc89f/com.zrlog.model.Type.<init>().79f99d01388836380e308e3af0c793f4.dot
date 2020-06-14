@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_1" [label="1: Start Type.<init>()\nFormals:  this:com.zrlog.model.Type*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_1" -> "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_4" ;
+"com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_2" [label="2: Exit Type.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_3" -> "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_2" ;
+"com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_4" [label="4:  Call Model.<init>() \n   n$0=*&this:com.zrlog.model.Type* [line 13]\n  n$1=_fun_Model.<init>()(n$0:com.zrlog.model.Type*) [line 13]\n  NULLIFY(&this); [line 13]\n  EXIT_SCOPE(n$0,n$1,this); [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_4" -> "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_5" ;
+	 "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_4" -> "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_3" [color="red" ];
+"com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_5" [label="5:  method_body \n   APPLY_ABSTRACTION; [line 13]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_5" -> "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_2" ;
+	 "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_5" -> "com.zrlog.model.Type.<init>().79f99d01388836380e308e3af0c793f4_3" [color="red" ];
+}

@@ -1,0 +1,79 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_1" [label="1: Start byte[] ArticleService.getRequestBodyBytes(String)\nFormals:  this:com.zrlog.service.ArticleService* url:java.lang.String*\nLocals:  $irvar10:void $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void fileHandler:com.hibegin.common.util.http.handle.HttpFileHandle* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_1" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_4" ;
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_2" [label="2: Exit byte[] ArticleService.getRequestBodyBytes(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 234]\n  NULLIFY(&$irvar9); [line 234]\n  NULLIFY(&$irvar5); [line 234]\n  NULLIFY(&fileHandler); [line 234]\n  NULLIFY(&$irvar4); [line 234]\n  NULLIFY(&$irvar7); [line 234]\n  NULLIFY(&$irvar0); [line 234]\n  NULLIFY(&$irvar10); [line 234]\n  NULLIFY(&$irvar8); [line 234]\n  NULLIFY(&$irvar1); [line 234]\n  NULLIFY(&$irvar2); [line 234]\n  EXIT_SCOPE($irvar3,$irvar9,$irvar5,fileHandler,$irvar4,$irvar7,$irvar0,$irvar10,$irvar8,$irvar1,$irvar2); [line 234]\n  APPLY_ABSTRACTION; [line 234]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_2" ;
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_4" [label="4:  Call JFinal JFinal.me() \n   n$0=_fun_JFinal JFinal.me()() [line 232]\n  *&$irvar0:com.jfinal.core.JFinal*=n$0 [line 232]\n  EXIT_SCOPE(n$0); [line 232]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_4" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_5" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_4" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_5" [label="5:  Call Constants JFinal.getConstants() \n   n$1=*&$irvar0:com.jfinal.core.JFinal* [line 232]\n  _=*n$1:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 232]\n  n$3=_fun_Constants JFinal.getConstants()(n$1:com.jfinal.core.JFinal*) virtual [line 232]\n  *&$irvar1:com.jfinal.config.Constants*=n$3 [line 232]\n  NULLIFY(&$irvar0); [line 232]\n  EXIT_SCOPE(_,n$1,n$3,$irvar0); [line 232]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_5" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_6" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_5" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_6" [label="6:  Call String Constants.getBaseUploadPath() \n   n$4=*&$irvar1:com.jfinal.config.Constants* [line 232]\n  _=*n$4:com.jfinal.config.Constants*(root com.jfinal.config.Constants) [line 232]\n  n$6=_fun_String Constants.getBaseUploadPath()(n$4:com.jfinal.config.Constants*) virtual [line 232]\n  *&$irvar2:java.lang.String*=n$6 [line 232]\n  NULLIFY(&$irvar1); [line 232]\n  EXIT_SCOPE(_,n$4,n$6,$irvar1); [line 232]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_6" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_7" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_6" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_7" [label="7:  Call HttpFileHandle.<init>(String) \n   n$7=_fun___new(sizeof(t=com.hibegin.common.util.http.handle.HttpFileHandle):com.hibegin.common.util.http.handle.HttpFileHandle*) [line 232]\n  n$8=*&$irvar2:java.lang.String* [line 232]\n  n$9=_fun_HttpFileHandle.<init>(String)(n$7:com.hibegin.common.util.http.handle.HttpFileHandle*,n$8:java.lang.String*) [line 232]\n  *&fileHandler:com.hibegin.common.util.http.handle.HttpFileHandle*=n$7 [line 232]\n  NULLIFY(&$irvar2); [line 232]\n  EXIT_SCOPE(n$7,n$8,n$9,$irvar2); [line 232]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_7" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_8" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_7" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_8" [label="8:  Call HttpUtil HttpUtil.getInstance() \n   n$10=_fun_HttpUtil HttpUtil.getInstance()() [line 233]\n  *&$irvar3:com.hibegin.common.util.http.HttpUtil*=n$10 [line 233]\n  EXIT_SCOPE(n$10); [line 233]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_8" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_9" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_8" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_9" [label="9:  Call HashMap.<init>() \n   n$11=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 233]\n  n$12=_fun_HashMap.<init>()(n$11:java.util.HashMap*) [line 233]\n  *&$irvar4:java.util.HashMap*=n$11 [line 233]\n  EXIT_SCOPE(n$11,n$12); [line 233]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_9" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_10" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_9" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_10" [label="10:  Call HashMap.<init>() \n   n$13=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 233]\n  n$14=_fun_HashMap.<init>()(n$13:java.util.HashMap*) [line 233]\n  *&$irvar5:java.util.HashMap*=n$13 [line 233]\n  EXIT_SCOPE(n$13,n$14); [line 233]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_10" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_11" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_10" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_11" [label="11:  Call HttpHandle HttpUtil.sendGetRequest(String,Map,HttpHandle,Map) \n   n$15=*&$irvar3:com.hibegin.common.util.http.HttpUtil* [line 233]\n  _=*n$15:com.hibegin.common.util.http.HttpUtil*(root com.hibegin.common.util.http.HttpUtil) [line 233]\n  n$17=*&url:java.lang.String* [line 233]\n  n$18=*&$irvar4:java.util.HashMap* [line 233]\n  n$19=*&fileHandler:com.hibegin.common.util.http.handle.HttpFileHandle* [line 233]\n  n$20=*&$irvar5:java.util.HashMap* [line 233]\n  n$21=_fun_HttpHandle HttpUtil.sendGetRequest(String,Map,HttpHandle,Map)(n$15:com.hibegin.common.util.http.HttpUtil*,n$17:java.lang.String*,n$18:java.util.HashMap*,n$19:com.hibegin.common.util.http.handle.HttpFileHandle*,n$20:java.util.HashMap*) virtual [line 233]\n  *&$irvar6:com.hibegin.common.util.http.handle.HttpHandle*=n$21 [line 233]\n  NULLIFY(&$irvar3); [line 233]\n  NULLIFY(&url); [line 233]\n  NULLIFY(&$irvar5); [line 233]\n  NULLIFY(&$irvar4); [line 233]\n  NULLIFY(&$irvar6); [line 233]\n  EXIT_SCOPE(_,n$15,n$17,n$18,n$19,n$20,n$21,$irvar3,url,$irvar5,$irvar4,$irvar6); [line 233]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_11" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_12" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_11" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_12" [label="12:  Call Object HttpHandle.getT() \n   n$22=*&fileHandler:com.hibegin.common.util.http.handle.HttpFileHandle* [line 234]\n  _=*n$22:com.hibegin.common.util.http.handle.HttpFileHandle*(root com.hibegin.common.util.http.handle.HttpFileHandle) [line 234]\n  n$24=_fun_Object HttpHandle.getT()(n$22:com.hibegin.common.util.http.handle.HttpFileHandle*) virtual [line 234]\n  *&$irvar7:java.lang.Object*=n$24 [line 234]\n  NULLIFY(&fileHandler); [line 234]\n  EXIT_SCOPE(_,n$22,n$24,fileHandler); [line 234]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_12" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_13" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_12" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_13" [label="13:  Call String File.getPath() \n   n$25=*&$irvar7:java.lang.Object* [line 234]\n  n$26=_fun___cast(n$25:java.lang.Object*,sizeof(t=java.io.File;sub_t=( sub )(cast)):void) [line 234]\n  _=*n$26:java.io.File*(root java.io.File) [line 234]\n  n$28=_fun_String File.getPath()(n$26:java.io.File*) virtual [line 234]\n  *&$irvar8:java.lang.String*=n$28 [line 234]\n  NULLIFY(&$irvar7); [line 234]\n  EXIT_SCOPE(_,n$25,n$26,n$28,$irvar7); [line 234]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_13" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_14" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_13" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_14" [label="14:  Call FileInputStream.<init>(String) \n   n$29=_fun___new(sizeof(t=java.io.FileInputStream):java.io.FileInputStream*) [line 234]\n  n$30=*&$irvar8:java.lang.String* [line 234]\n  n$31=_fun_FileInputStream.<init>(String)(n$29:java.io.FileInputStream*,n$30:java.lang.String*) [line 234]\n  *&$irvar9:java.io.FileInputStream*=n$29 [line 234]\n  NULLIFY(&$irvar8); [line 234]\n  EXIT_SCOPE(n$29,n$30,n$31,$irvar8); [line 234]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_14" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_15" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_14" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_15" [label="15:  Call byte[] IOUtil.getByteByInputStream(InputStream) \n   n$32=*&$irvar9:java.io.FileInputStream* [line 234]\n  n$33=_fun_byte[] IOUtil.getByteByInputStream(InputStream)(n$32:java.io.FileInputStream*) [line 234]\n  *&$irvar10:signed char[_*_](*)=n$33 [line 234]\n  NULLIFY(&$irvar9); [line 234]\n  EXIT_SCOPE(n$32,n$33,$irvar9); [line 234]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_15" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_16" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_15" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+"com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_16" [label="16:  method_body \n   n$34=*&$irvar10:signed char[_*_](*) [line 234]\n  *&return:signed char[_*_](*)=n$34 [line 234]\n  NULLIFY(&$irvar10); [line 234]\n  EXIT_SCOPE(n$34,$irvar10); [line 234]\n  APPLY_ABSTRACTION; [line 234]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_16" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_2" ;
+	 "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_16" -> "com.zrlog.service.ArticleService.getRequestBodyBytes(java.lang.String):byte[].b730c7412f97c4a665711610342dd56b_3" [color="red" ];
+}

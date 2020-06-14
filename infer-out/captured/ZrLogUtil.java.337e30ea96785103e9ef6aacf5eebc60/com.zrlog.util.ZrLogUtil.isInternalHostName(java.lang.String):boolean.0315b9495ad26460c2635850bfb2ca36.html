@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE235">boolean ZrLogUtil.isInternalHostName(String)</a></h1></center>
+<a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:15 13 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:17 succs:2 exn:2 Instructions
+NULLIFY(&amp;CatchVar25); [line 242];
+EXIT_SCOPE(n$13,CatchVar25); [line 242];
+APPLY_ABSTRACTION; [line 242];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:18 Instructions
+n$0=*&amp;name:java.lang.String* [line 238];
+n$1=_fun_InetAddress InetAddress.getByName(String)(n$0:java.lang.String*) [line 238];
+*&amp;address:java.net.InetAddress*=n$1 [line 238];
+NULLIFY(&amp;name); [line 238];
+EXIT_SCOPE(n$0,n$1,name); [line 238];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:18 Instructions
+n$2=*&amp;address:java.net.InetAddress* [line 239];
+_=*n$2:java.net.InetAddress*(root java.net.InetAddress) [line 239];
+n$4=_fun_boolean InetAddress.isSiteLocalAddress()(n$2:java.net.InetAddress*) virtual [line 239];
+*&amp;$irvar0:_Bool=n$4 [line 239];
+EXIT_SCOPE(_,n$2,n$4); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 exn:18 Conditional method_body
+n$5=*&amp;$irvar0:_Bool [line 239];
+PRUNE(!(n$5 != 0), true); [line 239];
+NULLIFY(&amp;$irvar0); [line 239];
+EXIT_SCOPE(n$5,$irvar0); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:11 exn:18 Conditional method_body
+n$5=*&amp;$irvar0:_Bool [line 239];
+PRUNE((n$5 != 0), false); [line 239];
+NULLIFY(&amp;address); [line 239];
+NULLIFY(&amp;$irvar0); [line 239];
+EXIT_SCOPE(n$5,address,$irvar0); [line 239];
+APPLY_ABSTRACTION; [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:9 10 exn:18 Instructions
+n$6=*&amp;address:java.net.InetAddress* [line 239];
+_=*n$6:java.net.InetAddress*(root java.net.InetAddress) [line 239];
+n$8=_fun_boolean InetAddress.isLoopbackAddress()(n$6:java.net.InetAddress*) virtual [line 239];
+*&amp;$irvar1:_Bool=n$8 [line 239];
+NULLIFY(&amp;address); [line 239];
+EXIT_SCOPE(_,n$6,n$8,address); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:8 succs:11 exn:18 Conditional method_body
+n$9=*&amp;$irvar1:_Bool [line 239];
+PRUNE(!(n$9 == 0), true); [line 239];
+NULLIFY(&amp;$irvar1); [line 239];
+EXIT_SCOPE(n$9,$irvar1); [line 239];
+APPLY_ABSTRACTION; [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 succs:12 exn:18 Conditional method_body
+n$9=*&amp;$irvar1:_Bool [line 239];
+PRUNE((n$9 == 0), false); [line 239];
+NULLIFY(&amp;$irvar1); [line 239];
+EXIT_SCOPE(n$9,$irvar1); [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:9 7 succs:13 exn:18 Instructions
+*&amp;$T0_24:int=1 [line 239];
+APPLY_ABSTRACTION; [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 exn:18 Instructions
+*&amp;$T0_24:int=0 [line 239];
+APPLY_ABSTRACTION; [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 11 succs:2 exn:3 Instructions
+n$10=*&amp;$T0_24:int [line 239];
+*&amp;return:_Bool=n$10 [line 239];
+NULLIFY(&amp;$T0_24); [line 239];
+EXIT_SCOPE(n$10,$T0_24); [line 239];
+APPLY_ABSTRACTION; [line 239];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:16 succs:15 exn:3 Instructions
+n$11=*&amp;CatchVar25:java.lang.Object* [line 240];
+*&amp;e:java.lang.Object*=n$11 [line 240];
+NULLIFY(&amp;CatchVar25); [line 240];
+NULLIFY(&amp;e); [line 240];
+EXIT_SCOPE(n$11,CatchVar25,e); [line 240];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:2 exn:3 Instructions
+*&amp;return:_Bool=0 [line 242];
+APPLY_ABSTRACTION; [line 242];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:18 succs:14 exn:3 Conditional exception handler
+n$14=_fun___instanceof(n$13:java.net.UnknownHostException*,sizeof(t=java.net.UnknownHostException):void) [line 240];
+PRUNE(n$14, true); [line 240];
+*&amp;CatchVar25:_Bool=n$13 [line 240];
+EXIT_SCOPE(n$13,n$14); [line 240];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:18 succs:3 exn:3 Conditional exception handler
+n$14=_fun___instanceof(n$13:java.net.UnknownHostException*,sizeof(t=java.net.UnknownHostException):void) [line 240];
+PRUNE(!n$14, false); [line 240];
+*&amp;return:_Bool=EXN n$13 [line 240];
+EXIT_SCOPE(n$13,n$14); [line 240];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds: succs:16 17 exn:3 Instructions
+n$12=*&amp;return:_Bool [line 240];
+*&amp;return:_Bool=null [line 240];
+n$13=_fun___unwrap_exception(n$12:_Bool) [line 240];
+NULLIFY(&amp;address); [line 240];
+NULLIFY(&amp;$T0_24); [line 240];
+NULLIFY(&amp;$irvar0); [line 240];
+NULLIFY(&amp;$irvar1); [line 240];
+EXIT_SCOPE(n$12,address,$T0_24,$irvar0,$irvar1); [line 240];
+</span></span></a><br />@
+
+<span class='color_black'>_Bool boolean ZrLogUtil.isInternalHostName(String)(java.lang.String* name)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= boolean ZrLogUtil.isInternalHostName(String)
+; translation_unit= common/src/main/java/com/zrlog/util/ZrLogUtil.java
+; access= Public
+; formals= [(name,java.lang.String*)]
+; is_defined= true
+; loc= common/src/main/java/com/zrlog/util/ZrLogUtil.java:235
+; locals= [{ name= CatchVar25; typ= void; modify_in_block= false }; 
+           { name= $T0_24; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= e; typ= java.net.UnknownHostException*; modify_in_block= false }; 
+           { name= address; typ= java.net.InetAddress*; modify_in_block= false }]
+; ret_type= _Bool 
+; proc_id= com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean }</pre>
+</body>
+</html>

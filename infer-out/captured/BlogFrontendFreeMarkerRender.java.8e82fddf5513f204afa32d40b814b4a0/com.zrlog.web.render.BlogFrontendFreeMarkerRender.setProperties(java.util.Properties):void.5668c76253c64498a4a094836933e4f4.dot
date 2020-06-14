@@ -1,0 +1,60 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_1" [label="1: Start void BlogFrontendFreeMarkerRender.setProperties(Properties)\nFormals:  properties:java.util.Properties*\nLocals:  $irvar1:void CatchVar10:void $irvar0:void e:freemarker.template.TemplateException* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_1" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_4" ;
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_2" [label="2: Exit void BlogFrontendFreeMarkerRender.setProperties(Properties) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [label="3:  exceptions sink \n   NULLIFY(&CatchVar10); [line 33]\n  NULLIFY(&$irvar1); [line 33]\n  NULLIFY(&e); [line 33]\n  EXIT_SCOPE(n$11,CatchVar10,$irvar1,e); [line 33]\n  APPLY_ABSTRACTION; [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_2" ;
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_4" [label="4:  Call Configuration FreeMarkerRender.getConfiguration() \n   n$0=_fun_Configuration FreeMarkerRender.getConfiguration()() [line 29]\n  *&$irvar0:freemarker.template.Configuration*=n$0 [line 29]\n  EXIT_SCOPE(n$0); [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_4" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_5" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_4" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_12" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_5" [label="5:  Call void Configurable.setSettings(Properties) \n   n$1=*&$irvar0:freemarker.template.Configuration* [line 29]\n  _=*n$1:freemarker.template.Configuration*(root freemarker.template.Configuration) [line 29]\n  n$3=*&properties:java.util.Properties* [line 29]\n  n$4=_fun_void Configurable.setSettings(Properties)(n$1:freemarker.template.Configuration*,n$3:java.util.Properties*) virtual [line 29]\n  NULLIFY(&properties); [line 29]\n  NULLIFY(&$irvar0); [line 29]\n  EXIT_SCOPE(_,n$1,n$3,n$4,properties,$irvar0); [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_5" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_9" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_5" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_12" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_6" [label="6:  method_body \n   n$5=*&CatchVar10:java.lang.Object* [line 30]\n  *&e:java.lang.Object*=n$5 [line 30]\n  NULLIFY(&CatchVar10); [line 30]\n  EXIT_SCOPE(n$5,CatchVar10); [line 30]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_6" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_7" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_6" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_7" [label="7:  Call RuntimeException.<init>(Throwable) \n   n$6=_fun___new(sizeof(t=java.lang.RuntimeException):java.lang.RuntimeException*) [line 31]\n  n$7=*&e:java.lang.Object* [line 31]\n  n$8=_fun_RuntimeException.<init>(Throwable)(n$6:java.lang.RuntimeException*,n$7:java.lang.Object*) [line 31]\n  *&$irvar1:java.lang.RuntimeException*=n$6 [line 31]\n  NULLIFY(&e); [line 31]\n  EXIT_SCOPE(n$6,n$7,n$8,e); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_7" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_8" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_7" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_8" [label="8:  throw \n   n$9=*&$irvar1:java.lang.RuntimeException* [line 31]\n  *&return:void=EXN n$9 [line 31]\n  NULLIFY(&$irvar1); [line 31]\n  EXIT_SCOPE(n$9,$irvar1); [line 31]\n  APPLY_ABSTRACTION; [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_8" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_2" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_8" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_9" [label="9:  method_body \n   APPLY_ABSTRACTION; [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_9" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_2" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_9" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_10" [label="10: Prune (true branch, switch) \n   n$12=_fun___instanceof(n$11:freemarker.template.TemplateException*,sizeof(t=freemarker.template.TemplateException):void) [line 30]\n  PRUNE(n$12, true); [line 30]\n  *&CatchVar10:void=n$11 [line 30]\n  EXIT_SCOPE(n$11,n$12); [line 30]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_10" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_6" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_10" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_11" [label="11: Prune (false branch, switch) \n   n$12=_fun___instanceof(n$11:freemarker.template.TemplateException*,sizeof(t=freemarker.template.TemplateException):void) [line 30]\n  PRUNE(!n$12, false); [line 30]\n  *&return:void=EXN n$11 [line 30]\n  EXIT_SCOPE(n$11,n$12); [line 30]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_11" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_11" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [color="red" ];
+"com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_12" [label="12:  exception handler \n   n$10=*&return:void [line 30]\n  *&return:void=null [line 30]\n  n$11=_fun___unwrap_exception(n$10:void) [line 30]\n  NULLIFY(&$irvar0); [line 30]\n  EXIT_SCOPE(n$10,$irvar0); [line 30]\n " shape="box"]
+	
+
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_12" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_10" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_12" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_11" ;
+	 "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_12" -> "com.zrlog.web.render.BlogFrontendFreeMarkerRender.setProperties(java.util.Properties):void.5668c76253c64498a4a094836933e4f4_3" [color="red" ];
+}

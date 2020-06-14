@@ -1,0 +1,60 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_1" [label="1: Start void CacheCleanerPlugin$1.run()\nFormals:  this:com.zrlog.web.plugin.CacheCleanerPlugin$1*\nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_1" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_4" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_2" [label="2: Exit void CacheCleanerPlugin$1.run() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 35]\n  NULLIFY(&$irvar4); [line 35]\n  NULLIFY(&$irvar0); [line 35]\n  NULLIFY(&$irvar1); [line 35]\n  NULLIFY(&$irvar2); [line 35]\n  EXIT_SCOPE($irvar3,$irvar4,$irvar0,$irvar1,$irvar2); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_2" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_4" [label="4:  Call long System.currentTimeMillis() \n   n$0=_fun_long System.currentTimeMillis()() [line 32]\n  *&$irvar0:long=n$0 [line 32]\n  EXIT_SCOPE(n$0); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_5" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_5" [label="5:  Call long InitDataInterceptor.getLastAccessTime() \n   n$1=_fun_long InitDataInterceptor.getLastAccessTime()() [line 32]\n  *&$irvar1:long=n$1 [line 32]\n  EXIT_SCOPE(n$1); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_6" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_6" [label="6:  Call int Constants.getInitDataMaxCacheTimeout() \n   n$2=_fun_int Constants.getInitDataMaxCacheTimeout()() [line 32]\n  *&$irvar2:int=n$2 [line 32]\n  EXIT_SCOPE(n$2); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_6" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_7" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_6" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_8" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_6" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_7" [label="7: Prune (true branch, if) \n   n$3=*&$irvar0:long [line 32]\n  n$4=*&$irvar1:long [line 32]\n  n$5=*&$irvar2:int [line 32]\n  PRUNE(!((n$3 - n$4) <= (long)n$5), true); [line 32]\n  NULLIFY(&$irvar0); [line 32]\n  NULLIFY(&$irvar1); [line 32]\n  NULLIFY(&$irvar2); [line 32]\n  EXIT_SCOPE(n$3,n$4,n$5,$irvar0,$irvar1,$irvar2); [line 32]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_7" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_9" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_7" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_8" [label="8: Prune (false branch, if) \n   n$3=*&$irvar0:long [line 32]\n  n$4=*&$irvar1:long [line 32]\n  n$5=*&$irvar2:int [line 32]\n  PRUNE(((n$3 - n$4) <= (long)n$5), false); [line 32]\n  NULLIFY(&$irvar0); [line 32]\n  NULLIFY(&$irvar1); [line 32]\n  NULLIFY(&$irvar2); [line 32]\n  EXIT_SCOPE(n$3,n$4,n$5,$irvar0,$irvar1,$irvar2); [line 32]\n  APPLY_ABSTRACTION; [line 32]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_8" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_12" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_8" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_9" [label="9:  method_body \n   n$6=*&this:com.zrlog.web.plugin.CacheCleanerPlugin$1* [line 33]\n  n$7=*n$6.this$0:com.zrlog.web.plugin.CacheCleanerPlugin*(root com.zrlog.web.plugin.CacheCleanerPlugin$1) [line 33]\n  *&$irvar3:com.zrlog.web.plugin.CacheCleanerPlugin*=n$7 [line 33]\n  NULLIFY(&this); [line 33]\n  EXIT_SCOPE(n$6,n$7,this); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_9" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_10" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_9" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_10" [label="10:  Call CacheService CacheCleanerPlugin.access$000(CacheCleanerPlugin) \n   n$8=*&$irvar3:com.zrlog.web.plugin.CacheCleanerPlugin* [line 33]\n  n$9=*n$8.cacheService:com.zrlog.web.cache.CacheService*(root com.zrlog.web.plugin.CacheCleanerPlugin) [line 33]\n  *&$irvar4:com.zrlog.web.cache.CacheService*=n$9 [line 33]\n  NULLIFY(&$irvar3); [line 33]\n  EXIT_SCOPE(n$8,n$9,$irvar3); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_10" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_11" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_10" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_11" [label="11:  Call void CacheService.refreshInitDataCache(String,Controller,boolean) \n   n$10=*&$irvar4:com.zrlog.web.cache.CacheService* [line 33]\n  _=*n$10:com.zrlog.web.cache.CacheService*(root com.zrlog.web.cache.CacheService) [line 33]\n  n$12=*&#GB<>$com.zrlog.web.handler.GlobalResourceHandler.CACHE_HTML_PATH:java.lang.String*(root com.zrlog.web.handler.GlobalResourceHandler) [line 33]\n  n$13=_fun_void CacheService.refreshInitDataCache(String,Controller,boolean)(n$10:com.zrlog.web.cache.CacheService*,n$12:java.lang.String*,null:java.lang.Object*,1:int) virtual [line 33]\n  NULLIFY(&$irvar4); [line 33]\n  EXIT_SCOPE(_,n$10,n$12,n$13,$irvar4); [line 33]\n  APPLY_ABSTRACTION; [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_11" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_12" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_11" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_12" [label="12:  method_body \n   APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_12" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_2" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_12" -> "com.zrlog.web.plugin.CacheCleanerPlugin$1.run():void.3e3b8f6487c5c33a39a31a9da90c34cf_3" [color="red" ];
+}

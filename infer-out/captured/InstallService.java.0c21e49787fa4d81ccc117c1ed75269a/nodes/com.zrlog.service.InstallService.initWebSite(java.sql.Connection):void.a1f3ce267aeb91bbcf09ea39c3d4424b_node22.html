@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.InstallService.initWebSite(java.sql.Connection):void.a1f3ce267aeb91bbcf09ea39c3d4424b_node22</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">22</a></h1></center>PROC: <a href="./../com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b.html">void InstallService.initWebSite(Connection)</a> LINE: <a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node21.html"><span class='visited with_tooltip'>N_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node23.html"><span class='visited with_tooltip'>N_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds:72 69 succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$43=*&amp;connect:java.sql.Connection* [line 273];
+_=*n$43:java.sql.Connection*(root java.sql.Connection) [line 273];
+n$45=*&amp;insertWebSql:java.lang.String* [line 273];
+n$46=_fun_PreparedStatement Connection.prepareStatement(String)(n$43:java.sql.Connection*,n$45:java.lang.String*) interface virtual [line 273];
+*&amp;ps:java.sql.PreparedStatement*=n$46 [line 273];
+</LISTING>
+<hr width="100%">
+<a name="session154" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session154">node22#session154</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [compute pre] liveness 22
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session155" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session155">node22#session155</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [exec] liveness 22
+<LISTING class='color_black'>PRE STATE:
+{ }
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$46 [line 273]; 
+
+STATE:
+{ n$46 }
+
+INSTR=  n$46=_fun_PreparedStatement Connection.prepareStatement(String)(n$43:java.sql.Connection*,n$45:java.lang.String*) interface virtual [line 273]; 
+
+STATE:
+{ n$43, n$45 }
+
+INSTR=  n$45=*&amp;insertWebSql:java.lang.String* [line 273]; 
+
+STATE:
+{ n$43, insertWebSql }
+
+INSTR=  _=*n$43:java.sql.Connection*(root java.sql.Connection) [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  n$43=*&amp;connect:java.sql.Connection* [line 273]; 
+
+STATE:
+{ insertWebSql, connect }
+
+</LISTING>
+<hr width="100%">
+<a name="session198" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session198">node22#session198</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { }
+RIGHT:  = LEFT
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session199" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session199">node22#session199</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [exec] liveness 22
+<LISTING class='color_black'>Fixpoint reached.
+
+</LISTING>
+<hr width="100%">
+<a name="session216" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session216">node22#session216</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { defaultMap, ps, return }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session217" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session217">node22#session217</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [exec] liveness 22
+<LISTING class='color_black'>PRE STATE:
+{ defaultMap, ps, return }
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$46 [line 273]; 
+
+STATE:
+{ n$46, defaultMap, return }
+
+INSTR=  n$46=_fun_PreparedStatement Connection.prepareStatement(String)(n$43:java.sql.Connection*,n$45:java.lang.String*) interface virtual [line 273]; 
+
+STATE:
+{ n$43, n$45, defaultMap, return }
+
+INSTR=  n$45=*&amp;insertWebSql:java.lang.String* [line 273]; 
+
+STATE:
+{ n$43, insertWebSql, defaultMap, return }
+
+INSTR=  _=*n$43:java.sql.Connection*(root java.sql.Connection) [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  n$43=*&amp;connect:java.sql.Connection* [line 273]; 
+
+STATE:
+{ insertWebSql, defaultMap, connect, return }
+
+</LISTING>
+<hr width="100%">
+<a name="session324" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session324">node22#session324</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { defaultMap, ps, return, CatchVar244 }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session325" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session325">node22#session325</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [exec] liveness 22
+<LISTING class='color_black'>PRE STATE:
+{ defaultMap, ps, return, CatchVar244 }
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$46 [line 273]; 
+
+STATE:
+{ n$46, defaultMap, return, CatchVar244 }
+
+INSTR=  n$46=_fun_PreparedStatement Connection.prepareStatement(String)(n$43:java.sql.Connection*,n$45:java.lang.String*) interface virtual [line 273]; 
+
+STATE:
+{ n$43, n$45, defaultMap, return, CatchVar244 }
+
+INSTR=  n$45=*&amp;insertWebSql:java.lang.String* [line 273]; 
+
+STATE:
+{ n$43, insertWebSql, defaultMap, return, CatchVar244 }
+
+INSTR=  _=*n$43:java.sql.Connection*(root java.sql.Connection) [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  n$43=*&amp;connect:java.sql.Connection* [line 273]; 
+
+STATE:
+{ insertWebSql, defaultMap, connect, return, CatchVar244 }
+
+</LISTING>
+<hr width="100%">
+<a name="session467" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session467">node22#session467</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session468" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session468">node22#session468</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ insertWebSql, defaultMap },{ _, n$39, n$41, n$42, $irvar9, $irvar7 })
+
+INSTR=  n$43=*&amp;connect:java.sql.Connection* [line 273]; 
+
+STATE:
+({ n$43, insertWebSql, defaultMap },
+{ _, n$39, n$41, n$42, $irvar9, $irvar7 })
+
+INSTR=  _=*n$43:java.sql.Connection*(root java.sql.Connection) [line 273]; 
+
+STATE:
+({ _, n$43, insertWebSql, defaultMap },
+{ _, n$39, n$41, n$42, $irvar9, $irvar7 })
+
+INSTR=  n$45=*&amp;insertWebSql:java.lang.String* [line 273]; 
+
+STATE:
+({ _, n$43, n$45, insertWebSql, defaultMap },
+{ _, n$39, n$41, n$42, $irvar9, $irvar7 })
+
+INSTR=  n$46=_fun_PreparedStatement Connection.prepareStatement(String)(n$43:java.sql.Connection*,n$45:java.lang.String*) interface virtual [line 273]; 
+
+STATE:
+({ _, n$43, n$45, n$46, insertWebSql, defaultMap },
+{ _, n$39, n$41, n$42, $irvar9, $irvar7 })
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$46 [line 273]; 
+
+STATE:
+({ defaultMap, ps },{ _, n$43, n$45, n$46, insertWebSql, connect })
+
+</LISTING>
+<hr width="100%">
+<a name="session38" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session38">node22#session38</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session39" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session39">node22#session39</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; { },
+  n$8 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  sb -&gt; { },
+  insertWebSql -&gt; { },
+  defaultMap -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  i -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *) }) }
+
+
+
+
+INSTR=  n$46 := PreparedStatement Connection.prepareStatement(String)({ connect,
+                                                                    insertWebSql }) [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  ps := n$46 [line 273]; 
+
+STATE:
+{ n$4 -&gt; { },
+  n$8 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  sb -&gt; { },
+  insertWebSql -&gt; { },
+  defaultMap -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  ps -&gt; { },
+  i -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *) }) }
+
+INSTR=  NULLIFY(&amp;insertWebSql); [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;connect); [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$46,insertWebSql,connect); [line 273]; 
+
+STATE:
+{ n$4 -&gt; { },
+  n$8 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  sb -&gt; { },
+  insertWebSql -&gt; { },
+  defaultMap -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  ps -&gt; { },
+  i -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *) }) }
+
+</LISTING>
+<hr width="100%">
+<a name="session76" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session76">node22#session76</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session77" href="./../nodes/com.zrlog.service.InstallService.initWebSite%28java.sql.Connection%29%3Avoid.a1f3ce267aeb91bbcf09ea39c3d4424b_node22.html#session77">node22#session77</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE273">273</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; { },
+  n$8 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  n$16 -&gt; { },
+  n$19 -&gt; { },
+  n$22 -&gt; { },
+  n$25 -&gt; { },
+  n$28 -&gt; { },
+  sb -&gt; { },
+  insertWebSql -&gt; { },
+  defaultMap -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  i -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *) }) }
+
+
+
+
+INSTR=  n$46 := PreparedStatement Connection.prepareStatement(String)({ connect,
+                                                                    insertWebSql }) [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  ps := n$46 [line 273]; 
+
+STATE:
+{ n$4 -&gt; { },
+  n$8 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  n$16 -&gt; { },
+  n$19 -&gt; { },
+  n$22 -&gt; { },
+  n$25 -&gt; { },
+  n$28 -&gt; { },
+  sb -&gt; { },
+  insertWebSql -&gt; { },
+  defaultMap -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  ps -&gt; { },
+  i -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *) }) }
+
+INSTR=  NULLIFY(&amp;insertWebSql); [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;connect); [line 273]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$46,insertWebSql,connect); [line 273]; 
+
+STATE:
+{ n$4 -&gt; { },
+  n$8 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  n$16 -&gt; { },
+  n$19 -&gt; { },
+  n$22 -&gt; { },
+  n$25 -&gt; { },
+  n$28 -&gt; { },
+  sb -&gt; { },
+  insertWebSql -&gt; { },
+  defaultMap -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *),
+  ps -&gt; { },
+  i -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(Map InstallService.getDefaultWebSiteSettingMap(Map) at line 268) }, *) }) }
+
+</LISTING>

@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_1" [label="1: Start long PageableResponse.getTotal()\nFormals:  this:com.zrlog.common.response.PageableResponse*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_1" -> "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_4" ;
+"com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_2" [label="2: Exit long PageableResponse.getTotal() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_3" -> "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_2" ;
+"com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_4" [label="4:  method_body \n   n$0=*&this:com.zrlog.common.response.PageableResponse* [line 14]\n  n$1=*n$0.total:long(root com.zrlog.common.response.PageableResponse) [line 14]\n  *&return:long=n$1 [line 14]\n  NULLIFY(&this); [line 14]\n  EXIT_SCOPE(n$0,n$1,this); [line 14]\n  APPLY_ABSTRACTION; [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_4" -> "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_2" ;
+	 "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_4" -> "com.zrlog.common.response.PageableResponse.getTotal():long.91d62fc5529c87b4f20257911329de9d_3" [color="red" ];
+}

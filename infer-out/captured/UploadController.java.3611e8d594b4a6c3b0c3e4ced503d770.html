@@ -1,0 +1,568 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/controller/admin/api/UploadController.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.controller.admin.api; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.hibegin.common.util.FileUtils; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.hibegin.common.util.IOUtil; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.jfinal.kit.PathKit; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import com.zrlog.common.response.UploadFileResponse; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import com.zrlog.service.UploadService; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import com.zrlog.util.ThumbnailUtil; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import com.zrlog.web.controller.BaseController; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">import com.zrlog.web.token.AdminTokenThreadLocal; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">import javax.imageio.ImageIO; </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">import java.awt.image.BufferedImage; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">import java.io.File; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">import java.io.FileInputStream; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">import java.io.IOException; </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">import java.text.SimpleDateFormat; </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">import java.util.Date; </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">import java.util.Random; </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">public class UploadController extends BaseController { <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.<init>%28%29.9b538c4062d5294f02b4fb93275c92c3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.<init>%28%29.9b538c4062d5294f02b4fb93275c92c3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 22];
+n$1=_fun_BaseController.&lt;init&gt;()(n$0:com.zrlog.web.controller.admin.api.UploadController*) [line 22];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.<init>%28%29.9b538c4062d5294f02b4fb93275c92c3_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.<init>%28%29.9b538c4062d5294f02b4fb93275c92c3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.<init>%28%29.9b538c4062d5294f02b4fb93275c92c3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/com.zrlog.web.controller.admin.api.UploadController.<init>%28%29.9b538c4062d5294f02b4fb93275c92c3.html">summary for UploadController.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    public UploadFileResponse index() { <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3.html">summary for UploadFileResponse UploadController.index()</a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">        String uploadFieldName = &quot;imgFile&quot;; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+*&amp;uploadFieldName:java.lang.Object*="imgFile" [line 25];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">        String uri = generatorUri(uploadFieldName); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 26];
+n$1=*&amp;uploadFieldName:java.lang.Object* [line 26];
+n$2=_fun_String UploadController.generatorUri(String)(n$0:com.zrlog.web.controller.admin.api.UploadController*,n$1:java.lang.Object*) [line 26];
+*&amp;uri:java.lang.String*=n$2 [line 26];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">        File imgFile = getFile(uploadFieldName).getFile(); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 27];
+_=*n$3:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 27];
+n$5=*&amp;uploadFieldName:java.lang.Object* [line 27];
+n$6=_fun_UploadFile Controller.getFile(String)(n$3:com.zrlog.web.controller.admin.api.UploadController*,n$5:java.lang.Object*) virtual [line 27];
+*&amp;$irvar0:com.jfinal.upload.UploadFile*=n$6 [line 27];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$7=*&amp;$irvar0:com.jfinal.upload.UploadFile* [line 27];
+_=*n$7:com.jfinal.upload.UploadFile*(root com.jfinal.upload.UploadFile) [line 27];
+n$9=_fun_File UploadFile.getFile()(n$7:com.jfinal.upload.UploadFile*) virtual [line 27];
+*&amp;imgFile:java.io.File*=n$9 [line 27];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">        String finalFilePath = PathKit.getWebRootPath() + uri; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$10=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 28];
+n$11=_fun_StringBuilder.&lt;init&gt;()(n$10:java.lang.StringBuilder*) [line 28];
+*&amp;$irvar1:java.lang.StringBuilder*=n$10 [line 28];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$12=_fun_String PathKit.getWebRootPath()() [line 28];
+*&amp;$irvar2:java.lang.String*=n$12 [line 28];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$13=*&amp;$irvar1:java.lang.StringBuilder* [line 28];
+_=*n$13:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 28];
+n$15=*&amp;$irvar2:java.lang.String* [line 28];
+n$16=_fun_StringBuilder StringBuilder.append(String)(n$13:java.lang.StringBuilder*,n$15:java.lang.String*) virtual [line 28];
+*&amp;$irvar3:java.lang.StringBuilder*=n$16 [line 28];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$17=*&amp;$irvar3:java.lang.StringBuilder* [line 28];
+_=*n$17:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 28];
+n$19=*&amp;uri:java.lang.String* [line 28];
+n$20=_fun_StringBuilder StringBuilder.append(String)(n$17:java.lang.StringBuilder*,n$19:java.lang.String*) virtual [line 28];
+*&amp;$irvar4:java.lang.StringBuilder*=n$20 [line 28];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$21=*&amp;$irvar4:java.lang.StringBuilder* [line 28];
+_=*n$21:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 28];
+n$23=_fun_String StringBuilder.toString()(n$21:java.lang.StringBuilder*) virtual [line 28];
+*&amp;finalFilePath:java.lang.String*=n$23 [line 28];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">        FileUtils.moveOrCopyFile(imgFile.toString(), finalFilePath, true); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$24=*&amp;imgFile:java.io.File* [line 29];
+_=*n$24:java.io.File*(root java.io.File) [line 29];
+n$26=_fun_String File.toString()(n$24:java.io.File*) virtual [line 29];
+*&amp;$irvar5:java.lang.String*=n$26 [line 29];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$27=*&amp;$irvar5:java.lang.String* [line 29];
+n$28=*&amp;finalFilePath:java.lang.String* [line 29];
+n$29=_fun_void FileUtils.moveOrCopyFile(String,String,boolean)(n$27:java.lang.String*,n$28:java.lang.String*,1:int) [line 29];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        return new UploadService().getCloudUrl(getRequest().getContextPath(), uri, finalFilePath, getRequest(), AdminTokenThreadLocal.getUser()); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$30=_fun___new(sizeof(t=com.zrlog.service.UploadService):com.zrlog.service.UploadService*) [line 30];
+n$31=_fun_UploadService.&lt;init&gt;()(n$30:com.zrlog.service.UploadService*) [line 30];
+*&amp;$irvar6:com.zrlog.service.UploadService*=n$30 [line 30];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$32=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 30];
+_=*n$32:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 30];
+n$34=_fun_HttpServletRequest Controller.getRequest()(n$32:com.zrlog.web.controller.admin.api.UploadController*) virtual [line 30];
+*&amp;$irvar7:javax.servlet.http.HttpServletRequest*=n$34 [line 30];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$35=*&amp;$irvar7:javax.servlet.http.HttpServletRequest* [line 30];
+_=*n$35:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 30];
+n$37=_fun_String HttpServletRequest.getContextPath()(n$35:javax.servlet.http.HttpServletRequest*) interface virtual [line 30];
+*&amp;$irvar8:java.lang.String*=n$37 [line 30];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$38=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 30];
+_=*n$38:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 30];
+n$40=_fun_HttpServletRequest Controller.getRequest()(n$38:com.zrlog.web.controller.admin.api.UploadController*) virtual [line 30];
+*&amp;$irvar9:javax.servlet.http.HttpServletRequest*=n$40 [line 30];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$41=_fun_AdminTokenVO AdminTokenThreadLocal.getUser()() [line 30];
+*&amp;$irvar10:com.zrlog.common.vo.AdminTokenVO*=n$41 [line 30];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$42=*&amp;$irvar6:com.zrlog.service.UploadService* [line 30];
+_=*n$42:com.zrlog.service.UploadService*(root com.zrlog.service.UploadService) [line 30];
+n$44=*&amp;$irvar8:java.lang.String* [line 30];
+n$45=*&amp;uri:java.lang.String* [line 30];
+n$46=*&amp;finalFilePath:java.lang.String* [line 30];
+n$47=*&amp;$irvar9:javax.servlet.http.HttpServletRequest* [line 30];
+n$48=*&amp;$irvar10:com.zrlog.common.vo.AdminTokenVO* [line 30];
+n$49=_fun_UploadFileResponse UploadService.getCloudUrl(String,String,String,HttpServletRequest,AdminTokenVO)(n$42:com.zrlog.service.UploadService*,n$44:java.lang.String*,n$45:java.lang.String*,n$46:java.lang.String*,n$47:javax.servlet.http.HttpServletRequest*,n$48:com.zrlog.common.vo.AdminTokenVO*) virtual [line 30];
+*&amp;$irvar11:com.zrlog.common.response.UploadFileResponse*=n$49 [line 30];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:2 exn:3 Instructions
+n$50=*&amp;$irvar11:com.zrlog.common.response.UploadFileResponse* [line 30];
+*&amp;return:com.zrlog.common.response.UploadFileResponse*=n$50 [line 30];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:21 3 succs: exn: Exit
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.index%28%29%3Acom.zrlog.common.response.UploadFileResp.625adf739494294bcfe729ee9d5f80d3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    private String generatorUri(String uploadFieldName) { <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa.html">summary for String UploadController.generatorUri(String)</a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">        String fileExt = getFile().getFileName().substring(getFile(uploadFieldName).getFileName().lastIndexOf(&quot;.&quot;) + 1).toLowerCase(); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 34];
+_=*n$0:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 34];
+n$2=_fun_UploadFile Controller.getFile()(n$0:com.zrlog.web.controller.admin.api.UploadController*) virtual [line 34];
+*&amp;$irvar0:com.jfinal.upload.UploadFile*=n$2 [line 34];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=*&amp;$irvar0:com.jfinal.upload.UploadFile* [line 34];
+_=*n$3:com.jfinal.upload.UploadFile*(root com.jfinal.upload.UploadFile) [line 34];
+n$5=_fun_String UploadFile.getFileName()(n$3:com.jfinal.upload.UploadFile*) virtual [line 34];
+*&amp;$irvar1:java.lang.String*=n$5 [line 34];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$6=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 34];
+_=*n$6:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 34];
+n$8=*&amp;uploadFieldName:java.lang.String* [line 34];
+n$9=_fun_UploadFile Controller.getFile(String)(n$6:com.zrlog.web.controller.admin.api.UploadController*,n$8:java.lang.String*) virtual [line 34];
+*&amp;$irvar2:com.jfinal.upload.UploadFile*=n$9 [line 34];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$10=*&amp;$irvar2:com.jfinal.upload.UploadFile* [line 34];
+_=*n$10:com.jfinal.upload.UploadFile*(root com.jfinal.upload.UploadFile) [line 34];
+n$12=_fun_String UploadFile.getFileName()(n$10:com.jfinal.upload.UploadFile*) virtual [line 34];
+*&amp;$irvar3:java.lang.String*=n$12 [line 34];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$13=*&amp;$irvar3:java.lang.String* [line 34];
+_=*n$13:java.lang.String*(root java.lang.String) [line 34];
+n$15=_fun_int String.lastIndexOf(String)(n$13:java.lang.String*,".":java.lang.Object*) virtual [line 34];
+*&amp;$irvar4:int=n$15 [line 34];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$16=*&amp;$irvar1:java.lang.String* [line 34];
+_=*n$16:java.lang.String*(root java.lang.String) [line 34];
+n$18=*&amp;$irvar4:int [line 34];
+n$19=_fun_String String.substring(int)(n$16:java.lang.String*,(n$18 + 1):int) virtual [line 34];
+*&amp;$irvar5:java.lang.String*=n$19 [line 34];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$20=*&amp;$irvar5:java.lang.String* [line 34];
+_=*n$20:java.lang.String*(root java.lang.String) [line 34];
+n$22=_fun_String String.toLowerCase()(n$20:java.lang.String*) virtual [line 34];
+*&amp;fileExt:java.lang.String*=n$22 [line 34];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">        SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyyMMdd&quot;); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$23=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 35];
+n$24=_fun_SimpleDateFormat.&lt;init&gt;(String)(n$23:java.text.SimpleDateFormat*,"yyyyMMdd":java.lang.Object*) [line 35];
+*&amp;sdf:java.text.SimpleDateFormat*=n$23 [line 35];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">        SimpleDateFormat df = new SimpleDateFormat(&quot;yyyyMMddHHmmss&quot;); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$25=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 36];
+n$26=_fun_SimpleDateFormat.&lt;init&gt;(String)(n$25:java.text.SimpleDateFormat*,"yyyyMMddHHmmss":java.lang.Object*) [line 36];
+*&amp;df:java.text.SimpleDateFormat*=n$25 [line 36];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">        return Constants.ATTACHED_FOLDER + getPara(&quot;dir&quot;) + &quot;/&quot; + sdf.format(new Date()) + &quot;/&quot; + df.format(new Date()) + &quot;_&quot; + new Random().nextInt(1000) + &quot;.&quot; + fileExt; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$27=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 37];
+n$28=_fun_StringBuilder.&lt;init&gt;()(n$27:java.lang.StringBuilder*) [line 37];
+*&amp;$irvar6:java.lang.StringBuilder*=n$27 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$29=*&amp;$irvar6:java.lang.StringBuilder* [line 37];
+_=*n$29:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$31=_fun_StringBuilder StringBuilder.append(String)(n$29:java.lang.StringBuilder*,"/attached/":java.lang.Object*) virtual [line 37];
+*&amp;$irvar7:java.lang.StringBuilder*=n$31 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$32=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 37];
+_=*n$32:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 37];
+n$34=_fun_String Controller.getPara(String)(n$32:com.zrlog.web.controller.admin.api.UploadController*,"dir":java.lang.Object*) virtual [line 37];
+*&amp;$irvar8:java.lang.String*=n$34 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$35=*&amp;$irvar7:java.lang.StringBuilder* [line 37];
+_=*n$35:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$37=*&amp;$irvar8:java.lang.String* [line 37];
+n$38=_fun_StringBuilder StringBuilder.append(String)(n$35:java.lang.StringBuilder*,n$37:java.lang.String*) virtual [line 37];
+*&amp;$irvar9:java.lang.StringBuilder*=n$38 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$39=*&amp;$irvar9:java.lang.StringBuilder* [line 37];
+_=*n$39:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$41=_fun_StringBuilder StringBuilder.append(String)(n$39:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 37];
+*&amp;$irvar10:java.lang.StringBuilder*=n$41 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$42=_fun___new(sizeof(t=java.util.Date):java.util.Date*) [line 37];
+n$43=_fun_Date.&lt;init&gt;()(n$42:java.util.Date*) [line 37];
+*&amp;$irvar11:java.util.Date*=n$42 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$44=*&amp;sdf:java.text.SimpleDateFormat* [line 37];
+_=*n$44:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 37];
+n$46=*&amp;$irvar11:java.util.Date* [line 37];
+n$47=_fun_String DateFormat.format(Date)(n$44:java.text.SimpleDateFormat*,n$46:java.util.Date*) virtual [line 37];
+*&amp;$irvar12:java.lang.String*=n$47 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$48=*&amp;$irvar10:java.lang.StringBuilder* [line 37];
+_=*n$48:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$50=*&amp;$irvar12:java.lang.String* [line 37];
+n$51=_fun_StringBuilder StringBuilder.append(String)(n$48:java.lang.StringBuilder*,n$50:java.lang.String*) virtual [line 37];
+*&amp;$irvar13:java.lang.StringBuilder*=n$51 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$52=*&amp;$irvar13:java.lang.StringBuilder* [line 37];
+_=*n$52:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$54=_fun_StringBuilder StringBuilder.append(String)(n$52:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 37];
+*&amp;$irvar14:java.lang.StringBuilder*=n$54 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$55=_fun___new(sizeof(t=java.util.Date):java.util.Date*) [line 37];
+n$56=_fun_Date.&lt;init&gt;()(n$55:java.util.Date*) [line 37];
+*&amp;$irvar15:java.util.Date*=n$55 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$57=*&amp;df:java.text.SimpleDateFormat* [line 37];
+_=*n$57:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 37];
+n$59=*&amp;$irvar15:java.util.Date* [line 37];
+n$60=_fun_String DateFormat.format(Date)(n$57:java.text.SimpleDateFormat*,n$59:java.util.Date*) virtual [line 37];
+*&amp;$irvar16:java.lang.String*=n$60 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$61=*&amp;$irvar14:java.lang.StringBuilder* [line 37];
+_=*n$61:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$63=*&amp;$irvar16:java.lang.String* [line 37];
+n$64=_fun_StringBuilder StringBuilder.append(String)(n$61:java.lang.StringBuilder*,n$63:java.lang.String*) virtual [line 37];
+*&amp;$irvar17:java.lang.StringBuilder*=n$64 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$65=*&amp;$irvar17:java.lang.StringBuilder* [line 37];
+_=*n$65:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$67=_fun_StringBuilder StringBuilder.append(String)(n$65:java.lang.StringBuilder*,"_":java.lang.Object*) virtual [line 37];
+*&amp;$irvar18:java.lang.StringBuilder*=n$67 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$68=_fun___new(sizeof(t=java.util.Random):java.util.Random*) [line 37];
+n$69=_fun_Random.&lt;init&gt;()(n$68:java.util.Random*) [line 37];
+*&amp;$irvar19:java.util.Random*=n$68 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:3 Instructions
+n$70=*&amp;$irvar19:java.util.Random* [line 37];
+_=*n$70:java.util.Random*(root java.util.Random) [line 37];
+n$72=_fun_int Random.nextInt(int)(n$70:java.util.Random*,1000:int) virtual [line 37];
+*&amp;$irvar20:int=n$72 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$73=*&amp;$irvar18:java.lang.StringBuilder* [line 37];
+_=*n$73:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$75=*&amp;$irvar20:int [line 37];
+n$76=_fun_StringBuilder StringBuilder.append(int)(n$73:java.lang.StringBuilder*,n$75:int) virtual [line 37];
+*&amp;$irvar21:java.lang.StringBuilder*=n$76 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$77=*&amp;$irvar21:java.lang.StringBuilder* [line 37];
+_=*n$77:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$79=_fun_StringBuilder StringBuilder.append(String)(n$77:java.lang.StringBuilder*,".":java.lang.Object*) virtual [line 37];
+*&amp;$irvar22:java.lang.StringBuilder*=n$79 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$80=*&amp;$irvar22:java.lang.StringBuilder* [line 37];
+_=*n$80:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$82=*&amp;fileExt:java.lang.String* [line 37];
+n$83=_fun_StringBuilder StringBuilder.append(String)(n$80:java.lang.StringBuilder*,n$82:java.lang.String*) virtual [line 37];
+*&amp;$irvar23:java.lang.StringBuilder*=n$83 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$84=*&amp;$irvar23:java.lang.StringBuilder* [line 37];
+_=*n$84:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$86=_fun_String StringBuilder.toString()(n$84:java.lang.StringBuilder*) virtual [line 37];
+*&amp;$irvar24:java.lang.String*=n$86 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:2 exn:3 Instructions
+n$87=*&amp;$irvar24:java.lang.String* [line 37];
+*&amp;return:java.lang.String*=n$87 [line 37];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:32 3 succs: exn: Exit
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.generatorUri%28java.lang.String%29%3Ajava.lang.String.d43b5581104c8da4b863e929dfb66caa_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">    public UploadFileResponse thumbnail() throws IOException { <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83.html">summary for UploadFileResponse UploadController.thumbnail()</a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">        String uploadFieldName = &quot;imgFile&quot;; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+*&amp;uploadFieldName:java.lang.Object*="imgFile" [line 41];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">        String uri = generatorUri(uploadFieldName); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 42];
+n$1=*&amp;uploadFieldName:java.lang.Object* [line 42];
+n$2=_fun_String UploadController.generatorUri(String)(n$0:com.zrlog.web.controller.admin.api.UploadController*,n$1:java.lang.Object*) [line 42];
+*&amp;uri:java.lang.String*=n$2 [line 42];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">        File imgFile = getFile(uploadFieldName).getFile(); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 43];
+_=*n$3:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 43];
+n$5=*&amp;uploadFieldName:java.lang.Object* [line 43];
+n$6=_fun_UploadFile Controller.getFile(String)(n$3:com.zrlog.web.controller.admin.api.UploadController*,n$5:java.lang.Object*) virtual [line 43];
+*&amp;$irvar0:com.jfinal.upload.UploadFile*=n$6 [line 43];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$7=*&amp;$irvar0:com.jfinal.upload.UploadFile* [line 43];
+_=*n$7:com.jfinal.upload.UploadFile*(root com.jfinal.upload.UploadFile) [line 43];
+n$9=_fun_File UploadFile.getFile()(n$7:com.jfinal.upload.UploadFile*) virtual [line 43];
+*&amp;imgFile:java.io.File*=n$9 [line 43];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">        String finalFilePath = PathKit.getWebRootPath() + uri; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$10=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 44];
+n$11=_fun_StringBuilder.&lt;init&gt;()(n$10:java.lang.StringBuilder*) [line 44];
+*&amp;$irvar1:java.lang.StringBuilder*=n$10 [line 44];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$12=_fun_String PathKit.getWebRootPath()() [line 44];
+*&amp;$irvar2:java.lang.String*=n$12 [line 44];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$13=*&amp;$irvar1:java.lang.StringBuilder* [line 44];
+_=*n$13:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 44];
+n$15=*&amp;$irvar2:java.lang.String* [line 44];
+n$16=_fun_StringBuilder StringBuilder.append(String)(n$13:java.lang.StringBuilder*,n$15:java.lang.String*) virtual [line 44];
+*&amp;$irvar3:java.lang.StringBuilder*=n$16 [line 44];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$17=*&amp;$irvar3:java.lang.StringBuilder* [line 44];
+_=*n$17:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 44];
+n$19=*&amp;uri:java.lang.String* [line 44];
+n$20=_fun_StringBuilder StringBuilder.append(String)(n$17:java.lang.StringBuilder*,n$19:java.lang.String*) virtual [line 44];
+*&amp;$irvar4:java.lang.StringBuilder*=n$20 [line 44];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$21=*&amp;$irvar4:java.lang.StringBuilder* [line 44];
+_=*n$21:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 44];
+n$23=_fun_String StringBuilder.toString()(n$21:java.lang.StringBuilder*) virtual [line 44];
+*&amp;finalFilePath:java.lang.String*=n$23 [line 44];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">        byte[] bytes = IOUtil.getByteByInputStream(new FileInputStream(imgFile)); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$24=_fun___new(sizeof(t=java.io.FileInputStream):java.io.FileInputStream*) [line 45];
+n$25=*&amp;imgFile:java.io.File* [line 45];
+n$26=_fun_FileInputStream.&lt;init&gt;(File)(n$24:java.io.FileInputStream*,n$25:java.io.File*) [line 45];
+*&amp;$irvar5:java.io.FileInputStream*=n$24 [line 45];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$27=*&amp;$irvar5:java.io.FileInputStream* [line 45];
+n$28=_fun_byte[] IOUtil.getByteByInputStream(InputStream)(n$27:java.io.FileInputStream*) [line 45];
+*&amp;bytes:signed char[_*_](*)=n$28 [line 45];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">        File thumbnailFile = new File(finalFilePath); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$29=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 46];
+n$30=*&amp;finalFilePath:java.lang.String* [line 46];
+n$31=_fun_File.&lt;init&gt;(String)(n$29:java.io.File*,n$30:java.lang.String*) [line 46];
+*&amp;thumbnailFile:java.io.File*=n$29 [line 46];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">        if (!thumbnailFile.getParentFile().exists()) { <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$32=*&amp;thumbnailFile:java.io.File* [line 47];
+_=*n$32:java.io.File*(root java.io.File) [line 47];
+n$34=_fun_File File.getParentFile()(n$32:java.io.File*) virtual [line 47];
+*&amp;$irvar6:java.io.File*=n$34 [line 47];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 19 exn:3 Instructions
+n$35=*&amp;$irvar6:java.io.File* [line 47];
+_=*n$35:java.io.File*(root java.io.File) [line 47];
+n$37=_fun_boolean File.exists()(n$35:java.io.File*) virtual [line 47];
+*&amp;$irvar7:_Bool=n$37 [line 47];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:17 succs:20 exn:3 Conditional method_body
+n$38=*&amp;$irvar7:_Bool [line 47];
+PRUNE(!(n$38 != 0), true); [line 47];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node19.html"><span class='visited with_tooltip'>C_19<span class='tooltip'>node19 preds:17 succs:22 exn:3 Conditional method_body
+n$38=*&amp;$irvar7:_Bool [line 47];
+PRUNE((n$38 != 0), false); [line 47];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">            thumbnailFile.getParentFile().mkdirs(); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:18 succs:21 exn:3 Instructions
+n$39=*&amp;thumbnailFile:java.io.File* [line 48];
+_=*n$39:java.io.File*(root java.io.File) [line 48];
+n$41=_fun_File File.getParentFile()(n$39:java.io.File*) virtual [line 48];
+*&amp;$irvar8:java.io.File*=n$41 [line 48];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$42=*&amp;$irvar8:java.io.File* [line 48];
+_=*n$42:java.io.File*(root java.io.File) [line 48];
+n$44=_fun_boolean File.mkdirs()(n$42:java.io.File*) virtual [line 48];
+*&amp;$irvar9:_Bool=n$44 [line 48];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">        int height = -1; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 19 succs:23 exn:3 Instructions
+*&amp;height:int=-1 [line 50];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">        int width = -1; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+*&amp;width:int=-1 [line 51];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">        if (!&quot;.gif&quot;.endsWith(uri)) { <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 26 exn:3 Instructions
+n$45=*&amp;uri:java.lang.String* [line 52];
+n$46=_fun_boolean String.endsWith(String)(".gif":java.lang.Object*,n$45:java.lang.String*) virtual [line 52];
+*&amp;$irvar10:_Bool=n$46 [line 52];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:24 succs:27 exn:3 Conditional method_body
+n$47=*&amp;$irvar10:_Bool [line 52];
+PRUNE(!(n$47 != 0), true); [line 52];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:24 succs:32 exn:3 Conditional method_body
+n$47=*&amp;$irvar10:_Bool [line 52];
+PRUNE((n$47 != 0), false); [line 52];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">            IOUtil.writeBytesToFile(ThumbnailUtil.jpeg(bytes, 1f), thumbnailFile); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:25 succs:28 exn:3 Instructions
+n$48=*&amp;bytes:signed char[_*_](*) [line 53];
+n$49=_fun_byte[] ThumbnailUtil.jpeg(byte[],float)(n$48:signed char[_*_](*),1.:float) [line 53];
+*&amp;$irvar11:signed char[_*_](*)=n$49 [line 53];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$50=*&amp;$irvar11:signed char[_*_](*) [line 53];
+n$51=*&amp;thumbnailFile:java.io.File* [line 53];
+n$52=_fun_void IOUtil.writeBytesToFile(byte[],File)(n$50:signed char[_*_](*),n$51:java.io.File*) [line 53];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">            BufferedImage bimg = ImageIO.read(thumbnailFile); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$53=*&amp;thumbnailFile:java.io.File* [line 54];
+n$54=_fun_BufferedImage ImageIO.read(File)(n$53:java.io.File*) [line 54];
+*&amp;bimg:java.awt.image.BufferedImage*=n$54 [line 54];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">            height = bimg.getHeight(); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$55=*&amp;bimg:java.awt.image.BufferedImage* [line 55];
+_=*n$55:java.awt.image.BufferedImage*(root java.awt.image.BufferedImage) [line 55];
+n$57=_fun_int BufferedImage.getHeight()(n$55:java.awt.image.BufferedImage*) virtual [line 55];
+*&amp;height:int=n$57 [line 55];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">            width = bimg.getWidth(); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:33 exn:3 Instructions
+n$58=*&amp;bimg:java.awt.image.BufferedImage* [line 56];
+_=*n$58:java.awt.image.BufferedImage*(root java.awt.image.BufferedImage) [line 56];
+n$60=_fun_int BufferedImage.getWidth()(n$58:java.awt.image.BufferedImage*) virtual [line 56];
+*&amp;width:int=n$60 [line 56];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">            IOUtil.writeBytesToFile(bytes, thumbnailFile); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:26 succs:33 exn:3 Instructions
+n$61=*&amp;bytes:signed char[_*_](*) [line 58];
+n$62=*&amp;thumbnailFile:java.io.File* [line 58];
+n$63=_fun_void IOUtil.writeBytesToFile(byte[],File)(n$61:signed char[_*_](*),n$62:java.io.File*) [line 58];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">        UploadFileResponse uploadFileResponse = new UploadService().getCloudUrl(getRequest().getContextPath(), uri, finalFilePath, getRequest(), AdminTokenThreadLocal.getUser()); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 31 succs:34 exn:3 Instructions
+n$64=_fun___new(sizeof(t=com.zrlog.service.UploadService):com.zrlog.service.UploadService*) [line 60];
+n$65=_fun_UploadService.&lt;init&gt;()(n$64:com.zrlog.service.UploadService*) [line 60];
+*&amp;$irvar12:com.zrlog.service.UploadService*=n$64 [line 60];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:3 Instructions
+n$66=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 60];
+_=*n$66:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 60];
+n$68=_fun_HttpServletRequest Controller.getRequest()(n$66:com.zrlog.web.controller.admin.api.UploadController*) virtual [line 60];
+*&amp;$irvar13:javax.servlet.http.HttpServletRequest*=n$68 [line 60];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:36 exn:3 Instructions
+n$69=*&amp;$irvar13:javax.servlet.http.HttpServletRequest* [line 60];
+_=*n$69:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 60];
+n$71=_fun_String HttpServletRequest.getContextPath()(n$69:javax.servlet.http.HttpServletRequest*) interface virtual [line 60];
+*&amp;$irvar14:java.lang.String*=n$71 [line 60];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:37 exn:3 Instructions
+n$72=*&amp;this:com.zrlog.web.controller.admin.api.UploadController* [line 60];
+_=*n$72:com.zrlog.web.controller.admin.api.UploadController*(root com.zrlog.web.controller.admin.api.UploadController) [line 60];
+n$74=_fun_HttpServletRequest Controller.getRequest()(n$72:com.zrlog.web.controller.admin.api.UploadController*) virtual [line 60];
+*&amp;$irvar15:javax.servlet.http.HttpServletRequest*=n$74 [line 60];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:36 succs:38 exn:3 Instructions
+n$75=_fun_AdminTokenVO AdminTokenThreadLocal.getUser()() [line 60];
+*&amp;$irvar16:com.zrlog.common.vo.AdminTokenVO*=n$75 [line 60];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 exn:3 Instructions
+n$76=*&amp;$irvar12:com.zrlog.service.UploadService* [line 60];
+_=*n$76:com.zrlog.service.UploadService*(root com.zrlog.service.UploadService) [line 60];
+n$78=*&amp;$irvar14:java.lang.String* [line 60];
+n$79=*&amp;uri:java.lang.String* [line 60];
+n$80=*&amp;finalFilePath:java.lang.String* [line 60];
+n$81=*&amp;$irvar15:javax.servlet.http.HttpServletRequest* [line 60];
+n$82=*&amp;$irvar16:com.zrlog.common.vo.AdminTokenVO* [line 60];
+n$83=_fun_UploadFileResponse UploadService.getCloudUrl(String,String,String,HttpServletRequest,AdminTokenVO)(n$76:com.zrlog.service.UploadService*,n$78:java.lang.String*,n$79:java.lang.String*,n$80:java.lang.String*,n$81:javax.servlet.http.HttpServletRequest*,n$82:com.zrlog.common.vo.AdminTokenVO*) virtual [line 60];
+*&amp;uploadFileResponse:com.zrlog.common.response.UploadFileResponse*=n$83 [line 60];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">        uploadFileResponse.setUrl(uploadFileResponse.getUrl() + &quot;?h=&quot; + height + &quot;&amp;w=&quot; + width); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 succs:40 exn:3 Instructions
+n$84=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 61];
+n$85=_fun_StringBuilder.&lt;init&gt;()(n$84:java.lang.StringBuilder*) [line 61];
+*&amp;$irvar17:java.lang.StringBuilder*=n$84 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 succs:41 exn:3 Instructions
+n$86=*&amp;uploadFileResponse:com.zrlog.common.response.UploadFileResponse* [line 61];
+_=*n$86:com.zrlog.common.response.UploadFileResponse*(root com.zrlog.common.response.UploadFileResponse) [line 61];
+n$88=_fun_String UploadFileResponse.getUrl()(n$86:com.zrlog.common.response.UploadFileResponse*) virtual [line 61];
+*&amp;$irvar18:java.lang.String*=n$88 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:40 succs:42 exn:3 Instructions
+n$89=*&amp;$irvar17:java.lang.StringBuilder* [line 61];
+_=*n$89:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$91=*&amp;$irvar18:java.lang.String* [line 61];
+n$92=_fun_StringBuilder StringBuilder.append(String)(n$89:java.lang.StringBuilder*,n$91:java.lang.String*) virtual [line 61];
+*&amp;$irvar19:java.lang.StringBuilder*=n$92 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:3 Instructions
+n$93=*&amp;$irvar19:java.lang.StringBuilder* [line 61];
+_=*n$93:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$95=_fun_StringBuilder StringBuilder.append(String)(n$93:java.lang.StringBuilder*,"?h=":java.lang.Object*) virtual [line 61];
+*&amp;$irvar20:java.lang.StringBuilder*=n$95 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:3 Instructions
+n$96=*&amp;$irvar20:java.lang.StringBuilder* [line 61];
+_=*n$96:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$98=*&amp;height:int [line 61];
+n$99=_fun_StringBuilder StringBuilder.append(int)(n$96:java.lang.StringBuilder*,n$98:int) virtual [line 61];
+*&amp;$irvar21:java.lang.StringBuilder*=n$99 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 exn:3 Instructions
+n$100=*&amp;$irvar21:java.lang.StringBuilder* [line 61];
+_=*n$100:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$102=_fun_StringBuilder StringBuilder.append(String)(n$100:java.lang.StringBuilder*,"&w=":java.lang.Object*) virtual [line 61];
+*&amp;$irvar22:java.lang.StringBuilder*=n$102 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:44 succs:46 exn:3 Instructions
+n$103=*&amp;$irvar22:java.lang.StringBuilder* [line 61];
+_=*n$103:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$105=*&amp;width:int [line 61];
+n$106=_fun_StringBuilder StringBuilder.append(int)(n$103:java.lang.StringBuilder*,n$105:int) virtual [line 61];
+*&amp;$irvar23:java.lang.StringBuilder*=n$106 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 exn:3 Instructions
+n$107=*&amp;$irvar23:java.lang.StringBuilder* [line 61];
+_=*n$107:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 61];
+n$109=_fun_String StringBuilder.toString()(n$107:java.lang.StringBuilder*) virtual [line 61];
+*&amp;$irvar24:java.lang.String*=n$109 [line 61];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:3 Instructions
+n$110=*&amp;uploadFileResponse:com.zrlog.common.response.UploadFileResponse* [line 61];
+_=*n$110:com.zrlog.common.response.UploadFileResponse*(root com.zrlog.common.response.UploadFileResponse) [line 61];
+n$112=*&amp;$irvar24:java.lang.String* [line 61];
+n$113=_fun_void UploadFileResponse.setUrl(String)(n$110:com.zrlog.common.response.UploadFileResponse*,n$112:java.lang.String*) virtual [line 61];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">        imgFile.delete(); <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:3 Instructions
+n$114=*&amp;imgFile:java.io.File* [line 62];
+_=*n$114:java.io.File*(root java.io.File) [line 62];
+n$116=_fun_boolean File.delete()(n$114:java.io.File*) virtual [line 62];
+*&amp;$irvar25:_Bool=n$116 [line 62];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">        return uploadFileResponse; <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:2 exn:3 Instructions
+n$117=*&amp;uploadFileResponse:com.zrlog.common.response.UploadFileResponse* [line 63];
+*&amp;return:com.zrlog.common.response.UploadFileResponse*=n$117 [line 63];
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:49 3 succs: exn: Exit
+</span></span></a> <a href="./UploadController.java.3611e8d594b4a6c3b0c3e4ced503d770/nodes/com.zrlog.web.controller.admin.api.UploadController.thumbnail%28%29%3Acom.zrlog.common.response.UploadFile.7b20290a566579d597e1da81c34c3c83_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

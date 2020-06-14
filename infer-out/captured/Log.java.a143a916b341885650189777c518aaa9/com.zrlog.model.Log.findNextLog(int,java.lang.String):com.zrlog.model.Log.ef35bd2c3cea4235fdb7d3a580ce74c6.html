@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Log.findNextLog(int,java.lang.String):com.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../Log.java.a143a916b341885650189777c518aaa9.html#LINE76">Log Log.findNextLog(int,String)</a></h1></center>
+<a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:23 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 82];
+NULLIFY(&amp;$irvar9); [line 82];
+NULLIFY(&amp;$irvar5); [line 82];
+NULLIFY(&amp;log); [line 82];
+NULLIFY(&amp;$irvar4); [line 82];
+NULLIFY(&amp;$irvar7); [line 82];
+NULLIFY(&amp;$irvar6); [line 82];
+NULLIFY(&amp;$irvar0); [line 82];
+NULLIFY(&amp;$irvar10); [line 82];
+NULLIFY(&amp;nextLogSql); [line 82];
+NULLIFY(&amp;$irvar8); [line 82];
+NULLIFY(&amp;$irvar1); [line 82];
+NULLIFY(&amp;$irvar2); [line 82];
+EXIT_SCOPE($irvar3,$irvar9,$irvar5,log,$irvar4,$irvar7,$irvar6,$irvar0,$irvar10,nextLogSql,$irvar8,$irvar1,$irvar2); [line 82];
+APPLY_ABSTRACTION; [line 82];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+*&amp;nextLogSql:java.lang.Object*="select l.alias as alias,l.title as title from log l where rubbish=? and privacy=? and l.logId>?" [line 77];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[3]):java.lang.Object*[_*_](*)) [line 78];
+*&amp;$irvar0:java.lang.Object*[_*_](*)=n$0 [line 78];
+EXIT_SCOPE(n$0); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$1=*&amp;this:com.zrlog.model.Log* [line 78];
+n$2=*n$1.rubbish:_Bool(root com.zrlog.model.Log) [line 78];
+*&amp;$irvar1:_Bool=n$2 [line 78];
+EXIT_SCOPE(n$1,n$2); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$3=*&amp;$irvar1:_Bool [line 78];
+n$4=_fun_Boolean Boolean.valueOf(boolean)(n$3:_Bool) [line 78];
+*&amp;$irvar2:java.lang.Boolean*=n$4 [line 78];
+NULLIFY(&amp;$irvar1); [line 78];
+EXIT_SCOPE(n$3,n$4,$irvar1); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$5=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 78];
+n$6=*&amp;$irvar2:java.lang.Boolean* [line 78];
+*n$5[0]:java.lang.Boolean*=n$6 [line 78];
+NULLIFY(&amp;$irvar2); [line 78];
+EXIT_SCOPE(n$5,n$6,$irvar2); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$7=*&amp;this:com.zrlog.model.Log* [line 78];
+n$8=*n$7.privacy:_Bool(root com.zrlog.model.Log) [line 78];
+*&amp;$irvar3:_Bool=n$8 [line 78];
+EXIT_SCOPE(n$7,n$8); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$9=*&amp;$irvar3:_Bool [line 78];
+n$10=_fun_Boolean Boolean.valueOf(boolean)(n$9:_Bool) [line 78];
+*&amp;$irvar4:java.lang.Boolean*=n$10 [line 78];
+NULLIFY(&amp;$irvar3); [line 78];
+EXIT_SCOPE(n$9,n$10,$irvar3); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$11=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 78];
+n$12=*&amp;$irvar4:java.lang.Boolean* [line 78];
+*n$11[1]:java.lang.Boolean*=n$12 [line 78];
+NULLIFY(&amp;$irvar4); [line 78];
+EXIT_SCOPE(n$11,n$12,$irvar4); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$13=*&amp;id:int [line 78];
+n$14=_fun_Integer Integer.valueOf(int)(n$13:int) [line 78];
+*&amp;$irvar5:java.lang.Integer*=n$14 [line 78];
+EXIT_SCOPE(n$13,n$14); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$15=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 78];
+n$16=*&amp;$irvar5:java.lang.Integer* [line 78];
+*n$15[2]:java.lang.Integer*=n$16 [line 78];
+NULLIFY(&amp;$irvar5); [line 78];
+EXIT_SCOPE(n$15,n$16,$irvar5); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$17=*&amp;this:com.zrlog.model.Log* [line 78];
+_=*n$17:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 78];
+n$19=*&amp;nextLogSql:java.lang.Object* [line 78];
+n$20=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 78];
+n$21=_fun_Model Model.findFirst(String,Object[])(n$17:com.zrlog.model.Log*,n$19:java.lang.Object*,n$20:java.lang.Object*[_*_](*)) virtual [line 78];
+*&amp;$irvar6:com.jfinal.plugin.activerecord.Model*=n$21 [line 78];
+NULLIFY(&amp;$irvar0); [line 78];
+NULLIFY(&amp;nextLogSql); [line 78];
+NULLIFY(&amp;this); [line 78];
+EXIT_SCOPE(_,n$17,n$19,n$20,n$21,$irvar0,nextLogSql,this); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 17 exn:3 Instructions
+n$22=*&amp;$irvar6:com.jfinal.plugin.activerecord.Model* [line 78];
+n$23=_fun___cast(n$22:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 78];
+*&amp;log:com.zrlog.model.Log*=n$23 [line 78];
+NULLIFY(&amp;$irvar6); [line 78];
+EXIT_SCOPE(n$22,n$23,$irvar6); [line 78];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:15 succs:18 exn:3 Conditional method_body
+n$24=*&amp;log:com.zrlog.model.Log* [line 79];
+PRUNE(!(n$24 != null), true); [line 79];
+NULLIFY(&amp;log); [line 79];
+EXIT_SCOPE(n$24,log); [line 79];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:15 succs:23 exn:3 Conditional method_body
+n$24=*&amp;log:com.zrlog.model.Log* [line 79];
+PRUNE((n$24 != null), false); [line 79];
+EXIT_SCOPE(n$24); [line 79];
+APPLY_ABSTRACTION; [line 79];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:16 succs:19 exn:3 Instructions
+n$25=_fun___new(sizeof(t=com.zrlog.model.Log):com.zrlog.model.Log*) [line 80];
+n$26=_fun_Log.&lt;init&gt;()(n$25:com.zrlog.model.Log*) [line 80];
+*&amp;$irvar7:com.zrlog.model.Log*=n$25 [line 80];
+EXIT_SCOPE(n$25,n$26); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$27=*&amp;id:int [line 80];
+n$28=_fun_Integer Integer.valueOf(int)(n$27:int) [line 80];
+*&amp;$irvar8:java.lang.Integer*=n$28 [line 80];
+NULLIFY(&amp;id); [line 80];
+EXIT_SCOPE(n$27,n$28,id); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$29=*&amp;$irvar7:com.zrlog.model.Log* [line 80];
+_=*n$29:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 80];
+n$31=*&amp;$irvar8:java.lang.Integer* [line 80];
+n$32=_fun_Model Model.set(String,Object)(n$29:com.zrlog.model.Log*,"alias":java.lang.Object*,n$31:java.lang.Integer*) virtual [line 80];
+*&amp;$irvar9:com.jfinal.plugin.activerecord.Model*=n$32 [line 80];
+NULLIFY(&amp;$irvar7); [line 80];
+NULLIFY(&amp;$irvar8); [line 80];
+EXIT_SCOPE(_,n$29,n$31,n$32,$irvar7,$irvar8); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$33=*&amp;$irvar9:com.jfinal.plugin.activerecord.Model* [line 80];
+n$34=_fun___cast(n$33:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 80];
+_=*n$34:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 80];
+n$36=*&amp;notFoundDesc:java.lang.String* [line 80];
+n$37=_fun_Model Model.set(String,Object)(n$34:com.zrlog.model.Log*,"title":java.lang.Object*,n$36:java.lang.String*) virtual [line 80];
+*&amp;$irvar10:com.jfinal.plugin.activerecord.Model*=n$37 [line 80];
+NULLIFY(&amp;$irvar9); [line 80];
+NULLIFY(&amp;notFoundDesc); [line 80];
+EXIT_SCOPE(_,n$33,n$34,n$36,n$37,$irvar9,notFoundDesc); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$38=*&amp;$irvar10:com.jfinal.plugin.activerecord.Model* [line 80];
+n$39=_fun___cast(n$38:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 80];
+*&amp;log:com.zrlog.model.Log*=n$39 [line 80];
+NULLIFY(&amp;$irvar10); [line 80];
+EXIT_SCOPE(n$38,n$39,$irvar10); [line 80];
+APPLY_ABSTRACTION; [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.findNextLog%28int%2Cjava.lang.String%29%3Acom.zrlog.model.Log.ef35bd2c3cea4235fdb7d3a580ce74c6_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 17 succs:2 exn:3 Instructions
+n$40=*&amp;log:com.zrlog.model.Log* [line 82];
+*&amp;return:com.zrlog.model.Log*=n$40 [line 82];
+NULLIFY(&amp;log); [line 82];
+EXIT_SCOPE(n$40,log); [line 82];
+APPLY_ABSTRACTION; [line 82];
+</span></span></a><br />@
+
+<span class='color_black'>com.zrlog.model.Log* Log Log.findNextLog(int,String)(com.zrlog.model.Log* this, int id, java.lang.String* notFoundDesc)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> (Footprint({ @val$2*, @val$0* }) ~> ?, *) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= Log Log.findNextLog(int,String)
+; translation_unit= data/src/main/java/com/zrlog/model/Log.java
+; access= Public
+; formals= [(this,com.zrlog.model.Log*);  (id,int);  (notFoundDesc,
+            java.lang.String*)]
+; is_defined= true
+; loc= data/src/main/java/com/zrlog/model/Log.java:76
+; locals= [{ name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= log; typ= com.zrlog.model.Log*; modify_in_block= false }; 
+           { name= nextLogSql; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= com.zrlog.model.Log* 
+; proc_id= com.zrlog.model.Log.findNextLog(int,java.lang.String):com.zrlog.model.Log }</pre>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_1" [label="1: Start void BlogBuildInfoUtil.main(String[])\nFormals:  args:java.lang.String*[_*_](*)\nLocals:  $irvar23:void $irvar22:void $irvar21:void $irvar20:void $irvar19:void $irvar18:void $irvar17:void $irvar16:void $irvar15:void $irvar14:void $irvar13:void $irvar12:void $irvar11:void $irvar10:void $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_1" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_4" ;
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_2" [label="2: Exit void BlogBuildInfoUtil.main(String[]) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar22); [line 104]\n  NULLIFY(&$irvar3); [line 104]\n  NULLIFY(&$irvar9); [line 104]\n  NULLIFY(&$irvar17); [line 104]\n  NULLIFY(&$irvar18); [line 104]\n  NULLIFY(&$irvar5); [line 104]\n  NULLIFY(&$irvar16); [line 104]\n  NULLIFY(&$irvar4); [line 104]\n  NULLIFY(&$irvar7); [line 104]\n  NULLIFY(&$irvar12); [line 104]\n  NULLIFY(&$irvar19); [line 104]\n  NULLIFY(&$irvar21); [line 104]\n  NULLIFY(&$irvar20); [line 104]\n  NULLIFY(&$irvar6); [line 104]\n  NULLIFY(&$irvar0); [line 104]\n  NULLIFY(&$irvar23); [line 104]\n  NULLIFY(&$irvar13); [line 104]\n  NULLIFY(&$irvar11); [line 104]\n  NULLIFY(&$irvar10); [line 104]\n  NULLIFY(&$irvar8); [line 104]\n  NULLIFY(&$irvar1); [line 104]\n  NULLIFY(&$irvar2); [line 104]\n  NULLIFY(&$irvar15); [line 104]\n  NULLIFY(&$irvar14); [line 104]\n  EXIT_SCOPE($irvar22,$irvar3,$irvar9,$irvar17,$irvar18,$irvar5,$irvar16,$irvar4,$irvar7,$irvar12,$irvar19,$irvar21,$irvar20,$irvar6,$irvar0,$irvar23,$irvar13,$irvar11,$irvar10,$irvar8,$irvar1,$irvar2,$irvar15,$irvar14); [line 104]\n  APPLY_ABSTRACTION; [line 104]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_2" ;
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_4" [label="4:  method_body \n   n$0=*&#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 100]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 100]\n  EXIT_SCOPE(n$0); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_4" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_5" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_4" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_5" [label="5:  Call StringBuilder.<init>() \n   n$1=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 100]\n  n$2=_fun_StringBuilder.<init>()(n$1:java.lang.StringBuilder*) [line 100]\n  *&$irvar1:java.lang.StringBuilder*=n$1 [line 100]\n  EXIT_SCOPE(n$1,n$2); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_5" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_6" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_5" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_6" [label="6:  Call StringBuilder StringBuilder.append(String) \n   n$3=*&$irvar1:java.lang.StringBuilder* [line 100]\n  _=*n$3:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100]\n  n$5=_fun_StringBuilder StringBuilder.append(String)(n$3:java.lang.StringBuilder*,\"isRelease = \":java.lang.Object*) virtual [line 100]\n  *&$irvar2:java.lang.StringBuilder*=n$5 [line 100]\n  NULLIFY(&$irvar1); [line 100]\n  EXIT_SCOPE(_,n$3,n$5,$irvar1); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_6" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_7" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_6" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_7" [label="7:  Call boolean BlogBuildInfoUtil.isRelease() \n   n$6=_fun_boolean BlogBuildInfoUtil.isRelease()() [line 100]\n  *&$irvar3:_Bool=n$6 [line 100]\n  EXIT_SCOPE(n$6); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_7" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_8" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_7" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_8" [label="8:  Call StringBuilder StringBuilder.append(boolean) \n   n$7=*&$irvar2:java.lang.StringBuilder* [line 100]\n  _=*n$7:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100]\n  n$9=*&$irvar3:_Bool [line 100]\n  n$10=_fun_StringBuilder StringBuilder.append(boolean)(n$7:java.lang.StringBuilder*,n$9:_Bool) virtual [line 100]\n  *&$irvar4:java.lang.StringBuilder*=n$10 [line 100]\n  NULLIFY(&$irvar3); [line 100]\n  NULLIFY(&$irvar2); [line 100]\n  EXIT_SCOPE(_,n$7,n$9,n$10,$irvar3,$irvar2); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_8" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_9" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_8" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_9" [label="9:  Call String StringBuilder.toString() \n   n$11=*&$irvar4:java.lang.StringBuilder* [line 100]\n  _=*n$11:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100]\n  n$13=_fun_String StringBuilder.toString()(n$11:java.lang.StringBuilder*) virtual [line 100]\n  *&$irvar5:java.lang.String*=n$13 [line 100]\n  NULLIFY(&$irvar4); [line 100]\n  EXIT_SCOPE(_,n$11,n$13,$irvar4); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_9" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_10" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_9" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_10" [label="10:  Call void Logger.info(String) \n   n$14=*&$irvar0:org.slf4j.Logger* [line 100]\n  _=*n$14:org.slf4j.Logger*(root org.slf4j.Logger) [line 100]\n  n$16=*&$irvar5:java.lang.String* [line 100]\n  n$17=_fun_void Logger.info(String)(n$14:org.slf4j.Logger*,n$16:java.lang.String*) interface virtual [line 100]\n  NULLIFY(&$irvar5); [line 100]\n  NULLIFY(&$irvar0); [line 100]\n  EXIT_SCOPE(_,n$14,n$16,n$17,$irvar5,$irvar0); [line 100]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_10" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_11" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_10" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_11" [label="11:  method_body \n   n$18=*&#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 101]\n  *&$irvar6:org.slf4j.Logger*=n$18 [line 101]\n  EXIT_SCOPE(n$18); [line 101]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_11" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_12" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_11" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_12" [label="12:  Call StringBuilder.<init>() \n   n$19=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 101]\n  n$20=_fun_StringBuilder.<init>()(n$19:java.lang.StringBuilder*) [line 101]\n  *&$irvar7:java.lang.StringBuilder*=n$19 [line 101]\n  EXIT_SCOPE(n$19,n$20); [line 101]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_12" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_13" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_12" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_13" [label="13:  Call StringBuilder StringBuilder.append(String) \n   n$21=*&$irvar7:java.lang.StringBuilder* [line 101]\n  _=*n$21:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 101]\n  n$23=_fun_StringBuilder StringBuilder.append(String)(n$21:java.lang.StringBuilder*,\"version = \":java.lang.Object*) virtual [line 101]\n  *&$irvar8:java.lang.StringBuilder*=n$23 [line 101]\n  NULLIFY(&$irvar7); [line 101]\n  EXIT_SCOPE(_,n$21,n$23,$irvar7); [line 101]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_13" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_14" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_13" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_14" [label="14:  Call String BlogBuildInfoUtil.getVersion() \n   n$24=_fun_String BlogBuildInfoUtil.getVersion()() [line 101]\n  *&$irvar9:java.lang.String*=n$24 [line 101]\n  EXIT_SCOPE(n$24); [line 101]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_14" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_15" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_14" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_15" [label="15:  Call StringBuilder StringBuilder.append(String) \n   n$25=*&$irvar8:java.lang.StringBuilder* [line 101]\n  _=*n$25:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 101]\n  n$27=*&$irvar9:java.lang.String* [line 101]\n  n$28=_fun_StringBuilder StringBuilder.append(String)(n$25:java.lang.StringBuilder*,n$27:java.lang.String*) virtual [line 101]\n  *&$irvar10:java.lang.StringBuilder*=n$28 [line 101]\n  NULLIFY(&$irvar9); [line 101]\n  NULLIFY(&$irvar8); [line 101]\n  EXIT_SCOPE(_,n$25,n$27,n$28,$irvar9,$irvar8); [line 101]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_15" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_16" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_15" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_16" [label="16:  Call String StringBuilder.toString() \n   n$29=*&$irvar10:java.lang.StringBuilder* [line 101]\n  _=*n$29:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 101]\n  n$31=_fun_String StringBuilder.toString()(n$29:java.lang.StringBuilder*) virtual [line 101]\n  *&$irvar11:java.lang.String*=n$31 [line 101]\n  NULLIFY(&$irvar10); [line 101]\n  EXIT_SCOPE(_,n$29,n$31,$irvar10); [line 101]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_16" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_17" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_16" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_17" [label="17:  Call void Logger.info(String) \n   n$32=*&$irvar6:org.slf4j.Logger* [line 101]\n  _=*n$32:org.slf4j.Logger*(root org.slf4j.Logger) [line 101]\n  n$34=*&$irvar11:java.lang.String* [line 101]\n  n$35=_fun_void Logger.info(String)(n$32:org.slf4j.Logger*,n$34:java.lang.String*) interface virtual [line 101]\n  NULLIFY(&$irvar6); [line 101]\n  NULLIFY(&$irvar11); [line 101]\n  EXIT_SCOPE(_,n$32,n$34,n$35,$irvar6,$irvar11); [line 101]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_17" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_18" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_17" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_18" [label="18:  method_body \n   n$36=*&#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 102]\n  *&$irvar12:org.slf4j.Logger*=n$36 [line 102]\n  EXIT_SCOPE(n$36); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_18" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_19" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_18" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_19" [label="19:  Call StringBuilder.<init>() \n   n$37=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 102]\n  n$38=_fun_StringBuilder.<init>()(n$37:java.lang.StringBuilder*) [line 102]\n  *&$irvar13:java.lang.StringBuilder*=n$37 [line 102]\n  EXIT_SCOPE(n$37,n$38); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_19" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_20" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_19" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_20" [label="20:  Call StringBuilder StringBuilder.append(String) \n   n$39=*&$irvar13:java.lang.StringBuilder* [line 102]\n  _=*n$39:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 102]\n  n$41=_fun_StringBuilder StringBuilder.append(String)(n$39:java.lang.StringBuilder*,\"buildId = \":java.lang.Object*) virtual [line 102]\n  *&$irvar14:java.lang.StringBuilder*=n$41 [line 102]\n  NULLIFY(&$irvar13); [line 102]\n  EXIT_SCOPE(_,n$39,n$41,$irvar13); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_20" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_21" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_20" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_21" [label="21:  Call String BlogBuildInfoUtil.getBuildId() \n   n$42=_fun_String BlogBuildInfoUtil.getBuildId()() [line 102]\n  *&$irvar15:java.lang.String*=n$42 [line 102]\n  EXIT_SCOPE(n$42); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_21" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_22" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_21" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_22" [label="22:  Call StringBuilder StringBuilder.append(String) \n   n$43=*&$irvar14:java.lang.StringBuilder* [line 102]\n  _=*n$43:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 102]\n  n$45=*&$irvar15:java.lang.String* [line 102]\n  n$46=_fun_StringBuilder StringBuilder.append(String)(n$43:java.lang.StringBuilder*,n$45:java.lang.String*) virtual [line 102]\n  *&$irvar16:java.lang.StringBuilder*=n$46 [line 102]\n  NULLIFY(&$irvar15); [line 102]\n  NULLIFY(&$irvar14); [line 102]\n  EXIT_SCOPE(_,n$43,n$45,n$46,$irvar15,$irvar14); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_22" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_23" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_22" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_23" [label="23:  Call String StringBuilder.toString() \n   n$47=*&$irvar16:java.lang.StringBuilder* [line 102]\n  _=*n$47:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 102]\n  n$49=_fun_String StringBuilder.toString()(n$47:java.lang.StringBuilder*) virtual [line 102]\n  *&$irvar17:java.lang.String*=n$49 [line 102]\n  NULLIFY(&$irvar16); [line 102]\n  EXIT_SCOPE(_,n$47,n$49,$irvar16); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_23" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_24" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_23" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_24" [label="24:  Call void Logger.info(String) \n   n$50=*&$irvar12:org.slf4j.Logger* [line 102]\n  _=*n$50:org.slf4j.Logger*(root org.slf4j.Logger) [line 102]\n  n$52=*&$irvar17:java.lang.String* [line 102]\n  n$53=_fun_void Logger.info(String)(n$50:org.slf4j.Logger*,n$52:java.lang.String*) interface virtual [line 102]\n  NULLIFY(&$irvar17); [line 102]\n  NULLIFY(&$irvar12); [line 102]\n  EXIT_SCOPE(_,n$50,n$52,n$53,$irvar17,$irvar12); [line 102]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_24" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_25" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_24" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_25" [label="25:  method_body \n   n$54=*&#GB<>$com.zrlog.util.BlogBuildInfoUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.BlogBuildInfoUtil) [line 103]\n  *&$irvar18:org.slf4j.Logger*=n$54 [line 103]\n  EXIT_SCOPE(n$54); [line 103]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_25" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_26" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_25" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_26" [label="26:  Call StringBuilder.<init>() \n   n$55=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 103]\n  n$56=_fun_StringBuilder.<init>()(n$55:java.lang.StringBuilder*) [line 103]\n  *&$irvar19:java.lang.StringBuilder*=n$55 [line 103]\n  EXIT_SCOPE(n$55,n$56); [line 103]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_26" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_27" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_26" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_27" [label="27:  Call StringBuilder StringBuilder.append(String) \n   n$57=*&$irvar19:java.lang.StringBuilder* [line 103]\n  _=*n$57:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 103]\n  n$59=_fun_StringBuilder StringBuilder.append(String)(n$57:java.lang.StringBuilder*,\"time = \":java.lang.Object*) virtual [line 103]\n  *&$irvar20:java.lang.StringBuilder*=n$59 [line 103]\n  NULLIFY(&$irvar19); [line 103]\n  EXIT_SCOPE(_,n$57,n$59,$irvar19); [line 103]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_27" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_28" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_27" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_28" [label="28:  Call Date BlogBuildInfoUtil.getTime() \n   n$60=_fun_Date BlogBuildInfoUtil.getTime()() [line 103]\n  *&$irvar21:java.util.Date*=n$60 [line 103]\n  EXIT_SCOPE(n$60); [line 103]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_28" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_29" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_28" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_29" [label="29:  Call StringBuilder StringBuilder.append(Object) \n   n$61=*&$irvar20:java.lang.StringBuilder* [line 103]\n  _=*n$61:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 103]\n  n$63=*&$irvar21:java.util.Date* [line 103]\n  n$64=_fun_StringBuilder StringBuilder.append(Object)(n$61:java.lang.StringBuilder*,n$63:java.util.Date*) virtual [line 103]\n  *&$irvar22:java.lang.StringBuilder*=n$64 [line 103]\n  NULLIFY(&$irvar21); [line 103]\n  NULLIFY(&$irvar20); [line 103]\n  EXIT_SCOPE(_,n$61,n$63,n$64,$irvar21,$irvar20); [line 103]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_29" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_30" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_29" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_30" [label="30:  Call String StringBuilder.toString() \n   n$65=*&$irvar22:java.lang.StringBuilder* [line 103]\n  _=*n$65:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 103]\n  n$67=_fun_String StringBuilder.toString()(n$65:java.lang.StringBuilder*) virtual [line 103]\n  *&$irvar23:java.lang.String*=n$67 [line 103]\n  NULLIFY(&$irvar22); [line 103]\n  EXIT_SCOPE(_,n$65,n$67,$irvar22); [line 103]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_30" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_31" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_30" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_31" [label="31:  Call void Logger.info(String) \n   n$68=*&$irvar18:org.slf4j.Logger* [line 103]\n  _=*n$68:org.slf4j.Logger*(root org.slf4j.Logger) [line 103]\n  n$70=*&$irvar23:java.lang.String* [line 103]\n  n$71=_fun_void Logger.info(String)(n$68:org.slf4j.Logger*,n$70:java.lang.String*) interface virtual [line 103]\n  NULLIFY(&$irvar18); [line 103]\n  NULLIFY(&$irvar23); [line 103]\n  EXIT_SCOPE(_,n$68,n$70,n$71,$irvar18,$irvar23); [line 103]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_31" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_32" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_31" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_32" [label="32:  method_body \n   APPLY_ABSTRACTION; [line 104]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_32" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_2" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_32" -> "com.zrlog.util.BlogBuildInfoUtil.main(java.lang.String[]):void.9e10048258723f8ed96682459abc5ba2_3" [color="red" ];
+}

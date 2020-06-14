@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.handler.PluginHandler.handle(java.lang.String,javax.servlet.http.HttpServletRequest,ja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">22</a></h1></center>PROC: <a href="./../com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b.html">void PluginHandler.handle(String,HttpServletRequest,HttpServletResponse,boolean[])</a> LINE: <a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node21.html"><span class='visited with_tooltip'>N_21<span class='tooltip'>node21 preds:19 succs:22 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node23.html"><span class='visited with_tooltip'>N_23<span class='tooltip'>node23 preds:22 succs:24 25 exn:57 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node57.html"><span class='visited with_tooltip'>N_57<span class='tooltip'>node57 preds: succs:56 exn:3 </span></span></a><br>
+<LISTING class='color_green'>n$24=*&amp;this:com.zrlog.web.handler.PluginHandler* [line 48];
+n$25=*n$24.adminTokenService:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.handler.PluginHandler) [line 48];
+_=*n$25:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 48];
+n$27=*&amp;request:javax.servlet.http.HttpServletRequest* [line 48];
+n$28=_fun_AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)(n$25:com.zrlog.web.token.AdminTokenService*,n$27:javax.servlet.http.HttpServletRequest*) virtual [line 48];
+*&amp;entry:com.zrlog.common.vo.AdminTokenVO*=n$28 [line 48];
+</LISTING>
+<hr width="100%">
+<a name="session148" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session148">node22#session148</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] liveness 22
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session149" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session149">node22#session149</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] liveness 22
+<LISTING class='color_black'>PRE STATE:
+{ target, request, entry, isHandled, this, response }
+
+INSTR=  *&amp;entry:com.zrlog.common.vo.AdminTokenVO*=n$28 [line 48]; 
+
+STATE:
+{ n$28, target, request, isHandled, this, response }
+
+INSTR=  n$28=_fun_AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)(n$25:com.zrlog.web.token.AdminTokenService*,n$27:javax.servlet.http.HttpServletRequest*) virtual [line 48]; 
+
+STATE:
+{ n$25, n$27, target, request, isHandled, this, response }
+
+INSTR=  n$27=*&amp;request:javax.servlet.http.HttpServletRequest* [line 48]; 
+
+STATE:
+{ n$25, target, request, isHandled, this, response }
+
+INSTR=  _=*n$25:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 48]; 
+
+STATE UNCHANGED
+
+INSTR=  n$25=*n$24.adminTokenService:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.handler.PluginHandler) [line 48]; 
+
+STATE:
+{ n$24, target, request, isHandled, this, response }
+
+INSTR=  n$24=*&amp;this:com.zrlog.web.handler.PluginHandler* [line 48]; 
+
+STATE:
+{ target, request, isHandled, this, response }
+
+</LISTING>
+<hr width="100%">
+<a name="session188" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session188">node22#session188</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { target, request, entry, isHandled, this, response }
+RIGHT:  { CatchVar178, entry, return, isHandled }
+RESULT: { target,
+          CatchVar178,
+          request,
+          entry,
+          return,
+          isHandled,
+          this,
+          response }
+
+</LISTING>
+<hr width="100%">
+<a name="session189" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session189">node22#session189</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] liveness 22
+<LISTING class='color_black'>PRE STATE:
+{ target, CatchVar178, request, entry, return, isHandled, this, response }
+
+INSTR=  *&amp;entry:com.zrlog.common.vo.AdminTokenVO*=n$28 [line 48]; 
+
+STATE:
+{ n$28, target, CatchVar178, request, return, isHandled, this, response }
+
+INSTR=  n$28=_fun_AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)(n$25:com.zrlog.web.token.AdminTokenService*,n$27:javax.servlet.http.HttpServletRequest*) virtual [line 48]; 
+
+STATE:
+{ n$25,
+  n$27,
+  target,
+  CatchVar178,
+  request,
+  return,
+  isHandled,
+  this,
+  response }
+
+INSTR=  n$27=*&amp;request:javax.servlet.http.HttpServletRequest* [line 48]; 
+
+STATE:
+{ n$25, target, CatchVar178, request, return, isHandled, this, response }
+
+INSTR=  _=*n$25:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 48]; 
+
+STATE UNCHANGED
+
+INSTR=  n$25=*n$24.adminTokenService:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.handler.PluginHandler) [line 48]; 
+
+STATE:
+{ n$24, target, CatchVar178, request, return, isHandled, this, response }
+
+INSTR=  n$24=*&amp;this:com.zrlog.web.handler.PluginHandler* [line 48]; 
+
+STATE:
+{ target, CatchVar178, request, return, isHandled, this, response }
+
+</LISTING>
+<hr width="100%">
+<a name="session198" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session198">node22#session198</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { target,
+          CatchVar178,
+          request,
+          entry,
+          return,
+          isHandled,
+          this,
+          response }
+RIGHT:  { CatchVar178, entry, return, isHandled }
+RESULT: { target,
+          CatchVar178,
+          request,
+          entry,
+          return,
+          isHandled,
+          this,
+          response }
+
+</LISTING>
+<hr width="100%">
+<a name="session199" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session199">node22#session199</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] liveness 22
+<LISTING class='color_black'>Fixpoint reached.
+
+</LISTING>
+<hr width="100%">
+<a name="session208" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session208">node22#session208</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { target,
+          CatchVar178,
+          handler.PluginHandler,
+          request,
+          entry,
+          return,
+          isHandled,
+          this,
+          response }
+RIGHT:  { CatchVar178, entry, return, isHandled }
+RESULT: { target,
+          CatchVar178,
+          handler.PluginHandler,
+          request,
+          entry,
+          return,
+          isHandled,
+          this,
+          response }
+
+</LISTING>
+<hr width="100%">
+<a name="session209" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session209">node22#session209</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] liveness 22
+<LISTING class='color_black'>PRE STATE:
+{ target,
+  CatchVar178,
+  handler.PluginHandler,
+  request,
+  entry,
+  return,
+  isHandled,
+  this,
+  response }
+
+INSTR=  *&amp;entry:com.zrlog.common.vo.AdminTokenVO*=n$28 [line 48]; 
+
+STATE:
+{ n$28,
+  target,
+  CatchVar178,
+  handler.PluginHandler,
+  request,
+  return,
+  isHandled,
+  this,
+  response }
+
+INSTR=  n$28=_fun_AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)(n$25:com.zrlog.web.token.AdminTokenService*,n$27:javax.servlet.http.HttpServletRequest*) virtual [line 48]; 
+
+STATE:
+{ n$25,
+  n$27,
+  target,
+  CatchVar178,
+  handler.PluginHandler,
+  request,
+  return,
+  isHandled,
+  this,
+  response }
+
+INSTR=  n$27=*&amp;request:javax.servlet.http.HttpServletRequest* [line 48]; 
+
+STATE:
+{ n$25,
+  target,
+  CatchVar178,
+  handler.PluginHandler,
+  request,
+  return,
+  isHandled,
+  this,
+  response }
+
+INSTR=  _=*n$25:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 48]; 
+
+STATE UNCHANGED
+
+INSTR=  n$25=*n$24.adminTokenService:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.handler.PluginHandler) [line 48]; 
+
+STATE:
+{ n$24,
+  target,
+  CatchVar178,
+  handler.PluginHandler,
+  request,
+  return,
+  isHandled,
+  this,
+  response }
+
+INSTR=  n$24=*&amp;this:com.zrlog.web.handler.PluginHandler* [line 48]; 
+
+STATE:
+{ target,
+  CatchVar178,
+  handler.PluginHandler,
+  request,
+  return,
+  isHandled,
+  this,
+  response }
+
+</LISTING>
+<hr width="100%">
+<a name="session276" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session276">node22#session276</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] liveness 22
+<LISTING class='color_black'>JOIN
+
+LEFT:   { target,
+          CatchVar178,
+          handler.PluginHandler,
+          request,
+          entry,
+          return,
+          isHandled,
+          this,
+          response }
+RIGHT:  { CatchVar178, entry, return, isHandled }
+RESULT: { target,
+          CatchVar178,
+          handler.PluginHandler,
+          request,
+          entry,
+          return,
+          isHandled,
+          this,
+          response }
+
+</LISTING>
+<hr width="100%">
+<a name="session277" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session277">node22#session277</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] liveness 22
+<LISTING class='color_black'>Fixpoint reached.
+
+</LISTING>
+<hr width="100%">
+<a name="session397" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session397">node22#session397</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session398" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session398">node22#session398</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ },{ entry })
+
+INSTR=  n$24=*&amp;this:com.zrlog.web.handler.PluginHandler* [line 48]; 
+
+STATE:
+({ n$24 },{ entry })
+
+INSTR=  n$25=*n$24.adminTokenService:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.handler.PluginHandler) [line 48]; 
+
+STATE:
+({ n$24, n$25 },{ entry })
+
+INSTR=  _=*n$25:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 48]; 
+
+STATE:
+({ _, n$24, n$25 },{ entry })
+
+INSTR=  n$27=*&amp;request:javax.servlet.http.HttpServletRequest* [line 48]; 
+
+STATE:
+({ _, n$24, n$25, n$27 },{ entry })
+
+INSTR=  n$28=_fun_AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)(n$25:com.zrlog.web.token.AdminTokenService*,n$27:javax.servlet.http.HttpServletRequest*) virtual [line 48]; 
+
+STATE:
+({ _, n$24, n$25, n$27, n$28 },{ entry })
+
+INSTR=  *&amp;entry:com.zrlog.common.vo.AdminTokenVO*=n$28 [line 48]; 
+
+STATE:
+({ entry },{ _, n$24, n$25, n$27, n$28 })
+
+</LISTING>
+<hr width="100%">
+<a name="session38" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session38">node22#session38</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session39" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session39">node22#session39</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+
+
+
+
+INSTR=  n$28 := AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)({ this-&gt;adminTokenService,
+                                                                    request }) [line 48]; 
+
+STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  n$28 -&gt; { },
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+INSTR=  entry := n$28 [line 48]; 
+
+STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  n$28 -&gt; { },
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+INSTR=  EXIT_SCOPE(n$28); [line 48]; 
+
+STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  n$28 -&gt; { },
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+</LISTING>
+<hr width="100%">
+<a name="session132" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session132">node22#session132</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session133" href="./../nodes/com.zrlog.web.handler.PluginHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRequest%2Cja.ecd883a95ebb3cd0d5a7f4c13250e19b_node22.html#session133">node22#session133</a>(<a href="./../../PluginHandler.java.ac3bd58e618cfc70e6253bcd04096631.html#LINE48">48</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  target -&gt; (Footprint({ @val$1* }) ~&gt; ?, *),
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  path -&gt; { },
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+
+
+
+
+INSTR=  n$28 := AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)({ this-&gt;adminTokenService,
+                                                                    request }) [line 48]; 
+
+STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  n$28 -&gt; { },
+  target -&gt; (Footprint({ @val$1* }) ~&gt; ?, *),
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  path -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+INSTR=  entry := n$28 [line 48]; 
+
+STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  n$28 -&gt; { },
+  target -&gt; (Footprint({ @val$1* }) ~&gt; ?, *),
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  path -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+INSTR=  EXIT_SCOPE(n$28); [line 48]; 
+
+STATE:
+{ n$0 -&gt; Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?,
+  n$28 -&gt; { },
+  target -&gt; (Footprint({ @val$1* }) ~&gt; ?, *),
+  isPluginPath -&gt; { },
+  entry -&gt; { },
+  path -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  response -&gt; (Footprint({ util.BlogBuildInfoUtil.version }) ~&gt; ?, *) }
+
+</LISTING>

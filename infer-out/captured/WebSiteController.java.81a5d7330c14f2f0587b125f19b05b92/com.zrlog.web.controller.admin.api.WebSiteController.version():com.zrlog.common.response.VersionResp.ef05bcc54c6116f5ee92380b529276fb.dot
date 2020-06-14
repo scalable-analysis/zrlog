@@ -1,0 +1,64 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_1" [label="1: Start VersionResponse WebSiteController.version()\nFormals:  this:com.zrlog.web.controller.admin.api.WebSiteController*\nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void versionResponse:com.zrlog.common.response.VersionResponse* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_1" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_4" ;
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_2" [label="2: Exit VersionResponse WebSiteController.version() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 35]\n  NULLIFY(&$irvar4); [line 35]\n  NULLIFY(&$irvar0); [line 35]\n  NULLIFY(&$irvar1); [line 35]\n  NULLIFY(&$irvar2); [line 35]\n  NULLIFY(&versionResponse); [line 35]\n  EXIT_SCOPE($irvar3,$irvar4,$irvar0,$irvar1,$irvar2,versionResponse); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_2" ;
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_4" [label="4:  Call VersionResponse.<init>() \n   n$0=_fun___new(sizeof(t=com.zrlog.common.response.VersionResponse):com.zrlog.common.response.VersionResponse*) [line 31]\n  n$1=_fun_VersionResponse.<init>()(n$0:com.zrlog.common.response.VersionResponse*) [line 31]\n  *&versionResponse:com.zrlog.common.response.VersionResponse*=n$0 [line 31]\n  EXIT_SCOPE(n$0,n$1); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_4" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_5" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_4" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_5" [label="5:  Call String BlogBuildInfoUtil.getBuildId() \n   n$2=_fun_String BlogBuildInfoUtil.getBuildId()() [line 32]\n  *&$irvar0:java.lang.String*=n$2 [line 32]\n  EXIT_SCOPE(n$2); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_5" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_6" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_5" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_6" [label="6:  Call void VersionResponse.setBuildId(String) \n   n$3=*&versionResponse:com.zrlog.common.response.VersionResponse* [line 32]\n  _=*n$3:com.zrlog.common.response.VersionResponse*(root com.zrlog.common.response.VersionResponse) [line 32]\n  n$5=*&$irvar0:java.lang.String* [line 32]\n  n$6=_fun_void VersionResponse.setBuildId(String)(n$3:com.zrlog.common.response.VersionResponse*,n$5:java.lang.String*) virtual [line 32]\n  NULLIFY(&$irvar0); [line 32]\n  EXIT_SCOPE(_,n$3,n$5,n$6,$irvar0); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_6" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_7" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_6" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_7" [label="7:  Call String BlogBuildInfoUtil.getVersion() \n   n$7=_fun_String BlogBuildInfoUtil.getVersion()() [line 33]\n  *&$irvar1:java.lang.String*=n$7 [line 33]\n  EXIT_SCOPE(n$7); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_7" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_8" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_7" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_8" [label="8:  Call void VersionResponse.setVersion(String) \n   n$8=*&versionResponse:com.zrlog.common.response.VersionResponse* [line 33]\n  _=*n$8:com.zrlog.common.response.VersionResponse*(root com.zrlog.common.response.VersionResponse) [line 33]\n  n$10=*&$irvar1:java.lang.String* [line 33]\n  n$11=_fun_void VersionResponse.setVersion(String)(n$8:com.zrlog.common.response.VersionResponse*,n$10:java.lang.String*) virtual [line 33]\n  NULLIFY(&$irvar1); [line 33]\n  EXIT_SCOPE(_,n$8,n$10,n$11,$irvar1); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_8" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_9" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_8" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_9" [label="9:  Call String BlogBuildInfoUtil.getVersion() \n   n$12=_fun_String BlogBuildInfoUtil.getVersion()() [line 34]\n  *&$irvar2:java.lang.String*=n$12 [line 34]\n  EXIT_SCOPE(n$12); [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_9" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_10" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_9" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_10" [label="10:  Call String BlogBuildInfoUtil.getBuildId() \n   n$13=_fun_String BlogBuildInfoUtil.getBuildId()() [line 34]\n  *&$irvar3:java.lang.String*=n$13 [line 34]\n  EXIT_SCOPE(n$13); [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_10" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_11" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_10" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_11" [label="11:  Call String UpdateVersionPlugin.getChangeLog(String,String) \n   n$14=*&$irvar2:java.lang.String* [line 34]\n  n$15=*&$irvar3:java.lang.String* [line 34]\n  n$16=_fun_String UpdateVersionPlugin.getChangeLog(String,String)(n$14:java.lang.String*,n$15:java.lang.String*) [line 34]\n  *&$irvar4:java.lang.String*=n$16 [line 34]\n  NULLIFY(&$irvar3); [line 34]\n  NULLIFY(&$irvar2); [line 34]\n  EXIT_SCOPE(n$14,n$15,n$16,$irvar3,$irvar2); [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_11" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_12" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_11" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_12" [label="12:  Call void VersionResponse.setChangelog(String) \n   n$17=*&versionResponse:com.zrlog.common.response.VersionResponse* [line 34]\n  _=*n$17:com.zrlog.common.response.VersionResponse*(root com.zrlog.common.response.VersionResponse) [line 34]\n  n$19=*&$irvar4:java.lang.String* [line 34]\n  n$20=_fun_void VersionResponse.setChangelog(String)(n$17:com.zrlog.common.response.VersionResponse*,n$19:java.lang.String*) virtual [line 34]\n  NULLIFY(&$irvar4); [line 34]\n  EXIT_SCOPE(_,n$17,n$19,n$20,$irvar4); [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_12" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_13" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_12" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_13" [label="13:  method_body \n   n$21=*&versionResponse:com.zrlog.common.response.VersionResponse* [line 35]\n  *&return:com.zrlog.common.response.VersionResponse*=n$21 [line 35]\n  NULLIFY(&versionResponse); [line 35]\n  EXIT_SCOPE(n$21,versionResponse); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_13" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_2" ;
+	 "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_13" -> "com.zrlog.web.controller.admin.api.WebSiteController.version():com.zrlog.common.response.VersionResp.ef05bcc54c6116f5ee92380b529276fb_3" [color="red" ];
+}

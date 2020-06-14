@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean.1a4893e5ae7d69193b20bb07be7da3cf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE22">boolean CommentService.isValidEmailAddress(String)</a></h1></center>
+<a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;m); [line 26];
+NULLIFY(&amp;p); [line 26];
+NULLIFY(&amp;$irvar0); [line 26];
+NULLIFY(&amp;ePattern); [line 26];
+EXIT_SCOPE(m,p,$irvar0,ePattern); [line 26];
+APPLY_ABSTRACTION; [line 26];
+</span></span></a> <a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+*&amp;ePattern:java.lang.Object*="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\\\[[0-9]{1,3}\\\\.[0-9]{1,3}\\\\.[0-9]{1,3}\\\\.[0-9]{1,3}\\\\])|(([a-zA-Z\\\\-0-9]+\\\\.)+[a-zA-Z]{2,}))$" [line 23];
+</span></span></a> <a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$0=*&amp;ePattern:java.lang.Object* [line 24];
+n$1=_fun_Pattern Pattern.compile(String)(n$0:java.lang.Object*) [line 24];
+*&amp;p:java.util.regex.Pattern*=n$1 [line 24];
+NULLIFY(&amp;ePattern); [line 24];
+EXIT_SCOPE(n$0,n$1,ePattern); [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$2=*&amp;p:java.util.regex.Pattern* [line 25];
+_=*n$2:java.util.regex.Pattern*(root java.util.regex.Pattern) [line 25];
+n$4=*&amp;email:java.lang.String* [line 25];
+n$5=_fun_Matcher Pattern.matcher(CharSequence)(n$2:java.util.regex.Pattern*,n$4:java.lang.String*) virtual [line 25];
+*&amp;m:java.util.regex.Matcher*=n$5 [line 25];
+NULLIFY(&amp;p); [line 25];
+NULLIFY(&amp;email); [line 25];
+EXIT_SCOPE(_,n$2,n$4,n$5,p,email); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;m:java.util.regex.Matcher* [line 26];
+_=*n$6:java.util.regex.Matcher*(root java.util.regex.Matcher) [line 26];
+n$8=_fun_boolean Matcher.matches()(n$6:java.util.regex.Matcher*) virtual [line 26];
+*&amp;$irvar0:_Bool=n$8 [line 26];
+NULLIFY(&amp;m); [line 26];
+EXIT_SCOPE(_,n$6,n$8,m); [line 26];
+</span></span></a> <a href="./nodes/com.zrlog.service.CommentService.isValidEmailAddress%28java.lang.String%29%3Aboolean.1a4893e5ae7d69193b20bb07be7da3cf_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:2 exn:3 Instructions
+n$9=*&amp;$irvar0:_Bool [line 26];
+*&amp;return:_Bool=n$9 [line 26];
+NULLIFY(&amp;$irvar0); [line 26];
+EXIT_SCOPE(n$9,$irvar0); [line 26];
+APPLY_ABSTRACTION; [line 26];
+</span></span></a><br />@
+
+<span class='color_black'>_Bool boolean CommentService.isValidEmailAddress(String)(java.lang.String* email)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= boolean CommentService.isValidEmailAddress(String)
+; translation_unit= service/src/main/java/com/zrlog/service/CommentService.java
+; access= Private
+; formals= [(email,java.lang.String*)]
+; is_defined= true
+; loc= service/src/main/java/com/zrlog/service/CommentService.java:22
+; locals= [{ name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= m; typ= java.util.regex.Matcher*; modify_in_block= false }; 
+           { name= p; typ= java.util.regex.Pattern*; modify_in_block= false }; 
+           { name= ePattern; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= _Bool 
+; proc_id= com.zrlog.service.CommentService.isValidEmailAddress(java.lang.String):boolean }</pre>
+</body>
+</html>

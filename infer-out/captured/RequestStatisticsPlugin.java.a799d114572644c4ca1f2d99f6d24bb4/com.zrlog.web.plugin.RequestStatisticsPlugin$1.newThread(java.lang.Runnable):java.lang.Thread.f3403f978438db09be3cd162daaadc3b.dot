@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_1" [label="1: Start Thread RequestStatisticsPlugin$1.newThread(Runnable)\nFormals:  this:com.zrlog.web.plugin.RequestStatisticsPlugin$1* r:java.lang.Runnable*\nLocals:  thread:java.lang.Thread* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_1" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_4" ;
+"com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_2" [label="2: Exit Thread RequestStatisticsPlugin$1.newThread(Runnable) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_3" [label="3:  exceptions sink \n   NULLIFY(&thread); [line 26]\n  EXIT_SCOPE(thread); [line 26]\n  APPLY_ABSTRACTION; [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_3" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_2" ;
+"com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_4" [label="4:  Call Thread.<init>(Runnable) \n   n$0=_fun___new(sizeof(t=java.lang.Thread):java.lang.Thread*) [line 24]\n  n$1=*&r:java.lang.Runnable* [line 24]\n  n$2=_fun_Thread.<init>(Runnable)(n$0:java.lang.Thread*,n$1:java.lang.Runnable*) [line 24]\n  *&thread:java.lang.Thread*=n$0 [line 24]\n  NULLIFY(&r); [line 24]\n  EXIT_SCOPE(n$0,n$1,n$2,r); [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_4" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_5" ;
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_4" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_3" [color="red" ];
+"com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_5" [label="5:  Call void Thread.setName(String) \n   n$3=*&thread:java.lang.Thread* [line 25]\n  _=*n$3:java.lang.Thread*(root java.lang.Thread) [line 25]\n  n$5=_fun_void Thread.setName(String)(n$3:java.lang.Thread*,\"request-statistics-click-thread\":java.lang.Object*) virtual [line 25]\n  EXIT_SCOPE(_,n$3,n$5); [line 25]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_5" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_6" ;
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_5" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_3" [color="red" ];
+"com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_6" [label="6:  method_body \n   n$6=*&thread:java.lang.Thread* [line 26]\n  *&return:java.lang.Thread*=n$6 [line 26]\n  NULLIFY(&thread); [line 26]\n  EXIT_SCOPE(n$6,thread); [line 26]\n  APPLY_ABSTRACTION; [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_6" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_2" ;
+	 "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_6" -> "com.zrlog.web.plugin.RequestStatisticsPlugin$1.newThread(java.lang.Runnable):java.lang.Thread.f3403f978438db09be3cd162daaadc3b_3" [color="red" ];
+}

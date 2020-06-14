@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.InstallService.insertType(java.sql.Connection):void.8502d3ed88100b63a099f84d21133270</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE213">void InstallService.insertType(Connection)</a></h1></center>
+<a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:34 33 23 3 succs: exn: Exit
+NULLIFY(&amp;$bcvar4); [line 218];
+NULLIFY(&amp;ps); [line 218];
+EXIT_SCOPE($bcvar4,ps); [line 218];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:39 36 succs:2 exn:2 Instructions
+NULLIFY(&amp;$bcvar6); [line 218];
+NULLIFY(&amp;CatchVar86); [line 218];
+NULLIFY(&amp;$irvar3); [line 218];
+NULLIFY(&amp;insertLogType); [line 218];
+NULLIFY(&amp;$bcvar4); [line 218];
+NULLIFY(&amp;$bcvar7); [line 218];
+NULLIFY(&amp;CatchVar65); [line 218];
+NULLIFY(&amp;ps); [line 218];
+NULLIFY(&amp;$irvar4); [line 218];
+NULLIFY(&amp;$bcvar5); [line 218];
+NULLIFY(&amp;$irvar0); [line 218];
+NULLIFY(&amp;$irvar1); [line 218];
+NULLIFY(&amp;$irvar2); [line 218];
+NULLIFY(&amp;CatchVar115); [line 218];
+EXIT_SCOPE(n$59,$bcvar6,CatchVar86,$irvar3,insertLogType,$bcvar4,$bcvar7,CatchVar65,ps,$irvar4,$bcvar5,$irvar0,$irvar1,$irvar2,CatchVar115); [line 218];
+APPLY_ABSTRACTION; [line 218];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 214];
+n$1=_fun_StringBuilder.&lt;init&gt;()(n$0:java.lang.StringBuilder*) [line 214];
+*&amp;$irvar0:java.lang.StringBuilder*=n$0 [line 214];
+EXIT_SCOPE(n$0,n$1); [line 214];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:java.lang.StringBuilder* [line 214];
+_=*n$2:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 214];
+n$4=_fun_StringBuilder StringBuilder.append(String)(n$2:java.lang.StringBuilder*,"INSERT INTO `type`(`typeId`, `typeName`, `remark`, `alias`) VALUES (1,'":java.lang.Object*) virtual [line 214];
+*&amp;$irvar1:java.lang.StringBuilder*=n$4 [line 214];
+NULLIFY(&amp;$irvar0); [line 214];
+EXIT_SCOPE(_,n$2,n$4,$irvar0); [line 214];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$5=_fun_String I18nUtil.getStringFromRes(String)("defaultType":java.lang.Object*) [line 214];
+*&amp;$irvar2:java.lang.String*=n$5 [line 214];
+EXIT_SCOPE(n$5); [line 214];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;$irvar1:java.lang.StringBuilder* [line 214];
+_=*n$6:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 214];
+n$8=*&amp;$irvar2:java.lang.String* [line 214];
+n$9=_fun_StringBuilder StringBuilder.append(String)(n$6:java.lang.StringBuilder*,n$8:java.lang.String*) virtual [line 214];
+*&amp;$irvar3:java.lang.StringBuilder*=n$9 [line 214];
+NULLIFY(&amp;$irvar1); [line 214];
+NULLIFY(&amp;$irvar2); [line 214];
+EXIT_SCOPE(_,n$6,n$8,n$9,$irvar1,$irvar2); [line 214];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$10=*&amp;$irvar3:java.lang.StringBuilder* [line 214];
+_=*n$10:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 214];
+n$12=_fun_StringBuilder StringBuilder.append(String)(n$10:java.lang.StringBuilder*,"','','note')":java.lang.Object*) virtual [line 214];
+*&amp;$irvar4:java.lang.StringBuilder*=n$12 [line 214];
+NULLIFY(&amp;$irvar3); [line 214];
+EXIT_SCOPE(_,n$10,n$12,$irvar3); [line 214];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$13=*&amp;$irvar4:java.lang.StringBuilder* [line 214];
+_=*n$13:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 214];
+n$15=_fun_String StringBuilder.toString()(n$13:java.lang.StringBuilder*) virtual [line 214];
+*&amp;insertLogType:java.lang.String*=n$15 [line 214];
+NULLIFY(&amp;$irvar4); [line 214];
+EXIT_SCOPE(_,n$13,n$15,$irvar4); [line 214];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$16=*&amp;connect:java.sql.Connection* [line 215];
+_=*n$16:java.sql.Connection*(root java.sql.Connection) [line 215];
+n$18=*&amp;insertLogType:java.lang.String* [line 215];
+n$19=_fun_PreparedStatement Connection.prepareStatement(String)(n$16:java.sql.Connection*,n$18:java.lang.String*) interface virtual [line 215];
+*&amp;ps:java.sql.PreparedStatement*=n$19 [line 215];
+NULLIFY(&amp;insertLogType); [line 215];
+NULLIFY(&amp;connect); [line 215];
+EXIT_SCOPE(_,n$16,n$18,n$19,insertLogType,connect); [line 215];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+*&amp;$bcvar4:java.lang.Object*=null [line 215];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 14 exn:46 Instructions
+n$20=*&amp;ps:java.sql.PreparedStatement* [line 216];
+_=*n$20:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 216];
+n$22=_fun_int PreparedStatement.executeUpdate()(n$20:java.sql.PreparedStatement*) interface virtual [line 216];
+*&amp;$irvar5:int=n$22 [line 216];
+NULLIFY(&amp;$irvar5); [line 216];
+EXIT_SCOPE(_,n$20,n$22,$irvar5); [line 216];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:12 succs:15 16 exn:3 Conditional method_body
+n$23=*&amp;ps:java.sql.PreparedStatement* [line 217];
+PRUNE(!(n$23 == null), true); [line 217];
+EXIT_SCOPE(n$23); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:12 succs:34 exn:3 Conditional method_body
+n$23=*&amp;ps:java.sql.PreparedStatement* [line 217];
+PRUNE((n$23 == null), false); [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+NULLIFY(&amp;ps); [line 217];
+EXIT_SCOPE(n$23,$bcvar4,ps); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:13 succs:17 exn:3 Conditional method_body
+n$24=*&amp;$bcvar4:java.lang.Object* [line 217];
+PRUNE(!(n$24 == null), true); [line 217];
+EXIT_SCOPE(n$24); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:13 succs:20 exn:3 Conditional method_body
+n$24=*&amp;$bcvar4:java.lang.Object* [line 217];
+PRUNE((n$24 == null), false); [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+EXIT_SCOPE(n$24,$bcvar4); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:15 succs:34 exn:37 Instructions
+n$25=*&amp;ps:java.sql.PreparedStatement* [line 217];
+n$28=_fun___set_mem_attribute(n$25:java.sql.PreparedStatement*) [line 217];
+_=*n$25:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 217];
+n$27=_fun_void PreparedStatement.close()(n$25:java.sql.PreparedStatement*) interface virtual [line 217];
+NULLIFY(&amp;ps); [line 217];
+EXIT_SCOPE(_,n$25,n$27,n$28,ps); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:35 succs:19 exn:3 Instructions
+n$29=*&amp;CatchVar65:java.lang.Object* [line 217];
+*&amp;$bcvar5:java.lang.Object*=n$29 [line 217];
+NULLIFY(&amp;CatchVar65); [line 217];
+EXIT_SCOPE(n$29,CatchVar65); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:34 exn:3 Instructions
+n$30=*&amp;$bcvar4:java.lang.Object* [line 217];
+_=*n$30:java.lang.Object*(root java.lang.Object) [line 217];
+n$32=*&amp;$bcvar5:java.lang.Object* [line 217];
+n$33=_fun_void Throwable.addSuppressed(Throwable)(n$30:java.lang.Object*,n$32:java.lang.Object*) virtual [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+NULLIFY(&amp;$bcvar5); [line 217];
+EXIT_SCOPE(_,n$30,n$32,n$33,$bcvar4,$bcvar5); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:16 succs:34 exn:3 Instructions
+n$34=*&amp;ps:java.sql.PreparedStatement* [line 217];
+n$37=_fun___set_mem_attribute(n$34:java.sql.PreparedStatement*) [line 217];
+_=*n$34:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 217];
+n$36=_fun_void PreparedStatement.close()(n$34:java.sql.PreparedStatement*) interface virtual [line 217];
+NULLIFY(&amp;ps); [line 217];
+EXIT_SCOPE(_,n$34,n$36,n$37,ps); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:44 succs:22 exn:42 Instructions
+n$38=*&amp;CatchVar86:java.lang.Object* [line 215];
+*&amp;$bcvar5:java.lang.Object*=n$38 [line 215];
+NULLIFY(&amp;CatchVar86); [line 215];
+EXIT_SCOPE(n$38,CatchVar86); [line 215];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:42 Instructions
+n$39=*&amp;$bcvar5:java.lang.Object* [line 215];
+*&amp;$bcvar4:java.lang.Object*=n$39 [line 215];
+EXIT_SCOPE(n$39); [line 215];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:2 exn:42 Instructions
+n$40=*&amp;$bcvar5:java.lang.Object* [line 215];
+*&amp;return:void=EXN n$40 [line 215];
+NULLIFY(&amp;$bcvar5); [line 215];
+EXIT_SCOPE(n$40,$bcvar5); [line 215];
+APPLY_ABSTRACTION; [line 215];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:43 41 succs:25 26 exn:42 Instructions
+n$41=*&amp;CatchVar95:java.lang.Object* [line 217];
+*&amp;$bcvar6:java.lang.Object*=n$41 [line 217];
+EXIT_SCOPE(n$41); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:24 succs:27 28 exn:3 Conditional method_body
+n$42=*&amp;ps:java.sql.PreparedStatement* [line 217];
+PRUNE(!(n$42 == null), true); [line 217];
+EXIT_SCOPE(n$42); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node26.html"><span class='visited with_tooltip'>C_26<span class='tooltip'>node26 preds:24 succs:33 exn:3 Conditional method_body
+n$42=*&amp;ps:java.sql.PreparedStatement* [line 217];
+PRUNE((n$42 == null), false); [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+NULLIFY(&amp;ps); [line 217];
+EXIT_SCOPE(n$42,$bcvar4,ps); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node27.html"><span class='visited with_tooltip'>C_27<span class='tooltip'>node27 preds:25 succs:29 exn:3 Conditional method_body
+n$43=*&amp;$bcvar4:java.lang.Object* [line 217];
+PRUNE(!(n$43 == null), true); [line 217];
+EXIT_SCOPE(n$43); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node28.html"><span class='visited with_tooltip'>C_28<span class='tooltip'>node28 preds:25 succs:32 exn:3 Conditional method_body
+n$43=*&amp;$bcvar4:java.lang.Object* [line 217];
+PRUNE((n$43 == null), false); [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+EXIT_SCOPE(n$43,$bcvar4); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:27 succs:33 exn:40 Instructions
+n$44=*&amp;ps:java.sql.PreparedStatement* [line 217];
+n$47=_fun___set_mem_attribute(n$44:java.sql.PreparedStatement*) [line 217];
+_=*n$44:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 217];
+n$46=_fun_void PreparedStatement.close()(n$44:java.sql.PreparedStatement*) interface virtual [line 217];
+NULLIFY(&amp;ps); [line 217];
+EXIT_SCOPE(_,n$44,n$46,n$47,ps); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:38 succs:31 exn:3 Instructions
+n$48=*&amp;CatchVar115:java.lang.Object* [line 217];
+*&amp;$bcvar7:java.lang.Object*=n$48 [line 217];
+NULLIFY(&amp;CatchVar115); [line 217];
+EXIT_SCOPE(n$48,CatchVar115); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:33 exn:3 Instructions
+n$49=*&amp;$bcvar4:java.lang.Object* [line 217];
+_=*n$49:java.lang.Object*(root java.lang.Object) [line 217];
+n$51=*&amp;$bcvar7:java.lang.Object* [line 217];
+n$52=_fun_void Throwable.addSuppressed(Throwable)(n$49:java.lang.Object*,n$51:java.lang.Object*) virtual [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+NULLIFY(&amp;$bcvar7); [line 217];
+EXIT_SCOPE(_,n$49,n$51,n$52,$bcvar4,$bcvar7); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:28 succs:33 exn:3 Instructions
+n$53=*&amp;ps:java.sql.PreparedStatement* [line 217];
+n$56=_fun___set_mem_attribute(n$53:java.sql.PreparedStatement*) [line 217];
+_=*n$53:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 217];
+n$55=_fun_void PreparedStatement.close()(n$53:java.sql.PreparedStatement*) interface virtual [line 217];
+NULLIFY(&amp;ps); [line 217];
+EXIT_SCOPE(_,n$53,n$55,n$56,ps); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 31 29 26 succs:2 exn:3 Instructions
+n$57=*&amp;$bcvar6:java.lang.Object* [line 217];
+*&amp;return:void=EXN n$57 [line 217];
+NULLIFY(&amp;$bcvar6); [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+EXIT_SCOPE(n$57,$bcvar6,$bcvar4); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:20 19 17 14 succs:2 exn:3 Instructions
+NULLIFY(&amp;$bcvar4); [line 218];
+EXIT_SCOPE($bcvar4); [line 218];
+APPLY_ABSTRACTION; [line 218];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node35.html"><span class='visited with_tooltip'>C_35<span class='tooltip'>node35 preds:37 succs:18 exn:3 Conditional exception handler
+n$60=_fun___instanceof(n$59:java.lang.Throwable*,sizeof(t=java.lang.Throwable):void) [line 217];
+PRUNE(n$60, true); [line 217];
+*&amp;CatchVar65:void=n$59 [line 217];
+EXIT_SCOPE(n$59,n$60); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node36.html"><span class='visited with_tooltip'>C_36<span class='tooltip'>node36 preds:37 succs:3 exn:3 Conditional exception handler
+n$60=_fun___instanceof(n$59:java.lang.Throwable*,sizeof(t=java.lang.Throwable):void) [line 217];
+PRUNE(!n$60, false); [line 217];
+*&amp;return:void=EXN n$59 [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+EXIT_SCOPE(n$59,n$60,$bcvar4); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds: succs:35 36 exn:3 Instructions
+n$58=*&amp;return:void [line 217];
+*&amp;return:void=null [line 217];
+n$59=_fun___unwrap_exception(n$58:void) [line 217];
+EXIT_SCOPE(n$58); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node38.html"><span class='visited with_tooltip'>C_38<span class='tooltip'>node38 preds:40 succs:30 exn:3 Conditional exception handler
+n$61=_fun___instanceof(n$59:java.lang.Throwable*,sizeof(t=java.lang.Throwable):void) [line 217];
+PRUNE(n$61, true); [line 217];
+*&amp;CatchVar115:void=n$59 [line 217];
+EXIT_SCOPE(n$59,n$61); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node39.html"><span class='visited with_tooltip'>C_39<span class='tooltip'>node39 preds:40 succs:3 exn:3 Conditional exception handler
+n$61=_fun___instanceof(n$59:java.lang.Throwable*,sizeof(t=java.lang.Throwable):void) [line 217];
+PRUNE(!n$61, false); [line 217];
+*&amp;return:void=EXN n$59 [line 217];
+NULLIFY(&amp;$bcvar6); [line 217];
+NULLIFY(&amp;$bcvar4); [line 217];
+EXIT_SCOPE(n$59,n$61,$bcvar6,$bcvar4); [line 217];
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds: succs:38 39 exn:3 Instructions
+n$58=*&amp;return:void [line 217];
+*&amp;return:void=null [line 217];
+n$59=_fun___unwrap_exception(n$58:void) [line 217];
+EXIT_SCOPE(n$58); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:42 succs:24 exn:3 Instructions
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds: succs:41 exn:3 Instructions
+n$58=*&amp;return:void [line 217];
+*&amp;return:void=null [line 217];
+n$59=_fun___unwrap_exception(n$58:void) [line 217];
+NULLIFY(&amp;$bcvar6); [line 217];
+NULLIFY(&amp;$bcvar5); [line 217];
+EXIT_SCOPE(n$58,n$59,$bcvar6,$bcvar5); [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:45 succs:24 exn:3 Instructions
+APPLY_ABSTRACTION; [line 217];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node44.html"><span class='visited with_tooltip'>C_44<span class='tooltip'>node44 preds:46 succs:21 exn:3 Conditional exception handler
+n$62=_fun___instanceof(n$59:java.lang.Throwable*,sizeof(t=java.lang.Throwable):void) [line 215];
+PRUNE(n$62, true); [line 215];
+*&amp;CatchVar86:void=n$59 [line 215];
+EXIT_SCOPE(n$59,n$62); [line 215];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node45.html"><span class='visited with_tooltip'>C_45<span class='tooltip'>node45 preds:46 succs:43 exn:3 Conditional exception handler
+n$62=_fun___instanceof(n$59:java.lang.Throwable*,sizeof(t=java.lang.Throwable):void) [line 215];
+PRUNE(!n$62, false); [line 215];
+EXIT_SCOPE(n$59,n$62); [line 215];
+</span></span></a> <a href="./nodes/com.zrlog.service.InstallService.insertType%28java.sql.Connection%29%3Avoid.8502d3ed88100b63a099f84d21133270_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds: succs:44 45 exn:3 Instructions
+n$58=*&amp;return:void [line 215];
+*&amp;return:void=null [line 215];
+n$59=_fun___unwrap_exception(n$58:void) [line 215];
+EXIT_SCOPE(n$58); [line 215];
+</span></span></a><br />@
+
+<span class='color_black'>void void InstallService.insertType(Connection)(com.zrlog.service.InstallService* this, java.sql.Connection* connect)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= void InstallService.insertType(Connection)
+; translation_unit= service/src/main/java/com/zrlog/service/InstallService.java
+; access= Private
+; exceptions= [java.sql.SQLException]
+; formals= [(this,com.zrlog.service.InstallService*);  (connect,
+            java.sql.Connection*)]
+; is_defined= true
+; loc= service/src/main/java/com/zrlog/service/InstallService.java:213
+; locals= [{ name= $bcvar7; typ= void; modify_in_block= false }; 
+           { name= CatchVar115; typ= void; modify_in_block= false }; 
+           { name= $bcvar6; typ= void; modify_in_block= false }; 
+           { name= CatchVar95; typ= void; modify_in_block= false }; 
+           { name= CatchVar86; typ= void; modify_in_block= false }; 
+           { name= $bcvar5; typ= void; modify_in_block= false }; 
+           { name= CatchVar65; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $bcvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= insertLogType; typ= java.lang.String*; modify_in_block= false }; 
+           { name= ps; typ= java.sql.PreparedStatement*; modify_in_block= false }]
+; ret_type= void 
+; proc_id= com.zrlog.service.InstallService.insertType(java.sql.Connection):void }</pre>
+</body>
+</html>

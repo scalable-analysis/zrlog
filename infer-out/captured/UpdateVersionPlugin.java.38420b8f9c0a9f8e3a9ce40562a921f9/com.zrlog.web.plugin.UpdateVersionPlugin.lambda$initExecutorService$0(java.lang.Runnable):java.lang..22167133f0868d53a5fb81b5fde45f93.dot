@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_1" [label="1: Start Thread UpdateVersionPlugin.lambda$initExecutorService$0(Runnable)\nFormals:  r:java.lang.Runnable*\nLocals:  thread:java.lang.Thread* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_1" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_4" ;
+"com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_2" [label="2: Exit Thread UpdateVersionPlugin.lambda$initExecutorService$0(Runnable) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_3" [label="3:  exceptions sink \n   NULLIFY(&thread); [line 34]\n  EXIT_SCOPE(thread); [line 34]\n  APPLY_ABSTRACTION; [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_3" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_2" ;
+"com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_4" [label="4:  Call Thread.<init>(Runnable) \n   n$0=_fun___new(sizeof(t=java.lang.Thread):java.lang.Thread*) [line 32]\n  n$1=*&r:java.lang.Runnable* [line 32]\n  n$2=_fun_Thread.<init>(Runnable)(n$0:java.lang.Thread*,n$1:java.lang.Runnable*) [line 32]\n  *&thread:java.lang.Thread*=n$0 [line 32]\n  NULLIFY(&r); [line 32]\n  EXIT_SCOPE(n$0,n$1,n$2,r); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_4" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_5" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_4" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_5" [label="5:  Call void Thread.setName(String) \n   n$3=*&thread:java.lang.Thread* [line 33]\n  _=*n$3:java.lang.Thread*(root java.lang.Thread) [line 33]\n  n$5=_fun_void Thread.setName(String)(n$3:java.lang.Thread*,\"update-version-plugin-thread\":java.lang.Object*) virtual [line 33]\n  EXIT_SCOPE(_,n$3,n$5); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_5" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_6" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_5" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_6" [label="6:  method_body \n   n$6=*&thread:java.lang.Thread* [line 34]\n  *&return:java.lang.Thread*=n$6 [line 34]\n  NULLIFY(&thread); [line 34]\n  EXIT_SCOPE(n$6,thread); [line 34]\n  APPLY_ABSTRACTION; [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_6" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_2" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_6" -> "com.zrlog.web.plugin.UpdateVersionPlugin.lambda$initExecutorService$0(java.lang.Runnable):java.lang..22167133f0868d53a5fb81b5fde45f93_3" [color="red" ];
+}

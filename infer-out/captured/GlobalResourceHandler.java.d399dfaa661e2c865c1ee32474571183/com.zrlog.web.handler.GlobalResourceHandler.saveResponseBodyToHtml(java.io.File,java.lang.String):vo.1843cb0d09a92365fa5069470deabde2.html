@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml(java.io.File,java.lang.String):vo.1843cb0d09a92365fa5069470deabde2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183.html#LINE143">void GlobalResourceHandler.saveResponseBodyToHtml(File,String)</a></h1></center>
+<a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:20 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 152];
+NULLIFY(&amp;$irvar5); [line 152];
+NULLIFY(&amp;$irvar4); [line 152];
+NULLIFY(&amp;$irvar7); [line 152];
+NULLIFY(&amp;bytes); [line 152];
+NULLIFY(&amp;$irvar6); [line 152];
+NULLIFY(&amp;$irvar0); [line 152];
+NULLIFY(&amp;$irvar1); [line 152];
+NULLIFY(&amp;$irvar2); [line 152];
+EXIT_SCOPE($irvar3,$irvar5,$irvar4,$irvar7,bytes,$irvar6,$irvar0,$irvar1,$irvar2); [line 152];
+APPLY_ABSTRACTION; [line 152];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;copy:java.lang.String* [line 144];
+PRUNE(!(n$0 == null), true); [line 144];
+EXIT_SCOPE(n$0); [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:20 exn:3 Conditional method_body
+n$0=*&amp;copy:java.lang.String* [line 144];
+PRUNE((n$0 == null), false); [line 144];
+NULLIFY(&amp;copy); [line 144];
+EXIT_SCOPE(n$0,copy); [line 144];
+APPLY_ABSTRACTION; [line 144];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:7 exn:3 Instructions
+n$1=*&amp;copy:java.lang.String* [line 145];
+_=*n$1:java.lang.String*(root java.lang.String) [line 145];
+n$3=*&amp;#GB<>$java.nio.charset.StandardCharsets.UTF_8:java.nio.charset.Charset*(root java.nio.charset.StandardCharsets) [line 145];
+n$4=_fun_byte[] String.getBytes(Charset)(n$1:java.lang.String*,n$3:java.nio.charset.Charset*) virtual [line 145];
+*&amp;bytes:signed char[_*_](*)=n$4 [line 145];
+NULLIFY(&amp;copy); [line 145];
+EXIT_SCOPE(_,n$1,n$3,n$4,copy); [line 145];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$5=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 146];
+n$6=_fun_StringBuilder.&lt;init&gt;()(n$5:java.lang.StringBuilder*) [line 146];
+*&amp;$irvar0:java.lang.StringBuilder*=n$5 [line 146];
+EXIT_SCOPE(n$5,n$6); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;$irvar0:java.lang.StringBuilder* [line 146];
+_=*n$7:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 146];
+n$9=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.CACHE_HTML_PATH:java.lang.String*(root com.zrlog.web.handler.GlobalResourceHandler) [line 146];
+n$10=_fun_StringBuilder StringBuilder.append(String)(n$7:java.lang.StringBuilder*,n$9:java.lang.String*) virtual [line 146];
+*&amp;$irvar1:java.lang.StringBuilder*=n$10 [line 146];
+NULLIFY(&amp;$irvar0); [line 146];
+EXIT_SCOPE(_,n$7,n$9,n$10,$irvar0); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$11=_fun_String Constants.getArticleUri()() [line 146];
+*&amp;$irvar2:java.lang.String*=n$11 [line 146];
+EXIT_SCOPE(n$11); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$12=*&amp;$irvar1:java.lang.StringBuilder* [line 146];
+_=*n$12:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 146];
+n$14=*&amp;$irvar2:java.lang.String* [line 146];
+n$15=_fun_StringBuilder StringBuilder.append(String)(n$12:java.lang.StringBuilder*,n$14:java.lang.String*) virtual [line 146];
+*&amp;$irvar3:java.lang.StringBuilder*=n$15 [line 146];
+NULLIFY(&amp;$irvar1); [line 146];
+NULLIFY(&amp;$irvar2); [line 146];
+EXIT_SCOPE(_,n$12,n$14,n$15,$irvar1,$irvar2); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$16=*&amp;$irvar3:java.lang.StringBuilder* [line 146];
+_=*n$16:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 146];
+n$18=_fun_String StringBuilder.toString()(n$16:java.lang.StringBuilder*) virtual [line 146];
+*&amp;$irvar4:java.lang.String*=n$18 [line 146];
+NULLIFY(&amp;$irvar3); [line 146];
+EXIT_SCOPE(_,n$16,n$18,$irvar3); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$19=_fun_int Constants.getMaxCacheHtmlSize()() [line 146];
+*&amp;$irvar5:int=n$19 [line 146];
+EXIT_SCOPE(n$19); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$20=*&amp;$irvar4:java.lang.String* [line 146];
+n$21=*&amp;bytes:signed char[_*_](*) [line 146];
+_=*n$21:int(root signed char[_*_]) [line 146];
+n$23=_fun___get_array_length(n$21:signed char[_*_](*)) [line 146];
+n$24=*&amp;$irvar5:int [line 146];
+n$25=_fun_void FileUtils.tryResizeDiskSpace(String,long,long)(n$20:java.lang.String*,(long)n$23:long,(long)n$24:long) [line 146];
+NULLIFY(&amp;$irvar5); [line 146];
+NULLIFY(&amp;$irvar4); [line 146];
+EXIT_SCOPE(_,n$20,n$21,n$23,n$24,n$25,$irvar5,$irvar4); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 16 exn:3 Instructions
+n$26=*&amp;file:java.io.File* [line 147];
+_=*n$26:java.io.File*(root java.io.File) [line 147];
+n$28=_fun_boolean File.exists()(n$26:java.io.File*) virtual [line 147];
+*&amp;$irvar6:_Bool=n$28 [line 147];
+EXIT_SCOPE(_,n$26,n$28); [line 147];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:14 succs:17 exn:3 Conditional method_body
+n$29=*&amp;$irvar6:_Bool [line 147];
+PRUNE(!(n$29 != 0), true); [line 147];
+NULLIFY(&amp;$irvar6); [line 147];
+EXIT_SCOPE(n$29,$irvar6); [line 147];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:14 succs:19 exn:3 Conditional method_body
+n$29=*&amp;$irvar6:_Bool [line 147];
+PRUNE((n$29 != 0), false); [line 147];
+NULLIFY(&amp;$irvar6); [line 147];
+EXIT_SCOPE(n$29,$irvar6); [line 147];
+APPLY_ABSTRACTION; [line 147];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:15 succs:18 exn:3 Instructions
+n$30=*&amp;file:java.io.File* [line 148];
+_=*n$30:java.io.File*(root java.io.File) [line 148];
+n$32=_fun_File File.getParentFile()(n$30:java.io.File*) virtual [line 148];
+*&amp;$irvar7:java.io.File*=n$32 [line 148];
+EXIT_SCOPE(_,n$30,n$32); [line 148];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$33=*&amp;$irvar7:java.io.File* [line 148];
+_=*n$33:java.io.File*(root java.io.File) [line 148];
+n$35=_fun_boolean File.mkdirs()(n$33:java.io.File*) virtual [line 148];
+*&amp;$irvar8:_Bool=n$35 [line 148];
+NULLIFY(&amp;$irvar7); [line 148];
+NULLIFY(&amp;$irvar8); [line 148];
+EXIT_SCOPE(_,n$33,n$35,$irvar7,$irvar8); [line 148];
+APPLY_ABSTRACTION; [line 148];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 16 succs:20 exn:3 Instructions
+n$36=*&amp;bytes:signed char[_*_](*) [line 150];
+n$37=*&amp;file:java.io.File* [line 150];
+n$38=_fun_void IOUtil.writeBytesToFile(byte[],File)(n$36:signed char[_*_](*),n$37:java.io.File*) [line 150];
+NULLIFY(&amp;file); [line 150];
+NULLIFY(&amp;bytes); [line 150];
+EXIT_SCOPE(n$36,n$37,n$38,file,bytes); [line 150];
+APPLY_ABSTRACTION; [line 150];
+</span></span></a> <a href="./nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 5 succs:2 exn:3 Instructions
+APPLY_ABSTRACTION; [line 152];
+</span></span></a><br />@
+
+<span class='color_black'>void void GlobalResourceHandler.saveResponseBodyToHtml(File,String)(com.zrlog.web.handler.GlobalResourceHandler* this, java.io.File* file, java.lang.String* copy)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= void GlobalResourceHandler.saveResponseBodyToHtml(File,String)
+; translation_unit= web/src/main/java/com/zrlog/web/handler/GlobalResourceHandler.java
+; access= Private
+; formals= [(this,com.zrlog.web.handler.GlobalResourceHandler*);  (file,
+            java.io.File*);  (copy,java.lang.String*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/handler/GlobalResourceHandler.java:143
+; locals= [{ name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= bytes; typ= signed char[_*_](*); modify_in_block= false }]
+; ret_type= void 
+; proc_id= com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml(java.io.File,java.lang.String):void }</pre>
+</body>
+</html>

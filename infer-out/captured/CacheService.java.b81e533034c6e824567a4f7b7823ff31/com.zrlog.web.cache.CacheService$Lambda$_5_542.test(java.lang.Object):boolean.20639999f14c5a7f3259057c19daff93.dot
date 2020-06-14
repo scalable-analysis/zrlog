@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_1" [label="1: Start boolean CacheService$Lambda$_5_542.test(Object)\nFormals:  this:com.zrlog.web.cache.CacheService$Lambda$_5_542* $bcvar1:java.lang.Object*\nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_1" -> "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_4" ;
+"com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_2" [label="2: Exit boolean CacheService$Lambda$_5_542.test(Object) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 78]\n  EXIT_SCOPE($irvar0); [line 78]\n  APPLY_ABSTRACTION; [line 78]\n " shape="box"]
+	
+
+	 "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_3" -> "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_2" ;
+"com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_4" [label="4:  Call boolean CacheService.access_com.zrlog.web.cache.CacheService$Lambda$_5_542(Plugin) \n   n$0=*&$bcvar1:java.lang.Object* [line 78]\n  n$1=_fun___cast(n$0:java.lang.Object*,sizeof(t=com.zrlog.model.Plugin;sub_t=( sub )(cast)):void) [line 78]\n  n$2=_fun_boolean CacheService.access_com.zrlog.web.cache.CacheService$Lambda$_5_542(Plugin)(n$1:com.zrlog.model.Plugin*) [line 78]\n  *&$irvar0:_Bool=n$2 [line 78]\n  NULLIFY(&$bcvar1); [line 78]\n  EXIT_SCOPE(n$0,n$1,n$2,$bcvar1); [line 78]\n " shape="box"]
+	
+
+	 "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_4" -> "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_5" ;
+	 "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_4" -> "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_3" [color="red" ];
+"com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_5" [label="5:  method_body \n   n$3=*&$irvar0:_Bool [line 78]\n  *&return:_Bool=n$3 [line 78]\n  NULLIFY(&$irvar0); [line 78]\n  EXIT_SCOPE(n$3,$irvar0); [line 78]\n  APPLY_ABSTRACTION; [line 78]\n " shape="box"]
+	
+
+	 "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_5" -> "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_2" ;
+	 "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_5" -> "com.zrlog.web.cache.CacheService$Lambda$_5_542.test(java.lang.Object):boolean.20639999f14c5a7f3259057c19daff93_3" [color="red" ];
+}

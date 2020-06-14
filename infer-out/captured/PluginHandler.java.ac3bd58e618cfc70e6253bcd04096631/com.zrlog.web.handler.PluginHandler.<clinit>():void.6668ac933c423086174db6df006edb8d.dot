@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_1" [label="1: Start void PluginHandler.<clinit>()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_1" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_4" ;
+"com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_2" [label="2: Exit void PluginHandler.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 29]\n  EXIT_SCOPE($irvar0); [line 29]\n  APPLY_ABSTRACTION; [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_3" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_2" ;
+"com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_4" [label="4:  Call Logger LoggerFactory.getLogger(Class) \n   n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.handler.PluginHandler:java.lang.Object*) [line 29]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 29]\n  EXIT_SCOPE(n$0); [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_4" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_5" ;
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_4" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_5" [label="5:  method_body \n   n$1=*&$irvar0:org.slf4j.Logger* [line 29]\n  *&#GB<>$com.zrlog.web.handler.PluginHandler.LOGGER:com.zrlog.web.handler.PluginHandler(root com.zrlog.web.handler.PluginHandler)=n$1 [line 29]\n  NULLIFY(&$irvar0); [line 29]\n  EXIT_SCOPE(n$1,$irvar0); [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_5" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_6" ;
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_5" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_3" [color="red" ];
+"com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_6" [label="6:  method_body \n   APPLY_ABSTRACTION; [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_6" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_2" ;
+	 "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_6" -> "com.zrlog.web.handler.PluginHandler.<clinit>():void.6668ac933c423086174db6df006edb8d_3" [color="red" ];
+}

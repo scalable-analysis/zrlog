@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_1" [label="1: Start boolean ZrLogConfig.isTest()\nFormals: \nLocals:  $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_1" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_4" ;
+"com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_2" [label="2: Exit boolean ZrLogConfig.isTest() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 396]\n  NULLIFY(&$irvar1); [line 396]\n  EXIT_SCOPE($irvar0,$irvar1); [line 396]\n  APPLY_ABSTRACTION; [line 396]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_3" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_2" ;
+"com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_4" [label="4:  Call String Properties.getProperty(String) \n   n$0=*&#GB<>$com.zrlog.web.config.ZrLogConfig.SYSTEM_PROP:java.util.Properties*(root com.zrlog.web.config.ZrLogConfig) [line 396]\n  _=*n$0:java.util.Properties*(root java.util.Properties) [line 396]\n  n$2=_fun_String Properties.getProperty(String)(n$0:java.util.Properties*,\"env\":java.lang.Object*) virtual [line 396]\n  *&$irvar0:java.lang.String*=n$2 [line 396]\n  EXIT_SCOPE(_,n$0,n$2); [line 396]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_4" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_5" ;
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_4" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_5" [label="5:  Call boolean String.equals(Object) \n   n$3=*&$irvar0:java.lang.String* [line 396]\n  n$4=_fun_boolean String.equals(Object)(\"junit-test\":java.lang.Object*,n$3:java.lang.String*) virtual [line 396]\n  *&$irvar1:_Bool=n$4 [line 396]\n  NULLIFY(&$irvar0); [line 396]\n  EXIT_SCOPE(n$3,n$4,$irvar0); [line 396]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_5" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_6" ;
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_5" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_6" [label="6:  method_body \n   n$5=*&$irvar1:_Bool [line 396]\n  *&return:_Bool=n$5 [line 396]\n  NULLIFY(&$irvar1); [line 396]\n  EXIT_SCOPE(n$5,$irvar1); [line 396]\n  APPLY_ABSTRACTION; [line 396]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_6" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_2" ;
+	 "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_6" -> "com.zrlog.web.config.ZrLogConfig.isTest():boolean.1552d641f50f82213bfc9e6d5460ad2d_3" [color="red" ];
+}

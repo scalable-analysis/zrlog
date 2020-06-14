@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_node8</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">8</a></h1></center>PROC: <a href="./../com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36.html">boolean ZrLogUtil.isInternalHostName(String)</a> LINE: <a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">239</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node6.html"><span class='visited with_tooltip'>N_6<span class='tooltip'>node6 preds:5 succs:8 exn:18 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node9.html"><span class='visited with_tooltip'>N_9<span class='tooltip'>node9 preds:8 succs:11 exn:18 </span></span></a> <a href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node10.html"><span class='visited with_tooltip'>N_10<span class='tooltip'>node10 preds:8 succs:12 exn:18 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node18.html"><span class='visited with_tooltip'>N_18<span class='tooltip'>node18 preds: succs:16 17 exn:3 </span></span></a><br>
+<LISTING class='color_green'>n$6=*&amp;address:java.net.InetAddress* [line 239];
+_=*n$6:java.net.InetAddress*(root java.net.InetAddress) [line 239];
+n$8=_fun_boolean InetAddress.isLoopbackAddress()(n$6:java.net.InetAddress*) virtual [line 239];
+*&amp;$irvar1:_Bool=n$8 [line 239];
+</LISTING>
+<hr width="100%">
+<a name="session26" href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node8.html#session26">node8#session26</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">239</a>) [compute pre] liveness 8
+<LISTING class='color_black'>JOIN
+
+LEFT:   { return, $irvar1 }
+RIGHT:  { return, $irvar1 }
+RESULT: { return, $irvar1 }
+
+JOIN
+
+LEFT:   { return, $irvar1 }
+RIGHT:  { return }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session27" href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node8.html#session27">node8#session27</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">239</a>) [exec] liveness 8
+<LISTING class='color_black'>PRE STATE:
+{ return, $irvar1 }
+
+INSTR=  *&amp;$irvar1:_Bool=n$8 [line 239]; 
+
+STATE:
+{ n$8, return }
+
+INSTR=  n$8=_fun_boolean InetAddress.isLoopbackAddress()(n$6:java.net.InetAddress*) virtual [line 239]; 
+
+STATE:
+{ n$6, return }
+
+INSTR=  _=*n$6:java.net.InetAddress*(root java.net.InetAddress) [line 239]; 
+
+STATE UNCHANGED
+
+INSTR=  n$6=*&amp;address:java.net.InetAddress* [line 239]; 
+
+STATE:
+{ address, return }
+
+</LISTING>
+<hr width="100%">
+<a name="session45" href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node8.html#session45">node8#session45</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">239</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session46" href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node8.html#session46">node8#session46</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">239</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ address },{ n$5, $irvar0 })
+
+INSTR=  n$6=*&amp;address:java.net.InetAddress* [line 239]; 
+
+STATE:
+({ n$6, address },{ n$5, $irvar0 })
+
+INSTR=  _=*n$6:java.net.InetAddress*(root java.net.InetAddress) [line 239]; 
+
+STATE:
+({ _, n$6, address },{ n$5, $irvar0 })
+
+INSTR=  n$8=_fun_boolean InetAddress.isLoopbackAddress()(n$6:java.net.InetAddress*) virtual [line 239]; 
+
+STATE:
+({ _, n$6, n$8, address },{ n$5, $irvar0 })
+
+INSTR=  *&amp;$irvar1:_Bool=n$8 [line 239]; 
+
+STATE:
+({ $irvar1 },{ _, n$6, n$8, address })
+
+</LISTING>
+<hr width="100%">
+<a name="session10" href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node8.html#session10">node8#session10</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">239</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session11" href="./../nodes/com.zrlog.util.ZrLogUtil.isInternalHostName%28java.lang.String%29%3Aboolean.0315b9495ad26460c2635850bfb2ca36_node8.html#session11">node8#session11</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE239">239</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$1 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  address -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+
+
+INSTR=  n$8 := boolean InetAddress.isLoopbackAddress()({ address }) [line 239]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;address); [line 239]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(address); [line 239]; 
+
+STATE:
+{ n$1 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  address -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+</LISTING>

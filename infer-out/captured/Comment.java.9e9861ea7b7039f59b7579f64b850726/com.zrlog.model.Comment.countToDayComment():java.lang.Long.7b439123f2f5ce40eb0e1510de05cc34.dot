@@ -1,0 +1,59 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_1" [label="1: Start Long Comment.countToDayComment()\nFormals:  this:com.zrlog.model.Comment*\nLocals:  $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void sql:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_1" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" ;
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_2" [label="2: Exit Long Comment.countToDayComment() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 38]\n  NULLIFY(&$irvar5); [line 38]\n  NULLIFY(&$irvar4); [line 38]\n  NULLIFY(&sql); [line 38]\n  NULLIFY(&$irvar0); [line 38]\n  NULLIFY(&$irvar1); [line 38]\n  NULLIFY(&$irvar2); [line 38]\n  EXIT_SCOPE($irvar3,$irvar5,$irvar4,sql,$irvar0,$irvar1,$irvar2); [line 38]\n  APPLY_ABSTRACTION; [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_2" ;
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" [label="4:  method_body \n   *&sql:java.lang.Object*=\"select count(1) from comment where DATE_FORMAT(commTime,'%Y_%m_%d')=?\" [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" [label="5:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 38]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 38]\n  EXIT_SCOPE(n$0); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" [label="6:  Call SimpleDateFormat.<init>(String) \n   n$1=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 38]\n  n$2=_fun_SimpleDateFormat.<init>(String)(n$1:java.text.SimpleDateFormat*,\"yyyy_MM_dd\":java.lang.Object*) [line 38]\n  *&$irvar1:java.text.SimpleDateFormat*=n$1 [line 38]\n  EXIT_SCOPE(n$1,n$2); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" [label="7:  Call Date.<init>() \n   n$3=_fun___new(sizeof(t=java.util.Date):java.util.Date*) [line 38]\n  n$4=_fun_Date.<init>()(n$3:java.util.Date*) [line 38]\n  *&$irvar2:java.util.Date*=n$3 [line 38]\n  EXIT_SCOPE(n$3,n$4); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" [label="8:  Call String DateFormat.format(Date) \n   n$5=*&$irvar1:java.text.SimpleDateFormat* [line 38]\n  _=*n$5:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 38]\n  n$7=*&$irvar2:java.util.Date* [line 38]\n  n$8=_fun_String DateFormat.format(Date)(n$5:java.text.SimpleDateFormat*,n$7:java.util.Date*) virtual [line 38]\n  *&$irvar3:java.lang.String*=n$8 [line 38]\n  NULLIFY(&$irvar1); [line 38]\n  NULLIFY(&$irvar2); [line 38]\n  EXIT_SCOPE(_,n$5,n$7,n$8,$irvar1,$irvar2); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" [label="9:  method_body \n   n$9=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$10=*&$irvar3:java.lang.String* [line 38]\n  *n$9[0]:java.lang.String*=n$10 [line 38]\n  NULLIFY(&$irvar3); [line 38]\n  EXIT_SCOPE(n$9,n$10,$irvar3); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" [label="10:  Call Record Db.findFirst(String,Object[]) \n   n$11=*&sql:java.lang.Object* [line 38]\n  n$12=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$13=_fun_Record Db.findFirst(String,Object[])(n$11:java.lang.Object*,n$12:java.lang.Object*[_*_](*)) [line 38]\n  *&$irvar4:com.jfinal.plugin.activerecord.Record*=n$13 [line 38]\n  NULLIFY(&sql); [line 38]\n  NULLIFY(&$irvar0); [line 38]\n  EXIT_SCOPE(n$11,n$12,n$13,sql,$irvar0); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" [label="11:  Call Object Record.get(String) \n   n$14=*&$irvar4:com.jfinal.plugin.activerecord.Record* [line 38]\n  _=*n$14:com.jfinal.plugin.activerecord.Record*(root com.jfinal.plugin.activerecord.Record) [line 38]\n  n$16=_fun_Object Record.get(String)(n$14:com.jfinal.plugin.activerecord.Record*,\"count(1)\":java.lang.Object*) virtual [line 38]\n  *&$irvar5:java.lang.Object*=n$16 [line 38]\n  NULLIFY(&$irvar4); [line 38]\n  EXIT_SCOPE(_,n$14,n$16,$irvar4); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" [label="12:  method_body \n   n$17=*&$irvar5:java.lang.Object* [line 38]\n  n$18=_fun___cast(n$17:java.lang.Object*,sizeof(t=java.lang.Long;sub_t=( sub )(cast)):void) [line 38]\n  *&return:java.lang.Long*=n$18 [line 38]\n  NULLIFY(&$irvar5); [line 38]\n  EXIT_SCOPE(n$17,n$18,$irvar5); [line 38]\n  APPLY_ABSTRACTION; [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_2" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+}

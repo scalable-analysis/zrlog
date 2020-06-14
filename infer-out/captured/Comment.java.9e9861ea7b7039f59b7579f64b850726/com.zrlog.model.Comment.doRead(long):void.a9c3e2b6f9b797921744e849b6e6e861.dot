@@ -1,0 +1,49 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_1" [label="1: Start void Comment.doRead(long)\nFormals:  this:com.zrlog.model.Comment* id:long\nLocals:  $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_1" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" ;
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_2" [label="2: Exit void Comment.doRead(long) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 52]\n  NULLIFY(&$irvar1); [line 52]\n  NULLIFY(&$irvar2); [line 52]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 52]\n  APPLY_ABSTRACTION; [line 52]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_2" ;
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" [label="4:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 51]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 51]\n  EXIT_SCOPE(n$0); [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" [label="5:  Call Boolean Boolean.valueOf(boolean) \n   n$1=_fun_Boolean Boolean.valueOf(boolean)(1:int) [line 51]\n  *&$irvar1:java.lang.Boolean*=n$1 [line 51]\n  EXIT_SCOPE(n$1); [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" [label="6:  method_body \n   n$2=*&$irvar0:java.lang.Object*[_*_](*) [line 51]\n  n$3=*&$irvar1:java.lang.Boolean* [line 51]\n  *n$2[0]:java.lang.Boolean*=n$3 [line 51]\n  NULLIFY(&$irvar1); [line 51]\n  EXIT_SCOPE(n$2,n$3,$irvar1); [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" [label="7:  Call Long Long.valueOf(long) \n   n$4=*&id:long [line 51]\n  n$5=_fun_Long Long.valueOf(long)(n$4:long) [line 51]\n  *&$irvar2:java.lang.Long*=n$5 [line 51]\n  NULLIFY(&id); [line 51]\n  EXIT_SCOPE(n$4,n$5,id); [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" [label="8:  method_body \n   n$6=*&$irvar0:java.lang.Object*[_*_](*) [line 51]\n  n$7=*&$irvar2:java.lang.Long* [line 51]\n  *n$6[1]:java.lang.Long*=n$7 [line 51]\n  NULLIFY(&$irvar2); [line 51]\n  EXIT_SCOPE(n$6,n$7,$irvar2); [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" [label="9:  Call int Db.update(String,Object[]) \n   n$8=*&$irvar0:java.lang.Object*[_*_](*) [line 51]\n  n$9=_fun_int Db.update(String,Object[])(\"update comment set have_read = ? where commentId = ? \":java.lang.Object*,n$8:java.lang.Object*[_*_](*)) [line 51]\n  *&$irvar3:int=n$9 [line 51]\n  NULLIFY(&$irvar3); [line 51]\n  NULLIFY(&$irvar0); [line 51]\n  EXIT_SCOPE(n$8,n$9,$irvar3,$irvar0); [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" [label="10:  method_body \n   APPLY_ABSTRACTION; [line 52]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_2" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+}

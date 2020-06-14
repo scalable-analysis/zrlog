@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_1" [label="1: Start void CacheService.<clinit>()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_1" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_4" ;
+"com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_2" [label="2: Exit void CacheService.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 20]\n  EXIT_SCOPE($irvar0); [line 20]\n  APPLY_ABSTRACTION; [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_3" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_2" ;
+"com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_4" [label="4:  Call HashMap.<init>() \n   n$0=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 20]\n  n$1=_fun_HashMap.<init>()(n$0:java.util.HashMap*) [line 20]\n  *&$irvar0:java.util.HashMap*=n$0 [line 20]\n  EXIT_SCOPE(n$0,n$1); [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_4" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_5" ;
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_4" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_3" [color="red" ];
+"com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_5" [label="5:  method_body \n   n$2=*&$irvar0:java.util.HashMap* [line 20]\n  *&#GB<>$com.zrlog.web.cache.CacheService.cacheFileMap:com.zrlog.web.cache.CacheService(root com.zrlog.web.cache.CacheService)=n$2 [line 20]\n  NULLIFY(&$irvar0); [line 20]\n  EXIT_SCOPE(n$2,$irvar0); [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_5" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_6" ;
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_5" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_3" [color="red" ];
+"com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_6" [label="6:  method_body \n   APPLY_ABSTRACTION; [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_6" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_2" ;
+	 "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_6" -> "com.zrlog.web.cache.CacheService.<clinit>():void.1bc608f642eb32d86cede1ccf60f9766_3" [color="red" ];
+}

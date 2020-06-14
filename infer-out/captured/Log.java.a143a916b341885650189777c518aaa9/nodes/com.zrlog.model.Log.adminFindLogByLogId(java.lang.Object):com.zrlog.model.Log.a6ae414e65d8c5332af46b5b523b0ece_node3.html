@@ -1,0 +1,842 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Log.adminFindLogByLogId(java.lang.Object):com.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">3</a></h1></center>PROC: <a href="./../com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece.html">Log Log.adminFindLogByLogId(Object)</a> LINE: <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">64</a>
+<br>PREDS:
+<br>SUCCS:
+<a href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node2.html"><span class='visited with_tooltip'>N_2<span class='tooltip'>node2 preds:19 18 3 succs: exn: </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node2.html"><span class='visited with_tooltip'>N_2<span class='tooltip'>node2 preds:19 18 3 succs: exn: </span></span></a><br>
+<LISTING class='color_green'></LISTING>
+<hr width="100%">
+<a name="session2" href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3.html#session2">node3#session2</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">64</a>) [compute pre] liveness 3
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session3" href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3.html#session3">node3#session3</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">64</a>) [exec] liveness 3
+<LISTING class='color_black'>PRE STATE:
+{ }
+
+INSTR=  SKIP; 
+
+STATE UNCHANGED
+
+</LISTING>
+<hr width="100%">
+<a name="session71" href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3.html#session71">node3#session71</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">64</a>) [compute pre] nullify
+<LISTING class='color_black'>JOIN
+
+LEFT:   ({ },{ n$0 })
+RIGHT:  ({ },
+{ n$0, id })
+RESULT: = RIGHT
+
+JOIN
+
+LEFT:   ({ },{ n$0, id })
+RIGHT:  ({ sql },{ })
+RESULT: ({ sql },
+{ n$0, id })
+
+JOIN
+
+LEFT:   ({ sql },{ n$0, id })
+RIGHT:  ({ sql, $irvar0 },{ n$1 })
+RESULT: ({ sql, $irvar0 },
+{ n$0, n$1, id })
+
+JOIN
+
+LEFT:   ({ sql, $irvar0 },{ n$0, n$1, id })
+RIGHT:  ({ sql, $irvar0 },{ n$2, n$3 })
+RESULT: ({ sql, $irvar0 },
+{ n$0, n$1, n$2, n$3, id })
+
+JOIN
+
+LEFT:   ({ sql, $irvar0 },{ n$0, n$1, n$2, n$3, id })
+RIGHT:  ({ $irvar1 },
+{ _, n$4, n$6, n$7, n$8, sql, $irvar0 })
+RESULT: ({ sql, $irvar0, $irvar1 },
+{ _, n$0, n$1, n$2, n$3, n$4, n$6, n$7, n$8, sql, $irvar0, id })
+
+JOIN
+
+LEFT:   ({ sql, $irvar0, $irvar1 },
+{ _, n$0, n$1, n$2, n$3, n$4, n$6, n$7, n$8, sql, $irvar0, id })
+RIGHT:  ({ log },
+{ n$9, n$10, $irvar1 })
+RESULT: ({ log, sql, $irvar0, $irvar1 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+
+JOIN
+
+LEFT:   ({ log, sql, $irvar0, $irvar1 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+RIGHT:  ({ },{ n$11, log })
+RESULT: ({ log, sql, $irvar0, $irvar1 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+
+JOIN
+
+LEFT:   ({ log, sql, $irvar0, $irvar1 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+RIGHT:  ({ log },
+{ n$11 })
+RESULT: = LEFT
+
+JOIN
+
+LEFT:   ({ log, sql, $irvar0, $irvar1 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+RIGHT:  ({ sql },
+{ })
+RESULT: = LEFT
+
+JOIN
+
+LEFT:   ({ log, sql, $irvar0, $irvar1 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+RIGHT:  ({ sql, $irvar2 },
+{ n$12 })
+RESULT: ({ log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+
+JOIN
+
+LEFT:   ({ log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+RIGHT:  ({ sql, $irvar2 },
+{ n$13, n$14, id })
+RESULT: ({ log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+
+JOIN
+
+LEFT:   ({ log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  id })
+RIGHT:  ({ $irvar3 },
+{ _, n$15, n$17, n$18, n$19, sql, $irvar2, this })
+RESULT: ({ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$15,
+  n$17,
+  n$18,
+  n$19,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  $irvar2,
+  this,
+  id })
+
+JOIN
+
+LEFT:   ({ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$15,
+  n$17,
+  n$18,
+  n$19,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  $irvar2,
+  this,
+  id })
+RIGHT:  ({ log },
+{ n$20, n$21, $irvar3 })
+RESULT: ({ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$15,
+  n$17,
+  n$18,
+  n$19,
+  n$20,
+  n$21,
+  $irvar3,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  $irvar2,
+  this,
+  id })
+
+JOIN
+
+LEFT:   ({ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$15,
+  n$17,
+  n$18,
+  n$19,
+  n$20,
+  n$21,
+  $irvar3,
+  log,
+  sql,
+  $irvar0,
+  $irvar1,
+  $irvar2,
+  this,
+  id })
+RIGHT:  ({ },
+{ n$22, log, return })
+RESULT: ({ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$15,
+  n$17,
+  n$18,
+  n$19,
+  n$20,
+  n$21,
+  n$22,
+  $irvar3,
+  log,
+  sql,
+  $irvar0,
+  return,
+  $irvar1,
+  $irvar2,
+  this,
+  id })
+
+JOIN
+
+LEFT:   ({ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$15,
+  n$17,
+  n$18,
+  n$19,
+  n$20,
+  n$21,
+  n$22,
+  $irvar3,
+  log,
+  sql,
+  $irvar0,
+  return,
+  $irvar1,
+  $irvar2,
+  this,
+  id })
+RIGHT:  ({ },
+{ return })
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session72" href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3.html#session72">node3#session72</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">64</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$4,
+  n$6,
+  n$7,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$15,
+  n$17,
+  n$18,
+  n$19,
+  n$20,
+  n$21,
+  n$22,
+  $irvar3,
+  log,
+  sql,
+  $irvar0,
+  return,
+  $irvar1,
+  $irvar2,
+  this,
+  id })
+
+INSTR=  SKIP; 
+
+STATE:
+({ },{ $irvar3, log, sql, $irvar0, $irvar1, $irvar2 })
+
+</LISTING>
+<hr width="100%">
+<a name="session34" href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3.html#session34">node3#session34</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">64</a>) [compute pre] quandary(java)
+<LISTING class='color_black'>JOIN
+
+LEFT:   { }
+RIGHT:  { }
+RESULT: { }
+
+JOIN
+
+LEFT:   { }
+RIGHT:  { sql -&gt; { } }
+RESULT: { sql -&gt; { } }
+
+JOIN
+
+LEFT:   { sql -&gt; { } }
+RIGHT:  { sql -&gt; { } }
+RESULT: { sql -&gt; { } }
+
+JOIN
+
+LEFT:   { sql -&gt; { } }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? }, sql -&gt; { } }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? }, sql -&gt; { } }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? }, sql -&gt; { } }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          return -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          return -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+JOIN
+
+LEFT:   { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          return -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+RIGHT:  { return -&gt; { } }
+RESULT: { n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+          n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          sql -&gt; { },
+          return -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+          this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+</LISTING>
+<hr width="100%">
+<a name="session35" href="./../nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3.html#session35">node3#session35</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE64">64</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+  n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+  n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  sql -&gt; { },
+  return -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+INSTR=  NULLIFY(&amp;$irvar3); [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;log); [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;sql); [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar0); [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar1); [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar2); [line 64]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$19,log,sql,n$8); [line 64]; 
+
+STATE:
+{ n$1 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+  n$8 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  n$12 -&gt; { [_] -&gt; Footprint({ @val$1 }) ~&gt; ? },
+  n$19 -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  log -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  sql -&gt; { },
+  return -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *),
+  this -&gt; (Footprint({ @val$1, @val$0* }) ~&gt; ?, *) }
+
+INSTR=  APPLY_ABSTRACTION; [line 64]; 
+
+STATE UNCHANGED
+
+</LISTING>

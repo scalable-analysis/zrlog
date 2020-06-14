@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/version/V6UpgradeVersionHandler.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.version; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.zrlog.service.ArticleService; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import java.sql.Connection; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import java.sql.PreparedStatement; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import java.sql.ResultSet; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import java.sql.SQLException; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">public class V6UpgradeVersionHandler implements UpgradeVersionHandler { <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.<init>%28%29.6c4de160d767df9cb9da049dbb47e5e7_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.<init>%28%29.6c4de160d767df9cb9da049dbb47e5e7_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.version.V6UpgradeVersionHandler* [line 10];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.version.V6UpgradeVersionHandler*) [line 10];
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.<init>%28%29.6c4de160d767df9cb9da049dbb47e5e7_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.<init>%28%29.6c4de160d767df9cb9da049dbb47e5e7_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.<init>%28%29.6c4de160d767df9cb9da049dbb47e5e7_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/com.zrlog.web.version.V6UpgradeVersionHandler.<init>%28%29.6c4de160d767df9cb9da049dbb47e5e7.html">summary for V6UpgradeVersionHandler.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    public void doUpgrade(Connection connection) throws SQLException, InterruptedException { <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d.html">summary for void V6UpgradeVersionHandler.doUpgrade(Connection)</a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">        Thread.sleep(10000L); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_void Thread.sleep(long)(10000:long) [line 14];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">        PreparedStatement ps = connection.prepareStatement(&quot;select content,logid from log&quot;); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;connection:java.sql.Connection* [line 15];
+_=*n$1:java.sql.Connection*(root java.sql.Connection) [line 15];
+n$3=_fun_PreparedStatement Connection.prepareStatement(String)(n$1:java.sql.Connection*,"select content,logid from log":java.lang.Object*) interface virtual [line 15];
+*&amp;ps:java.sql.PreparedStatement*=n$3 [line 15];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">        ResultSet rs = ps.executeQuery(); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;ps:java.sql.PreparedStatement* [line 16];
+_=*n$4:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 16];
+n$6=_fun_ResultSet PreparedStatement.executeQuery()(n$4:java.sql.PreparedStatement*) interface virtual [line 16];
+*&amp;rs:java.sql.ResultSet*=n$6 [line 16];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">        while (rs.next()) { <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:19 6 succs:10 exn:3 Instructions
+n$7=*&amp;rs:java.sql.ResultSet* [line 17];
+_=*n$7:java.sql.ResultSet*(root java.sql.ResultSet) [line 17];
+n$9=_fun_boolean ResultSet.next()(n$7:java.sql.ResultSet*) interface virtual [line 17];
+*&amp;$irvar0:_Bool=n$9 [line 17];
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node10.html"><span class='visited with_tooltip'>J_10<span class='tooltip'>node10 preds:7 succs:8 9 exn: Join
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:10 succs:11 exn:3 Conditional method_body
+n$10=*&amp;$irvar0:_Bool [line 17];
+PRUNE(!(n$10 == 0), true); [line 17];
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:10 succs:20 exn:3 Conditional method_body
+n$10=*&amp;$irvar0:_Bool [line 17];
+PRUNE((n$10 == 0), false); [line 17];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">            int id = rs.getInt(&quot;logid&quot;); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:8 succs:12 exn:3 Instructions
+n$11=*&amp;rs:java.sql.ResultSet* [line 18];
+_=*n$11:java.sql.ResultSet*(root java.sql.ResultSet) [line 18];
+n$13=_fun_int ResultSet.getInt(String)(n$11:java.sql.ResultSet*,"logid":java.lang.Object*) interface virtual [line 18];
+*&amp;id:int=n$13 [line 18];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">            PreparedStatement ups = connection.prepareStatement(&quot;update log set search_content = ? where logid = ?&quot;); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$14=*&amp;connection:java.sql.Connection* [line 19];
+_=*n$14:java.sql.Connection*(root java.sql.Connection) [line 19];
+n$16=_fun_PreparedStatement Connection.prepareStatement(String)(n$14:java.sql.Connection*,"update log set search_content = ? where logid = ?":java.lang.Object*) interface virtual [line 19];
+*&amp;ups:java.sql.PreparedStatement*=n$16 [line 19];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">            ups.setString(1, new ArticleService().getPlainSearchText(rs.getString(&quot;content&quot;))); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$17=_fun___new(sizeof(t=com.zrlog.service.ArticleService):com.zrlog.service.ArticleService*) [line 20];
+n$18=_fun_ArticleService.&lt;init&gt;()(n$17:com.zrlog.service.ArticleService*) [line 20];
+*&amp;$irvar1:com.zrlog.service.ArticleService*=n$17 [line 20];
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$19=*&amp;rs:java.sql.ResultSet* [line 20];
+_=*n$19:java.sql.ResultSet*(root java.sql.ResultSet) [line 20];
+n$21=_fun_String ResultSet.getString(String)(n$19:java.sql.ResultSet*,"content":java.lang.Object*) interface virtual [line 20];
+*&amp;$irvar2:java.lang.String*=n$21 [line 20];
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$22=*&amp;$irvar1:com.zrlog.service.ArticleService* [line 20];
+_=*n$22:com.zrlog.service.ArticleService*(root com.zrlog.service.ArticleService) [line 20];
+n$24=*&amp;$irvar2:java.lang.String* [line 20];
+n$25=_fun_String ArticleService.getPlainSearchText(String)(n$22:com.zrlog.service.ArticleService*,n$24:java.lang.String*) virtual [line 20];
+*&amp;$irvar3:java.lang.String*=n$25 [line 20];
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$26=*&amp;ups:java.sql.PreparedStatement* [line 20];
+_=*n$26:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 20];
+n$28=*&amp;$irvar3:java.lang.String* [line 20];
+n$29=_fun_void PreparedStatement.setString(int,String)(n$26:java.sql.PreparedStatement*,1:int,n$28:java.lang.String*) interface virtual [line 20];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">            ups.setInt(2, id); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$30=*&amp;ups:java.sql.PreparedStatement* [line 21];
+_=*n$30:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 21];
+n$32=*&amp;id:int [line 21];
+n$33=_fun_void PreparedStatement.setInt(int,int)(n$30:java.sql.PreparedStatement*,2:int,n$32:int) interface virtual [line 21];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">            ups.execute(); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$34=*&amp;ups:java.sql.PreparedStatement* [line 22];
+_=*n$34:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 22];
+n$36=_fun_boolean PreparedStatement.execute()(n$34:java.sql.PreparedStatement*) interface virtual [line 22];
+*&amp;$irvar4:_Bool=n$36 [line 22];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">            ups.close(); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:7 exn:3 Instructions
+n$37=*&amp;ups:java.sql.PreparedStatement* [line 23];
+n$40=_fun___set_mem_attribute(n$37:java.sql.PreparedStatement*) [line 23];
+_=*n$37:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 23];
+n$39=_fun_void PreparedStatement.close()(n$37:java.sql.PreparedStatement*) interface virtual [line 23];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">        ps.close(); <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:9 succs:21 exn:3 Instructions
+n$41=*&amp;ps:java.sql.PreparedStatement* [line 25];
+n$44=_fun___set_mem_attribute(n$41:java.sql.PreparedStatement*) [line 25];
+_=*n$41:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 25];
+n$43=_fun_void PreparedStatement.close()(n$41:java.sql.PreparedStatement*) interface virtual [line 25];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    } <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:2 exn:3 Instructions
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:21 3 succs: exn: Exit
+</span></span></a> <a href="./V6UpgradeVersionHandler.java.e8041d2d7ce0b03ed6c7fbec0a90726d/nodes/com.zrlog.web.version.V6UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80fc6a9a910fca54a9c979e4ba6e509d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

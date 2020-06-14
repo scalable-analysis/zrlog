@@ -1,0 +1,680 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.token.AdminTokenService.decrypt(java.lang.String,byte[]):byte[].575a0136e50374435a166a158f3e5b8d_node3</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">3</a></h1></center>PROC: <a href="./../com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d.html">byte[] AdminTokenService.decrypt(String,byte[])</a> LINE: <a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">56</a>
+<br>PREDS:
+<br>SUCCS:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node2.html"><span class='visited with_tooltip'>N_2<span class='tooltip'>node2 preds:13 3 succs: exn: </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node2.html"><span class='visited with_tooltip'>N_2<span class='tooltip'>node2 preds:13 3 succs: exn: </span></span></a><br>
+<LISTING class='color_green'></LISTING>
+<hr width="100%">
+<a name="session2" href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node3.html#session2">node3#session2</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">56</a>) [compute pre] liveness 3
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session3" href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node3.html#session3">node3#session3</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">56</a>) [exec] liveness 3
+<LISTING class='color_black'>PRE STATE:
+{ }
+
+INSTR=  SKIP; 
+
+STATE UNCHANGED
+
+</LISTING>
+<hr width="100%">
+<a name="session47" href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node3.html#session47">node3#session47</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">56</a>) [compute pre] nullify
+<LISTING class='color_black'>JOIN
+
+LEFT:   ({ cipher },{ n$0 })
+RIGHT:  ({ cipher, $irvar0 },
+{ n$1, n$2, secretKey })
+RESULT: ({ cipher, $irvar0 },
+{ n$0, n$1, n$2, secretKey })
+
+JOIN
+
+LEFT:   ({ cipher, $irvar0 },
+{ n$0, n$1, n$2, secretKey })
+RIGHT:  ({ newSecretKey, cipher },
+{ _, n$3, n$5, $irvar0 })
+RESULT: ({ newSecretKey, cipher, $irvar0 },
+{ _, n$0, n$1, n$2, n$3, n$5, $irvar0, secretKey })
+
+JOIN
+
+LEFT:   ({ newSecretKey, cipher, $irvar0 },
+{ _, n$0, n$1, n$2, n$3, n$5, $irvar0, secretKey })
+RIGHT:  ({ cipher, $irvar1 },
+{ _, n$6, n$8, newSecretKey })
+RESULT: ({ newSecretKey, cipher, $irvar0, $irvar1 },
+{ _, _, n$0, n$1, n$2, n$3, n$5, n$6, n$8, newSecretKey, $irvar0, secretKey })
+
+JOIN
+
+LEFT:   ({ newSecretKey, cipher, $irvar0, $irvar1 },
+{ _, _, n$0, n$1, n$2, n$3, n$5, n$6, n$8, newSecretKey, $irvar0, secretKey })
+RIGHT:  ({ cipher, $irvar2 },
+{ n$9, n$10, n$11, $irvar1 })
+RESULT: ({ newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  newSecretKey,
+  $irvar0,
+  $irvar1,
+  secretKey })
+
+JOIN
+
+LEFT:   ({ newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  newSecretKey,
+  $irvar0,
+  $irvar1,
+  secretKey })
+RIGHT:  ({ cipher },
+{ n$12, $irvar2 })
+RESULT: ({ newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  newSecretKey,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+
+JOIN
+
+LEFT:   ({ newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  newSecretKey,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+RIGHT:  ({ $irvar3, cipher },
+{ n$13 })
+RESULT: ({ $irvar3, newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  newSecretKey,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+
+JOIN
+
+LEFT:   ({ $irvar3, newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  newSecretKey,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+RIGHT:  ({ cipher },
+{ _, n$14, n$16, n$17, n$18, $irvar3, token.AdminTokenService })
+RESULT: ({ $irvar3, newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$16,
+  n$17,
+  n$18,
+  $irvar3,
+  newSecretKey,
+  token.AdminTokenService,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+
+JOIN
+
+LEFT:   ({ $irvar3, newSecretKey, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$16,
+  n$17,
+  n$18,
+  $irvar3,
+  newSecretKey,
+  token.AdminTokenService,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+RIGHT:  ({ $irvar4 },
+{ _, n$19, n$21, n$22, encrypted, cipher })
+RESULT: ({ $irvar3,
+           newSecretKey,
+           $irvar4,
+           cipher,
+           $irvar0,
+           $irvar1,
+           $irvar2 },
+{ _,
+  _,
+  _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$16,
+  n$17,
+  n$18,
+  n$19,
+  n$21,
+  n$22,
+  $irvar3,
+  newSecretKey,
+  encrypted,
+  cipher,
+  token.AdminTokenService,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+
+JOIN
+
+LEFT:   ({ $irvar3,
+           newSecretKey,
+           $irvar4,
+           cipher,
+           $irvar0,
+           $irvar1,
+           $irvar2 },
+{ _,
+  _,
+  _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$16,
+  n$17,
+  n$18,
+  n$19,
+  n$21,
+  n$22,
+  $irvar3,
+  newSecretKey,
+  encrypted,
+  cipher,
+  token.AdminTokenService,
+  $irvar0,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+RIGHT:  ({ },
+{ n$23, $irvar4, return })
+RESULT: ({ $irvar3,
+           newSecretKey,
+           $irvar4,
+           cipher,
+           $irvar0,
+           $irvar1,
+           $irvar2 },
+{ _,
+  _,
+  _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$16,
+  n$17,
+  n$18,
+  n$19,
+  n$21,
+  n$22,
+  n$23,
+  $irvar3,
+  newSecretKey,
+  $irvar4,
+  encrypted,
+  cipher,
+  token.AdminTokenService,
+  $irvar0,
+  return,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+
+</LISTING>
+<hr width="100%">
+<a name="session48" href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node3.html#session48">node3#session48</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">56</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $irvar3, newSecretKey, $irvar4, cipher, $irvar0, $irvar1, $irvar2 },
+{ _,
+  _,
+  _,
+  _,
+  n$0,
+  n$1,
+  n$2,
+  n$3,
+  n$5,
+  n$6,
+  n$8,
+  n$9,
+  n$10,
+  n$11,
+  n$12,
+  n$13,
+  n$14,
+  n$16,
+  n$17,
+  n$18,
+  n$19,
+  n$21,
+  n$22,
+  n$23,
+  $irvar3,
+  newSecretKey,
+  $irvar4,
+  encrypted,
+  cipher,
+  token.AdminTokenService,
+  $irvar0,
+  return,
+  $irvar1,
+  secretKey,
+  $irvar2 })
+
+INSTR=  SKIP; 
+
+STATE:
+({ },{ $irvar3, newSecretKey, $irvar4, cipher, $irvar0, $irvar1, $irvar2 })
+
+</LISTING>
+<hr width="100%">
+<a name="session22" href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node3.html#session22">node3#session22</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">56</a>) [compute pre] quandary(java)
+<LISTING class='color_black'>JOIN
+
+LEFT:   { cipher -&gt; { } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *), cipher -&gt; { } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *), cipher -&gt; { } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *), cipher -&gt; { } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { },
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { },
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { },
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { },
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { },
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; { },
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$22 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$22 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+
+JOIN
+
+LEFT:   { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$22 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) } }
+RIGHT:  { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$22 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) },
+          return -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+RESULT: { n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          n$22 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+          token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) },
+          return -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+</LISTING>
+<hr width="100%">
+<a name="session23" href="./../nodes/com.zrlog.web.token.AdminTokenService.decrypt%28java.lang.String%2Cbyte%5B%5D%29%3Abyte%5B%5D.575a0136e50374435a166a158f3e5b8d_node3.html#session23">node3#session23</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE56">56</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$22 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) },
+  return -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+INSTR=  NULLIFY(&amp;$irvar3); [line 56]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;newSecretKey); [line 56]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar4); [line 56]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;cipher); [line 56]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar0); [line 56]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar1); [line 56]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar2); [line 56]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(newSecretKey,n$22,cipher,n$2,n$8,n$9); [line 56]; 
+
+STATE:
+{ n$2 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$5 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$8 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$9 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  n$22 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  newSecretKey -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  cipher -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  token.AdminTokenService -&gt; { secretKeySpec -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) },
+  return -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+INSTR=  APPLY_ABSTRACTION; [line 56]; 
+
+STATE UNCHANGED
+
+</LISTING>

@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_1" [label="1: Start boolean CreateArticleRequest.isRubbish()\nFormals:  this:com.zrlog.common.request.CreateArticleRequest*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_1" -> "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_4" ;
+"com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_2" [label="2: Exit boolean CreateArticleRequest.isRubbish() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 108]\n " shape="box"]
+	
+
+	 "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_3" -> "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_2" ;
+"com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_4" [label="4:  method_body \n   n$0=*&this:com.zrlog.common.request.CreateArticleRequest* [line 108]\n  n$1=*n$0.rubbish:_Bool(root com.zrlog.common.request.CreateArticleRequest) [line 108]\n  *&return:_Bool=n$1 [line 108]\n  NULLIFY(&this); [line 108]\n  EXIT_SCOPE(n$0,n$1,this); [line 108]\n  APPLY_ABSTRACTION; [line 108]\n " shape="box"]
+	
+
+	 "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_4" -> "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_2" ;
+	 "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_4" -> "com.zrlog.common.request.CreateArticleRequest.isRubbish():boolean.b67268a565e2edc79e3c7d1fafaa793b_3" [color="red" ];
+}

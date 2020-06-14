@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.interceptor.AdminInterceptor.initIndex(javax.servlet.http.HttpServletRequest):void.e403323f871eff97f1df3492b123a9cd</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../AdminInterceptor.java.26a8cc6e8afb99ff4b936be166e1029c.html#LINE145">void AdminInterceptor.initIndex(HttpServletRequest)</a></h1></center>
+<a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:36 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 162];
+NULLIFY(&amp;$bcvar3); [line 162];
+NULLIFY(&amp;$irvar9); [line 162];
+NULLIFY(&amp;comment); [line 162];
+NULLIFY(&amp;$irvar5); [line 162];
+NULLIFY(&amp;$irvar4); [line 162];
+NULLIFY(&amp;$irvar7); [line 162];
+NULLIFY(&amp;$irvar6); [line 162];
+NULLIFY(&amp;$irvar0); [line 162];
+NULLIFY(&amp;$irvar10); [line 162];
+NULLIFY(&amp;$irvar8); [line 162];
+NULLIFY(&amp;$irvar1); [line 162];
+NULLIFY(&amp;commentList); [line 162];
+NULLIFY(&amp;$irvar2); [line 162];
+NULLIFY(&amp;response); [line 162];
+EXIT_SCOPE($irvar3,$bcvar3,$irvar9,comment,$irvar5,$irvar4,$irvar7,$irvar6,$irvar0,$irvar10,$irvar8,$irvar1,commentList,$irvar2,response); [line 162];
+APPLY_ABSTRACTION; [line 162];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_boolean ZrLogConfig.isPreviewDb()() [line 146];
+*&amp;$irvar0:_Bool=n$0 [line 146];
+EXIT_SCOPE(n$0); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:_Bool [line 146];
+n$2=_fun_Boolean Boolean.valueOf(boolean)(n$1:_Bool) [line 146];
+*&amp;$irvar1:java.lang.Boolean*=n$2 [line 146];
+NULLIFY(&amp;$irvar0); [line 146];
+EXIT_SCOPE(n$1,n$2,$irvar0); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;request:javax.servlet.http.HttpServletRequest* [line 146];
+_=*n$3:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 146];
+n$5=*&amp;$irvar1:java.lang.Boolean* [line 146];
+n$6=_fun_void HttpServletRequest.setAttribute(String,Object)(n$3:javax.servlet.http.HttpServletRequest*,"previewDb":java.lang.Object*,n$5:java.lang.Boolean*) interface virtual [line 146];
+NULLIFY(&amp;$irvar1); [line 146];
+EXIT_SCOPE(_,n$3,n$5,n$6,$irvar1); [line 146];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$7=_fun___new(sizeof(t=com.zrlog.web.controller.admin.api.UpgradeController):com.zrlog.web.controller.admin.api.UpgradeController*) [line 148];
+n$8=_fun_UpgradeController.&lt;init&gt;()(n$7:com.zrlog.web.controller.admin.api.UpgradeController*) [line 148];
+*&amp;$irvar2:com.zrlog.web.controller.admin.api.UpgradeController*=n$7 [line 148];
+EXIT_SCOPE(n$7,n$8); [line 148];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$9=*&amp;$irvar2:com.zrlog.web.controller.admin.api.UpgradeController* [line 148];
+_=*n$9:com.zrlog.web.controller.admin.api.UpgradeController*(root com.zrlog.web.controller.admin.api.UpgradeController) [line 148];
+n$11=_fun_CheckVersionResponse UpgradeController.lastVersion()(n$9:com.zrlog.web.controller.admin.api.UpgradeController*) virtual [line 148];
+*&amp;response:com.zrlog.common.response.CheckVersionResponse*=n$11 [line 148];
+NULLIFY(&amp;$irvar2); [line 148];
+EXIT_SCOPE(_,n$9,n$11,$irvar2); [line 148];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$12=_fun_JFinal JFinal.me()() [line 149];
+*&amp;$irvar3:com.jfinal.core.JFinal*=n$12 [line 149];
+EXIT_SCOPE(n$12); [line 149];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$13=*&amp;$irvar3:com.jfinal.core.JFinal* [line 149];
+_=*n$13:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 149];
+n$15=_fun_ServletContext JFinal.getServletContext()(n$13:com.jfinal.core.JFinal*) virtual [line 149];
+*&amp;$irvar4:javax.servlet.ServletContext*=n$15 [line 149];
+NULLIFY(&amp;$irvar3); [line 149];
+EXIT_SCOPE(_,n$13,n$15,$irvar3); [line 149];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$16=*&amp;$irvar4:javax.servlet.ServletContext* [line 149];
+_=*n$16:javax.servlet.ServletContext*(root javax.servlet.ServletContext) [line 149];
+n$18=*&amp;response:com.zrlog.common.response.CheckVersionResponse* [line 149];
+n$19=_fun_void ServletContext.setAttribute(String,Object)(n$16:javax.servlet.ServletContext*,"lastVersion":java.lang.Object*,n$18:com.zrlog.common.response.CheckVersionResponse*) interface virtual [line 149];
+NULLIFY(&amp;$irvar4); [line 149];
+EXIT_SCOPE(_,n$16,n$18,n$19,$irvar4); [line 149];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$20=_fun___new(sizeof(t=com.zrlog.model.Comment):com.zrlog.model.Comment*) [line 150];
+n$21=_fun_Comment.&lt;init&gt;()(n$20:com.zrlog.model.Comment*) [line 150];
+*&amp;$irvar5:com.zrlog.model.Comment*=n$20 [line 150];
+EXIT_SCOPE(n$20,n$21); [line 150];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 15 exn:3 Instructions
+n$22=*&amp;$irvar5:com.zrlog.model.Comment* [line 150];
+_=*n$22:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 150];
+n$24=_fun_List Comment.findHaveReadIsFalse()(n$22:com.zrlog.model.Comment*) virtual [line 150];
+*&amp;commentList:java.util.List*=n$24 [line 150];
+NULLIFY(&amp;$irvar5); [line 150];
+EXIT_SCOPE(_,n$22,n$24,$irvar5); [line 150];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:13 succs:16 exn:3 Conditional method_body
+n$25=*&amp;commentList:java.util.List* [line 151];
+PRUNE(!(n$25 == null), true); [line 151];
+EXIT_SCOPE(n$25); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:13 succs:33 exn:3 Conditional method_body
+n$25=*&amp;commentList:java.util.List* [line 151];
+PRUNE((n$25 == null), false); [line 151];
+NULLIFY(&amp;commentList); [line 151];
+EXIT_SCOPE(n$25,commentList); [line 151];
+APPLY_ABSTRACTION; [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:14 succs:17 18 exn:3 Instructions
+n$26=*&amp;commentList:java.util.List* [line 151];
+_=*n$26:java.util.List*(root java.util.List) [line 151];
+n$28=_fun_boolean List.isEmpty()(n$26:java.util.List*) interface virtual [line 151];
+*&amp;$irvar6:_Bool=n$28 [line 151];
+EXIT_SCOPE(_,n$26,n$28); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:16 succs:19 exn:3 Conditional method_body
+n$29=*&amp;$irvar6:_Bool [line 151];
+PRUNE(!(n$29 != 0), true); [line 151];
+NULLIFY(&amp;$irvar6); [line 151];
+EXIT_SCOPE(n$29,$irvar6); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:16 succs:33 exn:3 Conditional method_body
+n$29=*&amp;$irvar6:_Bool [line 151];
+PRUNE((n$29 != 0), false); [line 151];
+NULLIFY(&amp;$irvar6); [line 151];
+NULLIFY(&amp;commentList); [line 151];
+EXIT_SCOPE(n$29,$irvar6,commentList); [line 151];
+APPLY_ABSTRACTION; [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:17 succs:20 exn:3 Instructions
+n$30=*&amp;request:javax.servlet.http.HttpServletRequest* [line 152];
+_=*n$30:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 152];
+n$32=*&amp;commentList:java.util.List* [line 152];
+n$33=_fun_void HttpServletRequest.setAttribute(String,Object)(n$30:javax.servlet.http.HttpServletRequest*,"noReadComments":java.lang.Object*,n$32:java.util.List*) interface virtual [line 152];
+EXIT_SCOPE(_,n$30,n$32,n$33); [line 152];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$34=*&amp;commentList:java.util.List* [line 153];
+_=*n$34:java.util.List*(root java.util.List) [line 153];
+n$36=_fun_Iterator List.iterator()(n$34:java.util.List*) interface virtual [line 153];
+*&amp;$bcvar3:java.util.Iterator*=n$36 [line 153];
+NULLIFY(&amp;commentList); [line 153];
+EXIT_SCOPE(_,n$34,n$36,commentList); [line 153];
+APPLY_ABSTRACTION; [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:32 30 20 succs:24 exn:3 Instructions
+n$37=*&amp;$bcvar3:java.util.Iterator* [line 153];
+_=*n$37:java.util.Iterator*(root java.util.Iterator) [line 153];
+n$39=_fun_boolean Iterator.hasNext()(n$37:java.util.Iterator*) interface virtual [line 153];
+*&amp;$irvar7:_Bool=n$39 [line 153];
+EXIT_SCOPE(_,n$37,n$39); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node22.html"><span class='visited with_tooltip'>C_22<span class='tooltip'>node22 preds:24 succs:25 exn:3 Conditional method_body
+n$40=*&amp;$irvar7:_Bool [line 153];
+PRUNE(!(n$40 == 0), true); [line 153];
+NULLIFY(&amp;$irvar7); [line 153];
+EXIT_SCOPE(n$40,$irvar7); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node23.html"><span class='visited with_tooltip'>C_23<span class='tooltip'>node23 preds:24 succs:33 exn:3 Conditional method_body
+n$40=*&amp;$irvar7:_Bool [line 153];
+PRUNE((n$40 == 0), false); [line 153];
+NULLIFY(&amp;$bcvar3); [line 153];
+NULLIFY(&amp;$irvar7); [line 153];
+EXIT_SCOPE(n$40,$bcvar3,$irvar7); [line 153];
+APPLY_ABSTRACTION; [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node24.html"><span class='visited with_tooltip'>J_24<span class='tooltip'>node24 preds:21 succs:22 23 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:22 succs:26 exn:3 Instructions
+n$41=*&amp;$bcvar3:java.util.Iterator* [line 153];
+_=*n$41:java.util.Iterator*(root java.util.Iterator) [line 153];
+n$43=_fun_Object Iterator.next()(n$41:java.util.Iterator*) interface virtual [line 153];
+*&amp;$irvar8:java.lang.Object*=n$43 [line 153];
+EXIT_SCOPE(_,n$41,n$43); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$44=*&amp;$irvar8:java.lang.Object* [line 153];
+n$45=_fun___cast(n$44:java.lang.Object*,sizeof(t=com.zrlog.model.Comment;sub_t=( sub )(cast)):void) [line 153];
+*&amp;comment:com.zrlog.model.Comment*=n$45 [line 153];
+NULLIFY(&amp;$irvar8); [line 153];
+EXIT_SCOPE(n$44,n$45,$irvar8); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:3 Instructions
+n$46=*&amp;comment:com.zrlog.model.Comment* [line 154];
+_=*n$46:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 154];
+n$48=_fun_Object Model.get(String)(n$46:com.zrlog.model.Comment*,"header":java.lang.Object*) virtual [line 154];
+*&amp;$irvar9:java.lang.Object*=n$48 [line 154];
+EXIT_SCOPE(_,n$46,n$48); [line 154];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:31 exn:3 Instructions
+n$49=*&amp;$irvar9:java.lang.Object* [line 154];
+n$50=_fun___cast(n$49:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 154];
+n$51=_fun_boolean StringUtils.isEmpty(String)(n$50:java.lang.String*) [line 154];
+*&amp;$irvar10:_Bool=n$51 [line 154];
+NULLIFY(&amp;$irvar9); [line 154];
+EXIT_SCOPE(n$49,n$50,n$51,$irvar9); [line 154];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node29.html"><span class='visited with_tooltip'>C_29<span class='tooltip'>node29 preds:31 succs:32 exn:3 Conditional method_body
+n$52=*&amp;$irvar10:_Bool [line 154];
+PRUNE(!(n$52 == 0), true); [line 154];
+NULLIFY(&amp;$irvar10); [line 154];
+EXIT_SCOPE(n$52,$irvar10); [line 154];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node30.html"><span class='visited with_tooltip'>C_30<span class='tooltip'>node30 preds:31 succs:21 exn:3 Conditional method_body
+n$52=*&amp;$irvar10:_Bool [line 154];
+PRUNE((n$52 == 0), false); [line 154];
+NULLIFY(&amp;comment); [line 154];
+NULLIFY(&amp;$irvar10); [line 154];
+EXIT_SCOPE(n$52,comment,$irvar10); [line 154];
+APPLY_ABSTRACTION; [line 154];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node31.html"><span class='visited with_tooltip'>J_31<span class='tooltip'>node31 preds:28 succs:29 30 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:29 succs:21 exn:3 Instructions
+n$53=*&amp;comment:com.zrlog.model.Comment* [line 155];
+_=*n$53:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 155];
+n$55=_fun_Model Model.set(String,Object)(n$53:com.zrlog.model.Comment*,"header":java.lang.Object*,"assets/images/default-portrait.gif":java.lang.Object*) virtual [line 155];
+*&amp;$irvar11:com.jfinal.plugin.activerecord.Model*=n$55 [line 155];
+NULLIFY(&amp;comment); [line 155];
+NULLIFY(&amp;$irvar11); [line 155];
+EXIT_SCOPE(_,n$53,n$55,comment,$irvar11); [line 155];
+APPLY_ABSTRACTION; [line 155];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:23 18 15 succs:34 exn:3 Instructions
+n$56=*&amp;request:javax.servlet.http.HttpServletRequest* [line 159];
+_=*n$56:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 159];
+n$58=*&amp;response:com.zrlog.common.response.CheckVersionResponse* [line 159];
+n$59=_fun_void HttpServletRequest.setAttribute(String,Object)(n$56:javax.servlet.http.HttpServletRequest*,"lastVersion":java.lang.Object*,n$58:com.zrlog.common.response.CheckVersionResponse*) interface virtual [line 159];
+NULLIFY(&amp;response); [line 159];
+EXIT_SCOPE(_,n$56,n$58,n$59,response); [line 159];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:3 Instructions
+n$60=*&amp;request:javax.servlet.http.HttpServletRequest* [line 160];
+_=*n$60:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 160];
+n$62=*&amp;#GB<>$com.zrlog.web.config.ZrLogConfig.blogProperties:java.util.Properties*(root com.zrlog.web.config.ZrLogConfig) [line 160];
+n$63=_fun_void HttpServletRequest.setAttribute(String,Object)(n$60:javax.servlet.http.HttpServletRequest*,"zrlog":java.lang.Object*,n$62:java.util.Properties*) interface virtual [line 160];
+EXIT_SCOPE(_,n$60,n$62,n$63); [line 160];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:36 exn:3 Instructions
+n$64=*&amp;request:javax.servlet.http.HttpServletRequest* [line 161];
+_=*n$64:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 161];
+n$66=*&amp;#GB<>$com.zrlog.web.config.ZrLogConfig.SYSTEM_PROP:java.util.Properties*(root com.zrlog.web.config.ZrLogConfig) [line 161];
+n$67=_fun_void HttpServletRequest.setAttribute(String,Object)(n$64:javax.servlet.http.HttpServletRequest*,"system":java.lang.Object*,n$66:java.util.Properties*) interface virtual [line 161];
+NULLIFY(&amp;request); [line 161];
+EXIT_SCOPE(_,n$64,n$66,n$67,request); [line 161];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.AdminInterceptor.initIndex%28javax.servlet.http.HttpServletRequest%29%3Avoid.e403323f871eff97f1df3492b123a9cd_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:2 exn:3 Instructions
+APPLY_ABSTRACTION; [line 162];
+</span></span></a><br />@
+
+<span class='color_black'>void void AdminInterceptor.initIndex(HttpServletRequest)(javax.servlet.http.HttpServletRequest* request)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { config.ZrLogConfig -> (Footprint({ config.ZrLogConfig }) ~> ?, { jdbcUrl -> (Footprint({ config.ZrLogConfig.jdbcUrl* }) ~> ?, *) }),
+            plugin.UpdateVersionTimerTask -> (Footprint({ plugin.UpdateVersionTimerTask }) ~> ?, { LOGGER -> (Footprint({ plugin.UpdateVersionTimerTask.LOGGER*,
+                                                                    util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~> ?, *) }) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= void AdminInterceptor.initIndex(HttpServletRequest)
+; translation_unit= web/src/main/java/com/zrlog/web/interceptor/AdminInterceptor.java
+; access= Public
+; formals= [(request,javax.servlet.http.HttpServletRequest*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/interceptor/AdminInterceptor.java:145
+; locals= [{ name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $bcvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= commentList; typ= java.util.List*; modify_in_block= false }; 
+           { name= response; typ= com.zrlog.common.response.CheckVersionResponse*; modify_in_block= false }; 
+           { name= comment; typ= com.zrlog.model.Comment*; modify_in_block= false }]
+; ret_type= void 
+; proc_id= com.zrlog.web.interceptor.AdminInterceptor.initIndex(javax.servlet.http.HttpServletRequest):void }</pre>
+</body>
+</html>

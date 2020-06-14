@@ -1,0 +1,87 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_1" [label="1: Start String TemplateController.checkByWhiteList(String)\nFormals:  this:com.zrlog.web.controller.admin.api.TemplateController* filePath:java.lang.String*\nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_1" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_4" ;
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_2" [label="2: Exit String TemplateController.checkByWhiteList(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 74]\n  NULLIFY(&$irvar4); [line 74]\n  NULLIFY(&$irvar0); [line 74]\n  NULLIFY(&$irvar1); [line 74]\n  NULLIFY(&$irvar2); [line 74]\n  EXIT_SCOPE($irvar3,$irvar4,$irvar0,$irvar1,$irvar2); [line 74]\n  APPLY_ABSTRACTION; [line 74]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_2" ;
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_4" [label="4:  Call boolean String.contains(CharSequence) \n   n$0=*&filePath:java.lang.String* [line 68]\n  _=*n$0:java.lang.String*(root java.lang.String) [line 68]\n  n$2=_fun_boolean String.contains(CharSequence)(n$0:java.lang.String*,\"../\":java.lang.Object*) virtual [line 68]\n  *&$irvar0:_Bool=n$2 [line 68]\n  EXIT_SCOPE(_,n$0,n$2); [line 68]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_4" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_5" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_4" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_6" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_4" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_5" [label="5: Prune (true branch, if) \n   n$3=*&$irvar0:_Bool [line 68]\n  PRUNE(!(n$3 == 0), true); [line 68]\n  NULLIFY(&$irvar0); [line 68]\n  EXIT_SCOPE(n$3,$irvar0); [line 68]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_5" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_7" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_5" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_6" [label="6: Prune (false branch, if) \n   n$3=*&$irvar0:_Bool [line 68]\n  PRUNE((n$3 == 0), false); [line 68]\n  NULLIFY(&$irvar0); [line 68]\n  EXIT_SCOPE(n$3,$irvar0); [line 68]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_6" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_9" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_6" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_7" [label="7:  Call IllegalAccessException.<init>(String) \n   n$4=_fun___new(sizeof(t=java.lang.IllegalAccessException):java.lang.IllegalAccessException*) [line 69]\n  n$5=_fun_IllegalAccessException.<init>(String)(n$4:java.lang.IllegalAccessException*,\"\":java.lang.Object*) [line 69]\n  *&$irvar1:java.lang.IllegalAccessException*=n$4 [line 69]\n  EXIT_SCOPE(n$4,n$5); [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_7" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_8" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_7" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_8" [label="8:  throw \n   n$6=*&$irvar1:java.lang.IllegalAccessException* [line 69]\n  *&return:java.lang.String*=EXN n$6 [line 69]\n  NULLIFY(&$irvar1); [line 69]\n  EXIT_SCOPE(n$6,$irvar1); [line 69]\n  APPLY_ABSTRACTION; [line 69]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_8" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_2" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_8" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_9" [label="9:  Call boolean String.startsWith(String) \n   n$7=*&filePath:java.lang.String* [line 71]\n  _=*n$7:java.lang.String*(root java.lang.String) [line 71]\n  n$9=_fun_boolean String.startsWith(String)(n$7:java.lang.String*,\"/error\":java.lang.Object*) virtual [line 71]\n  *&$irvar2:_Bool=n$9 [line 71]\n  EXIT_SCOPE(_,n$7,n$9); [line 71]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_9" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_10" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_9" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_11" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_9" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_10" [label="10: Prune (true branch, if) \n   n$10=*&$irvar2:_Bool [line 71]\n  PRUNE(!(n$10 != 0), true); [line 71]\n  NULLIFY(&$irvar2); [line 71]\n  EXIT_SCOPE(n$10,$irvar2); [line 71]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_10" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_12" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_10" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_11" [label="11: Prune (false branch, if) \n   n$10=*&$irvar2:_Bool [line 71]\n  PRUNE((n$10 != 0), false); [line 71]\n  NULLIFY(&$irvar2); [line 71]\n  EXIT_SCOPE(n$10,$irvar2); [line 71]\n  APPLY_ABSTRACTION; [line 71]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_11" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_17" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_11" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_12" [label="12:  Call boolean String.startsWith(String) \n   n$11=*&filePath:java.lang.String* [line 71]\n  _=*n$11:java.lang.String*(root java.lang.String) [line 71]\n  n$13=_fun_boolean String.startsWith(String)(n$11:java.lang.String*,\"/include\":java.lang.Object*) virtual [line 71]\n  *&$irvar3:_Bool=n$13 [line 71]\n  EXIT_SCOPE(_,n$11,n$13); [line 71]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_12" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_13" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_12" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_14" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_12" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_13" [label="13: Prune (true branch, if) \n   n$14=*&$irvar3:_Bool [line 71]\n  PRUNE(!(n$14 != 0), true); [line 71]\n  NULLIFY(&$irvar3); [line 71]\n  EXIT_SCOPE(n$14,$irvar3); [line 71]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_13" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_15" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_13" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_14" [label="14: Prune (false branch, if) \n   n$14=*&$irvar3:_Bool [line 71]\n  PRUNE((n$14 != 0), false); [line 71]\n  NULLIFY(&$irvar3); [line 71]\n  EXIT_SCOPE(n$14,$irvar3); [line 71]\n  APPLY_ABSTRACTION; [line 71]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_14" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_17" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_14" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_15" [label="15:  Call IllegalAccessException.<init>(String) \n   n$15=_fun___new(sizeof(t=java.lang.IllegalAccessException):java.lang.IllegalAccessException*) [line 72]\n  n$16=_fun_IllegalAccessException.<init>(String)(n$15:java.lang.IllegalAccessException*,\"\":java.lang.Object*) [line 72]\n  *&$irvar4:java.lang.IllegalAccessException*=n$15 [line 72]\n  EXIT_SCOPE(n$15,n$16); [line 72]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_15" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_16" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_15" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_16" [label="16:  throw \n   n$17=*&$irvar4:java.lang.IllegalAccessException* [line 72]\n  *&return:java.lang.String*=EXN n$17 [line 72]\n  NULLIFY(&$irvar4); [line 72]\n  EXIT_SCOPE(n$17,$irvar4); [line 72]\n  APPLY_ABSTRACTION; [line 72]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_16" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_2" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_16" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_17" [label="17:  method_body \n   n$18=*&filePath:java.lang.String* [line 74]\n  *&return:java.lang.String*=n$18 [line 74]\n  NULLIFY(&filePath); [line 74]\n  EXIT_SCOPE(n$18,filePath); [line 74]\n  APPLY_ABSTRACTION; [line 74]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_17" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_2" ;
+	 "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_17" -> "com.zrlog.web.controller.admin.api.TemplateController.checkByWhiteList(java.lang.String):java.lang.S.c08c7cf5f722ad397490f1761e2d4ea8_3" [color="red" ];
+}

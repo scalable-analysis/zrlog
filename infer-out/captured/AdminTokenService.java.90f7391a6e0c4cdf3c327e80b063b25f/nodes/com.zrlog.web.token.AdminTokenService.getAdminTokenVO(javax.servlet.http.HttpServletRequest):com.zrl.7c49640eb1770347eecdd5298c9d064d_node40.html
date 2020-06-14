@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.token.AdminTokenService.getAdminTokenVO(javax.servlet.http.HttpServletRequest):com.zrl.7c49640eb1770347eecdd5298c9d064d_node40</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">40</a></h1></center>PROC: <a href="./../com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d.html">AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)</a> LINE: <a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node39.html"><span class='visited with_tooltip'>N_39<span class='tooltip'>node39 preds:38 succs:40 exn:62 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node41.html"><span class='visited with_tooltip'>N_41<span class='tooltip'>node41 preds:40 succs:42 exn:62 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node62.html"><span class='visited with_tooltip'>N_62<span class='tooltip'>node62 preds: succs:60 61 exn:3 </span></span></a><br>
+<LISTING class='color_green'>n$57=*&amp;user:com.zrlog.model.User* [line 80];
+_=*n$57:com.zrlog.model.User*(root com.zrlog.model.User) [line 80];
+n$59=_fun_String Model.getStr(String)(n$57:com.zrlog.model.User*,"secretKey":java.lang.Object*) virtual [line 80];
+*&amp;$irvar10:java.lang.String*=n$59 [line 80];
+</LISTING>
+<hr width="100%">
+<a name="session58" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session58">node40#session58</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [compute pre] liveness 40
+<LISTING class='color_black'>JOIN
+
+LEFT:   { token.AdminTokenService, return, adminTokenEncryptAfter, $irvar10 }
+RIGHT:  { token.AdminTokenService, return }
+RESULT: { token.AdminTokenService, return, adminTokenEncryptAfter, $irvar10 }
+
+</LISTING>
+<hr width="100%">
+<a name="session59" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session59">node40#session59</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [exec] liveness 40
+<LISTING class='color_black'>PRE STATE:
+{ token.AdminTokenService, return, adminTokenEncryptAfter, $irvar10 }
+
+INSTR=  *&amp;$irvar10:java.lang.String*=n$59 [line 80]; 
+
+STATE:
+{ n$59, token.AdminTokenService, return, adminTokenEncryptAfter }
+
+INSTR=  n$59=_fun_String Model.getStr(String)(n$57:com.zrlog.model.User*,&quot;secretKey&quot;:java.lang.Object*) virtual [line 80]; 
+
+STATE:
+{ n$57, token.AdminTokenService, return, adminTokenEncryptAfter }
+
+INSTR=  _=*n$57:com.zrlog.model.User*(root com.zrlog.model.User) [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  n$57=*&amp;user:com.zrlog.model.User* [line 80]; 
+
+STATE:
+{ token.AdminTokenService, return, adminTokenEncryptAfter, user }
+
+</LISTING>
+<hr width="100%">
+<a name="session265" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session265">node40#session265</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session266" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session266">node40#session266</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ adminTokenEncryptAfter, user },{ n$55, n$56, $irvar9 })
+
+INSTR=  n$57=*&amp;user:com.zrlog.model.User* [line 80]; 
+
+STATE:
+({ n$57, adminTokenEncryptAfter, user },{ n$55, n$56, $irvar9 })
+
+INSTR=  _=*n$57:com.zrlog.model.User*(root com.zrlog.model.User) [line 80]; 
+
+STATE:
+({ _, n$57, adminTokenEncryptAfter, user },{ n$55, n$56, $irvar9 })
+
+INSTR=  n$59=_fun_String Model.getStr(String)(n$57:com.zrlog.model.User*,&quot;secretKey&quot;:java.lang.Object*) virtual [line 80]; 
+
+STATE:
+({ _, n$57, n$59, adminTokenEncryptAfter, user },{ n$55, n$56, $irvar9 })
+
+INSTR=  *&amp;$irvar10:java.lang.String*=n$59 [line 80]; 
+
+STATE:
+({ adminTokenEncryptAfter, $irvar10 },{ _, n$57, n$59, user })
+
+</LISTING>
+<hr width="100%">
+<a name="session74" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session74">node40#session74</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session75" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session75">node40#session75</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ $bcvar6 -&gt; { },
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  user -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+
+
+INSTR=  n$59 := String Model.getStr(String)({ user, &quot;secretKey&quot; }) [line 80]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;user); [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(user); [line 80]; 
+
+STATE:
+{ $bcvar6 -&gt; { },
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  user -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+</LISTING>
+<hr width="100%">
+<a name="session178" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session178">node40#session178</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session179" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html#session179">node40#session179</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE80">80</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ $bcvar6 -&gt; { },
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  cookie -&gt; { },
+  user -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+
+
+INSTR=  n$59 := String Model.getStr(String)({ user, &quot;secretKey&quot; }) [line 80]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;user); [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(user); [line 80]; 
+
+STATE:
+{ $bcvar6 -&gt; { },
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  cookie -&gt; { },
+  user -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+</LISTING>

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.controller.admin.page.AdminPageController.logout():void.450001c1cfa737287d396f30a96ca02d_node36</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">36</a></h1></center>PROC: <a href="./../com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d.html">void AdminPageController.logout()</a> LINE: <a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node35.html"><span class='visited with_tooltip'>N_35<span class='tooltip'>node35 preds:34 succs:36 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node37.html"><span class='visited with_tooltip'>N_37<span class='tooltip'>node37 preds:36 succs:38 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$65=*&amp;$irvar11:com.zrlog.web.token.AdminTokenService* [line 80];
+_=*n$65:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 80];
+n$67=*&amp;$irvar10:javax.servlet.http.HttpServletRequest* [line 80];
+n$68=*&amp;cookie:javax.servlet.http.Cookie* [line 80];
+n$69=_fun_void AdminTokenService.setCookieDomain(HttpServletRequest,Cookie)(n$65:com.zrlog.web.token.AdminTokenService*,n$67:javax.servlet.http.HttpServletRequest*,n$68:javax.servlet.http.Cookie*) virtual [line 80];
+</LISTING>
+<hr width="100%">
+<a name="session50" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session50">node36#session50</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [compute pre] liveness 36
+<LISTING class='color_black'>JOIN
+
+LEFT:   { $bcvar3, $bcvar4, cookie, this }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session51" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session51">node36#session51</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [exec] liveness 36
+<LISTING class='color_black'>PRE STATE:
+{ $bcvar3, $bcvar4, cookie, this }
+
+INSTR=  n$69=_fun_void AdminTokenService.setCookieDomain(HttpServletRequest,Cookie)(n$65:com.zrlog.web.token.AdminTokenService*,n$67:javax.servlet.http.HttpServletRequest*,n$68:javax.servlet.http.Cookie*) virtual [line 80]; 
+
+STATE:
+{ n$65, n$67, n$68, $bcvar3, $bcvar4, cookie, this }
+
+INSTR=  n$68=*&amp;cookie:javax.servlet.http.Cookie* [line 80]; 
+
+STATE:
+{ n$65, n$67, $bcvar3, $bcvar4, cookie, this }
+
+INSTR=  n$67=*&amp;$irvar10:javax.servlet.http.HttpServletRequest* [line 80]; 
+
+STATE:
+{ n$65, $bcvar3, $bcvar4, $irvar10, cookie, this }
+
+INSTR=  _=*n$65:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  n$65=*&amp;$irvar11:com.zrlog.web.token.AdminTokenService* [line 80]; 
+
+STATE:
+{ $bcvar3, $bcvar4, $irvar11, $irvar10, cookie, this }
+
+</LISTING>
+<hr width="100%">
+<a name="session162" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session162">node36#session162</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [compute pre] liveness 36
+<LISTING class='color_black'>JOIN
+
+LEFT:   { $bcvar3, $bcvar4, $bcvar2, cookie, this }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session163" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session163">node36#session163</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [exec] liveness 36
+<LISTING class='color_black'>PRE STATE:
+{ $bcvar3, $bcvar4, $bcvar2, cookie, this }
+
+INSTR=  n$69=_fun_void AdminTokenService.setCookieDomain(HttpServletRequest,Cookie)(n$65:com.zrlog.web.token.AdminTokenService*,n$67:javax.servlet.http.HttpServletRequest*,n$68:javax.servlet.http.Cookie*) virtual [line 80]; 
+
+STATE:
+{ n$65, n$67, n$68, $bcvar3, $bcvar4, $bcvar2, cookie, this }
+
+INSTR=  n$68=*&amp;cookie:javax.servlet.http.Cookie* [line 80]; 
+
+STATE:
+{ n$65, n$67, $bcvar3, $bcvar4, $bcvar2, cookie, this }
+
+INSTR=  n$67=*&amp;$irvar10:javax.servlet.http.HttpServletRequest* [line 80]; 
+
+STATE:
+{ n$65, $bcvar3, $bcvar4, $bcvar2, $irvar10, cookie, this }
+
+INSTR=  _=*n$65:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  n$65=*&amp;$irvar11:com.zrlog.web.token.AdminTokenService* [line 80]; 
+
+STATE:
+{ $bcvar3, $bcvar4, $bcvar2, $irvar11, $irvar10, cookie, this }
+
+</LISTING>
+<hr width="100%">
+<a name="session247" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session247">node36#session247</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session248" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session248">node36#session248</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $bcvar3, $bcvar4, $bcvar2, $irvar11, $irvar10, cookie },{ _, n$62, n$64 })
+
+INSTR=  n$65=*&amp;$irvar11:com.zrlog.web.token.AdminTokenService* [line 80]; 
+
+STATE:
+({ n$65, $bcvar3, $bcvar4, $bcvar2, $irvar11, $irvar10, cookie },
+{ _, n$62, n$64 })
+
+INSTR=  _=*n$65:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 80]; 
+
+STATE:
+({ _, n$65, $bcvar3, $bcvar4, $bcvar2, $irvar11, $irvar10, cookie },
+{ _, n$62, n$64 })
+
+INSTR=  n$67=*&amp;$irvar10:javax.servlet.http.HttpServletRequest* [line 80]; 
+
+STATE:
+({ _, n$65, n$67, $bcvar3, $bcvar4, $bcvar2, $irvar11, $irvar10, cookie },
+{ _, n$62, n$64 })
+
+INSTR=  n$68=*&amp;cookie:javax.servlet.http.Cookie* [line 80]; 
+
+STATE:
+({ _,
+   n$65,
+   n$67,
+   n$68,
+   $bcvar3,
+   $bcvar4,
+   $bcvar2,
+   $irvar11,
+   $irvar10,
+   cookie },
+{ _, n$62, n$64 })
+
+INSTR=  n$69=_fun_void AdminTokenService.setCookieDomain(HttpServletRequest,Cookie)(n$65:com.zrlog.web.token.AdminTokenService*,n$67:javax.servlet.http.HttpServletRequest*,n$68:javax.servlet.http.Cookie*) virtual [line 80]; 
+
+STATE:
+({ $bcvar3, $bcvar4, $bcvar2, cookie },
+{ _, n$65, n$67, n$68, n$69, $irvar11, $irvar10 })
+
+</LISTING>
+<hr width="100%">
+<a name="session66" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session66">node36#session66</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session67" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session67">node36#session67</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$2 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$5 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$18 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$25 -&gt; { },
+  n$35 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$42 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$49 -&gt; { },
+  n$64 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 80) } + Footprint({ }) ~&gt; ?, *),
+  $bcvar4 -&gt; { },
+  cookie -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  cookies -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *) }
+
+
+
+
+
+INSTR=  n$69 := void AdminTokenService.setCookieDomain(HttpServletRequest,Cookie)({ this-&gt;adminTokenService,
+                                                                    n$64,
+                                                                    cookie }) [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar11); [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar10); [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$69); [line 80]; 
+
+STATE:
+{ n$2 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$5 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$18 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$25 -&gt; { },
+  n$35 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$42 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$49 -&gt; { },
+  n$64 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 80) } + Footprint({ }) ~&gt; ?, *),
+  $bcvar4 -&gt; { },
+  cookie -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  cookies -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *) }
+
+</LISTING>
+<hr width="100%">
+<a name="session136" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session136">node36#session136</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session137" href="./../nodes/com.zrlog.web.controller.admin.page.AdminPageController.logout%28%29%3Avoid.450001c1cfa737287d396f30a96ca02d_node36.html#session137">node36#session137</a>(<a href="./../../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE80">80</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$2 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$5 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$18 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$25 -&gt; { },
+  n$35 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$42 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$49 -&gt; { },
+  n$64 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 80) } + Footprint({ }) ~&gt; ?, *),
+  n$72 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  $bcvar4 -&gt; { },
+  cookie -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  cookies -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *) }
+
+
+
+
+
+INSTR=  n$69 := void AdminTokenService.setCookieDomain(HttpServletRequest,Cookie)({ this-&gt;adminTokenService,
+                                                                    n$64,
+                                                                    cookie }) [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar11); [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar10); [line 80]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$69); [line 80]; 
+
+STATE:
+{ n$2 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$5 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$18 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$25 -&gt; { },
+  n$35 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$42 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  n$49 -&gt; { },
+  n$64 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 80) } + Footprint({ }) ~&gt; ?, *),
+  n$72 -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  $bcvar4 -&gt; { },
+  cookie -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *),
+  cookies -&gt; ({ UserControlledString(HttpServletRequest Controller.getRequest() at line 69) } + Footprint({ }) ~&gt; ?, *) }
+
+</LISTING>

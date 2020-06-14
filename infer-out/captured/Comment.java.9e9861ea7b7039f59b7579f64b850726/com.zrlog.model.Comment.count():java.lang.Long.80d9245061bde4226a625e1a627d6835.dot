@@ -1,0 +1,34 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_1" [label="1: Start Long Comment.count()\nFormals:  this:com.zrlog.model.Comment*\nLocals:  $irvar1:void $irvar0:void sql:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_1" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" ;
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_2" [label="2: Exit Long Comment.count() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [label="3:  exceptions sink \n   NULLIFY(&sql); [line 33]\n  NULLIFY(&$irvar0); [line 33]\n  NULLIFY(&$irvar1); [line 33]\n  EXIT_SCOPE(sql,$irvar0,$irvar1); [line 33]\n  APPLY_ABSTRACTION; [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_2" ;
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" [label="4:  method_body \n   *&sql:java.lang.Object*=\"select count(1) from comment\" [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" [label="5:  Call Record Db.findFirst(String) \n   n$0=*&sql:java.lang.Object* [line 33]\n  n$1=_fun_Record Db.findFirst(String)(n$0:java.lang.Object*) [line 33]\n  *&$irvar0:com.jfinal.plugin.activerecord.Record*=n$1 [line 33]\n  NULLIFY(&sql); [line 33]\n  EXIT_SCOPE(n$0,n$1,sql); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" [label="6:  Call Object Record.get(String) \n   n$2=*&$irvar0:com.jfinal.plugin.activerecord.Record* [line 33]\n  _=*n$2:com.jfinal.plugin.activerecord.Record*(root com.jfinal.plugin.activerecord.Record) [line 33]\n  n$4=_fun_Object Record.get(String)(n$2:com.jfinal.plugin.activerecord.Record*,\"count(1)\":java.lang.Object*) virtual [line 33]\n  *&$irvar1:java.lang.Object*=n$4 [line 33]\n  NULLIFY(&$irvar0); [line 33]\n  EXIT_SCOPE(_,n$2,n$4,$irvar0); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" [label="7:  method_body \n   n$5=*&$irvar1:java.lang.Object* [line 33]\n  n$6=_fun___cast(n$5:java.lang.Object*,sizeof(t=java.lang.Long;sub_t=( sub )(cast)):void) [line 33]\n  *&return:java.lang.Long*=n$6 [line 33]\n  NULLIFY(&$irvar1); [line 33]\n  EXIT_SCOPE(n$5,n$6,$irvar1); [line 33]\n  APPLY_ABSTRACTION; [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_2" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+}

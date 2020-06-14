@@ -1,0 +1,97 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_1" [label="1: Start boolean WebSite.getBoolValueByName(String)\nFormals:  this:com.zrlog.model.WebSite* name:java.lang.String*\nLocals:  $T0_53:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void webSite:com.zrlog.model.WebSite* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_1" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_4" ;
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_2" [label="2: Exit boolean WebSite.getBoolValueByName(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 50]\n  NULLIFY(&$T0_53); [line 50]\n  NULLIFY(&$irvar4); [line 50]\n  NULLIFY(&$irvar0); [line 50]\n  NULLIFY(&$irvar1); [line 50]\n  NULLIFY(&webSite); [line 50]\n  NULLIFY(&$irvar2); [line 50]\n  EXIT_SCOPE($irvar3,$T0_53,$irvar4,$irvar0,$irvar1,webSite,$irvar2); [line 50]\n  APPLY_ABSTRACTION; [line 50]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_2" ;
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_4" [label="4:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 48]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 48]\n  EXIT_SCOPE(n$0); [line 48]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_4" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_5" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_4" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_5" [label="5:  method_body \n   n$1=*&$irvar0:java.lang.Object*[_*_](*) [line 48]\n  n$2=*&name:java.lang.String* [line 48]\n  *n$1[0]:java.lang.String*=n$2 [line 48]\n  NULLIFY(&name); [line 48]\n  EXIT_SCOPE(n$1,n$2,name); [line 48]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_5" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_6" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_5" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_6" [label="6:  Call Model Model.findFirst(String,Object[]) \n   n$3=*&this:com.zrlog.model.WebSite* [line 48]\n  _=*n$3:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 48]\n  n$5=*&$irvar0:java.lang.Object*[_*_](*) [line 48]\n  n$6=_fun_Model Model.findFirst(String,Object[])(n$3:com.zrlog.model.WebSite*,\"select value from website where name=?\":java.lang.Object*,n$5:java.lang.Object*[_*_](*)) virtual [line 48]\n  *&$irvar1:com.jfinal.plugin.activerecord.Model*=n$6 [line 48]\n  NULLIFY(&$irvar0); [line 48]\n  NULLIFY(&this); [line 48]\n  EXIT_SCOPE(_,n$3,n$5,n$6,$irvar0,this); [line 48]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_6" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_7" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_6" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_7" [label="7:  method_body \n   n$7=*&$irvar1:com.jfinal.plugin.activerecord.Model* [line 48]\n  n$8=_fun___cast(n$7:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.WebSite;sub_t=( sub )(cast)):void) [line 48]\n  *&webSite:com.zrlog.model.WebSite*=n$8 [line 48]\n  NULLIFY(&$irvar1); [line 48]\n  EXIT_SCOPE(n$7,n$8,$irvar1); [line 48]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_7" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_8" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_7" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_9" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_7" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_8" [label="8: Prune (true branch, if) \n   n$9=*&webSite:com.zrlog.model.WebSite* [line 50]\n  PRUNE(!(n$9 == null), true); [line 50]\n  EXIT_SCOPE(n$9); [line 50]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_8" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_10" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_8" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_9" [label="9: Prune (false branch, if) \n   n$9=*&webSite:com.zrlog.model.WebSite* [line 50]\n  PRUNE((n$9 == null), false); [line 50]\n  NULLIFY(&webSite); [line 50]\n  EXIT_SCOPE(n$9,webSite); [line 50]\n  APPLY_ABSTRACTION; [line 50]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_9" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_18" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_9" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_10" [label="10:  Call Object Model.get(String) \n   n$10=*&webSite:com.zrlog.model.WebSite* [line 50]\n  _=*n$10:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 50]\n  n$12=_fun_Object Model.get(String)(n$10:com.zrlog.model.WebSite*,\"value\":java.lang.Object*) virtual [line 50]\n  *&$irvar2:java.lang.Object*=n$12 [line 50]\n  EXIT_SCOPE(_,n$10,n$12); [line 50]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_10" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_11" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_10" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_12" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_10" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_11" [label="11: Prune (true branch, if) \n   n$13=*&$irvar2:java.lang.Object* [line 50]\n  n$14=_fun___instanceof(n$13:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(instof)):void) [line 50]\n  PRUNE(!(n$14 == 0), true); [line 50]\n  NULLIFY(&$irvar2); [line 50]\n  EXIT_SCOPE(n$13,n$14,$irvar2); [line 50]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_11" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_13" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_11" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_12" [label="12: Prune (false branch, if) \n   n$13=*&$irvar2:java.lang.Object* [line 50]\n  n$14=_fun___instanceof(n$13:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(instof)):void) [line 50]\n  PRUNE((n$14 == 0), false); [line 50]\n  NULLIFY(&webSite); [line 50]\n  NULLIFY(&$irvar2); [line 50]\n  EXIT_SCOPE(n$13,n$14,webSite,$irvar2); [line 50]\n  APPLY_ABSTRACTION; [line 50]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_12" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_18" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_12" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_13" [label="13:  Call Object Model.get(String) \n   n$15=*&webSite:com.zrlog.model.WebSite* [line 50]\n  _=*n$15:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 50]\n  n$17=_fun_Object Model.get(String)(n$15:com.zrlog.model.WebSite*,\"value\":java.lang.Object*) virtual [line 50]\n  *&$irvar3:java.lang.Object*=n$17 [line 50]\n  NULLIFY(&webSite); [line 50]\n  EXIT_SCOPE(_,n$15,n$17,webSite); [line 50]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_13" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_14" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_13" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_14" [label="14:  Call boolean String.equals(Object) \n   n$18=*&$irvar3:java.lang.Object* [line 50]\n  n$19=_fun_boolean String.equals(Object)(\"1\":java.lang.Object*,n$18:java.lang.Object*) virtual [line 50]\n  *&$irvar4:_Bool=n$19 [line 50]\n  NULLIFY(&$irvar3); [line 50]\n  EXIT_SCOPE(n$18,n$19,$irvar3); [line 50]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_14" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_15" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_14" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_16" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_14" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_15" [label="15: Prune (true branch, if) \n   n$20=*&$irvar4:_Bool [line 50]\n  PRUNE(!(n$20 == 0), true); [line 50]\n  NULLIFY(&$irvar4); [line 50]\n  EXIT_SCOPE(n$20,$irvar4); [line 50]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_15" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_17" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_15" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_16" [label="16: Prune (false branch, if) \n   n$20=*&$irvar4:_Bool [line 50]\n  PRUNE((n$20 == 0), false); [line 50]\n  NULLIFY(&$irvar4); [line 50]\n  EXIT_SCOPE(n$20,$irvar4); [line 50]\n  APPLY_ABSTRACTION; [line 50]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_16" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_18" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_16" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_17" [label="17:  method_body \n   *&$T0_53:int=1 [line 50]\n  APPLY_ABSTRACTION; [line 50]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_17" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_19" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_17" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_18" [label="18:  method_body \n   *&$T0_53:int=0 [line 50]\n  APPLY_ABSTRACTION; [line 50]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_18" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_19" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_18" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+"com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_19" [label="19:  method_body \n   n$21=*&$T0_53:int [line 50]\n  *&return:_Bool=n$21 [line 50]\n  NULLIFY(&$T0_53); [line 50]\n  EXIT_SCOPE(n$21,$T0_53); [line 50]\n  APPLY_ABSTRACTION; [line 50]\n " shape="box"]
+	
+
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_19" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_2" ;
+	 "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_19" -> "com.zrlog.model.WebSite.getBoolValueByName(java.lang.String):boolean.52a0c89a3ccb88235328edf48d617cce_3" [color="red" ];
+}

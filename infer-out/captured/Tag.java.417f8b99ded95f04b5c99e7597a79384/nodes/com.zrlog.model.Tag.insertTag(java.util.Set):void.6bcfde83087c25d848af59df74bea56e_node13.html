@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Tag.insertTag(java.util.Set):void.6bcfde83087c25d848af59df74bea56e_node13</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">13</a></h1></center>PROC: <a href="./../com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e.html">void Tag.insertTag(Set)</a> LINE: <a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node12.html"><span class='visited with_tooltip'>N_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node14.html"><span class='visited with_tooltip'>N_14<span class='tooltip'>node14 preds:13 succs:17 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$15=*&amp;this:com.zrlog.model.Tag* [line 94];
+_=*n$15:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 94];
+n$17=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 94];
+n$18=_fun_Model Model.findFirst(String,Object[])(n$15:com.zrlog.model.Tag*,"select * from tag where text=?":java.lang.Object*,n$17:java.lang.Object*[_*_](*)) virtual [line 94];
+*&amp;$irvar3:com.jfinal.plugin.activerecord.Model*=n$18 [line 94];
+</LISTING>
+<hr width="100%">
+<a name="session44" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session44">node13#session44</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [compute pre] liveness 13
+<LISTING class='color_black'>JOIN
+
+LEFT:   { add, $irvar3, $bcvar2 }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session45" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session45">node13#session45</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [exec] liveness 13
+<LISTING class='color_black'>PRE STATE:
+{ add, $irvar3, $bcvar2 }
+
+INSTR=  *&amp;$irvar3:com.jfinal.plugin.activerecord.Model*=n$18 [line 94]; 
+
+STATE:
+{ n$18, add, $bcvar2 }
+
+INSTR=  n$18=_fun_Model Model.findFirst(String,Object[])(n$15:com.zrlog.model.Tag*,&quot;select * from tag where text=?&quot;:java.lang.Object*,n$17:java.lang.Object*[_*_](*)) virtual [line 94]; 
+
+STATE:
+{ n$15, n$17, add, $bcvar2 }
+
+INSTR=  n$17=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 94]; 
+
+STATE:
+{ n$15, add, $bcvar2, $irvar2 }
+
+INSTR=  _=*n$15:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 94]; 
+
+STATE UNCHANGED
+
+INSTR=  n$15=*&amp;this:com.zrlog.model.Tag* [line 94]; 
+
+STATE:
+{ add, $bcvar2, $irvar2, this }
+
+</LISTING>
+<hr width="100%">
+<a name="session84" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session84">node13#session84</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [compute pre] liveness 13
+<LISTING class='color_black'>JOIN
+
+LEFT:   { add, $irvar3, $bcvar2, this }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session85" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session85">node13#session85</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [exec] liveness 13
+<LISTING class='color_black'>PRE STATE:
+{ add, $irvar3, $bcvar2, this }
+
+INSTR=  *&amp;$irvar3:com.jfinal.plugin.activerecord.Model*=n$18 [line 94]; 
+
+STATE:
+{ n$18, add, $bcvar2, this }
+
+INSTR=  n$18=_fun_Model Model.findFirst(String,Object[])(n$15:com.zrlog.model.Tag*,&quot;select * from tag where text=?&quot;:java.lang.Object*,n$17:java.lang.Object*[_*_](*)) virtual [line 94]; 
+
+STATE:
+{ n$15, n$17, add, $bcvar2, this }
+
+INSTR=  n$17=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 94]; 
+
+STATE:
+{ n$15, add, $bcvar2, $irvar2, this }
+
+INSTR=  _=*n$15:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 94]; 
+
+STATE UNCHANGED
+
+INSTR=  n$15=*&amp;this:com.zrlog.model.Tag* [line 94]; 
+
+STATE:
+{ add, $bcvar2, $irvar2, this }
+
+</LISTING>
+<hr width="100%">
+<a name="session123" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session123">node13#session123</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session124" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session124">node13#session124</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ add, $bcvar2, $irvar2 },{ n$13, n$14 })
+
+INSTR=  n$15=*&amp;this:com.zrlog.model.Tag* [line 94]; 
+
+STATE:
+({ n$15, add, $bcvar2, $irvar2 },{ n$13, n$14 })
+
+INSTR=  _=*n$15:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 94]; 
+
+STATE:
+({ _, n$15, add, $bcvar2, $irvar2 },{ n$13, n$14 })
+
+INSTR=  n$17=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 94]; 
+
+STATE:
+({ _, n$15, n$17, add, $bcvar2, $irvar2 },{ n$13, n$14 })
+
+INSTR=  n$18=_fun_Model Model.findFirst(String,Object[])(n$15:com.zrlog.model.Tag*,&quot;select * from tag where text=?&quot;:java.lang.Object*,n$17:java.lang.Object*[_*_](*)) virtual [line 94]; 
+
+STATE:
+({ _, n$15, n$17, n$18, add, $bcvar2, $irvar2 },{ n$13, n$14 })
+
+INSTR=  *&amp;$irvar3:com.jfinal.plugin.activerecord.Model*=n$18 [line 94]; 
+
+STATE:
+({ add, $irvar3, $bcvar2 },{ _, n$15, n$17, n$18, $irvar2 })
+
+</LISTING>
+<hr width="100%">
+<a name="session22" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session22">node13#session22</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session23" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session23">node13#session23</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$12 -&gt; { [_] -&gt; { } }, add -&gt; { } }
+
+
+
+
+TAINTED_CALL1: (callee="Model Model.findFirst(String,Object[])", caller="void Tag.insertTag(Set)")
+TAINTED_CALL1: (callee="Model Model.findFirst(String,Object[])", caller="void Tag.insertTag(Set)")
+INSTR=  n$18 := Model Model.findFirst(String,Object[])({ this,
+                                                         &quot;select * from tag where text=?&quot;,
+                                                         n$12 }) [line 94]; 
+
+STATE:
+{ n$12 -&gt; { [_] -&gt; { } },
+  n$18 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  add -&gt; { },
+  this -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+
+INSTR=  NULLIFY(&amp;$irvar2); [line 94]; 
+
+STATE UNCHANGED
+
+
+</LISTING>
+<hr width="100%">
+<a name="session74" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session74">node13#session74</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session75" href="./../nodes/com.zrlog.model.Tag.insertTag%28java.util.Set%29%3Avoid.6bcfde83087c25d848af59df74bea56e_node13.html#session75">node13#session75</a>(<a href="./../../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE94">94</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$12 -&gt; { [_] -&gt; { } },
+  n$18 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  add -&gt; { },
+  t -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  this -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+
+
+
+TAINTED_CALL1: (callee="Model Model.findFirst(String,Object[])", caller="void Tag.insertTag(Set)")
+TAINTED_CALL1: (callee="Model Model.findFirst(String,Object[])", caller="void Tag.insertTag(Set)")
+INSTR=  n$18 := Model Model.findFirst(String,Object[])({ this,
+                                                         &quot;select * from tag where text=?&quot;,
+                                                         n$12 }) [line 94]; 
+
+STATE:
+{ n$12 -&gt; { [_] -&gt; { } },
+  n$18 -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  add -&gt; { },
+  t -&gt; (Footprint({ @val$0* }) ~&gt; ?, *),
+  this -&gt; (Footprint({ @val$0* }) ~&gt; ?, *) }
+
+
+INSTR=  NULLIFY(&amp;$irvar2); [line 94]; 
+
+STATE UNCHANGED
+
+
+</LISTING>

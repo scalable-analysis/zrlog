@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.getExecSqlList(java.lang.String,java.lang.String):java.util.List.17b60f12dfaefe604691e887a56e3e4f</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE180">List ZrLogUtil.getExecSqlList(String,String)</a></h1></center>
+<a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:39 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:44 41 succs:2 exn:2 Instructions
+NULLIFY(&amp;$bcvar4); [line 200];
+NULLIFY(&amp;f); [line 200];
+NULLIFY(&amp;CatchVar21); [line 200];
+NULLIFY(&amp;version); [line 200];
+NULLIFY(&amp;sqlList); [line 200];
+NULLIFY(&amp;$irvar0); [line 200];
+NULLIFY(&amp;$irvar1); [line 200];
+NULLIFY(&amp;CatchVar168); [line 200];
+NULLIFY(&amp;$irvar2); [line 200];
+NULLIFY(&amp;e); [line 200];
+EXIT_SCOPE(n$82,$bcvar4,f,CatchVar21,version,sqlList,$irvar0,$irvar1,CatchVar168,$irvar2,e); [line 200];
+APPLY_ABSTRACTION; [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.util.ArrayList):java.util.ArrayList*) [line 181];
+n$1=_fun_ArrayList.&lt;init&gt;()(n$0:java.util.ArrayList*) [line 181];
+*&amp;sqlList:java.util.ArrayList*=n$0 [line 181];
+EXIT_SCOPE(n$0,n$1); [line 181];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=_fun_Integer Integer.valueOf(int)(0:int) [line 182];
+*&amp;version:java.lang.Integer*=n$2 [line 182];
+NULLIFY(&amp;version); [line 182];
+EXIT_SCOPE(n$2,version); [line 182];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:9 exn:45 Instructions
+n$3=*&amp;sqlVersion:java.lang.String* [line 184];
+n$4=_fun_Integer Integer.valueOf(String)(n$3:java.lang.String*) [line 184];
+*&amp;version:java.lang.Integer*=n$4 [line 184];
+NULLIFY(&amp;sqlVersion); [line 184];
+EXIT_SCOPE(n$3,n$4,sqlVersion); [line 184];
+APPLY_ABSTRACTION; [line 184];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:43 succs:8 exn:3 Instructions
+n$5=*&amp;CatchVar21:java.lang.Object* [line 185];
+*&amp;e:java.lang.Object*=n$5 [line 185];
+NULLIFY(&amp;CatchVar21); [line 185];
+EXIT_SCOPE(n$5,CatchVar21); [line 185];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$6=*&amp;#GB<>$com.zrlog.util.ZrLogUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.ZrLogUtil) [line 186];
+_=*n$6:org.slf4j.Logger*(root org.slf4j.Logger) [line 186];
+n$8=*&amp;e:java.lang.Object* [line 186];
+n$9=_fun_void Logger.error(String,Throwable)(n$6:org.slf4j.Logger*,"":java.lang.Object*,n$8:java.lang.Object*) interface virtual [line 186];
+NULLIFY(&amp;e); [line 186];
+EXIT_SCOPE(_,n$6,n$8,n$9,e); [line 186];
+APPLY_ABSTRACTION; [line 186];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 6 succs:10 exn:3 Instructions
+n$10=*&amp;basePath:java.lang.String* [line 188];
+n$11=_fun_List ZrLogUtil.getSqlFileList(String)(n$10:java.lang.String*) [line 188];
+*&amp;$irvar0:java.util.List*=n$11 [line 188];
+NULLIFY(&amp;basePath); [line 188];
+EXIT_SCOPE(n$10,n$11,basePath); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$12=*&amp;$irvar0:java.util.List* [line 188];
+_=*n$12:java.util.List*(root java.util.List) [line 188];
+n$14=_fun_Iterator List.iterator()(n$12:java.util.List*) interface virtual [line 188];
+*&amp;$bcvar4:java.util.Iterator*=n$14 [line 188];
+NULLIFY(&amp;$irvar0); [line 188];
+EXIT_SCOPE(_,n$12,n$14,$irvar0); [line 188];
+APPLY_ABSTRACTION; [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:38 36 23 10 succs:14 exn:3 Instructions
+n$15=*&amp;$bcvar4:java.util.Iterator* [line 188];
+_=*n$15:java.util.Iterator*(root java.util.Iterator) [line 188];
+n$17=_fun_boolean Iterator.hasNext()(n$15:java.util.Iterator*) interface virtual [line 188];
+*&amp;$irvar1:_Bool=n$17 [line 188];
+EXIT_SCOPE(_,n$15,n$17); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:14 succs:15 exn:3 Conditional method_body
+n$18=*&amp;$irvar1:_Bool [line 188];
+PRUNE(!(n$18 == 0), true); [line 188];
+NULLIFY(&amp;$irvar1); [line 188];
+EXIT_SCOPE(n$18,$irvar1); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:14 succs:39 exn:3 Conditional method_body
+n$18=*&amp;$irvar1:_Bool [line 188];
+PRUNE((n$18 == 0), false); [line 188];
+NULLIFY(&amp;$bcvar4); [line 188];
+NULLIFY(&amp;version); [line 188];
+NULLIFY(&amp;$irvar1); [line 188];
+EXIT_SCOPE(n$18,$bcvar4,version,$irvar1); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node14.html"><span class='visited with_tooltip'>J_14<span class='tooltip'>node14 preds:11 succs:12 13 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:12 succs:16 exn:3 Instructions
+n$19=*&amp;$bcvar4:java.util.Iterator* [line 188];
+_=*n$19:java.util.Iterator*(root java.util.Iterator) [line 188];
+n$21=_fun_Object Iterator.next()(n$19:java.util.Iterator*) interface virtual [line 188];
+*&amp;$irvar2:java.lang.Object*=n$21 [line 188];
+EXIT_SCOPE(_,n$19,n$21); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$22=*&amp;$irvar2:java.lang.Object* [line 188];
+n$23=_fun___cast(n$22:java.lang.Object*,sizeof(t=java.io.File;sub_t=( sub )(cast)):void) [line 188];
+*&amp;f:java.io.File*=n$23 [line 188];
+NULLIFY(&amp;$irvar2); [line 188];
+EXIT_SCOPE(n$22,n$23,$irvar2); [line 188];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:42 Instructions
+n$24=*&amp;f:java.io.File* [line 190];
+_=*n$24:java.io.File*(root java.io.File) [line 190];
+n$26=_fun_String File.getName()(n$24:java.io.File*) virtual [line 190];
+*&amp;$irvar3:java.lang.String*=n$26 [line 190];
+EXIT_SCOPE(_,n$24,n$26); [line 190];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:42 Instructions
+n$27=*&amp;$irvar3:java.lang.String* [line 190];
+_=*n$27:java.lang.String*(root java.lang.String) [line 190];
+n$29=_fun_String String.replace(CharSequence,CharSequence)(n$27:java.lang.String*,".sql":java.lang.Object*,"":java.lang.Object*) virtual [line 190];
+*&amp;$irvar4:java.lang.String*=n$29 [line 190];
+NULLIFY(&amp;$irvar3); [line 190];
+EXIT_SCOPE(_,n$27,n$29,$irvar3); [line 190];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:42 Instructions
+n$30=*&amp;$irvar4:java.lang.String* [line 190];
+n$31=_fun_Integer Integer.valueOf(String)(n$30:java.lang.String*) [line 190];
+*&amp;fileVersion:java.lang.Integer*=n$31 [line 190];
+NULLIFY(&amp;$irvar4); [line 190];
+EXIT_SCOPE(n$30,n$31,$irvar4); [line 190];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:42 Instructions
+n$32=*&amp;fileVersion:java.lang.Integer* [line 191];
+_=*n$32:java.lang.Integer*(root java.lang.Integer) [line 191];
+n$34=_fun_int Integer.intValue()(n$32:java.lang.Integer*) virtual [line 191];
+*&amp;$irvar5:int=n$34 [line 191];
+EXIT_SCOPE(_,n$32,n$34); [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:24 exn:42 Instructions
+n$35=*&amp;version:java.lang.Integer* [line 191];
+_=*n$35:java.lang.Integer*(root java.lang.Integer) [line 191];
+n$37=_fun_int Integer.intValue()(n$35:java.lang.Integer*) virtual [line 191];
+*&amp;$irvar6:int=n$37 [line 191];
+EXIT_SCOPE(_,n$35,n$37); [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node22.html"><span class='visited with_tooltip'>C_22<span class='tooltip'>node22 preds:24 succs:25 exn:42 Conditional method_body
+n$38=*&amp;$irvar5:int [line 191];
+n$39=*&amp;$irvar6:int [line 191];
+PRUNE(!(n$38  &lt;=  n$39), true); [line 191];
+NULLIFY(&amp;$irvar5); [line 191];
+NULLIFY(&amp;$irvar6); [line 191];
+EXIT_SCOPE(n$38,n$39,$irvar5,$irvar6); [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node23.html"><span class='visited with_tooltip'>C_23<span class='tooltip'>node23 preds:24 succs:11 exn:42 Conditional method_body
+n$38=*&amp;$irvar5:int [line 191];
+n$39=*&amp;$irvar6:int [line 191];
+PRUNE((n$38  &lt;=  n$39), false); [line 191];
+NULLIFY(&amp;f); [line 191];
+NULLIFY(&amp;$irvar5); [line 191];
+NULLIFY(&amp;fileVersion); [line 191];
+NULLIFY(&amp;$irvar6); [line 191];
+EXIT_SCOPE(n$38,n$39,f,$irvar5,fileVersion,$irvar6); [line 191];
+APPLY_ABSTRACTION; [line 191];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node24.html"><span class='visited with_tooltip'>J_24<span class='tooltip'>node24 preds:21 succs:22 23 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:22 succs:26 exn:42 Instructions
+n$40=*&amp;#GB<>$com.zrlog.util.ZrLogUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.ZrLogUtil) [line 192];
+*&amp;$irvar7:org.slf4j.Logger*=n$40 [line 192];
+EXIT_SCOPE(n$40); [line 192];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:42 Instructions
+n$41=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 192];
+n$42=_fun_StringBuilder.&lt;init&gt;()(n$41:java.lang.StringBuilder*) [line 192];
+*&amp;$irvar8:java.lang.StringBuilder*=n$41 [line 192];
+EXIT_SCOPE(n$41,n$42); [line 192];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:42 Instructions
+n$43=*&amp;$irvar8:java.lang.StringBuilder* [line 192];
+_=*n$43:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 192];
+n$45=_fun_StringBuilder StringBuilder.append(String)(n$43:java.lang.StringBuilder*,"need update sql ":java.lang.Object*) virtual [line 192];
+*&amp;$irvar9:java.lang.StringBuilder*=n$45 [line 192];
+NULLIFY(&amp;$irvar8); [line 192];
+EXIT_SCOPE(_,n$43,n$45,$irvar8); [line 192];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:42 Instructions
+n$46=*&amp;$irvar9:java.lang.StringBuilder* [line 192];
+_=*n$46:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 192];
+n$48=*&amp;f:java.io.File* [line 192];
+n$49=_fun_StringBuilder StringBuilder.append(Object)(n$46:java.lang.StringBuilder*,n$48:java.io.File*) virtual [line 192];
+*&amp;$irvar10:java.lang.StringBuilder*=n$49 [line 192];
+NULLIFY(&amp;$irvar9); [line 192];
+EXIT_SCOPE(_,n$46,n$48,n$49,$irvar9); [line 192];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:42 Instructions
+n$50=*&amp;$irvar10:java.lang.StringBuilder* [line 192];
+_=*n$50:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 192];
+n$52=_fun_String StringBuilder.toString()(n$50:java.lang.StringBuilder*) virtual [line 192];
+*&amp;$irvar11:java.lang.String*=n$52 [line 192];
+NULLIFY(&amp;$irvar10); [line 192];
+EXIT_SCOPE(_,n$50,n$52,$irvar10); [line 192];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:42 Instructions
+n$53=*&amp;$irvar7:org.slf4j.Logger* [line 192];
+_=*n$53:org.slf4j.Logger*(root org.slf4j.Logger) [line 192];
+n$55=*&amp;$irvar11:java.lang.String* [line 192];
+n$56=_fun_void Logger.info(String)(n$53:org.slf4j.Logger*,n$55:java.lang.String*) interface virtual [line 192];
+NULLIFY(&amp;$irvar7); [line 192];
+NULLIFY(&amp;$irvar11); [line 192];
+EXIT_SCOPE(_,n$53,n$55,n$56,$irvar7,$irvar11); [line 192];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:42 Instructions
+n$57=_fun___new(sizeof(t=java.io.FileInputStream):java.io.FileInputStream*) [line 193];
+n$58=*&amp;f:java.io.File* [line 193];
+n$59=_fun_FileInputStream.&lt;init&gt;(File)(n$57:java.io.FileInputStream*,n$58:java.io.File*) [line 193];
+*&amp;$irvar12:java.io.FileInputStream*=n$57 [line 193];
+NULLIFY(&amp;f); [line 193];
+EXIT_SCOPE(n$57,n$58,n$59,f); [line 193];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:42 Instructions
+n$60=*&amp;$irvar12:java.io.FileInputStream* [line 193];
+n$61=_fun_String IOUtil.getStringInputStream(InputStream)(n$60:java.io.FileInputStream*) [line 193];
+*&amp;$irvar13:java.lang.String*=n$61 [line 193];
+NULLIFY(&amp;$irvar12); [line 193];
+EXIT_SCOPE(n$60,n$61,$irvar12); [line 193];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:42 Instructions
+n$62=*&amp;$irvar13:java.lang.String* [line 193];
+_=*n$62:java.lang.String*(root java.lang.String) [line 193];
+n$64=_fun_String[] String.split(String)(n$62:java.lang.String*,"\\n":java.lang.Object*) virtual [line 193];
+*&amp;$irvar14:java.lang.String*[_*_](*)=n$64 [line 193];
+NULLIFY(&amp;$irvar13); [line 193];
+EXIT_SCOPE(_,n$62,n$64,$irvar13); [line 193];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:42 Instructions
+n$65=*&amp;$irvar14:java.lang.String*[_*_](*) [line 193];
+n$66=_fun_List Arrays.asList(Object[])(n$65:java.lang.String*[_*_](*)) [line 193];
+*&amp;$irvar15:java.util.List*=n$66 [line 193];
+NULLIFY(&amp;$irvar14); [line 193];
+EXIT_SCOPE(n$65,n$66,$irvar14); [line 193];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:36 exn:42 Instructions
+n$67=_fun___new(sizeof(t=java.util.AbstractMap$SimpleEntry):java.util.AbstractMap$SimpleEntry*) [line 193];
+n$68=*&amp;fileVersion:java.lang.Integer* [line 193];
+n$69=*&amp;$irvar15:java.util.List* [line 193];
+n$70=_fun_AbstractMap$SimpleEntry.&lt;init&gt;(Object,Object)(n$67:java.util.AbstractMap$SimpleEntry*,n$68:java.lang.Integer*,n$69:java.util.List*) [line 193];
+*&amp;entry:java.util.AbstractMap$SimpleEntry*=n$67 [line 193];
+NULLIFY(&amp;fileVersion); [line 193];
+NULLIFY(&amp;$irvar15); [line 193];
+EXIT_SCOPE(n$67,n$68,n$69,n$70,fileVersion,$irvar15); [line 193];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:11 exn:42 Instructions
+n$71=*&amp;sqlList:java.util.ArrayList* [line 194];
+_=*n$71:java.util.ArrayList*(root java.util.ArrayList) [line 194];
+n$73=*&amp;entry:java.util.AbstractMap$SimpleEntry* [line 194];
+n$74=_fun_boolean ArrayList.add(Object)(n$71:java.util.ArrayList*,n$73:java.util.AbstractMap$SimpleEntry*) interface virtual [line 194];
+*&amp;$irvar16:_Bool=n$74 [line 194];
+NULLIFY(&amp;$irvar16); [line 194];
+NULLIFY(&amp;entry); [line 194];
+EXIT_SCOPE(_,n$71,n$73,n$74,$irvar16,entry); [line 194];
+APPLY_ABSTRACTION; [line 194];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:40 succs:38 exn:3 Instructions
+n$75=*&amp;CatchVar168:java.lang.Object* [line 196];
+*&amp;e:java.lang.Object*=n$75 [line 196];
+NULLIFY(&amp;CatchVar168); [line 196];
+EXIT_SCOPE(n$75,CatchVar168); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:11 exn:3 Instructions
+n$76=*&amp;#GB<>$com.zrlog.util.ZrLogUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.ZrLogUtil) [line 197];
+_=*n$76:org.slf4j.Logger*(root org.slf4j.Logger) [line 197];
+n$78=*&amp;e:java.lang.Object* [line 197];
+n$79=_fun_void Logger.error(String,Throwable)(n$76:org.slf4j.Logger*,"":java.lang.Object*,n$78:java.lang.Object*) interface virtual [line 197];
+NULLIFY(&amp;e); [line 197];
+EXIT_SCOPE(_,n$76,n$78,n$79,e); [line 197];
+APPLY_ABSTRACTION; [line 197];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:13 succs:2 exn:3 Instructions
+n$80=*&amp;sqlList:java.util.ArrayList* [line 200];
+*&amp;return:java.util.List*=n$80 [line 200];
+NULLIFY(&amp;sqlList); [line 200];
+EXIT_SCOPE(n$80,sqlList); [line 200];
+APPLY_ABSTRACTION; [line 200];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node40.html"><span class='visited with_tooltip'>C_40<span class='tooltip'>node40 preds:42 succs:37 exn:3 Conditional exception handler
+n$83=_fun___instanceof(n$82:java.io.FileNotFoundException*,sizeof(t=java.io.FileNotFoundException):void) [line 196];
+PRUNE(n$83, true); [line 196];
+*&amp;CatchVar168:java.util.List*=n$82 [line 196];
+EXIT_SCOPE(n$82,n$83); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node41.html"><span class='visited with_tooltip'>C_41<span class='tooltip'>node41 preds:42 succs:3 exn:3 Conditional exception handler
+n$83=_fun___instanceof(n$82:java.io.FileNotFoundException*,sizeof(t=java.io.FileNotFoundException):void) [line 196];
+PRUNE(!n$83, false); [line 196];
+*&amp;return:java.util.List*=EXN n$82 [line 196];
+NULLIFY(&amp;$bcvar4); [line 196];
+NULLIFY(&amp;version); [line 196];
+NULLIFY(&amp;sqlList); [line 196];
+EXIT_SCOPE(n$82,n$83,$bcvar4,version,sqlList); [line 196];
+APPLY_ABSTRACTION; [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds: succs:40 41 exn:3 Instructions
+n$81=*&amp;return:java.util.List* [line 196];
+*&amp;return:java.util.List*=null [line 196];
+n$82=_fun___unwrap_exception(n$81:java.util.List*) [line 196];
+NULLIFY(&amp;$irvar3); [line 196];
+NULLIFY(&amp;$irvar9); [line 196];
+NULLIFY(&amp;f); [line 196];
+NULLIFY(&amp;$irvar5); [line 196];
+NULLIFY(&amp;$irvar4); [line 196];
+NULLIFY(&amp;$irvar7); [line 196];
+NULLIFY(&amp;$irvar12); [line 196];
+NULLIFY(&amp;fileVersion); [line 196];
+NULLIFY(&amp;entry); [line 196];
+NULLIFY(&amp;$irvar6); [line 196];
+NULLIFY(&amp;$irvar13); [line 196];
+NULLIFY(&amp;$irvar11); [line 196];
+NULLIFY(&amp;$irvar10); [line 196];
+NULLIFY(&amp;$irvar8); [line 196];
+NULLIFY(&amp;$irvar15); [line 196];
+NULLIFY(&amp;$irvar14); [line 196];
+EXIT_SCOPE(n$81,$irvar3,$irvar9,f,$irvar5,$irvar4,$irvar7,$irvar12,fileVersion,entry,$irvar6,$irvar13,$irvar11,$irvar10,$irvar8,$irvar15,$irvar14); [line 196];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node43.html"><span class='visited with_tooltip'>C_43<span class='tooltip'>node43 preds:45 succs:7 exn:3 Conditional exception handler
+n$84=_fun___instanceof(n$82:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 185];
+PRUNE(n$84, true); [line 185];
+*&amp;CatchVar21:java.util.List*=n$82 [line 185];
+EXIT_SCOPE(n$82,n$84); [line 185];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node44.html"><span class='visited with_tooltip'>C_44<span class='tooltip'>node44 preds:45 succs:3 exn:3 Conditional exception handler
+n$84=_fun___instanceof(n$82:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 185];
+PRUNE(!n$84, false); [line 185];
+*&amp;return:java.util.List*=EXN n$82 [line 185];
+NULLIFY(&amp;version); [line 185];
+NULLIFY(&amp;sqlList); [line 185];
+EXIT_SCOPE(n$82,n$84,version,sqlList); [line 185];
+APPLY_ABSTRACTION; [line 185];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getExecSqlList%28java.lang.String%2Cjava.lang.String%29%3Ajava.util.List.17b60f12dfaefe604691e887a56e3e4f_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds: succs:43 44 exn:3 Instructions
+n$81=*&amp;return:java.util.List* [line 185];
+*&amp;return:java.util.List*=null [line 185];
+n$82=_fun___unwrap_exception(n$81:java.util.List*) [line 185];
+EXIT_SCOPE(n$81); [line 185];
+</span></span></a><br />@
+
+<span class='color_black'>java.util.List* List ZrLogUtil.getExecSqlList(String,String)(java.lang.String* sqlVersion, java.lang.String* basePath)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { @val$1 -> (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~> { CreateFile(List ZrLogUtil.getSqlFileList(String) at line 188) }, *),
+            return -> (Footprint({ @val$1* }) ~> { CreateFile(List ZrLogUtil.getSqlFileList(String) at line 188) }, *),
+            util.ZrLogUtil -> { LOGGER -> (Footprint({ @val$1* }) + Sanitizers({ StringConcatenation }) ~> { CreateFile(List ZrLogUtil.getSqlFileList(String) at line 188) }, *) } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= List ZrLogUtil.getExecSqlList(String,String)
+; translation_unit= common/src/main/java/com/zrlog/util/ZrLogUtil.java
+; access= Public
+; formals= [(sqlVersion,java.lang.String*);  (basePath,java.lang.String*)]
+; is_defined= true
+; loc= common/src/main/java/com/zrlog/util/ZrLogUtil.java:180
+; locals= [{ name= CatchVar168; typ= void; modify_in_block= false }; 
+           { name= $irvar16; typ= void; modify_in_block= false }; 
+           { name= $irvar15; typ= void; modify_in_block= false }; 
+           { name= $irvar14; typ= void; modify_in_block= false }; 
+           { name= $irvar13; typ= void; modify_in_block= false }; 
+           { name= $irvar12; typ= void; modify_in_block= false }; 
+           { name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $bcvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= CatchVar21; typ= void; modify_in_block= false }; 
+           { name= version; typ= java.lang.Integer*; modify_in_block= false }; 
+           { name= sqlList; typ= java.util.List*; modify_in_block= false }; 
+           { name= f; typ= java.io.File*; modify_in_block= false }; 
+           { name= fileVersion; typ= java.lang.Integer*; modify_in_block= false }; 
+           { name= entry; typ= java.util.Map$Entry*; modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }]
+; ret_type= java.util.List* 
+; proc_id= com.zrlog.util.ZrLogUtil.getExecSqlList(java.lang.String,java.lang.String):java.util.List }</pre>
+</body>
+</html>

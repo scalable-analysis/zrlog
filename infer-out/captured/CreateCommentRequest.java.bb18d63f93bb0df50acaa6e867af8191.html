@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File common/src/main/java/com/zrlog/common/request/CreateCommentRequest.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.common.request; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.google.gson.annotations.SerializedName; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">public class CreateCommentRequest { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.<init>%28%29.43a838772830c9cfda750382cbd40b4b_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.<init>%28%29.43a838772830c9cfda750382cbd40b4b_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 5];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.common.request.CreateCommentRequest*) [line 5];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.<init>%28%29.43a838772830c9cfda750382cbd40b4b_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.<init>%28%29.43a838772830c9cfda750382cbd40b4b_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.<init>%28%29.43a838772830c9cfda750382cbd40b4b_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.<init>%28%29.43a838772830c9cfda750382cbd40b4b.html">summary for CreateCommentRequest.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">    @SerializedName(value = &quot;webHome&quot;, alternate = {&quot;userHome&quot;, &quot;blog&quot;}) </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">    private String userHome; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">    @SerializedName(value = &quot;mail&quot;, alternate = {&quot;userMail&quot;}) </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">    private String mail; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    private String userIp; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">    private String userName; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    private String logId; </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    @SerializedName(value = &quot;comment&quot;, alternate = {&quot;userComment&quot;}) </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    private String comment; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    private String ip; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    private String userAgent; </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">    private int replyId; </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">    public String getUserHome() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserHome%28%29%3Ajava.lang.String.c4ed21d7100de9468ed9f48dc2cb9142_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getUserHome%28%29%3Ajava.lang.String.c4ed21d7100de9468ed9f48dc2cb9142.html">summary for String CreateCommentRequest.getUserHome()</a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">        return userHome; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserHome%28%29%3Ajava.lang.String.c4ed21d7100de9468ed9f48dc2cb9142_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 21];
+n$1=*n$0.userHome:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 21];
+*&amp;return:java.lang.String*=n$1 [line 21];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserHome%28%29%3Ajava.lang.String.c4ed21d7100de9468ed9f48dc2cb9142_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserHome%28%29%3Ajava.lang.String.c4ed21d7100de9468ed9f48dc2cb9142_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    public void setUserHome(String userHome) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserHome%28java.lang.String%29%3Avoid.491ed658429e41050cd940378e68cc47_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setUserHome%28java.lang.String%29%3Avoid.491ed658429e41050cd940378e68cc47.html">summary for void CreateCommentRequest.setUserHome(String)</a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">        this.userHome = userHome; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserHome%28java.lang.String%29%3Avoid.491ed658429e41050cd940378e68cc47_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 25];
+n$1=*&amp;userHome:java.lang.String* [line 25];
+*n$0.userHome:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 25];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserHome%28java.lang.String%29%3Avoid.491ed658429e41050cd940378e68cc47_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserHome%28java.lang.String%29%3Avoid.491ed658429e41050cd940378e68cc47_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserHome%28java.lang.String%29%3Avoid.491ed658429e41050cd940378e68cc47_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">    public String getMail() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getMail%28%29%3Ajava.lang.String.716ccb4ee810240eeade2a1b0aa524a5_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getMail%28%29%3Ajava.lang.String.716ccb4ee810240eeade2a1b0aa524a5.html">summary for String CreateCommentRequest.getMail()</a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">        return mail; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getMail%28%29%3Ajava.lang.String.716ccb4ee810240eeade2a1b0aa524a5_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 29];
+n$1=*n$0.mail:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 29];
+*&amp;return:java.lang.String*=n$1 [line 29];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getMail%28%29%3Ajava.lang.String.716ccb4ee810240eeade2a1b0aa524a5_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getMail%28%29%3Ajava.lang.String.716ccb4ee810240eeade2a1b0aa524a5_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">    public void setMail(String mail) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setMail%28java.lang.String%29%3Avoid.f0665740ff42745e495f259948d85d50_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setMail%28java.lang.String%29%3Avoid.f0665740ff42745e495f259948d85d50.html">summary for void CreateCommentRequest.setMail(String)</a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">        this.mail = mail; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setMail%28java.lang.String%29%3Avoid.f0665740ff42745e495f259948d85d50_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 33];
+n$1=*&amp;mail:java.lang.String* [line 33];
+*n$0.mail:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 33];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setMail%28java.lang.String%29%3Avoid.f0665740ff42745e495f259948d85d50_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setMail%28java.lang.String%29%3Avoid.f0665740ff42745e495f259948d85d50_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setMail%28java.lang.String%29%3Avoid.f0665740ff42745e495f259948d85d50_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">    public String getUserIp() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserIp%28%29%3Ajava.lang.String.ee8c2b66d45cb3e438e8e08d19775c4f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getUserIp%28%29%3Ajava.lang.String.ee8c2b66d45cb3e438e8e08d19775c4f.html">summary for String CreateCommentRequest.getUserIp()</a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">        return userIp; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserIp%28%29%3Ajava.lang.String.ee8c2b66d45cb3e438e8e08d19775c4f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 37];
+n$1=*n$0.userIp:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 37];
+*&amp;return:java.lang.String*=n$1 [line 37];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserIp%28%29%3Ajava.lang.String.ee8c2b66d45cb3e438e8e08d19775c4f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserIp%28%29%3Ajava.lang.String.ee8c2b66d45cb3e438e8e08d19775c4f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">    public void setUserIp(String userIp) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserIp%28java.lang.String%29%3Avoid.967d439bc4f1951ca4a5f6f57b1423bd_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setUserIp%28java.lang.String%29%3Avoid.967d439bc4f1951ca4a5f6f57b1423bd.html">summary for void CreateCommentRequest.setUserIp(String)</a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">        this.userIp = userIp; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserIp%28java.lang.String%29%3Avoid.967d439bc4f1951ca4a5f6f57b1423bd_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 41];
+n$1=*&amp;userIp:java.lang.String* [line 41];
+*n$0.userIp:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 41];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserIp%28java.lang.String%29%3Avoid.967d439bc4f1951ca4a5f6f57b1423bd_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserIp%28java.lang.String%29%3Avoid.967d439bc4f1951ca4a5f6f57b1423bd_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserIp%28java.lang.String%29%3Avoid.967d439bc4f1951ca4a5f6f57b1423bd_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">    public String getUserName() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserName%28%29%3Ajava.lang.String.28ab8f60b8dbc8212abe5db3514259c3_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getUserName%28%29%3Ajava.lang.String.28ab8f60b8dbc8212abe5db3514259c3.html">summary for String CreateCommentRequest.getUserName()</a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">        return userName; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserName%28%29%3Ajava.lang.String.28ab8f60b8dbc8212abe5db3514259c3_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 45];
+n$1=*n$0.userName:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 45];
+*&amp;return:java.lang.String*=n$1 [line 45];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserName%28%29%3Ajava.lang.String.28ab8f60b8dbc8212abe5db3514259c3_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserName%28%29%3Ajava.lang.String.28ab8f60b8dbc8212abe5db3514259c3_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">    public void setUserName(String userName) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserName%28java.lang.String%29%3Avoid.a262049b3dd0f120be25a0c374f4a8f9_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setUserName%28java.lang.String%29%3Avoid.a262049b3dd0f120be25a0c374f4a8f9.html">summary for void CreateCommentRequest.setUserName(String)</a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">        this.userName = userName; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserName%28java.lang.String%29%3Avoid.a262049b3dd0f120be25a0c374f4a8f9_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 49];
+n$1=*&amp;userName:java.lang.String* [line 49];
+*n$0.userName:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 49];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserName%28java.lang.String%29%3Avoid.a262049b3dd0f120be25a0c374f4a8f9_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserName%28java.lang.String%29%3Avoid.a262049b3dd0f120be25a0c374f4a8f9_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserName%28java.lang.String%29%3Avoid.a262049b3dd0f120be25a0c374f4a8f9_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">    public String getLogId() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getLogId%28%29%3Ajava.lang.String.90d7246f1b222fa82c7a073c6db8419d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getLogId%28%29%3Ajava.lang.String.90d7246f1b222fa82c7a073c6db8419d.html">summary for String CreateCommentRequest.getLogId()</a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">        return logId; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getLogId%28%29%3Ajava.lang.String.90d7246f1b222fa82c7a073c6db8419d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 53];
+n$1=*n$0.logId:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 53];
+*&amp;return:java.lang.String*=n$1 [line 53];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getLogId%28%29%3Ajava.lang.String.90d7246f1b222fa82c7a073c6db8419d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getLogId%28%29%3Ajava.lang.String.90d7246f1b222fa82c7a073c6db8419d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">    public void setLogId(String logId) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setLogId%28java.lang.String%29%3Avoid.fa1df154dd85e34c4bea00401caf26da_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setLogId%28java.lang.String%29%3Avoid.fa1df154dd85e34c4bea00401caf26da.html">summary for void CreateCommentRequest.setLogId(String)</a></td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">        this.logId = logId; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setLogId%28java.lang.String%29%3Avoid.fa1df154dd85e34c4bea00401caf26da_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 57];
+n$1=*&amp;logId:java.lang.String* [line 57];
+*n$0.logId:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 57];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setLogId%28java.lang.String%29%3Avoid.fa1df154dd85e34c4bea00401caf26da_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setLogId%28java.lang.String%29%3Avoid.fa1df154dd85e34c4bea00401caf26da_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setLogId%28java.lang.String%29%3Avoid.fa1df154dd85e34c4bea00401caf26da_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">    public String getComment() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getComment%28%29%3Ajava.lang.String.719a8448ab4d2d42e238c1475caa36e0_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getComment%28%29%3Ajava.lang.String.719a8448ab4d2d42e238c1475caa36e0.html">summary for String CreateCommentRequest.getComment()</a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">        return comment; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getComment%28%29%3Ajava.lang.String.719a8448ab4d2d42e238c1475caa36e0_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 61];
+n$1=*n$0.comment:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 61];
+*&amp;return:java.lang.String*=n$1 [line 61];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getComment%28%29%3Ajava.lang.String.719a8448ab4d2d42e238c1475caa36e0_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getComment%28%29%3Ajava.lang.String.719a8448ab4d2d42e238c1475caa36e0_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">    public void setComment(String comment) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setComment%28java.lang.String%29%3Avoid.ab5f6e71f4e16b8beded8f3aec02b5ff_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setComment%28java.lang.String%29%3Avoid.ab5f6e71f4e16b8beded8f3aec02b5ff.html">summary for void CreateCommentRequest.setComment(String)</a></td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">        this.comment = comment; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setComment%28java.lang.String%29%3Avoid.ab5f6e71f4e16b8beded8f3aec02b5ff_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 65];
+n$1=*&amp;comment:java.lang.String* [line 65];
+*n$0.comment:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 65];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setComment%28java.lang.String%29%3Avoid.ab5f6e71f4e16b8beded8f3aec02b5ff_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setComment%28java.lang.String%29%3Avoid.ab5f6e71f4e16b8beded8f3aec02b5ff_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setComment%28java.lang.String%29%3Avoid.ab5f6e71f4e16b8beded8f3aec02b5ff_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">    public String getIp() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getIp%28%29%3Ajava.lang.String.ea935fb83b6aeddc5cea529e60e475da_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getIp%28%29%3Ajava.lang.String.ea935fb83b6aeddc5cea529e60e475da.html">summary for String CreateCommentRequest.getIp()</a></td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">        return ip; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getIp%28%29%3Ajava.lang.String.ea935fb83b6aeddc5cea529e60e475da_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 69];
+n$1=*n$0.ip:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 69];
+*&amp;return:java.lang.String*=n$1 [line 69];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getIp%28%29%3Ajava.lang.String.ea935fb83b6aeddc5cea529e60e475da_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getIp%28%29%3Ajava.lang.String.ea935fb83b6aeddc5cea529e60e475da_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">    public void setIp(String ip) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setIp%28java.lang.String%29%3Avoid.5c8ef095726cc694a75d44da2ed57420_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setIp%28java.lang.String%29%3Avoid.5c8ef095726cc694a75d44da2ed57420.html">summary for void CreateCommentRequest.setIp(String)</a></td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">        this.ip = ip; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setIp%28java.lang.String%29%3Avoid.5c8ef095726cc694a75d44da2ed57420_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 73];
+n$1=*&amp;ip:java.lang.String* [line 73];
+*n$0.ip:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 73];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setIp%28java.lang.String%29%3Avoid.5c8ef095726cc694a75d44da2ed57420_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setIp%28java.lang.String%29%3Avoid.5c8ef095726cc694a75d44da2ed57420_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setIp%28java.lang.String%29%3Avoid.5c8ef095726cc694a75d44da2ed57420_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">    public String getUserAgent() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserAgent%28%29%3Ajava.lang.String.840a506f3160cff44d6096046db7a2cc_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getUserAgent%28%29%3Ajava.lang.String.840a506f3160cff44d6096046db7a2cc.html">summary for String CreateCommentRequest.getUserAgent()</a></td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">        return userAgent; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserAgent%28%29%3Ajava.lang.String.840a506f3160cff44d6096046db7a2cc_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 77];
+n$1=*n$0.userAgent:java.lang.String*(root com.zrlog.common.request.CreateCommentRequest) [line 77];
+*&amp;return:java.lang.String*=n$1 [line 77];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserAgent%28%29%3Ajava.lang.String.840a506f3160cff44d6096046db7a2cc_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getUserAgent%28%29%3Ajava.lang.String.840a506f3160cff44d6096046db7a2cc_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">    public void setUserAgent(String userAgent) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserAgent%28java.lang.String%29%3Avoid.a372ccce4bf2736f3806d49fefe658c7_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setUserAgent%28java.lang.String%29%3Avoid.a372ccce4bf2736f3806d49fefe658c7.html">summary for void CreateCommentRequest.setUserAgent(String)</a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">        this.userAgent = userAgent; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserAgent%28java.lang.String%29%3Avoid.a372ccce4bf2736f3806d49fefe658c7_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 81];
+n$1=*&amp;userAgent:java.lang.String* [line 81];
+*n$0.userAgent:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 81];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserAgent%28java.lang.String%29%3Avoid.a372ccce4bf2736f3806d49fefe658c7_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserAgent%28java.lang.String%29%3Avoid.a372ccce4bf2736f3806d49fefe658c7_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setUserAgent%28java.lang.String%29%3Avoid.a372ccce4bf2736f3806d49fefe658c7_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">    public int getReplyId() { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getReplyId%28%29%3Aint.f27d1dfee184e08fb138811299fe16cf_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.getReplyId%28%29%3Aint.f27d1dfee184e08fb138811299fe16cf.html">summary for int CreateCommentRequest.getReplyId()</a></td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">        return replyId; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getReplyId%28%29%3Aint.f27d1dfee184e08fb138811299fe16cf_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 85];
+n$1=*n$0.replyId:int(root com.zrlog.common.request.CreateCommentRequest) [line 85];
+*&amp;return:int=n$1 [line 85];
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getReplyId%28%29%3Aint.f27d1dfee184e08fb138811299fe16cf_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.getReplyId%28%29%3Aint.f27d1dfee184e08fb138811299fe16cf_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">    public void setReplyId(int replyId) { <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setReplyId%28int%29%3Avoid.04f4554c763beca3afc4abe7b8c05d97_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/com.zrlog.common.request.CreateCommentRequest.setReplyId%28int%29%3Avoid.04f4554c763beca3afc4abe7b8c05d97.html">summary for void CreateCommentRequest.setReplyId(int)</a></td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">        this.replyId = replyId; <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setReplyId%28int%29%3Avoid.04f4554c763beca3afc4abe7b8c05d97_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateCommentRequest* [line 89];
+n$1=*&amp;replyId:int [line 89];
+*n$0.replyId:com.zrlog.common.request.CreateCommentRequest(root com.zrlog.common.request.CreateCommentRequest)=n$1 [line 89];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line">    } <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setReplyId%28int%29%3Avoid.04f4554c763beca3afc4abe7b8c05d97_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setReplyId%28int%29%3Avoid.04f4554c763beca3afc4abe7b8c05d97_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateCommentRequest.java.bb18d63f93bb0df50acaa6e867af8191/nodes/com.zrlog.common.request.CreateCommentRequest.setReplyId%28int%29%3Avoid.04f4554c763beca3afc4abe7b8c05d97_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_1" [label="1: Start Boolean LoginRequest.getHttps()\nFormals:  this:com.zrlog.common.request.LoginRequest*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_1" -> "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_4" ;
+"com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_2" [label="2: Exit Boolean LoginRequest.getHttps() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_3" -> "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_2" ;
+"com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_4" [label="4:  method_body \n   n$0=*&this:com.zrlog.common.request.LoginRequest* [line 35]\n  n$1=*n$0.https:java.lang.Boolean*(root com.zrlog.common.request.LoginRequest) [line 35]\n  *&return:java.lang.Boolean*=n$1 [line 35]\n  NULLIFY(&this); [line 35]\n  EXIT_SCOPE(n$0,n$1,this); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_4" -> "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_2" ;
+	 "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_4" -> "com.zrlog.common.request.LoginRequest.getHttps():java.lang.Boolean.80f64eaad1e3da40a472d626edb49fc6_3" [color="red" ];
+}

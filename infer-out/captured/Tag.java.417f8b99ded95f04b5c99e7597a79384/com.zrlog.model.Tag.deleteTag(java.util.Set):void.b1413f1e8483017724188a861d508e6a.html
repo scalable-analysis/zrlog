@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Tag.deleteTag(java.util.Set):void.b1413f1e8483017724188a861d508e6a</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE103">void Tag.deleteTag(Set)</a></h1></center>
+<a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:29 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 114];
+NULLIFY(&amp;$irvar9); [line 114];
+NULLIFY(&amp;del); [line 114];
+NULLIFY(&amp;$bcvar2); [line 114];
+NULLIFY(&amp;$irvar5); [line 114];
+NULLIFY(&amp;$irvar4); [line 114];
+NULLIFY(&amp;$irvar7); [line 114];
+NULLIFY(&amp;$irvar6); [line 114];
+NULLIFY(&amp;$irvar0); [line 114];
+NULLIFY(&amp;$irvar8); [line 114];
+NULLIFY(&amp;$irvar1); [line 114];
+NULLIFY(&amp;t); [line 114];
+NULLIFY(&amp;$irvar2); [line 114];
+EXIT_SCOPE($irvar3,$irvar9,del,$bcvar2,$irvar5,$irvar4,$irvar7,$irvar6,$irvar0,$irvar8,$irvar1,t,$irvar2); [line 114];
+APPLY_ABSTRACTION; [line 114];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;old:java.util.Set* [line 104];
+_=*n$0:java.util.Set*(root java.util.Set) [line 104];
+n$2=_fun_Iterator Set.iterator()(n$0:java.util.Set*) interface virtual [line 104];
+*&amp;$bcvar2:java.util.Iterator*=n$2 [line 104];
+NULLIFY(&amp;old); [line 104];
+EXIT_SCOPE(_,n$0,n$2,old); [line 104];
+APPLY_ABSTRACTION; [line 104];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:28 27 16 4 succs:8 exn:3 Instructions
+n$3=*&amp;$bcvar2:java.util.Iterator* [line 104];
+_=*n$3:java.util.Iterator*(root java.util.Iterator) [line 104];
+n$5=_fun_boolean Iterator.hasNext()(n$3:java.util.Iterator*) interface virtual [line 104];
+*&amp;$irvar0:_Bool=n$5 [line 104];
+EXIT_SCOPE(_,n$3,n$5); [line 104];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:8 succs:9 exn:3 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 104];
+PRUNE(!(n$6 == 0), true); [line 104];
+NULLIFY(&amp;$irvar0); [line 104];
+EXIT_SCOPE(n$6,$irvar0); [line 104];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:8 succs:29 exn:3 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 104];
+PRUNE((n$6 == 0), false); [line 104];
+NULLIFY(&amp;$bcvar2); [line 104];
+NULLIFY(&amp;$irvar0); [line 104];
+EXIT_SCOPE(n$6,$bcvar2,$irvar0); [line 104];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node8.html"><span class='visited with_tooltip'>J_8<span class='tooltip'>node8 preds:5 succs:6 7 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:6 succs:10 exn:3 Instructions
+n$7=*&amp;$bcvar2:java.util.Iterator* [line 104];
+_=*n$7:java.util.Iterator*(root java.util.Iterator) [line 104];
+n$9=_fun_Object Iterator.next()(n$7:java.util.Iterator*) interface virtual [line 104];
+*&amp;$irvar1:java.lang.Object*=n$9 [line 104];
+EXIT_SCOPE(_,n$7,n$9); [line 104];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$10=*&amp;$irvar1:java.lang.Object* [line 104];
+n$11=_fun___cast(n$10:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 104];
+*&amp;del:java.lang.String*=n$11 [line 104];
+NULLIFY(&amp;$irvar1); [line 104];
+EXIT_SCOPE(n$10,n$11,$irvar1); [line 104];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$12=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 105];
+*&amp;$irvar2:java.lang.Object*[_*_](*)=n$12 [line 105];
+EXIT_SCOPE(n$12); [line 105];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$13=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 105];
+n$14=*&amp;del:java.lang.String* [line 105];
+*n$13[0]:java.lang.String*=n$14 [line 105];
+NULLIFY(&amp;del); [line 105];
+EXIT_SCOPE(n$13,n$14,del); [line 105];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$15=*&amp;this:com.zrlog.model.Tag* [line 105];
+_=*n$15:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 105];
+n$17=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 105];
+n$18=_fun_Model Model.findFirst(String,Object[])(n$15:com.zrlog.model.Tag*,"select * from tag where text=?":java.lang.Object*,n$17:java.lang.Object*[_*_](*)) virtual [line 105];
+*&amp;$irvar3:com.jfinal.plugin.activerecord.Model*=n$18 [line 105];
+NULLIFY(&amp;$irvar2); [line 105];
+EXIT_SCOPE(_,n$15,n$17,n$18,$irvar2); [line 105];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:17 exn:3 Instructions
+n$19=*&amp;$irvar3:com.jfinal.plugin.activerecord.Model* [line 105];
+n$20=_fun___cast(n$19:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Tag;sub_t=( sub )(cast)):void) [line 105];
+*&amp;t:com.zrlog.model.Tag*=n$20 [line 105];
+NULLIFY(&amp;$irvar3); [line 105];
+EXIT_SCOPE(n$19,n$20,$irvar3); [line 105];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:17 succs:18 exn:3 Conditional method_body
+n$21=*&amp;t:com.zrlog.model.Tag* [line 106];
+PRUNE(!(n$21 == null), true); [line 106];
+EXIT_SCOPE(n$21); [line 106];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:17 succs:5 exn:3 Conditional method_body
+n$21=*&amp;t:com.zrlog.model.Tag* [line 106];
+PRUNE((n$21 == null), false); [line 106];
+NULLIFY(&amp;t); [line 106];
+EXIT_SCOPE(n$21,t); [line 106];
+APPLY_ABSTRACTION; [line 106];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node17.html"><span class='visited with_tooltip'>J_17<span class='tooltip'>node17 preds:14 succs:15 16 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:15 succs:19 exn:3 Instructions
+n$22=*&amp;t:com.zrlog.model.Tag* [line 107];
+_=*n$22:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 107];
+n$24=_fun_Integer Model.getInt(String)(n$22:com.zrlog.model.Tag*,"count":java.lang.Object*) virtual [line 107];
+*&amp;$irvar4:java.lang.Integer*=n$24 [line 107];
+EXIT_SCOPE(_,n$22,n$24); [line 107];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:22 exn:3 Instructions
+n$25=*&amp;$irvar4:java.lang.Integer* [line 107];
+_=*n$25:java.lang.Integer*(root java.lang.Integer) [line 107];
+n$27=_fun_int Integer.intValue()(n$25:java.lang.Integer*) virtual [line 107];
+*&amp;$irvar5:int=n$27 [line 107];
+NULLIFY(&amp;$irvar4); [line 107];
+EXIT_SCOPE(_,n$25,n$27,$irvar4); [line 107];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node20.html"><span class='visited with_tooltip'>C_20<span class='tooltip'>node20 preds:22 succs:23 exn:3 Conditional method_body
+n$28=*&amp;$irvar5:int [line 107];
+PRUNE(!(n$28  &lt;=  1), true); [line 107];
+NULLIFY(&amp;$irvar5); [line 107];
+EXIT_SCOPE(n$28,$irvar5); [line 107];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node21.html"><span class='visited with_tooltip'>C_21<span class='tooltip'>node21 preds:22 succs:28 exn:3 Conditional method_body
+n$28=*&amp;$irvar5:int [line 107];
+PRUNE((n$28  &lt;=  1), false); [line 107];
+NULLIFY(&amp;$irvar5); [line 107];
+EXIT_SCOPE(n$28,$irvar5); [line 107];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node22.html"><span class='visited with_tooltip'>J_22<span class='tooltip'>node22 preds:19 succs:20 21 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:20 succs:24 exn:3 Instructions
+n$29=*&amp;t:com.zrlog.model.Tag* [line 108];
+_=*n$29:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 108];
+n$31=_fun_Integer Model.getInt(String)(n$29:com.zrlog.model.Tag*,"count":java.lang.Object*) virtual [line 108];
+*&amp;$irvar6:java.lang.Integer*=n$31 [line 108];
+EXIT_SCOPE(_,n$29,n$31); [line 108];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$32=*&amp;$irvar6:java.lang.Integer* [line 108];
+_=*n$32:java.lang.Integer*(root java.lang.Integer) [line 108];
+n$34=_fun_int Integer.intValue()(n$32:java.lang.Integer*) virtual [line 108];
+*&amp;$irvar7:int=n$34 [line 108];
+NULLIFY(&amp;$irvar6); [line 108];
+EXIT_SCOPE(_,n$32,n$34,$irvar6); [line 108];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$35=*&amp;$irvar7:int [line 108];
+n$36=_fun_Integer Integer.valueOf(int)((n$35 - 1):int) [line 108];
+*&amp;$irvar8:java.lang.Integer*=n$36 [line 108];
+NULLIFY(&amp;$irvar7); [line 108];
+EXIT_SCOPE(n$35,n$36,$irvar7); [line 108];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$37=*&amp;t:com.zrlog.model.Tag* [line 108];
+_=*n$37:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 108];
+n$39=*&amp;$irvar8:java.lang.Integer* [line 108];
+n$40=_fun_Model Model.set(String,Object)(n$37:com.zrlog.model.Tag*,"count":java.lang.Object*,n$39:java.lang.Integer*) virtual [line 108];
+*&amp;$irvar9:com.jfinal.plugin.activerecord.Model*=n$40 [line 108];
+NULLIFY(&amp;$irvar8); [line 108];
+NULLIFY(&amp;t); [line 108];
+EXIT_SCOPE(_,n$37,n$39,n$40,$irvar8,t); [line 108];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:5 exn:3 Instructions
+n$41=*&amp;$irvar9:com.jfinal.plugin.activerecord.Model* [line 108];
+n$42=_fun___cast(n$41:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Tag;sub_t=( sub )(cast)):void) [line 108];
+_=*n$42:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 108];
+n$44=_fun_boolean Model.update()(n$42:com.zrlog.model.Tag*) virtual [line 108];
+*&amp;$irvar10:_Bool=n$44 [line 108];
+NULLIFY(&amp;$irvar9); [line 108];
+NULLIFY(&amp;$irvar10); [line 108];
+EXIT_SCOPE(_,n$41,n$42,n$44,$irvar9,$irvar10); [line 108];
+APPLY_ABSTRACTION; [line 108];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:21 succs:5 exn:3 Instructions
+n$45=*&amp;t:com.zrlog.model.Tag* [line 110];
+_=*n$45:com.zrlog.model.Tag*(root com.zrlog.model.Tag) [line 110];
+n$47=_fun_boolean Model.delete()(n$45:com.zrlog.model.Tag*) virtual [line 110];
+*&amp;$irvar11:_Bool=n$47 [line 110];
+NULLIFY(&amp;$irvar11); [line 110];
+NULLIFY(&amp;t); [line 110];
+EXIT_SCOPE(_,n$45,n$47,$irvar11,t); [line 110];
+APPLY_ABSTRACTION; [line 110];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.deleteTag%28java.util.Set%29%3Avoid.b1413f1e8483017724188a861d508e6a_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:7 succs:2 exn:3 Instructions
+APPLY_ABSTRACTION; [line 114];
+</span></span></a><br />@
+
+<span class='color_black'>void void Tag.deleteTag(Set)(com.zrlog.model.Tag* this, java.util.Set* old)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= void Tag.deleteTag(Set)
+; translation_unit= data/src/main/java/com/zrlog/model/Tag.java
+; access= Private
+; formals= [(this,com.zrlog.model.Tag*);  (old,java.util.Set*)]
+; is_defined= true
+; loc= data/src/main/java/com/zrlog/model/Tag.java:103
+; locals= [{ name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= $bcvar2; typ= void; modify_in_block= false }; 
+           { name= del; typ= java.lang.String*; modify_in_block= false }; 
+           { name= t; typ= com.zrlog.model.Tag*; modify_in_block= false }]
+; ret_type= void 
+; proc_id= com.zrlog.model.Tag.deleteTag(java.util.Set):void }</pre>
+</body>
+</html>

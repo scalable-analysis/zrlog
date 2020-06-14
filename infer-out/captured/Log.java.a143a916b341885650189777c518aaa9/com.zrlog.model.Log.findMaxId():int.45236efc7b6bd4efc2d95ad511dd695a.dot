@@ -1,0 +1,60 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_1" [label="1: Start int Log.findMaxId()\nFormals:  this:com.zrlog.model.Log*\nLocals:  $irvar3:void $irvar2:void $irvar1:void $irvar0:void log:com.zrlog.model.Log* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_1" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_4" ;
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_2" [label="2: Exit int Log.findMaxId() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 90]\n  NULLIFY(&log); [line 90]\n  NULLIFY(&$irvar0); [line 90]\n  NULLIFY(&$irvar1); [line 90]\n  NULLIFY(&$irvar2); [line 90]\n  EXIT_SCOPE($irvar3,log,$irvar0,$irvar1,$irvar2); [line 90]\n  APPLY_ABSTRACTION; [line 90]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_2" ;
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_4" [label="4:  Call Model Model.findFirst(String) \n   n$0=*&this:com.zrlog.model.Log* [line 86]\n  _=*n$0:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 86]\n  n$2=_fun_Model Model.findFirst(String)(n$0:com.zrlog.model.Log*,\"select max(logId) max from log\":java.lang.Object*) virtual [line 86]\n  *&$irvar0:com.jfinal.plugin.activerecord.Model*=n$2 [line 86]\n  NULLIFY(&this); [line 86]\n  EXIT_SCOPE(_,n$0,n$2,this); [line 86]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_4" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_5" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_4" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_5" [label="5:  method_body \n   n$3=*&$irvar0:com.jfinal.plugin.activerecord.Model* [line 86]\n  n$4=_fun___cast(n$3:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 86]\n  *&log:com.zrlog.model.Log*=n$4 [line 86]\n  NULLIFY(&$irvar0); [line 86]\n  EXIT_SCOPE(n$3,n$4,$irvar0); [line 86]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_5" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_6" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_5" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_6" [label="6:  Call Integer Model.getInt(String) \n   n$5=*&log:com.zrlog.model.Log* [line 87]\n  _=*n$5:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 87]\n  n$7=_fun_Integer Model.getInt(String)(n$5:com.zrlog.model.Log*,\"max\":java.lang.Object*) virtual [line 87]\n  *&$irvar1:java.lang.Integer*=n$7 [line 87]\n  EXIT_SCOPE(_,n$5,n$7); [line 87]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_6" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_7" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_6" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_8" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_6" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_7" [label="7: Prune (true branch, if) \n   n$8=*&$irvar1:java.lang.Integer* [line 87]\n  PRUNE(!(n$8 == null), true); [line 87]\n  NULLIFY(&$irvar1); [line 87]\n  EXIT_SCOPE(n$8,$irvar1); [line 87]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_7" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_9" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_7" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_8" [label="8: Prune (false branch, if) \n   n$8=*&$irvar1:java.lang.Integer* [line 87]\n  PRUNE((n$8 == null), false); [line 87]\n  NULLIFY(&log); [line 87]\n  NULLIFY(&$irvar1); [line 87]\n  EXIT_SCOPE(n$8,log,$irvar1); [line 87]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_8" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_12" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_8" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_9" [label="9:  Call Integer Model.getInt(String) \n   n$9=*&log:com.zrlog.model.Log* [line 88]\n  _=*n$9:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 88]\n  n$11=_fun_Integer Model.getInt(String)(n$9:com.zrlog.model.Log*,\"max\":java.lang.Object*) virtual [line 88]\n  *&$irvar2:java.lang.Integer*=n$11 [line 88]\n  NULLIFY(&log); [line 88]\n  EXIT_SCOPE(_,n$9,n$11,log); [line 88]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_9" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_10" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_9" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_10" [label="10:  Call int Integer.intValue() \n   n$12=*&$irvar2:java.lang.Integer* [line 88]\n  _=*n$12:java.lang.Integer*(root java.lang.Integer) [line 88]\n  n$14=_fun_int Integer.intValue()(n$12:java.lang.Integer*) virtual [line 88]\n  *&$irvar3:int=n$14 [line 88]\n  NULLIFY(&$irvar2); [line 88]\n  EXIT_SCOPE(_,n$12,n$14,$irvar2); [line 88]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_10" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_11" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_10" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_11" [label="11:  method_body \n   n$15=*&$irvar3:int [line 88]\n  *&return:int=n$15 [line 88]\n  NULLIFY(&$irvar3); [line 88]\n  EXIT_SCOPE(n$15,$irvar3); [line 88]\n  APPLY_ABSTRACTION; [line 88]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_11" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_2" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_11" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+"com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_12" [label="12:  method_body \n   *&return:int=0 [line 90]\n  APPLY_ABSTRACTION; [line 90]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_12" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_2" ;
+	 "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_12" -> "com.zrlog.model.Log.findMaxId():int.45236efc7b6bd4efc2d95ad511dd695a_3" [color="red" ];
+}

@@ -1,0 +1,92 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_1" [label="1: Start boolean ZrLogUtil.isInternalHostName(String)\nFormals:  name:java.lang.String*\nLocals:  CatchVar25:void $T0_24:void $irvar1:void $irvar0:void e:java.net.UnknownHostException* address:java.net.InetAddress* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_1" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_4" ;
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_2" [label="2: Exit boolean ZrLogUtil.isInternalHostName(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" [label="3:  exceptions sink \n   NULLIFY(&CatchVar25); [line 242]\n  EXIT_SCOPE(n$13,CatchVar25); [line 242]\n  APPLY_ABSTRACTION; [line 242]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_2" ;
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_4" [label="4:  Call InetAddress InetAddress.getByName(String) \n   n$0=*&name:java.lang.String* [line 238]\n  n$1=_fun_InetAddress InetAddress.getByName(String)(n$0:java.lang.String*) [line 238]\n  *&address:java.net.InetAddress*=n$1 [line 238]\n  NULLIFY(&name); [line 238]\n  EXIT_SCOPE(n$0,n$1,name); [line 238]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_4" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_5" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_4" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_5" [label="5:  Call boolean InetAddress.isSiteLocalAddress() \n   n$2=*&address:java.net.InetAddress* [line 239]\n  _=*n$2:java.net.InetAddress*(root java.net.InetAddress) [line 239]\n  n$4=_fun_boolean InetAddress.isSiteLocalAddress()(n$2:java.net.InetAddress*) virtual [line 239]\n  *&$irvar0:_Bool=n$4 [line 239]\n  EXIT_SCOPE(_,n$2,n$4); [line 239]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_5" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_6" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_5" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_7" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_5" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_6" [label="6: Prune (true branch, if) \n   n$5=*&$irvar0:_Bool [line 239]\n  PRUNE(!(n$5 != 0), true); [line 239]\n  NULLIFY(&$irvar0); [line 239]\n  EXIT_SCOPE(n$5,$irvar0); [line 239]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_6" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_8" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_6" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_7" [label="7: Prune (false branch, if) \n   n$5=*&$irvar0:_Bool [line 239]\n  PRUNE((n$5 != 0), false); [line 239]\n  NULLIFY(&address); [line 239]\n  NULLIFY(&$irvar0); [line 239]\n  EXIT_SCOPE(n$5,address,$irvar0); [line 239]\n  APPLY_ABSTRACTION; [line 239]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_7" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_11" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_7" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_8" [label="8:  Call boolean InetAddress.isLoopbackAddress() \n   n$6=*&address:java.net.InetAddress* [line 239]\n  _=*n$6:java.net.InetAddress*(root java.net.InetAddress) [line 239]\n  n$8=_fun_boolean InetAddress.isLoopbackAddress()(n$6:java.net.InetAddress*) virtual [line 239]\n  *&$irvar1:_Bool=n$8 [line 239]\n  NULLIFY(&address); [line 239]\n  EXIT_SCOPE(_,n$6,n$8,address); [line 239]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_8" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_9" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_8" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_10" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_8" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_9" [label="9: Prune (true branch, if) \n   n$9=*&$irvar1:_Bool [line 239]\n  PRUNE(!(n$9 == 0), true); [line 239]\n  NULLIFY(&$irvar1); [line 239]\n  EXIT_SCOPE(n$9,$irvar1); [line 239]\n  APPLY_ABSTRACTION; [line 239]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_9" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_11" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_9" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_10" [label="10: Prune (false branch, if) \n   n$9=*&$irvar1:_Bool [line 239]\n  PRUNE((n$9 == 0), false); [line 239]\n  NULLIFY(&$irvar1); [line 239]\n  EXIT_SCOPE(n$9,$irvar1); [line 239]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_10" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_12" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_10" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_11" [label="11:  method_body \n   *&$T0_24:int=1 [line 239]\n  APPLY_ABSTRACTION; [line 239]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_11" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_13" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_11" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_12" [label="12:  method_body \n   *&$T0_24:int=0 [line 239]\n  APPLY_ABSTRACTION; [line 239]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_12" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_13" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_12" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_13" [label="13:  method_body \n   n$10=*&$T0_24:int [line 239]\n  *&return:_Bool=n$10 [line 239]\n  NULLIFY(&$T0_24); [line 239]\n  EXIT_SCOPE(n$10,$T0_24); [line 239]\n  APPLY_ABSTRACTION; [line 239]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_13" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_2" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_13" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_14" [label="14:  method_body \n   n$11=*&CatchVar25:java.lang.Object* [line 240]\n  *&e:java.lang.Object*=n$11 [line 240]\n  NULLIFY(&CatchVar25); [line 240]\n  NULLIFY(&e); [line 240]\n  EXIT_SCOPE(n$11,CatchVar25,e); [line 240]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_14" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_15" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_14" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_15" [label="15:  method_body \n   *&return:_Bool=0 [line 242]\n  APPLY_ABSTRACTION; [line 242]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_15" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_2" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_15" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_16" [label="16: Prune (true branch, switch) \n   n$14=_fun___instanceof(n$13:java.net.UnknownHostException*,sizeof(t=java.net.UnknownHostException):void) [line 240]\n  PRUNE(n$14, true); [line 240]\n  *&CatchVar25:_Bool=n$13 [line 240]\n  EXIT_SCOPE(n$13,n$14); [line 240]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_16" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_14" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_16" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_17" [label="17: Prune (false branch, switch) \n   n$14=_fun___instanceof(n$13:java.net.UnknownHostException*,sizeof(t=java.net.UnknownHostException):void) [line 240]\n  PRUNE(!n$14, false); [line 240]\n  *&return:_Bool=EXN n$13 [line 240]\n  EXIT_SCOPE(n$13,n$14); [line 240]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_17" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_17" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" [label="18:  exception handler \n   n$12=*&return:_Bool [line 240]\n  *&return:_Bool=null [line 240]\n  n$13=_fun___unwrap_exception(n$12:_Bool) [line 240]\n  NULLIFY(&address); [line 240]\n  NULLIFY(&$T0_24); [line 240]\n  NULLIFY(&$irvar0); [line 240]\n  NULLIFY(&$irvar1); [line 240]\n  EXIT_SCOPE(n$12,address,$T0_24,$irvar0,$irvar1); [line 240]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_16" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_17" ;
+	 "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_18" -> "com.zrlog.util.ZrLogUtil.isInternalHostName(java.lang.String):boolean.0315b9495ad26460c2635850bfb2ca36_3" [color="red" ];
+}

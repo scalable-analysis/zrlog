@@ -1,0 +1,120 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_1" [label="1: Start void PluginGhostThread.run()\nFormals:  this:com.zrlog.web.plugin.PluginGhostThread*\nLocals:  CatchVar58:void $irvar1:void $irvar0:void $bcvar2:void CatchVar34:void socket:java.net.Socket* e:java.io.IOException* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_1" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_4" ;
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_2" [label="2: Exit void PluginGhostThread.run() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [label="3:  exceptions sink \n   NULLIFY(&CatchVar58); [line 47]\n  NULLIFY(&CatchVar34); [line 47]\n  NULLIFY(&socket); [line 47]\n  NULLIFY(&e); [line 47]\n  EXIT_SCOPE(n$24,CatchVar58,CatchVar34,socket,e); [line 47]\n  APPLY_ABSTRACTION; [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_2" ;
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_4" [label="4:  method_body \n   *&socket:java.lang.Object*=null [line 29]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_4" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_5" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_4" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_6" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_4" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_5" [label="5: Prune (true branch, if) \n   n$0=*&this:com.zrlog.web.plugin.PluginGhostThread* [line 30]\n  n$1=*n$0.stop:_Bool(root com.zrlog.web.plugin.PluginGhostThread) [line 30]\n  PRUNE(!(n$1 != 0), true); [line 30]\n  EXIT_SCOPE(n$0,n$1); [line 30]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_5" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_7" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_5" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_6" [label="6: Prune (false branch, if) \n   n$0=*&this:com.zrlog.web.plugin.PluginGhostThread* [line 30]\n  n$1=*n$0.stop:_Bool(root com.zrlog.web.plugin.PluginGhostThread) [line 30]\n  PRUNE((n$1 != 0), false); [line 30]\n  EXIT_SCOPE(n$0,n$1); [line 30]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_6" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_10" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_6" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_11" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_6" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_7" [label="7:  Call void Thread.sleep(long) \n   n$2=_fun_void Thread.sleep(long)(1000:long) [line 32]\n  EXIT_SCOPE(n$2); [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_7" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_8" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_7" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_23" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_8" [label="8:  Call Socket.<init>(String,int) \n   n$3=_fun___new(sizeof(t=java.net.Socket):java.net.Socket*) [line 33]\n  n$4=*&this:com.zrlog.web.plugin.PluginGhostThread* [line 33]\n  n$5=*n$4.host:java.lang.String*(root com.zrlog.web.plugin.PluginGhostThread) [line 33]\n  n$6=*&this:com.zrlog.web.plugin.PluginGhostThread* [line 33]\n  n$7=*n$6.port:int(root com.zrlog.web.plugin.PluginGhostThread) [line 33]\n  n$8=_fun_Socket.<init>(String,int)(n$3:java.net.Socket*,n$5:java.lang.String*,n$7:int) [line 33]\n  n$9=_fun___set_file_attribute(n$3:java.net.Socket*) [line 33]\n  *&socket:java.net.Socket*=n$3 [line 33]\n  EXIT_SCOPE(n$3,n$4,n$5,n$6,n$7,n$8,n$9); [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_8" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_10" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_8" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_11" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_8" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_23" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_9" [label="9:  method_body \n   n$10=*&CatchVar34:java.lang.Object* [line 35]\n  *&$bcvar2:java.lang.Object*=n$10 [line 35]\n  NULLIFY(&$bcvar2); [line 35]\n  NULLIFY(&CatchVar34); [line 35]\n  EXIT_SCOPE(n$10,$bcvar2,CatchVar34); [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_9" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_5" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_9" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_6" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_9" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_10" [label="10: Prune (true branch, if) \n   n$11=*&socket:java.net.Socket* [line 40]\n  PRUNE(!(n$11 == null), true); [line 40]\n  EXIT_SCOPE(n$11); [line 40]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_10" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_12" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_10" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_11" [label="11: Prune (false branch, if) \n   n$11=*&socket:java.net.Socket* [line 40]\n  PRUNE((n$11 == null), false); [line 40]\n  NULLIFY(&socket); [line 40]\n  EXIT_SCOPE(n$11,socket); [line 40]\n  APPLY_ABSTRACTION; [line 40]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_11" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_14" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_11" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_12" [label="12:  Call InputStream Socket.getInputStream() \n   n$12=*&socket:java.net.Socket* [line 41]\n  _=*n$12:java.net.Socket*(root java.net.Socket) [line 41]\n  n$14=_fun_InputStream Socket.getInputStream()(n$12:java.net.Socket*) virtual [line 41]\n  *&$irvar0:java.io.InputStream*=n$14 [line 41]\n  NULLIFY(&socket); [line 41]\n  EXIT_SCOPE(_,n$12,n$14,socket); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_12" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_13" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_12" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_13" [label="13:  Call byte[] IOUtil.getByteByInputStream(InputStream) \n   n$15=*&$irvar0:java.io.InputStream* [line 41]\n  n$16=_fun_byte[] IOUtil.getByteByInputStream(InputStream)(n$15:java.io.InputStream*) [line 41]\n  *&$irvar1:signed char[_*_](*)=n$16 [line 41]\n  NULLIFY(&$irvar0); [line 41]\n  NULLIFY(&$irvar1); [line 41]\n  EXIT_SCOPE(n$15,n$16,$irvar0,$irvar1); [line 41]\n  APPLY_ABSTRACTION; [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_13" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_14" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_13" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_14" [label="14:  method_body \n   n$17=*&this:com.zrlog.web.plugin.PluginGhostThread* [line 43]\n  *n$17.stop:com.zrlog.web.plugin.PluginGhostThread(root com.zrlog.web.plugin.PluginGhostThread)=1 [line 43]\n  NULLIFY(&this); [line 43]\n  EXIT_SCOPE(n$17,this); [line 43]\n  APPLY_ABSTRACTION; [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_14" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_17" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_14" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_15" [label="15:  method_body \n   n$18=*&CatchVar58:java.lang.Object* [line 44]\n  *&e:java.lang.Object*=n$18 [line 44]\n  NULLIFY(&CatchVar58); [line 44]\n  EXIT_SCOPE(n$18,CatchVar58); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_15" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_16" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_15" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_16" [label="16:  Call void Logger.warn(String,Throwable) \n   n$19=*&#GB<>$com.zrlog.web.plugin.PluginGhostThread.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginGhostThread) [line 45]\n  _=*n$19:org.slf4j.Logger*(root org.slf4j.Logger) [line 45]\n  n$21=*&e:java.lang.Object* [line 45]\n  n$22=_fun_void Logger.warn(String,Throwable)(n$19:org.slf4j.Logger*,\"plugin exception stop \":java.lang.Object*,n$21:java.lang.Object*) interface virtual [line 45]\n  NULLIFY(&e); [line 45]\n  EXIT_SCOPE(_,n$19,n$21,n$22,e); [line 45]\n  APPLY_ABSTRACTION; [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_16" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_17" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_16" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_17" [label="17:  method_body \n   APPLY_ABSTRACTION; [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_17" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_2" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_17" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_18" [label="18: Prune (true branch, switch) \n   n$25=_fun___instanceof(n$24:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 44]\n  PRUNE(n$25, true); [line 44]\n  *&CatchVar58:void=n$24 [line 44]\n  EXIT_SCOPE(n$24,n$25); [line 44]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_18" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_15" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_18" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_19" [label="19: Prune (false branch, switch) \n   n$25=_fun___instanceof(n$24:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 44]\n  PRUNE(!n$25, false); [line 44]\n  *&return:void=EXN n$24 [line 44]\n  EXIT_SCOPE(n$24,n$25); [line 44]\n  APPLY_ABSTRACTION; [line 44]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_19" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_19" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" [label="20:  exception handler \n   n$23=*&return:void [line 44]\n  *&return:void=null [line 44]\n  n$24=_fun___unwrap_exception(n$23:void) [line 44]\n  NULLIFY(&$irvar0); [line 44]\n  NULLIFY(&socket); [line 44]\n  EXIT_SCOPE(n$23,$irvar0,socket); [line 44]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_18" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_19" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_20" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_21" [label="21: Prune (true branch, switch) \n   n$26=_fun___instanceof(n$24:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 35]\n  PRUNE(n$26, true); [line 35]\n  *&CatchVar34:void=n$24 [line 35]\n  EXIT_SCOPE(n$24,n$26); [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_21" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_9" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_21" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_22" [label="22: Prune (false branch, switch) \n   n$26=_fun___instanceof(n$24:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 35]\n  PRUNE(!n$26, false); [line 35]\n  *&return:void=EXN n$24 [line 35]\n  NULLIFY(&socket); [line 35]\n  EXIT_SCOPE(n$24,n$26,socket); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_22" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_22" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+"com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_23" [label="23:  exception handler \n   n$23=*&return:void [line 35]\n  *&return:void=null [line 35]\n  n$24=_fun___unwrap_exception(n$23:void) [line 35]\n  EXIT_SCOPE(n$23); [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_23" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_21" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_23" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_22" ;
+	 "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_23" -> "com.zrlog.web.plugin.PluginGhostThread.run():void.cd5c781618f6928bad8865f779d10993_3" [color="red" ];
+}

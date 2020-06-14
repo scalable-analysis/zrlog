@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/interceptor/BlackListInterceptor.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.interceptor; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.jfinal.aop.Interceptor; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.jfinal.aop.Invocation; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.jfinal.core.JFinal; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import com.zrlog.web.controller.BaseController; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import com.zrlog.web.util.WebTools; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import java.util.Arrays; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">import java.util.HashSet; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">import java.util.Set; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line"> * 通过获取调用者IP地址进行黑名单的检查，主要用于防止恶意访问，可以在后台管理界面添加记录。 </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">public class BlackListInterceptor implements Interceptor { <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.<init>%28%29.04a98f1fd4dad2f8cdc4fbc669c42fd1_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.<init>%28%29.04a98f1fd4dad2f8cdc4fbc669c42fd1_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.interceptor.BlackListInterceptor* [line 17];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.interceptor.BlackListInterceptor*) [line 17];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.<init>%28%29.04a98f1fd4dad2f8cdc4fbc669c42fd1_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.<init>%28%29.04a98f1fd4dad2f8cdc4fbc669c42fd1_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.<init>%28%29.04a98f1fd4dad2f8cdc4fbc669c42fd1_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/com.zrlog.web.interceptor.BlackListInterceptor.<init>%28%29.04a98f1fd4dad2f8cdc4fbc669c42fd1.html">summary for BlackListInterceptor.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">    public void intercept(Invocation invocation) { <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1.html">summary for void BlackListInterceptor.intercept(Invocation)</a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">        if (invocation.getController() instanceof BaseController) { <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;invocation:com.jfinal.aop.Invocation* [line 21];
+_=*n$0:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 21];
+n$2=_fun_Controller Invocation.getController()(n$0:com.jfinal.aop.Invocation*) virtual [line 21];
+*&amp;$irvar0:com.jfinal.core.Controller*=n$2 [line 21];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:com.jfinal.core.Controller* [line 21];
+n$4=_fun___instanceof(n$3:com.jfinal.core.Controller*,sizeof(t=com.zrlog.web.controller.BaseController;sub_t=( sub )(instof)):void) [line 21];
+PRUNE(!(n$4 == 0), true); [line 21];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:27 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:com.jfinal.core.Controller* [line 21];
+n$4=_fun___instanceof(n$3:com.jfinal.core.Controller*,sizeof(t=com.zrlog.web.controller.BaseController;sub_t=( sub )(instof)):void) [line 21];
+PRUNE((n$4 == 0), false); [line 21];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">            BaseController baseController = (BaseController) invocation.getController(); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:3 Instructions
+n$5=*&amp;invocation:com.jfinal.aop.Invocation* [line 22];
+_=*n$5:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 22];
+n$7=_fun_Controller Invocation.getController()(n$5:com.jfinal.aop.Invocation*) virtual [line 22];
+*&amp;$irvar1:com.jfinal.core.Controller*=n$7 [line 22];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$8=*&amp;$irvar1:com.jfinal.core.Controller* [line 22];
+n$9=_fun___cast(n$8:com.jfinal.core.Controller*,sizeof(t=com.zrlog.web.controller.BaseController;sub_t=( sub )(cast)):void) [line 22];
+*&amp;baseController:com.zrlog.web.controller.BaseController*=n$9 [line 22];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">            String ipStr = (String) Constants.WEB_SITE.get(&quot;blackList&quot;); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$10=*&amp;#GB<>$com.zrlog.common.Constants.WEB_SITE:java.util.Map*(root com.zrlog.common.Constants) [line 23];
+_=*n$10:java.util.Map*(root java.util.Map) [line 23];
+n$12=_fun_Object Map.get(Object)(n$10:java.util.Map*,"blackList":java.lang.Object*) interface virtual [line 23];
+*&amp;$irvar2:java.lang.Object*=n$12 [line 23];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 12 exn:3 Instructions
+n$13=*&amp;$irvar2:java.lang.Object* [line 23];
+n$14=_fun___cast(n$13:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 23];
+*&amp;ipStr:java.lang.String*=n$14 [line 23];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">            if (ipStr != null) { <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:10 succs:13 exn:3 Conditional method_body
+n$15=*&amp;ipStr:java.lang.String* [line 24];
+PRUNE(!(n$15 == null), true); [line 24];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:10 succs:26 exn:3 Conditional method_body
+n$15=*&amp;ipStr:java.lang.String* [line 24];
+PRUNE((n$15 == null), false); [line 24];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">                Set&lt;String&gt; ipSet = new HashSet&lt;&gt;(Arrays.asList(ipStr.split(&quot;,&quot;))); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:11 succs:14 exn:3 Instructions
+n$16=*&amp;ipStr:java.lang.String* [line 25];
+_=*n$16:java.lang.String*(root java.lang.String) [line 25];
+n$18=_fun_String[] String.split(String)(n$16:java.lang.String*,",":java.lang.Object*) virtual [line 25];
+*&amp;$irvar3:java.lang.String*[_*_](*)=n$18 [line 25];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$19=*&amp;$irvar3:java.lang.String*[_*_](*) [line 25];
+n$20=_fun_List Arrays.asList(Object[])(n$19:java.lang.String*[_*_](*)) [line 25];
+*&amp;$irvar4:java.util.List*=n$20 [line 25];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$21=_fun___new(sizeof(t=java.util.HashSet):java.util.HashSet*) [line 25];
+n$22=*&amp;$irvar4:java.util.List* [line 25];
+n$23=_fun_HashSet.&lt;init&gt;(Collection)(n$21:java.util.HashSet*,n$22:java.util.List*) [line 25];
+*&amp;ipSet:java.util.HashSet*=n$21 [line 25];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">                String requestIP = WebTools.getRealIp(baseController.getRequest()); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$24=*&amp;baseController:com.zrlog.web.controller.BaseController* [line 26];
+_=*n$24:com.zrlog.web.controller.BaseController*(root com.zrlog.web.controller.BaseController) [line 26];
+n$26=_fun_HttpServletRequest Controller.getRequest()(n$24:com.zrlog.web.controller.BaseController*) virtual [line 26];
+*&amp;$irvar5:javax.servlet.http.HttpServletRequest*=n$26 [line 26];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$27=*&amp;$irvar5:javax.servlet.http.HttpServletRequest* [line 26];
+n$28=_fun_String WebTools.getRealIp(HttpServletRequest)(n$27:javax.servlet.http.HttpServletRequest*) [line 26];
+*&amp;requestIP:java.lang.String*=n$28 [line 26];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">                if (ipSet.contains(requestIP)) { <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 20 exn:3 Instructions
+n$29=*&amp;ipSet:java.util.HashSet* [line 27];
+_=*n$29:java.util.HashSet*(root java.util.HashSet) [line 27];
+n$31=*&amp;requestIP:java.lang.String* [line 27];
+n$32=_fun_boolean HashSet.contains(Object)(n$29:java.util.HashSet*,n$31:java.lang.String*) interface virtual [line 27];
+*&amp;$irvar6:_Bool=n$32 [line 27];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node19.html"><span class='visited with_tooltip'>C_19<span class='tooltip'>node19 preds:18 succs:21 exn:3 Conditional method_body
+n$33=*&amp;$irvar6:_Bool [line 27];
+PRUNE(!(n$33 == 0), true); [line 27];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node20.html"><span class='visited with_tooltip'>C_20<span class='tooltip'>node20 preds:18 succs:25 exn:3 Conditional method_body
+n$33=*&amp;$irvar6:_Bool [line 27];
+PRUNE((n$33 == 0), false); [line 27];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">                    baseController.render(JFinal.me().getConstants().getErrorView(403)); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:19 succs:22 exn:3 Instructions
+n$34=_fun_JFinal JFinal.me()() [line 28];
+*&amp;$irvar7:com.jfinal.core.JFinal*=n$34 [line 28];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$35=*&amp;$irvar7:com.jfinal.core.JFinal* [line 28];
+_=*n$35:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 28];
+n$37=_fun_Constants JFinal.getConstants()(n$35:com.jfinal.core.JFinal*) virtual [line 28];
+*&amp;$irvar8:com.jfinal.config.Constants*=n$37 [line 28];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$38=*&amp;$irvar8:com.jfinal.config.Constants* [line 28];
+_=*n$38:com.jfinal.config.Constants*(root com.jfinal.config.Constants) [line 28];
+n$40=_fun_String Constants.getErrorView(int)(n$38:com.jfinal.config.Constants*,403:int) virtual [line 28];
+*&amp;$irvar9:java.lang.String*=n$40 [line 28];
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:28 exn:3 Instructions
+n$41=*&amp;baseController:com.zrlog.web.controller.BaseController* [line 28];
+_=*n$41:com.zrlog.web.controller.BaseController*(root com.zrlog.web.controller.BaseController) [line 28];
+n$43=*&amp;$irvar9:java.lang.String* [line 28];
+n$44=_fun_void Controller.render(String)(n$41:com.zrlog.web.controller.BaseController*,n$43:java.lang.String*) virtual [line 28];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">                } else { </td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">                    invocation.invoke(); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:20 succs:28 exn:3 Instructions
+n$45=*&amp;invocation:com.jfinal.aop.Invocation* [line 30];
+_=*n$45:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 30];
+n$47=_fun_void Invocation.invoke()(n$45:com.jfinal.aop.Invocation*) virtual [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">            } else { </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">                invocation.invoke(); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:12 succs:28 exn:3 Instructions
+n$48=*&amp;invocation:com.jfinal.aop.Invocation* [line 33];
+_=*n$48:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 33];
+n$50=_fun_void Invocation.invoke()(n$48:com.jfinal.aop.Invocation*) virtual [line 33];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">            invocation.invoke(); <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:6 succs:28 exn:3 Instructions
+n$51=*&amp;invocation:com.jfinal.aop.Invocation* [line 36];
+_=*n$51:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 36];
+n$53=_fun_void Invocation.invoke()(n$51:com.jfinal.aop.Invocation*) virtual [line 36];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">    } <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 26 25 24 succs:2 exn:3 Instructions
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:28 3 succs: exn: Exit
+</span></span></a> <a href="./BlackListInterceptor.java.655505593495e032c5cfdccf86d2debb/nodes/com.zrlog.web.interceptor.BlackListInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.d35a5a887e67276151134dc7e91d10c1_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

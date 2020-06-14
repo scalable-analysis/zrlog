@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.InstallService.startInstall(java.util.Map,java.util.Map,java.io.File):boolean.48ecbac036e4e7fc54917277b06d8161_node95</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">95</a></h1></center>PROC: <a href="./../com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161.html">boolean InstallService.startInstall(Map,Map,File)</a> LINE: <a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node94.html"><span class='dangling with_tooltip'>N_94<span class='tooltip'>node94 preds:145 133 129 125 115 107 succs:95 exn:151 
+NOT VISITED</span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node96.html"><span class='visited with_tooltip'>N_96<span class='tooltip'>node96 preds:95 succs:97 exn:151 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node151.html"><span class='dangling with_tooltip'>N_151<span class='tooltip'>node151 preds: succs:150 exn:3 
+NOT VISITED</span></span></a><br>
+<LISTING class='color_green'>n$171=*&amp;#GB<>$com.zrlog.service.InstallService.LOGGER:org.slf4j.Logger*(root com.zrlog.service.InstallService) [line 172];
+_=*n$171:org.slf4j.Logger*(root org.slf4j.Logger) [line 172];
+n$173=*&amp;e:java.lang.Object* [line 172];
+n$174=_fun_void Logger.error(String,Throwable)(n$171:org.slf4j.Logger*,"install error ":java.lang.Object*,n$173:java.lang.Object*) interface virtual [line 172];
+</LISTING>
+<hr width="100%">
+<a name="session572" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session572">node95#session572</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [compute pre] liveness 95
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session573" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session573">node95#session573</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [exec] liveness 95
+<LISTING class='color_black'>PRE STATE:
+{ service.InstallService, lock, connect, return }
+
+INSTR=  n$174=_fun_void Logger.error(String,Throwable)(n$171:org.slf4j.Logger*,&quot;install error &quot;:java.lang.Object*,n$173:java.lang.Object*) interface virtual [line 172]; 
+
+STATE:
+{ n$171, n$173, service.InstallService, lock, connect, return }
+
+INSTR=  n$173=*&amp;e:java.lang.Object* [line 172]; 
+
+STATE:
+{ n$171, service.InstallService, lock, connect, return, e }
+
+INSTR=  _=*n$171:org.slf4j.Logger*(root org.slf4j.Logger) [line 172]; 
+
+STATE UNCHANGED
+
+INSTR=  n$171=*&amp;#GB&lt;&gt;$com.zrlog.service.InstallService.LOGGER:org.slf4j.Logger*(root com.zrlog.service.InstallService) [line 172]; 
+
+STATE:
+{ service.InstallService, lock, connect, return, e }
+
+</LISTING>
+<hr width="100%">
+<a name="session838" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session838">node95#session838</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [compute pre] liveness 95
+<LISTING class='color_black'>JOIN
+
+LEFT:   { service.InstallService, lock, connect, return }
+RIGHT:  { service.InstallService, CatchVar483, connect, return }
+RESULT: { service.InstallService, lock, CatchVar483, connect, return }
+
+</LISTING>
+<hr width="100%">
+<a name="session839" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session839">node95#session839</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [exec] liveness 95
+<LISTING class='color_black'>PRE STATE:
+{ service.InstallService, lock, CatchVar483, connect, return }
+
+INSTR=  n$174=_fun_void Logger.error(String,Throwable)(n$171:org.slf4j.Logger*,&quot;install error &quot;:java.lang.Object*,n$173:java.lang.Object*) interface virtual [line 172]; 
+
+STATE:
+{ n$171, n$173, service.InstallService, lock, CatchVar483, connect, return }
+
+INSTR=  n$173=*&amp;e:java.lang.Object* [line 172]; 
+
+STATE:
+{ n$171, service.InstallService, lock, CatchVar483, connect, return, e }
+
+INSTR=  _=*n$171:org.slf4j.Logger*(root org.slf4j.Logger) [line 172]; 
+
+STATE UNCHANGED
+
+INSTR=  n$171=*&amp;#GB&lt;&gt;$com.zrlog.service.InstallService.LOGGER:org.slf4j.Logger*(root com.zrlog.service.InstallService) [line 172]; 
+
+STATE:
+{ service.InstallService, lock, CatchVar483, connect, return, e }
+
+</LISTING>
+<hr width="100%">
+<a name="session844" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session844">node95#session844</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [compute pre] liveness 95
+<LISTING class='color_black'>JOIN
+
+LEFT:   { service.InstallService, lock, CatchVar483, connect, return }
+RIGHT:  { service.InstallService, CatchVar483, connect, return }
+RESULT: { service.InstallService, lock, CatchVar483, connect, return }
+
+</LISTING>
+<hr width="100%">
+<a name="session845" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session845">node95#session845</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [exec] liveness 95
+<LISTING class='color_black'>Fixpoint reached.
+
+</LISTING>
+<hr width="100%">
+<a name="session1269" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session1269">node95#session1269</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session1270" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session1270">node95#session1270</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ connect, return, e },{ n$170, CatchVar437 })
+
+INSTR=  n$171=*&amp;#GB&lt;&gt;$com.zrlog.service.InstallService.LOGGER:org.slf4j.Logger*(root com.zrlog.service.InstallService) [line 172]; 
+
+STATE:
+({ n$171, connect, return, e },{ n$170, CatchVar437 })
+
+INSTR=  _=*n$171:org.slf4j.Logger*(root org.slf4j.Logger) [line 172]; 
+
+STATE:
+({ _, n$171, connect, return, e },{ n$170, CatchVar437 })
+
+INSTR=  n$173=*&amp;e:java.lang.Object* [line 172]; 
+
+STATE:
+({ _, n$171, n$173, connect, return, e },{ n$170, CatchVar437 })
+
+INSTR=  n$174=_fun_void Logger.error(String,Throwable)(n$171:org.slf4j.Logger*,&quot;install error &quot;:java.lang.Object*,n$173:java.lang.Object*) interface virtual [line 172]; 
+
+STATE:
+({ connect, return },{ _, n$171, n$173, n$174, e })
+
+</LISTING>
+<hr width="100%">
+<a name="session402" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session402">node95#session402</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session403" href="./../nodes/com.zrlog.service.InstallService.startInstall%28java.util.Map%2Cjava.util.Map%2Cjava.io.File%29%3Aboolean.48ecbac036e4e7fc54917277b06d8161_node95.html#session403">node95#session403</a>(<a href="./../../InstallService.java.0c21e49787fa4d81ccc117c1ed75269a.html#LINE172">172</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$1 -&gt; { },
+  n$3 -&gt; (Footprint({ @val$0.basePath* }) ~&gt; ?, *),
+  n$9 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$12 -&gt; Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$15 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  n$16 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  n$26 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  n$74 -&gt; { },
+  prop -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  out -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  $bcvar15 -&gt; { },
+  file -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  connect -&gt; { },
+  st -&gt; { },
+  sql -&gt; { },
+  return -&gt; { },
+  s -&gt; { },
+  tempSqlStr -&gt; { },
+  sqlSt -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(void InstallService.initWebSite(Connection) at line 163) }, *) }),
+  $bcvar13 -&gt; { },
+  $bcvar8 -&gt; { },
+  e -&gt; { } }
+
+
+
+
+INSTR=  n$174 := void Logger.error(String,Throwable)({ service.InstallService.LOGGER,
+                                                       &quot;install error &quot;,
+                                                       e }) [line 172]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;e); [line 172]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$174,e); [line 172]; 
+
+STATE:
+{ n$1 -&gt; { },
+  n$3 -&gt; (Footprint({ @val$0.basePath* }) ~&gt; ?, *),
+  n$9 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$12 -&gt; Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$15 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  n$16 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  n$26 -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  n$74 -&gt; { },
+  prop -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  out -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  $bcvar15 -&gt; { },
+  file -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(File.&lt;init&gt;(String) at line 132) }, *),
+  connect -&gt; { },
+  st -&gt; { },
+  sql -&gt; { },
+  return -&gt; { },
+  s -&gt; { },
+  tempSqlStr -&gt; { },
+  sqlSt -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { basePath -&gt; (Footprint({ @val$0.basePath* }) + Sanitizers({ StringConcatenation }) ~&gt; { CreateFile(void InstallService.initWebSite(Connection) at line 163) }, *) }),
+  $bcvar13 -&gt; { },
+  $bcvar8 -&gt; { },
+  e -&gt; { } }
+
+</LISTING>

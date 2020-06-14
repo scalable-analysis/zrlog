@@ -1,0 +1,584 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.UploadService.getCloudUrl(java.lang.String,java.lang.String,java.lang.String,javax.47d07ce4542c1e3173006f1e9a68bae8</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../UploadService.java.b22238e86ebfbc00f6ab70bfe2c43f97.html#LINE21">UploadFileResponse UploadService.getCloudUrl(String,String,String,HttpServletRequest,AdminTokenVO)</a></h1></center>
+<a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:64 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:66 succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 48];
+NULLIFY(&amp;uploadFileResponse); [line 48];
+NULLIFY(&amp;url); [line 48];
+NULLIFY(&amp;$irvar35); [line 48];
+NULLIFY(&amp;$irvar5); [line 48];
+NULLIFY(&amp;$irvar4); [line 48];
+NULLIFY(&amp;$irvar7); [line 48];
+NULLIFY(&amp;map); [line 48];
+NULLIFY(&amp;$irvar34); [line 48];
+NULLIFY(&amp;CatchVar269); [line 48];
+NULLIFY(&amp;$irvar0); [line 48];
+NULLIFY(&amp;$irvar1); [line 48];
+NULLIFY(&amp;$irvar2); [line 48];
+NULLIFY(&amp;$irvar33); [line 48];
+NULLIFY(&amp;e); [line 48];
+EXIT_SCOPE(n$152,$irvar3,uploadFileResponse,url,$irvar35,$irvar5,$irvar4,$irvar7,map,$irvar34,CatchVar269,$irvar0,$irvar1,$irvar2,$irvar33,e); [line 48];
+APPLY_ABSTRACTION; [line 48];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.common.response.UploadFileResponse):com.zrlog.common.response.UploadFileResponse*) [line 22];
+n$1=_fun_UploadFileResponse.&lt;init&gt;()(n$0:com.zrlog.common.response.UploadFileResponse*) [line 22];
+*&amp;uploadFileResponse:com.zrlog.common.response.UploadFileResponse*=n$0 [line 22];
+EXIT_SCOPE(n$0,n$1); [line 22];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 24];
+n$3=_fun_HashMap.&lt;init&gt;()(n$2:java.util.HashMap*) [line 24];
+*&amp;map:java.util.HashMap*=n$2 [line 24];
+EXIT_SCOPE(n$2,n$3); [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=_fun___new_array(sizeof(t=java.lang.String*[_*_];len=[1]):java.lang.String*[_*_](*)) [line 25];
+*&amp;$irvar0:java.lang.String*[_*_](*)=n$4 [line 25];
+EXIT_SCOPE(n$4); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$5=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 25];
+n$6=_fun_StringBuilder.&lt;init&gt;()(n$5:java.lang.StringBuilder*) [line 25];
+*&amp;$irvar1:java.lang.StringBuilder*=n$5 [line 25];
+EXIT_SCOPE(n$5,n$6); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;$irvar1:java.lang.StringBuilder* [line 25];
+_=*n$7:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$9=*&amp;finalFilePath:java.lang.String* [line 25];
+n$10=_fun_StringBuilder StringBuilder.append(String)(n$7:java.lang.StringBuilder*,n$9:java.lang.String*) virtual [line 25];
+*&amp;$irvar2:java.lang.StringBuilder*=n$10 [line 25];
+NULLIFY(&amp;finalFilePath); [line 25];
+NULLIFY(&amp;$irvar1); [line 25];
+EXIT_SCOPE(_,n$7,n$9,n$10,finalFilePath,$irvar1); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$11=*&amp;$irvar2:java.lang.StringBuilder* [line 25];
+_=*n$11:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$13=_fun_StringBuilder StringBuilder.append(String)(n$11:java.lang.StringBuilder*,",":java.lang.Object*) virtual [line 25];
+*&amp;$irvar3:java.lang.StringBuilder*=n$13 [line 25];
+NULLIFY(&amp;$irvar2); [line 25];
+EXIT_SCOPE(_,n$11,n$13,$irvar2); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$14=*&amp;$irvar3:java.lang.StringBuilder* [line 25];
+_=*n$14:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$16=*&amp;uri:java.lang.String* [line 25];
+n$17=_fun_StringBuilder StringBuilder.append(String)(n$14:java.lang.StringBuilder*,n$16:java.lang.String*) virtual [line 25];
+*&amp;$irvar4:java.lang.StringBuilder*=n$17 [line 25];
+NULLIFY(&amp;$irvar3); [line 25];
+EXIT_SCOPE(_,n$14,n$16,n$17,$irvar3); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$18=*&amp;$irvar4:java.lang.StringBuilder* [line 25];
+_=*n$18:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 25];
+n$20=_fun_String StringBuilder.toString()(n$18:java.lang.StringBuilder*) virtual [line 25];
+*&amp;$irvar5:java.lang.String*=n$20 [line 25];
+NULLIFY(&amp;$irvar4); [line 25];
+EXIT_SCOPE(_,n$18,n$20,$irvar4); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$21=*&amp;$irvar0:java.lang.String*[_*_](*) [line 25];
+n$22=*&amp;$irvar5:java.lang.String* [line 25];
+*n$21[0]:java.lang.String*=n$22 [line 25];
+NULLIFY(&amp;$irvar5); [line 25];
+EXIT_SCOPE(n$21,n$22,$irvar5); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$23=*&amp;map:java.util.HashMap* [line 25];
+_=*n$23:java.util.HashMap*(root java.util.HashMap) [line 25];
+n$25=*&amp;$irvar0:java.lang.String*[_*_](*) [line 25];
+n$26=_fun_Object HashMap.put(Object,Object)(n$23:java.util.HashMap*,"fileInfo":java.lang.Object*,n$25:java.lang.String*[_*_](*)) interface virtual [line 25];
+*&amp;$irvar6:java.lang.Object*=n$26 [line 25];
+NULLIFY(&amp;$irvar6); [line 25];
+NULLIFY(&amp;$irvar0); [line 25];
+EXIT_SCOPE(_,n$23,n$25,n$26,$irvar6,$irvar0); [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$27=_fun___new_array(sizeof(t=java.lang.String*[_*_];len=[1]):java.lang.String*[_*_](*)) [line 26];
+*&amp;$irvar7:java.lang.String*[_*_](*)=n$27 [line 26];
+EXIT_SCOPE(n$27); [line 26];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$28=*&amp;$irvar7:java.lang.String*[_*_](*) [line 26];
+*n$28[0]:java.lang.Object*="uploadService" [line 26];
+EXIT_SCOPE(n$28); [line 26];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$29=*&amp;map:java.util.HashMap* [line 26];
+_=*n$29:java.util.HashMap*(root java.util.HashMap) [line 26];
+n$31=*&amp;$irvar7:java.lang.String*[_*_](*) [line 26];
+n$32=_fun_Object HashMap.put(Object,Object)(n$29:java.util.HashMap*,"name":java.lang.Object*,n$31:java.lang.String*[_*_](*)) interface virtual [line 26];
+*&amp;$irvar8:java.lang.Object*=n$32 [line 26];
+NULLIFY(&amp;$irvar7); [line 26];
+NULLIFY(&amp;$irvar8); [line 26];
+EXIT_SCOPE(_,n$29,n$31,n$32,$irvar7,$irvar8); [line 26];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:67 Instructions
+n$33=_fun_HttpUtil HttpUtil.getInstance()() [line 29];
+*&amp;$irvar9:com.hibegin.common.util.http.HttpUtil*=n$33 [line 29];
+EXIT_SCOPE(n$33); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:67 Instructions
+n$34=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 29];
+n$35=_fun_StringBuilder.&lt;init&gt;()(n$34:java.lang.StringBuilder*) [line 29];
+*&amp;$irvar10:java.lang.StringBuilder*=n$34 [line 29];
+EXIT_SCOPE(n$34,n$35); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:67 Instructions
+n$36=*&amp;$irvar10:java.lang.StringBuilder* [line 29];
+_=*n$36:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 29];
+n$38=*&amp;#GB<>$com.zrlog.common.Constants.pluginServer:java.lang.String*(root com.zrlog.common.Constants) [line 29];
+n$39=_fun_StringBuilder StringBuilder.append(String)(n$36:java.lang.StringBuilder*,n$38:java.lang.String*) virtual [line 29];
+*&amp;$irvar11:java.lang.StringBuilder*=n$39 [line 29];
+NULLIFY(&amp;$irvar10); [line 29];
+EXIT_SCOPE(_,n$36,n$38,n$39,$irvar10); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:67 Instructions
+n$40=*&amp;$irvar11:java.lang.StringBuilder* [line 29];
+_=*n$40:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 29];
+n$42=_fun_StringBuilder StringBuilder.append(String)(n$40:java.lang.StringBuilder*,"/service":java.lang.Object*) virtual [line 29];
+*&amp;$irvar12:java.lang.StringBuilder*=n$42 [line 29];
+NULLIFY(&amp;$irvar11); [line 29];
+EXIT_SCOPE(_,n$40,n$42,$irvar11); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:67 Instructions
+n$43=*&amp;$irvar12:java.lang.StringBuilder* [line 29];
+_=*n$43:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 29];
+n$45=_fun_String StringBuilder.toString()(n$43:java.lang.StringBuilder*) virtual [line 29];
+*&amp;$irvar13:java.lang.String*=n$45 [line 29];
+NULLIFY(&amp;$irvar12); [line 29];
+EXIT_SCOPE(_,n$43,n$45,$irvar12); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:67 Instructions
+n$46=_fun___new(sizeof(t=com.hibegin.common.util.http.handle.HttpJsonArrayHandle):com.hibegin.common.util.http.handle.HttpJsonArrayHandle*) [line 29];
+n$47=_fun_HttpJsonArrayHandle.&lt;init&gt;()(n$46:com.hibegin.common.util.http.handle.HttpJsonArrayHandle*) [line 29];
+*&amp;$irvar14:com.hibegin.common.util.http.handle.HttpJsonArrayHandle*=n$46 [line 29];
+EXIT_SCOPE(n$46,n$47); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:67 Instructions
+n$48=*&amp;request:javax.servlet.http.HttpServletRequest* [line 30];
+n$49=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 30];
+n$50=_fun_Map PluginHelper.genHeaderMapByRequest(HttpServletRequest,AdminTokenVO)(n$48:javax.servlet.http.HttpServletRequest*,n$49:com.zrlog.common.vo.AdminTokenVO*) [line 30];
+*&amp;$irvar15:java.util.Map*=n$50 [line 30];
+NULLIFY(&amp;adminTokenVO); [line 30];
+NULLIFY(&amp;request); [line 30];
+EXIT_SCOPE(n$48,n$49,n$50,adminTokenVO,request); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:67 Instructions
+n$51=*&amp;$irvar9:com.hibegin.common.util.http.HttpUtil* [line 29];
+_=*n$51:com.hibegin.common.util.http.HttpUtil*(root com.hibegin.common.util.http.HttpUtil) [line 29];
+n$53=*&amp;$irvar13:java.lang.String* [line 29];
+n$54=*&amp;map:java.util.HashMap* [line 29];
+n$55=*&amp;$irvar14:com.hibegin.common.util.http.handle.HttpJsonArrayHandle* [line 29];
+n$56=*&amp;$irvar15:java.util.Map* [line 29];
+n$57=_fun_HttpHandle HttpUtil.sendGetRequest(String,Map,HttpHandle,Map)(n$51:com.hibegin.common.util.http.HttpUtil*,n$53:java.lang.String*,n$54:java.util.HashMap*,n$55:com.hibegin.common.util.http.handle.HttpJsonArrayHandle*,n$56:java.util.Map*) virtual [line 29];
+*&amp;$irvar16:com.hibegin.common.util.http.handle.HttpHandle*=n$57 [line 29];
+NULLIFY(&amp;$irvar9); [line 29];
+NULLIFY(&amp;map); [line 29];
+NULLIFY(&amp;$irvar13); [line 29];
+NULLIFY(&amp;$irvar15); [line 29];
+NULLIFY(&amp;$irvar14); [line 29];
+EXIT_SCOPE(_,n$51,n$53,n$54,n$55,n$56,n$57,$irvar9,map,$irvar13,$irvar15,$irvar14); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:67 Instructions
+n$58=*&amp;$irvar16:com.hibegin.common.util.http.handle.HttpHandle* [line 30];
+_=*n$58:com.hibegin.common.util.http.handle.HttpHandle*(root com.hibegin.common.util.http.handle.HttpHandle) [line 30];
+n$60=_fun_Object HttpHandle.getT()(n$58:com.hibegin.common.util.http.handle.HttpHandle*) virtual [line 30];
+*&amp;$irvar17:java.lang.Object*=n$60 [line 30];
+NULLIFY(&amp;$irvar16); [line 30];
+EXIT_SCOPE(_,n$58,n$60,$irvar16); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 28 exn:67 Instructions
+n$61=*&amp;$irvar17:java.lang.Object* [line 30];
+n$62=_fun___cast(n$61:java.lang.Object*,sizeof(t=java.util.List;sub_t=( sub )(cast)):void) [line 30];
+*&amp;urls:java.util.List*=n$62 [line 30];
+NULLIFY(&amp;$irvar17); [line 30];
+EXIT_SCOPE(n$61,n$62,$irvar17); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node27.html"><span class='visited with_tooltip'>C_27<span class='tooltip'>node27 preds:26 succs:29 exn:67 Conditional method_body
+n$63=*&amp;urls:java.util.List* [line 31];
+PRUNE(!(n$63 == null), true); [line 31];
+EXIT_SCOPE(n$63); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node28.html"><span class='visited with_tooltip'>C_28<span class='tooltip'>node28 preds:26 succs:53 exn:67 Conditional method_body
+n$63=*&amp;urls:java.util.List* [line 31];
+PRUNE((n$63 == null), false); [line 31];
+NULLIFY(&amp;urls); [line 31];
+EXIT_SCOPE(n$63,urls); [line 31];
+APPLY_ABSTRACTION; [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:27 succs:30 31 exn:67 Instructions
+n$64=*&amp;urls:java.util.List* [line 31];
+_=*n$64:java.util.List*(root java.util.List) [line 31];
+n$66=_fun_boolean List.isEmpty()(n$64:java.util.List*) interface virtual [line 31];
+*&amp;$irvar18:_Bool=n$66 [line 31];
+EXIT_SCOPE(_,n$64,n$66); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node30.html"><span class='visited with_tooltip'>C_30<span class='tooltip'>node30 preds:29 succs:32 exn:67 Conditional method_body
+n$67=*&amp;$irvar18:_Bool [line 31];
+PRUNE(!(n$67 != 0), true); [line 31];
+NULLIFY(&amp;$irvar18); [line 31];
+EXIT_SCOPE(n$67,$irvar18); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node31.html"><span class='visited with_tooltip'>C_31<span class='tooltip'>node31 preds:29 succs:53 exn:67 Conditional method_body
+n$67=*&amp;$irvar18:_Bool [line 31];
+PRUNE((n$67 != 0), false); [line 31];
+NULLIFY(&amp;urls); [line 31];
+NULLIFY(&amp;$irvar18); [line 31];
+EXIT_SCOPE(n$67,urls,$irvar18); [line 31];
+APPLY_ABSTRACTION; [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:30 succs:33 exn:67 Instructions
+n$68=*&amp;urls:java.util.List* [line 32];
+_=*n$68:java.util.List*(root java.util.List) [line 32];
+n$70=_fun_Object List.get(int)(n$68:java.util.List*,0:int) interface virtual [line 32];
+*&amp;$irvar19:java.lang.Object*=n$70 [line 32];
+NULLIFY(&amp;urls); [line 32];
+EXIT_SCOPE(_,n$68,n$70,urls); [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:67 Instructions
+n$71=*&amp;$irvar19:java.lang.Object* [line 32];
+n$72=_fun___cast(n$71:java.lang.Object*,sizeof(t=java.util.Map;sub_t=( sub )(cast)):void) [line 32];
+_=*n$72:java.util.Map*(root java.util.Map) [line 32];
+n$74=_fun_Object Map.get(Object)(n$72:java.util.Map*,"url":java.lang.Object*) interface virtual [line 32];
+*&amp;$irvar20:java.lang.Object*=n$74 [line 32];
+NULLIFY(&amp;$irvar19); [line 32];
+EXIT_SCOPE(_,n$71,n$72,n$74,$irvar19); [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 exn:67 Instructions
+n$75=*&amp;$irvar20:java.lang.Object* [line 32];
+n$76=_fun___cast(n$75:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 32];
+*&amp;url:java.lang.String*=n$76 [line 32];
+NULLIFY(&amp;$irvar20); [line 32];
+EXIT_SCOPE(n$75,n$76,$irvar20); [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:34 succs:36 37 exn:67 Instructions
+n$77=*&amp;url:java.lang.String* [line 33];
+_=*n$77:java.lang.String*(root java.lang.String) [line 33];
+n$79=_fun_boolean String.startsWith(String)(n$77:java.lang.String*,"https://":java.lang.Object*) virtual [line 33];
+*&amp;$irvar21:_Bool=n$79 [line 33];
+EXIT_SCOPE(_,n$77,n$79); [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node36.html"><span class='visited with_tooltip'>C_36<span class='tooltip'>node36 preds:35 succs:38 exn:67 Conditional method_body
+n$80=*&amp;$irvar21:_Bool [line 33];
+PRUNE(!(n$80 != 0), true); [line 33];
+NULLIFY(&amp;$irvar21); [line 33];
+EXIT_SCOPE(n$80,$irvar21); [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node37.html"><span class='visited with_tooltip'>C_37<span class='tooltip'>node37 preds:35 succs:63 exn:67 Conditional method_body
+n$80=*&amp;$irvar21:_Bool [line 33];
+PRUNE((n$80 != 0), false); [line 33];
+NULLIFY(&amp;$irvar21); [line 33];
+EXIT_SCOPE(n$80,$irvar21); [line 33];
+APPLY_ABSTRACTION; [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:36 succs:39 40 exn:67 Instructions
+n$81=*&amp;url:java.lang.String* [line 33];
+_=*n$81:java.lang.String*(root java.lang.String) [line 33];
+n$83=_fun_boolean String.startsWith(String)(n$81:java.lang.String*,"http://":java.lang.Object*) virtual [line 33];
+*&amp;$irvar22:_Bool=n$83 [line 33];
+EXIT_SCOPE(_,n$81,n$83); [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node39.html"><span class='visited with_tooltip'>C_39<span class='tooltip'>node39 preds:38 succs:41 exn:67 Conditional method_body
+n$84=*&amp;$irvar22:_Bool [line 33];
+PRUNE(!(n$84 != 0), true); [line 33];
+NULLIFY(&amp;$irvar22); [line 33];
+EXIT_SCOPE(n$84,$irvar22); [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node40.html"><span class='visited with_tooltip'>C_40<span class='tooltip'>node40 preds:38 succs:63 exn:67 Conditional method_body
+n$84=*&amp;$irvar22:_Bool [line 33];
+PRUNE((n$84 != 0), false); [line 33];
+NULLIFY(&amp;$irvar22); [line 33];
+EXIT_SCOPE(n$84,$irvar22); [line 33];
+APPLY_ABSTRACTION; [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:39 succs:42 exn:67 Instructions
+n$85=*&amp;url:java.lang.String* [line 34];
+*&amp;tUrl:java.lang.String*=n$85 [line 34];
+EXIT_SCOPE(n$85); [line 34];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 44 exn:67 Instructions
+n$86=*&amp;url:java.lang.String* [line 35];
+_=*n$86:java.lang.String*(root java.lang.String) [line 35];
+n$88=_fun_boolean String.startsWith(String)(n$86:java.lang.String*,"/":java.lang.Object*) virtual [line 35];
+*&amp;$irvar23:_Bool=n$88 [line 35];
+EXIT_SCOPE(_,n$86,n$88); [line 35];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node43.html"><span class='visited with_tooltip'>C_43<span class='tooltip'>node43 preds:42 succs:45 exn:67 Conditional method_body
+n$89=*&amp;$irvar23:_Bool [line 35];
+PRUNE(!(n$89 != 0), true); [line 35];
+NULLIFY(&amp;tUrl); [line 35];
+NULLIFY(&amp;$irvar23); [line 35];
+EXIT_SCOPE(n$89,tUrl,$irvar23); [line 35];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node44.html"><span class='visited with_tooltip'>C_44<span class='tooltip'>node44 preds:42 succs:49 exn:67 Conditional method_body
+n$89=*&amp;$irvar23:_Bool [line 35];
+PRUNE((n$89 != 0), false); [line 35];
+NULLIFY(&amp;url); [line 35];
+NULLIFY(&amp;$irvar23); [line 35];
+EXIT_SCOPE(n$89,url,$irvar23); [line 35];
+APPLY_ABSTRACTION; [line 35];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:43 succs:46 exn:67 Instructions
+n$90=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 36];
+n$91=_fun_StringBuilder.&lt;init&gt;()(n$90:java.lang.StringBuilder*) [line 36];
+*&amp;$irvar24:java.lang.StringBuilder*=n$90 [line 36];
+EXIT_SCOPE(n$90,n$91); [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 exn:67 Instructions
+n$92=*&amp;$irvar24:java.lang.StringBuilder* [line 36];
+_=*n$92:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 36];
+n$94=_fun_StringBuilder StringBuilder.append(String)(n$92:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 36];
+*&amp;$irvar25:java.lang.StringBuilder*=n$94 [line 36];
+NULLIFY(&amp;$irvar24); [line 36];
+EXIT_SCOPE(_,n$92,n$94,$irvar24); [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:67 Instructions
+n$95=*&amp;$irvar25:java.lang.StringBuilder* [line 36];
+_=*n$95:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 36];
+n$97=*&amp;url:java.lang.String* [line 36];
+n$98=_fun_StringBuilder StringBuilder.append(String)(n$95:java.lang.StringBuilder*,n$97:java.lang.String*) virtual [line 36];
+*&amp;$irvar26:java.lang.StringBuilder*=n$98 [line 36];
+NULLIFY(&amp;$irvar25); [line 36];
+NULLIFY(&amp;url); [line 36];
+EXIT_SCOPE(_,n$95,n$97,n$98,$irvar25,url); [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:67 Instructions
+n$99=*&amp;$irvar26:java.lang.StringBuilder* [line 36];
+_=*n$99:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 36];
+n$101=_fun_String StringBuilder.toString()(n$99:java.lang.StringBuilder*) virtual [line 36];
+*&amp;tUrl:java.lang.String*=n$101 [line 36];
+NULLIFY(&amp;$irvar26); [line 36];
+EXIT_SCOPE(_,n$99,n$101,$irvar26); [line 36];
+APPLY_ABSTRACTION; [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 44 succs:50 exn:67 Instructions
+n$102=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 38];
+n$103=_fun_StringBuilder.&lt;init&gt;()(n$102:java.lang.StringBuilder*) [line 38];
+*&amp;$irvar27:java.lang.StringBuilder*=n$102 [line 38];
+EXIT_SCOPE(n$102,n$103); [line 38];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 succs:51 exn:67 Instructions
+n$104=*&amp;$irvar27:java.lang.StringBuilder* [line 38];
+_=*n$104:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 38];
+n$106=*&amp;contextPath:java.lang.String* [line 38];
+n$107=_fun_StringBuilder StringBuilder.append(String)(n$104:java.lang.StringBuilder*,n$106:java.lang.String*) virtual [line 38];
+*&amp;$irvar28:java.lang.StringBuilder*=n$107 [line 38];
+NULLIFY(&amp;$irvar27); [line 38];
+EXIT_SCOPE(_,n$104,n$106,n$107,$irvar27); [line 38];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node51.html"><span class='visited with_tooltip'>I_51<span class='tooltip'>node51 preds:50 succs:52 exn:67 Instructions
+n$108=*&amp;$irvar28:java.lang.StringBuilder* [line 38];
+_=*n$108:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 38];
+n$110=*&amp;tUrl:java.lang.String* [line 38];
+n$111=_fun_StringBuilder StringBuilder.append(String)(n$108:java.lang.StringBuilder*,n$110:java.lang.String*) virtual [line 38];
+*&amp;$irvar29:java.lang.StringBuilder*=n$111 [line 38];
+NULLIFY(&amp;tUrl); [line 38];
+NULLIFY(&amp;$irvar28); [line 38];
+EXIT_SCOPE(_,n$108,n$110,n$111,tUrl,$irvar28); [line 38];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node52.html"><span class='visited with_tooltip'>I_52<span class='tooltip'>node52 preds:51 succs:63 exn:67 Instructions
+n$112=*&amp;$irvar29:java.lang.StringBuilder* [line 38];
+_=*n$112:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 38];
+n$114=_fun_String StringBuilder.toString()(n$112:java.lang.StringBuilder*) virtual [line 38];
+*&amp;url:java.lang.String*=n$114 [line 38];
+NULLIFY(&amp;$irvar29); [line 38];
+EXIT_SCOPE(_,n$112,n$114,$irvar29); [line 38];
+APPLY_ABSTRACTION; [line 38];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node53.html"><span class='visited with_tooltip'>I_53<span class='tooltip'>node53 preds:31 28 succs:54 exn:67 Instructions
+n$115=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 41];
+n$116=_fun_StringBuilder.&lt;init&gt;()(n$115:java.lang.StringBuilder*) [line 41];
+*&amp;$irvar30:java.lang.StringBuilder*=n$115 [line 41];
+EXIT_SCOPE(n$115,n$116); [line 41];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node54.html"><span class='visited with_tooltip'>I_54<span class='tooltip'>node54 preds:53 succs:55 exn:67 Instructions
+n$117=*&amp;$irvar30:java.lang.StringBuilder* [line 41];
+_=*n$117:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 41];
+n$119=*&amp;contextPath:java.lang.String* [line 41];
+n$120=_fun_StringBuilder StringBuilder.append(String)(n$117:java.lang.StringBuilder*,n$119:java.lang.String*) virtual [line 41];
+*&amp;$irvar31:java.lang.StringBuilder*=n$120 [line 41];
+NULLIFY(&amp;$irvar30); [line 41];
+EXIT_SCOPE(_,n$117,n$119,n$120,$irvar30); [line 41];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:54 succs:56 exn:67 Instructions
+n$121=*&amp;$irvar31:java.lang.StringBuilder* [line 41];
+_=*n$121:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 41];
+n$123=*&amp;uri:java.lang.String* [line 41];
+n$124=_fun_StringBuilder StringBuilder.append(String)(n$121:java.lang.StringBuilder*,n$123:java.lang.String*) virtual [line 41];
+*&amp;$irvar32:java.lang.StringBuilder*=n$124 [line 41];
+NULLIFY(&amp;$irvar31); [line 41];
+EXIT_SCOPE(_,n$121,n$123,n$124,$irvar31); [line 41];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:55 succs:63 exn:67 Instructions
+n$125=*&amp;$irvar32:java.lang.StringBuilder* [line 41];
+_=*n$125:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 41];
+n$127=_fun_String StringBuilder.toString()(n$125:java.lang.StringBuilder*) virtual [line 41];
+*&amp;url:java.lang.String*=n$127 [line 41];
+NULLIFY(&amp;$irvar32); [line 41];
+EXIT_SCOPE(_,n$125,n$127,$irvar32); [line 41];
+APPLY_ABSTRACTION; [line 41];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:65 succs:58 exn:3 Instructions
+n$128=*&amp;CatchVar269:java.lang.Object* [line 43];
+*&amp;e:java.lang.Object*=n$128 [line 43];
+NULLIFY(&amp;CatchVar269); [line 43];
+EXIT_SCOPE(n$128,CatchVar269); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node58.html"><span class='visited with_tooltip'>I_58<span class='tooltip'>node58 preds:57 succs:59 exn:3 Instructions
+n$129=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 44];
+n$130=_fun_StringBuilder.&lt;init&gt;()(n$129:java.lang.StringBuilder*) [line 44];
+*&amp;$irvar33:java.lang.StringBuilder*=n$129 [line 44];
+EXIT_SCOPE(n$129,n$130); [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node59.html"><span class='visited with_tooltip'>I_59<span class='tooltip'>node59 preds:58 succs:60 exn:3 Instructions
+n$131=*&amp;$irvar33:java.lang.StringBuilder* [line 44];
+_=*n$131:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 44];
+n$133=*&amp;contextPath:java.lang.String* [line 44];
+n$134=_fun_StringBuilder StringBuilder.append(String)(n$131:java.lang.StringBuilder*,n$133:java.lang.String*) virtual [line 44];
+*&amp;$irvar34:java.lang.StringBuilder*=n$134 [line 44];
+NULLIFY(&amp;contextPath); [line 44];
+NULLIFY(&amp;$irvar33); [line 44];
+EXIT_SCOPE(_,n$131,n$133,n$134,contextPath,$irvar33); [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node60.html"><span class='visited with_tooltip'>I_60<span class='tooltip'>node60 preds:59 succs:61 exn:3 Instructions
+n$135=*&amp;$irvar34:java.lang.StringBuilder* [line 44];
+_=*n$135:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 44];
+n$137=*&amp;uri:java.lang.String* [line 44];
+n$138=_fun_StringBuilder StringBuilder.append(String)(n$135:java.lang.StringBuilder*,n$137:java.lang.String*) virtual [line 44];
+*&amp;$irvar35:java.lang.StringBuilder*=n$138 [line 44];
+NULLIFY(&amp;uri); [line 44];
+NULLIFY(&amp;$irvar34); [line 44];
+EXIT_SCOPE(_,n$135,n$137,n$138,uri,$irvar34); [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node61.html"><span class='visited with_tooltip'>I_61<span class='tooltip'>node61 preds:60 succs:62 exn:3 Instructions
+n$139=*&amp;$irvar35:java.lang.StringBuilder* [line 44];
+_=*n$139:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 44];
+n$141=_fun_String StringBuilder.toString()(n$139:java.lang.StringBuilder*) virtual [line 44];
+*&amp;url:java.lang.String*=n$141 [line 44];
+NULLIFY(&amp;$irvar35); [line 44];
+EXIT_SCOPE(_,n$139,n$141,$irvar35); [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds:61 succs:63 exn:3 Instructions
+n$142=*&amp;#GB<>$com.zrlog.service.UploadService.LOGGER:org.slf4j.Logger*(root com.zrlog.service.UploadService) [line 45];
+_=*n$142:org.slf4j.Logger*(root org.slf4j.Logger) [line 45];
+n$144=*&amp;e:java.lang.Object* [line 45];
+n$145=_fun_void Logger.error(String,Throwable)(n$142:org.slf4j.Logger*,"":java.lang.Object*,n$144:java.lang.Object*) interface virtual [line 45];
+NULLIFY(&amp;e); [line 45];
+EXIT_SCOPE(_,n$142,n$144,n$145,e); [line 45];
+APPLY_ABSTRACTION; [line 45];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node63.html"><span class='visited with_tooltip'>I_63<span class='tooltip'>node63 preds:62 56 52 40 37 succs:64 exn:3 Instructions
+n$146=*&amp;uploadFileResponse:com.zrlog.common.response.UploadFileResponse* [line 47];
+_=*n$146:com.zrlog.common.response.UploadFileResponse*(root com.zrlog.common.response.UploadFileResponse) [line 47];
+n$148=*&amp;url:java.lang.String* [line 47];
+n$149=_fun_void UploadFileResponse.setUrl(String)(n$146:com.zrlog.common.response.UploadFileResponse*,n$148:java.lang.String*) virtual [line 47];
+NULLIFY(&amp;url); [line 47];
+EXIT_SCOPE(_,n$146,n$148,n$149,url); [line 47];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node64.html"><span class='visited with_tooltip'>I_64<span class='tooltip'>node64 preds:63 succs:2 exn:3 Instructions
+n$150=*&amp;uploadFileResponse:com.zrlog.common.response.UploadFileResponse* [line 48];
+*&amp;return:com.zrlog.common.response.UploadFileResponse*=n$150 [line 48];
+NULLIFY(&amp;uploadFileResponse); [line 48];
+EXIT_SCOPE(n$150,uploadFileResponse); [line 48];
+APPLY_ABSTRACTION; [line 48];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node65.html"><span class='visited with_tooltip'>C_65<span class='tooltip'>node65 preds:67 succs:57 exn:3 Conditional exception handler
+n$153=_fun___instanceof(n$152:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 43];
+PRUNE(n$153, true); [line 43];
+*&amp;CatchVar269:com.zrlog.common.response.UploadFileResponse*=n$152 [line 43];
+EXIT_SCOPE(n$152,n$153); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node66.html"><span class='visited with_tooltip'>C_66<span class='tooltip'>node66 preds:67 succs:3 exn:3 Conditional exception handler
+n$153=_fun___instanceof(n$152:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 43];
+PRUNE(!n$153, false); [line 43];
+*&amp;return:com.zrlog.common.response.UploadFileResponse*=EXN n$152 [line 43];
+NULLIFY(&amp;uploadFileResponse); [line 43];
+EXIT_SCOPE(n$152,n$153,uploadFileResponse); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.service.UploadService.getCloudUrl%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjavax.47d07ce4542c1e3173006f1e9a68bae8_node67.html"><span class='visited with_tooltip'>I_67<span class='tooltip'>node67 preds: succs:65 66 exn:3 Instructions
+n$151=*&amp;return:com.zrlog.common.response.UploadFileResponse* [line 43];
+*&amp;return:com.zrlog.common.response.UploadFileResponse*=null [line 43];
+n$152=_fun___unwrap_exception(n$151:com.zrlog.common.response.UploadFileResponse*) [line 43];
+NULLIFY(&amp;$irvar31); [line 43];
+NULLIFY(&amp;$irvar26); [line 43];
+NULLIFY(&amp;$irvar22); [line 43];
+NULLIFY(&amp;$irvar30); [line 43];
+NULLIFY(&amp;$irvar29); [line 43];
+NULLIFY(&amp;$irvar25); [line 43];
+NULLIFY(&amp;$irvar9); [line 43];
+NULLIFY(&amp;$irvar17); [line 43];
+NULLIFY(&amp;url); [line 43];
+NULLIFY(&amp;urls); [line 43];
+NULLIFY(&amp;tUrl); [line 43];
+NULLIFY(&amp;$irvar18); [line 43];
+NULLIFY(&amp;$irvar16); [line 43];
+NULLIFY(&amp;$irvar12); [line 43];
+NULLIFY(&amp;$irvar28); [line 43];
+NULLIFY(&amp;$irvar19); [line 43];
+NULLIFY(&amp;$irvar21); [line 43];
+NULLIFY(&amp;map); [line 43];
+NULLIFY(&amp;$irvar20); [line 43];
+NULLIFY(&amp;$irvar23); [line 43];
+NULLIFY(&amp;$irvar13); [line 43];
+NULLIFY(&amp;$irvar11); [line 43];
+NULLIFY(&amp;$irvar10); [line 43];
+NULLIFY(&amp;$irvar24); [line 43];
+NULLIFY(&amp;$irvar32); [line 43];
+NULLIFY(&amp;$irvar27); [line 43];
+NULLIFY(&amp;$irvar15); [line 43];
+NULLIFY(&amp;$irvar14); [line 43];
+EXIT_SCOPE(n$151,$irvar31,$irvar26,$irvar22,$irvar30,$irvar29,$irvar25,$irvar9,$irvar17,url,urls,tUrl,$irvar18,$irvar16,$irvar12,$irvar28,$irvar19,$irvar21,map,$irvar20,$irvar23,$irvar13,$irvar11,$irvar10,$irvar24,$irvar32,$irvar27,$irvar15,$irvar14); [line 43];
+</span></span></a><br />@
+
+<span class='color_black'>com.zrlog.common.response.UploadFileResponse* UploadFileResponse UploadService.getCloudUrl(String,String,String,HttpServletRequest,AdminTokenVO)(com.zrlog.service.UploadService* this, java.lang.String* contextPath, java.lang.String* uri, java.lang.String* finalFilePath, javax.servlet.http.HttpServletRequest* request, com.zrlog.common.vo.AdminTokenVO* adminTokenVO)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { url -> Footprint({ common.Constants.pluginServer*,
+                                           util.BlogBuildInfoUtil.version,
+                                           @val$5.protocol,
+                                           @val$3*,
+                                           @val$2*,
+                                           @val$1* }) + Sanitizers({ StringConcatenation }) ~> ? } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= UploadFileResponse UploadService.getCloudUrl(String,String,String,HttpServletRequest,AdminTokenVO)
+; translation_unit= service/src/main/java/com/zrlog/service/UploadService.java
+; access= Public
+; formals= [(this,com.zrlog.service.UploadService*);  (contextPath,
+            java.lang.String*);  (uri,java.lang.String*);  (finalFilePath,
+            java.lang.String*);  (request,
+            javax.servlet.http.HttpServletRequest*);  (adminTokenVO,
+            com.zrlog.common.vo.AdminTokenVO*)]
+; is_defined= true
+; loc= service/src/main/java/com/zrlog/service/UploadService.java:21
+; locals= [{ name= $irvar35; typ= void; modify_in_block= false }; 
+           { name= $irvar34; typ= void; modify_in_block= false }; 
+           { name= $irvar33; typ= void; modify_in_block= false }; 
+           { name= CatchVar269; typ= void; modify_in_block= false }; 
+           { name= $irvar32; typ= void; modify_in_block= false }; 
+           { name= $irvar31; typ= void; modify_in_block= false }; 
+           { name= $irvar30; typ= void; modify_in_block= false }; 
+           { name= $irvar29; typ= void; modify_in_block= false }; 
+           { name= $irvar28; typ= void; modify_in_block= false }; 
+           { name= $irvar27; typ= void; modify_in_block= false }; 
+           { name= $irvar26; typ= void; modify_in_block= false }; 
+           { name= $irvar25; typ= void; modify_in_block= false }; 
+           { name= $irvar24; typ= void; modify_in_block= false }; 
+           { name= $irvar23; typ= void; modify_in_block= false }; 
+           { name= $irvar22; typ= void; modify_in_block= false }; 
+           { name= $irvar21; typ= void; modify_in_block= false }; 
+           { name= $irvar20; typ= void; modify_in_block= false }; 
+           { name= $irvar19; typ= void; modify_in_block= false }; 
+           { name= $irvar18; typ= void; modify_in_block= false }; 
+           { name= $irvar17; typ= void; modify_in_block= false }; 
+           { name= $irvar16; typ= void; modify_in_block= false }; 
+           { name= $irvar15; typ= void; modify_in_block= false }; 
+           { name= $irvar14; typ= void; modify_in_block= false }; 
+           { name= $irvar13; typ= void; modify_in_block= false }; 
+           { name= $irvar12; typ= void; modify_in_block= false }; 
+           { name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= map; typ= java.util.Map*; modify_in_block= false }; 
+           { name= uploadFileResponse; typ= com.zrlog.common.response.UploadFileResponse*; modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }; 
+           { name= urls; typ= java.util.List*; modify_in_block= false }; 
+           { name= url; typ= java.lang.String*; modify_in_block= false }; 
+           { name= tUrl; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= com.zrlog.common.response.UploadFileResponse* 
+; proc_id= com.zrlog.service.UploadService.getCloudUrl(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpServletRequest,com.zrlog.common.vo.AdminTokenVO):com.zrlog.common.response.UploadFileResponse }</pre>
+</body>
+</html>

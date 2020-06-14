@@ -1,0 +1,1281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/handler/GlobalResourceHandler.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.handler; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.hibegin.common.util.FileUtils; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.hibegin.common.util.IOUtil; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.jfinal.core.JFinal; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.jfinal.handler.Handler; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import com.jfinal.kit.PathKit; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import com.zrlog.common.vo.AdminTokenVO; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import com.zrlog.util.BlogBuildInfoUtil; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">import com.zrlog.util.I18nUtil; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">import com.zrlog.util.ZrLogUtil; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">import com.zrlog.web.config.ZrLogConfig; </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">import com.zrlog.web.plugin.RequestInfo; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">import com.zrlog.web.plugin.RequestStatisticsPlugin; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">import com.zrlog.web.token.AdminTokenService; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">import com.zrlog.web.token.AdminTokenThreadLocal; </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">import com.zrlog.web.util.WebTools; </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">import org.apache.catalina.connector.Response; </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">import org.apache.catalina.connector.ResponseFacade; </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">import org.slf4j.Logger; </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">import org.slf4j.LoggerFactory; </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">import javax.servlet.ServletResponse; </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">import javax.servlet.http.HttpServletRequest; </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">import javax.servlet.http.HttpServletResponse; </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">import javax.servlet.http.HttpServletResponseWrapper; </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">import java.io.File; </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">import java.io.FileInputStream; </td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">import java.io.IOException; </td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">import java.io.PrintWriter; </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">import java.nio.charset.StandardCharsets; </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">import java.util.HashSet; </td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">import java.util.Set; </td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line"> * 用于对静态文件的请求的检查，和静态化文章页，加快文章页的响应，压缩html文本，提供自定义插件标签的解析，静态资源文件的浏览器缓存问题 </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">public class GlobalResourceHandler extends Handler { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<init>%28%29.6725be8de6f3b47e74d6283b16599cfb_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<init>%28%29.6725be8de6f3b47e74d6283b16599cfb_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 39];
+n$1=_fun_Handler.&lt;init&gt;()(n$0:com.zrlog.web.handler.GlobalResourceHandler*) [line 39];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<init>%28%29.6725be8de6f3b47e74d6283b16599cfb_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<init>%28%29.6725be8de6f3b47e74d6283b16599cfb_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<init>%28%29.6725be8de6f3b47e74d6283b16599cfb_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/com.zrlog.web.handler.GlobalResourceHandler.<init>%28%29.6725be8de6f3b47e74d6283b16599cfb.html">summary for GlobalResourceHandler.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(GlobalResourceHandler.class); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.handler.GlobalResourceHandler:java.lang.Object*) [line 41];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 41];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:org.slf4j.Logger* [line 41];
+*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.LOGGER:com.zrlog.web.handler.GlobalResourceHandler(root com.zrlog.web.handler.GlobalResourceHandler)=n$1 [line 41];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527.html">summary for void GlobalResourceHandler.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">    private static final String PAGE_END_TAG = &quot;&lt;none id='SP_&quot; + System.currentTimeMillis() + &quot;'&gt;&lt;/none&gt;&quot;; <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$2=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 42];
+n$3=_fun_StringBuilder.&lt;init&gt;()(n$2:java.lang.StringBuilder*) [line 42];
+*&amp;$irvar1:java.lang.StringBuilder*=n$2 [line 42];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$4=*&amp;$irvar1:java.lang.StringBuilder* [line 42];
+_=*n$4:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 42];
+n$6=_fun_StringBuilder StringBuilder.append(String)(n$4:java.lang.StringBuilder*,"<none id='SP_":java.lang.Object*) virtual [line 42];
+*&amp;$irvar2:java.lang.StringBuilder*=n$6 [line 42];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=_fun_long System.currentTimeMillis()() [line 42];
+*&amp;$irvar3:long=n$7 [line 42];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$8=*&amp;$irvar2:java.lang.StringBuilder* [line 42];
+_=*n$8:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 42];
+n$10=*&amp;$irvar3:long [line 42];
+n$11=_fun_StringBuilder StringBuilder.append(long)(n$8:java.lang.StringBuilder*,n$10:long) virtual [line 42];
+*&amp;$irvar4:java.lang.StringBuilder*=n$11 [line 42];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$12=*&amp;$irvar4:java.lang.StringBuilder* [line 42];
+_=*n$12:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 42];
+n$14=_fun_StringBuilder StringBuilder.append(String)(n$12:java.lang.StringBuilder*,"'></none>":java.lang.Object*) virtual [line 42];
+*&amp;$irvar5:java.lang.StringBuilder*=n$14 [line 42];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$15=*&amp;$irvar5:java.lang.StringBuilder* [line 42];
+_=*n$15:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 42];
+n$17=_fun_String StringBuilder.toString()(n$15:java.lang.StringBuilder*) virtual [line 42];
+*&amp;$irvar6:java.lang.String*=n$17 [line 42];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$18=*&amp;$irvar6:java.lang.String* [line 42];
+*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.PAGE_END_TAG:com.zrlog.web.handler.GlobalResourceHandler(root com.zrlog.web.handler.GlobalResourceHandler)=n$18 [line 42];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">    public static final String CACHE_HTML_PATH = PathKit.getWebRootPath() + &quot;/_cache/&quot;; <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$19=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 43];
+n$20=_fun_StringBuilder.&lt;init&gt;()(n$19:java.lang.StringBuilder*) [line 43];
+*&amp;$irvar7:java.lang.StringBuilder*=n$19 [line 43];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$21=_fun_String PathKit.getWebRootPath()() [line 43];
+*&amp;$irvar8:java.lang.String*=n$21 [line 43];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$22=*&amp;$irvar7:java.lang.StringBuilder* [line 43];
+_=*n$22:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 43];
+n$24=*&amp;$irvar8:java.lang.String* [line 43];
+n$25=_fun_StringBuilder StringBuilder.append(String)(n$22:java.lang.StringBuilder*,n$24:java.lang.String*) virtual [line 43];
+*&amp;$irvar9:java.lang.StringBuilder*=n$25 [line 43];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$26=*&amp;$irvar9:java.lang.StringBuilder* [line 43];
+_=*n$26:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 43];
+n$28=_fun_StringBuilder StringBuilder.append(String)(n$26:java.lang.StringBuilder*,"/_cache/":java.lang.Object*) virtual [line 43];
+*&amp;$irvar10:java.lang.StringBuilder*=n$28 [line 43];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$29=*&amp;$irvar10:java.lang.StringBuilder* [line 43];
+_=*n$29:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 43];
+n$31=_fun_String StringBuilder.toString()(n$29:java.lang.StringBuilder*) virtual [line 43];
+*&amp;$irvar11:java.lang.String*=n$31 [line 43];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$32=*&amp;$irvar11:java.lang.String* [line 43];
+*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.CACHE_HTML_PATH:com.zrlog.web.handler.GlobalResourceHandler(root com.zrlog.web.handler.GlobalResourceHandler)=n$32 [line 43];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">    private static final ThreadLocal&lt;Long&gt; REQUEST_START_TIME = new ThreadLocal&lt;&gt;(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$33=_fun___new(sizeof(t=java.lang.ThreadLocal):java.lang.ThreadLocal*) [line 44];
+n$34=_fun_ThreadLocal.&lt;init&gt;()(n$33:java.lang.ThreadLocal*) [line 44];
+*&amp;$irvar12:java.lang.ThreadLocal*=n$33 [line 44];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$35=*&amp;$irvar12:java.lang.ThreadLocal* [line 44];
+*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.REQUEST_START_TIME:com.zrlog.web.handler.GlobalResourceHandler(root com.zrlog.web.handler.GlobalResourceHandler)=n$35 [line 44];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">     * ` </td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">     * 不希望部分技术人走后门，拦截一些不合法的请求 </td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">    private static final Set&lt;String&gt; FORBIDDEN_URI_EXT_SET = new HashSet&lt;&gt;(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$36=_fun___new(sizeof(t=java.util.HashSet):java.util.HashSet*) [line 50];
+n$37=_fun_HashSet.&lt;init&gt;()(n$36:java.util.HashSet*) [line 50];
+*&amp;$irvar13:java.util.HashSet*=n$36 [line 50];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$38=*&amp;$irvar13:java.util.HashSet* [line 50];
+*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.FORBIDDEN_URI_EXT_SET:com.zrlog.web.handler.GlobalResourceHandler(root com.zrlog.web.handler.GlobalResourceHandler)=n$38 [line 50];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">    static { </td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">        //由于程序的.jsp文件没有存放在WEB-INF目录，为了防止访问.jsp页面获得的没有数据的页面，或则是错误的页面。 </td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">        FORBIDDEN_URI_EXT_SET.add(&quot;.jsp&quot;); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$39=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.FORBIDDEN_URI_EXT_SET:java.util.Set*(root com.zrlog.web.handler.GlobalResourceHandler) [line 54];
+_=*n$39:java.util.Set*(root java.util.Set) [line 54];
+n$41=_fun_boolean Set.add(Object)(n$39:java.util.Set*,".jsp":java.lang.Object*) interface virtual [line 54];
+*&amp;$irvar14:_Bool=n$41 [line 54];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">        FORBIDDEN_URI_EXT_SET.add(&quot;.ftl&quot;); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$42=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.FORBIDDEN_URI_EXT_SET:java.util.Set*(root com.zrlog.web.handler.GlobalResourceHandler) [line 55];
+_=*n$42:java.util.Set*(root java.util.Set) [line 55];
+n$44=_fun_boolean Set.add(Object)(n$42:java.util.Set*,".ftl":java.lang.Object*) interface virtual [line 55];
+*&amp;$irvar15:_Bool=n$44 [line 55];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">        //这主要用在主题目录下面的配置文件。 </td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">        FORBIDDEN_URI_EXT_SET.add(&quot;.properties&quot;); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$45=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.FORBIDDEN_URI_EXT_SET:java.util.Set*(root com.zrlog.web.handler.GlobalResourceHandler) [line 57];
+_=*n$45:java.util.Set*(root java.util.Set) [line 57];
+n$47=_fun_boolean Set.add(Object)(n$45:java.util.Set*,".properties":java.lang.Object*) interface virtual [line 57];
+*&amp;$irvar16:_Bool=n$47 [line 57];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">    } <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:2 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:26 3 succs: exn: Exit
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.<clinit>%28%29%3Avoid.5b7b29c0de9a587745e1c1a32f63c527_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">    public void handle(String target, HttpServletRequest request, HttpServletResponse response, boolean[] isHandled) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c.html">summary for void GlobalResourceHandler.handle(String,HttpServletRequest,HttpServletResponse,boolean[])</a></td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">        long start = System.currentTimeMillis(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_long System.currentTimeMillis()() [line 62];
+*&amp;start:long=n$0 [line 62];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">        REQUEST_START_TIME.set(start); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.REQUEST_START_TIME:java.lang.ThreadLocal*(root com.zrlog.web.handler.GlobalResourceHandler) [line 63];
+*&amp;$irvar0:java.lang.ThreadLocal*=n$1 [line 63];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$2=*&amp;start:long [line 63];
+n$3=_fun_Long Long.valueOf(long)(n$2:long) [line 63];
+*&amp;$irvar1:java.lang.Long*=n$3 [line 63];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$4=*&amp;$irvar0:java.lang.ThreadLocal* [line 63];
+_=*n$4:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 63];
+n$6=*&amp;$irvar1:java.lang.Long* [line 63];
+n$7=_fun_void ThreadLocal.set(Object)(n$4:java.lang.ThreadLocal*,n$6:java.lang.Long*) virtual [line 63];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">        String url = WebTools.getHomeUrl(request); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$8=*&amp;request:javax.servlet.http.HttpServletRequest* [line 64];
+n$9=_fun_String WebTools.getHomeUrl(HttpServletRequest)(n$8:javax.servlet.http.HttpServletRequest*) [line 64];
+*&amp;url:java.lang.String*=n$9 [line 64];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">        request.setAttribute(&quot;basePath&quot;, url); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$10=*&amp;request:javax.servlet.http.HttpServletRequest* [line 65];
+_=*n$10:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 65];
+n$12=*&amp;url:java.lang.String* [line 65];
+n$13=_fun_void HttpServletRequest.setAttribute(String,Object)(n$10:javax.servlet.http.HttpServletRequest*,"basePath":java.lang.Object*,n$12:java.lang.String*) interface virtual [line 65];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">        request.setAttribute(&quot;baseWithHostPath&quot;, WebTools.getHomeUrlWithHostNotProtocol(request)); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$14=*&amp;request:javax.servlet.http.HttpServletRequest* [line 66];
+n$15=_fun_String WebTools.getHomeUrlWithHostNotProtocol(HttpServletRequest)(n$14:javax.servlet.http.HttpServletRequest*) [line 66];
+*&amp;$irvar2:java.lang.String*=n$15 [line 66];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$16=*&amp;request:javax.servlet.http.HttpServletRequest* [line 66];
+_=*n$16:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 66];
+n$18=*&amp;$irvar2:java.lang.String* [line 66];
+n$19=_fun_void HttpServletRequest.setAttribute(String,Object)(n$16:javax.servlet.http.HttpServletRequest*,"baseWithHostPath":java.lang.Object*,n$18:java.lang.String*) interface virtual [line 66];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">        request.setAttribute(&quot;pageEndTag&quot;, PAGE_END_TAG); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$20=*&amp;request:javax.servlet.http.HttpServletRequest* [line 67];
+_=*n$20:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 67];
+n$22=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.PAGE_END_TAG:java.lang.String*(root com.zrlog.web.handler.GlobalResourceHandler) [line 67];
+n$23=_fun_void HttpServletRequest.setAttribute(String,Object)(n$20:javax.servlet.http.HttpServletRequest*,"pageEndTag":java.lang.Object*,n$22:java.lang.String*) interface virtual [line 67];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">        String ext = null; <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+*&amp;ext:java.lang.Object*=null [line 68];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">        if (target.contains(&quot;/&quot;)) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 16 exn:3 Instructions
+n$24=*&amp;target:java.lang.String* [line 69];
+_=*n$24:java.lang.String*(root java.lang.String) [line 69];
+n$26=_fun_boolean String.contains(CharSequence)(n$24:java.lang.String*,"/":java.lang.Object*) virtual [line 69];
+*&amp;$irvar3:_Bool=n$26 [line 69];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:14 succs:17 exn:3 Conditional method_body
+n$27=*&amp;$irvar3:_Bool [line 69];
+PRUNE(!(n$27 == 0), true); [line 69];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:14 succs:24 exn:3 Conditional method_body
+n$27=*&amp;$irvar3:_Bool [line 69];
+PRUNE((n$27 == 0), false); [line 69];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">            String name = target.substring(target.lastIndexOf('/')); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:15 succs:18 exn:3 Instructions
+n$28=*&amp;target:java.lang.String* [line 70];
+_=*n$28:java.lang.String*(root java.lang.String) [line 70];
+n$30=_fun_int String.lastIndexOf(int)(n$28:java.lang.String*,47:int) virtual [line 70];
+*&amp;$irvar4:int=n$30 [line 70];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$31=*&amp;target:java.lang.String* [line 70];
+_=*n$31:java.lang.String*(root java.lang.String) [line 70];
+n$33=*&amp;$irvar4:int [line 70];
+n$34=_fun_String String.substring(int)(n$31:java.lang.String*,n$33:int) virtual [line 70];
+*&amp;name:java.lang.String*=n$34 [line 70];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">            if (name.contains(&quot;.&quot;)) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 21 exn:3 Instructions
+n$35=*&amp;name:java.lang.String* [line 71];
+_=*n$35:java.lang.String*(root java.lang.String) [line 71];
+n$37=_fun_boolean String.contains(CharSequence)(n$35:java.lang.String*,".":java.lang.Object*) virtual [line 71];
+*&amp;$irvar5:_Bool=n$37 [line 71];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node20.html"><span class='visited with_tooltip'>C_20<span class='tooltip'>node20 preds:19 succs:22 exn:3 Conditional method_body
+n$38=*&amp;$irvar5:_Bool [line 71];
+PRUNE(!(n$38 == 0), true); [line 71];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node21.html"><span class='visited with_tooltip'>C_21<span class='tooltip'>node21 preds:19 succs:24 exn:3 Conditional method_body
+n$38=*&amp;$irvar5:_Bool [line 71];
+PRUNE((n$38 == 0), false); [line 71];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">                ext = name.substring(name.lastIndexOf('.')); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:20 succs:23 exn:3 Instructions
+n$39=*&amp;name:java.lang.String* [line 72];
+_=*n$39:java.lang.String*(root java.lang.String) [line 72];
+n$41=_fun_int String.lastIndexOf(int)(n$39:java.lang.String*,46:int) virtual [line 72];
+*&amp;$irvar6:int=n$41 [line 72];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$42=*&amp;name:java.lang.String* [line 72];
+_=*n$42:java.lang.String*(root java.lang.String) [line 72];
+n$44=*&amp;$irvar6:int [line 72];
+n$45=_fun_String String.substring(int)(n$42:java.lang.String*,n$44:int) virtual [line 72];
+*&amp;ext:java.lang.String*=n$45 [line 72];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">            AdminTokenVO adminTokenVO = new AdminTokenService().getAdminTokenVO(request); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 21 16 succs:25 exn:180 Instructions
+n$46=_fun___new(sizeof(t=com.zrlog.web.token.AdminTokenService):com.zrlog.web.token.AdminTokenService*) [line 76];
+n$47=_fun_AdminTokenService.&lt;init&gt;()(n$46:com.zrlog.web.token.AdminTokenService*) [line 76];
+*&amp;$irvar7:com.zrlog.web.token.AdminTokenService*=n$46 [line 76];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:180 Instructions
+n$48=*&amp;$irvar7:com.zrlog.web.token.AdminTokenService* [line 76];
+_=*n$48:com.zrlog.web.token.AdminTokenService*(root com.zrlog.web.token.AdminTokenService) [line 76];
+n$50=*&amp;request:javax.servlet.http.HttpServletRequest* [line 76];
+n$51=_fun_AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)(n$48:com.zrlog.web.token.AdminTokenService*,n$50:javax.servlet.http.HttpServletRequest*) virtual [line 76];
+*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO*=n$51 [line 76];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">            final ResponseRenderPrintWriter responseRenderPrintWriter = new ResponseRenderPrintWriter(response.getOutputStream(), url, PAGE_END_TAG, request, response, adminTokenVO); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:180 Instructions
+n$52=*&amp;response:javax.servlet.http.HttpServletResponse* [line 77];
+_=*n$52:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 77];
+n$54=_fun_ServletOutputStream HttpServletResponse.getOutputStream()(n$52:javax.servlet.http.HttpServletResponse*) interface virtual [line 77];
+*&amp;$irvar8:javax.servlet.ServletOutputStream*=n$54 [line 77];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:180 Instructions
+n$55=_fun___new(sizeof(t=com.zrlog.web.handler.ResponseRenderPrintWriter):com.zrlog.web.handler.ResponseRenderPrintWriter*) [line 77];
+n$56=*&amp;$irvar8:javax.servlet.ServletOutputStream* [line 77];
+n$57=*&amp;url:java.lang.String* [line 77];
+n$58=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.PAGE_END_TAG:java.lang.String*(root com.zrlog.web.handler.GlobalResourceHandler) [line 77];
+n$59=*&amp;request:javax.servlet.http.HttpServletRequest* [line 77];
+n$60=*&amp;response:javax.servlet.http.HttpServletResponse* [line 77];
+n$61=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 77];
+n$62=_fun_ResponseRenderPrintWriter.&lt;init&gt;(OutputStream,String,String,HttpServletRequest,HttpServletResponse,AdminTokenVO)(n$55:com.zrlog.web.handler.ResponseRenderPrintWriter*,n$56:javax.servlet.ServletOutputStream*,n$57:java.lang.String*,n$58:java.lang.String*,n$59:javax.servlet.http.HttpServletRequest*,n$60:javax.servlet.http.HttpServletResponse*,n$61:com.zrlog.common.vo.AdminTokenVO*) [line 77];
+n$63=_fun___set_file_attribute(n$55:com.zrlog.web.handler.ResponseRenderPrintWriter*) [line 77];
+*&amp;responseRenderPrintWriter:com.zrlog.web.handler.ResponseRenderPrintWriter*=n$55 [line 77];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">            response = new MyHttpServletResponseWrapper(response,responseRenderPrintWriter); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:180 Instructions
+n$64=_fun___new(sizeof(t=com.zrlog.web.handler.MyHttpServletResponseWrapper):com.zrlog.web.handler.MyHttpServletResponseWrapper*) [line 78];
+n$65=*&amp;response:javax.servlet.http.HttpServletResponse* [line 78];
+n$66=*&amp;responseRenderPrintWriter:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 78];
+n$67=_fun_MyHttpServletResponseWrapper.&lt;init&gt;(HttpServletResponse,ResponseRenderPrintWriter)(n$64:com.zrlog.web.handler.MyHttpServletResponseWrapper*,n$65:javax.servlet.http.HttpServletResponse*,n$66:com.zrlog.web.handler.ResponseRenderPrintWriter*) [line 78];
+*&amp;$irvar9:com.zrlog.web.handler.MyHttpServletResponseWrapper*=n$64 [line 78];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 31 exn:180 Instructions
+n$68=*&amp;$irvar9:com.zrlog.web.handler.MyHttpServletResponseWrapper* [line 78];
+*&amp;response:com.zrlog.web.handler.MyHttpServletResponseWrapper*=n$68 [line 78];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">            if (ext != null) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node30.html"><span class='visited with_tooltip'>C_30<span class='tooltip'>node30 preds:29 succs:32 exn:180 Conditional method_body
+n$69=*&amp;ext:java.lang.String* [line 79];
+PRUNE(!(n$69 == null), true); [line 79];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node31.html"><span class='visited with_tooltip'>C_31<span class='tooltip'>node31 preds:29 succs:68 exn:180 Conditional method_body
+n$69=*&amp;ext:java.lang.String* [line 79];
+PRUNE((n$69 == null), false); [line 79];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">                if (!FORBIDDEN_URI_EXT_SET.contains(ext)) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:30 succs:33 34 exn:180 Instructions
+n$70=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.FORBIDDEN_URI_EXT_SET:java.util.Set*(root com.zrlog.web.handler.GlobalResourceHandler) [line 80];
+_=*n$70:java.util.Set*(root java.util.Set) [line 80];
+n$72=*&amp;ext:java.lang.String* [line 80];
+n$73=_fun_boolean Set.contains(Object)(n$70:java.util.Set*,n$72:java.lang.String*) interface virtual [line 80];
+*&amp;$irvar10:_Bool=n$73 [line 80];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node33.html"><span class='visited with_tooltip'>C_33<span class='tooltip'>node33 preds:32 succs:35 exn:180 Conditional method_body
+n$74=*&amp;$irvar10:_Bool [line 80];
+PRUNE(!(n$74 != 0), true); [line 80];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node34.html"><span class='visited with_tooltip'>C_34<span class='tooltip'>node34 preds:32 succs:67 exn:180 Conditional method_body
+n$74=*&amp;$irvar10:_Bool [line 80];
+PRUNE((n$74 != 0), false); [line 80];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">                    // 处理静态化文件,仅仅缓存文章页(变化较小) </td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">                    if (target.endsWith(&quot;.html&quot;) &amp;&amp; target.startsWith(&quot;/&quot; + Constants.getArticleUri())) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:33 succs:36 37 exn:180 Instructions
+n$75=*&amp;target:java.lang.String* [line 82];
+_=*n$75:java.lang.String*(root java.lang.String) [line 82];
+n$77=_fun_boolean String.endsWith(String)(n$75:java.lang.String*,".html":java.lang.Object*) virtual [line 82];
+*&amp;$irvar11:_Bool=n$77 [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node36.html"><span class='visited with_tooltip'>C_36<span class='tooltip'>node36 preds:35 succs:38 exn:180 Conditional method_body
+n$78=*&amp;$irvar11:_Bool [line 82];
+PRUNE(!(n$78 == 0), true); [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:36 succs:39 exn:180 Instructions
+n$79=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 82];
+n$80=_fun_StringBuilder.&lt;init&gt;()(n$79:java.lang.StringBuilder*) [line 82];
+*&amp;$irvar12:java.lang.StringBuilder*=n$79 [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 succs:40 exn:180 Instructions
+n$81=*&amp;$irvar12:java.lang.StringBuilder* [line 82];
+_=*n$81:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 82];
+n$83=_fun_StringBuilder StringBuilder.append(String)(n$81:java.lang.StringBuilder*,"/":java.lang.Object*) virtual [line 82];
+*&amp;$irvar13:java.lang.StringBuilder*=n$83 [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 succs:41 exn:180 Instructions
+n$84=_fun_String Constants.getArticleUri()() [line 82];
+*&amp;$irvar14:java.lang.String*=n$84 [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:40 succs:42 exn:180 Instructions
+n$85=*&amp;$irvar13:java.lang.StringBuilder* [line 82];
+_=*n$85:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 82];
+n$87=*&amp;$irvar14:java.lang.String* [line 82];
+n$88=_fun_StringBuilder StringBuilder.append(String)(n$85:java.lang.StringBuilder*,n$87:java.lang.String*) virtual [line 82];
+*&amp;$irvar15:java.lang.StringBuilder*=n$88 [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:180 Instructions
+n$89=*&amp;$irvar15:java.lang.StringBuilder* [line 82];
+_=*n$89:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 82];
+n$91=_fun_String StringBuilder.toString()(n$89:java.lang.StringBuilder*) virtual [line 82];
+*&amp;$irvar16:java.lang.String*=n$91 [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 45 exn:180 Instructions
+n$92=*&amp;target:java.lang.String* [line 82];
+_=*n$92:java.lang.String*(root java.lang.String) [line 82];
+n$94=*&amp;$irvar16:java.lang.String* [line 82];
+n$95=_fun_boolean String.startsWith(String)(n$92:java.lang.String*,n$94:java.lang.String*) virtual [line 82];
+*&amp;$irvar17:_Bool=n$95 [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node44.html"><span class='visited with_tooltip'>C_44<span class='tooltip'>node44 preds:43 succs:46 exn:180 Conditional method_body
+n$96=*&amp;$irvar17:_Bool [line 82];
+PRUNE(!(n$96 == 0), true); [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node45.html"><span class='visited with_tooltip'>C_45<span class='tooltip'>node45 preds:43 succs:66 exn:180 Conditional method_body
+n$96=*&amp;$irvar17:_Bool [line 82];
+PRUNE((n$96 == 0), false); [line 82];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node37.html"><span class='visited with_tooltip'>C_37<span class='tooltip'>node37 preds:35 succs:66 exn:180 Conditional method_body
+n$78=*&amp;$irvar11:_Bool [line 82];
+PRUNE((n$78 == 0), false); [line 82];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">                        target = target.substring(0, target.lastIndexOf(&quot;.&quot;)); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:44 succs:47 exn:180 Instructions
+n$97=*&amp;target:java.lang.String* [line 83];
+_=*n$97:java.lang.String*(root java.lang.String) [line 83];
+n$99=_fun_int String.lastIndexOf(String)(n$97:java.lang.String*,".":java.lang.Object*) virtual [line 83];
+*&amp;$irvar18:int=n$99 [line 83];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:180 Instructions
+n$100=*&amp;target:java.lang.String* [line 83];
+_=*n$100:java.lang.String*(root java.lang.String) [line 83];
+n$102=*&amp;$irvar18:int [line 83];
+n$103=_fun_String String.substring(int,int)(n$100:java.lang.String*,0:int,n$102:int) virtual [line 83];
+*&amp;$irvar19:java.lang.String*=n$103 [line 83];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:180 Instructions
+n$104=*&amp;$irvar19:java.lang.String* [line 83];
+*&amp;target:java.lang.String*=n$104 [line 83];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">                        if (Constants.isStaticHtmlStatus() &amp;&amp; adminTokenVO == null) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:50 51 exn:180 Instructions
+n$105=_fun_boolean Constants.isStaticHtmlStatus()() [line 84];
+*&amp;$irvar20:_Bool=n$105 [line 84];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node50.html"><span class='visited with_tooltip'>C_50<span class='tooltip'>node50 preds:49 succs:52 53 exn:180 Conditional method_body
+n$106=*&amp;$irvar20:_Bool [line 84];
+PRUNE(!(n$106 == 0), true); [line 84];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node52.html"><span class='visited with_tooltip'>C_52<span class='tooltip'>node52 preds:50 succs:54 exn:180 Conditional method_body
+n$107=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 84];
+PRUNE(!(n$107 != null), true); [line 84];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node53.html"><span class='visited with_tooltip'>C_53<span class='tooltip'>node53 preds:50 succs:65 exn:180 Conditional method_body
+n$107=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 84];
+PRUNE((n$107 != null), false); [line 84];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node51.html"><span class='visited with_tooltip'>C_51<span class='tooltip'>node51 preds:49 succs:65 exn:180 Conditional method_body
+n$106=*&amp;$irvar20:_Bool [line 84];
+PRUNE((n$106 == 0), false); [line 84];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">                            String path = new String(request.getServletPath().getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node54.html"><span class='visited with_tooltip'>I_54<span class='tooltip'>node54 preds:52 succs:55 exn:180 Instructions
+n$108=*&amp;request:javax.servlet.http.HttpServletRequest* [line 85];
+_=*n$108:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 85];
+n$110=_fun_String HttpServletRequest.getServletPath()(n$108:javax.servlet.http.HttpServletRequest*) interface virtual [line 85];
+*&amp;$irvar21:java.lang.String*=n$110 [line 85];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:54 succs:56 exn:180 Instructions
+n$111=*&amp;$irvar21:java.lang.String* [line 85];
+_=*n$111:java.lang.String*(root java.lang.String) [line 85];
+n$113=*&amp;#GB<>$java.nio.charset.StandardCharsets.ISO_8859_1:java.nio.charset.Charset*(root java.nio.charset.StandardCharsets) [line 85];
+n$114=_fun_byte[] String.getBytes(Charset)(n$111:java.lang.String*,n$113:java.nio.charset.Charset*) virtual [line 85];
+*&amp;$irvar22:signed char[_*_](*)=n$114 [line 85];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:55 succs:57 exn:180 Instructions
+n$115=_fun___new(sizeof(t=java.lang.String):java.lang.String*) [line 85];
+n$116=*&amp;$irvar22:signed char[_*_](*) [line 85];
+n$117=*&amp;#GB<>$java.nio.charset.StandardCharsets.UTF_8:java.nio.charset.Charset*(root java.nio.charset.StandardCharsets) [line 85];
+n$118=_fun_String.&lt;init&gt;(byte[],Charset)(n$115:java.lang.String*,n$116:signed char[_*_](*),n$117:java.nio.charset.Charset*) [line 85];
+*&amp;path:java.lang.String*=n$115 [line 85];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line">                            responseHtmlFile(target, request, response, isHandled, responseRenderPrintWriter, new File(CACHE_HTML_PATH + I18nUtil.getAcceptLanguage(request) + path)); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:56 succs:58 exn:180 Instructions
+n$119=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 86];
+n$120=_fun_StringBuilder.&lt;init&gt;()(n$119:java.lang.StringBuilder*) [line 86];
+*&amp;$irvar23:java.lang.StringBuilder*=n$119 [line 86];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node58.html"><span class='visited with_tooltip'>I_58<span class='tooltip'>node58 preds:57 succs:59 exn:180 Instructions
+n$121=*&amp;$irvar23:java.lang.StringBuilder* [line 86];
+_=*n$121:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 86];
+n$123=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.CACHE_HTML_PATH:java.lang.String*(root com.zrlog.web.handler.GlobalResourceHandler) [line 86];
+n$124=_fun_StringBuilder StringBuilder.append(String)(n$121:java.lang.StringBuilder*,n$123:java.lang.String*) virtual [line 86];
+*&amp;$irvar24:java.lang.StringBuilder*=n$124 [line 86];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node59.html"><span class='visited with_tooltip'>I_59<span class='tooltip'>node59 preds:58 succs:60 exn:180 Instructions
+n$125=*&amp;request:javax.servlet.http.HttpServletRequest* [line 86];
+n$126=_fun_String I18nUtil.getAcceptLanguage(HttpServletRequest)(n$125:javax.servlet.http.HttpServletRequest*) [line 86];
+*&amp;$irvar25:java.lang.String*=n$126 [line 86];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node60.html"><span class='visited with_tooltip'>I_60<span class='tooltip'>node60 preds:59 succs:61 exn:180 Instructions
+n$127=*&amp;$irvar24:java.lang.StringBuilder* [line 86];
+_=*n$127:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 86];
+n$129=*&amp;$irvar25:java.lang.String* [line 86];
+n$130=_fun_StringBuilder StringBuilder.append(String)(n$127:java.lang.StringBuilder*,n$129:java.lang.String*) virtual [line 86];
+*&amp;$irvar26:java.lang.StringBuilder*=n$130 [line 86];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node61.html"><span class='visited with_tooltip'>I_61<span class='tooltip'>node61 preds:60 succs:62 exn:180 Instructions
+n$131=*&amp;$irvar26:java.lang.StringBuilder* [line 86];
+_=*n$131:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 86];
+n$133=*&amp;path:java.lang.String* [line 86];
+n$134=_fun_StringBuilder StringBuilder.append(String)(n$131:java.lang.StringBuilder*,n$133:java.lang.String*) virtual [line 86];
+*&amp;$irvar27:java.lang.StringBuilder*=n$134 [line 86];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds:61 succs:63 exn:180 Instructions
+n$135=*&amp;$irvar27:java.lang.StringBuilder* [line 86];
+_=*n$135:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 86];
+n$137=_fun_String StringBuilder.toString()(n$135:java.lang.StringBuilder*) virtual [line 86];
+*&amp;$irvar28:java.lang.String*=n$137 [line 86];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node63.html"><span class='visited with_tooltip'>I_63<span class='tooltip'>node63 preds:62 succs:64 exn:180 Instructions
+n$138=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 86];
+n$139=*&amp;$irvar28:java.lang.String* [line 86];
+n$140=_fun_File.&lt;init&gt;(String)(n$138:java.io.File*,n$139:java.lang.String*) [line 86];
+*&amp;$irvar29:java.io.File*=n$138 [line 86];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node64.html"><span class='visited with_tooltip'>I_64<span class='tooltip'>node64 preds:63 succs:87 exn:180 Instructions
+n$141=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 86];
+n$142=*&amp;target:java.lang.String* [line 86];
+n$143=*&amp;request:javax.servlet.http.HttpServletRequest* [line 86];
+n$144=*&amp;response:javax.servlet.http.HttpServletResponse* [line 86];
+n$145=*&amp;isHandled:_Bool[_*_](*) [line 86];
+n$146=*&amp;responseRenderPrintWriter:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 86];
+n$147=*&amp;$irvar29:java.io.File* [line 86];
+n$148=_fun_void GlobalResourceHandler.responseHtmlFile(String,HttpServletRequest,HttpServletResponse,boolean[],ResponseRenderPrintWriter,File)(n$141:com.zrlog.web.handler.GlobalResourceHandler*,n$142:java.lang.String*,n$143:javax.servlet.http.HttpServletRequest*,n$144:javax.servlet.http.HttpServletResponse*,n$145:_Bool[_*_](*),n$146:com.zrlog.web.handler.ResponseRenderPrintWriter*,n$147:java.io.File*) [line 86];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">                        } else { </td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">                            this.next.handle(target, request, response, isHandled); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node65.html"><span class='visited with_tooltip'>I_65<span class='tooltip'>node65 preds:53 51 succs:87 exn:180 Instructions
+n$149=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 88];
+n$150=*n$149.next:com.jfinal.handler.Handler*(root com.zrlog.web.handler.GlobalResourceHandler) [line 88];
+_=*n$150:com.jfinal.handler.Handler*(root com.jfinal.handler.Handler) [line 88];
+n$152=*&amp;target:java.lang.String* [line 88];
+n$153=*&amp;request:javax.servlet.http.HttpServletRequest* [line 88];
+n$154=*&amp;response:javax.servlet.http.HttpServletResponse* [line 88];
+n$155=*&amp;isHandled:_Bool[_*_](*) [line 88];
+n$156=_fun_void Handler.handle(String,HttpServletRequest,HttpServletResponse,boolean[])(n$150:com.jfinal.handler.Handler*,n$152:java.lang.String*,n$153:javax.servlet.http.HttpServletRequest*,n$154:javax.servlet.http.HttpServletResponse*,n$155:_Bool[_*_](*)) virtual [line 88];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">                        } </td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line">                    } else { </td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">                        this.next.handle(target, request, response, isHandled); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node66.html"><span class='visited with_tooltip'>I_66<span class='tooltip'>node66 preds:45 37 succs:87 exn:180 Instructions
+n$157=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 91];
+n$158=*n$157.next:com.jfinal.handler.Handler*(root com.zrlog.web.handler.GlobalResourceHandler) [line 91];
+_=*n$158:com.jfinal.handler.Handler*(root com.jfinal.handler.Handler) [line 91];
+n$160=*&amp;target:java.lang.String* [line 91];
+n$161=*&amp;request:javax.servlet.http.HttpServletRequest* [line 91];
+n$162=*&amp;response:javax.servlet.http.HttpServletResponse* [line 91];
+n$163=*&amp;isHandled:_Bool[_*_](*) [line 91];
+n$164=_fun_void Handler.handle(String,HttpServletRequest,HttpServletResponse,boolean[])(n$158:com.jfinal.handler.Handler*,n$160:java.lang.String*,n$161:javax.servlet.http.HttpServletRequest*,n$162:javax.servlet.http.HttpServletResponse*,n$163:_Bool[_*_](*)) virtual [line 91];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">                    } </td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line">                } else { </td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line">                    //非法请求, 返回403 </td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">                    response.sendError(403); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node67.html"><span class='visited with_tooltip'>I_67<span class='tooltip'>node67 preds:34 succs:87 exn:180 Instructions
+n$165=*&amp;response:javax.servlet.http.HttpServletResponse* [line 95];
+_=*n$165:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 95];
+n$167=_fun_void HttpServletResponse.sendError(int)(n$165:javax.servlet.http.HttpServletResponse*,403:int) interface virtual [line 95];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">            } else { </td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line">                //首页静态化 </td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">                if (&quot;/&quot;.equals(target) &amp;&amp; Constants.isStaticHtmlStatus() &amp;&amp; adminTokenVO == null) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node68.html"><span class='visited with_tooltip'>I_68<span class='tooltip'>node68 preds:31 succs:69 70 exn:180 Instructions
+n$168=*&amp;target:java.lang.String* [line 99];
+n$169=_fun_boolean String.equals(Object)("/":java.lang.Object*,n$168:java.lang.String*) virtual [line 99];
+*&amp;$irvar30:_Bool=n$169 [line 99];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node69.html"><span class='visited with_tooltip'>C_69<span class='tooltip'>node69 preds:68 succs:71 exn:180 Conditional method_body
+n$170=*&amp;$irvar30:_Bool [line 99];
+PRUNE(!(n$170 == 0), true); [line 99];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node71.html"><span class='visited with_tooltip'>I_71<span class='tooltip'>node71 preds:69 succs:72 73 exn:180 Instructions
+n$171=_fun_boolean Constants.isStaticHtmlStatus()() [line 99];
+*&amp;$irvar31:_Bool=n$171 [line 99];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node72.html"><span class='visited with_tooltip'>C_72<span class='tooltip'>node72 preds:71 succs:74 75 exn:180 Conditional method_body
+n$172=*&amp;$irvar31:_Bool [line 99];
+PRUNE(!(n$172 == 0), true); [line 99];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node74.html"><span class='visited with_tooltip'>C_74<span class='tooltip'>node74 preds:72 succs:76 exn:180 Conditional method_body
+n$173=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 99];
+PRUNE(!(n$173 != null), true); [line 99];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node75.html"><span class='visited with_tooltip'>C_75<span class='tooltip'>node75 preds:72 succs:84 exn:180 Conditional method_body
+n$173=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 99];
+PRUNE((n$173 != null), false); [line 99];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node73.html"><span class='visited with_tooltip'>C_73<span class='tooltip'>node73 preds:71 succs:84 exn:180 Conditional method_body
+n$172=*&amp;$irvar31:_Bool [line 99];
+PRUNE((n$172 == 0), false); [line 99];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node70.html"><span class='visited with_tooltip'>C_70<span class='tooltip'>node70 preds:68 succs:84 exn:180 Conditional method_body
+n$170=*&amp;$irvar30:_Bool [line 99];
+PRUNE((n$170 == 0), false); [line 99];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">                    responseHtmlFile(target, request, response, isHandled, responseRenderPrintWriter, new File(CACHE_HTML_PATH + I18nUtil.getAcceptLanguage(request) + &quot;/index.html&quot;)); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node76.html"><span class='visited with_tooltip'>I_76<span class='tooltip'>node76 preds:74 succs:77 exn:180 Instructions
+n$174=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 100];
+n$175=_fun_StringBuilder.&lt;init&gt;()(n$174:java.lang.StringBuilder*) [line 100];
+*&amp;$irvar32:java.lang.StringBuilder*=n$174 [line 100];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node77.html"><span class='visited with_tooltip'>I_77<span class='tooltip'>node77 preds:76 succs:78 exn:180 Instructions
+n$176=*&amp;$irvar32:java.lang.StringBuilder* [line 100];
+_=*n$176:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100];
+n$178=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.CACHE_HTML_PATH:java.lang.String*(root com.zrlog.web.handler.GlobalResourceHandler) [line 100];
+n$179=_fun_StringBuilder StringBuilder.append(String)(n$176:java.lang.StringBuilder*,n$178:java.lang.String*) virtual [line 100];
+*&amp;$irvar33:java.lang.StringBuilder*=n$179 [line 100];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node78.html"><span class='visited with_tooltip'>I_78<span class='tooltip'>node78 preds:77 succs:79 exn:180 Instructions
+n$180=*&amp;request:javax.servlet.http.HttpServletRequest* [line 100];
+n$181=_fun_String I18nUtil.getAcceptLanguage(HttpServletRequest)(n$180:javax.servlet.http.HttpServletRequest*) [line 100];
+*&amp;$irvar34:java.lang.String*=n$181 [line 100];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node79.html"><span class='visited with_tooltip'>I_79<span class='tooltip'>node79 preds:78 succs:80 exn:180 Instructions
+n$182=*&amp;$irvar33:java.lang.StringBuilder* [line 100];
+_=*n$182:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100];
+n$184=*&amp;$irvar34:java.lang.String* [line 100];
+n$185=_fun_StringBuilder StringBuilder.append(String)(n$182:java.lang.StringBuilder*,n$184:java.lang.String*) virtual [line 100];
+*&amp;$irvar35:java.lang.StringBuilder*=n$185 [line 100];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node80.html"><span class='visited with_tooltip'>I_80<span class='tooltip'>node80 preds:79 succs:81 exn:180 Instructions
+n$186=*&amp;$irvar35:java.lang.StringBuilder* [line 100];
+_=*n$186:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100];
+n$188=_fun_StringBuilder StringBuilder.append(String)(n$186:java.lang.StringBuilder*,"/index.html":java.lang.Object*) virtual [line 100];
+*&amp;$irvar36:java.lang.StringBuilder*=n$188 [line 100];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node81.html"><span class='visited with_tooltip'>I_81<span class='tooltip'>node81 preds:80 succs:82 exn:180 Instructions
+n$189=*&amp;$irvar36:java.lang.StringBuilder* [line 100];
+_=*n$189:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 100];
+n$191=_fun_String StringBuilder.toString()(n$189:java.lang.StringBuilder*) virtual [line 100];
+*&amp;$irvar37:java.lang.String*=n$191 [line 100];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node82.html"><span class='visited with_tooltip'>I_82<span class='tooltip'>node82 preds:81 succs:83 exn:180 Instructions
+n$192=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 100];
+n$193=*&amp;$irvar37:java.lang.String* [line 100];
+n$194=_fun_File.&lt;init&gt;(String)(n$192:java.io.File*,n$193:java.lang.String*) [line 100];
+*&amp;$irvar38:java.io.File*=n$192 [line 100];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node83.html"><span class='visited with_tooltip'>I_83<span class='tooltip'>node83 preds:82 succs:87 exn:180 Instructions
+n$195=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 100];
+n$196=*&amp;target:java.lang.String* [line 100];
+n$197=*&amp;request:javax.servlet.http.HttpServletRequest* [line 100];
+n$198=*&amp;response:javax.servlet.http.HttpServletResponse* [line 100];
+n$199=*&amp;isHandled:_Bool[_*_](*) [line 100];
+n$200=*&amp;responseRenderPrintWriter:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 100];
+n$201=*&amp;$irvar38:java.io.File* [line 100];
+n$202=_fun_void GlobalResourceHandler.responseHtmlFile(String,HttpServletRequest,HttpServletResponse,boolean[],ResponseRenderPrintWriter,File)(n$195:com.zrlog.web.handler.GlobalResourceHandler*,n$196:java.lang.String*,n$197:javax.servlet.http.HttpServletRequest*,n$198:javax.servlet.http.HttpServletResponse*,n$199:_Bool[_*_](*),n$200:com.zrlog.web.handler.ResponseRenderPrintWriter*,n$201:java.io.File*) [line 100];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">                } else { </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line">                    this.next.handle(target, request, response, isHandled); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node84.html"><span class='visited with_tooltip'>I_84<span class='tooltip'>node84 preds:75 73 70 succs:85 exn:180 Instructions
+n$203=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 102];
+n$204=*n$203.next:com.jfinal.handler.Handler*(root com.zrlog.web.handler.GlobalResourceHandler) [line 102];
+_=*n$204:com.jfinal.handler.Handler*(root com.jfinal.handler.Handler) [line 102];
+n$206=*&amp;target:java.lang.String* [line 102];
+n$207=*&amp;request:javax.servlet.http.HttpServletRequest* [line 102];
+n$208=*&amp;response:javax.servlet.http.HttpServletResponse* [line 102];
+n$209=*&amp;isHandled:_Bool[_*_](*) [line 102];
+n$210=_fun_void Handler.handle(String,HttpServletRequest,HttpServletResponse,boolean[])(n$204:com.jfinal.handler.Handler*,n$206:java.lang.String*,n$207:javax.servlet.http.HttpServletRequest*,n$208:javax.servlet.http.HttpServletResponse*,n$209:_Bool[_*_](*)) virtual [line 102];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">                    //JFinal， JsonRender 移除了 flush()，需要手动 flush，针对JFinal3.3 以后版本 </td></tr>
+<tr><td class="num" id="LINE104">104</td><td class="line">                    response.getWriter().flush(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node85.html"><span class='visited with_tooltip'>I_85<span class='tooltip'>node85 preds:84 succs:86 exn:180 Instructions
+n$211=*&amp;response:javax.servlet.http.HttpServletResponse* [line 104];
+_=*n$211:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 104];
+n$213=_fun_PrintWriter HttpServletResponse.getWriter()(n$211:javax.servlet.http.HttpServletResponse*) interface virtual [line 104];
+*&amp;$irvar39:java.io.PrintWriter*=n$213 [line 104];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node86.html"><span class='visited with_tooltip'>I_86<span class='tooltip'>node86 preds:85 succs:87 exn:180 Instructions
+n$214=*&amp;$irvar39:java.io.PrintWriter* [line 104];
+_=*n$214:java.io.PrintWriter*(root java.io.PrintWriter) [line 104];
+n$216=_fun_void PrintWriter.flush()(n$214:java.io.PrintWriter*) virtual [line 104];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE105">105</td><td class="line">                } </td></tr>
+<tr><td class="num" id="LINE106">106</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE107">107</td><td class="line">        } catch (Exception e) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node115.html"><span class='visited with_tooltip'>I_115<span class='tooltip'>node115 preds:178 succs:116 exn:182 Instructions
+n$273=*&amp;CatchVar552:java.lang.Object* [line 107];
+*&amp;e:java.lang.Object*=n$273 [line 107];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node178.html"><span class='visited with_tooltip'>C_178<span class='tooltip'>node178 preds:180 succs:115 exn:3 Conditional exception handler
+n$397=_fun___instanceof(n$396:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 107];
+PRUNE(n$397, true); [line 107];
+*&amp;CatchVar552:void=n$396 [line 107];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node179.html"><span class='visited with_tooltip'>C_179<span class='tooltip'>node179 preds:180 succs:177 exn:3 Conditional exception handler
+n$397=_fun___instanceof(n$396:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 107];
+PRUNE(!n$397, false); [line 107];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node180.html"><span class='visited with_tooltip'>I_180<span class='tooltip'>node180 preds: succs:178 179 exn:3 Instructions
+n$395=*&amp;return:void [line 107];
+*&amp;return:void=null [line 107];
+n$396=_fun___unwrap_exception(n$395:void) [line 107];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE108">108</td><td class="line">            LOGGER.error(&quot;&quot;, e); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node116.html"><span class='visited with_tooltip'>I_116<span class='tooltip'>node116 preds:115 succs:117 exn:182 Instructions
+n$274=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.LOGGER:org.slf4j.Logger*(root com.zrlog.web.handler.GlobalResourceHandler) [line 108];
+_=*n$274:org.slf4j.Logger*(root org.slf4j.Logger) [line 108];
+n$276=*&amp;e:java.lang.Object* [line 108];
+n$277=_fun_void Logger.error(String,Throwable)(n$274:org.slf4j.Logger*,"":java.lang.Object*,n$276:java.lang.Object*) interface virtual [line 108];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE109">109</td><td class="line">        } finally { </td></tr>
+<tr><td class="num" id="LINE110">110</td><td class="line">            I18nUtil.removeI18n(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node87.html"><span class='visited with_tooltip'>I_87<span class='tooltip'>node87 preds:86 83 67 66 65 64 succs:88 exn:3 Instructions
+n$217=_fun_void I18nUtil.removeI18n()() [line 110];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node117.html"><span class='visited with_tooltip'>I_117<span class='tooltip'>node117 preds:116 succs:118 exn:3 Instructions
+n$278=_fun_void I18nUtil.removeI18n()() [line 110];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node145.html"><span class='visited with_tooltip'>I_145<span class='tooltip'>node145 preds:183 181 177 succs:146 exn:184 Instructions
+n$334=*&amp;CatchVar684:java.lang.Object* [line 110];
+*&amp;$bcvar12:java.lang.Object*=n$334 [line 110];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node146.html"><span class='visited with_tooltip'>I_146<span class='tooltip'>node146 preds:145 succs:147 exn:3 Instructions
+n$335=_fun_void I18nUtil.removeI18n()() [line 110];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node177.html"><span class='visited with_tooltip'>I_177<span class='tooltip'>node177 preds:179 succs:145 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node181.html"><span class='visited with_tooltip'>I_181<span class='tooltip'>node181 preds:182 succs:145 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node182.html"><span class='visited with_tooltip'>I_182<span class='tooltip'>node182 preds: succs:181 exn:3 Instructions
+n$395=*&amp;return:void [line 110];
+*&amp;return:void=null [line 110];
+n$396=_fun___unwrap_exception(n$395:void) [line 110];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node183.html"><span class='visited with_tooltip'>I_183<span class='tooltip'>node183 preds:184 succs:145 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node184.html"><span class='visited with_tooltip'>I_184<span class='tooltip'>node184 preds: succs:183 exn:3 Instructions
+n$395=*&amp;return:void [line 110];
+*&amp;return:void=null [line 110];
+n$396=_fun___unwrap_exception(n$395:void) [line 110];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE111">111</td><td class="line">            //开发环境下面打印整个请求的耗时，便于优化代码 </td></tr>
+<tr><td class="num" id="LINE112">112</td><td class="line">            if (BlogBuildInfoUtil.isDev()) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node88.html"><span class='visited with_tooltip'>I_88<span class='tooltip'>node88 preds:87 succs:89 90 exn:3 Instructions
+n$218=_fun_boolean BlogBuildInfoUtil.isDev()() [line 112];
+*&amp;$irvar40:_Bool=n$218 [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node89.html"><span class='visited with_tooltip'>C_89<span class='tooltip'>node89 preds:88 succs:91 exn:3 Conditional method_body
+n$219=*&amp;$irvar40:_Bool [line 112];
+PRUNE(!(n$219 == 0), true); [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node90.html"><span class='visited with_tooltip'>C_90<span class='tooltip'>node90 preds:88 succs:96 exn:3 Conditional method_body
+n$219=*&amp;$irvar40:_Bool [line 112];
+PRUNE((n$219 == 0), false); [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node118.html"><span class='visited with_tooltip'>I_118<span class='tooltip'>node118 preds:117 succs:119 120 exn:3 Instructions
+n$279=_fun_boolean BlogBuildInfoUtil.isDev()() [line 112];
+*&amp;$irvar51:_Bool=n$279 [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node119.html"><span class='visited with_tooltip'>C_119<span class='tooltip'>node119 preds:118 succs:121 exn:3 Conditional method_body
+n$280=*&amp;$irvar51:_Bool [line 112];
+PRUNE(!(n$280 == 0), true); [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node120.html"><span class='visited with_tooltip'>C_120<span class='tooltip'>node120 preds:118 succs:126 exn:3 Conditional method_body
+n$280=*&amp;$irvar51:_Bool [line 112];
+PRUNE((n$280 == 0), false); [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node147.html"><span class='visited with_tooltip'>I_147<span class='tooltip'>node147 preds:146 succs:148 149 exn:3 Instructions
+n$336=_fun_boolean BlogBuildInfoUtil.isDev()() [line 112];
+*&amp;$irvar62:_Bool=n$336 [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node148.html"><span class='visited with_tooltip'>C_148<span class='tooltip'>node148 preds:147 succs:150 exn:3 Conditional method_body
+n$337=*&amp;$irvar62:_Bool [line 112];
+PRUNE(!(n$337 == 0), true); [line 112];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node149.html"><span class='visited with_tooltip'>C_149<span class='tooltip'>node149 preds:147 succs:155 exn:3 Conditional method_body
+n$337=*&amp;$irvar62:_Bool [line 112];
+PRUNE((n$337 == 0), false); [line 112];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE113">113</td><td class="line">                LOGGER.info(&quot;{} used time {}&quot;, request.getServletPath(), System.currentTimeMillis() - start); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node91.html"><span class='visited with_tooltip'>I_91<span class='tooltip'>node91 preds:89 succs:92 exn:3 Instructions
+n$220=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.LOGGER:org.slf4j.Logger*(root com.zrlog.web.handler.GlobalResourceHandler) [line 113];
+*&amp;$irvar42:org.slf4j.Logger*=n$220 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node92.html"><span class='visited with_tooltip'>I_92<span class='tooltip'>node92 preds:91 succs:93 exn:3 Instructions
+n$221=*&amp;request:javax.servlet.http.HttpServletRequest* [line 113];
+_=*n$221:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 113];
+n$223=_fun_String HttpServletRequest.getServletPath()(n$221:javax.servlet.http.HttpServletRequest*) interface virtual [line 113];
+*&amp;$irvar41:java.lang.String*=n$223 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node93.html"><span class='visited with_tooltip'>I_93<span class='tooltip'>node93 preds:92 succs:94 exn:3 Instructions
+n$224=_fun_long System.currentTimeMillis()() [line 113];
+*&amp;$irvar43:long=n$224 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node94.html"><span class='visited with_tooltip'>I_94<span class='tooltip'>node94 preds:93 succs:95 exn:3 Instructions
+n$225=*&amp;$irvar43:long [line 113];
+n$226=*&amp;start:long [line 113];
+n$227=_fun_Long Long.valueOf(long)((n$225 - n$226):long) [line 113];
+*&amp;$irvar44:java.lang.Long*=n$227 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node95.html"><span class='visited with_tooltip'>I_95<span class='tooltip'>node95 preds:94 succs:96 exn:3 Instructions
+n$228=*&amp;$irvar42:org.slf4j.Logger* [line 113];
+_=*n$228:org.slf4j.Logger*(root org.slf4j.Logger) [line 113];
+n$230=*&amp;$irvar41:java.lang.String* [line 113];
+n$231=*&amp;$irvar44:java.lang.Long* [line 113];
+n$232=_fun_void Logger.info(String,Object,Object)(n$228:org.slf4j.Logger*,"{} used time {}":java.lang.Object*,n$230:java.lang.String*,n$231:java.lang.Long*) interface virtual [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node121.html"><span class='visited with_tooltip'>I_121<span class='tooltip'>node121 preds:119 succs:122 exn:3 Instructions
+n$281=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.LOGGER:org.slf4j.Logger*(root com.zrlog.web.handler.GlobalResourceHandler) [line 113];
+*&amp;$irvar53:org.slf4j.Logger*=n$281 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node122.html"><span class='visited with_tooltip'>I_122<span class='tooltip'>node122 preds:121 succs:123 exn:3 Instructions
+n$282=*&amp;request:javax.servlet.http.HttpServletRequest* [line 113];
+_=*n$282:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 113];
+n$284=_fun_String HttpServletRequest.getServletPath()(n$282:javax.servlet.http.HttpServletRequest*) interface virtual [line 113];
+*&amp;$irvar52:java.lang.String*=n$284 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node123.html"><span class='visited with_tooltip'>I_123<span class='tooltip'>node123 preds:122 succs:124 exn:3 Instructions
+n$285=_fun_long System.currentTimeMillis()() [line 113];
+*&amp;$irvar54:long=n$285 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node124.html"><span class='visited with_tooltip'>I_124<span class='tooltip'>node124 preds:123 succs:125 exn:3 Instructions
+n$286=*&amp;$irvar54:long [line 113];
+n$287=*&amp;start:long [line 113];
+n$288=_fun_Long Long.valueOf(long)((n$286 - n$287):long) [line 113];
+*&amp;$irvar55:java.lang.Long*=n$288 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node125.html"><span class='visited with_tooltip'>I_125<span class='tooltip'>node125 preds:124 succs:126 exn:3 Instructions
+n$289=*&amp;$irvar53:org.slf4j.Logger* [line 113];
+_=*n$289:org.slf4j.Logger*(root org.slf4j.Logger) [line 113];
+n$291=*&amp;$irvar52:java.lang.String* [line 113];
+n$292=*&amp;$irvar55:java.lang.Long* [line 113];
+n$293=_fun_void Logger.info(String,Object,Object)(n$289:org.slf4j.Logger*,"{} used time {}":java.lang.Object*,n$291:java.lang.String*,n$292:java.lang.Long*) interface virtual [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node150.html"><span class='visited with_tooltip'>I_150<span class='tooltip'>node150 preds:148 succs:151 exn:3 Instructions
+n$338=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.LOGGER:org.slf4j.Logger*(root com.zrlog.web.handler.GlobalResourceHandler) [line 113];
+*&amp;$irvar64:org.slf4j.Logger*=n$338 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node151.html"><span class='visited with_tooltip'>I_151<span class='tooltip'>node151 preds:150 succs:152 exn:3 Instructions
+n$339=*&amp;request:javax.servlet.http.HttpServletRequest* [line 113];
+_=*n$339:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 113];
+n$341=_fun_String HttpServletRequest.getServletPath()(n$339:javax.servlet.http.HttpServletRequest*) interface virtual [line 113];
+*&amp;$irvar63:java.lang.String*=n$341 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node152.html"><span class='visited with_tooltip'>I_152<span class='tooltip'>node152 preds:151 succs:153 exn:3 Instructions
+n$342=_fun_long System.currentTimeMillis()() [line 113];
+*&amp;$irvar65:long=n$342 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node153.html"><span class='visited with_tooltip'>I_153<span class='tooltip'>node153 preds:152 succs:154 exn:3 Instructions
+n$343=*&amp;$irvar65:long [line 113];
+n$344=*&amp;start:long [line 113];
+n$345=_fun_Long Long.valueOf(long)((n$343 - n$344):long) [line 113];
+*&amp;$irvar66:java.lang.Long*=n$345 [line 113];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node154.html"><span class='visited with_tooltip'>I_154<span class='tooltip'>node154 preds:153 succs:155 exn:3 Instructions
+n$346=*&amp;$irvar64:org.slf4j.Logger* [line 113];
+_=*n$346:org.slf4j.Logger*(root org.slf4j.Logger) [line 113];
+n$348=*&amp;$irvar63:java.lang.String* [line 113];
+n$349=*&amp;$irvar66:java.lang.Long* [line 113];
+n$350=_fun_void Logger.info(String,Object,Object)(n$346:org.slf4j.Logger*,"{} used time {}":java.lang.Object*,n$348:java.lang.String*,n$349:java.lang.Long*) interface virtual [line 113];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE114">114</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE115">115</td><td class="line">            //仅保留非静态资源请求或者是以 .html结尾的 </td></tr>
+<tr><td class="num" id="LINE116">116</td><td class="line">            if (ZrLogConfig.isInstalled() &amp;&amp; !target.contains(&quot;.&quot;) || target.endsWith(&quot;.html&quot;)) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node96.html"><span class='visited with_tooltip'>I_96<span class='tooltip'>node96 preds:95 90 succs:97 98 exn:3 Instructions
+n$233=_fun_boolean ZrLogConfig.isInstalled()() [line 116];
+*&amp;$irvar45:_Bool=n$233 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node97.html"><span class='visited with_tooltip'>C_97<span class='tooltip'>node97 preds:96 succs:99 exn:3 Conditional method_body
+n$234=*&amp;$irvar45:_Bool [line 116];
+PRUNE(!(n$234 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node99.html"><span class='visited with_tooltip'>I_99<span class='tooltip'>node99 preds:97 succs:100 101 exn:3 Instructions
+n$235=*&amp;target:java.lang.String* [line 116];
+_=*n$235:java.lang.String*(root java.lang.String) [line 116];
+n$237=_fun_boolean String.contains(CharSequence)(n$235:java.lang.String*,".":java.lang.Object*) virtual [line 116];
+*&amp;$irvar46:_Bool=n$237 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node100.html"><span class='visited with_tooltip'>C_100<span class='tooltip'>node100 preds:99 succs:102 exn:3 Conditional method_body
+n$238=*&amp;$irvar46:_Bool [line 116];
+PRUNE(!(n$238 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node101.html"><span class='visited with_tooltip'>C_101<span class='tooltip'>node101 preds:99 succs:105 exn:3 Conditional method_body
+n$238=*&amp;$irvar46:_Bool [line 116];
+PRUNE((n$238 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node98.html"><span class='visited with_tooltip'>C_98<span class='tooltip'>node98 preds:96 succs:102 exn:3 Conditional method_body
+n$234=*&amp;$irvar45:_Bool [line 116];
+PRUNE((n$234 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node102.html"><span class='visited with_tooltip'>I_102<span class='tooltip'>node102 preds:100 98 succs:103 104 exn:3 Instructions
+n$239=*&amp;target:java.lang.String* [line 116];
+_=*n$239:java.lang.String*(root java.lang.String) [line 116];
+n$241=_fun_boolean String.endsWith(String)(n$239:java.lang.String*,".html":java.lang.Object*) virtual [line 116];
+*&amp;$irvar47:_Bool=n$241 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node103.html"><span class='visited with_tooltip'>C_103<span class='tooltip'>node103 preds:102 succs:105 exn:3 Conditional method_body
+n$242=*&amp;$irvar47:_Bool [line 116];
+PRUNE(!(n$242 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node104.html"><span class='visited with_tooltip'>C_104<span class='tooltip'>node104 preds:102 succs:175 exn:3 Conditional method_body
+n$242=*&amp;$irvar47:_Bool [line 116];
+PRUNE((n$242 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node126.html"><span class='visited with_tooltip'>I_126<span class='tooltip'>node126 preds:125 120 succs:127 128 exn:3 Instructions
+n$294=_fun_boolean ZrLogConfig.isInstalled()() [line 116];
+*&amp;$irvar56:_Bool=n$294 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node127.html"><span class='visited with_tooltip'>C_127<span class='tooltip'>node127 preds:126 succs:129 exn:3 Conditional method_body
+n$295=*&amp;$irvar56:_Bool [line 116];
+PRUNE(!(n$295 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node128.html"><span class='visited with_tooltip'>C_128<span class='tooltip'>node128 preds:126 succs:132 exn:3 Conditional method_body
+n$295=*&amp;$irvar56:_Bool [line 116];
+PRUNE((n$295 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node129.html"><span class='visited with_tooltip'>I_129<span class='tooltip'>node129 preds:127 succs:130 131 exn:3 Instructions
+n$296=*&amp;target:java.lang.String* [line 116];
+_=*n$296:java.lang.String*(root java.lang.String) [line 116];
+n$298=_fun_boolean String.contains(CharSequence)(n$296:java.lang.String*,".":java.lang.Object*) virtual [line 116];
+*&amp;$irvar57:_Bool=n$298 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node130.html"><span class='visited with_tooltip'>C_130<span class='tooltip'>node130 preds:129 succs:132 exn:3 Conditional method_body
+n$299=*&amp;$irvar57:_Bool [line 116];
+PRUNE(!(n$299 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node131.html"><span class='visited with_tooltip'>C_131<span class='tooltip'>node131 preds:129 succs:135 exn:3 Conditional method_body
+n$299=*&amp;$irvar57:_Bool [line 116];
+PRUNE((n$299 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node132.html"><span class='visited with_tooltip'>I_132<span class='tooltip'>node132 preds:130 128 succs:133 134 exn:3 Instructions
+n$300=*&amp;target:java.lang.String* [line 116];
+_=*n$300:java.lang.String*(root java.lang.String) [line 116];
+n$302=_fun_boolean String.endsWith(String)(n$300:java.lang.String*,".html":java.lang.Object*) virtual [line 116];
+*&amp;$irvar58:_Bool=n$302 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node133.html"><span class='visited with_tooltip'>C_133<span class='tooltip'>node133 preds:132 succs:135 exn:3 Conditional method_body
+n$303=*&amp;$irvar58:_Bool [line 116];
+PRUNE(!(n$303 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node134.html"><span class='visited with_tooltip'>C_134<span class='tooltip'>node134 preds:132 succs:175 exn:3 Conditional method_body
+n$303=*&amp;$irvar58:_Bool [line 116];
+PRUNE((n$303 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node155.html"><span class='visited with_tooltip'>I_155<span class='tooltip'>node155 preds:154 149 succs:156 157 exn:3 Instructions
+n$351=_fun_boolean ZrLogConfig.isInstalled()() [line 116];
+*&amp;$irvar67:_Bool=n$351 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node156.html"><span class='visited with_tooltip'>C_156<span class='tooltip'>node156 preds:155 succs:158 exn:3 Conditional method_body
+n$352=*&amp;$irvar67:_Bool [line 116];
+PRUNE(!(n$352 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node157.html"><span class='visited with_tooltip'>C_157<span class='tooltip'>node157 preds:155 succs:161 exn:3 Conditional method_body
+n$352=*&amp;$irvar67:_Bool [line 116];
+PRUNE((n$352 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node158.html"><span class='visited with_tooltip'>I_158<span class='tooltip'>node158 preds:156 succs:159 160 exn:3 Instructions
+n$353=*&amp;target:java.lang.String* [line 116];
+_=*n$353:java.lang.String*(root java.lang.String) [line 116];
+n$355=_fun_boolean String.contains(CharSequence)(n$353:java.lang.String*,".":java.lang.Object*) virtual [line 116];
+*&amp;$irvar68:_Bool=n$355 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node159.html"><span class='visited with_tooltip'>C_159<span class='tooltip'>node159 preds:158 succs:161 exn:3 Conditional method_body
+n$356=*&amp;$irvar68:_Bool [line 116];
+PRUNE(!(n$356 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node160.html"><span class='visited with_tooltip'>C_160<span class='tooltip'>node160 preds:158 succs:164 exn:3 Conditional method_body
+n$356=*&amp;$irvar68:_Bool [line 116];
+PRUNE((n$356 == 0), false); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node161.html"><span class='visited with_tooltip'>I_161<span class='tooltip'>node161 preds:159 157 succs:162 163 exn:3 Instructions
+n$357=*&amp;target:java.lang.String* [line 116];
+_=*n$357:java.lang.String*(root java.lang.String) [line 116];
+n$359=_fun_boolean String.endsWith(String)(n$357:java.lang.String*,".html":java.lang.Object*) virtual [line 116];
+*&amp;$irvar69:_Bool=n$359 [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node162.html"><span class='visited with_tooltip'>C_162<span class='tooltip'>node162 preds:161 succs:164 exn:3 Conditional method_body
+n$360=*&amp;$irvar69:_Bool [line 116];
+PRUNE(!(n$360 == 0), true); [line 116];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node163.html"><span class='visited with_tooltip'>C_163<span class='tooltip'>node163 preds:161 succs:174 exn:3 Conditional method_body
+n$360=*&amp;$irvar69:_Bool [line 116];
+PRUNE((n$360 == 0), false); [line 116];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE117">117</td><td class="line">                RequestInfo requestInfo = new RequestInfo(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node105.html"><span class='visited with_tooltip'>I_105<span class='tooltip'>node105 preds:103 101 succs:106 exn:3 Instructions
+n$243=_fun___new(sizeof(t=com.zrlog.web.plugin.RequestInfo):com.zrlog.web.plugin.RequestInfo*) [line 117];
+n$244=_fun_RequestInfo.&lt;init&gt;()(n$243:com.zrlog.web.plugin.RequestInfo*) [line 117];
+*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo*=n$243 [line 117];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node135.html"><span class='visited with_tooltip'>I_135<span class='tooltip'>node135 preds:133 131 succs:136 exn:3 Instructions
+n$304=_fun___new(sizeof(t=com.zrlog.web.plugin.RequestInfo):com.zrlog.web.plugin.RequestInfo*) [line 117];
+n$305=_fun_RequestInfo.&lt;init&gt;()(n$304:com.zrlog.web.plugin.RequestInfo*) [line 117];
+*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo*=n$304 [line 117];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node164.html"><span class='visited with_tooltip'>I_164<span class='tooltip'>node164 preds:162 160 succs:165 exn:3 Instructions
+n$361=_fun___new(sizeof(t=com.zrlog.web.plugin.RequestInfo):com.zrlog.web.plugin.RequestInfo*) [line 117];
+n$362=_fun_RequestInfo.&lt;init&gt;()(n$361:com.zrlog.web.plugin.RequestInfo*) [line 117];
+*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo*=n$361 [line 117];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE118">118</td><td class="line">                requestInfo.setIp(WebTools.getRealIp(request)); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node106.html"><span class='visited with_tooltip'>I_106<span class='tooltip'>node106 preds:105 succs:107 exn:3 Instructions
+n$245=*&amp;request:javax.servlet.http.HttpServletRequest* [line 118];
+n$246=_fun_String WebTools.getRealIp(HttpServletRequest)(n$245:javax.servlet.http.HttpServletRequest*) [line 118];
+*&amp;$irvar48:java.lang.String*=n$246 [line 118];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node107.html"><span class='visited with_tooltip'>I_107<span class='tooltip'>node107 preds:106 succs:108 exn:3 Instructions
+n$247=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 118];
+_=*n$247:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 118];
+n$249=*&amp;$irvar48:java.lang.String* [line 118];
+n$250=_fun_void RequestInfo.setIp(String)(n$247:com.zrlog.web.plugin.RequestInfo*,n$249:java.lang.String*) virtual [line 118];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node136.html"><span class='visited with_tooltip'>I_136<span class='tooltip'>node136 preds:135 succs:137 exn:3 Instructions
+n$306=*&amp;request:javax.servlet.http.HttpServletRequest* [line 118];
+n$307=_fun_String WebTools.getRealIp(HttpServletRequest)(n$306:javax.servlet.http.HttpServletRequest*) [line 118];
+*&amp;$irvar59:java.lang.String*=n$307 [line 118];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node137.html"><span class='visited with_tooltip'>I_137<span class='tooltip'>node137 preds:136 succs:138 exn:3 Instructions
+n$308=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 118];
+_=*n$308:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 118];
+n$310=*&amp;$irvar59:java.lang.String* [line 118];
+n$311=_fun_void RequestInfo.setIp(String)(n$308:com.zrlog.web.plugin.RequestInfo*,n$310:java.lang.String*) virtual [line 118];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node165.html"><span class='visited with_tooltip'>I_165<span class='tooltip'>node165 preds:164 succs:166 exn:3 Instructions
+n$363=*&amp;request:javax.servlet.http.HttpServletRequest* [line 118];
+n$364=_fun_String WebTools.getRealIp(HttpServletRequest)(n$363:javax.servlet.http.HttpServletRequest*) [line 118];
+*&amp;$irvar70:java.lang.String*=n$364 [line 118];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node166.html"><span class='visited with_tooltip'>I_166<span class='tooltip'>node166 preds:165 succs:167 exn:3 Instructions
+n$365=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 118];
+_=*n$365:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 118];
+n$367=*&amp;$irvar70:java.lang.String* [line 118];
+n$368=_fun_void RequestInfo.setIp(String)(n$365:com.zrlog.web.plugin.RequestInfo*,n$367:java.lang.String*) virtual [line 118];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE119">119</td><td class="line">                requestInfo.setUrl(url); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node108.html"><span class='visited with_tooltip'>I_108<span class='tooltip'>node108 preds:107 succs:109 exn:3 Instructions
+n$251=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 119];
+_=*n$251:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 119];
+n$253=*&amp;url:java.lang.String* [line 119];
+n$254=_fun_void RequestInfo.setUrl(String)(n$251:com.zrlog.web.plugin.RequestInfo*,n$253:java.lang.String*) virtual [line 119];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node138.html"><span class='visited with_tooltip'>I_138<span class='tooltip'>node138 preds:137 succs:139 exn:3 Instructions
+n$312=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 119];
+_=*n$312:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 119];
+n$314=*&amp;url:java.lang.String* [line 119];
+n$315=_fun_void RequestInfo.setUrl(String)(n$312:com.zrlog.web.plugin.RequestInfo*,n$314:java.lang.String*) virtual [line 119];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node167.html"><span class='visited with_tooltip'>I_167<span class='tooltip'>node167 preds:166 succs:168 exn:3 Instructions
+n$369=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 119];
+_=*n$369:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 119];
+n$371=*&amp;url:java.lang.String* [line 119];
+n$372=_fun_void RequestInfo.setUrl(String)(n$369:com.zrlog.web.plugin.RequestInfo*,n$371:java.lang.String*) virtual [line 119];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE120">120</td><td class="line">                requestInfo.setUserAgent(request.getHeader(&quot;User-Agent&quot;)); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node109.html"><span class='visited with_tooltip'>I_109<span class='tooltip'>node109 preds:108 succs:110 exn:3 Instructions
+n$255=*&amp;request:javax.servlet.http.HttpServletRequest* [line 120];
+_=*n$255:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 120];
+n$257=_fun_String HttpServletRequest.getHeader(String)(n$255:javax.servlet.http.HttpServletRequest*,"User-Agent":java.lang.Object*) interface virtual [line 120];
+*&amp;$irvar49:java.lang.String*=n$257 [line 120];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node110.html"><span class='visited with_tooltip'>I_110<span class='tooltip'>node110 preds:109 succs:111 exn:3 Instructions
+n$258=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 120];
+_=*n$258:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 120];
+n$260=*&amp;$irvar49:java.lang.String* [line 120];
+n$261=_fun_void RequestInfo.setUserAgent(String)(n$258:com.zrlog.web.plugin.RequestInfo*,n$260:java.lang.String*) virtual [line 120];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node139.html"><span class='visited with_tooltip'>I_139<span class='tooltip'>node139 preds:138 succs:140 exn:3 Instructions
+n$316=*&amp;request:javax.servlet.http.HttpServletRequest* [line 120];
+_=*n$316:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 120];
+n$318=_fun_String HttpServletRequest.getHeader(String)(n$316:javax.servlet.http.HttpServletRequest*,"User-Agent":java.lang.Object*) interface virtual [line 120];
+*&amp;$irvar60:java.lang.String*=n$318 [line 120];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node140.html"><span class='visited with_tooltip'>I_140<span class='tooltip'>node140 preds:139 succs:141 exn:3 Instructions
+n$319=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 120];
+_=*n$319:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 120];
+n$321=*&amp;$irvar60:java.lang.String* [line 120];
+n$322=_fun_void RequestInfo.setUserAgent(String)(n$319:com.zrlog.web.plugin.RequestInfo*,n$321:java.lang.String*) virtual [line 120];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node168.html"><span class='visited with_tooltip'>I_168<span class='tooltip'>node168 preds:167 succs:169 exn:3 Instructions
+n$373=*&amp;request:javax.servlet.http.HttpServletRequest* [line 120];
+_=*n$373:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 120];
+n$375=_fun_String HttpServletRequest.getHeader(String)(n$373:javax.servlet.http.HttpServletRequest*,"User-Agent":java.lang.Object*) interface virtual [line 120];
+*&amp;$irvar71:java.lang.String*=n$375 [line 120];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node169.html"><span class='visited with_tooltip'>I_169<span class='tooltip'>node169 preds:168 succs:170 exn:3 Instructions
+n$376=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 120];
+_=*n$376:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 120];
+n$378=*&amp;$irvar71:java.lang.String* [line 120];
+n$379=_fun_void RequestInfo.setUserAgent(String)(n$376:com.zrlog.web.plugin.RequestInfo*,n$378:java.lang.String*) virtual [line 120];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE121">121</td><td class="line">                requestInfo.setRequestTime(System.currentTimeMillis()); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node111.html"><span class='visited with_tooltip'>I_111<span class='tooltip'>node111 preds:110 succs:112 exn:3 Instructions
+n$262=_fun_long System.currentTimeMillis()() [line 121];
+*&amp;$irvar50:long=n$262 [line 121];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node112.html"><span class='visited with_tooltip'>I_112<span class='tooltip'>node112 preds:111 succs:113 exn:3 Instructions
+n$263=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 121];
+_=*n$263:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 121];
+n$265=*&amp;$irvar50:long [line 121];
+n$266=_fun_void RequestInfo.setRequestTime(long)(n$263:com.zrlog.web.plugin.RequestInfo*,n$265:long) virtual [line 121];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node141.html"><span class='visited with_tooltip'>I_141<span class='tooltip'>node141 preds:140 succs:142 exn:3 Instructions
+n$323=_fun_long System.currentTimeMillis()() [line 121];
+*&amp;$irvar61:long=n$323 [line 121];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node142.html"><span class='visited with_tooltip'>I_142<span class='tooltip'>node142 preds:141 succs:143 exn:3 Instructions
+n$324=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 121];
+_=*n$324:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 121];
+n$326=*&amp;$irvar61:long [line 121];
+n$327=_fun_void RequestInfo.setRequestTime(long)(n$324:com.zrlog.web.plugin.RequestInfo*,n$326:long) virtual [line 121];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node170.html"><span class='visited with_tooltip'>I_170<span class='tooltip'>node170 preds:169 succs:171 exn:3 Instructions
+n$380=_fun_long System.currentTimeMillis()() [line 121];
+*&amp;$irvar72:long=n$380 [line 121];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node171.html"><span class='visited with_tooltip'>I_171<span class='tooltip'>node171 preds:170 succs:172 exn:3 Instructions
+n$381=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 121];
+_=*n$381:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 121];
+n$383=*&amp;$irvar72:long [line 121];
+n$384=_fun_void RequestInfo.setRequestTime(long)(n$381:com.zrlog.web.plugin.RequestInfo*,n$383:long) virtual [line 121];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE122">122</td><td class="line">                requestInfo.setRequestUri(target); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node113.html"><span class='visited with_tooltip'>I_113<span class='tooltip'>node113 preds:112 succs:114 exn:3 Instructions
+n$267=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 122];
+_=*n$267:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 122];
+n$269=*&amp;target:java.lang.String* [line 122];
+n$270=_fun_void RequestInfo.setRequestUri(String)(n$267:com.zrlog.web.plugin.RequestInfo*,n$269:java.lang.String*) virtual [line 122];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node143.html"><span class='visited with_tooltip'>I_143<span class='tooltip'>node143 preds:142 succs:144 exn:3 Instructions
+n$328=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 122];
+_=*n$328:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 122];
+n$330=*&amp;target:java.lang.String* [line 122];
+n$331=_fun_void RequestInfo.setRequestUri(String)(n$328:com.zrlog.web.plugin.RequestInfo*,n$330:java.lang.String*) virtual [line 122];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node172.html"><span class='visited with_tooltip'>I_172<span class='tooltip'>node172 preds:171 succs:173 exn:3 Instructions
+n$385=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 122];
+_=*n$385:com.zrlog.web.plugin.RequestInfo*(root com.zrlog.web.plugin.RequestInfo) [line 122];
+n$387=*&amp;target:java.lang.String* [line 122];
+n$388=_fun_void RequestInfo.setRequestUri(String)(n$385:com.zrlog.web.plugin.RequestInfo*,n$387:java.lang.String*) virtual [line 122];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE123">123</td><td class="line">                RequestStatisticsPlugin.record(requestInfo); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node114.html"><span class='visited with_tooltip'>I_114<span class='tooltip'>node114 preds:113 succs:175 exn:3 Instructions
+n$271=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 123];
+n$272=_fun_void RequestStatisticsPlugin.record(RequestInfo)(n$271:com.zrlog.web.plugin.RequestInfo*) [line 123];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node144.html"><span class='visited with_tooltip'>I_144<span class='tooltip'>node144 preds:143 succs:175 exn:3 Instructions
+n$332=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 123];
+n$333=_fun_void RequestStatisticsPlugin.record(RequestInfo)(n$332:com.zrlog.web.plugin.RequestInfo*) [line 123];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node173.html"><span class='visited with_tooltip'>I_173<span class='tooltip'>node173 preds:172 succs:174 exn:3 Instructions
+n$389=*&amp;requestInfo:com.zrlog.web.plugin.RequestInfo* [line 123];
+n$390=_fun_void RequestStatisticsPlugin.record(RequestInfo)(n$389:com.zrlog.web.plugin.RequestInfo*) [line 123];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE124">124</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE125">125</td><td class="line">        } <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node174.html"><span class='visited with_tooltip'>I_174<span class='tooltip'>node174 preds:173 163 succs:2 exn:3 Instructions
+n$391=*&amp;$bcvar12:java.lang.Object* [line 125];
+*&amp;return:void=EXN n$391 [line 125];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE126">126</td><td class="line">        REQUEST_START_TIME.remove(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node175.html"><span class='visited with_tooltip'>I_175<span class='tooltip'>node175 preds:144 134 114 104 succs:176 exn:3 Instructions
+n$392=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.REQUEST_START_TIME:java.lang.ThreadLocal*(root com.zrlog.web.handler.GlobalResourceHandler) [line 126];
+_=*n$392:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 126];
+n$394=_fun_void ThreadLocal.remove()(n$392:java.lang.ThreadLocal*) virtual [line 126];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE127">127</td><td class="line">    } <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node176.html"><span class='visited with_tooltip'>I_176<span class='tooltip'>node176 preds:175 succs:2 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:176 174 3 succs: exn: Exit
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.handle%28java.lang.String%2Cjavax.servlet.http.HttpServletRe.22247f614b2e67cd4e566073e64a5f8c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE128">128</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE129">129</td><td class="line">    private void responseHtmlFile(String target, HttpServletRequest request, HttpServletResponse response, boolean[] isHandled, ResponseRenderPrintWriter responseRenderPrintWriter, File htmlFile) throws IOException { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c.html">summary for void GlobalResourceHandler.responseHtmlFile(String,HttpServletRequest,HttpServletResponse,boolean[],ResponseRenderPrintWriter,File)</a></td></tr>
+<tr><td class="num" id="LINE130">130</td><td class="line">        response.setContentType(&quot;text/html;charset=UTF-8&quot;); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;response:javax.servlet.http.HttpServletResponse* [line 130];
+_=*n$0:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 130];
+n$2=_fun_void HttpServletResponse.setContentType(String)(n$0:javax.servlet.http.HttpServletResponse*,"text/html;charset=UTF-8":java.lang.Object*) interface virtual [line 130];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE131">131</td><td class="line">        if (htmlFile.exists() &amp;&amp; !ZrLogUtil.isStaticBlogPlugin(request)) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:3 Instructions
+n$3=*&amp;htmlFile:java.io.File* [line 131];
+_=*n$3:java.io.File*(root java.io.File) [line 131];
+n$5=_fun_boolean File.exists()(n$3:java.io.File*) virtual [line 131];
+*&amp;$irvar0:_Bool=n$5 [line 131];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 exn:3 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 131];
+PRUNE(!(n$6 == 0), true); [line 131];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:9 10 exn:3 Instructions
+n$7=*&amp;request:javax.servlet.http.HttpServletRequest* [line 131];
+n$8=_fun_boolean ZrLogUtil.isStaticBlogPlugin(HttpServletRequest)(n$7:javax.servlet.http.HttpServletRequest*) [line 131];
+*&amp;$irvar1:_Bool=n$8 [line 131];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:8 succs:11 exn:3 Conditional method_body
+n$9=*&amp;$irvar1:_Bool [line 131];
+PRUNE(!(n$9 != 0), true); [line 131];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 succs:16 exn:3 Conditional method_body
+n$9=*&amp;$irvar1:_Bool [line 131];
+PRUNE((n$9 != 0), false); [line 131];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:16 exn:3 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 131];
+PRUNE((n$6 == 0), false); [line 131];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE132">132</td><td class="line">            isHandled[0] = true; <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:9 succs:12 exn:3 Instructions
+n$10=*&amp;isHandled:_Bool[_*_](*) [line 132];
+*n$10[0]:int=1 [line 132];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE133">133</td><td class="line">            response.getOutputStream().write(IOUtil.getByteByInputStream(new FileInputStream(htmlFile))); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$11=*&amp;response:javax.servlet.http.HttpServletResponse* [line 133];
+_=*n$11:javax.servlet.http.HttpServletResponse*(root javax.servlet.http.HttpServletResponse) [line 133];
+n$13=_fun_ServletOutputStream HttpServletResponse.getOutputStream()(n$11:javax.servlet.http.HttpServletResponse*) interface virtual [line 133];
+*&amp;$irvar2:javax.servlet.ServletOutputStream*=n$13 [line 133];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$14=_fun___new(sizeof(t=java.io.FileInputStream):java.io.FileInputStream*) [line 133];
+n$15=*&amp;htmlFile:java.io.File* [line 133];
+n$16=_fun_FileInputStream.&lt;init&gt;(File)(n$14:java.io.FileInputStream*,n$15:java.io.File*) [line 133];
+*&amp;$irvar3:java.io.FileInputStream*=n$14 [line 133];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$17=*&amp;$irvar3:java.io.FileInputStream* [line 133];
+n$18=_fun_byte[] IOUtil.getByteByInputStream(InputStream)(n$17:java.io.FileInputStream*) [line 133];
+*&amp;$irvar4:signed char[_*_](*)=n$18 [line 133];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:19 exn:3 Instructions
+n$19=*&amp;$irvar2:javax.servlet.ServletOutputStream* [line 133];
+_=*n$19:javax.servlet.ServletOutputStream*(root javax.servlet.ServletOutputStream) [line 133];
+n$21=*&amp;$irvar4:signed char[_*_](*) [line 133];
+n$22=_fun_void OutputStream.write(byte[])(n$19:javax.servlet.ServletOutputStream*,n$21:signed char[_*_](*)) virtual [line 133];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE134">134</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE135">135</td><td class="line">            this.next.handle(target, request, response, isHandled); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:10 7 succs:17 exn:3 Instructions
+n$23=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 135];
+n$24=*n$23.next:com.jfinal.handler.Handler*(root com.zrlog.web.handler.GlobalResourceHandler) [line 135];
+_=*n$24:com.jfinal.handler.Handler*(root com.jfinal.handler.Handler) [line 135];
+n$26=*&amp;target:java.lang.String* [line 135];
+n$27=*&amp;request:javax.servlet.http.HttpServletRequest* [line 135];
+n$28=*&amp;response:javax.servlet.http.HttpServletResponse* [line 135];
+n$29=*&amp;isHandled:_Bool[_*_](*) [line 135];
+n$30=_fun_void Handler.handle(String,HttpServletRequest,HttpServletResponse,boolean[])(n$24:com.jfinal.handler.Handler*,n$26:java.lang.String*,n$27:javax.servlet.http.HttpServletRequest*,n$28:javax.servlet.http.HttpServletResponse*,n$29:_Bool[_*_](*)) virtual [line 135];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE136">136</td><td class="line">            saveResponseBodyToHtml(htmlFile, responseRenderPrintWriter.getResponseBody()); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$31=*&amp;responseRenderPrintWriter:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 136];
+_=*n$31:com.zrlog.web.handler.ResponseRenderPrintWriter*(root com.zrlog.web.handler.ResponseRenderPrintWriter) [line 136];
+n$33=_fun_String ResponseRenderPrintWriter.getResponseBody()(n$31:com.zrlog.web.handler.ResponseRenderPrintWriter*) virtual [line 136];
+*&amp;$irvar5:java.lang.String*=n$33 [line 136];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$34=*&amp;this:com.zrlog.web.handler.GlobalResourceHandler* [line 136];
+n$35=*&amp;htmlFile:java.io.File* [line 136];
+n$36=*&amp;$irvar5:java.lang.String* [line 136];
+n$37=_fun_void GlobalResourceHandler.saveResponseBodyToHtml(File,String)(n$34:com.zrlog.web.handler.GlobalResourceHandler*,n$35:java.io.File*,n$36:java.lang.String*) [line 136];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE137">137</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE138">138</td><td class="line">    } <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 15 succs:2 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:19 3 succs: exn: Exit
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.responseHtmlFile%28java.lang.String%2Cjavax.servlet.http.Htt.ffda0a822aa0ee1880f945fea37b520c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE139">139</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE140">140</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE141">141</td><td class="line">     * 将一个网页转化对应文件，用于静态化文章页 </td></tr>
+<tr><td class="num" id="LINE142">142</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE143">143</td><td class="line">    private void saveResponseBodyToHtml(File file, String copy) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2.html">summary for void GlobalResourceHandler.saveResponseBodyToHtml(File,String)</a></td></tr>
+<tr><td class="num" id="LINE144">144</td><td class="line">        if (copy != null) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;copy:java.lang.String* [line 144];
+PRUNE(!(n$0 == null), true); [line 144];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:20 exn:3 Conditional method_body
+n$0=*&amp;copy:java.lang.String* [line 144];
+PRUNE((n$0 == null), false); [line 144];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE145">145</td><td class="line">            byte[] bytes = copy.getBytes(StandardCharsets.UTF_8); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:7 exn:3 Instructions
+n$1=*&amp;copy:java.lang.String* [line 145];
+_=*n$1:java.lang.String*(root java.lang.String) [line 145];
+n$3=*&amp;#GB<>$java.nio.charset.StandardCharsets.UTF_8:java.nio.charset.Charset*(root java.nio.charset.StandardCharsets) [line 145];
+n$4=_fun_byte[] String.getBytes(Charset)(n$1:java.lang.String*,n$3:java.nio.charset.Charset*) virtual [line 145];
+*&amp;bytes:signed char[_*_](*)=n$4 [line 145];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE146">146</td><td class="line">            FileUtils.tryResizeDiskSpace(CACHE_HTML_PATH + Constants.getArticleUri(), bytes.length, Constants.getMaxCacheHtmlSize()); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$5=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 146];
+n$6=_fun_StringBuilder.&lt;init&gt;()(n$5:java.lang.StringBuilder*) [line 146];
+*&amp;$irvar0:java.lang.StringBuilder*=n$5 [line 146];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;$irvar0:java.lang.StringBuilder* [line 146];
+_=*n$7:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 146];
+n$9=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.CACHE_HTML_PATH:java.lang.String*(root com.zrlog.web.handler.GlobalResourceHandler) [line 146];
+n$10=_fun_StringBuilder StringBuilder.append(String)(n$7:java.lang.StringBuilder*,n$9:java.lang.String*) virtual [line 146];
+*&amp;$irvar1:java.lang.StringBuilder*=n$10 [line 146];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$11=_fun_String Constants.getArticleUri()() [line 146];
+*&amp;$irvar2:java.lang.String*=n$11 [line 146];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$12=*&amp;$irvar1:java.lang.StringBuilder* [line 146];
+_=*n$12:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 146];
+n$14=*&amp;$irvar2:java.lang.String* [line 146];
+n$15=_fun_StringBuilder StringBuilder.append(String)(n$12:java.lang.StringBuilder*,n$14:java.lang.String*) virtual [line 146];
+*&amp;$irvar3:java.lang.StringBuilder*=n$15 [line 146];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$16=*&amp;$irvar3:java.lang.StringBuilder* [line 146];
+_=*n$16:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 146];
+n$18=_fun_String StringBuilder.toString()(n$16:java.lang.StringBuilder*) virtual [line 146];
+*&amp;$irvar4:java.lang.String*=n$18 [line 146];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$19=_fun_int Constants.getMaxCacheHtmlSize()() [line 146];
+*&amp;$irvar5:int=n$19 [line 146];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$20=*&amp;$irvar4:java.lang.String* [line 146];
+n$21=*&amp;bytes:signed char[_*_](*) [line 146];
+_=*n$21:int(root signed char[_*_]) [line 146];
+n$23=_fun___get_array_length(n$21:signed char[_*_](*)) [line 146];
+n$24=*&amp;$irvar5:int [line 146];
+n$25=_fun_void FileUtils.tryResizeDiskSpace(String,long,long)(n$20:java.lang.String*,(long)n$23:long,(long)n$24:long) [line 146];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE147">147</td><td class="line">            if (!file.exists()) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 16 exn:3 Instructions
+n$26=*&amp;file:java.io.File* [line 147];
+_=*n$26:java.io.File*(root java.io.File) [line 147];
+n$28=_fun_boolean File.exists()(n$26:java.io.File*) virtual [line 147];
+*&amp;$irvar6:_Bool=n$28 [line 147];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:14 succs:17 exn:3 Conditional method_body
+n$29=*&amp;$irvar6:_Bool [line 147];
+PRUNE(!(n$29 != 0), true); [line 147];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:14 succs:19 exn:3 Conditional method_body
+n$29=*&amp;$irvar6:_Bool [line 147];
+PRUNE((n$29 != 0), false); [line 147];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE148">148</td><td class="line">                file.getParentFile().mkdirs(); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:15 succs:18 exn:3 Instructions
+n$30=*&amp;file:java.io.File* [line 148];
+_=*n$30:java.io.File*(root java.io.File) [line 148];
+n$32=_fun_File File.getParentFile()(n$30:java.io.File*) virtual [line 148];
+*&amp;$irvar7:java.io.File*=n$32 [line 148];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$33=*&amp;$irvar7:java.io.File* [line 148];
+_=*n$33:java.io.File*(root java.io.File) [line 148];
+n$35=_fun_boolean File.mkdirs()(n$33:java.io.File*) virtual [line 148];
+*&amp;$irvar8:_Bool=n$35 [line 148];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE149">149</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE150">150</td><td class="line">            IOUtil.writeBytesToFile(bytes, file); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 16 succs:20 exn:3 Instructions
+n$36=*&amp;bytes:signed char[_*_](*) [line 150];
+n$37=*&amp;file:java.io.File* [line 150];
+n$38=_fun_void IOUtil.writeBytesToFile(byte[],File)(n$36:signed char[_*_](*),n$37:java.io.File*) [line 150];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE151">151</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE152">152</td><td class="line">    } <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:20 3 succs: exn: Exit
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.saveResponseBodyToHtml%28java.io.File%2Cjava.lang.String%29%3Avo.1843cb0d09a92365fa5069470deabde2_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE153">153</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE154">154</td><td class="line">    public static void printUserTime(String key) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563.html">summary for void GlobalResourceHandler.printUserTime(String)</a></td></tr>
+<tr><td class="num" id="LINE155">155</td><td class="line">        if (JFinal.me().getConstants().getDevMode()) { <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_JFinal JFinal.me()() [line 155];
+*&amp;$irvar0:com.jfinal.core.JFinal*=n$0 [line 155];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:com.jfinal.core.JFinal* [line 155];
+_=*n$1:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 155];
+n$3=_fun_Constants JFinal.getConstants()(n$1:com.jfinal.core.JFinal*) virtual [line 155];
+*&amp;$irvar1:com.jfinal.config.Constants*=n$3 [line 155];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:3 Instructions
+n$4=*&amp;$irvar1:com.jfinal.config.Constants* [line 155];
+_=*n$4:com.jfinal.config.Constants*(root com.jfinal.config.Constants) [line 155];
+n$6=_fun_boolean Constants.getDevMode()(n$4:com.jfinal.config.Constants*) virtual [line 155];
+*&amp;$irvar2:_Bool=n$6 [line 155];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:3 Conditional method_body
+n$7=*&amp;$irvar2:_Bool [line 155];
+PRUNE(!(n$7 == 0), true); [line 155];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:20 exn:3 Conditional method_body
+n$7=*&amp;$irvar2:_Bool [line 155];
+PRUNE((n$7 == 0), false); [line 155];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE156">156</td><td class="line">            LOGGER.info(&quot;key = &quot; + key + &quot; usedTime &quot; + (System.currentTimeMillis() - REQUEST_START_TIME.get())); <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 exn:3 Instructions
+n$8=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.LOGGER:org.slf4j.Logger*(root com.zrlog.web.handler.GlobalResourceHandler) [line 156];
+*&amp;$irvar3:org.slf4j.Logger*=n$8 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$9=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 156];
+n$10=_fun_StringBuilder.&lt;init&gt;()(n$9:java.lang.StringBuilder*) [line 156];
+*&amp;$irvar4:java.lang.StringBuilder*=n$9 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$11=*&amp;$irvar4:java.lang.StringBuilder* [line 156];
+_=*n$11:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 156];
+n$13=_fun_StringBuilder StringBuilder.append(String)(n$11:java.lang.StringBuilder*,"key = ":java.lang.Object*) virtual [line 156];
+*&amp;$irvar5:java.lang.StringBuilder*=n$13 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$14=*&amp;$irvar5:java.lang.StringBuilder* [line 156];
+_=*n$14:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 156];
+n$16=*&amp;key:java.lang.String* [line 156];
+n$17=_fun_StringBuilder StringBuilder.append(String)(n$14:java.lang.StringBuilder*,n$16:java.lang.String*) virtual [line 156];
+*&amp;$irvar6:java.lang.StringBuilder*=n$17 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$18=*&amp;$irvar6:java.lang.StringBuilder* [line 156];
+_=*n$18:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 156];
+n$20=_fun_StringBuilder StringBuilder.append(String)(n$18:java.lang.StringBuilder*," usedTime ":java.lang.Object*) virtual [line 156];
+*&amp;$irvar7:java.lang.StringBuilder*=n$20 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$21=_fun_long System.currentTimeMillis()() [line 156];
+*&amp;$irvar8:long=n$21 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$22=*&amp;#GB<>$com.zrlog.web.handler.GlobalResourceHandler.REQUEST_START_TIME:java.lang.ThreadLocal*(root com.zrlog.web.handler.GlobalResourceHandler) [line 156];
+_=*n$22:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 156];
+n$24=_fun_Object ThreadLocal.get()(n$22:java.lang.ThreadLocal*) virtual [line 156];
+*&amp;$irvar9:java.lang.Object*=n$24 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$25=*&amp;$irvar9:java.lang.Object* [line 156];
+n$26=_fun___cast(n$25:java.lang.Object*,sizeof(t=java.lang.Long;sub_t=( sub )(cast)):void) [line 156];
+_=*n$26:java.lang.Long*(root java.lang.Long) [line 156];
+n$28=_fun_long Long.longValue()(n$26:java.lang.Long*) virtual [line 156];
+*&amp;$irvar10:long=n$28 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$29=*&amp;$irvar7:java.lang.StringBuilder* [line 156];
+_=*n$29:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 156];
+n$31=*&amp;$irvar8:long [line 156];
+n$32=*&amp;$irvar10:long [line 156];
+n$33=_fun_StringBuilder StringBuilder.append(long)(n$29:java.lang.StringBuilder*,(n$31 - n$32):long) virtual [line 156];
+*&amp;$irvar11:java.lang.StringBuilder*=n$33 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$34=*&amp;$irvar11:java.lang.StringBuilder* [line 156];
+_=*n$34:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 156];
+n$36=_fun_String StringBuilder.toString()(n$34:java.lang.StringBuilder*) virtual [line 156];
+*&amp;$irvar12:java.lang.String*=n$36 [line 156];
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$37=*&amp;$irvar3:org.slf4j.Logger* [line 156];
+_=*n$37:org.slf4j.Logger*(root org.slf4j.Logger) [line 156];
+n$39=*&amp;$irvar12:java.lang.String* [line 156];
+n$40=_fun_void Logger.info(String)(n$37:org.slf4j.Logger*,n$39:java.lang.String*) interface virtual [line 156];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE157">157</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE158">158</td><td class="line">    } <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 8 succs:2 exn:3 Instructions
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:20 3 succs: exn: Exit
+</span></span></a> <a href="./GlobalResourceHandler.java.d399dfaa661e2c865c1ee32474571183/nodes/com.zrlog.web.handler.GlobalResourceHandler.printUserTime%28java.lang.String%29%3Avoid.7fe2907540fbcb8a18ca57b3a6f02563_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE159">159</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE160">160</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

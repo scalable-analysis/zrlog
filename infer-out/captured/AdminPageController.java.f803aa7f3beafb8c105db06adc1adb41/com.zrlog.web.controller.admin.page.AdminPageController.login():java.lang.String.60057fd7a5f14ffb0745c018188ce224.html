@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.controller.admin.page.AdminPageController.login():java.lang.String.60057fd7a5f14ffb0745c018188ce224</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../AdminPageController.java.f803aa7f3beafb8c105db06adc1adb41.html#LINE59">String AdminPageController.login()</a></h1></center>
+<a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:11 10 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar0); [line 65];
+NULLIFY(&amp;$irvar1); [line 65];
+EXIT_SCOPE($irvar0,$irvar1); [line 65];
+APPLY_ABSTRACTION; [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.controller.admin.page.AdminPageController* [line 60];
+_=*n$0:com.zrlog.web.controller.admin.page.AdminPageController*(root com.zrlog.web.controller.admin.page.AdminPageController) [line 60];
+n$2=_fun_HttpServletRequest Controller.getRequest()(n$0:com.zrlog.web.controller.admin.page.AdminPageController*) virtual [line 60];
+*&amp;$irvar0:javax.servlet.http.HttpServletRequest*=n$2 [line 60];
+EXIT_SCOPE(_,n$0,n$2); [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=*&amp;$irvar0:javax.servlet.http.HttpServletRequest* [line 60];
+n$4=_fun_void AdminInterceptor.previewField(HttpServletRequest)(n$3:javax.servlet.http.HttpServletRequest*) [line 60];
+NULLIFY(&amp;$irvar0); [line 60];
+EXIT_SCOPE(n$3,n$4,$irvar0); [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:3 Instructions
+n$5=_fun_AdminTokenVO AdminTokenThreadLocal.getUser()() [line 61];
+*&amp;$irvar1:com.zrlog.common.vo.AdminTokenVO*=n$5 [line 61];
+EXIT_SCOPE(n$5); [line 61];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:3 Conditional method_body
+n$6=*&amp;$irvar1:com.zrlog.common.vo.AdminTokenVO* [line 61];
+PRUNE(!(n$6 == null), true); [line 61];
+NULLIFY(&amp;$irvar1); [line 61];
+EXIT_SCOPE(n$6,$irvar1); [line 61];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:11 exn:3 Conditional method_body
+n$6=*&amp;$irvar1:com.zrlog.common.vo.AdminTokenVO* [line 61];
+PRUNE((n$6 == null), false); [line 61];
+NULLIFY(&amp;$irvar1); [line 61];
+EXIT_SCOPE(n$6,$irvar1); [line 61];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 exn:3 Instructions
+n$7=*&amp;this:com.zrlog.web.controller.admin.page.AdminPageController* [line 62];
+_=*n$7:com.zrlog.web.controller.admin.page.AdminPageController*(root com.zrlog.web.controller.admin.page.AdminPageController) [line 62];
+n$9=_fun_void Controller.redirect(String)(n$7:com.zrlog.web.controller.admin.page.AdminPageController*,"/admin/index#dashboard":java.lang.Object*) virtual [line 62];
+NULLIFY(&amp;this); [line 62];
+EXIT_SCOPE(_,n$7,n$9,this); [line 62];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:2 exn:3 Instructions
+*&amp;return:java.lang.String*=null [line 63];
+APPLY_ABSTRACTION; [line 63];
+</span></span></a> <a href="./nodes/com.zrlog.web.controller.admin.page.AdminPageController.login%28%29%3Ajava.lang.String.60057fd7a5f14ffb0745c018188ce224_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:8 succs:2 exn:3 Instructions
+*&amp;return:java.lang.String*="/admin/login" [line 65];
+APPLY_ABSTRACTION; [line 65];
+</span></span></a><br />@
+
+<span class='color_black'>java.lang.String* String AdminPageController.login()(com.zrlog.web.controller.admin.page.AdminPageController* this)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= String AdminPageController.login()
+; translation_unit= web/src/main/java/com/zrlog/web/controller/admin/page/AdminPageController.java
+; access= Public
+; formals= [(this,com.zrlog.web.controller.admin.page.AdminPageController*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/controller/admin/page/AdminPageController.java:59
+; locals= [{ name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }]
+; ret_type= java.lang.String* 
+; proc_id= com.zrlog.web.controller.admin.page.AdminPageController.login():java.lang.String }</pre>
+</body>
+</html>

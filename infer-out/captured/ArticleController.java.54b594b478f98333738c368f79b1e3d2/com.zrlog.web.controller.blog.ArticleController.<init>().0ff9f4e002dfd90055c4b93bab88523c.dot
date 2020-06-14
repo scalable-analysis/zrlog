@@ -1,0 +1,44 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_1" [label="1: Start ArticleController.<init>()\nFormals:  this:com.zrlog.web.controller.blog.ArticleController*\nLocals:  $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_1" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_4" ;
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_2" [label="2: Exit ArticleController.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 28]\n  NULLIFY(&$irvar1); [line 28]\n  EXIT_SCOPE($irvar0,$irvar1); [line 28]\n  APPLY_ABSTRACTION; [line 28]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_2" ;
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_4" [label="4:  Call BaseController.<init>() \n   n$0=*&this:com.zrlog.web.controller.blog.ArticleController* [line 24]\n  n$1=_fun_BaseController.<init>()(n$0:com.zrlog.web.controller.blog.ArticleController*) [line 24]\n  EXIT_SCOPE(n$0,n$1); [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_4" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_5" ;
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_4" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" [color="red" ];
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_5" [label="5:  Call ArticleService.<init>() \n   n$2=_fun___new(sizeof(t=com.zrlog.service.ArticleService):com.zrlog.service.ArticleService*) [line 26]\n  n$3=_fun_ArticleService.<init>()(n$2:com.zrlog.service.ArticleService*) [line 26]\n  *&$irvar0:com.zrlog.service.ArticleService*=n$2 [line 26]\n  EXIT_SCOPE(n$2,n$3); [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_5" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_6" ;
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_5" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" [color="red" ];
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_6" [label="6:  method_body \n   n$4=*&this:com.zrlog.web.controller.blog.ArticleController* [line 26]\n  n$5=*&$irvar0:com.zrlog.service.ArticleService* [line 26]\n  *n$4.articleService:com.zrlog.web.controller.blog.ArticleController(root com.zrlog.web.controller.blog.ArticleController)=n$5 [line 26]\n  NULLIFY(&$irvar0); [line 26]\n  EXIT_SCOPE(n$4,n$5,$irvar0); [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_6" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_7" ;
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_6" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" [color="red" ];
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_7" [label="7:  Call CommentService.<init>() \n   n$6=_fun___new(sizeof(t=com.zrlog.service.CommentService):com.zrlog.service.CommentService*) [line 28]\n  n$7=_fun_CommentService.<init>()(n$6:com.zrlog.service.CommentService*) [line 28]\n  *&$irvar1:com.zrlog.service.CommentService*=n$6 [line 28]\n  EXIT_SCOPE(n$6,n$7); [line 28]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_7" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_8" ;
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_7" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" [color="red" ];
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_8" [label="8:  method_body \n   n$8=*&this:com.zrlog.web.controller.blog.ArticleController* [line 28]\n  n$9=*&$irvar1:com.zrlog.service.CommentService* [line 28]\n  *n$8.commentService:com.zrlog.web.controller.blog.ArticleController(root com.zrlog.web.controller.blog.ArticleController)=n$9 [line 28]\n  NULLIFY(&$irvar1); [line 28]\n  NULLIFY(&this); [line 28]\n  EXIT_SCOPE(n$8,n$9,$irvar1,this); [line 28]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_8" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_9" ;
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_8" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" [color="red" ];
+"com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_9" [label="9:  method_body \n   APPLY_ABSTRACTION; [line 28]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_9" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_2" ;
+	 "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_9" -> "com.zrlog.web.controller.blog.ArticleController.<init>().0ff9f4e002dfd90055c4b93bab88523c_3" [color="red" ];
+}

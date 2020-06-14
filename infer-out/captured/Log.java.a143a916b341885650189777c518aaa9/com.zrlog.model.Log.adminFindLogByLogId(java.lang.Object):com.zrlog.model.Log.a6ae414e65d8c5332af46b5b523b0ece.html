@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Log.adminFindLogByLogId(java.lang.Object):com.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../Log.java.a143a916b341885650189777c518aaa9.html#LINE54">Log Log.adminFindLogByLogId(Object)</a></h1></center>
+<a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:19 18 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar3); [line 64];
+NULLIFY(&amp;log); [line 64];
+NULLIFY(&amp;sql); [line 64];
+NULLIFY(&amp;$irvar0); [line 64];
+NULLIFY(&amp;$irvar1); [line 64];
+NULLIFY(&amp;$irvar2); [line 64];
+EXIT_SCOPE($irvar3,log,sql,$irvar0,$irvar1,$irvar2); [line 64];
+APPLY_ABSTRACTION; [line 64];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;id:java.lang.Object* [line 55];
+PRUNE(!(n$0 == null), true); [line 55];
+EXIT_SCOPE(n$0); [line 55];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:19 exn:3 Conditional method_body
+n$0=*&amp;id:java.lang.Object* [line 55];
+PRUNE((n$0 == null), false); [line 55];
+NULLIFY(&amp;id); [line 55];
+EXIT_SCOPE(n$0,id); [line 55];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:7 exn:3 Instructions
+*&amp;sql:java.lang.Object*="select l.*,last_update_date as lastUpdateDate,u.userName,(select count(commentId) from comment where logId=l.logId) commentSize ,t.alias as typeAlias,t.typeName as typeName  from log l inner join user u,type t where t.typeId=l.typeId and u.userId=l.userId and l.logId=?" [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$1=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 57];
+*&amp;$irvar0:java.lang.Object*[_*_](*)=n$1 [line 57];
+EXIT_SCOPE(n$1); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$2=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 57];
+n$3=*&amp;id:java.lang.Object* [line 57];
+*n$2[0]:java.lang.Object*=n$3 [line 57];
+EXIT_SCOPE(n$2,n$3); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.model.Log* [line 57];
+_=*n$4:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 57];
+n$6=*&amp;sql:java.lang.Object* [line 57];
+n$7=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 57];
+n$8=_fun_Model Model.findFirst(String,Object[])(n$4:com.zrlog.model.Log*,n$6:java.lang.Object*,n$7:java.lang.Object*[_*_](*)) virtual [line 57];
+*&amp;$irvar1:com.jfinal.plugin.activerecord.Model*=n$8 [line 57];
+NULLIFY(&amp;sql); [line 57];
+NULLIFY(&amp;$irvar0); [line 57];
+EXIT_SCOPE(_,n$4,n$6,n$7,n$8,sql,$irvar0); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 12 exn:3 Instructions
+n$9=*&amp;$irvar1:com.jfinal.plugin.activerecord.Model* [line 57];
+n$10=_fun___cast(n$9:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 57];
+*&amp;log:com.zrlog.model.Log*=n$10 [line 57];
+NULLIFY(&amp;$irvar1); [line 57];
+EXIT_SCOPE(n$9,n$10,$irvar1); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:10 succs:13 exn:3 Conditional method_body
+n$11=*&amp;log:com.zrlog.model.Log* [line 58];
+PRUNE(!(n$11 != null), true); [line 58];
+NULLIFY(&amp;log); [line 58];
+EXIT_SCOPE(n$11,log); [line 58];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:10 succs:18 exn:3 Conditional method_body
+n$11=*&amp;log:com.zrlog.model.Log* [line 58];
+PRUNE((n$11 != null), false); [line 58];
+EXIT_SCOPE(n$11); [line 58];
+APPLY_ABSTRACTION; [line 58];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:11 succs:14 exn:3 Instructions
+*&amp;sql:java.lang.Object*="select l.*,last_update_date as lastUpdateDate,u.userName,(select count(commentId) from comment where logId=l.logId) commentSize ,t.alias as typeAlias,t.typeName as typeName  from log l inner join user u,type t where t.typeId=l.typeId and u.userId=l.userId and l.alias=?" [line 59];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$12=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 60];
+*&amp;$irvar2:java.lang.Object*[_*_](*)=n$12 [line 60];
+EXIT_SCOPE(n$12); [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$13=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 60];
+n$14=*&amp;id:java.lang.Object* [line 60];
+*n$13[0]:java.lang.Object*=n$14 [line 60];
+NULLIFY(&amp;id); [line 60];
+EXIT_SCOPE(n$13,n$14,id); [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$15=*&amp;this:com.zrlog.model.Log* [line 60];
+_=*n$15:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 60];
+n$17=*&amp;sql:java.lang.Object* [line 60];
+n$18=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 60];
+n$19=_fun_Model Model.findFirst(String,Object[])(n$15:com.zrlog.model.Log*,n$17:java.lang.Object*,n$18:java.lang.Object*[_*_](*)) virtual [line 60];
+*&amp;$irvar3:com.jfinal.plugin.activerecord.Model*=n$19 [line 60];
+NULLIFY(&amp;sql); [line 60];
+NULLIFY(&amp;$irvar2); [line 60];
+NULLIFY(&amp;this); [line 60];
+EXIT_SCOPE(_,n$15,n$17,n$18,n$19,sql,$irvar2,this); [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$20=*&amp;$irvar3:com.jfinal.plugin.activerecord.Model* [line 60];
+n$21=_fun___cast(n$20:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 60];
+*&amp;log:com.zrlog.model.Log*=n$21 [line 60];
+NULLIFY(&amp;$irvar3); [line 60];
+EXIT_SCOPE(n$20,n$21,$irvar3); [line 60];
+APPLY_ABSTRACTION; [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 12 succs:2 exn:3 Instructions
+n$22=*&amp;log:com.zrlog.model.Log* [line 62];
+*&amp;return:com.zrlog.model.Log*=n$22 [line 62];
+NULLIFY(&amp;log); [line 62];
+EXIT_SCOPE(n$22,log); [line 62];
+APPLY_ABSTRACTION; [line 62];
+</span></span></a> <a href="./nodes/com.zrlog.model.Log.adminFindLogByLogId%28java.lang.Object%29%3Acom.zrlog.model.Log.a6ae414e65d8c5332af46b5b523b0ece_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:5 succs:2 exn:3 Instructions
+*&amp;return:com.zrlog.model.Log*=null [line 64];
+APPLY_ABSTRACTION; [line 64];
+</span></span></a><br />@
+
+<span class='color_black'>com.zrlog.model.Log* Log Log.adminFindLogByLogId(Object)(com.zrlog.model.Log* this, java.lang.Object* id)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> (Footprint({ @val$1, @val$0* }) ~> ?, *) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= Log Log.adminFindLogByLogId(Object)
+; translation_unit= data/src/main/java/com/zrlog/model/Log.java
+; access= Public
+; formals= [(this,com.zrlog.model.Log*);  (id,java.lang.Object*)]
+; is_defined= true
+; loc= data/src/main/java/com/zrlog/model/Log.java:54
+; locals= [{ name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= log; typ= com.zrlog.model.Log*; modify_in_block= false }; 
+           { name= sql; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= com.zrlog.model.Log* 
+; proc_id= com.zrlog.model.Log.adminFindLogByLogId(java.lang.Object):com.zrlog.model.Log }</pre>
+</body>
+</html>

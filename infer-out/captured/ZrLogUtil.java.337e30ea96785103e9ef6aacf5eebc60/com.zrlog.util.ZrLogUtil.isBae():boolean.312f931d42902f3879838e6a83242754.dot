@@ -1,0 +1,61 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_1" [label="1: Start boolean ZrLogUtil.isBae()\nFormals: \nLocals:  $T0_24:void $irvar0:void value:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_1" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_4" ;
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_2" [label="2: Exit boolean ZrLogUtil.isBae() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [label="3:  exceptions sink \n   NULLIFY(&$T0_24); [line 218]\n  NULLIFY(&$irvar0); [line 218]\n  NULLIFY(&value); [line 218]\n  EXIT_SCOPE($T0_24,$irvar0,value); [line 218]\n  APPLY_ABSTRACTION; [line 218]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_2" ;
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_4" [label="4:  Call String System.getenv(String) \n   n$0=_fun_String System.getenv(String)(\"SERVER_SOFTWARE\":java.lang.Object*) [line 217]\n  *&value:java.lang.String*=n$0 [line 217]\n  EXIT_SCOPE(n$0); [line 217]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_4" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_5" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_4" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_6" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_4" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_5" [label="5: Prune (true branch, if) \n   n$1=*&value:java.lang.String* [line 218]\n  PRUNE(!(n$1 == null), true); [line 218]\n  EXIT_SCOPE(n$1); [line 218]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_5" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_7" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_5" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_6" [label="6: Prune (false branch, if) \n   n$1=*&value:java.lang.String* [line 218]\n  PRUNE((n$1 == null), false); [line 218]\n  NULLIFY(&value); [line 218]\n  EXIT_SCOPE(n$1,value); [line 218]\n  APPLY_ABSTRACTION; [line 218]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_6" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_11" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_6" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_7" [label="7:  Call boolean String.startsWith(String) \n   n$2=*&value:java.lang.String* [line 218]\n  _=*n$2:java.lang.String*(root java.lang.String) [line 218]\n  n$4=_fun_boolean String.startsWith(String)(n$2:java.lang.String*,\"bae\":java.lang.Object*) virtual [line 218]\n  *&$irvar0:_Bool=n$4 [line 218]\n  NULLIFY(&value); [line 218]\n  EXIT_SCOPE(_,n$2,n$4,value); [line 218]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_7" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_8" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_7" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_9" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_7" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_8" [label="8: Prune (true branch, if) \n   n$5=*&$irvar0:_Bool [line 218]\n  PRUNE(!(n$5 == 0), true); [line 218]\n  NULLIFY(&$irvar0); [line 218]\n  EXIT_SCOPE(n$5,$irvar0); [line 218]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_8" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_10" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_8" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_9" [label="9: Prune (false branch, if) \n   n$5=*&$irvar0:_Bool [line 218]\n  PRUNE((n$5 == 0), false); [line 218]\n  NULLIFY(&$irvar0); [line 218]\n  EXIT_SCOPE(n$5,$irvar0); [line 218]\n  APPLY_ABSTRACTION; [line 218]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_9" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_11" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_9" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_10" [label="10:  method_body \n   *&$T0_24:int=1 [line 218]\n  APPLY_ABSTRACTION; [line 218]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_10" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_12" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_10" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_11" [label="11:  method_body \n   *&$T0_24:int=0 [line 218]\n  APPLY_ABSTRACTION; [line 218]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_11" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_12" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_11" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_12" [label="12:  method_body \n   n$6=*&$T0_24:int [line 218]\n  *&return:_Bool=n$6 [line 218]\n  NULLIFY(&$T0_24); [line 218]\n  EXIT_SCOPE(n$6,$T0_24); [line 218]\n  APPLY_ABSTRACTION; [line 218]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_12" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_2" ;
+	 "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_12" -> "com.zrlog.util.ZrLogUtil.isBae():boolean.312f931d42902f3879838e6a83242754_3" [color="red" ];
+}

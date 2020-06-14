@@ -1,0 +1,34 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_1" [label="1: Start Map BlogNavController.index()\nFormals:  this:com.zrlog.web.controller.admin.api.BlogNavController*\nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_1" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_4" ;
+"com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_2" [label="2: Exit Map BlogNavController.index() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 22]\n  NULLIFY(&$irvar1); [line 22]\n  NULLIFY(&$irvar2); [line 22]\n  EXIT_SCOPE($irvar0,$irvar1,$irvar2); [line 22]\n  APPLY_ABSTRACTION; [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_3" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_2" ;
+"com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_4" [label="4:  Call LogNav.<init>() \n   n$0=_fun___new(sizeof(t=com.zrlog.model.LogNav):com.zrlog.model.LogNav*) [line 22]\n  n$1=_fun_LogNav.<init>()(n$0:com.zrlog.model.LogNav*) [line 22]\n  *&$irvar0:com.zrlog.model.LogNav*=n$0 [line 22]\n  EXIT_SCOPE(n$0,n$1); [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_4" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_5" ;
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_4" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_5" [label="5:  Call PageableRequest BaseController.getPageable() \n   n$2=*&this:com.zrlog.web.controller.admin.api.BlogNavController* [line 22]\n  _=*n$2:com.zrlog.web.controller.admin.api.BlogNavController*(root com.zrlog.web.controller.admin.api.BlogNavController) [line 22]\n  n$4=_fun_PageableRequest BaseController.getPageable()(n$2:com.zrlog.web.controller.admin.api.BlogNavController*) virtual [line 22]\n  *&$irvar1:com.zrlog.common.request.PageableRequest*=n$4 [line 22]\n  NULLIFY(&this); [line 22]\n  EXIT_SCOPE(_,n$2,n$4,this); [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_5" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_6" ;
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_5" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_6" [label="6:  Call Map LogNav.find(PageableRequest) \n   n$5=*&$irvar0:com.zrlog.model.LogNav* [line 22]\n  _=*n$5:com.zrlog.model.LogNav*(root com.zrlog.model.LogNav) [line 22]\n  n$7=*&$irvar1:com.zrlog.common.request.PageableRequest* [line 22]\n  n$8=_fun_Map LogNav.find(PageableRequest)(n$5:com.zrlog.model.LogNav*,n$7:com.zrlog.common.request.PageableRequest*) virtual [line 22]\n  *&$irvar2:java.util.Map*=n$8 [line 22]\n  NULLIFY(&$irvar0); [line 22]\n  NULLIFY(&$irvar1); [line 22]\n  EXIT_SCOPE(_,n$5,n$7,n$8,$irvar0,$irvar1); [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_6" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_7" ;
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_6" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_7" [label="7:  method_body \n   n$9=*&$irvar2:java.util.Map* [line 22]\n  *&return:java.util.Map*=n$9 [line 22]\n  NULLIFY(&$irvar2); [line 22]\n  EXIT_SCOPE(n$9,$irvar2); [line 22]\n  APPLY_ABSTRACTION; [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_7" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_2" ;
+	 "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_7" -> "com.zrlog.web.controller.admin.api.BlogNavController.index():java.util.Map.33c653342802c5c09877587c2cad853d_3" [color="red" ];
+}

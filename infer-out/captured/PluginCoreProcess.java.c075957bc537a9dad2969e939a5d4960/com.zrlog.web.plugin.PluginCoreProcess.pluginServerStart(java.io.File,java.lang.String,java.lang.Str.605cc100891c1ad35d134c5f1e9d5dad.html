@@ -1,0 +1,217 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart(java.io.File,java.lang.String,java.lang.Str.605cc100891c1ad35d134c5f1e9d5dad</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../PluginCoreProcess.java.c075957bc537a9dad2969e939a5d4960.html#LINE44">int PluginCoreProcess.pluginServerStart(File,String,String,String,String)</a></h1></center>
+<a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:19 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:21 succs:2 exn:2 Instructions
+NULLIFY(&amp;randomMasterPort); [line 115];
+NULLIFY(&amp;$irvar0); [line 115];
+NULLIFY(&amp;randomServerPort); [line 115];
+NULLIFY(&amp;$irvar1); [line 115];
+NULLIFY(&amp;CatchVar83); [line 115];
+NULLIFY(&amp;randomListenPort); [line 115];
+NULLIFY(&amp;e); [line 115];
+EXIT_SCOPE(n$39,randomMasterPort,$irvar0,randomServerPort,$irvar1,CatchVar83,randomListenPort,e); [line 115];
+APPLY_ABSTRACTION; [line 115];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 46];
+*n$0.canStart:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=1 [line 46];
+EXIT_SCOPE(n$0); [line 46];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=_fun___new(sizeof(t=java.util.Random):java.util.Random*) [line 48];
+n$2=_fun_Random.&lt;init&gt;()(n$1:java.util.Random*) [line 48];
+*&amp;$irvar0:java.util.Random*=n$1 [line 48];
+EXIT_SCOPE(n$1,n$2); [line 48];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$3=*&amp;$irvar0:java.util.Random* [line 48];
+_=*n$3:java.util.Random*(root java.util.Random) [line 48];
+n$5=_fun_int Random.nextInt(int)(n$3:java.util.Random*,10000:int) virtual [line 48];
+*&amp;$irvar1:int=n$5 [line 48];
+NULLIFY(&amp;$irvar0); [line 48];
+EXIT_SCOPE(_,n$3,n$5,$irvar0); [line 48];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$6=*&amp;$irvar1:int [line 48];
+*&amp;randomServerPort:int=(n$6 + 20000) [line 48];
+NULLIFY(&amp;$irvar1); [line 48];
+EXIT_SCOPE(n$6,$irvar1); [line 48];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=*&amp;randomServerPort:int [line 49];
+*&amp;randomMasterPort:int=(n$7 + 20000) [line 49];
+EXIT_SCOPE(n$7); [line 49];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$8=*&amp;randomServerPort:int [line 50];
+*&amp;randomListenPort:int=(n$8 + 30000) [line 50];
+EXIT_SCOPE(n$8); [line 50];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:22 Instructions
+n$9=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 52];
+n$10=_fun_void PluginCoreProcess.registerShutdownHook()(n$9:com.zrlog.web.plugin.PluginCoreProcess*) [line 52];
+EXIT_SCOPE(n$9,n$10); [line 52];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:22 Instructions
+n$11=*&amp;pluginCoreFile:java.io.File* [line 53];
+_=*n$11:java.io.File*(root java.io.File) [line 53];
+n$13=_fun_String File.getName()(n$11:java.io.File*) virtual [line 53];
+*&amp;$irvar2:java.lang.String*=n$13 [line 53];
+EXIT_SCOPE(_,n$11,n$13); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 14 exn:22 Instructions
+n$14=*&amp;$irvar2:java.lang.String* [line 53];
+_=*n$14:java.lang.String*(root java.lang.String) [line 53];
+n$16=_fun_boolean String.endsWith(String)(n$14:java.lang.String*,".jar":java.lang.Object*) virtual [line 53];
+*&amp;$irvar3:_Bool=n$16 [line 53];
+NULLIFY(&amp;$irvar2); [line 53];
+EXIT_SCOPE(_,n$14,n$16,$irvar2); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:12 succs:15 exn:22 Conditional method_body
+n$17=*&amp;$irvar3:_Bool [line 53];
+PRUNE(!(n$17 == 0), true); [line 53];
+NULLIFY(&amp;$irvar3); [line 53];
+EXIT_SCOPE(n$17,$irvar3); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:12 succs:19 exn:22 Conditional method_body
+n$17=*&amp;$irvar3:_Bool [line 53];
+PRUNE((n$17 == 0), false); [line 53];
+NULLIFY(&amp;$irvar3); [line 53];
+NULLIFY(&amp;randomMasterPort); [line 53];
+NULLIFY(&amp;randomListenPort); [line 53];
+EXIT_SCOPE(n$17,$irvar3,randomMasterPort,randomListenPort); [line 53];
+APPLY_ABSTRACTION; [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:13 succs:16 exn:22 Instructions
+n$18=_fun___new(sizeof(t=com.zrlog.web.plugin.PluginCoreProcess$1):com.zrlog.web.plugin.PluginCoreProcess$1*) [line 54];
+n$19=*&amp;this:com.zrlog.web.plugin.PluginCoreProcess* [line 54];
+n$20=*&amp;pluginCoreFile:java.io.File* [line 54];
+n$21=*&amp;pluginJvmArgs:java.lang.String* [line 54];
+n$22=*&amp;randomServerPort:int [line 54];
+n$23=*&amp;randomMasterPort:int [line 54];
+n$24=*&amp;dbProperties:java.lang.String* [line 54];
+n$25=*&amp;randomListenPort:int [line 54];
+n$26=*&amp;runtimePath:java.lang.String* [line 54];
+n$27=*&amp;runTimeVersion:java.lang.String* [line 54];
+n$28=_fun_PluginCoreProcess$1.&lt;init&gt;(PluginCoreProcess,File,String,int,int,String,int,String,String)(n$18:com.zrlog.web.plugin.PluginCoreProcess$1*,n$19:com.zrlog.web.plugin.PluginCoreProcess*,n$20:java.io.File*,n$21:java.lang.String*,n$22:int,n$23:int,n$24:java.lang.String*,n$25:int,n$26:java.lang.String*,n$27:java.lang.String*) [line 54];
+*&amp;$irvar4:com.zrlog.web.plugin.PluginCoreProcess$1*=n$18 [line 54];
+NULLIFY(&amp;pluginJvmArgs); [line 54];
+NULLIFY(&amp;runtimePath); [line 54];
+NULLIFY(&amp;randomMasterPort); [line 54];
+NULLIFY(&amp;runTimeVersion); [line 54];
+NULLIFY(&amp;this); [line 54];
+NULLIFY(&amp;pluginCoreFile); [line 54];
+NULLIFY(&amp;dbProperties); [line 54];
+NULLIFY(&amp;randomListenPort); [line 54];
+EXIT_SCOPE(n$18,n$19,n$20,n$21,n$22,n$23,n$24,n$25,n$26,n$27,n$28,pluginJvmArgs,runtimePath,randomMasterPort,runTimeVersion,this,pluginCoreFile,dbProperties,randomListenPort); [line 54];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:19 exn:22 Instructions
+n$29=*&amp;$irvar4:com.zrlog.web.plugin.PluginCoreProcess$1* [line 110];
+_=*n$29:com.zrlog.web.plugin.PluginCoreProcess$1*(root com.zrlog.web.plugin.PluginCoreProcess$1) [line 110];
+n$31=_fun_void Thread.start()(n$29:com.zrlog.web.plugin.PluginCoreProcess$1*) virtual [line 110];
+NULLIFY(&amp;$irvar4); [line 110];
+EXIT_SCOPE(_,n$29,n$31,$irvar4); [line 110];
+APPLY_ABSTRACTION; [line 110];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:20 succs:18 exn:3 Instructions
+n$32=*&amp;CatchVar83:java.lang.Object* [line 112];
+*&amp;e:java.lang.Object*=n$32 [line 112];
+NULLIFY(&amp;CatchVar83); [line 112];
+EXIT_SCOPE(n$32,CatchVar83); [line 112];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$33=*&amp;#GB<>$com.zrlog.web.plugin.PluginCoreProcess.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginCoreProcess) [line 113];
+_=*n$33:org.slf4j.Logger*(root org.slf4j.Logger) [line 113];
+n$35=*&amp;e:java.lang.Object* [line 113];
+n$36=_fun_void Logger.warn(String,Throwable)(n$33:org.slf4j.Logger*,"start plugin exception ":java.lang.Object*,n$35:java.lang.Object*) interface virtual [line 113];
+NULLIFY(&amp;e); [line 113];
+EXIT_SCOPE(_,n$33,n$35,n$36,e); [line 113];
+APPLY_ABSTRACTION; [line 113];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 16 14 succs:2 exn:3 Instructions
+n$37=*&amp;randomServerPort:int [line 115];
+*&amp;return:int=n$37 [line 115];
+NULLIFY(&amp;randomServerPort); [line 115];
+EXIT_SCOPE(n$37,randomServerPort); [line 115];
+APPLY_ABSTRACTION; [line 115];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node20.html"><span class='visited with_tooltip'>C_20<span class='tooltip'>node20 preds:22 succs:17 exn:3 Conditional exception handler
+n$40=_fun___instanceof(n$39:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 112];
+PRUNE(n$40, true); [line 112];
+*&amp;CatchVar83:int=n$39 [line 112];
+EXIT_SCOPE(n$39,n$40); [line 112];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node21.html"><span class='visited with_tooltip'>C_21<span class='tooltip'>node21 preds:22 succs:3 exn:3 Conditional exception handler
+n$40=_fun___instanceof(n$39:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 112];
+PRUNE(!n$40, false); [line 112];
+*&amp;return:int=EXN n$39 [line 112];
+NULLIFY(&amp;randomServerPort); [line 112];
+EXIT_SCOPE(n$39,n$40,randomServerPort); [line 112];
+</span></span></a> <a href="./nodes/com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart%28java.io.File%2Cjava.lang.String%2Cjava.lang.Str.605cc100891c1ad35d134c5f1e9d5dad_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds: succs:20 21 exn:3 Instructions
+n$38=*&amp;return:int [line 112];
+*&amp;return:int=null [line 112];
+n$39=_fun___unwrap_exception(n$38:int) [line 112];
+NULLIFY(&amp;$irvar3); [line 112];
+NULLIFY(&amp;randomMasterPort); [line 112];
+NULLIFY(&amp;$irvar4); [line 112];
+NULLIFY(&amp;$irvar2); [line 112];
+NULLIFY(&amp;randomListenPort); [line 112];
+EXIT_SCOPE(n$38,$irvar3,randomMasterPort,$irvar4,$irvar2,randomListenPort); [line 112];
+</span></span></a><br />@
+
+<span class='color_black'>int int PluginCoreProcess.pluginServerStart(File,String,String,String,String)(com.zrlog.web.plugin.PluginCoreProcess* this, java.io.File* pluginCoreFile, java.lang.String* dbProperties, java.lang.String* pluginJvmArgs, java.lang.String* runtimePath, java.lang.String* runTimeVersion)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { @val$0 -> { canStart -> { } }, return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= int PluginCoreProcess.pluginServerStart(File,String,String,String,String)
+; translation_unit= web/src/main/java/com/zrlog/web/plugin/PluginCoreProcess.java
+; access= Public
+; formals= [(this,com.zrlog.web.plugin.PluginCoreProcess*);  (pluginCoreFile,
+            java.io.File*);  (dbProperties,java.lang.String*); 
+            (pluginJvmArgs,java.lang.String*);  (runtimePath,
+            java.lang.String*);  (runTimeVersion,java.lang.String*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/plugin/PluginCoreProcess.java:44
+; locals= [{ name= CatchVar83; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= randomListenPort; typ= int; modify_in_block= false }; 
+           { name= randomMasterPort; typ= int; modify_in_block= false }; 
+           { name= randomServerPort; typ= int; modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }]
+; ret_type= int 
+; proc_id= com.zrlog.web.plugin.PluginCoreProcess.pluginServerStart(java.io.File,java.lang.String,java.lang.String,java.lang.String,java.lang.String):int }</pre>
+</body>
+</html>

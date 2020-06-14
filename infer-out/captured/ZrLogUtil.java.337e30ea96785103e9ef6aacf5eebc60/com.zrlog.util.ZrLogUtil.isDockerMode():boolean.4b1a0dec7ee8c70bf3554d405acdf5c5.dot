@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_1" [label="1: Start boolean ZrLogUtil.isDockerMode()\nFormals: \nLocals:  $irvar0:void value:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_1" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_4" ;
+"com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_2" [label="2: Exit boolean ZrLogUtil.isDockerMode() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 228]\n  NULLIFY(&value); [line 228]\n  EXIT_SCOPE($irvar0,value); [line 228]\n  APPLY_ABSTRACTION; [line 228]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_3" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_2" ;
+"com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_4" [label="4:  Call String System.getenv(String) \n   n$0=_fun_String System.getenv(String)(\"DOCKER_MODE\":java.lang.Object*) [line 227]\n  *&value:java.lang.String*=n$0 [line 227]\n  EXIT_SCOPE(n$0); [line 227]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_4" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_5" ;
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_4" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_5" [label="5:  Call boolean String.equalsIgnoreCase(String) \n   n$1=*&value:java.lang.String* [line 228]\n  n$2=_fun_boolean String.equalsIgnoreCase(String)(\"true\":java.lang.Object*,n$1:java.lang.String*) virtual [line 228]\n  *&$irvar0:_Bool=n$2 [line 228]\n  NULLIFY(&value); [line 228]\n  EXIT_SCOPE(n$1,n$2,value); [line 228]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_5" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_6" ;
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_5" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_6" [label="6:  method_body \n   n$3=*&$irvar0:_Bool [line 228]\n  *&return:_Bool=n$3 [line 228]\n  NULLIFY(&$irvar0); [line 228]\n  EXIT_SCOPE(n$3,$irvar0); [line 228]\n  APPLY_ABSTRACTION; [line 228]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_6" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_2" ;
+	 "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_6" -> "com.zrlog.util.ZrLogUtil.isDockerMode():boolean.4b1a0dec7ee8c70bf3554d405acdf5c5_3" [color="red" ];
+}

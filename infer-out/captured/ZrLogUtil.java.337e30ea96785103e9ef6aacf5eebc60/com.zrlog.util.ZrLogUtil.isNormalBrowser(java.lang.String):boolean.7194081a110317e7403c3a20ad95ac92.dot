@@ -1,0 +1,87 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_1" [label="1: Start boolean ZrLogUtil.isNormalBrowser(String)\nFormals:  userAgent:java.lang.String*\nLocals:  $T0_41:void $irvar1:void $irvar0:void browserType:eu.bitwalker.useragentutils.BrowserType* ua:eu.bitwalker.useragentutils.UserAgent* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_1" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_4" ;
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_2" [label="2: Exit boolean ZrLogUtil.isNormalBrowser(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [label="3:  exceptions sink \n   NULLIFY(&$T0_41); [line 260]\n  NULLIFY(&ua); [line 260]\n  NULLIFY(&browserType); [line 260]\n  NULLIFY(&$irvar0); [line 260]\n  NULLIFY(&$irvar1); [line 260]\n  EXIT_SCOPE($T0_41,ua,browserType,$irvar0,$irvar1); [line 260]\n  APPLY_ABSTRACTION; [line 260]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_2" ;
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_4" [label="4:  Call boolean StringUtils.isEmpty(String) \n   n$0=*&userAgent:java.lang.String* [line 255]\n  n$1=_fun_boolean StringUtils.isEmpty(String)(n$0:java.lang.String*) [line 255]\n  *&$irvar0:_Bool=n$1 [line 255]\n  EXIT_SCOPE(n$0,n$1); [line 255]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_4" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_5" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_4" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_6" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_4" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_5" [label="5: Prune (true branch, if) \n   n$2=*&$irvar0:_Bool [line 255]\n  PRUNE(!(n$2 == 0), true); [line 255]\n  NULLIFY(&$irvar0); [line 255]\n  EXIT_SCOPE(n$2,$irvar0); [line 255]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_5" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_7" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_5" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_6" [label="6: Prune (false branch, if) \n   n$2=*&$irvar0:_Bool [line 255]\n  PRUNE((n$2 == 0), false); [line 255]\n  NULLIFY(&$irvar0); [line 255]\n  EXIT_SCOPE(n$2,$irvar0); [line 255]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_6" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_8" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_6" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_7" [label="7:  method_body \n   *&return:_Bool=0 [line 256]\n  APPLY_ABSTRACTION; [line 256]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_7" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_2" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_7" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_8" [label="8:  Call UserAgent UserAgent.parseUserAgentString(String) \n   n$3=*&userAgent:java.lang.String* [line 258]\n  n$4=_fun_UserAgent UserAgent.parseUserAgentString(String)(n$3:java.lang.String*) [line 258]\n  *&ua:eu.bitwalker.useragentutils.UserAgent*=n$4 [line 258]\n  NULLIFY(&userAgent); [line 258]\n  EXIT_SCOPE(n$3,n$4,userAgent); [line 258]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_8" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_9" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_8" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_9" [label="9:  Call Browser UserAgent.getBrowser() \n   n$5=*&ua:eu.bitwalker.useragentutils.UserAgent* [line 259]\n  _=*n$5:eu.bitwalker.useragentutils.UserAgent*(root eu.bitwalker.useragentutils.UserAgent) [line 259]\n  n$7=_fun_Browser UserAgent.getBrowser()(n$5:eu.bitwalker.useragentutils.UserAgent*) virtual [line 259]\n  *&$irvar1:eu.bitwalker.useragentutils.Browser*=n$7 [line 259]\n  NULLIFY(&ua); [line 259]\n  EXIT_SCOPE(_,n$5,n$7,ua); [line 259]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_9" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_10" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_9" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_10" [label="10:  Call BrowserType Browser.getBrowserType() \n   n$8=*&$irvar1:eu.bitwalker.useragentutils.Browser* [line 259]\n  _=*n$8:eu.bitwalker.useragentutils.Browser*(root eu.bitwalker.useragentutils.Browser) [line 259]\n  n$10=_fun_BrowserType Browser.getBrowserType()(n$8:eu.bitwalker.useragentutils.Browser*) virtual [line 259]\n  *&browserType:eu.bitwalker.useragentutils.BrowserType*=n$10 [line 259]\n  NULLIFY(&$irvar1); [line 259]\n  EXIT_SCOPE(_,n$8,n$10,$irvar1); [line 259]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_10" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_11" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_10" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_12" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_10" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_11" [label="11: Prune (true branch, if) \n   n$11=*&browserType:eu.bitwalker.useragentutils.BrowserType* [line 260]\n  n$12=*&#GB<>$eu.bitwalker.useragentutils.BrowserType.MOBILE_BROWSER:eu.bitwalker.useragentutils.BrowserType*(root eu.bitwalker.useragentutils.BrowserType) [line 260]\n  PRUNE(!(n$11 == n$12), true); [line 260]\n  EXIT_SCOPE(n$11,n$12); [line 260]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_11" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_13" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_11" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_14" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_11" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_12" [label="12: Prune (false branch, if) \n   n$11=*&browserType:eu.bitwalker.useragentutils.BrowserType* [line 260]\n  n$12=*&#GB<>$eu.bitwalker.useragentutils.BrowserType.MOBILE_BROWSER:eu.bitwalker.useragentutils.BrowserType*(root eu.bitwalker.useragentutils.BrowserType) [line 260]\n  PRUNE((n$11 == n$12), false); [line 260]\n  NULLIFY(&browserType); [line 260]\n  EXIT_SCOPE(n$11,n$12,browserType); [line 260]\n  APPLY_ABSTRACTION; [line 260]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_12" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_15" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_12" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_13" [label="13: Prune (true branch, if) \n   n$13=*&browserType:eu.bitwalker.useragentutils.BrowserType* [line 260]\n  n$14=*&#GB<>$eu.bitwalker.useragentutils.BrowserType.WEB_BROWSER:eu.bitwalker.useragentutils.BrowserType*(root eu.bitwalker.useragentutils.BrowserType) [line 260]\n  PRUNE(!(n$13 != n$14), true); [line 260]\n  NULLIFY(&browserType); [line 260]\n  EXIT_SCOPE(n$13,n$14,browserType); [line 260]\n  APPLY_ABSTRACTION; [line 260]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_13" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_15" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_13" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_14" [label="14: Prune (false branch, if) \n   n$13=*&browserType:eu.bitwalker.useragentutils.BrowserType* [line 260]\n  n$14=*&#GB<>$eu.bitwalker.useragentutils.BrowserType.WEB_BROWSER:eu.bitwalker.useragentutils.BrowserType*(root eu.bitwalker.useragentutils.BrowserType) [line 260]\n  PRUNE((n$13 != n$14), false); [line 260]\n  NULLIFY(&browserType); [line 260]\n  EXIT_SCOPE(n$13,n$14,browserType); [line 260]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_14" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_16" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_14" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_15" [label="15:  method_body \n   *&$T0_41:int=1 [line 260]\n  APPLY_ABSTRACTION; [line 260]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_15" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_17" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_15" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_16" [label="16:  method_body \n   *&$T0_41:int=0 [line 260]\n  APPLY_ABSTRACTION; [line 260]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_16" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_17" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_16" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_17" [label="17:  method_body \n   n$15=*&$T0_41:int [line 260]\n  *&return:_Bool=n$15 [line 260]\n  NULLIFY(&$T0_41); [line 260]\n  EXIT_SCOPE(n$15,$T0_41); [line 260]\n  APPLY_ABSTRACTION; [line 260]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_17" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_2" ;
+	 "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_17" -> "com.zrlog.util.ZrLogUtil.isNormalBrowser(java.lang.String):boolean.7194081a110317e7403c3a20ad95ac92_3" [color="red" ];
+}

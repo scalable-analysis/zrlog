@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_1" [label="1: Start long RequestInfo.getRequestTime()\nFormals:  this:com.zrlog.web.plugin.RequestInfo*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_1" -> "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_4" ;
+"com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_2" [label="2: Exit long RequestInfo.getRequestTime() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 8]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_3" -> "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_2" ;
+"com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_4" [label="4:  method_body \n   n$0=*&this:com.zrlog.web.plugin.RequestInfo* [line 8]\n  n$1=*n$0.requestTime:long(root com.zrlog.web.plugin.RequestInfo) [line 8]\n  *&return:long=n$1 [line 8]\n  NULLIFY(&this); [line 8]\n  EXIT_SCOPE(n$0,n$1,this); [line 8]\n  APPLY_ABSTRACTION; [line 8]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_4" -> "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_2" ;
+	 "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_4" -> "com.zrlog.web.plugin.RequestInfo.getRequestTime():long.37f26e24dde0e9c09457abf56b06019d_3" [color="red" ];
+}

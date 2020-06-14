@@ -1,0 +1,325 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_1" [label="1: Start Comment.<init>()\nFormals:  this:com.zrlog.model.Comment*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_1" -> "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_4" ;
+"com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_2" [label="2: Exit Comment.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_3" -> "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_2" ;
+"com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_4" [label="4:  Call Model.<init>() \n   n$0=*&this:com.zrlog.model.Comment* [line 16]\n  n$1=_fun_Model.<init>()(n$0:com.zrlog.model.Comment*) [line 16]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_4" -> "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_5" ;
+	 "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_4" -> "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_3" [color="red" ];
+"com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_5" [label="5:  method_body \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_5" -> "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_2" ;
+	 "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_5" -> "com.zrlog.model.Comment.<init>().3e154468de3dfd3fca4989f2ae24708b_3" [color="red" ];
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_1" [label="1: Start Long Comment.count()\nFormals:  this:com.zrlog.model.Comment*\nLocals:  $irvar1:void $irvar0:void sql:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_1" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" ;
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_2" [label="2: Exit Long Comment.count() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_2" ;
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" [label="4:  method_body \n   *&sql:java.lang.Object*=\"select count(1) from comment\" [line 32]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_4" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" [label="5:  Call Record Db.findFirst(String) \n   n$0=*&sql:java.lang.Object* [line 33]\n  n$1=_fun_Record Db.findFirst(String)(n$0:java.lang.Object*) [line 33]\n  *&$irvar0:com.jfinal.plugin.activerecord.Record*=n$1 [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_5" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" [label="6:  Call Object Record.get(String) \n   n$2=*&$irvar0:com.jfinal.plugin.activerecord.Record* [line 33]\n  _=*n$2:com.jfinal.plugin.activerecord.Record*(root com.jfinal.plugin.activerecord.Record) [line 33]\n  n$4=_fun_Object Record.get(String)(n$2:com.jfinal.plugin.activerecord.Record*,\"count(1)\":java.lang.Object*) virtual [line 33]\n  *&$irvar1:java.lang.Object*=n$4 [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_6" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+"com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" [label="7:  method_body \n   n$5=*&$irvar1:java.lang.Object* [line 33]\n  n$6=_fun___cast(n$5:java.lang.Object*,sizeof(t=java.lang.Long;sub_t=( sub )(cast)):void) [line 33]\n  *&return:java.lang.Long*=n$6 [line 33]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_2" ;
+	 "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_7" -> "com.zrlog.model.Comment.count():java.lang.Long.80d9245061bde4226a625e1a627d6835_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_1" [label="1: Start Long Comment.countToDayComment()\nFormals:  this:com.zrlog.model.Comment*\nLocals:  $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void sql:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_1" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" ;
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_2" [label="2: Exit Long Comment.countToDayComment() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_2" ;
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" [label="4:  method_body \n   *&sql:java.lang.Object*=\"select count(1) from comment where DATE_FORMAT(commTime,'%Y_%m_%d')=?\" [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_4" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" [label="5:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 38]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_5" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" [label="6:  Call SimpleDateFormat.<init>(String) \n   n$1=_fun___new(sizeof(t=java.text.SimpleDateFormat):java.text.SimpleDateFormat*) [line 38]\n  n$2=_fun_SimpleDateFormat.<init>(String)(n$1:java.text.SimpleDateFormat*,\"yyyy_MM_dd\":java.lang.Object*) [line 38]\n  *&$irvar1:java.text.SimpleDateFormat*=n$1 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_6" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" [label="7:  Call Date.<init>() \n   n$3=_fun___new(sizeof(t=java.util.Date):java.util.Date*) [line 38]\n  n$4=_fun_Date.<init>()(n$3:java.util.Date*) [line 38]\n  *&$irvar2:java.util.Date*=n$3 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_7" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" [label="8:  Call String DateFormat.format(Date) \n   n$5=*&$irvar1:java.text.SimpleDateFormat* [line 38]\n  _=*n$5:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 38]\n  n$7=*&$irvar2:java.util.Date* [line 38]\n  n$8=_fun_String DateFormat.format(Date)(n$5:java.text.SimpleDateFormat*,n$7:java.util.Date*) virtual [line 38]\n  *&$irvar3:java.lang.String*=n$8 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_8" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" [label="9:  method_body \n   n$9=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$10=*&$irvar3:java.lang.String* [line 38]\n  *n$9[0]:java.lang.String*=n$10 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_9" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" [label="10:  Call Record Db.findFirst(String,Object[]) \n   n$11=*&sql:java.lang.Object* [line 38]\n  n$12=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$13=_fun_Record Db.findFirst(String,Object[])(n$11:java.lang.Object*,n$12:java.lang.Object*[_*_](*)) [line 38]\n  *&$irvar4:com.jfinal.plugin.activerecord.Record*=n$13 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_10" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" [label="11:  Call Object Record.get(String) \n   n$14=*&$irvar4:com.jfinal.plugin.activerecord.Record* [line 38]\n  _=*n$14:com.jfinal.plugin.activerecord.Record*(root com.jfinal.plugin.activerecord.Record) [line 38]\n  n$16=_fun_Object Record.get(String)(n$14:com.jfinal.plugin.activerecord.Record*,\"count(1)\":java.lang.Object*) virtual [line 38]\n  *&$irvar5:java.lang.Object*=n$16 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_11" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" [label="12:  method_body \n   n$17=*&$irvar5:java.lang.Object* [line 38]\n  n$18=_fun___cast(n$17:java.lang.Object*,sizeof(t=java.lang.Long;sub_t=( sub )(cast)):void) [line 38]\n  *&return:java.lang.Long*=n$18 [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_2" ;
+	 "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_12" -> "com.zrlog.model.Comment.countToDayComment():java.lang.Long.7b439123f2f5ce40eb0e1510de05cc34_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_1" [label="1: Start void Comment.doRead(long)\nFormals:  this:com.zrlog.model.Comment* id:long\nLocals:  $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_1" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" ;
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_2" [label="2: Exit void Comment.doRead(long) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_2" ;
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" [label="4:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 51]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_4" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" [label="5:  Call Boolean Boolean.valueOf(boolean) \n   n$1=_fun_Boolean Boolean.valueOf(boolean)(1:int) [line 51]\n  *&$irvar1:java.lang.Boolean*=n$1 [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_5" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" [label="6:  method_body \n   n$2=*&$irvar0:java.lang.Object*[_*_](*) [line 51]\n  n$3=*&$irvar1:java.lang.Boolean* [line 51]\n  *n$2[0]:java.lang.Boolean*=n$3 [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_6" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" [label="7:  Call Long Long.valueOf(long) \n   n$4=*&id:long [line 51]\n  n$5=_fun_Long Long.valueOf(long)(n$4:long) [line 51]\n  *&$irvar2:java.lang.Long*=n$5 [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_7" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" [label="8:  method_body \n   n$6=*&$irvar0:java.lang.Object*[_*_](*) [line 51]\n  n$7=*&$irvar2:java.lang.Long* [line 51]\n  *n$6[1]:java.lang.Long*=n$7 [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_8" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" [label="9:  Call int Db.update(String,Object[]) \n   n$8=*&$irvar0:java.lang.Object*[_*_](*) [line 51]\n  n$9=_fun_int Db.update(String,Object[])(\"update comment set have_read = ? where commentId = ? \":java.lang.Object*,n$8:java.lang.Object*[_*_](*)) [line 51]\n  *&$irvar3:int=n$9 [line 51]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_9" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" [label="10:  method_body \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_2" ;
+	 "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_10" -> "com.zrlog.model.Comment.doRead(long):void.a9c3e2b6f9b797921744e849b6e6e861_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_1" [label="1: Start Map Comment.find(PageableRequest)\nFormals:  this:com.zrlog.model.Comment* page:com.zrlog.common.request.PageableRequest*\nLocals:  $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void sql:java.lang.String* data:java.util.Map* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_1" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_4" ;
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_2" [label="2: Exit Map Comment.find(PageableRequest) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_2" ;
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_4" [label="4:  Call HashMap.<init>() \n   n$0=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 24]\n  n$1=_fun_HashMap.<init>()(n$0:java.util.HashMap*) [line 24]\n  *&data:java.util.HashMap*=n$0 [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_4" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_5" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_4" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_5" [label="5:  method_body \n   *&sql:java.lang.Object*=\"select commentId as id,userComment,header,commTime,userMail,userHome,userIp,userName,hide,logId from comment order by commTime desc limit ?,?\" [line 25]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_5" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_6" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_5" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_6" [label="6:  method_body \n   n$2=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 26]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$2 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_6" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_7" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_6" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_7" [label="7:  Call int PageableRequest.getOffset() \n   n$3=*&page:com.zrlog.common.request.PageableRequest* [line 26]\n  _=*n$3:com.zrlog.common.request.PageableRequest*(root com.zrlog.common.request.PageableRequest) [line 26]\n  n$5=_fun_int PageableRequest.getOffset()(n$3:com.zrlog.common.request.PageableRequest*) virtual [line 26]\n  *&$irvar1:int=n$5 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_7" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_8" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_7" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_8" [label="8:  Call Integer Integer.valueOf(int) \n   n$6=*&$irvar1:int [line 26]\n  n$7=_fun_Integer Integer.valueOf(int)(n$6:int) [line 26]\n  *&$irvar2:java.lang.Integer*=n$7 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_8" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_9" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_8" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_9" [label="9:  method_body \n   n$8=*&$irvar0:java.lang.Object*[_*_](*) [line 26]\n  n$9=*&$irvar2:java.lang.Integer* [line 26]\n  *n$8[0]:java.lang.Integer*=n$9 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_9" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_10" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_9" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_10" [label="10:  Call int PageableRequest.getRows() \n   n$10=*&page:com.zrlog.common.request.PageableRequest* [line 26]\n  _=*n$10:com.zrlog.common.request.PageableRequest*(root com.zrlog.common.request.PageableRequest) [line 26]\n  n$12=_fun_int PageableRequest.getRows()(n$10:com.zrlog.common.request.PageableRequest*) virtual [line 26]\n  *&$irvar3:int=n$12 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_10" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_11" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_10" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_11" [label="11:  Call Integer Integer.valueOf(int) \n   n$13=*&$irvar3:int [line 26]\n  n$14=_fun_Integer Integer.valueOf(int)(n$13:int) [line 26]\n  *&$irvar4:java.lang.Integer*=n$14 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_11" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_12" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_11" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_12" [label="12:  method_body \n   n$15=*&$irvar0:java.lang.Object*[_*_](*) [line 26]\n  n$16=*&$irvar4:java.lang.Integer* [line 26]\n  *n$15[1]:java.lang.Integer*=n$16 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_12" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_13" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_12" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_13" [label="13:  Call List Model.find(String,Object[]) \n   n$17=*&this:com.zrlog.model.Comment* [line 26]\n  _=*n$17:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 26]\n  n$19=*&sql:java.lang.Object* [line 26]\n  n$20=*&$irvar0:java.lang.Object*[_*_](*) [line 26]\n  n$21=_fun_List Model.find(String,Object[])(n$17:com.zrlog.model.Comment*,n$19:java.lang.Object*,n$20:java.lang.Object*[_*_](*)) virtual [line 26]\n  *&$irvar5:java.util.List*=n$21 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_13" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_14" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_13" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_14" [label="14:  Call Object HashMap.put(Object,Object) \n   n$22=*&data:java.util.HashMap* [line 26]\n  _=*n$22:java.util.HashMap*(root java.util.HashMap) [line 26]\n  n$24=*&$irvar5:java.util.List* [line 26]\n  n$25=_fun_Object HashMap.put(Object,Object)(n$22:java.util.HashMap*,\"rows\":java.lang.Object*,n$24:java.util.List*) interface virtual [line 26]\n  *&$irvar6:java.lang.Object*=n$25 [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_14" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_15" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_14" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_15" [label="15:  Call int PageableRequest.getPage() \n   n$26=*&page:com.zrlog.common.request.PageableRequest* [line 27]\n  _=*n$26:com.zrlog.common.request.PageableRequest*(root com.zrlog.common.request.PageableRequest) [line 27]\n  n$28=_fun_int PageableRequest.getPage()(n$26:com.zrlog.common.request.PageableRequest*) virtual [line 27]\n  *&$irvar7:int=n$28 [line 27]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_15" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_16" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_15" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_16" [label="16:  Call int PageableRequest.getRows() \n   n$29=*&page:com.zrlog.common.request.PageableRequest* [line 27]\n  _=*n$29:com.zrlog.common.request.PageableRequest*(root com.zrlog.common.request.PageableRequest) [line 27]\n  n$31=_fun_int PageableRequest.getRows()(n$29:com.zrlog.common.request.PageableRequest*) virtual [line 27]\n  *&$irvar8:int=n$31 [line 27]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_16" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_17" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_16" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_17" [label="17:  method_body \n   n$32=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[0]):java.lang.Object*[_*_](*)) [line 27]\n  *&$irvar9:java.lang.Object*[_*_](*)=n$32 [line 27]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_17" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_18" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_17" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_18" [label="18:  Call void ModelUtil.fillPageData(Model,int,int,String,Map,Object[]) \n   n$33=*&this:com.zrlog.model.Comment* [line 27]\n  n$34=*&$irvar7:int [line 27]\n  n$35=*&$irvar8:int [line 27]\n  n$36=*&data:java.util.HashMap* [line 27]\n  n$37=*&$irvar9:java.lang.Object*[_*_](*) [line 27]\n  n$38=_fun_void ModelUtil.fillPageData(Model,int,int,String,Map,Object[])(n$33:com.zrlog.model.Comment*,n$34:int,n$35:int,\"from comment\":java.lang.Object*,n$36:java.util.HashMap*,n$37:java.lang.Object*[_*_](*)) [line 27]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_18" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_19" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_18" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_19" [label="19:  method_body \n   n$39=*&data:java.util.HashMap* [line 28]\n  *&return:java.util.Map*=n$39 [line 28]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_19" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_2" ;
+	 "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_19" -> "com.zrlog.model.Comment.find(com.zrlog.common.request.PageableRequest):java.util.Map.274c66b0934e391e8299eda6135d7f67_3" [color="red" ];
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_1" [label="1: Start List Comment.findAllByLogId(int)\nFormals:  this:com.zrlog.model.Comment* logId:int\nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_1" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_4" ;
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_2" [label="2: Exit List Comment.findAllByLogId(int) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_3" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_2" ;
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_4" [label="4:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 47]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_4" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_5" ;
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_4" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_3" [color="red" ];
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_5" [label="5:  Call Integer Integer.valueOf(int) \n   n$1=*&logId:int [line 47]\n  n$2=_fun_Integer Integer.valueOf(int)(n$1:int) [line 47]\n  *&$irvar1:java.lang.Integer*=n$2 [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_5" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_6" ;
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_5" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_3" [color="red" ];
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_6" [label="6:  method_body \n   n$3=*&$irvar0:java.lang.Object*[_*_](*) [line 47]\n  n$4=*&$irvar1:java.lang.Integer* [line 47]\n  *n$3[0]:java.lang.Integer*=n$4 [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_6" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_7" ;
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_6" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_3" [color="red" ];
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_7" [label="7:  Call List Model.find(String,Object[]) \n   n$5=*&this:com.zrlog.model.Comment* [line 47]\n  _=*n$5:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 47]\n  n$7=*&$irvar0:java.lang.Object*[_*_](*) [line 47]\n  n$8=_fun_List Model.find(String,Object[])(n$5:com.zrlog.model.Comment*,\"select * from comment where logId=?\":java.lang.Object*,n$7:java.lang.Object*[_*_](*)) virtual [line 47]\n  *&$irvar2:java.util.List*=n$8 [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_7" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_8" ;
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_7" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_3" [color="red" ];
+"com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_8" [label="8:  method_body \n   n$9=*&$irvar2:java.util.List* [line 47]\n  *&return:java.util.List*=n$9 [line 47]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_8" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_2" ;
+	 "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_8" -> "com.zrlog.model.Comment.findAllByLogId(int):java.util.List.c9e8a7c9cdf54e8ba2e96d7f0d51211c_3" [color="red" ];
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_1" [label="1: Start List Comment.findHaveReadIsFalse()\nFormals:  this:com.zrlog.model.Comment*\nLocals:  $irvar2:void $irvar1:void $irvar0:void sql:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_1" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_4" ;
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_2" [label="2: Exit List Comment.findHaveReadIsFalse() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_2" ;
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_4" [label="4:  method_body \n   *&sql:java.lang.Object*=\"select commentId as id,userComment,header,userMail,userHome,userIp,userName,hide,logId from comment where have_read = ?  order by commTime desc \" [line 42]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_4" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_5" ;
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_4" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" [color="red" ];
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_5" [label="5:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 43]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_5" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_6" ;
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_5" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" [color="red" ];
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_6" [label="6:  Call Boolean Boolean.valueOf(boolean) \n   n$1=_fun_Boolean Boolean.valueOf(boolean)(0:int) [line 43]\n  *&$irvar1:java.lang.Boolean*=n$1 [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_6" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_7" ;
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_6" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" [color="red" ];
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_7" [label="7:  method_body \n   n$2=*&$irvar0:java.lang.Object*[_*_](*) [line 43]\n  n$3=*&$irvar1:java.lang.Boolean* [line 43]\n  *n$2[0]:java.lang.Boolean*=n$3 [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_7" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_8" ;
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_7" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" [color="red" ];
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_8" [label="8:  Call List Model.find(String,Object[]) \n   n$4=*&this:com.zrlog.model.Comment* [line 43]\n  _=*n$4:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 43]\n  n$6=*&sql:java.lang.Object* [line 43]\n  n$7=*&$irvar0:java.lang.Object*[_*_](*) [line 43]\n  n$8=_fun_List Model.find(String,Object[])(n$4:com.zrlog.model.Comment*,n$6:java.lang.Object*,n$7:java.lang.Object*[_*_](*)) virtual [line 43]\n  *&$irvar2:java.util.List*=n$8 [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_8" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_9" ;
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_8" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" [color="red" ];
+"com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_9" [label="9:  method_body \n   n$9=*&$irvar2:java.util.List* [line 43]\n  *&return:java.util.List*=n$9 [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_9" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_2" ;
+	 "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_9" -> "com.zrlog.model.Comment.findHaveReadIsFalse():java.util.List.60f526c81e0d486467e5ec8bf30ec0cb_3" [color="red" ];
+}

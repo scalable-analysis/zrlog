@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Tag.update(java.lang.String,java.lang.String):boolean.78f2e7099e3d2f6ed370bfc69a3bdad4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../Tag.java.417f8b99ded95f04b5c99e7597a79384.html#LINE34">boolean Tag.update(String,String)</a></h1></center>
+<a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:52 20 10 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;str); [line 66];
+NULLIFY(&amp;$irvar3); [line 66];
+NULLIFY(&amp;addSet); [line 66];
+NULLIFY(&amp;nowArr); [line 66];
+NULLIFY(&amp;oldArr); [line 66];
+NULLIFY(&amp;copyOldTagStr); [line 66];
+NULLIFY(&amp;$irvar4); [line 66];
+NULLIFY(&amp;copyNewTagStr); [line 66];
+NULLIFY(&amp;$irvar0); [line 66];
+NULLIFY(&amp;$bcvar9); [line 66];
+NULLIFY(&amp;$irvar1); [line 66];
+NULLIFY(&amp;$bcvar11); [line 66];
+NULLIFY(&amp;deleteSet); [line 66];
+NULLIFY(&amp;$bcvar10); [line 66];
+EXIT_SCOPE(str,$irvar3,addSet,nowArr,oldArr,copyOldTagStr,$irvar4,copyNewTagStr,$irvar0,$bcvar9,$irvar1,$bcvar11,deleteSet,$bcvar10); [line 66];
+APPLY_ABSTRACTION; [line 66];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;nowTagStr:java.lang.String* [line 35];
+*&amp;copyNewTagStr:java.lang.String*=n$0 [line 35];
+NULLIFY(&amp;nowTagStr); [line 35];
+EXIT_SCOPE(n$0,nowTagStr); [line 35];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:3 Instructions
+n$1=*&amp;oldTagStr:java.lang.String* [line 36];
+*&amp;copyOldTagStr:java.lang.String*=n$1 [line 36];
+EXIT_SCOPE(n$1); [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 9 exn:3 Conditional method_body
+n$2=*&amp;copyNewTagStr:java.lang.String* [line 37];
+PRUNE(!(n$2 != null), true); [line 37];
+EXIT_SCOPE(n$2); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:11 12 exn:3 Conditional method_body
+n$2=*&amp;copyNewTagStr:java.lang.String* [line 37];
+PRUNE((n$2 != null), false); [line 37];
+EXIT_SCOPE(n$2); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:10 exn:3 Conditional method_body
+n$3=*&amp;oldTagStr:java.lang.String* [line 37];
+PRUNE(!(n$3 != null), true); [line 37];
+NULLIFY(&amp;copyOldTagStr); [line 37];
+NULLIFY(&amp;copyNewTagStr); [line 37];
+NULLIFY(&amp;oldTagStr); [line 37];
+EXIT_SCOPE(n$3,copyOldTagStr,copyNewTagStr,oldTagStr); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:6 succs:11 12 exn:3 Conditional method_body
+n$3=*&amp;oldTagStr:java.lang.String* [line 37];
+PRUNE((n$3 != null), false); [line 37];
+NULLIFY(&amp;oldTagStr); [line 37];
+EXIT_SCOPE(n$3,oldTagStr); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:8 succs:2 exn:3 Instructions
+*&amp;return:_Bool=1 [line 38];
+APPLY_ABSTRACTION; [line 38];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:9 7 succs:13 exn:3 Conditional method_body
+n$4=*&amp;copyNewTagStr:java.lang.String* [line 40];
+PRUNE(!(n$4 != null), true); [line 40];
+NULLIFY(&amp;copyNewTagStr); [line 40];
+EXIT_SCOPE(n$4,copyNewTagStr); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:9 7 succs:14 15 exn:3 Conditional method_body
+n$4=*&amp;copyNewTagStr:java.lang.String* [line 40];
+PRUNE((n$4 != null), false); [line 40];
+EXIT_SCOPE(n$4); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:11 succs:14 15 exn:3 Instructions
+*&amp;copyNewTagStr:java.lang.Object*="" [line 41];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:13 12 succs:16 exn:3 Conditional method_body
+n$5=*&amp;copyOldTagStr:java.lang.String* [line 43];
+PRUNE(!(n$5 != null), true); [line 43];
+NULLIFY(&amp;copyOldTagStr); [line 43];
+EXIT_SCOPE(n$5,copyOldTagStr); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:13 12 succs:17 exn:3 Conditional method_body
+n$5=*&amp;copyOldTagStr:java.lang.String* [line 43];
+PRUNE((n$5 != null), false); [line 43];
+EXIT_SCOPE(n$5); [line 43];
+APPLY_ABSTRACTION; [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:14 succs:17 exn:3 Instructions
+*&amp;copyOldTagStr:java.lang.Object*="" [line 44];
+APPLY_ABSTRACTION; [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 15 succs:18 19 exn:3 Instructions
+n$6=*&amp;copyNewTagStr:java.lang.Object* [line 46];
+_=*n$6:java.lang.Object*(root java.lang.Object) [line 46];
+n$8=*&amp;copyOldTagStr:java.lang.Object* [line 46];
+n$9=_fun_boolean String.equals(Object)(n$6:java.lang.Object*,n$8:java.lang.Object*) virtual [line 46];
+*&amp;$irvar0:_Bool=n$9 [line 46];
+EXIT_SCOPE(_,n$6,n$8,n$9); [line 46];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:17 succs:20 exn:3 Conditional method_body
+n$10=*&amp;$irvar0:_Bool [line 46];
+PRUNE(!(n$10 == 0), true); [line 46];
+NULLIFY(&amp;copyOldTagStr); [line 46];
+NULLIFY(&amp;copyNewTagStr); [line 46];
+NULLIFY(&amp;$irvar0); [line 46];
+EXIT_SCOPE(n$10,copyOldTagStr,copyNewTagStr,$irvar0); [line 46];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node19.html"><span class='visited with_tooltip'>C_19<span class='tooltip'>node19 preds:17 succs:21 exn:3 Conditional method_body
+n$10=*&amp;$irvar0:_Bool [line 46];
+PRUNE((n$10 == 0), false); [line 46];
+NULLIFY(&amp;$irvar0); [line 46];
+EXIT_SCOPE(n$10,$irvar0); [line 46];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:18 succs:2 exn:3 Instructions
+*&amp;return:_Bool=1 [line 47];
+APPLY_ABSTRACTION; [line 47];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:19 succs:22 exn:3 Instructions
+n$11=*&amp;copyOldTagStr:java.lang.Object* [line 49];
+_=*n$11:java.lang.Object*(root java.lang.Object) [line 49];
+n$13=_fun_String[] String.split(String)(n$11:java.lang.Object*,",":java.lang.Object*) virtual [line 49];
+*&amp;oldArr:java.lang.String*[_*_](*)=n$13 [line 49];
+NULLIFY(&amp;copyOldTagStr); [line 49];
+EXIT_SCOPE(_,n$11,n$13,copyOldTagStr); [line 49];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$14=*&amp;copyNewTagStr:java.lang.Object* [line 50];
+_=*n$14:java.lang.Object*(root java.lang.Object) [line 50];
+n$16=_fun_String[] String.split(String)(n$14:java.lang.Object*,",":java.lang.Object*) virtual [line 50];
+*&amp;nowArr:java.lang.String*[_*_](*)=n$16 [line 50];
+NULLIFY(&amp;copyNewTagStr); [line 50];
+EXIT_SCOPE(_,n$14,n$16,copyNewTagStr); [line 50];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$17=_fun___new(sizeof(t=java.util.HashSet):java.util.HashSet*) [line 51];
+n$18=_fun_HashSet.&lt;init&gt;()(n$17:java.util.HashSet*) [line 51];
+*&amp;addSet:java.util.HashSet*=n$17 [line 51];
+EXIT_SCOPE(n$17,n$18); [line 51];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$19=_fun___new(sizeof(t=java.util.HashSet):java.util.HashSet*) [line 52];
+n$20=_fun_HashSet.&lt;init&gt;()(n$19:java.util.HashSet*) [line 52];
+*&amp;deleteSet:java.util.HashSet*=n$19 [line 52];
+EXIT_SCOPE(n$19,n$20); [line 52];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$21=*&amp;nowArr:java.lang.String*[_*_](*) [line 53];
+*&amp;$bcvar9:java.lang.String*[_*_](*)=n$21 [line 53];
+NULLIFY(&amp;nowArr); [line 53];
+EXIT_SCOPE(n$21,nowArr); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$22=*&amp;$bcvar9:java.lang.String*[_*_](*) [line 53];
+_=*n$22:int(root java.lang.String*[_*_]) [line 53];
+n$24=_fun___get_array_length(n$22:java.lang.String*[_*_](*)) [line 53];
+*&amp;$bcvar10:int=n$24 [line 53];
+EXIT_SCOPE(_,n$22,n$24); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:30 exn:3 Instructions
+*&amp;$bcvar11:int=0 [line 53];
+APPLY_ABSTRACTION; [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node28.html"><span class='visited with_tooltip'>C_28<span class='tooltip'>node28 preds:30 succs:31 exn:3 Conditional method_body
+n$25=*&amp;$bcvar11:int [line 53];
+n$26=*&amp;$bcvar10:int [line 53];
+PRUNE(!(n$25  &gt;=  n$26), true); [line 53];
+EXIT_SCOPE(n$25,n$26); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node29.html"><span class='visited with_tooltip'>C_29<span class='tooltip'>node29 preds:30 succs:35 exn:3 Conditional method_body
+n$25=*&amp;$bcvar11:int [line 53];
+n$26=*&amp;$bcvar10:int [line 53];
+PRUNE((n$25  &gt;=  n$26), false); [line 53];
+NULLIFY(&amp;$bcvar9); [line 53];
+NULLIFY(&amp;$bcvar11); [line 53];
+NULLIFY(&amp;$bcvar10); [line 53];
+EXIT_SCOPE(n$25,n$26,$bcvar9,$bcvar11,$bcvar10); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node30.html"><span class='visited with_tooltip'>J_30<span class='tooltip'>node30 preds:34 27 succs:28 29 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:28 succs:32 exn:3 Instructions
+n$27=*&amp;$bcvar9:java.lang.String*[_*_](*) [line 53];
+_=*n$27:java.lang.String*(root java.lang.String*[_*_]) [line 53];
+n$28=*&amp;$bcvar11:int [line 53];
+n$30=*n$27[n$28]:java.lang.String* [line 53];
+*&amp;str:java.lang.String*=n$30 [line 53];
+EXIT_SCOPE(_,n$27,n$28,n$30); [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:3 Instructions
+n$31=*&amp;str:java.lang.String* [line 54];
+_=*n$31:java.lang.String*(root java.lang.String) [line 54];
+n$33=_fun_String String.trim()(n$31:java.lang.String*) virtual [line 54];
+*&amp;$irvar1:java.lang.String*=n$33 [line 54];
+NULLIFY(&amp;str); [line 54];
+EXIT_SCOPE(_,n$31,n$33,str); [line 54];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:3 Instructions
+n$34=*&amp;addSet:java.util.HashSet* [line 54];
+_=*n$34:java.util.HashSet*(root java.util.HashSet) [line 54];
+n$36=*&amp;$irvar1:java.lang.String* [line 54];
+n$37=_fun_boolean HashSet.add(Object)(n$34:java.util.HashSet*,n$36:java.lang.String*) interface virtual [line 54];
+*&amp;$irvar2:_Bool=n$37 [line 54];
+NULLIFY(&amp;$irvar1); [line 54];
+NULLIFY(&amp;$irvar2); [line 54];
+EXIT_SCOPE(_,n$34,n$36,n$37,$irvar1,$irvar2); [line 54];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:30 exn:3 Instructions
+n$38=*&amp;$bcvar11:int [line 53];
+*&amp;$bcvar11:int=(n$38 + 1) [line 53];
+EXIT_SCOPE(n$38); [line 53];
+APPLY_ABSTRACTION; [line 53];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node35.html"><span class='visited with_tooltip'>I_35<span class='tooltip'>node35 preds:29 succs:36 exn:3 Instructions
+n$39=*&amp;oldArr:java.lang.String*[_*_](*) [line 56];
+*&amp;$bcvar9:java.lang.String*[_*_](*)=n$39 [line 56];
+NULLIFY(&amp;oldArr); [line 56];
+EXIT_SCOPE(n$39,oldArr); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:35 succs:37 exn:3 Instructions
+n$40=*&amp;$bcvar9:java.lang.String*[_*_](*) [line 56];
+_=*n$40:int(root java.lang.String*[_*_]) [line 56];
+n$42=_fun___get_array_length(n$40:java.lang.String*[_*_](*)) [line 56];
+*&amp;$bcvar10:int=n$42 [line 56];
+EXIT_SCOPE(_,n$40,n$42); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:36 succs:40 exn:3 Instructions
+*&amp;$bcvar11:int=0 [line 56];
+APPLY_ABSTRACTION; [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node38.html"><span class='visited with_tooltip'>C_38<span class='tooltip'>node38 preds:40 succs:41 exn:3 Conditional method_body
+n$43=*&amp;$bcvar11:int [line 56];
+n$44=*&amp;$bcvar10:int [line 56];
+PRUNE(!(n$43  &gt;=  n$44), true); [line 56];
+EXIT_SCOPE(n$43,n$44); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node39.html"><span class='visited with_tooltip'>C_39<span class='tooltip'>node39 preds:40 succs:50 exn:3 Conditional method_body
+n$43=*&amp;$bcvar11:int [line 56];
+n$44=*&amp;$bcvar10:int [line 56];
+PRUNE((n$43  &gt;=  n$44), false); [line 56];
+NULLIFY(&amp;$bcvar9); [line 56];
+NULLIFY(&amp;$bcvar11); [line 56];
+NULLIFY(&amp;$bcvar10); [line 56];
+EXIT_SCOPE(n$43,n$44,$bcvar9,$bcvar11,$bcvar10); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node40.html"><span class='visited with_tooltip'>J_40<span class='tooltip'>node40 preds:49 37 succs:38 39 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:38 succs:42 exn:3 Instructions
+n$45=*&amp;$bcvar9:java.lang.String*[_*_](*) [line 56];
+_=*n$45:java.lang.String*(root java.lang.String*[_*_]) [line 56];
+n$46=*&amp;$bcvar11:int [line 56];
+n$48=*n$45[n$46]:java.lang.String* [line 56];
+*&amp;str:java.lang.String*=n$48 [line 56];
+EXIT_SCOPE(_,n$45,n$46,n$48); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:45 exn:3 Instructions
+n$49=*&amp;addSet:java.util.HashSet* [line 57];
+_=*n$49:java.util.HashSet*(root java.util.HashSet) [line 57];
+n$51=*&amp;str:java.lang.String* [line 57];
+n$52=_fun_boolean HashSet.contains(Object)(n$49:java.util.HashSet*,n$51:java.lang.String*) interface virtual [line 57];
+*&amp;$irvar3:_Bool=n$52 [line 57];
+EXIT_SCOPE(_,n$49,n$51,n$52); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node43.html"><span class='visited with_tooltip'>C_43<span class='tooltip'>node43 preds:45 succs:46 exn:3 Conditional method_body
+n$53=*&amp;$irvar3:_Bool [line 57];
+PRUNE(!(n$53 != 0), true); [line 57];
+NULLIFY(&amp;$irvar3); [line 57];
+EXIT_SCOPE(n$53,$irvar3); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node44.html"><span class='visited with_tooltip'>C_44<span class='tooltip'>node44 preds:45 succs:48 exn:3 Conditional method_body
+n$53=*&amp;$irvar3:_Bool [line 57];
+PRUNE((n$53 != 0), false); [line 57];
+NULLIFY(&amp;$irvar3); [line 57];
+EXIT_SCOPE(n$53,$irvar3); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node45.html"><span class='visited with_tooltip'>J_45<span class='tooltip'>node45 preds:42 succs:43 44 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:43 succs:47 exn:3 Instructions
+n$54=*&amp;str:java.lang.String* [line 58];
+_=*n$54:java.lang.String*(root java.lang.String) [line 58];
+n$56=_fun_String String.trim()(n$54:java.lang.String*) virtual [line 58];
+*&amp;$irvar4:java.lang.String*=n$56 [line 58];
+NULLIFY(&amp;str); [line 58];
+EXIT_SCOPE(_,n$54,n$56,str); [line 58];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:49 exn:3 Instructions
+n$57=*&amp;deleteSet:java.util.HashSet* [line 58];
+_=*n$57:java.util.HashSet*(root java.util.HashSet) [line 58];
+n$59=*&amp;$irvar4:java.lang.String* [line 58];
+n$60=_fun_boolean HashSet.add(Object)(n$57:java.util.HashSet*,n$59:java.lang.String*) interface virtual [line 58];
+*&amp;$irvar5:_Bool=n$60 [line 58];
+NULLIFY(&amp;$irvar5); [line 58];
+NULLIFY(&amp;$irvar4); [line 58];
+EXIT_SCOPE(_,n$57,n$59,n$60,$irvar5,$irvar4); [line 58];
+APPLY_ABSTRACTION; [line 58];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:44 succs:49 exn:3 Instructions
+n$61=*&amp;addSet:java.util.HashSet* [line 60];
+_=*n$61:java.util.HashSet*(root java.util.HashSet) [line 60];
+n$63=*&amp;str:java.lang.String* [line 60];
+n$64=_fun_boolean HashSet.remove(Object)(n$61:java.util.HashSet*,n$63:java.lang.String*) interface virtual [line 60];
+*&amp;$irvar6:_Bool=n$64 [line 60];
+NULLIFY(&amp;str); [line 60];
+NULLIFY(&amp;$irvar6); [line 60];
+EXIT_SCOPE(_,n$61,n$63,n$64,str,$irvar6); [line 60];
+APPLY_ABSTRACTION; [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 47 succs:40 exn:3 Instructions
+n$65=*&amp;$bcvar11:int [line 56];
+*&amp;$bcvar11:int=(n$65 + 1) [line 56];
+EXIT_SCOPE(n$65); [line 56];
+APPLY_ABSTRACTION; [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:39 succs:51 exn:3 Instructions
+n$66=*&amp;this:com.zrlog.model.Tag* [line 63];
+n$67=*&amp;addSet:java.util.HashSet* [line 63];
+n$68=_fun_void Tag.insertTag(Set)(n$66:com.zrlog.model.Tag*,n$67:java.util.HashSet*) [line 63];
+NULLIFY(&amp;addSet); [line 63];
+EXIT_SCOPE(n$66,n$67,n$68,addSet); [line 63];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node51.html"><span class='visited with_tooltip'>I_51<span class='tooltip'>node51 preds:50 succs:52 exn:3 Instructions
+n$69=*&amp;this:com.zrlog.model.Tag* [line 64];
+n$70=*&amp;deleteSet:java.util.HashSet* [line 64];
+n$71=_fun_void Tag.deleteTag(Set)(n$69:com.zrlog.model.Tag*,n$70:java.util.HashSet*) [line 64];
+NULLIFY(&amp;this); [line 64];
+NULLIFY(&amp;deleteSet); [line 64];
+EXIT_SCOPE(n$69,n$70,n$71,this,deleteSet); [line 64];
+</span></span></a> <a href="./nodes/com.zrlog.model.Tag.update%28java.lang.String%2Cjava.lang.String%29%3Aboolean.78f2e7099e3d2f6ed370bfc69a3bdad4_node52.html"><span class='visited with_tooltip'>I_52<span class='tooltip'>node52 preds:51 succs:2 exn:3 Instructions
+*&amp;return:_Bool=1 [line 66];
+APPLY_ABSTRACTION; [line 66];
+</span></span></a><br />@
+
+<span class='color_black'>_Bool boolean Tag.update(String,String)(com.zrlog.model.Tag* this, java.lang.String* nowTagStr, java.lang.String* oldTagStr)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= boolean Tag.update(String,String)
+; translation_unit= data/src/main/java/com/zrlog/model/Tag.java
+; access= Public
+; formals= [(this,com.zrlog.model.Tag*);  (nowTagStr,java.lang.String*); 
+            (oldTagStr,java.lang.String*)]
+; is_defined= true
+; loc= data/src/main/java/com/zrlog/model/Tag.java:34
+; locals= [{ name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $bcvar11; typ= void; modify_in_block= false }; 
+           { name= $bcvar10; typ= void; modify_in_block= false }; 
+           { name= $bcvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= deleteSet; typ= java.util.Set*; modify_in_block= false }; 
+           { name= addSet; typ= java.util.Set*; modify_in_block= false }; 
+           { name= nowArr; typ= java.lang.String*[_*_](*); modify_in_block= false }; 
+           { name= oldArr; typ= java.lang.String*[_*_](*); modify_in_block= false }; 
+           { name= copyOldTagStr; typ= java.lang.String*; modify_in_block= false }; 
+           { name= copyNewTagStr; typ= java.lang.String*; modify_in_block= false }; 
+           { name= str; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= _Bool 
+; proc_id= com.zrlog.model.Tag.update(java.lang.String,java.lang.String):boolean }</pre>
+</body>
+</html>

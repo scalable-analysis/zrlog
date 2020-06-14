@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_1" [label="1: Start void UploadService.<clinit>()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_1" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_4" ;
+"com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_2" [label="2: Exit void UploadService.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 19]\n  EXIT_SCOPE($irvar0); [line 19]\n  APPLY_ABSTRACTION; [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_3" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_2" ;
+"com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_4" [label="4:  Call Logger LoggerFactory.getLogger(Class) \n   n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.service.UploadService:java.lang.Object*) [line 19]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 19]\n  EXIT_SCOPE(n$0); [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_4" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_5" ;
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_4" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_3" [color="red" ];
+"com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_5" [label="5:  method_body \n   n$1=*&$irvar0:org.slf4j.Logger* [line 19]\n  *&#GB<>$com.zrlog.service.UploadService.LOGGER:com.zrlog.service.UploadService(root com.zrlog.service.UploadService)=n$1 [line 19]\n  NULLIFY(&$irvar0); [line 19]\n  EXIT_SCOPE(n$1,$irvar0); [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_5" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_6" ;
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_5" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_3" [color="red" ];
+"com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_6" [label="6:  method_body \n   APPLY_ABSTRACTION; [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_6" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_2" ;
+	 "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_6" -> "com.zrlog.service.UploadService.<clinit>():void.8cd204fb00304fbb6d70881dab343992_3" [color="red" ];
+}

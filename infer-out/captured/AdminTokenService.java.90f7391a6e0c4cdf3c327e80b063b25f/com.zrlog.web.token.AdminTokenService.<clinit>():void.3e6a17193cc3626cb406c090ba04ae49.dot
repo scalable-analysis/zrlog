@@ -1,0 +1,70 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_1" [label="1: Start void AdminTokenService.<clinit>()\nFormals: \nLocals:  CatchVar28:void $irvar2:void $irvar1:void $irvar0:void e:java.io.UnsupportedEncodingException* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_1" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_4" ;
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_2" [label="2: Exit void AdminTokenService.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [label="3:  exceptions sink \n   NULLIFY(&CatchVar28); [line 39]\n  NULLIFY(&$irvar0); [line 39]\n  NULLIFY(&e); [line 39]\n  EXIT_SCOPE(n$13,CatchVar28,$irvar0,e); [line 39]\n  APPLY_ABSTRACTION; [line 39]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_2" ;
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_4" [label="4:  Call Logger LoggerFactory.getLogger(Class) \n   n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.token.AdminTokenService:java.lang.Object*) [line 26]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 26]\n  EXIT_SCOPE(n$0); [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_4" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_5" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_4" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_5" [label="5:  method_body \n   n$1=*&$irvar0:org.slf4j.Logger* [line 26]\n  *&#GB<>$com.zrlog.web.token.AdminTokenService.LOGGER:com.zrlog.web.token.AdminTokenService(root com.zrlog.web.token.AdminTokenService)=n$1 [line 26]\n  NULLIFY(&$irvar0); [line 26]\n  EXIT_SCOPE(n$1,$irvar0); [line 26]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_5" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_6" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_5" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_6" [label="6:  Call byte[] String.getBytes(String) \n   n$2=_fun_byte[] String.getBytes(String)(\"_BLOG_BLOG_BLOG_\":java.lang.Object*,\"UTF-8\":java.lang.Object*) virtual [line 35]\n  *&$irvar1:signed char[_*_](*)=n$2 [line 35]\n  EXIT_SCOPE(n$2); [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_6" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_7" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_6" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_14" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_7" [label="7:  Call IvParameterSpec.<init>(byte[]) \n   n$3=_fun___new(sizeof(t=javax.crypto.spec.IvParameterSpec):javax.crypto.spec.IvParameterSpec*) [line 35]\n  n$4=*&$irvar1:signed char[_*_](*) [line 35]\n  n$5=_fun_IvParameterSpec.<init>(byte[])(n$3:javax.crypto.spec.IvParameterSpec*,n$4:signed char[_*_](*)) [line 35]\n  *&$irvar2:javax.crypto.spec.IvParameterSpec*=n$3 [line 35]\n  NULLIFY(&$irvar1); [line 35]\n  EXIT_SCOPE(n$3,n$4,n$5,$irvar1); [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_7" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_8" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_7" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_14" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_8" [label="8:  method_body \n   n$6=*&$irvar2:javax.crypto.spec.IvParameterSpec* [line 35]\n  *&#GB<>$com.zrlog.web.token.AdminTokenService.iv:com.zrlog.web.token.AdminTokenService(root com.zrlog.web.token.AdminTokenService)=n$6 [line 35]\n  NULLIFY(&$irvar2); [line 35]\n  EXIT_SCOPE(n$6,$irvar2); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_8" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_11" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_8" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_14" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_9" [label="9:  method_body \n   n$7=*&CatchVar28:java.lang.Object* [line 36]\n  *&e:java.lang.Object*=n$7 [line 36]\n  NULLIFY(&CatchVar28); [line 36]\n  EXIT_SCOPE(n$7,CatchVar28); [line 36]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_9" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_10" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_9" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_10" [label="10:  Call void Logger.error(String,Throwable) \n   n$8=*&#GB<>$com.zrlog.web.token.AdminTokenService.LOGGER:org.slf4j.Logger*(root com.zrlog.web.token.AdminTokenService) [line 37]\n  _=*n$8:org.slf4j.Logger*(root org.slf4j.Logger) [line 37]\n  n$10=*&e:java.lang.Object* [line 37]\n  n$11=_fun_void Logger.error(String,Throwable)(n$8:org.slf4j.Logger*,\"\":java.lang.Object*,n$10:java.lang.Object*) interface virtual [line 37]\n  NULLIFY(&e); [line 37]\n  EXIT_SCOPE(_,n$8,n$10,n$11,e); [line 37]\n  APPLY_ABSTRACTION; [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_10" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_11" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_10" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_11" [label="11:  method_body \n   APPLY_ABSTRACTION; [line 39]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_11" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_2" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_11" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_12" [label="12: Prune (true branch, switch) \n   n$14=_fun___instanceof(n$13:java.io.UnsupportedEncodingException*,sizeof(t=java.io.UnsupportedEncodingException):void) [line 36]\n  PRUNE(n$14, true); [line 36]\n  *&CatchVar28:void=n$13 [line 36]\n  EXIT_SCOPE(n$13,n$14); [line 36]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_12" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_9" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_12" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_13" [label="13: Prune (false branch, switch) \n   n$14=_fun___instanceof(n$13:java.io.UnsupportedEncodingException*,sizeof(t=java.io.UnsupportedEncodingException):void) [line 36]\n  PRUNE(!n$14, false); [line 36]\n  *&return:void=EXN n$13 [line 36]\n  EXIT_SCOPE(n$13,n$14); [line 36]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_13" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_13" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+"com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_14" [label="14:  exception handler \n   n$12=*&return:void [line 36]\n  *&return:void=null [line 36]\n  n$13=_fun___unwrap_exception(n$12:void) [line 36]\n  NULLIFY(&$irvar1); [line 36]\n  NULLIFY(&$irvar2); [line 36]\n  EXIT_SCOPE(n$12,$irvar1,$irvar2); [line 36]\n " shape="box"]
+	
+
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_14" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_12" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_14" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_13" ;
+	 "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_14" -> "com.zrlog.web.token.AdminTokenService.<clinit>():void.3e6a17193cc3626cb406c090ba04ae49_3" [color="red" ];
+}

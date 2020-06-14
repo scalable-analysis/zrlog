@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_1" [label="1: Start boolean UpdateVersionPlugin.previewAble()\nFormals:  this:com.zrlog.web.plugin.UpdateVersionPlugin*\nLocals:  $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_1" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_4" ;
+"com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_2" [label="2: Exit boolean UpdateVersionPlugin.previewAble() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 67]\n  NULLIFY(&$irvar1); [line 67]\n  EXIT_SCOPE($irvar0,$irvar1); [line 67]\n  APPLY_ABSTRACTION; [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_3" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_2" ;
+"com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_4" [label="4:  Call WebSite.<init>() \n   n$0=_fun___new(sizeof(t=com.zrlog.model.WebSite):com.zrlog.model.WebSite*) [line 67]\n  n$1=_fun_WebSite.<init>()(n$0:com.zrlog.model.WebSite*) [line 67]\n  *&$irvar0:com.zrlog.model.WebSite*=n$0 [line 67]\n  EXIT_SCOPE(n$0,n$1); [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_4" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_5" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_4" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_5" [label="5:  Call boolean WebSite.getBoolValueByName(String) \n   n$2=*&$irvar0:com.zrlog.model.WebSite* [line 67]\n  _=*n$2:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 67]\n  n$4=_fun_boolean WebSite.getBoolValueByName(String)(n$2:com.zrlog.model.WebSite*,\"upgradePreview\":java.lang.Object*) virtual [line 67]\n  *&$irvar1:_Bool=n$4 [line 67]\n  NULLIFY(&$irvar0); [line 67]\n  EXIT_SCOPE(_,n$2,n$4,$irvar0); [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_5" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_6" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_5" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_6" [label="6:  method_body \n   n$5=*&$irvar1:_Bool [line 67]\n  *&return:_Bool=n$5 [line 67]\n  NULLIFY(&$irvar1); [line 67]\n  EXIT_SCOPE(n$5,$irvar1); [line 67]\n  APPLY_ABSTRACTION; [line 67]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_6" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_2" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_6" -> "com.zrlog.web.plugin.UpdateVersionPlugin.previewAble():boolean.cbadc86812b7a5c8d3d9dd16e37b75eb_3" [color="red" ];
+}

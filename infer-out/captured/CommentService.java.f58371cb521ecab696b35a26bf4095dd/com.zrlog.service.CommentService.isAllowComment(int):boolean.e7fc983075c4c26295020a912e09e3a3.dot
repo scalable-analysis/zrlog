@@ -1,0 +1,92 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_1" [label="1: Start boolean CommentService.isAllowComment(int)\nFormals:  this:com.zrlog.service.CommentService* articleId:int\nLocals:  $T0_43:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void log:com.zrlog.model.Log* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_1" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_4" ;
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_2" [label="2: Exit boolean CommentService.isAllowComment(int) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 35]\n  NULLIFY(&log); [line 35]\n  NULLIFY(&$irvar4); [line 35]\n  NULLIFY(&$T0_43); [line 35]\n  NULLIFY(&$irvar0); [line 35]\n  NULLIFY(&$irvar1); [line 35]\n  NULLIFY(&$irvar2); [line 35]\n  EXIT_SCOPE($irvar3,log,$irvar4,$T0_43,$irvar0,$irvar1,$irvar2); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_2" ;
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_4" [label="4:  Call Log.<init>() \n   n$0=_fun___new(sizeof(t=com.zrlog.model.Log):com.zrlog.model.Log*) [line 34]\n  n$1=_fun_Log.<init>()(n$0:com.zrlog.model.Log*) [line 34]\n  *&$irvar0:com.zrlog.model.Log*=n$0 [line 34]\n  EXIT_SCOPE(n$0,n$1); [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_4" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_5" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_4" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_5" [label="5:  Call Integer Integer.valueOf(int) \n   n$2=*&articleId:int [line 34]\n  n$3=_fun_Integer Integer.valueOf(int)(n$2:int) [line 34]\n  *&$irvar1:java.lang.Integer*=n$3 [line 34]\n  NULLIFY(&articleId); [line 34]\n  EXIT_SCOPE(n$2,n$3,articleId); [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_5" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_6" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_5" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_6" [label="6:  Call Log Log.findByIdOrAlias(Object) \n   n$4=*&$irvar0:com.zrlog.model.Log* [line 34]\n  _=*n$4:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 34]\n  n$6=*&$irvar1:java.lang.Integer* [line 34]\n  n$7=_fun_Log Log.findByIdOrAlias(Object)(n$4:com.zrlog.model.Log*,n$6:java.lang.Integer*) virtual [line 34]\n  *&log:com.zrlog.model.Log*=n$7 [line 34]\n  NULLIFY(&$irvar0); [line 34]\n  NULLIFY(&$irvar1); [line 34]\n  EXIT_SCOPE(_,n$4,n$6,n$7,$irvar0,$irvar1); [line 34]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_6" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_7" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_6" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_8" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_6" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_7" [label="7: Prune (true branch, if) \n   n$8=*&log:com.zrlog.model.Log* [line 35]\n  PRUNE(!(n$8 == null), true); [line 35]\n  EXIT_SCOPE(n$8); [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_7" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_9" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_7" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_8" [label="8: Prune (false branch, if) \n   n$8=*&log:com.zrlog.model.Log* [line 35]\n  PRUNE((n$8 == null), false); [line 35]\n  NULLIFY(&log); [line 35]\n  EXIT_SCOPE(n$8,log); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_8" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_17" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_8" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_9" [label="9:  Call Boolean Model.getBoolean(String) \n   n$9=*&log:com.zrlog.model.Log* [line 35]\n  _=*n$9:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 35]\n  n$11=_fun_Boolean Model.getBoolean(String)(n$9:com.zrlog.model.Log*,\"canComment\":java.lang.Object*) virtual [line 35]\n  *&$irvar2:java.lang.Boolean*=n$11 [line 35]\n  NULLIFY(&log); [line 35]\n  EXIT_SCOPE(_,n$9,n$11,log); [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_9" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_10" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_9" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_10" [label="10:  Call boolean Boolean.booleanValue() \n   n$12=*&$irvar2:java.lang.Boolean* [line 35]\n  _=*n$12:java.lang.Boolean*(root java.lang.Boolean) [line 35]\n  n$14=_fun_boolean Boolean.booleanValue()(n$12:java.lang.Boolean*) virtual [line 35]\n  *&$irvar3:_Bool=n$14 [line 35]\n  NULLIFY(&$irvar2); [line 35]\n  EXIT_SCOPE(_,n$12,n$14,$irvar2); [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_10" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_11" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_10" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_12" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_10" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_11" [label="11: Prune (true branch, if) \n   n$15=*&$irvar3:_Bool [line 35]\n  PRUNE(!(n$15 == 0), true); [line 35]\n  NULLIFY(&$irvar3); [line 35]\n  EXIT_SCOPE(n$15,$irvar3); [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_11" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_13" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_11" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_12" [label="12: Prune (false branch, if) \n   n$15=*&$irvar3:_Bool [line 35]\n  PRUNE((n$15 == 0), false); [line 35]\n  NULLIFY(&$irvar3); [line 35]\n  EXIT_SCOPE(n$15,$irvar3); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_12" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_17" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_12" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_13" [label="13:  Call boolean CommentService.isAllowComment() \n   n$16=*&this:com.zrlog.service.CommentService* [line 35]\n  _=*n$16:com.zrlog.service.CommentService*(root com.zrlog.service.CommentService) [line 35]\n  n$18=_fun_boolean CommentService.isAllowComment()(n$16:com.zrlog.service.CommentService*) virtual [line 35]\n  *&$irvar4:_Bool=n$18 [line 35]\n  NULLIFY(&this); [line 35]\n  EXIT_SCOPE(_,n$16,n$18,this); [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_13" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_14" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_13" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_15" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_13" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_14" [label="14: Prune (true branch, if) \n   n$19=*&$irvar4:_Bool [line 35]\n  PRUNE(!(n$19 == 0), true); [line 35]\n  NULLIFY(&$irvar4); [line 35]\n  EXIT_SCOPE(n$19,$irvar4); [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_14" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_16" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_14" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_15" [label="15: Prune (false branch, if) \n   n$19=*&$irvar4:_Bool [line 35]\n  PRUNE((n$19 == 0), false); [line 35]\n  NULLIFY(&$irvar4); [line 35]\n  EXIT_SCOPE(n$19,$irvar4); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_15" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_17" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_15" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_16" [label="16:  method_body \n   *&$T0_43:int=1 [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_16" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_18" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_16" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_17" [label="17:  method_body \n   *&$T0_43:int=0 [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_17" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_18" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_17" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+"com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_18" [label="18:  method_body \n   n$20=*&$T0_43:int [line 35]\n  *&return:_Bool=n$20 [line 35]\n  NULLIFY(&$T0_43); [line 35]\n  EXIT_SCOPE(n$20,$T0_43); [line 35]\n  APPLY_ABSTRACTION; [line 35]\n " shape="box"]
+	
+
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_18" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_2" ;
+	 "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_18" -> "com.zrlog.service.CommentService.isAllowComment(int):boolean.e7fc983075c4c26295020a912e09e3a3_3" [color="red" ];
+}

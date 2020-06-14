@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/handler/MyHttpServletResponseWrapper.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.handler; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import javax.servlet.ServletResponse; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import javax.servlet.http.HttpServletResponse; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import javax.servlet.http.HttpServletResponseWrapper; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import java.io.IOException; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import java.io.PrintWriter; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">public class MyHttpServletResponseWrapper extends HttpServletResponseWrapper { </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    private ResponseRenderPrintWriter responseRenderPrintWriter; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    public MyHttpServletResponseWrapper(HttpServletResponse response,ResponseRenderPrintWriter responseRenderPrintWriter) { </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">        super(response); <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.<init>%28javax.servlet.http.HttpServletResponse%2Ccom.3baa520c40b1820ce3afacd241521daa_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.<init>%28javax.servlet.http.HttpServletResponse%2Ccom.3baa520c40b1820ce3afacd241521daa_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.handler.MyHttpServletResponseWrapper* [line 14];
+n$1=*&amp;response:javax.servlet.http.HttpServletResponse* [line 14];
+n$2=_fun_HttpServletResponseWrapper.&lt;init&gt;(HttpServletResponse)(n$0:com.zrlog.web.handler.MyHttpServletResponseWrapper*,n$1:javax.servlet.http.HttpServletResponse*) [line 14];
+</span></span></a> <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/com.zrlog.web.handler.MyHttpServletResponseWrapper.<init>%28javax.servlet.http.HttpServletResponse%2Ccom.3baa520c40b1820ce3afacd241521daa.html">summary for MyHttpServletResponseWrapper.&lt;init&gt;(HttpServletResponse,ResponseRenderPrintWriter)</a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">        this.responseRenderPrintWriter = responseRenderPrintWriter; <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.<init>%28javax.servlet.http.HttpServletResponse%2Ccom.3baa520c40b1820ce3afacd241521daa_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=*&amp;this:com.zrlog.web.handler.MyHttpServletResponseWrapper* [line 15];
+n$4=*&amp;responseRenderPrintWriter:com.zrlog.web.handler.ResponseRenderPrintWriter* [line 15];
+*n$3.responseRenderPrintWriter:com.zrlog.web.handler.MyHttpServletResponseWrapper(root com.zrlog.web.handler.MyHttpServletResponseWrapper)=n$4 [line 15];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    } <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.<init>%28javax.servlet.http.HttpServletResponse%2Ccom.3baa520c40b1820ce3afacd241521daa_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.<init>%28javax.servlet.http.HttpServletResponse%2Ccom.3baa520c40b1820ce3afacd241521daa_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.<init>%28javax.servlet.http.HttpServletResponse%2Ccom.3baa520c40b1820ce3afacd241521daa_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    public PrintWriter getWriter() throws IOException { <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.getWriter%28%29%3Ajava.io.PrintWriter.36d954ff142d91e720a16173cc7e93fe_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/com.zrlog.web.handler.MyHttpServletResponseWrapper.getWriter%28%29%3Ajava.io.PrintWriter.36d954ff142d91e720a16173cc7e93fe.html">summary for PrintWriter MyHttpServletResponseWrapper.getWriter()</a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">        return responseRenderPrintWriter; <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.getWriter%28%29%3Ajava.io.PrintWriter.36d954ff142d91e720a16173cc7e93fe_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.handler.MyHttpServletResponseWrapper* [line 20];
+n$1=*n$0.responseRenderPrintWriter:com.zrlog.web.handler.ResponseRenderPrintWriter*(root com.zrlog.web.handler.MyHttpServletResponseWrapper) [line 20];
+*&amp;return:java.io.PrintWriter*=n$1 [line 20];
+</span></span></a> <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.getWriter%28%29%3Ajava.io.PrintWriter.36d954ff142d91e720a16173cc7e93fe_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./MyHttpServletResponseWrapper.java.77e727836222c6ef84739d974ce9b606/nodes/com.zrlog.web.handler.MyHttpServletResponseWrapper.getWriter%28%29%3Ajava.io.PrintWriter.36d954ff142d91e720a16173cc7e93fe_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

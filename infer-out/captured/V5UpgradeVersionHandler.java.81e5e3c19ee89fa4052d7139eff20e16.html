@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/version/V5UpgradeVersionHandler.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.version; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.zrlog.common.vo.AdminTokenVO; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.zrlog.service.ArticleService; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import java.sql.Connection; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import java.sql.PreparedStatement; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import java.sql.ResultSet; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import java.sql.SQLException; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">public class V5UpgradeVersionHandler implements UpgradeVersionHandler { <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.<init>%28%29.fc259de302f79fc3d70cd2d26e0308e9_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.<init>%28%29.fc259de302f79fc3d70cd2d26e0308e9_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.version.V5UpgradeVersionHandler* [line 11];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.version.V5UpgradeVersionHandler*) [line 11];
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.<init>%28%29.fc259de302f79fc3d70cd2d26e0308e9_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.<init>%28%29.fc259de302f79fc3d70cd2d26e0308e9_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.<init>%28%29.fc259de302f79fc3d70cd2d26e0308e9_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/com.zrlog.web.version.V5UpgradeVersionHandler.<init>%28%29.fc259de302f79fc3d70cd2d26e0308e9.html">summary for V5UpgradeVersionHandler.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    public void doUpgrade(Connection connection) throws SQLException, InterruptedException { <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f.html">summary for void V5UpgradeVersionHandler.doUpgrade(Connection)</a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">        Thread.sleep(10000L); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_void Thread.sleep(long)(10000:long) [line 15];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">        PreparedStatement userPs = connection.prepareStatement(&quot;select userid from user limit 1&quot;); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;connection:java.sql.Connection* [line 16];
+_=*n$1:java.sql.Connection*(root java.sql.Connection) [line 16];
+n$3=_fun_PreparedStatement Connection.prepareStatement(String)(n$1:java.sql.Connection*,"select userid from user limit 1":java.lang.Object*) interface virtual [line 16];
+*&amp;userPs:java.sql.PreparedStatement*=n$3 [line 16];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">        int userId = 0; <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+*&amp;userId:int=0 [line 17];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">        ResultSet userRs = userPs.executeQuery(); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$4=*&amp;userPs:java.sql.PreparedStatement* [line 18];
+_=*n$4:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 18];
+n$6=_fun_ResultSet PreparedStatement.executeQuery()(n$4:java.sql.PreparedStatement*) interface virtual [line 18];
+*&amp;userRs:java.sql.ResultSet*=n$6 [line 18];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">        if (userRs.next()) { <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 10 exn:3 Instructions
+n$7=*&amp;userRs:java.sql.ResultSet* [line 19];
+_=*n$7:java.sql.ResultSet*(root java.sql.ResultSet) [line 19];
+n$9=_fun_boolean ResultSet.next()(n$7:java.sql.ResultSet*) interface virtual [line 19];
+*&amp;$irvar0:_Bool=n$9 [line 19];
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:8 succs:11 exn:3 Conditional method_body
+n$10=*&amp;$irvar0:_Bool [line 19];
+PRUNE(!(n$10 == 0), true); [line 19];
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 succs:12 exn:3 Conditional method_body
+n$10=*&amp;$irvar0:_Bool [line 19];
+PRUNE((n$10 == 0), false); [line 19];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">            userId = userRs.getInt(&quot;userid&quot;); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:9 succs:12 exn:3 Instructions
+n$11=*&amp;userRs:java.sql.ResultSet* [line 20];
+_=*n$11:java.sql.ResultSet*(root java.sql.ResultSet) [line 20];
+n$13=_fun_int ResultSet.getInt(String)(n$11:java.sql.ResultSet*,"userid":java.lang.Object*) interface virtual [line 20];
+*&amp;userId:int=n$13 [line 20];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        userPs.close(); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 10 succs:13 exn:3 Instructions
+n$14=*&amp;userPs:java.sql.PreparedStatement* [line 22];
+n$17=_fun___set_mem_attribute(n$14:java.sql.PreparedStatement*) [line 22];
+_=*n$14:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 22];
+n$16=_fun_void PreparedStatement.close()(n$14:java.sql.PreparedStatement*) interface virtual [line 22];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">        PreparedStatement ps = connection.prepareStatement(&quot;select logid,content from log&quot;); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$18=*&amp;connection:java.sql.Connection* [line 23];
+_=*n$18:java.sql.Connection*(root java.sql.Connection) [line 23];
+n$20=_fun_PreparedStatement Connection.prepareStatement(String)(n$18:java.sql.Connection*,"select logid,content from log":java.lang.Object*) interface virtual [line 23];
+*&amp;ps:java.sql.PreparedStatement*=n$20 [line 23];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">        ResultSet rs = ps.executeQuery(); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$21=*&amp;ps:java.sql.PreparedStatement* [line 24];
+_=*n$21:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 24];
+n$23=_fun_ResultSet PreparedStatement.executeQuery()(n$21:java.sql.PreparedStatement*) interface virtual [line 24];
+*&amp;rs:java.sql.ResultSet*=n$23 [line 24];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">        while (rs.next()) { <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:29 14 succs:18 exn:3 Instructions
+n$24=*&amp;rs:java.sql.ResultSet* [line 25];
+_=*n$24:java.sql.ResultSet*(root java.sql.ResultSet) [line 25];
+n$26=_fun_boolean ResultSet.next()(n$24:java.sql.ResultSet*) interface virtual [line 25];
+*&amp;$irvar1:_Bool=n$26 [line 25];
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node18.html"><span class='visited with_tooltip'>J_18<span class='tooltip'>node18 preds:15 succs:16 17 exn: Join
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:18 succs:19 exn:3 Conditional method_body
+n$27=*&amp;$irvar1:_Bool [line 25];
+PRUNE(!(n$27 == 0), true); [line 25];
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:18 succs:30 exn:3 Conditional method_body
+n$27=*&amp;$irvar1:_Bool [line 25];
+PRUNE((n$27 == 0), false); [line 25];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">            int id = rs.getInt(&quot;logid&quot;); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:16 succs:20 exn:3 Instructions
+n$28=*&amp;rs:java.sql.ResultSet* [line 26];
+_=*n$28:java.sql.ResultSet*(root java.sql.ResultSet) [line 26];
+n$30=_fun_int ResultSet.getInt(String)(n$28:java.sql.ResultSet*,"logid":java.lang.Object*) interface virtual [line 26];
+*&amp;id:int=n$30 [line 26];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">            AdminTokenVO adminTokenVO = new AdminTokenVO(); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$31=_fun___new(sizeof(t=com.zrlog.common.vo.AdminTokenVO):com.zrlog.common.vo.AdminTokenVO*) [line 27];
+n$32=_fun_AdminTokenVO.&lt;init&gt;()(n$31:com.zrlog.common.vo.AdminTokenVO*) [line 27];
+*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO*=n$31 [line 27];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">            adminTokenVO.setUserId(userId); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$33=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 28];
+_=*n$33:com.zrlog.common.vo.AdminTokenVO*(root com.zrlog.common.vo.AdminTokenVO) [line 28];
+n$35=*&amp;userId:int [line 28];
+n$36=_fun_void AdminTokenVO.setUserId(int)(n$33:com.zrlog.common.vo.AdminTokenVO*,n$35:int) virtual [line 28];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">            String imgUrl = new ArticleService().getFirstImgUrl(rs.getString(&quot;content&quot;), adminTokenVO); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$37=_fun___new(sizeof(t=com.zrlog.service.ArticleService):com.zrlog.service.ArticleService*) [line 29];
+n$38=_fun_ArticleService.&lt;init&gt;()(n$37:com.zrlog.service.ArticleService*) [line 29];
+*&amp;$irvar2:com.zrlog.service.ArticleService*=n$37 [line 29];
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$39=*&amp;rs:java.sql.ResultSet* [line 29];
+_=*n$39:java.sql.ResultSet*(root java.sql.ResultSet) [line 29];
+n$41=_fun_String ResultSet.getString(String)(n$39:java.sql.ResultSet*,"content":java.lang.Object*) interface virtual [line 29];
+*&amp;$irvar3:java.lang.String*=n$41 [line 29];
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$42=*&amp;$irvar2:com.zrlog.service.ArticleService* [line 29];
+_=*n$42:com.zrlog.service.ArticleService*(root com.zrlog.service.ArticleService) [line 29];
+n$44=*&amp;$irvar3:java.lang.String* [line 29];
+n$45=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 29];
+n$46=_fun_String ArticleService.getFirstImgUrl(String,AdminTokenVO)(n$42:com.zrlog.service.ArticleService*,n$44:java.lang.String*,n$45:com.zrlog.common.vo.AdminTokenVO*) virtual [line 29];
+*&amp;imgUrl:java.lang.String*=n$46 [line 29];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">            PreparedStatement ups = connection.prepareStatement(&quot;update log set thumbnail = ? where logid = ?&quot;); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$47=*&amp;connection:java.sql.Connection* [line 30];
+_=*n$47:java.sql.Connection*(root java.sql.Connection) [line 30];
+n$49=_fun_PreparedStatement Connection.prepareStatement(String)(n$47:java.sql.Connection*,"update log set thumbnail = ? where logid = ?":java.lang.Object*) interface virtual [line 30];
+*&amp;ups:java.sql.PreparedStatement*=n$49 [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">            ups.setString(1, imgUrl); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$50=*&amp;ups:java.sql.PreparedStatement* [line 31];
+_=*n$50:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 31];
+n$52=*&amp;imgUrl:java.lang.String* [line 31];
+n$53=_fun_void PreparedStatement.setString(int,String)(n$50:java.sql.PreparedStatement*,1:int,n$52:java.lang.String*) interface virtual [line 31];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">            ups.setInt(2, id); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:3 Instructions
+n$54=*&amp;ups:java.sql.PreparedStatement* [line 32];
+_=*n$54:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 32];
+n$56=*&amp;id:int [line 32];
+n$57=_fun_void PreparedStatement.setInt(int,int)(n$54:java.sql.PreparedStatement*,2:int,n$56:int) interface virtual [line 32];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">            ups.execute(); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$58=*&amp;ups:java.sql.PreparedStatement* [line 33];
+_=*n$58:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 33];
+n$60=_fun_boolean PreparedStatement.execute()(n$58:java.sql.PreparedStatement*) interface virtual [line 33];
+*&amp;$irvar4:_Bool=n$60 [line 33];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">            ups.close(); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:15 exn:3 Instructions
+n$61=*&amp;ups:java.sql.PreparedStatement* [line 34];
+n$64=_fun___set_mem_attribute(n$61:java.sql.PreparedStatement*) [line 34];
+_=*n$61:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 34];
+n$63=_fun_void PreparedStatement.close()(n$61:java.sql.PreparedStatement*) interface virtual [line 34];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">        ps.close(); <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:17 succs:31 exn:3 Instructions
+n$65=*&amp;ps:java.sql.PreparedStatement* [line 36];
+n$68=_fun___set_mem_attribute(n$65:java.sql.PreparedStatement*) [line 36];
+_=*n$65:java.sql.PreparedStatement*(root java.sql.PreparedStatement) [line 36];
+n$67=_fun_void PreparedStatement.close()(n$65:java.sql.PreparedStatement*) interface virtual [line 36];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">    } <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:2 exn:3 Instructions
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:31 3 succs: exn: Exit
+</span></span></a> <a href="./V5UpgradeVersionHandler.java.81e5e3c19ee89fa4052d7139eff20e16/nodes/com.zrlog.web.version.V5UpgradeVersionHandler.doUpgrade%28java.sql.Connection%29%3Avoid.80e56e166d794d03e893f140be0ddd6f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

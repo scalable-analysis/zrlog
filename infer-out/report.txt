@@ -1,0 +1,47 @@
+#0
+web/src/main/java/com/zrlog/web/interceptor/MyI18nInterceptor.java:18: error: UNTRUSTED_FILE
+  UserControlledString(Controller.getRequest()) at line 18 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67.
+  16.       public void intercept(Invocation inv) {
+  17.           if (Constants.IN_JAR) {
+  18. >             I18nUtil.addToRequest(null, inv.getController().getRequest(), JFinal.me().getConstants().getDevMode(), false);
+  19.           } else {
+  20.               I18nUtil.addToRequest(PathKit.getRootClassPath(), inv.getController().getRequest(), JFinal.me().getConstants().getDevMode(), false);
+
+#1
+web/src/main/java/com/zrlog/web/interceptor/MyI18nInterceptor.java:20: error: UNTRUSTED_FILE
+  UserControlledString(Controller.getRequest()) at line 20 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67.
+  18.               I18nUtil.addToRequest(null, inv.getController().getRequest(), JFinal.me().getConstants().getDevMode(), false);
+  19.           } else {
+  20. >             I18nUtil.addToRequest(PathKit.getRootClassPath(), inv.getController().getRequest(), JFinal.me().getConstants().getDevMode(), false);
+  21.           }
+  22.           inv.invoke();
+
+#2
+web/src/main/java/com/zrlog/web/controller/admin/page/AdminTemplatePageController.java:47: error: UNTRUSTED_FILE
+  UserControlledString(Controller.getRequest()) at line 47 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67.
+  45.           TemplateVO templateVO = templateService.getTemplateVO(JFinal.me().getContextPath(), new File(PathKit.getWebRootPath() + templateName));
+  46.           setAttr("templateInfo", templateVO);
+  47. >         I18nUtil.addToRequest(PathKit.getWebRootPath() + templateName + "/language/", getRequest(), JFinal.me().getConstants().getDevMode(), true);
+  48.           String jsonStr = new WebSite().getStringValueByName(templateName + Constants.TEMPLATE_CONFIG_SUFFIX);
+  49.           fullTemplateSetting(jsonStr);
+
+#3
+web/src/main/java/com/zrlog/web/controller/admin/page/AdminTemplatePageController.java:69: error: UNTRUSTED_FILE
+  UserControlledString(Controller.getRequest()) at line 67 ~> CreateFile(File(...)) at line 69.
+  67.               String fileName = getRequest().getParameter("templateName");
+  68.               String templatePath = fileName.substring(0, fileName.indexOf('.'));
+  69. >             File path = new File(PathKit.getWebRootPath() + Constants.TEMPLATE_BASE_PATH + templatePath + File.separator);
+  70.   
+  71.               if (!path.exists()) {
+
+#4
+web/src/main/java/com/zrlog/web/interceptor/TemplateHelper.java:155: error: UNTRUSTED_FILE
+  UserControlledString(Controller.getRequest()) at line 155 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67.
+  153.               String basePath = baseController.getTemplatePath();
+  154.               controller.getRequest().setAttribute("template", basePath);
+  155. >             I18nUtil.addToRequest(PathKit.getWebRootPath() + basePath + "/language/", controller.getRequest(), JFinal.me().getConstants().getDevMode(), reload);
+  156.               baseController.fullTemplateSetting();
+  157.               TemplateHelper.fullInfo(controller.getRequest(), Constants.isStaticHtmlStatus());
+
+Found 5 issues
+  UNTRUSTED_FILE: 5

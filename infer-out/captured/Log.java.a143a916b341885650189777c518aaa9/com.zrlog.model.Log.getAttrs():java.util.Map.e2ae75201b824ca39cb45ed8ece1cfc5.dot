@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_1" [label="1: Start Map Log.getAttrs()\nFormals:  this:com.zrlog.model.Log*\nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_1" -> "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_4" ;
+"com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_2" [label="2: Exit Map Log.getAttrs() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 231]\n  EXIT_SCOPE($irvar0); [line 231]\n  APPLY_ABSTRACTION; [line 231]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_3" -> "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_2" ;
+"com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_4" [label="4:  Call Map Model._getAttrs() \n   n$0=*&this:com.zrlog.model.Log* [line 231]\n  n$1=_fun_Map Model._getAttrs()(n$0:com.zrlog.model.Log*) [line 231]\n  *&$irvar0:java.util.Map*=n$1 [line 231]\n  NULLIFY(&this); [line 231]\n  EXIT_SCOPE(n$0,n$1,this); [line 231]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_4" -> "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_5" ;
+	 "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_4" -> "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_3" [color="red" ];
+"com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_5" [label="5:  method_body \n   n$2=*&$irvar0:java.util.Map* [line 231]\n  *&return:java.util.Map*=n$2 [line 231]\n  NULLIFY(&$irvar0); [line 231]\n  EXIT_SCOPE(n$2,$irvar0); [line 231]\n  APPLY_ABSTRACTION; [line 231]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_5" -> "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_2" ;
+	 "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_5" -> "com.zrlog.model.Log.getAttrs():java.util.Map.e2ae75201b824ca39cb45ed8ece1cfc5_3" [color="red" ];
+}

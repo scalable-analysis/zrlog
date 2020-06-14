@@ -1,0 +1,81 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_1" [label="1: Start String TemplateHelper.ignoreScheme(String)\nFormals:  url:java.lang.String*\nLocals:  $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_1" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_4" ;
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_2" [label="2: Exit String TemplateHelper.ignoreScheme(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 147]\n  NULLIFY(&$irvar5); [line 147]\n  NULLIFY(&$irvar4); [line 147]\n  NULLIFY(&$irvar0); [line 147]\n  NULLIFY(&$irvar1); [line 147]\n  NULLIFY(&$irvar2); [line 147]\n  EXIT_SCOPE($irvar3,$irvar5,$irvar4,$irvar0,$irvar1,$irvar2); [line 147]\n  APPLY_ABSTRACTION; [line 147]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_2" ;
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_4" [label="4:  Call boolean String.startsWith(String) \n   n$0=*&url:java.lang.String* [line 142]\n  _=*n$0:java.lang.String*(root java.lang.String) [line 142]\n  n$2=_fun_boolean String.startsWith(String)(n$0:java.lang.String*,\"http://\":java.lang.Object*) virtual [line 142]\n  *&$irvar0:_Bool=n$2 [line 142]\n  EXIT_SCOPE(_,n$0,n$2); [line 142]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_4" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_5" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_4" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_6" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_4" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_5" [label="5: Prune (true branch, if) \n   n$3=*&$irvar0:_Bool [line 142]\n  PRUNE(!(n$3 == 0), true); [line 142]\n  NULLIFY(&$irvar0); [line 142]\n  EXIT_SCOPE(n$3,$irvar0); [line 142]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_5" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_7" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_5" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_6" [label="6: Prune (false branch, if) \n   n$3=*&$irvar0:_Bool [line 142]\n  PRUNE((n$3 == 0), false); [line 142]\n  NULLIFY(&$irvar0); [line 142]\n  EXIT_SCOPE(n$3,$irvar0); [line 142]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_6" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_10" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_6" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_7" [label="7:  Call int String.length() \n   n$4=_fun_int String.length()(\"http:\":java.lang.Object*) virtual [line 143]\n  *&$irvar1:int=n$4 [line 143]\n  EXIT_SCOPE(n$4); [line 143]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_7" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_8" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_7" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_8" [label="8:  Call String String.substring(int) \n   n$5=*&url:java.lang.String* [line 143]\n  _=*n$5:java.lang.String*(root java.lang.String) [line 143]\n  n$7=*&$irvar1:int [line 143]\n  n$8=_fun_String String.substring(int)(n$5:java.lang.String*,n$7:int) virtual [line 143]\n  *&$irvar2:java.lang.String*=n$8 [line 143]\n  NULLIFY(&url); [line 143]\n  NULLIFY(&$irvar1); [line 143]\n  EXIT_SCOPE(_,n$5,n$7,n$8,url,$irvar1); [line 143]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_8" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_9" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_8" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_9" [label="9:  method_body \n   n$9=*&$irvar2:java.lang.String* [line 143]\n  *&return:java.lang.String*=n$9 [line 143]\n  NULLIFY(&$irvar2); [line 143]\n  EXIT_SCOPE(n$9,$irvar2); [line 143]\n  APPLY_ABSTRACTION; [line 143]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_9" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_2" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_9" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_10" [label="10:  Call boolean String.startsWith(String) \n   n$10=*&url:java.lang.String* [line 144]\n  _=*n$10:java.lang.String*(root java.lang.String) [line 144]\n  n$12=_fun_boolean String.startsWith(String)(n$10:java.lang.String*,\"https://\":java.lang.Object*) virtual [line 144]\n  *&$irvar3:_Bool=n$12 [line 144]\n  EXIT_SCOPE(_,n$10,n$12); [line 144]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_10" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_11" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_10" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_12" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_10" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_11" [label="11: Prune (true branch, if) \n   n$13=*&$irvar3:_Bool [line 144]\n  PRUNE(!(n$13 == 0), true); [line 144]\n  NULLIFY(&$irvar3); [line 144]\n  EXIT_SCOPE(n$13,$irvar3); [line 144]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_11" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_13" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_11" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_12" [label="12: Prune (false branch, if) \n   n$13=*&$irvar3:_Bool [line 144]\n  PRUNE((n$13 == 0), false); [line 144]\n  NULLIFY(&$irvar3); [line 144]\n  EXIT_SCOPE(n$13,$irvar3); [line 144]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_12" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_16" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_12" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_13" [label="13:  Call int String.length() \n   n$14=_fun_int String.length()(\"https:\":java.lang.Object*) virtual [line 145]\n  *&$irvar4:int=n$14 [line 145]\n  EXIT_SCOPE(n$14); [line 145]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_13" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_14" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_13" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_14" [label="14:  Call String String.substring(int) \n   n$15=*&url:java.lang.String* [line 145]\n  _=*n$15:java.lang.String*(root java.lang.String) [line 145]\n  n$17=*&$irvar4:int [line 145]\n  n$18=_fun_String String.substring(int)(n$15:java.lang.String*,n$17:int) virtual [line 145]\n  *&$irvar5:java.lang.String*=n$18 [line 145]\n  NULLIFY(&url); [line 145]\n  NULLIFY(&$irvar4); [line 145]\n  EXIT_SCOPE(_,n$15,n$17,n$18,url,$irvar4); [line 145]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_14" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_15" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_14" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_15" [label="15:  method_body \n   n$19=*&$irvar5:java.lang.String* [line 145]\n  *&return:java.lang.String*=n$19 [line 145]\n  NULLIFY(&$irvar5); [line 145]\n  EXIT_SCOPE(n$19,$irvar5); [line 145]\n  APPLY_ABSTRACTION; [line 145]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_15" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_2" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_15" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+"com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_16" [label="16:  method_body \n   n$20=*&url:java.lang.String* [line 147]\n  *&return:java.lang.String*=n$20 [line 147]\n  NULLIFY(&url); [line 147]\n  EXIT_SCOPE(n$20,url); [line 147]\n  APPLY_ABSTRACTION; [line 147]\n " shape="box"]
+	
+
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_16" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_2" ;
+	 "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_16" -> "com.zrlog.web.interceptor.TemplateHelper.ignoreScheme(java.lang.String):java.lang.String.c3f71809c4309d0ed9bf7b5937aa0120_3" [color="red" ];
+}

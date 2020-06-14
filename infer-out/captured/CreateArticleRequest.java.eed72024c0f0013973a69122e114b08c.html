@@ -1,0 +1,369 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File common/src/main/java/com/zrlog/common/request/CreateArticleRequest.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.common.request; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">public class CreateArticleRequest { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.<init>%28%29.6ff550de10a7140e5a6e45ea7ef6ae36_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.<init>%28%29.6ff550de10a7140e5a6e45ea7ef6ae36_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 3];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.common.request.CreateArticleRequest*) [line 3];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.<init>%28%29.6ff550de10a7140e5a6e45ea7ef6ae36_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.<init>%28%29.6ff550de10a7140e5a6e45ea7ef6ae36_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.<init>%28%29.6ff550de10a7140e5a6e45ea7ef6ae36_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.<init>%28%29.6ff550de10a7140e5a6e45ea7ef6ae36.html">summary for CreateArticleRequest.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">    private String content; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">    private String thumbnail; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">    private String title; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">    private String typeId; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">    private String alias; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">    private String markdown; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    private boolean canComment; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">    private boolean privacy; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    private boolean recommended; </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">    private boolean rubbish; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    private String keywords; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    private String digest; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    private String editorType; </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    public String getContent() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getContent%28%29%3Ajava.lang.String.1c74801f599359f48d444bfc5fb3bf53_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getContent%28%29%3Ajava.lang.String.1c74801f599359f48d444bfc5fb3bf53.html">summary for String CreateArticleRequest.getContent()</a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">        return content; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getContent%28%29%3Ajava.lang.String.1c74801f599359f48d444bfc5fb3bf53_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 20];
+n$1=*n$0.content:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 20];
+*&amp;return:java.lang.String*=n$1 [line 20];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getContent%28%29%3Ajava.lang.String.1c74801f599359f48d444bfc5fb3bf53_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getContent%28%29%3Ajava.lang.String.1c74801f599359f48d444bfc5fb3bf53_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    public void setContent(String content) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setContent%28java.lang.String%29%3Avoid.9324f1bd74eb9eac802c5549270c6052_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setContent%28java.lang.String%29%3Avoid.9324f1bd74eb9eac802c5549270c6052.html">summary for void CreateArticleRequest.setContent(String)</a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">        this.content = content; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setContent%28java.lang.String%29%3Avoid.9324f1bd74eb9eac802c5549270c6052_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 24];
+n$1=*&amp;content:java.lang.String* [line 24];
+*n$0.content:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 24];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setContent%28java.lang.String%29%3Avoid.9324f1bd74eb9eac802c5549270c6052_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setContent%28java.lang.String%29%3Avoid.9324f1bd74eb9eac802c5549270c6052_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setContent%28java.lang.String%29%3Avoid.9324f1bd74eb9eac802c5549270c6052_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    public String getThumbnail() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getThumbnail%28%29%3Ajava.lang.String.c3d198dc3836e3020907478158289aa7_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getThumbnail%28%29%3Ajava.lang.String.c3d198dc3836e3020907478158289aa7.html">summary for String CreateArticleRequest.getThumbnail()</a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">        return thumbnail; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getThumbnail%28%29%3Ajava.lang.String.c3d198dc3836e3020907478158289aa7_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 28];
+n$1=*n$0.thumbnail:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 28];
+*&amp;return:java.lang.String*=n$1 [line 28];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getThumbnail%28%29%3Ajava.lang.String.c3d198dc3836e3020907478158289aa7_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getThumbnail%28%29%3Ajava.lang.String.c3d198dc3836e3020907478158289aa7_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    public void setThumbnail(String thumbnail) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setThumbnail%28java.lang.String%29%3Avoid.3de99b41a3096de58fcf5d4924c78f3f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setThumbnail%28java.lang.String%29%3Avoid.3de99b41a3096de58fcf5d4924c78f3f.html">summary for void CreateArticleRequest.setThumbnail(String)</a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">        this.thumbnail = thumbnail; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setThumbnail%28java.lang.String%29%3Avoid.3de99b41a3096de58fcf5d4924c78f3f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 32];
+n$1=*&amp;thumbnail:java.lang.String* [line 32];
+*n$0.thumbnail:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 32];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setThumbnail%28java.lang.String%29%3Avoid.3de99b41a3096de58fcf5d4924c78f3f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setThumbnail%28java.lang.String%29%3Avoid.3de99b41a3096de58fcf5d4924c78f3f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setThumbnail%28java.lang.String%29%3Avoid.3de99b41a3096de58fcf5d4924c78f3f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">    public String getTitle() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTitle%28%29%3Ajava.lang.String.c60eaf9e5a016c805521d0ccd85f9716_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getTitle%28%29%3Ajava.lang.String.c60eaf9e5a016c805521d0ccd85f9716.html">summary for String CreateArticleRequest.getTitle()</a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">        return title; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTitle%28%29%3Ajava.lang.String.c60eaf9e5a016c805521d0ccd85f9716_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 36];
+n$1=*n$0.title:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 36];
+*&amp;return:java.lang.String*=n$1 [line 36];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTitle%28%29%3Ajava.lang.String.c60eaf9e5a016c805521d0ccd85f9716_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTitle%28%29%3Ajava.lang.String.c60eaf9e5a016c805521d0ccd85f9716_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">    public void setTitle(String title) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTitle%28java.lang.String%29%3Avoid.a0b18be9fcf03645ab66522c3b4889da_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setTitle%28java.lang.String%29%3Avoid.a0b18be9fcf03645ab66522c3b4889da.html">summary for void CreateArticleRequest.setTitle(String)</a></td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">        this.title = title; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTitle%28java.lang.String%29%3Avoid.a0b18be9fcf03645ab66522c3b4889da_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 40];
+n$1=*&amp;title:java.lang.String* [line 40];
+*n$0.title:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 40];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTitle%28java.lang.String%29%3Avoid.a0b18be9fcf03645ab66522c3b4889da_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTitle%28java.lang.String%29%3Avoid.a0b18be9fcf03645ab66522c3b4889da_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTitle%28java.lang.String%29%3Avoid.a0b18be9fcf03645ab66522c3b4889da_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">    public String getTypeId() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTypeId%28%29%3Ajava.lang.String.efdc809e7d56bcc37efad865945b283e_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getTypeId%28%29%3Ajava.lang.String.efdc809e7d56bcc37efad865945b283e.html">summary for String CreateArticleRequest.getTypeId()</a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">        return typeId; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTypeId%28%29%3Ajava.lang.String.efdc809e7d56bcc37efad865945b283e_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 44];
+n$1=*n$0.typeId:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 44];
+*&amp;return:java.lang.String*=n$1 [line 44];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTypeId%28%29%3Ajava.lang.String.efdc809e7d56bcc37efad865945b283e_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getTypeId%28%29%3Ajava.lang.String.efdc809e7d56bcc37efad865945b283e_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">    public void setTypeId(String typeId) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTypeId%28java.lang.String%29%3Avoid.58b665860e24a74ae12e3a7bac13a63c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setTypeId%28java.lang.String%29%3Avoid.58b665860e24a74ae12e3a7bac13a63c.html">summary for void CreateArticleRequest.setTypeId(String)</a></td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">        this.typeId = typeId; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTypeId%28java.lang.String%29%3Avoid.58b665860e24a74ae12e3a7bac13a63c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 48];
+n$1=*&amp;typeId:java.lang.String* [line 48];
+*n$0.typeId:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 48];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTypeId%28java.lang.String%29%3Avoid.58b665860e24a74ae12e3a7bac13a63c_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTypeId%28java.lang.String%29%3Avoid.58b665860e24a74ae12e3a7bac13a63c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setTypeId%28java.lang.String%29%3Avoid.58b665860e24a74ae12e3a7bac13a63c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">    public String getAlias() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getAlias%28%29%3Ajava.lang.String.2ce332d2b3b2a36db43a462c549730b4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getAlias%28%29%3Ajava.lang.String.2ce332d2b3b2a36db43a462c549730b4.html">summary for String CreateArticleRequest.getAlias()</a></td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">        return alias; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getAlias%28%29%3Ajava.lang.String.2ce332d2b3b2a36db43a462c549730b4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 52];
+n$1=*n$0.alias:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 52];
+*&amp;return:java.lang.String*=n$1 [line 52];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getAlias%28%29%3Ajava.lang.String.2ce332d2b3b2a36db43a462c549730b4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getAlias%28%29%3Ajava.lang.String.2ce332d2b3b2a36db43a462c549730b4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">    public void setAlias(String alias) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setAlias%28java.lang.String%29%3Avoid.0f60360ab897ccc31f8f6433bc1c4a21_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setAlias%28java.lang.String%29%3Avoid.0f60360ab897ccc31f8f6433bc1c4a21.html">summary for void CreateArticleRequest.setAlias(String)</a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">        this.alias = alias; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setAlias%28java.lang.String%29%3Avoid.0f60360ab897ccc31f8f6433bc1c4a21_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 56];
+n$1=*&amp;alias:java.lang.String* [line 56];
+*n$0.alias:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 56];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setAlias%28java.lang.String%29%3Avoid.0f60360ab897ccc31f8f6433bc1c4a21_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setAlias%28java.lang.String%29%3Avoid.0f60360ab897ccc31f8f6433bc1c4a21_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setAlias%28java.lang.String%29%3Avoid.0f60360ab897ccc31f8f6433bc1c4a21_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">    public String getMarkdown() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getMarkdown%28%29%3Ajava.lang.String.e32e3d71855883a635b7f27ad272478c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getMarkdown%28%29%3Ajava.lang.String.e32e3d71855883a635b7f27ad272478c.html">summary for String CreateArticleRequest.getMarkdown()</a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">        return markdown; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getMarkdown%28%29%3Ajava.lang.String.e32e3d71855883a635b7f27ad272478c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 60];
+n$1=*n$0.markdown:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 60];
+*&amp;return:java.lang.String*=n$1 [line 60];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getMarkdown%28%29%3Ajava.lang.String.e32e3d71855883a635b7f27ad272478c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getMarkdown%28%29%3Ajava.lang.String.e32e3d71855883a635b7f27ad272478c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">    public void setMarkdown(String markdown) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setMarkdown%28java.lang.String%29%3Avoid.ed0397f599b842bc6f9c6d6c694bf88b_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setMarkdown%28java.lang.String%29%3Avoid.ed0397f599b842bc6f9c6d6c694bf88b.html">summary for void CreateArticleRequest.setMarkdown(String)</a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">        this.markdown = markdown; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setMarkdown%28java.lang.String%29%3Avoid.ed0397f599b842bc6f9c6d6c694bf88b_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 64];
+n$1=*&amp;markdown:java.lang.String* [line 64];
+*n$0.markdown:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 64];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setMarkdown%28java.lang.String%29%3Avoid.ed0397f599b842bc6f9c6d6c694bf88b_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setMarkdown%28java.lang.String%29%3Avoid.ed0397f599b842bc6f9c6d6c694bf88b_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setMarkdown%28java.lang.String%29%3Avoid.ed0397f599b842bc6f9c6d6c694bf88b_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">    public boolean isCanComment() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isCanComment%28%29%3Aboolean.10d49ebcdd619d6acc2be3231afb7ba4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.isCanComment%28%29%3Aboolean.10d49ebcdd619d6acc2be3231afb7ba4.html">summary for boolean CreateArticleRequest.isCanComment()</a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">        return canComment; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isCanComment%28%29%3Aboolean.10d49ebcdd619d6acc2be3231afb7ba4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 68];
+n$1=*n$0.canComment:_Bool(root com.zrlog.common.request.CreateArticleRequest) [line 68];
+*&amp;return:_Bool=n$1 [line 68];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isCanComment%28%29%3Aboolean.10d49ebcdd619d6acc2be3231afb7ba4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isCanComment%28%29%3Aboolean.10d49ebcdd619d6acc2be3231afb7ba4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">    public void setCanComment(boolean canComment) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setCanComment%28boolean%29%3Avoid.d819c4b933ecae3d2eb3d155927372fc_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setCanComment%28boolean%29%3Avoid.d819c4b933ecae3d2eb3d155927372fc.html">summary for void CreateArticleRequest.setCanComment(boolean)</a></td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">        this.canComment = canComment; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setCanComment%28boolean%29%3Avoid.d819c4b933ecae3d2eb3d155927372fc_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 72];
+n$1=*&amp;canComment:_Bool [line 72];
+*n$0.canComment:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 72];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setCanComment%28boolean%29%3Avoid.d819c4b933ecae3d2eb3d155927372fc_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setCanComment%28boolean%29%3Avoid.d819c4b933ecae3d2eb3d155927372fc_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setCanComment%28boolean%29%3Avoid.d819c4b933ecae3d2eb3d155927372fc_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">    public String getKeywords() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getKeywords%28%29%3Ajava.lang.String.6f287f27b8124e4c6c32956218839b11_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getKeywords%28%29%3Ajava.lang.String.6f287f27b8124e4c6c32956218839b11.html">summary for String CreateArticleRequest.getKeywords()</a></td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">        return keywords; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getKeywords%28%29%3Ajava.lang.String.6f287f27b8124e4c6c32956218839b11_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 76];
+n$1=*n$0.keywords:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 76];
+*&amp;return:java.lang.String*=n$1 [line 76];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getKeywords%28%29%3Ajava.lang.String.6f287f27b8124e4c6c32956218839b11_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getKeywords%28%29%3Ajava.lang.String.6f287f27b8124e4c6c32956218839b11_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">    public void setKeywords(String keywords) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setKeywords%28java.lang.String%29%3Avoid.81e44eca17e222cd1731622e511a4414_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setKeywords%28java.lang.String%29%3Avoid.81e44eca17e222cd1731622e511a4414.html">summary for void CreateArticleRequest.setKeywords(String)</a></td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">        this.keywords = keywords; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setKeywords%28java.lang.String%29%3Avoid.81e44eca17e222cd1731622e511a4414_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 80];
+n$1=*&amp;keywords:java.lang.String* [line 80];
+*n$0.keywords:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 80];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setKeywords%28java.lang.String%29%3Avoid.81e44eca17e222cd1731622e511a4414_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setKeywords%28java.lang.String%29%3Avoid.81e44eca17e222cd1731622e511a4414_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setKeywords%28java.lang.String%29%3Avoid.81e44eca17e222cd1731622e511a4414_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">    public String getDigest() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getDigest%28%29%3Ajava.lang.String.f11f1193695ceb6803254668908ec167_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getDigest%28%29%3Ajava.lang.String.f11f1193695ceb6803254668908ec167.html">summary for String CreateArticleRequest.getDigest()</a></td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">        return digest; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getDigest%28%29%3Ajava.lang.String.f11f1193695ceb6803254668908ec167_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 84];
+n$1=*n$0.digest:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 84];
+*&amp;return:java.lang.String*=n$1 [line 84];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getDigest%28%29%3Ajava.lang.String.f11f1193695ceb6803254668908ec167_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getDigest%28%29%3Ajava.lang.String.f11f1193695ceb6803254668908ec167_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">    public void setDigest(String digest) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setDigest%28java.lang.String%29%3Avoid.7b086181961768893a2d5b72ad5b4c81_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setDigest%28java.lang.String%29%3Avoid.7b086181961768893a2d5b72ad5b4c81.html">summary for void CreateArticleRequest.setDigest(String)</a></td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">        this.digest = digest; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setDigest%28java.lang.String%29%3Avoid.7b086181961768893a2d5b72ad5b4c81_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 88];
+n$1=*&amp;digest:java.lang.String* [line 88];
+*n$0.digest:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 88];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setDigest%28java.lang.String%29%3Avoid.7b086181961768893a2d5b72ad5b4c81_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setDigest%28java.lang.String%29%3Avoid.7b086181961768893a2d5b72ad5b4c81_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setDigest%28java.lang.String%29%3Avoid.7b086181961768893a2d5b72ad5b4c81_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line">    public boolean isRecommended() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRecommended%28%29%3Aboolean.0624695dc5e2b26d4b2fc22a94cafedf_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.isRecommended%28%29%3Aboolean.0624695dc5e2b26d4b2fc22a94cafedf.html">summary for boolean CreateArticleRequest.isRecommended()</a></td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">        return recommended; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRecommended%28%29%3Aboolean.0624695dc5e2b26d4b2fc22a94cafedf_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 92];
+n$1=*n$0.recommended:_Bool(root com.zrlog.common.request.CreateArticleRequest) [line 92];
+*&amp;return:_Bool=n$1 [line 92];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRecommended%28%29%3Aboolean.0624695dc5e2b26d4b2fc22a94cafedf_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRecommended%28%29%3Aboolean.0624695dc5e2b26d4b2fc22a94cafedf_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">    public void setRecommended(boolean recommended) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRecommended%28boolean%29%3Avoid.d33de0634a05948c1324e5a4e935c8d8_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setRecommended%28boolean%29%3Avoid.d33de0634a05948c1324e5a4e935c8d8.html">summary for void CreateArticleRequest.setRecommended(boolean)</a></td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">        this.recommended = recommended; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRecommended%28boolean%29%3Avoid.d33de0634a05948c1324e5a4e935c8d8_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 96];
+n$1=*&amp;recommended:_Bool [line 96];
+*n$0.recommended:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 96];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRecommended%28boolean%29%3Avoid.d33de0634a05948c1324e5a4e935c8d8_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRecommended%28boolean%29%3Avoid.d33de0634a05948c1324e5a4e935c8d8_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRecommended%28boolean%29%3Avoid.d33de0634a05948c1324e5a4e935c8d8_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">    public boolean isPrivacy() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isPrivacy%28%29%3Aboolean.f746348adb92624adc8988d846b30fb2_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.isPrivacy%28%29%3Aboolean.f746348adb92624adc8988d846b30fb2.html">summary for boolean CreateArticleRequest.isPrivacy()</a></td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">        return privacy; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isPrivacy%28%29%3Aboolean.f746348adb92624adc8988d846b30fb2_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 100];
+n$1=*n$0.privacy:_Bool(root com.zrlog.common.request.CreateArticleRequest) [line 100];
+*&amp;return:_Bool=n$1 [line 100];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isPrivacy%28%29%3Aboolean.f746348adb92624adc8988d846b30fb2_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isPrivacy%28%29%3Aboolean.f746348adb92624adc8988d846b30fb2_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE103">103</td><td class="line">    public void setPrivacy(boolean privacy) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setPrivacy%28boolean%29%3Avoid.453173c72b5b302d4edca83a40ad2eee_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setPrivacy%28boolean%29%3Avoid.453173c72b5b302d4edca83a40ad2eee.html">summary for void CreateArticleRequest.setPrivacy(boolean)</a></td></tr>
+<tr><td class="num" id="LINE104">104</td><td class="line">        this.privacy = privacy; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setPrivacy%28boolean%29%3Avoid.453173c72b5b302d4edca83a40ad2eee_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 104];
+n$1=*&amp;privacy:_Bool [line 104];
+*n$0.privacy:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 104];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE105">105</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setPrivacy%28boolean%29%3Avoid.453173c72b5b302d4edca83a40ad2eee_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setPrivacy%28boolean%29%3Avoid.453173c72b5b302d4edca83a40ad2eee_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setPrivacy%28boolean%29%3Avoid.453173c72b5b302d4edca83a40ad2eee_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE106">106</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE107">107</td><td class="line">    public boolean isRubbish() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRubbish%28%29%3Aboolean.b67268a565e2edc79e3c7d1fafaa793b_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.isRubbish%28%29%3Aboolean.b67268a565e2edc79e3c7d1fafaa793b.html">summary for boolean CreateArticleRequest.isRubbish()</a></td></tr>
+<tr><td class="num" id="LINE108">108</td><td class="line">        return rubbish; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRubbish%28%29%3Aboolean.b67268a565e2edc79e3c7d1fafaa793b_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 108];
+n$1=*n$0.rubbish:_Bool(root com.zrlog.common.request.CreateArticleRequest) [line 108];
+*&amp;return:_Bool=n$1 [line 108];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRubbish%28%29%3Aboolean.b67268a565e2edc79e3c7d1fafaa793b_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.isRubbish%28%29%3Aboolean.b67268a565e2edc79e3c7d1fafaa793b_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE109">109</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE110">110</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE111">111</td><td class="line">    public void setRubbish(boolean rubbish) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRubbish%28boolean%29%3Avoid.7bf1f275eaad5548736e3d812051054d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setRubbish%28boolean%29%3Avoid.7bf1f275eaad5548736e3d812051054d.html">summary for void CreateArticleRequest.setRubbish(boolean)</a></td></tr>
+<tr><td class="num" id="LINE112">112</td><td class="line">        this.rubbish = rubbish; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRubbish%28boolean%29%3Avoid.7bf1f275eaad5548736e3d812051054d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 112];
+n$1=*&amp;rubbish:_Bool [line 112];
+*n$0.rubbish:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 112];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE113">113</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRubbish%28boolean%29%3Avoid.7bf1f275eaad5548736e3d812051054d_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRubbish%28boolean%29%3Avoid.7bf1f275eaad5548736e3d812051054d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setRubbish%28boolean%29%3Avoid.7bf1f275eaad5548736e3d812051054d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE114">114</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE115">115</td><td class="line">    public String getEditorType() { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getEditorType%28%29%3Ajava.lang.String.16cd7c57b467c59e616dd2182bab2662_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.getEditorType%28%29%3Ajava.lang.String.16cd7c57b467c59e616dd2182bab2662.html">summary for String CreateArticleRequest.getEditorType()</a></td></tr>
+<tr><td class="num" id="LINE116">116</td><td class="line">        return editorType; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getEditorType%28%29%3Ajava.lang.String.16cd7c57b467c59e616dd2182bab2662_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 116];
+n$1=*n$0.editorType:java.lang.String*(root com.zrlog.common.request.CreateArticleRequest) [line 116];
+*&amp;return:java.lang.String*=n$1 [line 116];
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getEditorType%28%29%3Ajava.lang.String.16cd7c57b467c59e616dd2182bab2662_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.getEditorType%28%29%3Ajava.lang.String.16cd7c57b467c59e616dd2182bab2662_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE117">117</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE118">118</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE119">119</td><td class="line">    public void setEditorType(String editorType) { <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setEditorType%28java.lang.String%29%3Avoid.ceff057176c476696ba5837f626c92bf_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/com.zrlog.common.request.CreateArticleRequest.setEditorType%28java.lang.String%29%3Avoid.ceff057176c476696ba5837f626c92bf.html">summary for void CreateArticleRequest.setEditorType(String)</a></td></tr>
+<tr><td class="num" id="LINE120">120</td><td class="line">        this.editorType = editorType; <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setEditorType%28java.lang.String%29%3Avoid.ceff057176c476696ba5837f626c92bf_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.common.request.CreateArticleRequest* [line 120];
+n$1=*&amp;editorType:java.lang.String* [line 120];
+*n$0.editorType:com.zrlog.common.request.CreateArticleRequest(root com.zrlog.common.request.CreateArticleRequest)=n$1 [line 120];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE121">121</td><td class="line">    } <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setEditorType%28java.lang.String%29%3Avoid.ceff057176c476696ba5837f626c92bf_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setEditorType%28java.lang.String%29%3Avoid.ceff057176c476696ba5837f626c92bf_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./CreateArticleRequest.java.eed72024c0f0013973a69122e114b08c/nodes/com.zrlog.common.request.CreateArticleRequest.setEditorType%28java.lang.String%29%3Avoid.ceff057176c476696ba5837f626c92bf_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE122">122</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

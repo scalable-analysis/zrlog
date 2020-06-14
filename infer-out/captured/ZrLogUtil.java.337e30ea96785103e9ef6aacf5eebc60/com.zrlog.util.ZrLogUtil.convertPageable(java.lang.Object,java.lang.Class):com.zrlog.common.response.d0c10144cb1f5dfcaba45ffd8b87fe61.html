@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.convertPageable(java.lang.Object,java.lang.Class):com.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE54">PageableResponse ZrLogUtil.convertPageable(Object,Class)</a></h1></center>
+<a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:27 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$bcvar6); [line 67];
+NULLIFY(&amp;$irvar3); [line 67];
+NULLIFY(&amp;dataList); [line 67];
+NULLIFY(&amp;$irvar4); [line 67];
+NULLIFY(&amp;$irvar7); [line 67];
+NULLIFY(&amp;jsonStr); [line 67];
+NULLIFY(&amp;oldDataList); [line 67];
+NULLIFY(&amp;$irvar6); [line 67];
+NULLIFY(&amp;$irvar0); [line 67];
+NULLIFY(&amp;$irvar8); [line 67];
+NULLIFY(&amp;$irvar1); [line 67];
+NULLIFY(&amp;$irvar2); [line 67];
+NULLIFY(&amp;obj); [line 67];
+NULLIFY(&amp;pageableResponse); [line 67];
+NULLIFY(&amp;response); [line 67];
+EXIT_SCOPE($bcvar6,$irvar3,dataList,$irvar4,$irvar7,jsonStr,oldDataList,$irvar6,$irvar0,$irvar8,$irvar1,$irvar2,obj,pageableResponse,response); [line 67];
+APPLY_ABSTRACTION; [line 67];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.google.gson.Gson):com.google.gson.Gson*) [line 55];
+n$1=_fun_Gson.&lt;init&gt;()(n$0:com.google.gson.Gson*) [line 55];
+*&amp;$irvar0:com.google.gson.Gson*=n$0 [line 55];
+EXIT_SCOPE(n$0,n$1); [line 55];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:com.google.gson.Gson* [line 55];
+_=*n$2:com.google.gson.Gson*(root com.google.gson.Gson) [line 55];
+n$4=*&amp;object:java.lang.Object* [line 55];
+n$5=_fun_String Gson.toJson(Object)(n$2:com.google.gson.Gson*,n$4:java.lang.Object*) virtual [line 55];
+*&amp;jsonStr:java.lang.String*=n$5 [line 55];
+NULLIFY(&amp;object); [line 55];
+NULLIFY(&amp;$irvar0); [line 55];
+EXIT_SCOPE(_,n$2,n$4,n$5,object,$irvar0); [line 55];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$6=_fun___new(sizeof(t=com.google.gson.Gson):com.google.gson.Gson*) [line 56];
+n$7=_fun_Gson.&lt;init&gt;()(n$6:com.google.gson.Gson*) [line 56];
+*&amp;$irvar1:com.google.gson.Gson*=n$6 [line 56];
+EXIT_SCOPE(n$6,n$7); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$8=*&amp;$irvar1:com.google.gson.Gson* [line 56];
+_=*n$8:com.google.gson.Gson*(root com.google.gson.Gson) [line 56];
+n$10=*&amp;jsonStr:java.lang.String* [line 56];
+n$11=_fun_Object Gson.fromJson(String,Class)(n$8:com.google.gson.Gson*,n$10:java.lang.String*,com.zrlog.common.response.PageableResponse:java.lang.Object*) virtual [line 56];
+*&amp;$irvar2:java.lang.Object*=n$11 [line 56];
+NULLIFY(&amp;jsonStr); [line 56];
+NULLIFY(&amp;$irvar1); [line 56];
+EXIT_SCOPE(_,n$8,n$10,n$11,jsonStr,$irvar1); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$12=*&amp;$irvar2:java.lang.Object* [line 56];
+n$13=_fun___cast(n$12:java.lang.Object*,sizeof(t=com.zrlog.common.response.PageableResponse;sub_t=( sub )(cast)):void) [line 56];
+*&amp;pageableResponse:com.zrlog.common.response.PageableResponse*=n$13 [line 56];
+NULLIFY(&amp;$irvar2); [line 56];
+EXIT_SCOPE(n$12,n$13,$irvar2); [line 56];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$14=_fun___new(sizeof(t=java.util.ArrayList):java.util.ArrayList*) [line 57];
+n$15=_fun_ArrayList.&lt;init&gt;()(n$14:java.util.ArrayList*) [line 57];
+*&amp;dataList:java.util.ArrayList*=n$14 [line 57];
+EXIT_SCOPE(n$14,n$15); [line 57];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$16=*&amp;pageableResponse:com.zrlog.common.response.PageableResponse* [line 58];
+_=*n$16:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 58];
+n$18=_fun_List PageableResponse.getRows()(n$16:com.zrlog.common.response.PageableResponse*) virtual [line 58];
+*&amp;oldDataList:java.util.List*=n$18 [line 58];
+EXIT_SCOPE(_,n$16,n$18); [line 58];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$19=*&amp;oldDataList:java.util.List* [line 59];
+_=*n$19:java.util.List*(root java.util.List) [line 59];
+n$21=_fun_Iterator List.iterator()(n$19:java.util.List*) interface virtual [line 59];
+*&amp;$bcvar6:java.util.Iterator*=n$21 [line 59];
+NULLIFY(&amp;oldDataList); [line 59];
+EXIT_SCOPE(_,n$19,n$21,oldDataList); [line 59];
+APPLY_ABSTRACTION; [line 59];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:18 11 succs:15 exn:3 Instructions
+n$22=*&amp;$bcvar6:java.util.Iterator* [line 59];
+_=*n$22:java.util.Iterator*(root java.util.Iterator) [line 59];
+n$24=_fun_boolean Iterator.hasNext()(n$22:java.util.Iterator*) interface virtual [line 59];
+*&amp;$irvar3:_Bool=n$24 [line 59];
+EXIT_SCOPE(_,n$22,n$24); [line 59];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:15 succs:16 exn:3 Conditional method_body
+n$25=*&amp;$irvar3:_Bool [line 59];
+PRUNE(!(n$25 == 0), true); [line 59];
+NULLIFY(&amp;$irvar3); [line 59];
+EXIT_SCOPE(n$25,$irvar3); [line 59];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:15 succs:19 exn:3 Conditional method_body
+n$25=*&amp;$irvar3:_Bool [line 59];
+PRUNE((n$25 == 0), false); [line 59];
+NULLIFY(&amp;$bcvar6); [line 59];
+NULLIFY(&amp;$irvar3); [line 59];
+EXIT_SCOPE(n$25,$bcvar6,$irvar3); [line 59];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node15.html"><span class='visited with_tooltip'>J_15<span class='tooltip'>node15 preds:12 succs:13 14 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:13 succs:17 exn:3 Instructions
+n$26=*&amp;$bcvar6:java.util.Iterator* [line 59];
+_=*n$26:java.util.Iterator*(root java.util.Iterator) [line 59];
+n$28=_fun_Object Iterator.next()(n$26:java.util.Iterator*) interface virtual [line 59];
+*&amp;obj:java.lang.Object*=n$28 [line 59];
+EXIT_SCOPE(_,n$26,n$28); [line 59];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$29=*&amp;obj:java.lang.Object* [line 60];
+n$30=*&amp;toClazz:java.lang.Class* [line 60];
+n$31=_fun_Object BeanUtil.convert(Object,Class)(n$29:java.lang.Object*,n$30:java.lang.Class*) [line 60];
+*&amp;$irvar4:java.lang.Object*=n$31 [line 60];
+NULLIFY(&amp;obj); [line 60];
+EXIT_SCOPE(n$29,n$30,n$31,obj); [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:12 exn:3 Instructions
+n$32=*&amp;dataList:java.util.ArrayList* [line 60];
+_=*n$32:java.util.ArrayList*(root java.util.ArrayList) [line 60];
+n$34=*&amp;$irvar4:java.lang.Object* [line 60];
+n$35=_fun_boolean ArrayList.add(Object)(n$32:java.util.ArrayList*,n$34:java.lang.Object*) interface virtual [line 60];
+*&amp;$irvar5:_Bool=n$35 [line 60];
+NULLIFY(&amp;$irvar5); [line 60];
+NULLIFY(&amp;$irvar4); [line 60];
+EXIT_SCOPE(_,n$32,n$34,n$35,$irvar5,$irvar4); [line 60];
+APPLY_ABSTRACTION; [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:14 succs:20 exn:3 Instructions
+n$36=_fun___new(sizeof(t=com.zrlog.common.response.PageableResponse):com.zrlog.common.response.PageableResponse*) [line 62];
+n$37=_fun_PageableResponse.&lt;init&gt;()(n$36:com.zrlog.common.response.PageableResponse*) [line 62];
+*&amp;response:com.zrlog.common.response.PageableResponse*=n$36 [line 62];
+EXIT_SCOPE(n$36,n$37); [line 62];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$38=*&amp;pageableResponse:com.zrlog.common.response.PageableResponse* [line 63];
+_=*n$38:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 63];
+n$40=_fun_long PageableResponse.getPage()(n$38:com.zrlog.common.response.PageableResponse*) virtual [line 63];
+*&amp;$irvar6:long=n$40 [line 63];
+EXIT_SCOPE(_,n$38,n$40); [line 63];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$41=*&amp;response:com.zrlog.common.response.PageableResponse* [line 63];
+_=*n$41:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 63];
+n$43=*&amp;$irvar6:long [line 63];
+n$44=_fun_void PageableResponse.setPage(long)(n$41:com.zrlog.common.response.PageableResponse*,n$43:long) virtual [line 63];
+NULLIFY(&amp;$irvar6); [line 63];
+EXIT_SCOPE(_,n$41,n$43,n$44,$irvar6); [line 63];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$45=*&amp;pageableResponse:com.zrlog.common.response.PageableResponse* [line 64];
+_=*n$45:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 64];
+n$47=_fun_long PageableResponse.getTotal()(n$45:com.zrlog.common.response.PageableResponse*) virtual [line 64];
+*&amp;$irvar7:long=n$47 [line 64];
+EXIT_SCOPE(_,n$45,n$47); [line 64];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$48=*&amp;response:com.zrlog.common.response.PageableResponse* [line 64];
+_=*n$48:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 64];
+n$50=*&amp;$irvar7:long [line 64];
+n$51=_fun_void PageableResponse.setTotal(long)(n$48:com.zrlog.common.response.PageableResponse*,n$50:long) virtual [line 64];
+NULLIFY(&amp;$irvar7); [line 64];
+EXIT_SCOPE(_,n$48,n$50,n$51,$irvar7); [line 64];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$52=*&amp;pageableResponse:com.zrlog.common.response.PageableResponse* [line 65];
+_=*n$52:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 65];
+n$54=_fun_long PageableResponse.getRecords()(n$52:com.zrlog.common.response.PageableResponse*) virtual [line 65];
+*&amp;$irvar8:long=n$54 [line 65];
+NULLIFY(&amp;pageableResponse); [line 65];
+EXIT_SCOPE(_,n$52,n$54,pageableResponse); [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$55=*&amp;response:com.zrlog.common.response.PageableResponse* [line 65];
+_=*n$55:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 65];
+n$57=*&amp;$irvar8:long [line 65];
+n$58=_fun_void PageableResponse.setRecords(long)(n$55:com.zrlog.common.response.PageableResponse*,n$57:long) virtual [line 65];
+NULLIFY(&amp;$irvar8); [line 65];
+EXIT_SCOPE(_,n$55,n$57,n$58,$irvar8); [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$59=*&amp;response:com.zrlog.common.response.PageableResponse* [line 66];
+_=*n$59:com.zrlog.common.response.PageableResponse*(root com.zrlog.common.response.PageableResponse) [line 66];
+n$61=*&amp;dataList:java.util.ArrayList* [line 66];
+n$62=_fun_void PageableResponse.setRows(List)(n$59:com.zrlog.common.response.PageableResponse*,n$61:java.util.ArrayList*) virtual [line 66];
+NULLIFY(&amp;dataList); [line 66];
+EXIT_SCOPE(_,n$59,n$61,n$62,dataList); [line 66];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.convertPageable%28java.lang.Object%2Cjava.lang.Class%29%3Acom.zrlog.common.response.d0c10144cb1f5dfcaba45ffd8b87fe61_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:2 exn:3 Instructions
+n$63=*&amp;response:com.zrlog.common.response.PageableResponse* [line 67];
+*&amp;return:com.zrlog.common.response.PageableResponse*=n$63 [line 67];
+NULLIFY(&amp;response); [line 67];
+EXIT_SCOPE(n$63,response); [line 67];
+APPLY_ABSTRACTION; [line 67];
+</span></span></a><br />@
+
+<span class='color_black'>com.zrlog.common.response.PageableResponse* PageableResponse ZrLogUtil.convertPageable(Object,Class)(java.lang.Object* object, java.lang.Class* toClazz)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { page -> { },
+                        records -> { },
+                        rows -> { },
+                        total -> { } } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= PageableResponse ZrLogUtil.convertPageable(Object,Class)
+; translation_unit= common/src/main/java/com/zrlog/util/ZrLogUtil.java
+; access= Public
+; formals= [(object,java.lang.Object*);  (toClazz,java.lang.Class*)]
+; is_defined= true
+; loc= common/src/main/java/com/zrlog/util/ZrLogUtil.java:54
+; locals= [{ name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $bcvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= response; typ= com.zrlog.common.response.PageableResponse*; modify_in_block= false }; 
+           { name= oldDataList; typ= java.util.List*; modify_in_block= false }; 
+           { name= dataList; typ= java.util.List*; modify_in_block= false }; 
+           { name= pageableResponse; typ= com.zrlog.common.response.PageableResponse*; modify_in_block= false }; 
+           { name= jsonStr; typ= java.lang.String*; modify_in_block= false }; 
+           { name= obj; typ= java.lang.Object*; modify_in_block= false }]
+; ret_type= com.zrlog.common.response.PageableResponse* 
+; proc_id= com.zrlog.util.ZrLogUtil.convertPageable(java.lang.Object,java.lang.Class):com.zrlog.common.response.PageableResponse }</pre>
+</body>
+</html>

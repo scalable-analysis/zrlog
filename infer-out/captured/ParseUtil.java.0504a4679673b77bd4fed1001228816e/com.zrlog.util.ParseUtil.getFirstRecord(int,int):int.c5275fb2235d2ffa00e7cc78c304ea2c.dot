@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_1" [label="1: Start int ParseUtil.getFirstRecord(int,int)\nFormals:  page:int pageSize:int\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_1" -> "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_4" ;
+"com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_2" [label="2: Exit int ParseUtil.getFirstRecord(int,int) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_3" -> "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_2" ;
+"com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_4" [label="4:  method_body \n   n$0=*&page:int [line 20]\n  n$1=*&pageSize:int [line 20]\n  *&return:int=((n$0 - 1) * n$1) [line 20]\n  NULLIFY(&pageSize); [line 20]\n  NULLIFY(&page); [line 20]\n  EXIT_SCOPE(n$0,n$1,pageSize,page); [line 20]\n  APPLY_ABSTRACTION; [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_4" -> "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_2" ;
+	 "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_4" -> "com.zrlog.util.ParseUtil.getFirstRecord(int,int):int.c5275fb2235d2ffa00e7cc78c304ea2c_3" [color="red" ];
+}

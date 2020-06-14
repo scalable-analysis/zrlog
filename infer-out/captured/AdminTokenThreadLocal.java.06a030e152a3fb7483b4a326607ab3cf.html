@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/token/AdminTokenThreadLocal.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.token; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.zrlog.common.vo.AdminTokenVO; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line"> * 使用ThreadLocal作多个类之间取值，和设值。而不是向传统方式需要获得HttpRequest对象才能取值，设值。 </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">public class AdminTokenThreadLocal { </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">    private AdminTokenThreadLocal() { <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<init>%28%29.6f36e440ffdd2460b0f3afa1a8563f61_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<init>%28%29.6f36e440ffdd2460b0f3afa1a8563f61_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.token.AdminTokenThreadLocal* [line 10];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.token.AdminTokenThreadLocal*) [line 10];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/com.zrlog.web.token.AdminTokenThreadLocal.<init>%28%29.6f36e440ffdd2460b0f3afa1a8563f61.html">summary for AdminTokenThreadLocal.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    } <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<init>%28%29.6f36e440ffdd2460b0f3afa1a8563f61_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<init>%28%29.6f36e440ffdd2460b0f3afa1a8563f61_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<init>%28%29.6f36e440ffdd2460b0f3afa1a8563f61_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    private static ThreadLocal&lt;AdminTokenVO&gt; userThreadLocal = new ThreadLocal&lt;&gt;(); <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<clinit>%28%29%3Avoid.f27358d7fece8dae65a967728a31b466_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<clinit>%28%29%3Avoid.f27358d7fece8dae65a967728a31b466_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.lang.ThreadLocal):java.lang.ThreadLocal*) [line 13];
+n$1=_fun_ThreadLocal.&lt;init&gt;()(n$0:java.lang.ThreadLocal*) [line 13];
+*&amp;$irvar0:java.lang.ThreadLocal*=n$0 [line 13];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<clinit>%28%29%3Avoid.f27358d7fece8dae65a967728a31b466_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:java.lang.ThreadLocal* [line 13];
+*&amp;#GB<>$com.zrlog.web.token.AdminTokenThreadLocal.userThreadLocal:com.zrlog.web.token.AdminTokenThreadLocal(root com.zrlog.web.token.AdminTokenThreadLocal)=n$2 [line 13];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<clinit>%28%29%3Avoid.f27358d7fece8dae65a967728a31b466_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<clinit>%28%29%3Avoid.f27358d7fece8dae65a967728a31b466_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.<clinit>%28%29%3Avoid.f27358d7fece8dae65a967728a31b466_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/com.zrlog.web.token.AdminTokenThreadLocal.<clinit>%28%29%3Avoid.f27358d7fece8dae65a967728a31b466.html">summary for void AdminTokenThreadLocal.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    public static AdminTokenVO getUser() { <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUser%28%29%3Acom.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/com.zrlog.web.token.AdminTokenThreadLocal.getUser%28%29%3Acom.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b.html">summary for AdminTokenVO AdminTokenThreadLocal.getUser()</a></td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">        return userThreadLocal.get(); <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUser%28%29%3Acom.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.token.AdminTokenThreadLocal.userThreadLocal:java.lang.ThreadLocal*(root com.zrlog.web.token.AdminTokenThreadLocal) [line 16];
+_=*n$0:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 16];
+n$2=_fun_Object ThreadLocal.get()(n$0:java.lang.ThreadLocal*) virtual [line 16];
+*&amp;$irvar0:java.lang.Object*=n$2 [line 16];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUser%28%29%3Acom.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$3=*&amp;$irvar0:java.lang.Object* [line 16];
+n$4=_fun___cast(n$3:java.lang.Object*,sizeof(t=com.zrlog.common.vo.AdminTokenVO;sub_t=( sub )(cast)):void) [line 16];
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=n$4 [line 16];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUser%28%29%3Acom.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUser%28%29%3Acom.zrlog.common.vo.AdminTokenVO.4019b0d0194d84e283e46681c68c870b_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    static void setAdminToken(AdminTokenVO user) { <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c.html">summary for void AdminTokenThreadLocal.setAdminToken(AdminTokenVO)</a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">        if (userThreadLocal.get() == null) { <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.token.AdminTokenThreadLocal.userThreadLocal:java.lang.ThreadLocal*(root com.zrlog.web.token.AdminTokenThreadLocal) [line 20];
+_=*n$0:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 20];
+n$2=_fun_Object ThreadLocal.get()(n$0:java.lang.ThreadLocal*) virtual [line 20];
+*&amp;$irvar0:java.lang.Object*=n$2 [line 20];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:java.lang.Object* [line 20];
+PRUNE(!(n$3 != null), true); [line 20];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:8 exn:3 Conditional method_body
+n$3=*&amp;$irvar0:java.lang.Object* [line 20];
+PRUNE((n$3 != null), false); [line 20];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">            userThreadLocal.set(user); <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:3 Instructions
+n$4=*&amp;#GB<>$com.zrlog.web.token.AdminTokenThreadLocal.userThreadLocal:java.lang.ThreadLocal*(root com.zrlog.web.token.AdminTokenThreadLocal) [line 21];
+_=*n$4:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 21];
+n$6=*&amp;user:com.zrlog.common.vo.AdminTokenVO* [line 21];
+n$7=_fun_void ThreadLocal.set(Object)(n$4:java.lang.ThreadLocal*,n$6:com.zrlog.common.vo.AdminTokenVO*) virtual [line 21];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    } <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 6 succs:2 exn:3 Instructions
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:8 3 succs: exn: Exit
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.setAdminToken%28com.zrlog.common.vo.AdminTokenVO%29%3Avoid.e744ed586f90b1fc0736498a3760fb5c_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    public static Integer getUserId() { <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e.html">summary for Integer AdminTokenThreadLocal.getUserId()</a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">        return userThreadLocal.get().getUserId(); <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.token.AdminTokenThreadLocal.userThreadLocal:java.lang.ThreadLocal*(root com.zrlog.web.token.AdminTokenThreadLocal) [line 26];
+_=*n$0:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 26];
+n$2=_fun_Object ThreadLocal.get()(n$0:java.lang.ThreadLocal*) virtual [line 26];
+*&amp;$irvar0:java.lang.Object*=n$2 [line 26];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=*&amp;$irvar0:java.lang.Object* [line 26];
+n$4=_fun___cast(n$3:java.lang.Object*,sizeof(t=com.zrlog.common.vo.AdminTokenVO;sub_t=( sub )(cast)):void) [line 26];
+_=*n$4:com.zrlog.common.vo.AdminTokenVO*(root com.zrlog.common.vo.AdminTokenVO) [line 26];
+n$6=_fun_int AdminTokenVO.getUserId()(n$4:com.zrlog.common.vo.AdminTokenVO*) virtual [line 26];
+*&amp;$irvar1:int=n$6 [line 26];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$7=*&amp;$irvar1:int [line 26];
+n$8=_fun_Integer Integer.valueOf(int)(n$7:int) [line 26];
+*&amp;$irvar2:java.lang.Integer*=n$8 [line 26];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+n$9=*&amp;$irvar2:java.lang.Integer* [line 26];
+*&amp;return:java.lang.Integer*=n$9 [line 26];
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.getUserId%28%29%3Ajava.lang.Integer.410596a1debabd13c6d7fab657fb121e_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">    public static void remove() { <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.remove%28%29%3Avoid.0440b7cc33e269003c551cf302337e1d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/com.zrlog.web.token.AdminTokenThreadLocal.remove%28%29%3Avoid.0440b7cc33e269003c551cf302337e1d.html">summary for void AdminTokenThreadLocal.remove()</a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        userThreadLocal.remove(); <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.remove%28%29%3Avoid.0440b7cc33e269003c551cf302337e1d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;#GB<>$com.zrlog.web.token.AdminTokenThreadLocal.userThreadLocal:java.lang.ThreadLocal*(root com.zrlog.web.token.AdminTokenThreadLocal) [line 30];
+_=*n$0:java.lang.ThreadLocal*(root java.lang.ThreadLocal) [line 30];
+n$2=_fun_void ThreadLocal.remove()(n$0:java.lang.ThreadLocal*) virtual [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    } <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.remove%28%29%3Avoid.0440b7cc33e269003c551cf302337e1d_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.remove%28%29%3Avoid.0440b7cc33e269003c551cf302337e1d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./AdminTokenThreadLocal.java.06a030e152a3fb7483b4a326607ab3cf/nodes/com.zrlog.web.token.AdminTokenThreadLocal.remove%28%29%3Avoid.0440b7cc33e269003c551cf302337e1d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

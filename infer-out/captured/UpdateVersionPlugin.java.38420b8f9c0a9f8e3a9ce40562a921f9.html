@@ -1,0 +1,554 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/plugin/UpdateVersionPlugin.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.plugin; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.hibegin.common.util.http.HttpUtil; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.jfinal.plugin.IPlugin; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.zrlog.common.type.AutoUpgradeVersionType; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import com.zrlog.common.vo.Version; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import com.zrlog.model.WebSite; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">import com.zrlog.util.BlogBuildInfoUtil; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">import com.zrlog.util.I18nUtil; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">import org.slf4j.Logger; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line">import org.slf4j.LoggerFactory; </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">import java.io.IOException; </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">import java.util.concurrent.ScheduledExecutorService; </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">import java.util.concurrent.ScheduledThreadPoolExecutor; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">import java.util.concurrent.TimeUnit; </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line"> * 基于JFinal插件的实现，使用定时器，定时检查是否有新的版本发布。 </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">public class UpdateVersionPlugin implements IPlugin { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<init>%28%29.353095c6f91a6cdacd9e4d3391cc9213_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<init>%28%29.353095c6f91a6cdacd9e4d3391cc9213_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 22];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.plugin.UpdateVersionPlugin*) [line 22];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<init>%28%29.353095c6f91a6cdacd9e4d3391cc9213_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<init>%28%29.353095c6f91a6cdacd9e4d3391cc9213_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<init>%28%29.353095c6f91a6cdacd9e4d3391cc9213_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.<init>%28%29.353095c6f91a6cdacd9e4d3391cc9213.html">summary for UpdateVersionPlugin.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(UpdateVersionPlugin.class); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<clinit>%28%29%3Avoid.4206675e92df8bed5fb9d1e0015bf044_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<clinit>%28%29%3Avoid.4206675e92df8bed5fb9d1e0015bf044_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.plugin.UpdateVersionPlugin:java.lang.Object*) [line 24];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 24];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<clinit>%28%29%3Avoid.4206675e92df8bed5fb9d1e0015bf044_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:org.slf4j.Logger* [line 24];
+*&amp;#GB<>$com.zrlog.web.plugin.UpdateVersionPlugin.LOGGER:com.zrlog.web.plugin.UpdateVersionPlugin(root com.zrlog.web.plugin.UpdateVersionPlugin)=n$1 [line 24];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<clinit>%28%29%3Avoid.4206675e92df8bed5fb9d1e0015bf044_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<clinit>%28%29%3Avoid.4206675e92df8bed5fb9d1e0015bf044_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.<clinit>%28%29%3Avoid.4206675e92df8bed5fb9d1e0015bf044_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.<clinit>%28%29%3Avoid.4206675e92df8bed5fb9d1e0015bf044.html">summary for void UpdateVersionPlugin.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    private ScheduledExecutorService scheduledExecutorService; </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">    private UpdateVersionTimerTask updateVersionTimerTask; </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">    private void initExecutorService() { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51.html">summary for void UpdateVersionPlugin.initExecutorService()</a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">        scheduledExecutorService = new ScheduledThreadPoolExecutor(1, r -&gt; { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.newThread%28java.lang.Runnable%29%3Ajava.lang.Thread.b61a9381c2b1f3792440575ec210de2f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5.8876fa1905e2b124350f36c938e8dae7_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.4eb3e37886c6c4e2a98260a27c1e0f12_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.<init>%28%29.eca7d3dfc5e243a38c36602fbda3c477_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.newThread%28java.lang.Runnable%29%3Ajava.lang.Thread.b61a9381c2b1f3792440575ec210de2f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;$bcvar1:java.lang.Runnable* [line 31];
+n$1=_fun_Thread UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6(Runnable)(n$0:java.lang.Runnable*) [line 31];
+*&amp;$irvar0:java.lang.Thread*=n$1 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_ThreadFactory UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6()() [line 31];
+*&amp;$irvar0:java.util.concurrent.ThreadFactory*=n$0 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5.8876fa1905e2b124350f36c938e8dae7_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6):com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6*) [line 31];
+n$1=_fun_UpdateVersionPlugin$Lambda$_5_6.&lt;init&gt;()(n$0:com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6*) [line 31];
+*&amp;$irvar0:com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6*=n$0 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.4eb3e37886c6c4e2a98260a27c1e0f12_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;$bcvar0:java.lang.Runnable* [line 31];
+n$1=_fun_Thread UpdateVersionPlugin.lambda$initExecutorService$0(Runnable)(n$0:java.lang.Runnable*) [line 31];
+*&amp;$irvar0:java.lang.Thread*=n$1 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.<init>%28%29.eca7d3dfc5e243a38c36602fbda3c477_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6* [line 31];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6*) [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.newThread%28java.lang.Runnable%29%3Ajava.lang.Thread.b61a9381c2b1f3792440575ec210de2f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$2=*&amp;$irvar0:java.lang.Thread* [line 31];
+*&amp;return:java.lang.Thread*=n$2 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=_fun___new(sizeof(t=java.util.concurrent.ScheduledThreadPoolExecutor):java.util.concurrent.ScheduledThreadPoolExecutor*) [line 31];
+n$2=*&amp;$irvar0:java.util.concurrent.ThreadFactory* [line 31];
+n$3=_fun_ScheduledThreadPoolExecutor.&lt;init&gt;(int,ThreadFactory)(n$1:java.util.concurrent.ScheduledThreadPoolExecutor*,1:int,n$2:java.util.concurrent.ThreadFactory*) [line 31];
+*&amp;$irvar1:java.util.concurrent.ScheduledThreadPoolExecutor*=n$1 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5.8876fa1905e2b124350f36c938e8dae7_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$2=*&amp;$irvar0:com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6* [line 31];
+*&amp;return:java.util.concurrent.ThreadFactory*=n$2 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.4eb3e37886c6c4e2a98260a27c1e0f12_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+n$2=*&amp;$irvar0:java.lang.Thread* [line 31];
+*&amp;return:java.lang.Thread*=n$2 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.<init>%28%29.eca7d3dfc5e243a38c36602fbda3c477_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.newThread%28java.lang.Runnable%29%3Ajava.lang.Thread.b61a9381c2b1f3792440575ec210de2f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5.8876fa1905e2b124350f36c938e8dae7_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.4eb3e37886c6c4e2a98260a27c1e0f12_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.<init>%28%29.eca7d3dfc5e243a38c36602fbda3c477_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 31];
+n$5=*&amp;$irvar1:java.util.concurrent.ScheduledThreadPoolExecutor* [line 31];
+*n$4.scheduledExecutorService:com.zrlog.web.plugin.UpdateVersionPlugin(root com.zrlog.web.plugin.UpdateVersionPlugin)=n$5 [line 31];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.newThread%28java.lang.Runnable%29%3Ajava.lang.Thread.b61a9381c2b1f3792440575ec210de2f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5.8876fa1905e2b124350f36c938e8dae7_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.4eb3e37886c6c4e2a98260a27c1e0f12_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.<init>%28%29.eca7d3dfc5e243a38c36602fbda3c477_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.newThread%28java.lang.Runnable%29%3Ajava.lang.Thread.b61a9381c2b1f3792440575ec210de2f.html">summary for Thread UpdateVersionPlugin$Lambda$_5_6.newThread(Runnable)</a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5.8876fa1905e2b124350f36c938e8dae7.html">summary for ThreadFactory UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6()</a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.4eb3e37886c6c4e2a98260a27c1e0f12.html">summary for Thread UpdateVersionPlugin.access_com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6(Runnable)</a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin%24Lambda%24_5_6.<init>%28%29.eca7d3dfc5e243a38c36602fbda3c477.html">summary for UpdateVersionPlugin$Lambda$_5_6.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">            Thread thread = new Thread(r); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.lambda%24initExecutorService%240%28java.lang.Runnable%29%3Ajava.lang..22167133f0868d53a5fb81b5fde45f93_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.lambda%24initExecutorService%240%28java.lang.Runnable%29%3Ajava.lang..22167133f0868d53a5fb81b5fde45f93_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.lang.Thread):java.lang.Thread*) [line 32];
+n$1=*&amp;r:java.lang.Runnable* [line 32];
+n$2=_fun_Thread.&lt;init&gt;(Runnable)(n$0:java.lang.Thread*,n$1:java.lang.Runnable*) [line 32];
+*&amp;thread:java.lang.Thread*=n$0 [line 32];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.lambda%24initExecutorService%240%28java.lang.Runnable%29%3Ajava.lang..22167133f0868d53a5fb81b5fde45f93.html">summary for Thread UpdateVersionPlugin.lambda$initExecutorService$0(Runnable)</a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">            thread.setName(&quot;update-version-plugin-thread&quot;); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.lambda%24initExecutorService%240%28java.lang.Runnable%29%3Ajava.lang..22167133f0868d53a5fb81b5fde45f93_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=*&amp;thread:java.lang.Thread* [line 33];
+_=*n$3:java.lang.Thread*(root java.lang.Thread) [line 33];
+n$5=_fun_void Thread.setName(String)(n$3:java.lang.Thread*,"update-version-plugin-thread":java.lang.Object*) virtual [line 33];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">            return thread; <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.lambda%24initExecutorService%240%28java.lang.Runnable%29%3Ajava.lang..22167133f0868d53a5fb81b5fde45f93_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+n$6=*&amp;thread:java.lang.Thread* [line 34];
+*&amp;return:java.lang.Thread*=n$6 [line 34];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.lambda%24initExecutorService%240%28java.lang.Runnable%29%3Ajava.lang..22167133f0868d53a5fb81b5fde45f93_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.lambda%24initExecutorService%240%28java.lang.Runnable%29%3Ajava.lang..22167133f0868d53a5fb81b5fde45f93_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">        }); </td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">    } <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService%28%29%3Avoid.510b7229e1073035e1b432e3bf3fca51_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">    public boolean start() { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260.html">summary for boolean UpdateVersionPlugin.start()</a></td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">        String value = new WebSite().getStringValueByName(Constants.AUTO_UPGRADE_VERSION_KEY); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.model.WebSite):com.zrlog.model.WebSite*) [line 40];
+n$1=_fun_WebSite.&lt;init&gt;()(n$0:com.zrlog.model.WebSite*) [line 40];
+*&amp;$irvar0:com.zrlog.model.WebSite*=n$0 [line 40];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:com.zrlog.model.WebSite* [line 40];
+_=*n$2:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 40];
+n$4=_fun_String WebSite.getStringValueByName(String)(n$2:com.zrlog.model.WebSite*,"autoUpgradeVersion":java.lang.Object*) virtual [line 40];
+*&amp;value:java.lang.String*=n$4 [line 40];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">        boolean checkPreview = previewAble(); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:3 Instructions
+n$5=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 41];
+n$6=_fun_boolean UpdateVersionPlugin.previewAble()(n$5:com.zrlog.web.plugin.UpdateVersionPlugin*) [line 41];
+*&amp;checkPreview:_Bool=n$6 [line 41];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">        if (value != null &amp;&amp; !&quot;&quot;.equals(value)) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:3 Conditional method_body
+n$7=*&amp;value:java.lang.String* [line 42];
+PRUNE(!(n$7 == null), true); [line 42];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 11 exn:3 Instructions
+n$8=*&amp;value:java.lang.String* [line 42];
+n$9=_fun_boolean String.equals(Object)("":java.lang.Object*,n$8:java.lang.String*) virtual [line 42];
+*&amp;$irvar1:_Bool=n$9 [line 42];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:9 succs:12 exn:3 Conditional method_body
+n$10=*&amp;$irvar1:_Bool [line 42];
+PRUNE(!(n$10 != 0), true); [line 42];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:9 succs:32 exn:3 Conditional method_body
+n$10=*&amp;$irvar1:_Bool [line 42];
+PRUNE((n$10 != 0), false); [line 42];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:32 exn:3 Conditional method_body
+n$7=*&amp;value:java.lang.String* [line 42];
+PRUNE((n$7 == null), false); [line 42];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">            AutoUpgradeVersionType autoUpgradeVersionType = AutoUpgradeVersionType.cycle(Integer.parseInt(value)); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 exn:3 Instructions
+n$11=*&amp;value:java.lang.String* [line 43];
+n$12=_fun_int Integer.parseInt(String)(n$11:java.lang.String*) [line 43];
+*&amp;$irvar2:int=n$12 [line 43];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 15 exn:3 Instructions
+n$13=*&amp;$irvar2:int [line 43];
+n$14=_fun_AutoUpgradeVersionType AutoUpgradeVersionType.cycle(int)(n$13:int) [line 43];
+*&amp;autoUpgradeVersionType:com.zrlog.common.type.AutoUpgradeVersionType*=n$14 [line 43];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">            if (scheduledExecutorService != null) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:13 succs:16 exn:3 Conditional method_body
+n$15=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 44];
+n$16=*n$15.scheduledExecutorService:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 44];
+PRUNE(!(n$16 == null), true); [line 44];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:13 succs:17 18 exn:3 Conditional method_body
+n$15=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 44];
+n$16=*n$15.scheduledExecutorService:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 44];
+PRUNE((n$16 == null), false); [line 44];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">                scheduledExecutorService.shutdown(); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:14 succs:17 18 exn:3 Instructions
+n$17=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 45];
+n$18=*n$17.scheduledExecutorService:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 45];
+_=*n$18:java.util.concurrent.ScheduledExecutorService*(root java.util.concurrent.ScheduledExecutorService) [line 45];
+n$20=_fun_void ScheduledExecutorService.shutdown()(n$18:java.util.concurrent.ScheduledExecutorService*) interface virtual [line 45];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">            //开启了定时检查，定时器开始工作 </td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line">            if (autoUpgradeVersionType != AutoUpgradeVersionType.NEVER) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:16 15 succs:19 exn:3 Conditional method_body
+n$21=*&amp;autoUpgradeVersionType:com.zrlog.common.type.AutoUpgradeVersionType* [line 48];
+n$22=*&amp;#GB<>$com.zrlog.common.type.AutoUpgradeVersionType.NEVER:com.zrlog.common.type.AutoUpgradeVersionType*(root com.zrlog.common.type.AutoUpgradeVersionType) [line 48];
+PRUNE(!(n$21 == n$22), true); [line 48];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:16 15 succs:26 exn:3 Conditional method_body
+n$21=*&amp;autoUpgradeVersionType:com.zrlog.common.type.AutoUpgradeVersionType* [line 48];
+n$22=*&amp;#GB<>$com.zrlog.common.type.AutoUpgradeVersionType.NEVER:com.zrlog.common.type.AutoUpgradeVersionType*(root com.zrlog.common.type.AutoUpgradeVersionType) [line 48];
+PRUNE((n$21 == n$22), false); [line 48];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">                initExecutorService(); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:17 succs:20 exn:3 Instructions
+n$23=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 49];
+n$24=_fun_void UpdateVersionPlugin.initExecutorService()(n$23:com.zrlog.web.plugin.UpdateVersionPlugin*) [line 49];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">                updateVersionTimerTask = new UpdateVersionTimerTask(checkPreview); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$25=_fun___new(sizeof(t=com.zrlog.web.plugin.UpdateVersionTimerTask):com.zrlog.web.plugin.UpdateVersionTimerTask*) [line 50];
+n$26=*&amp;checkPreview:_Bool [line 50];
+n$27=_fun_UpdateVersionTimerTask.&lt;init&gt;(boolean)(n$25:com.zrlog.web.plugin.UpdateVersionTimerTask*,n$26:_Bool) [line 50];
+*&amp;$irvar3:com.zrlog.web.plugin.UpdateVersionTimerTask*=n$25 [line 50];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+n$28=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 50];
+n$29=*&amp;$irvar3:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 50];
+*n$28.updateVersionTimerTask:com.zrlog.web.plugin.UpdateVersionPlugin(root com.zrlog.web.plugin.UpdateVersionPlugin)=n$29 [line 50];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">                scheduledExecutorService.schedule(updateVersionTimerTask, autoUpgradeVersionType.getCycle(), TimeUnit.SECONDS); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:23 exn:3 Instructions
+n$30=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 51];
+n$31=*n$30.updateVersionTimerTask:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 51];
+*&amp;$irvar6:com.zrlog.web.plugin.UpdateVersionTimerTask*=n$31 [line 51];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:22 succs:24 exn:3 Instructions
+n$32=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 51];
+n$33=*n$32.scheduledExecutorService:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 51];
+*&amp;$irvar5:java.util.concurrent.ScheduledExecutorService*=n$33 [line 51];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$34=*&amp;autoUpgradeVersionType:com.zrlog.common.type.AutoUpgradeVersionType* [line 51];
+_=*n$34:com.zrlog.common.type.AutoUpgradeVersionType*(root com.zrlog.common.type.AutoUpgradeVersionType) [line 51];
+n$36=_fun_int AutoUpgradeVersionType.getCycle()(n$34:com.zrlog.common.type.AutoUpgradeVersionType*) virtual [line 51];
+*&amp;$irvar4:int=n$36 [line 51];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$37=*&amp;$irvar5:java.util.concurrent.ScheduledExecutorService* [line 51];
+_=*n$37:java.util.concurrent.ScheduledExecutorService*(root java.util.concurrent.ScheduledExecutorService) [line 51];
+n$39=*&amp;$irvar6:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 51];
+n$40=*&amp;$irvar4:int [line 51];
+n$41=*&amp;#GB<>$java.util.concurrent.TimeUnit.SECONDS:java.util.concurrent.TimeUnit*(root java.util.concurrent.TimeUnit) [line 51];
+n$42=_fun_ScheduledFuture ScheduledExecutorService.schedule(Runnable,long,TimeUnit)(n$37:java.util.concurrent.ScheduledExecutorService*,n$39:com.zrlog.web.plugin.UpdateVersionTimerTask*,(long)n$40:long,n$41:java.util.concurrent.TimeUnit*) interface virtual [line 51];
+*&amp;$irvar7:java.util.concurrent.ScheduledFuture*=n$42 [line 51];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">            LOGGER.info(&quot;UpdateVersionPlugin start autoUpgradeVersionType &quot; + autoUpgradeVersionType); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 18 succs:27 exn:3 Instructions
+n$43=*&amp;#GB<>$com.zrlog.web.plugin.UpdateVersionPlugin.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 53];
+*&amp;$irvar8:org.slf4j.Logger*=n$43 [line 53];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 succs:28 exn:3 Instructions
+n$44=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 53];
+n$45=_fun_StringBuilder.&lt;init&gt;()(n$44:java.lang.StringBuilder*) [line 53];
+*&amp;$irvar9:java.lang.StringBuilder*=n$44 [line 53];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$46=*&amp;$irvar9:java.lang.StringBuilder* [line 53];
+_=*n$46:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 53];
+n$48=_fun_StringBuilder StringBuilder.append(String)(n$46:java.lang.StringBuilder*,"UpdateVersionPlugin start autoUpgradeVersionType ":java.lang.Object*) virtual [line 53];
+*&amp;$irvar10:java.lang.StringBuilder*=n$48 [line 53];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$49=*&amp;$irvar10:java.lang.StringBuilder* [line 53];
+_=*n$49:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 53];
+n$51=*&amp;autoUpgradeVersionType:com.zrlog.common.type.AutoUpgradeVersionType* [line 53];
+n$52=_fun_StringBuilder StringBuilder.append(Object)(n$49:java.lang.StringBuilder*,n$51:com.zrlog.common.type.AutoUpgradeVersionType*) virtual [line 53];
+*&amp;$irvar11:java.lang.StringBuilder*=n$52 [line 53];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$53=*&amp;$irvar11:java.lang.StringBuilder* [line 53];
+_=*n$53:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 53];
+n$55=_fun_String StringBuilder.toString()(n$53:java.lang.StringBuilder*) virtual [line 53];
+*&amp;$irvar12:java.lang.String*=n$55 [line 53];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$56=*&amp;$irvar8:org.slf4j.Logger* [line 53];
+_=*n$56:org.slf4j.Logger*(root org.slf4j.Logger) [line 53];
+n$58=*&amp;$irvar12:java.lang.String* [line 53];
+n$59=_fun_void Logger.info(String)(n$56:org.slf4j.Logger*,n$58:java.lang.String*) interface virtual [line 53];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">        return true; <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 11 8 succs:2 exn:3 Instructions
+*&amp;return:_Bool=1 [line 55];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:32 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE57">57</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE58">58</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE59">59</td><td class="line">    public boolean stop() { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d.html">summary for boolean UpdateVersionPlugin.stop()</a></td></tr>
+<tr><td class="num" id="LINE60">60</td><td class="line">        if (scheduledExecutorService != null) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 60];
+n$1=*n$0.scheduledExecutorService:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 60];
+PRUNE(!(n$1 == null), true); [line 60];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:7 exn:3 Conditional method_body
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 60];
+n$1=*n$0.scheduledExecutorService:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 60];
+PRUNE((n$1 == null), false); [line 60];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE61">61</td><td class="line">            scheduledExecutorService.shutdown(); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:7 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 61];
+n$3=*n$2.scheduledExecutorService:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 61];
+_=*n$3:java.util.concurrent.ScheduledExecutorService*(root java.util.concurrent.ScheduledExecutorService) [line 61];
+n$5=_fun_void ScheduledExecutorService.shutdown()(n$3:java.util.concurrent.ScheduledExecutorService*) interface virtual [line 61];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE62">62</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE63">63</td><td class="line">        return true; <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 5 succs:2 exn:3 Instructions
+*&amp;return:_Bool=1 [line 63];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.stop%28%29%3Aboolean.84f3cdb03b73e6a0ab8ef3722a6e459d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE64">64</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE65">65</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE66">66</td><td class="line">    private boolean previewAble() { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.previewAble%28%29%3Aboolean.cbadc86812b7a5c8d3d9dd16e37b75eb_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.previewAble%28%29%3Aboolean.cbadc86812b7a5c8d3d9dd16e37b75eb.html">summary for boolean UpdateVersionPlugin.previewAble()</a></td></tr>
+<tr><td class="num" id="LINE67">67</td><td class="line">        return new WebSite().getBoolValueByName(&quot;upgradePreview&quot;); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.previewAble%28%29%3Aboolean.cbadc86812b7a5c8d3d9dd16e37b75eb_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.model.WebSite):com.zrlog.model.WebSite*) [line 67];
+n$1=_fun_WebSite.&lt;init&gt;()(n$0:com.zrlog.model.WebSite*) [line 67];
+*&amp;$irvar0:com.zrlog.model.WebSite*=n$0 [line 67];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.previewAble%28%29%3Aboolean.cbadc86812b7a5c8d3d9dd16e37b75eb_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:com.zrlog.model.WebSite* [line 67];
+_=*n$2:com.zrlog.model.WebSite*(root com.zrlog.model.WebSite) [line 67];
+n$4=_fun_boolean WebSite.getBoolValueByName(String)(n$2:com.zrlog.model.WebSite*,"upgradePreview":java.lang.Object*) virtual [line 67];
+*&amp;$irvar1:_Bool=n$4 [line 67];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.previewAble%28%29%3Aboolean.cbadc86812b7a5c8d3d9dd16e37b75eb_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+n$5=*&amp;$irvar1:_Bool [line 67];
+*&amp;return:_Bool=n$5 [line 67];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.previewAble%28%29%3Aboolean.cbadc86812b7a5c8d3d9dd16e37b75eb_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.previewAble%28%29%3Aboolean.cbadc86812b7a5c8d3d9dd16e37b75eb_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE68">68</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE69">69</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE70">70</td><td class="line">    /** </td></tr>
+<tr><td class="num" id="LINE71">71</td><td class="line">     * 获取最新的版本信息。 </td></tr>
+<tr><td class="num" id="LINE72">72</td><td class="line">     * </td></tr>
+<tr><td class="num" id="LINE73">73</td><td class="line">     * @param fetch 是否发起新的请求 </td></tr>
+<tr><td class="num" id="LINE74">74</td><td class="line">     * @return </td></tr>
+<tr><td class="num" id="LINE75">75</td><td class="line">     */ </td></tr>
+<tr><td class="num" id="LINE76">76</td><td class="line">    public Version getLastVersion(boolean fetch) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5.html">summary for Version UpdateVersionPlugin.getLastVersion(boolean)</a></td></tr>
+<tr><td class="num" id="LINE77">77</td><td class="line">        boolean checkPreview = previewAble(); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 77];
+n$1=_fun_boolean UpdateVersionPlugin.previewAble()(n$0:com.zrlog.web.plugin.UpdateVersionPlugin*) [line 77];
+*&amp;checkPreview:_Bool=n$1 [line 77];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE78">78</td><td class="line">        if (updateVersionTimerTask == null) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$2=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 78];
+n$3=*n$2.updateVersionTimerTask:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 78];
+PRUNE(!(n$3 != null), true); [line 78];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:9 10 exn:3 Conditional method_body
+n$2=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 78];
+n$3=*n$2.updateVersionTimerTask:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 78];
+PRUNE((n$3 != null), false); [line 78];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE79">79</td><td class="line">            updateVersionTimerTask = new UpdateVersionTimerTask(checkPreview); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:3 Instructions
+n$4=_fun___new(sizeof(t=com.zrlog.web.plugin.UpdateVersionTimerTask):com.zrlog.web.plugin.UpdateVersionTimerTask*) [line 79];
+n$5=*&amp;checkPreview:_Bool [line 79];
+n$6=_fun_UpdateVersionTimerTask.&lt;init&gt;(boolean)(n$4:com.zrlog.web.plugin.UpdateVersionTimerTask*,n$5:_Bool) [line 79];
+*&amp;$irvar0:com.zrlog.web.plugin.UpdateVersionTimerTask*=n$4 [line 79];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 10 exn:3 Instructions
+n$7=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 79];
+n$8=*&amp;$irvar0:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 79];
+*n$7.updateVersionTimerTask:com.zrlog.web.plugin.UpdateVersionPlugin(root com.zrlog.web.plugin.UpdateVersionPlugin)=n$8 [line 79];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE80">80</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE81">81</td><td class="line">        if (fetch) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:8 6 succs:11 exn:3 Conditional method_body
+n$9=*&amp;fetch:_Bool [line 81];
+PRUNE(!(n$9 == 0), true); [line 81];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 6 succs:15 exn:3 Conditional method_body
+n$9=*&amp;fetch:_Bool [line 81];
+PRUNE((n$9 == 0), false); [line 81];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE82">82</td><td class="line">            try { </td></tr>
+<tr><td class="num" id="LINE83">83</td><td class="line">                return updateVersionTimerTask.fetchLastVersion(checkPreview); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:9 succs:12 exn:19 Instructions
+n$10=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 83];
+n$11=*n$10.updateVersionTimerTask:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 83];
+_=*n$11:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 83];
+n$13=*&amp;checkPreview:_Bool [line 83];
+n$14=_fun_Version UpdateVersionTimerTask.fetchLastVersion(boolean)(n$11:com.zrlog.web.plugin.UpdateVersionTimerTask*,n$13:_Bool) virtual [line 83];
+*&amp;$irvar1:com.zrlog.common.vo.Version*=n$14 [line 83];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:2 exn:3 Instructions
+n$15=*&amp;$irvar1:com.zrlog.common.vo.Version* [line 83];
+*&amp;return:com.zrlog.common.vo.Version*=n$15 [line 83];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE84">84</td><td class="line">            } catch (Exception e) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:17 succs:14 exn:3 Instructions
+n$16=*&amp;CatchVar37:java.lang.Object* [line 84];
+*&amp;e:java.lang.Object*=n$16 [line 84];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:19 succs:13 exn:3 Conditional exception handler
+n$28=_fun___instanceof(n$27:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 84];
+PRUNE(n$28, true); [line 84];
+*&amp;CatchVar37:com.zrlog.common.vo.Version*=n$27 [line 84];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:19 succs:3 exn:3 Conditional exception handler
+n$28=_fun___instanceof(n$27:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 84];
+PRUNE(!n$28, false); [line 84];
+*&amp;return:com.zrlog.common.vo.Version*=EXN n$27 [line 84];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds: succs:17 18 exn:3 Instructions
+n$26=*&amp;return:com.zrlog.common.vo.Version* [line 84];
+*&amp;return:com.zrlog.common.vo.Version*=null [line 84];
+n$27=_fun___unwrap_exception(n$26:com.zrlog.common.vo.Version*) [line 84];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE85">85</td><td class="line">                LOGGER.error(&quot;&quot;,e); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$17=*&amp;#GB<>$com.zrlog.web.plugin.UpdateVersionPlugin.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 85];
+_=*n$17:org.slf4j.Logger*(root org.slf4j.Logger) [line 85];
+n$19=*&amp;e:java.lang.Object* [line 85];
+n$20=_fun_void Logger.error(String,Throwable)(n$17:org.slf4j.Logger*,"":java.lang.Object*,n$19:java.lang.Object*) interface virtual [line 85];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE86">86</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE87">87</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE88">88</td><td class="line">        return updateVersionTimerTask.getVersion(); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 10 succs:16 exn:3 Instructions
+n$21=*&amp;this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 88];
+n$22=*n$21.updateVersionTimerTask:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 88];
+_=*n$22:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 88];
+n$24=_fun_Version UpdateVersionTimerTask.getVersion()(n$22:com.zrlog.web.plugin.UpdateVersionTimerTask*) virtual [line 88];
+*&amp;$irvar2:com.zrlog.common.vo.Version*=n$24 [line 88];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:2 exn:3 Instructions
+n$25=*&amp;$irvar2:com.zrlog.common.vo.Version* [line 88];
+*&amp;return:com.zrlog.common.vo.Version*=n$25 [line 88];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:16 12 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getLastVersion%28boolean%29%3Acom.zrlog.common.vo.Version.9434407229eb1262353b902262c691a5_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:18 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE89">89</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE90">90</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE91">91</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE92">92</td><td class="line">    public static String getChangeLog(String version, String buildId) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f.html">summary for String UpdateVersionPlugin.getChangeLog(String,String)</a></td></tr>
+<tr><td class="num" id="LINE93">93</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE94">94</td><td class="line">            return HttpUtil.getInstance().getSuccessTextByUrl(&quot;http://www.zrlog.com/changelog/&quot; + <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:24 Instructions
+n$0=_fun_HttpUtil HttpUtil.getInstance()() [line 94];
+*&amp;$irvar0:com.hibegin.common.util.http.HttpUtil*=n$0 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:24 Instructions
+n$1=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 94];
+n$2=_fun_StringBuilder.&lt;init&gt;()(n$1:java.lang.StringBuilder*) [line 94];
+*&amp;$irvar1:java.lang.StringBuilder*=n$1 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:24 Instructions
+n$3=*&amp;$irvar1:java.lang.StringBuilder* [line 94];
+_=*n$3:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 94];
+n$5=_fun_StringBuilder StringBuilder.append(String)(n$3:java.lang.StringBuilder*,"http://www.zrlog.com/changelog/":java.lang.Object*) virtual [line 94];
+*&amp;$irvar2:java.lang.StringBuilder*=n$5 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:24 Instructions
+n$6=*&amp;$irvar2:java.lang.StringBuilder* [line 94];
+_=*n$6:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 94];
+n$8=*&amp;version:java.lang.String* [line 94];
+n$9=_fun_StringBuilder StringBuilder.append(String)(n$6:java.lang.StringBuilder*,n$8:java.lang.String*) virtual [line 94];
+*&amp;$irvar3:java.lang.StringBuilder*=n$9 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:24 Instructions
+n$10=*&amp;$irvar3:java.lang.StringBuilder* [line 94];
+_=*n$10:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 94];
+n$12=_fun_StringBuilder StringBuilder.append(String)(n$10:java.lang.StringBuilder*,"-":java.lang.Object*) virtual [line 94];
+*&amp;$irvar4:java.lang.StringBuilder*=n$12 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:24 Instructions
+n$13=*&amp;$irvar4:java.lang.StringBuilder* [line 94];
+_=*n$13:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 94];
+n$15=*&amp;buildId:java.lang.String* [line 94];
+n$16=_fun_StringBuilder StringBuilder.append(String)(n$13:java.lang.StringBuilder*,n$15:java.lang.String*) virtual [line 94];
+*&amp;$irvar5:java.lang.StringBuilder*=n$16 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:24 Instructions
+n$17=*&amp;$irvar5:java.lang.StringBuilder* [line 94];
+_=*n$17:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 94];
+n$19=_fun_StringBuilder StringBuilder.append(String)(n$17:java.lang.StringBuilder*,".html?lang=":java.lang.Object*) virtual [line 94];
+*&amp;$irvar6:java.lang.StringBuilder*=n$19 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:24 Instructions
+n$36=*&amp;$irvar0:com.hibegin.common.util.http.HttpUtil* [line 94];
+_=*n$36:com.hibegin.common.util.http.HttpUtil*(root com.hibegin.common.util.http.HttpUtil) [line 94];
+n$38=*&amp;$irvar12:java.lang.String* [line 94];
+n$39=_fun_String HttpUtil.getSuccessTextByUrl(String)(n$36:com.hibegin.common.util.http.HttpUtil*,n$38:java.lang.String*) virtual [line 94];
+*&amp;$irvar13:java.lang.String*=n$39 [line 94];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:2 exn:3 Instructions
+n$40=*&amp;$irvar13:java.lang.String* [line 94];
+*&amp;return:java.lang.String*=n$40 [line 94];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE95">95</td><td class="line">                    version + &quot;-&quot; + buildId + &quot;.html?lang=&quot; + </td></tr>
+<tr><td class="num" id="LINE96">96</td><td class="line">                    I18nUtil.getCurrentLocale() + &quot;&amp;v=&quot; + BlogBuildInfoUtil.getBuildId()); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:24 Instructions
+n$20=_fun_String I18nUtil.getCurrentLocale()() [line 96];
+*&amp;$irvar7:java.lang.String*=n$20 [line 96];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:24 Instructions
+n$21=*&amp;$irvar6:java.lang.StringBuilder* [line 96];
+_=*n$21:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 96];
+n$23=*&amp;$irvar7:java.lang.String* [line 96];
+n$24=_fun_StringBuilder StringBuilder.append(String)(n$21:java.lang.StringBuilder*,n$23:java.lang.String*) virtual [line 96];
+*&amp;$irvar8:java.lang.StringBuilder*=n$24 [line 96];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:24 Instructions
+n$25=*&amp;$irvar8:java.lang.StringBuilder* [line 96];
+_=*n$25:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 96];
+n$27=_fun_StringBuilder StringBuilder.append(String)(n$25:java.lang.StringBuilder*,"&v=":java.lang.Object*) virtual [line 96];
+*&amp;$irvar9:java.lang.StringBuilder*=n$27 [line 96];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:24 Instructions
+n$28=_fun_String BlogBuildInfoUtil.getBuildId()() [line 96];
+*&amp;$irvar10:java.lang.String*=n$28 [line 96];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:24 Instructions
+n$29=*&amp;$irvar9:java.lang.StringBuilder* [line 96];
+_=*n$29:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 96];
+n$31=*&amp;$irvar10:java.lang.String* [line 96];
+n$32=_fun_StringBuilder StringBuilder.append(String)(n$29:java.lang.StringBuilder*,n$31:java.lang.String*) virtual [line 96];
+*&amp;$irvar11:java.lang.StringBuilder*=n$32 [line 96];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:24 Instructions
+n$33=*&amp;$irvar11:java.lang.StringBuilder* [line 96];
+_=*n$33:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 96];
+n$35=_fun_String StringBuilder.toString()(n$33:java.lang.StringBuilder*) virtual [line 96];
+*&amp;$irvar12:java.lang.String*=n$35 [line 96];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE97">97</td><td class="line">        } catch (IOException e) { <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:22 succs:20 exn:3 Instructions
+n$41=*&amp;CatchVar57:java.lang.Object* [line 97];
+*&amp;e:java.lang.Object*=n$41 [line 97];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node22.html"><span class='visited with_tooltip'>C_22<span class='tooltip'>node22 preds:24 succs:19 exn:3 Conditional exception handler
+n$48=_fun___instanceof(n$47:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 97];
+PRUNE(n$48, true); [line 97];
+*&amp;CatchVar57:java.lang.String*=n$47 [line 97];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node23.html"><span class='visited with_tooltip'>C_23<span class='tooltip'>node23 preds:24 succs:3 exn:3 Conditional exception handler
+n$48=_fun___instanceof(n$47:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 97];
+PRUNE(!n$48, false); [line 97];
+*&amp;return:java.lang.String*=EXN n$47 [line 97];
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds: succs:22 23 exn:3 Instructions
+n$46=*&amp;return:java.lang.String* [line 97];
+*&amp;return:java.lang.String*=null [line 97];
+n$47=_fun___unwrap_exception(n$46:java.lang.String*) [line 97];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE98">98</td><td class="line">            LOGGER.error(&quot;&quot;, e); <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$42=*&amp;#GB<>$com.zrlog.web.plugin.UpdateVersionPlugin.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.UpdateVersionPlugin) [line 98];
+_=*n$42:org.slf4j.Logger*(root org.slf4j.Logger) [line 98];
+n$44=*&amp;e:java.lang.Object* [line 98];
+n$45=_fun_void Logger.error(String,Throwable)(n$42:org.slf4j.Logger*,"":java.lang.Object*,n$44:java.lang.Object*) interface virtual [line 98];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE99">99</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE100">100</td><td class="line">        return &quot;&quot;; <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:21 18 3 succs: exn: Exit
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:23 succs:2 exn:2 Instructions
+</span></span></a> <a href="./UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9/nodes/com.zrlog.web.plugin.UpdateVersionPlugin.getChangeLog%28java.lang.String%2Cjava.lang.String%29%3Ajava.lang.S.7161aaa642f032a753182dd1dbba5c3f_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:2 exn:3 Instructions
+*&amp;return:java.lang.String*="" [line 100];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE101">101</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE102">102</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

@@ -1,0 +1,156 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_1" [label="1: Start Log Log.findByIdOrAlias(Object)\nFormals:  this:com.zrlog.model.Log* idOrAlias:java.lang.Object*\nLocals:  $irvar11:void $irvar10:void $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void log:com.zrlog.model.Log* sql:java.lang.String* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_1" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_4" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_1" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_5" ;
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_2" [label="2: Exit Log Log.findByIdOrAlias(Object) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 45]\n  NULLIFY(&$irvar9); [line 45]\n  NULLIFY(&$irvar5); [line 45]\n  NULLIFY(&log); [line 45]\n  NULLIFY(&$irvar4); [line 45]\n  NULLIFY(&$irvar7); [line 45]\n  NULLIFY(&sql); [line 45]\n  NULLIFY(&$irvar6); [line 45]\n  NULLIFY(&$irvar0); [line 45]\n  NULLIFY(&$irvar11); [line 45]\n  NULLIFY(&$irvar10); [line 45]\n  NULLIFY(&$irvar8); [line 45]\n  NULLIFY(&$irvar1); [line 45]\n  NULLIFY(&$irvar2); [line 45]\n  EXIT_SCOPE($irvar3,$irvar9,$irvar5,log,$irvar4,$irvar7,sql,$irvar6,$irvar0,$irvar11,$irvar10,$irvar8,$irvar1,$irvar2); [line 45]\n  APPLY_ABSTRACTION; [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_2" ;
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_4" [label="4: Prune (true branch, if) \n   n$0=*&idOrAlias:java.lang.Object* [line 36]\n  PRUNE(!(n$0 == null), true); [line 36]\n  EXIT_SCOPE(n$0); [line 36]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_4" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_6" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_4" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_5" [label="5: Prune (false branch, if) \n   n$0=*&idOrAlias:java.lang.Object* [line 36]\n  PRUNE((n$0 == null), false); [line 36]\n  NULLIFY(&idOrAlias); [line 36]\n  EXIT_SCOPE(n$0,idOrAlias); [line 36]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_5" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_31" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_5" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_6" [label="6:  method_body \n   *&sql:java.lang.Object*=\"select l.*,last_update_date as lastUpdateDate,u.userName,(select count(commentId) from comment where logId=l.logId) commentSize ,t.alias as typeAlias,t.typeName as typeName  from log l inner join user u,type t where t.typeId=l.typeId and u.userId=l.userId and rubbish=? and privacy=? and l.logId=?\" [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_6" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_7" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_6" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_7" [label="7:  method_body \n   n$1=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[3]):java.lang.Object*[_*_](*)) [line 38]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$1 [line 38]\n  EXIT_SCOPE(n$1); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_7" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_8" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_7" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_8" [label="8:  method_body \n   n$2=*&this:com.zrlog.model.Log* [line 38]\n  n$3=*n$2.rubbish:_Bool(root com.zrlog.model.Log) [line 38]\n  *&$irvar1:_Bool=n$3 [line 38]\n  EXIT_SCOPE(n$2,n$3); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_8" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_9" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_8" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_9" [label="9:  Call Boolean Boolean.valueOf(boolean) \n   n$4=*&$irvar1:_Bool [line 38]\n  n$5=_fun_Boolean Boolean.valueOf(boolean)(n$4:_Bool) [line 38]\n  *&$irvar2:java.lang.Boolean*=n$5 [line 38]\n  NULLIFY(&$irvar1); [line 38]\n  EXIT_SCOPE(n$4,n$5,$irvar1); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_9" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_10" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_9" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_10" [label="10:  method_body \n   n$6=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$7=*&$irvar2:java.lang.Boolean* [line 38]\n  *n$6[0]:java.lang.Boolean*=n$7 [line 38]\n  NULLIFY(&$irvar2); [line 38]\n  EXIT_SCOPE(n$6,n$7,$irvar2); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_10" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_11" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_10" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_11" [label="11:  method_body \n   n$8=*&this:com.zrlog.model.Log* [line 38]\n  n$9=*n$8.privacy:_Bool(root com.zrlog.model.Log) [line 38]\n  *&$irvar3:_Bool=n$9 [line 38]\n  EXIT_SCOPE(n$8,n$9); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_11" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_12" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_11" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_12" [label="12:  Call Boolean Boolean.valueOf(boolean) \n   n$10=*&$irvar3:_Bool [line 38]\n  n$11=_fun_Boolean Boolean.valueOf(boolean)(n$10:_Bool) [line 38]\n  *&$irvar4:java.lang.Boolean*=n$11 [line 38]\n  NULLIFY(&$irvar3); [line 38]\n  EXIT_SCOPE(n$10,n$11,$irvar3); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_12" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_13" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_12" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_13" [label="13:  method_body \n   n$12=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$13=*&$irvar4:java.lang.Boolean* [line 38]\n  *n$12[1]:java.lang.Boolean*=n$13 [line 38]\n  NULLIFY(&$irvar4); [line 38]\n  EXIT_SCOPE(n$12,n$13,$irvar4); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_13" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_14" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_13" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_14" [label="14:  method_body \n   n$14=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$15=*&idOrAlias:java.lang.Object* [line 38]\n  *n$14[2]:java.lang.Object*=n$15 [line 38]\n  EXIT_SCOPE(n$14,n$15); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_14" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_15" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_14" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_15" [label="15:  Call Model Model.findFirst(String,Object[]) \n   n$16=*&this:com.zrlog.model.Log* [line 38]\n  _=*n$16:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 38]\n  n$18=*&sql:java.lang.Object* [line 38]\n  n$19=*&$irvar0:java.lang.Object*[_*_](*) [line 38]\n  n$20=_fun_Model Model.findFirst(String,Object[])(n$16:com.zrlog.model.Log*,n$18:java.lang.Object*,n$19:java.lang.Object*[_*_](*)) virtual [line 38]\n  *&$irvar5:com.jfinal.plugin.activerecord.Model*=n$20 [line 38]\n  NULLIFY(&sql); [line 38]\n  NULLIFY(&$irvar0); [line 38]\n  EXIT_SCOPE(_,n$16,n$18,n$19,n$20,sql,$irvar0); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_15" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_16" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_15" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_16" [label="16:  method_body \n   n$21=*&$irvar5:com.jfinal.plugin.activerecord.Model* [line 38]\n  n$22=_fun___cast(n$21:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 38]\n  *&log:com.zrlog.model.Log*=n$22 [line 38]\n  NULLIFY(&$irvar5); [line 38]\n  EXIT_SCOPE(n$21,n$22,$irvar5); [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_16" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_17" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_16" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_18" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_16" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_17" [label="17: Prune (true branch, if) \n   n$23=*&log:com.zrlog.model.Log* [line 39]\n  PRUNE(!(n$23 != null), true); [line 39]\n  NULLIFY(&log); [line 39]\n  EXIT_SCOPE(n$23,log); [line 39]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_17" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_19" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_17" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_18" [label="18: Prune (false branch, if) \n   n$23=*&log:com.zrlog.model.Log* [line 39]\n  PRUNE((n$23 != null), false); [line 39]\n  EXIT_SCOPE(n$23); [line 39]\n  APPLY_ABSTRACTION; [line 39]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_18" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_30" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_18" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_19" [label="19:  method_body \n   *&sql:java.lang.Object*=\"select l.*,last_update_date as lastUpdateDate,u.userName,(select count(commentId) from comment where logId=l.logId) commentSize ,t.alias as typeAlias,t.typeName as typeName  from log l inner join user u,type t where t.typeId=l.typeId and u.userId=l.userId and rubbish=? and privacy=? and l.alias=?\" [line 40]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_19" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_20" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_19" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_20" [label="20:  method_body \n   n$24=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[3]):java.lang.Object*[_*_](*)) [line 41]\n  *&$irvar6:java.lang.Object*[_*_](*)=n$24 [line 41]\n  EXIT_SCOPE(n$24); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_20" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_21" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_20" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_21" [label="21:  method_body \n   n$25=*&this:com.zrlog.model.Log* [line 41]\n  n$26=*n$25.rubbish:_Bool(root com.zrlog.model.Log) [line 41]\n  *&$irvar7:_Bool=n$26 [line 41]\n  EXIT_SCOPE(n$25,n$26); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_21" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_22" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_21" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_22" [label="22:  Call Boolean Boolean.valueOf(boolean) \n   n$27=*&$irvar7:_Bool [line 41]\n  n$28=_fun_Boolean Boolean.valueOf(boolean)(n$27:_Bool) [line 41]\n  *&$irvar8:java.lang.Boolean*=n$28 [line 41]\n  NULLIFY(&$irvar7); [line 41]\n  EXIT_SCOPE(n$27,n$28,$irvar7); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_22" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_23" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_22" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_23" [label="23:  method_body \n   n$29=*&$irvar6:java.lang.Object*[_*_](*) [line 41]\n  n$30=*&$irvar8:java.lang.Boolean* [line 41]\n  *n$29[0]:java.lang.Boolean*=n$30 [line 41]\n  NULLIFY(&$irvar8); [line 41]\n  EXIT_SCOPE(n$29,n$30,$irvar8); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_23" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_24" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_23" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_24" [label="24:  method_body \n   n$31=*&this:com.zrlog.model.Log* [line 41]\n  n$32=*n$31.privacy:_Bool(root com.zrlog.model.Log) [line 41]\n  *&$irvar9:_Bool=n$32 [line 41]\n  EXIT_SCOPE(n$31,n$32); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_24" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_25" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_24" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_25" [label="25:  Call Boolean Boolean.valueOf(boolean) \n   n$33=*&$irvar9:_Bool [line 41]\n  n$34=_fun_Boolean Boolean.valueOf(boolean)(n$33:_Bool) [line 41]\n  *&$irvar10:java.lang.Boolean*=n$34 [line 41]\n  NULLIFY(&$irvar9); [line 41]\n  EXIT_SCOPE(n$33,n$34,$irvar9); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_25" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_26" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_25" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_26" [label="26:  method_body \n   n$35=*&$irvar6:java.lang.Object*[_*_](*) [line 41]\n  n$36=*&$irvar10:java.lang.Boolean* [line 41]\n  *n$35[1]:java.lang.Boolean*=n$36 [line 41]\n  NULLIFY(&$irvar10); [line 41]\n  EXIT_SCOPE(n$35,n$36,$irvar10); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_26" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_27" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_26" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_27" [label="27:  method_body \n   n$37=*&$irvar6:java.lang.Object*[_*_](*) [line 41]\n  n$38=*&idOrAlias:java.lang.Object* [line 41]\n  *n$37[2]:java.lang.Object*=n$38 [line 41]\n  NULLIFY(&idOrAlias); [line 41]\n  EXIT_SCOPE(n$37,n$38,idOrAlias); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_27" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_28" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_27" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_28" [label="28:  Call Model Model.findFirst(String,Object[]) \n   n$39=*&this:com.zrlog.model.Log* [line 41]\n  _=*n$39:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 41]\n  n$41=*&sql:java.lang.Object* [line 41]\n  n$42=*&$irvar6:java.lang.Object*[_*_](*) [line 41]\n  n$43=_fun_Model Model.findFirst(String,Object[])(n$39:com.zrlog.model.Log*,n$41:java.lang.Object*,n$42:java.lang.Object*[_*_](*)) virtual [line 41]\n  *&$irvar11:com.jfinal.plugin.activerecord.Model*=n$43 [line 41]\n  NULLIFY(&sql); [line 41]\n  NULLIFY(&$irvar6); [line 41]\n  NULLIFY(&this); [line 41]\n  EXIT_SCOPE(_,n$39,n$41,n$42,n$43,sql,$irvar6,this); [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_28" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_29" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_28" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_29" [label="29:  method_body \n   n$44=*&$irvar11:com.jfinal.plugin.activerecord.Model* [line 41]\n  n$45=_fun___cast(n$44:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 41]\n  *&log:com.zrlog.model.Log*=n$45 [line 41]\n  NULLIFY(&$irvar11); [line 41]\n  EXIT_SCOPE(n$44,n$45,$irvar11); [line 41]\n  APPLY_ABSTRACTION; [line 41]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_29" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_30" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_29" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_30" [label="30:  method_body \n   n$46=*&log:com.zrlog.model.Log* [line 43]\n  *&return:com.zrlog.model.Log*=n$46 [line 43]\n  NULLIFY(&log); [line 43]\n  EXIT_SCOPE(n$46,log); [line 43]\n  APPLY_ABSTRACTION; [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_30" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_2" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_30" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+"com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_31" [label="31:  method_body \n   *&return:com.zrlog.model.Log*=null [line 45]\n  APPLY_ABSTRACTION; [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_31" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_2" ;
+	 "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_31" -> "com.zrlog.model.Log.findByIdOrAlias(java.lang.Object):com.zrlog.model.Log.422ef8a02aac8556d2f80193c7b4c435_3" [color="red" ];
+}

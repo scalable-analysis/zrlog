@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Log.findByTitleOrPlainContentLike(int,int,java.lang.String):java.util.Map.7c4910f92e4e9248169117c0082831a6_node51</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">51</a></h1></center>PROC: <a href="./../com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6.html">Map Log.findByTitleOrPlainContentLike(int,int,String)</a> LINE: <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">209</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node50.html"><span class='visited with_tooltip'>N_50<span class='tooltip'>node50 preds:49 succs:51 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node52.html"><span class='visited with_tooltip'>N_52<span class='tooltip'>node52 preds:51 succs:2 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$116=*&amp;this:com.zrlog.model.Log* [line 209];
+n$117=*&amp;page:int [line 209];
+n$118=*&amp;pageSize:int [line 209];
+n$119=*&amp;data:java.util.HashMap* [line 209];
+n$120=*&amp;$irvar20:java.lang.Object*[_*_](*) [line 209];
+n$121=_fun_void ModelUtil.fillPageData(Model,int,int,String,Map,Object[])(n$116:com.zrlog.model.Log*,n$117:int,n$118:int,"from log l inner join user u,type t where rubbish=? and privacy=? and u.userId=l.userId and t.typeId=l.typeId and (l.title like ? or l.plain_content like ?)":java.lang.Object*,n$119:java.util.HashMap*,n$120:java.lang.Object*[_*_](*)) [line 209];
+</LISTING>
+<hr width="100%">
+<a name="session6" href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node51.html#session6">node51#session6</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">209</a>) [compute pre] liveness 51
+<LISTING class='color_black'>JOIN
+
+LEFT:   { data }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session7" href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node51.html#session7">node51#session7</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">209</a>) [exec] liveness 51
+<LISTING class='color_black'>PRE STATE:
+{ data }
+
+INSTR=  n$121=_fun_void ModelUtil.fillPageData(Model,int,int,String,Map,Object[])(n$116:com.zrlog.model.Log*,n$117:int,n$118:int,&quot;from log l inner join user u,type t where rubbish=? and privacy=? and u.userId=l.userId and t.typeId=l.typeId and (l.title like ? or l.plain_content like ?)&quot;:java.lang.Object*,n$119:java.util.HashMap*,n$120:java.lang.Object*[_*_](*)) [line 209]; 
+
+STATE:
+{ n$116, n$117, n$118, n$119, n$120, data }
+
+INSTR=  n$120=*&amp;$irvar20:java.lang.Object*[_*_](*) [line 209]; 
+
+STATE:
+{ n$116, n$117, n$118, n$119, data, $irvar20 }
+
+INSTR=  n$119=*&amp;data:java.util.HashMap* [line 209]; 
+
+STATE:
+{ n$116, n$117, n$118, data, $irvar20 }
+
+INSTR=  n$118=*&amp;pageSize:int [line 209]; 
+
+STATE:
+{ n$116, n$117, data, pageSize, $irvar20 }
+
+INSTR=  n$117=*&amp;page:int [line 209]; 
+
+STATE:
+{ n$116, data, pageSize, $irvar20, page }
+
+INSTR=  n$116=*&amp;this:com.zrlog.model.Log* [line 209]; 
+
+STATE:
+{ data, pageSize, $irvar20, page, this }
+
+</LISTING>
+<hr width="100%">
+<a name="session199" href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node51.html#session199">node51#session199</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">209</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session200" href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node51.html#session200">node51#session200</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">209</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ data, $irvar20 },{ n$114, n$115, $irvar34 })
+
+INSTR=  n$116=*&amp;this:com.zrlog.model.Log* [line 209]; 
+
+STATE:
+({ n$116, data, $irvar20 },{ n$114, n$115, $irvar34 })
+
+INSTR=  n$117=*&amp;page:int [line 209]; 
+
+STATE:
+({ n$116, n$117, data, $irvar20 },{ n$114, n$115, $irvar34 })
+
+INSTR=  n$118=*&amp;pageSize:int [line 209]; 
+
+STATE:
+({ n$116, n$117, n$118, data, $irvar20 },{ n$114, n$115, $irvar34 })
+
+INSTR=  n$119=*&amp;data:java.util.HashMap* [line 209]; 
+
+STATE:
+({ n$116, n$117, n$118, n$119, data, $irvar20 },{ n$114, n$115, $irvar34 })
+
+INSTR=  n$120=*&amp;$irvar20:java.lang.Object*[_*_](*) [line 209]; 
+
+STATE:
+({ n$116, n$117, n$118, n$119, n$120, data, $irvar20 },
+{ n$114, n$115, $irvar34 })
+
+INSTR=  n$121=_fun_void ModelUtil.fillPageData(Model,int,int,String,Map,Object[])(n$116:com.zrlog.model.Log*,n$117:int,n$118:int,&quot;from log l inner join user u,type t where rubbish=? and privacy=? and u.userId=l.userId and t.typeId=l.typeId and (l.title like ? or l.plain_content like ?)&quot;:java.lang.Object*,n$119:java.util.HashMap*,n$120:java.lang.Object*[_*_](*)) [line 209]; 
+
+STATE:
+({ data },
+{ n$116, n$117, n$118, n$119, n$120, n$121, pageSize, $irvar20, page, this })
+
+</LISTING>
+<hr width="100%">
+<a name="session96" href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node51.html#session96">node51#session96</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">209</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session97" href="./../nodes/com.zrlog.model.Log.findByTitleOrPlainContentLike%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7c4910f92e4e9248169117c0082831a6_node51.html#session97">node51#session97</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE209">209</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$2 -&gt; { [_] -&gt; { },
+           [_] -&gt; { },
+           [_] -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) },
+  n$19 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$26 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$29 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$40 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$43 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$46 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  n$64 -&gt; (Footprint({ @val$3*, @val$0* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$68 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$69 -&gt; { [_] -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+            [_] -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) },
+  n$73 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$79 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$86 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$90 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$93 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$96 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$103 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$107 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$110 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$113 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  data -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sql -&gt; { },
+  this -&gt; (Footprint({ @val$3*, @val$0* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) }
+
+
+
+
+
+
+INSTR=  n$121 := void ModelUtil.fillPageData(Model,int,int,String,Map,Object[])({ this,
+                                                                    page,
+                                                                    pageSize,
+                                                                    &quot;from log l inner join user u,type t where rubbish=? and privacy=? and u.userId=l.userId and t.typeId=l.typeId and (l.title like ? or l.plain_content like ?)&quot;,
+                                                                    data,
+                                                                    n$69 }) [line 209]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;pageSize); [line 209]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar20); [line 209]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;page); [line 209]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;this); [line 209]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$121,pageSize,page,this); [line 209]; 
+
+STATE:
+{ n$2 -&gt; { [_] -&gt; { },
+           [_] -&gt; { },
+           [_] -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) },
+  n$19 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$23 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$26 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$29 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$36 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$40 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$43 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$46 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$51 -&gt; Footprint({ @val$2, @val$1 }) ~&gt; ?,
+  n$64 -&gt; (Footprint({ @val$3*, @val$0* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$68 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$69 -&gt; { [_] -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+            [_] -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) },
+  n$73 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$79 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$86 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$90 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$93 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$96 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$103 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$107 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  n$110 -&gt; Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?,
+  n$113 -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  data -&gt; (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *),
+  sql -&gt; { },
+  this -&gt; (Footprint({ @val$3*, @val$0* }) + Sanitizers({ StringConcatenation }) ~&gt; ?, *) }
+
+</LISTING>

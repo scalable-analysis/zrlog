@@ -1,0 +1,354 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.Log.getArchives():java.util.Map.826297a251d9b7881311b3691a11bb2c_node26</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">26</a></h1></center>PROC: <a href="./../com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c.html">Map Log.getArchives()</a> LINE: <a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node25.html"><span class='visited with_tooltip'>N_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node27.html"><span class='visited with_tooltip'>N_27<span class='tooltip'>node27 preds:26 succs:30 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$38=*&amp;$irvar7:java.text.SimpleDateFormat* [line 165];
+_=*n$38:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 165];
+n$40=*&amp;$irvar9:java.util.Date* [line 165];
+n$41=_fun_String DateFormat.format(Date)(n$38:java.text.SimpleDateFormat*,n$40:java.util.Date*) virtual [line 165];
+*&amp;key:java.lang.String*=n$41 [line 165];
+</LISTING>
+<hr width="100%">
+<a name="session104" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session104">node26#session104</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] liveness 26
+<LISTING class='color_black'>JOIN
+
+LEFT:   { $bcvar3, archives, key }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session105" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session105">node26#session105</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] liveness 26
+<LISTING class='color_black'>PRE STATE:
+{ $bcvar3, archives, key }
+
+INSTR=  *&amp;key:java.lang.String*=n$41 [line 165]; 
+
+STATE:
+{ n$41, $bcvar3, archives }
+
+INSTR=  n$41=_fun_String DateFormat.format(Date)(n$38:java.text.SimpleDateFormat*,n$40:java.util.Date*) virtual [line 165]; 
+
+STATE:
+{ n$38, n$40, $bcvar3, archives }
+
+INSTR=  n$40=*&amp;$irvar9:java.util.Date* [line 165]; 
+
+STATE:
+{ n$38, $bcvar3, $irvar9, archives }
+
+INSTR=  _=*n$38:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  n$38=*&amp;$irvar7:java.text.SimpleDateFormat* [line 165]; 
+
+STATE:
+{ $bcvar3, $irvar9, archives, $irvar7 }
+
+</LISTING>
+<hr width="100%">
+<a name="session104" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session104">node26#session104</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] liveness 26
+<LISTING class='color_black'>JOIN
+
+LEFT:   { $bcvar3, archives, key }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session105" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session105">node26#session105</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] liveness 26
+<LISTING class='color_black'>PRE STATE:
+{ $bcvar3, archives, key }
+
+INSTR=  *&amp;key:java.lang.String*=n$41 [line 165]; 
+
+STATE:
+{ n$41, $bcvar3, archives }
+
+INSTR=  n$41=_fun_String DateFormat.format(Date)(n$38:java.text.SimpleDateFormat*,n$40:java.util.Date*) virtual [line 165]; 
+
+STATE:
+{ n$38, n$40, $bcvar3, archives }
+
+INSTR=  n$40=*&amp;$irvar9:java.util.Date* [line 165]; 
+
+STATE:
+{ n$38, $bcvar3, $irvar9, archives }
+
+INSTR=  _=*n$38:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  n$38=*&amp;$irvar7:java.text.SimpleDateFormat* [line 165]; 
+
+STATE:
+{ $bcvar3, $irvar9, archives, $irvar7 }
+
+</LISTING>
+<hr width="100%">
+<a name="session195" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session195">node26#session195</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session196" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session196">node26#session196</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $bcvar3, $irvar9, archives, $irvar7 },{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  n$38=*&amp;$irvar7:java.text.SimpleDateFormat* [line 165]; 
+
+STATE:
+({ n$38, $bcvar3, $irvar9, archives, $irvar7 },{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  _=*n$38:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 165]; 
+
+STATE:
+({ _, n$38, $bcvar3, $irvar9, archives, $irvar7 },
+{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  n$40=*&amp;$irvar9:java.util.Date* [line 165]; 
+
+STATE:
+({ _, n$38, n$40, $bcvar3, $irvar9, archives, $irvar7 },
+{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  n$41=_fun_String DateFormat.format(Date)(n$38:java.text.SimpleDateFormat*,n$40:java.util.Date*) virtual [line 165]; 
+
+STATE:
+({ _, n$38, n$40, n$41, $bcvar3, $irvar9, archives, $irvar7 },
+{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  *&amp;key:java.lang.String*=n$41 [line 165]; 
+
+STATE:
+({ $bcvar3, archives, key },{ _, n$38, n$40, n$41, $irvar9, $irvar7 })
+
+</LISTING>
+<hr width="100%">
+<a name="session195" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session195">node26#session195</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session196" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session196">node26#session196</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $bcvar3, $irvar9, archives, $irvar7 },{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  n$38=*&amp;$irvar7:java.text.SimpleDateFormat* [line 165]; 
+
+STATE:
+({ n$38, $bcvar3, $irvar9, archives, $irvar7 },{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  _=*n$38:java.text.SimpleDateFormat*(root java.text.SimpleDateFormat) [line 165]; 
+
+STATE:
+({ _, n$38, $bcvar3, $irvar9, archives, $irvar7 },
+{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  n$40=*&amp;$irvar9:java.util.Date* [line 165]; 
+
+STATE:
+({ _, n$38, n$40, $bcvar3, $irvar9, archives, $irvar7 },
+{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  n$41=_fun_String DateFormat.format(Date)(n$38:java.text.SimpleDateFormat*,n$40:java.util.Date*) virtual [line 165]; 
+
+STATE:
+({ _, n$38, n$40, n$41, $bcvar3, $irvar9, archives, $irvar7 },
+{ n$35, n$36, n$37, $irvar8 })
+
+INSTR=  *&amp;key:java.lang.String*=n$41 [line 165]; 
+
+STATE:
+({ $bcvar3, archives, key },{ _, n$38, n$40, n$41, $irvar9, $irvar7 })
+
+</LISTING>
+<hr width="100%">
+<a name="session48" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session48">node26#session48</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session49" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session49">node26#session49</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$0 -&gt; { [_] -&gt; { } }, archives -&gt; { }, objects -&gt; { }, lo -&gt; { } }
+
+
+
+
+INSTR=  n$41 := String DateFormat.format(Date)({ n$30, n$35 }) [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  key := n$41 [line 165]; 
+
+STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+INSTR=  NULLIFY(&amp;$irvar9); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar7); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$41); [line 165]; 
+
+STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+</LISTING>
+<hr width="100%">
+<a name="session48" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session48">node26#session48</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session49" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session49">node26#session49</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$0 -&gt; { [_] -&gt; { } }, archives -&gt; { }, objects -&gt; { }, lo -&gt; { } }
+
+
+
+
+INSTR=  n$41 := String DateFormat.format(Date)({ n$30, n$35 }) [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  key := n$41 [line 165]; 
+
+STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+INSTR=  NULLIFY(&amp;$irvar9); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar7); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$41); [line 165]; 
+
+STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+</LISTING>
+<hr width="100%">
+<a name="session100" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session100">node26#session100</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session101" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session101">node26#session101</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+
+
+
+INSTR=  n$41 := String DateFormat.format(Date)({ n$30, n$35 }) [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  key := n$41 [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar9); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar7); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$41); [line 165]; 
+
+STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+</LISTING>
+<hr width="100%">
+<a name="session100" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session100">node26#session100</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session101" href="./../nodes/com.zrlog.model.Log.getArchives%28%29%3Ajava.util.Map.826297a251d9b7881311b3691a11bb2c_node26.html#session101">node26#session101</a>(<a href="./../../Log.java.a143a916b341885650189777c518aaa9.html#LINE165">165</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+
+
+
+INSTR=  n$41 := String DateFormat.format(Date)({ n$30, n$35 }) [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  key := n$41 [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar9); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar7); [line 165]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$41); [line 165]; 
+
+STATE:
+{ n$0 -&gt; { [_] -&gt; { } },
+  archives -&gt; { },
+  objects -&gt; { },
+  key -&gt; { },
+  lo -&gt; { } }
+
+</LISTING>

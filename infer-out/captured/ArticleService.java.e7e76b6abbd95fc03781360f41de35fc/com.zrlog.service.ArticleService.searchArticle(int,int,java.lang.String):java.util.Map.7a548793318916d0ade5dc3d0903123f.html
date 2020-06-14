@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ArticleService.java.e7e76b6abbd95fc03781360f41de35fc.html#LINE135">Map ArticleService.searchArticle(int,int,String)</a></h1></center>
+<a href="./nodes/com.zrlog.service.ArticleService.searchArticle%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7a548793318916d0ade5dc3d0903123f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.searchArticle%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7a548793318916d0ade5dc3d0903123f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.searchArticle%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7a548793318916d0ade5dc3d0903123f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;data); [line 138];
+NULLIFY(&amp;$irvar0); [line 138];
+EXIT_SCOPE(data,$irvar0); [line 138];
+APPLY_ABSTRACTION; [line 138];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.searchArticle%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7a548793318916d0ade5dc3d0903123f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=com.zrlog.model.Log):com.zrlog.model.Log*) [line 136];
+n$1=_fun_Log.&lt;init&gt;()(n$0:com.zrlog.model.Log*) [line 136];
+*&amp;$irvar0:com.zrlog.model.Log*=n$0 [line 136];
+EXIT_SCOPE(n$0,n$1); [line 136];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.searchArticle%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7a548793318916d0ade5dc3d0903123f_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;$irvar0:com.zrlog.model.Log* [line 136];
+_=*n$2:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 136];
+n$4=*&amp;page:int [line 136];
+n$5=*&amp;row:int [line 136];
+n$6=*&amp;keywords:java.lang.String* [line 136];
+n$7=_fun_Map Log.findByTitleOrPlainContentLike(int,int,String)(n$2:com.zrlog.model.Log*,n$4:int,n$5:int,n$6:java.lang.String*) virtual [line 136];
+*&amp;data:java.util.Map*=n$7 [line 136];
+NULLIFY(&amp;row); [line 136];
+NULLIFY(&amp;$irvar0); [line 136];
+NULLIFY(&amp;page); [line 136];
+EXIT_SCOPE(_,n$2,n$4,n$5,n$6,n$7,row,$irvar0,page); [line 136];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.searchArticle%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7a548793318916d0ade5dc3d0903123f_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$8=*&amp;this:com.zrlog.service.ArticleService* [line 137];
+n$9=*&amp;data:java.util.Map* [line 137];
+n$10=*&amp;keywords:java.lang.String* [line 137];
+n$11=_fun_void ArticleService.wrapperSearchKeyword(Map,String)(n$8:com.zrlog.service.ArticleService*,n$9:java.util.Map*,n$10:java.lang.String*) [line 137];
+NULLIFY(&amp;keywords); [line 137];
+NULLIFY(&amp;this); [line 137];
+EXIT_SCOPE(n$8,n$9,n$10,n$11,keywords,this); [line 137];
+</span></span></a> <a href="./nodes/com.zrlog.service.ArticleService.searchArticle%28int%2Cint%2Cjava.lang.String%29%3Ajava.util.Map.7a548793318916d0ade5dc3d0903123f_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+n$12=*&amp;data:java.util.Map* [line 138];
+*&amp;return:java.util.Map*=n$12 [line 138];
+NULLIFY(&amp;data); [line 138];
+EXIT_SCOPE(n$12,data); [line 138];
+APPLY_ABSTRACTION; [line 138];
+</span></span></a><br />@
+
+<span class='color_black'>java.util.Map* Map ArticleService.searchArticle(int,int,String)(com.zrlog.service.ArticleService* this, int page, int row, java.lang.String* keywords)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> (Footprint({ @val$3* }) + Sanitizers({ StringConcatenation }) ~> ?, *) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= Map ArticleService.searchArticle(int,int,String)
+; translation_unit= service/src/main/java/com/zrlog/service/ArticleService.java
+; access= Public
+; formals= [(this,com.zrlog.service.ArticleService*);  (page,int);  (row,
+            int);  (keywords,java.lang.String*)]
+; is_defined= true
+; loc= service/src/main/java/com/zrlog/service/ArticleService.java:135
+; locals= [{ name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= data; typ= java.util.Map*; modify_in_block= false }]
+; ret_type= java.util.Map* 
+; proc_id= com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map }</pre>
+</body>
+</html>

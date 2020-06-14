@@ -1,0 +1,591 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.util.PluginHelper.genHeaderMapByRequest(javax.servlet.http.HttpServletRequest,com.zrlo.08440e4734b3683c859de0fd32dc86cc</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../PluginHelper.java.155cbc18b5ad561617c31516392a83a4.html#LINE26">Map PluginHelper.genHeaderMapByRequest(HttpServletRequest,AdminTokenVO)</a></h1></center>
+<a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:71 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar31); [line 49];
+NULLIFY(&amp;$irvar26); [line 49];
+NULLIFY(&amp;$T0_61); [line 49];
+NULLIFY(&amp;$irvar22); [line 49];
+NULLIFY(&amp;$irvar30); [line 49];
+NULLIFY(&amp;$irvar29); [line 49];
+NULLIFY(&amp;$irvar25); [line 49];
+NULLIFY(&amp;$T2_61); [line 49];
+NULLIFY(&amp;$irvar3); [line 49];
+NULLIFY(&amp;$irvar9); [line 49];
+NULLIFY(&amp;$T0_62); [line 49];
+NULLIFY(&amp;$irvar17); [line 49];
+NULLIFY(&amp;fullUrl); [line 49];
+NULLIFY(&amp;$irvar18); [line 49];
+NULLIFY(&amp;$irvar16); [line 49];
+NULLIFY(&amp;$T2_62); [line 49];
+NULLIFY(&amp;$irvar4); [line 49];
+NULLIFY(&amp;$irvar7); [line 49];
+NULLIFY(&amp;$irvar28); [line 49];
+NULLIFY(&amp;$irvar36); [line 49];
+NULLIFY(&amp;$irvar19); [line 49];
+NULLIFY(&amp;$irvar21); [line 49];
+NULLIFY(&amp;map); [line 49];
+NULLIFY(&amp;$irvar20); [line 49];
+NULLIFY(&amp;$T1_61); [line 49];
+NULLIFY(&amp;$irvar34); [line 49];
+NULLIFY(&amp;$irvar6); [line 49];
+NULLIFY(&amp;$T3_62); [line 49];
+NULLIFY(&amp;$irvar37); [line 49];
+NULLIFY(&amp;$irvar0); [line 49];
+NULLIFY(&amp;$irvar23); [line 49];
+NULLIFY(&amp;$irvar13); [line 49];
+NULLIFY(&amp;$irvar11); [line 49];
+NULLIFY(&amp;$irvar24); [line 49];
+NULLIFY(&amp;$irvar8); [line 49];
+NULLIFY(&amp;$irvar32); [line 49];
+NULLIFY(&amp;$irvar1); [line 49];
+NULLIFY(&amp;$irvar2); [line 49];
+NULLIFY(&amp;$irvar33); [line 49];
+NULLIFY(&amp;$irvar15); [line 49];
+NULLIFY(&amp;$T1_62); [line 49];
+EXIT_SCOPE($irvar31,$irvar26,$T0_61,$irvar22,$irvar30,$irvar29,$irvar25,$T2_61,$irvar3,$irvar9,$T0_62,$irvar17,fullUrl,$irvar18,$irvar16,$T2_62,$irvar4,$irvar7,$irvar28,$irvar36,$irvar19,$irvar21,map,$irvar20,$T1_61,$irvar34,$irvar6,$T3_62,$irvar37,$irvar0,$irvar23,$irvar13,$irvar11,$irvar24,$irvar8,$irvar32,$irvar1,$irvar2,$irvar33,$irvar15,$T1_62); [line 49];
+APPLY_ABSTRACTION; [line 49];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 27];
+n$1=_fun_HashMap.&lt;init&gt;()(n$0:java.util.HashMap*) [line 27];
+*&amp;map:java.util.HashMap*=n$0 [line 27];
+EXIT_SCOPE(n$0,n$1); [line 27];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$2=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 28];
+PRUNE(!(n$2 == null), true); [line 28];
+EXIT_SCOPE(n$2); [line 28];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:13 exn:3 Conditional method_body
+n$2=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 28];
+PRUNE((n$2 == null), false); [line 28];
+EXIT_SCOPE(n$2); [line 28];
+APPLY_ABSTRACTION; [line 28];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:3 Instructions
+n$3=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 29];
+n$4=_fun_StringBuilder.&lt;init&gt;()(n$3:java.lang.StringBuilder*) [line 29];
+*&amp;$irvar0:java.lang.StringBuilder*=n$3 [line 29];
+EXIT_SCOPE(n$3,n$4); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$5=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 29];
+_=*n$5:com.zrlog.common.vo.AdminTokenVO*(root com.zrlog.common.vo.AdminTokenVO) [line 29];
+n$7=_fun_int AdminTokenVO.getUserId()(n$5:com.zrlog.common.vo.AdminTokenVO*) virtual [line 29];
+*&amp;$irvar1:int=n$7 [line 29];
+EXIT_SCOPE(_,n$5,n$7); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$8=*&amp;$irvar0:java.lang.StringBuilder* [line 29];
+_=*n$8:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 29];
+n$10=*&amp;$irvar1:int [line 29];
+n$11=_fun_StringBuilder StringBuilder.append(int)(n$8:java.lang.StringBuilder*,n$10:int) virtual [line 29];
+*&amp;$irvar2:java.lang.StringBuilder*=n$11 [line 29];
+NULLIFY(&amp;$irvar0); [line 29];
+NULLIFY(&amp;$irvar1); [line 29];
+EXIT_SCOPE(_,n$8,n$10,n$11,$irvar0,$irvar1); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$12=*&amp;$irvar2:java.lang.StringBuilder* [line 29];
+_=*n$12:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 29];
+n$14=_fun_StringBuilder StringBuilder.append(String)(n$12:java.lang.StringBuilder*,"":java.lang.Object*) virtual [line 29];
+*&amp;$irvar3:java.lang.StringBuilder*=n$14 [line 29];
+NULLIFY(&amp;$irvar2); [line 29];
+EXIT_SCOPE(_,n$12,n$14,$irvar2); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$15=*&amp;$irvar3:java.lang.StringBuilder* [line 29];
+_=*n$15:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 29];
+n$17=_fun_String StringBuilder.toString()(n$15:java.lang.StringBuilder*) virtual [line 29];
+*&amp;$irvar4:java.lang.String*=n$17 [line 29];
+NULLIFY(&amp;$irvar3); [line 29];
+EXIT_SCOPE(_,n$15,n$17,$irvar3); [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:13 exn:3 Instructions
+n$18=*&amp;map:java.util.HashMap* [line 29];
+_=*n$18:java.util.HashMap*(root java.util.HashMap) [line 29];
+n$20=*&amp;$irvar4:java.lang.String* [line 29];
+n$21=_fun_Object HashMap.put(Object,Object)(n$18:java.util.HashMap*,"LoginUserId":java.lang.Object*,n$20:java.lang.String*) interface virtual [line 29];
+*&amp;$irvar5:java.lang.Object*=n$21 [line 29];
+NULLIFY(&amp;$irvar5); [line 29];
+NULLIFY(&amp;$irvar4); [line 29];
+EXIT_SCOPE(_,n$18,n$20,n$21,$irvar5,$irvar4); [line 29];
+APPLY_ABSTRACTION; [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 6 succs:14 exn:3 Instructions
+n$22=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 31];
+n$23=_fun_StringBuilder.&lt;init&gt;()(n$22:java.lang.StringBuilder*) [line 31];
+*&amp;$irvar6:java.lang.StringBuilder*=n$22 [line 31];
+EXIT_SCOPE(n$22,n$23); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$24=*&amp;$irvar6:java.lang.StringBuilder* [line 31];
+*&amp;$T0_61:java.lang.StringBuilder*=n$24 [line 31];
+EXIT_SCOPE(n$24); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+*&amp;$T1_61:java.lang.Object*="IsLogin" [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 18 exn:3 Instructions
+n$25=*&amp;map:java.util.HashMap* [line 31];
+*&amp;$T2_61:java.util.HashMap*=n$25 [line 31];
+EXIT_SCOPE(n$25); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node17.html"><span class='visited with_tooltip'>C_17<span class='tooltip'>node17 preds:16 succs:19 exn:3 Conditional method_body
+n$26=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 31];
+PRUNE(!(n$26 == null), true); [line 31];
+NULLIFY(&amp;$T0_61); [line 31];
+NULLIFY(&amp;$T2_61); [line 31];
+NULLIFY(&amp;$T1_61); [line 31];
+EXIT_SCOPE(n$26,$T0_61,$T2_61,$T1_61); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:16 succs:23 exn:3 Conditional method_body
+n$26=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 31];
+PRUNE((n$26 == null), false); [line 31];
+NULLIFY(&amp;$irvar6); [line 31];
+EXIT_SCOPE(n$26,$irvar6); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:17 succs:20 exn:3 Instructions
+*&amp;$T0_62:int=1 [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$27=*&amp;$irvar6:java.lang.StringBuilder* [line 31];
+*&amp;$T1_62:java.lang.StringBuilder*=n$27 [line 31];
+NULLIFY(&amp;$irvar6); [line 31];
+EXIT_SCOPE(n$27,$irvar6); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 succs:22 exn:3 Instructions
+*&amp;$T2_62:java.lang.Object*="IsLogin" [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 succs:27 exn:3 Instructions
+n$28=*&amp;map:java.util.HashMap* [line 31];
+*&amp;$T3_62:java.util.HashMap*=n$28 [line 31];
+EXIT_SCOPE(n$28); [line 31];
+APPLY_ABSTRACTION; [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:18 succs:24 exn:3 Instructions
+*&amp;$T0_62:int=0 [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node24.html"><span class='visited with_tooltip'>I_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 Instructions
+n$29=*&amp;$T0_61:java.lang.StringBuilder* [line 31];
+*&amp;$T1_62:java.lang.StringBuilder*=n$29 [line 31];
+NULLIFY(&amp;$T0_61); [line 31];
+EXIT_SCOPE(n$29,$T0_61); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node25.html"><span class='visited with_tooltip'>I_25<span class='tooltip'>node25 preds:24 succs:26 exn:3 Instructions
+n$30=*&amp;$T1_61:java.lang.Object* [line 31];
+*&amp;$T2_62:java.lang.Object*=n$30 [line 31];
+NULLIFY(&amp;$T1_61); [line 31];
+EXIT_SCOPE(n$30,$T1_61); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:25 succs:27 exn:3 Instructions
+n$31=*&amp;$T2_61:java.util.HashMap* [line 31];
+*&amp;$T3_62:java.util.HashMap*=n$31 [line 31];
+NULLIFY(&amp;$T2_61); [line 31];
+EXIT_SCOPE(n$31,$T2_61); [line 31];
+APPLY_ABSTRACTION; [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:26 22 succs:28 exn:3 Instructions
+n$32=*&amp;$T1_62:java.lang.StringBuilder* [line 31];
+_=*n$32:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 31];
+n$34=*&amp;$T0_62:int [line 31];
+n$35=_fun_StringBuilder StringBuilder.append(boolean)(n$32:java.lang.StringBuilder*,n$34:int) virtual [line 31];
+*&amp;$irvar7:java.lang.StringBuilder*=n$35 [line 31];
+NULLIFY(&amp;$T0_62); [line 31];
+NULLIFY(&amp;$T1_62); [line 31];
+EXIT_SCOPE(_,n$32,n$34,n$35,$T0_62,$T1_62); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:3 Instructions
+n$36=*&amp;$irvar7:java.lang.StringBuilder* [line 31];
+_=*n$36:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 31];
+n$38=_fun_StringBuilder StringBuilder.append(String)(n$36:java.lang.StringBuilder*,"":java.lang.Object*) virtual [line 31];
+*&amp;$irvar8:java.lang.StringBuilder*=n$38 [line 31];
+NULLIFY(&amp;$irvar7); [line 31];
+EXIT_SCOPE(_,n$36,n$38,$irvar7); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:3 Instructions
+n$39=*&amp;$irvar8:java.lang.StringBuilder* [line 31];
+_=*n$39:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 31];
+n$41=_fun_String StringBuilder.toString()(n$39:java.lang.StringBuilder*) virtual [line 31];
+*&amp;$irvar9:java.lang.String*=n$41 [line 31];
+NULLIFY(&amp;$irvar8); [line 31];
+EXIT_SCOPE(_,n$39,n$41,$irvar8); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:3 Instructions
+n$42=*&amp;$T3_62:java.util.HashMap* [line 31];
+_=*n$42:java.util.HashMap*(root java.util.HashMap) [line 31];
+n$44=*&amp;$T2_62:java.lang.Object* [line 31];
+n$45=*&amp;$irvar9:java.lang.String* [line 31];
+n$46=_fun_Object HashMap.put(Object,Object)(n$42:java.util.HashMap*,n$44:java.lang.Object*,n$45:java.lang.String*) interface virtual [line 31];
+*&amp;$irvar10:java.lang.Object*=n$46 [line 31];
+NULLIFY(&amp;$irvar9); [line 31];
+NULLIFY(&amp;$T2_62); [line 31];
+NULLIFY(&amp;$T3_62); [line 31];
+NULLIFY(&amp;$irvar10); [line 31];
+EXIT_SCOPE(_,n$42,n$44,n$45,n$46,$irvar9,$T2_62,$T3_62,$irvar10); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:3 Instructions
+n$47=_fun_String I18nUtil.getCurrentLocale()() [line 32];
+*&amp;$irvar11:java.lang.String*=n$47 [line 32];
+EXIT_SCOPE(n$47); [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:3 Instructions
+n$48=*&amp;map:java.util.HashMap* [line 32];
+_=*n$48:java.util.HashMap*(root java.util.HashMap) [line 32];
+n$50=*&amp;$irvar11:java.lang.String* [line 32];
+n$51=_fun_Object HashMap.put(Object,Object)(n$48:java.util.HashMap*,"Current-Locale":java.lang.Object*,n$50:java.lang.String*) interface virtual [line 32];
+*&amp;$irvar12:java.lang.Object*=n$51 [line 32];
+NULLIFY(&amp;$irvar12); [line 32];
+NULLIFY(&amp;$irvar11); [line 32];
+EXIT_SCOPE(_,n$48,n$50,n$51,$irvar12,$irvar11); [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 exn:3 Instructions
+n$52=_fun_String BlogBuildInfoUtil.getVersion()() [line 33];
+*&amp;$irvar13:java.lang.String*=n$52 [line 33];
+EXIT_SCOPE(n$52); [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node34.html"><span class='visited with_tooltip'>I_34<span class='tooltip'>node34 preds:33 succs:35 36 exn:3 Instructions
+n$53=*&amp;map:java.util.HashMap* [line 33];
+_=*n$53:java.util.HashMap*(root java.util.HashMap) [line 33];
+n$55=*&amp;$irvar13:java.lang.String* [line 33];
+n$56=_fun_Object HashMap.put(Object,Object)(n$53:java.util.HashMap*,"Blog-Version":java.lang.Object*,n$55:java.lang.String*) interface virtual [line 33];
+*&amp;$irvar14:java.lang.Object*=n$56 [line 33];
+NULLIFY(&amp;$irvar13); [line 33];
+NULLIFY(&amp;$irvar14); [line 33];
+EXIT_SCOPE(_,n$53,n$55,n$56,$irvar13,$irvar14); [line 33];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node35.html"><span class='visited with_tooltip'>C_35<span class='tooltip'>node35 preds:34 succs:37 exn:3 Conditional method_body
+n$57=*&amp;request:javax.servlet.http.HttpServletRequest* [line 34];
+PRUNE(!(n$57 == null), true); [line 34];
+EXIT_SCOPE(n$57); [line 34];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node36.html"><span class='visited with_tooltip'>C_36<span class='tooltip'>node36 preds:34 succs:71 exn:3 Conditional method_body
+n$57=*&amp;request:javax.servlet.http.HttpServletRequest* [line 34];
+PRUNE((n$57 == null), false); [line 34];
+NULLIFY(&amp;request); [line 34];
+EXIT_SCOPE(n$57,request); [line 34];
+APPLY_ABSTRACTION; [line 34];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:35 succs:38 exn:3 Instructions
+n$58=*&amp;request:javax.servlet.http.HttpServletRequest* [line 35];
+n$59=_fun_String ZrLogUtil.getFullUrl(HttpServletRequest)(n$58:javax.servlet.http.HttpServletRequest*) [line 35];
+*&amp;fullUrl:java.lang.String*=n$59 [line 35];
+EXIT_SCOPE(n$58,n$59); [line 35];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 40 exn:3 Instructions
+n$60=*&amp;request:javax.servlet.http.HttpServletRequest* [line 36];
+_=*n$60:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 36];
+n$62=_fun_String HttpServletRequest.getQueryString()(n$60:javax.servlet.http.HttpServletRequest*) interface virtual [line 36];
+*&amp;$irvar15:java.lang.String*=n$62 [line 36];
+EXIT_SCOPE(_,n$60,n$62); [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node39.html"><span class='visited with_tooltip'>C_39<span class='tooltip'>node39 preds:38 succs:41 exn:3 Conditional method_body
+n$63=*&amp;$irvar15:java.lang.String* [line 36];
+PRUNE(!(n$63 == null), true); [line 36];
+NULLIFY(&amp;$irvar15); [line 36];
+EXIT_SCOPE(n$63,$irvar15); [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node40.html"><span class='visited with_tooltip'>C_40<span class='tooltip'>node40 preds:38 succs:47 48 exn:3 Conditional method_body
+n$63=*&amp;$irvar15:java.lang.String* [line 36];
+PRUNE((n$63 == null), false); [line 36];
+NULLIFY(&amp;$irvar15); [line 36];
+EXIT_SCOPE(n$63,$irvar15); [line 36];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:39 succs:42 exn:3 Instructions
+n$64=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 37];
+n$65=_fun_StringBuilder.&lt;init&gt;()(n$64:java.lang.StringBuilder*) [line 37];
+*&amp;$irvar16:java.lang.StringBuilder*=n$64 [line 37];
+EXIT_SCOPE(n$64,n$65); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:3 Instructions
+n$66=*&amp;$irvar16:java.lang.StringBuilder* [line 37];
+_=*n$66:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$68=*&amp;fullUrl:java.lang.String* [line 37];
+n$69=_fun_StringBuilder StringBuilder.append(String)(n$66:java.lang.StringBuilder*,n$68:java.lang.String*) virtual [line 37];
+*&amp;$irvar17:java.lang.StringBuilder*=n$69 [line 37];
+NULLIFY(&amp;fullUrl); [line 37];
+NULLIFY(&amp;$irvar16); [line 37];
+EXIT_SCOPE(_,n$66,n$68,n$69,fullUrl,$irvar16); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:3 Instructions
+n$70=*&amp;$irvar17:java.lang.StringBuilder* [line 37];
+_=*n$70:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$72=_fun_StringBuilder StringBuilder.append(String)(n$70:java.lang.StringBuilder*,"?":java.lang.Object*) virtual [line 37];
+*&amp;$irvar18:java.lang.StringBuilder*=n$72 [line 37];
+NULLIFY(&amp;$irvar17); [line 37];
+EXIT_SCOPE(_,n$70,n$72,$irvar17); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 exn:3 Instructions
+n$73=*&amp;request:javax.servlet.http.HttpServletRequest* [line 37];
+_=*n$73:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 37];
+n$75=_fun_String HttpServletRequest.getQueryString()(n$73:javax.servlet.http.HttpServletRequest*) interface virtual [line 37];
+*&amp;$irvar19:java.lang.String*=n$75 [line 37];
+EXIT_SCOPE(_,n$73,n$75); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:44 succs:46 exn:3 Instructions
+n$76=*&amp;$irvar18:java.lang.StringBuilder* [line 37];
+_=*n$76:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$78=*&amp;$irvar19:java.lang.String* [line 37];
+n$79=_fun_StringBuilder StringBuilder.append(String)(n$76:java.lang.StringBuilder*,n$78:java.lang.String*) virtual [line 37];
+*&amp;$irvar20:java.lang.StringBuilder*=n$79 [line 37];
+NULLIFY(&amp;$irvar18); [line 37];
+NULLIFY(&amp;$irvar19); [line 37];
+EXIT_SCOPE(_,n$76,n$78,n$79,$irvar18,$irvar19); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 48 exn:3 Instructions
+n$80=*&amp;$irvar20:java.lang.StringBuilder* [line 37];
+_=*n$80:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 37];
+n$82=_fun_String StringBuilder.toString()(n$80:java.lang.StringBuilder*) virtual [line 37];
+*&amp;fullUrl:java.lang.String*=n$82 [line 37];
+NULLIFY(&amp;$irvar20); [line 37];
+EXIT_SCOPE(_,n$80,n$82,$irvar20); [line 37];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node47.html"><span class='visited with_tooltip'>C_47<span class='tooltip'>node47 preds:46 40 succs:49 exn:3 Conditional method_body
+n$83=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 39];
+PRUNE(!(n$83 == null), true); [line 39];
+EXIT_SCOPE(n$83); [line 39];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node48.html"><span class='visited with_tooltip'>C_48<span class='tooltip'>node48 preds:46 40 succs:55 exn:3 Conditional method_body
+n$83=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 39];
+PRUNE((n$83 == null), false); [line 39];
+NULLIFY(&amp;adminTokenVO); [line 39];
+EXIT_SCOPE(n$83,adminTokenVO); [line 39];
+APPLY_ABSTRACTION; [line 39];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:47 succs:50 exn:3 Instructions
+n$84=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 40];
+n$85=_fun_StringBuilder.&lt;init&gt;()(n$84:java.lang.StringBuilder*) [line 40];
+*&amp;$irvar21:java.lang.StringBuilder*=n$84 [line 40];
+EXIT_SCOPE(n$84,n$85); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 succs:51 exn:3 Instructions
+n$86=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 40];
+_=*n$86:com.zrlog.common.vo.AdminTokenVO*(root com.zrlog.common.vo.AdminTokenVO) [line 40];
+n$88=_fun_String AdminTokenVO.getProtocol()(n$86:com.zrlog.common.vo.AdminTokenVO*) virtual [line 40];
+*&amp;$irvar22:java.lang.String*=n$88 [line 40];
+NULLIFY(&amp;adminTokenVO); [line 40];
+EXIT_SCOPE(_,n$86,n$88,adminTokenVO); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node51.html"><span class='visited with_tooltip'>I_51<span class='tooltip'>node51 preds:50 succs:52 exn:3 Instructions
+n$89=*&amp;$irvar21:java.lang.StringBuilder* [line 40];
+_=*n$89:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 40];
+n$91=*&amp;$irvar22:java.lang.String* [line 40];
+n$92=_fun_StringBuilder StringBuilder.append(String)(n$89:java.lang.StringBuilder*,n$91:java.lang.String*) virtual [line 40];
+*&amp;$irvar23:java.lang.StringBuilder*=n$92 [line 40];
+NULLIFY(&amp;$irvar22); [line 40];
+NULLIFY(&amp;$irvar21); [line 40];
+EXIT_SCOPE(_,n$89,n$91,n$92,$irvar22,$irvar21); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node52.html"><span class='visited with_tooltip'>I_52<span class='tooltip'>node52 preds:51 succs:53 exn:3 Instructions
+n$93=*&amp;$irvar23:java.lang.StringBuilder* [line 40];
+_=*n$93:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 40];
+n$95=_fun_StringBuilder StringBuilder.append(String)(n$93:java.lang.StringBuilder*,":":java.lang.Object*) virtual [line 40];
+*&amp;$irvar24:java.lang.StringBuilder*=n$95 [line 40];
+NULLIFY(&amp;$irvar23); [line 40];
+EXIT_SCOPE(_,n$93,n$95,$irvar23); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node53.html"><span class='visited with_tooltip'>I_53<span class='tooltip'>node53 preds:52 succs:54 exn:3 Instructions
+n$96=*&amp;$irvar24:java.lang.StringBuilder* [line 40];
+_=*n$96:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 40];
+n$98=*&amp;fullUrl:java.lang.String* [line 40];
+n$99=_fun_StringBuilder StringBuilder.append(String)(n$96:java.lang.StringBuilder*,n$98:java.lang.String*) virtual [line 40];
+*&amp;$irvar25:java.lang.StringBuilder*=n$99 [line 40];
+NULLIFY(&amp;fullUrl); [line 40];
+NULLIFY(&amp;$irvar24); [line 40];
+EXIT_SCOPE(_,n$96,n$98,n$99,fullUrl,$irvar24); [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node54.html"><span class='visited with_tooltip'>I_54<span class='tooltip'>node54 preds:53 succs:55 exn:3 Instructions
+n$100=*&amp;$irvar25:java.lang.StringBuilder* [line 40];
+_=*n$100:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 40];
+n$102=_fun_String StringBuilder.toString()(n$100:java.lang.StringBuilder*) virtual [line 40];
+*&amp;fullUrl:java.lang.String*=n$102 [line 40];
+NULLIFY(&amp;$irvar25); [line 40];
+EXIT_SCOPE(_,n$100,n$102,$irvar25); [line 40];
+APPLY_ABSTRACTION; [line 40];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:54 48 succs:56 exn:3 Instructions
+n$103=*&amp;request:javax.servlet.http.HttpServletRequest* [line 42];
+_=*n$103:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 42];
+n$105=_fun_String HttpServletRequest.getHeader(String)(n$103:javax.servlet.http.HttpServletRequest*,"Cookie":java.lang.Object*) interface virtual [line 42];
+*&amp;$irvar26:java.lang.String*=n$105 [line 42];
+EXIT_SCOPE(_,n$103,n$105); [line 42];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:55 succs:57 exn:3 Instructions
+n$106=*&amp;map:java.util.HashMap* [line 42];
+_=*n$106:java.util.HashMap*(root java.util.HashMap) [line 42];
+n$108=*&amp;$irvar26:java.lang.String* [line 42];
+n$109=_fun_Object HashMap.put(Object,Object)(n$106:java.util.HashMap*,"Cookie":java.lang.Object*,n$108:java.lang.String*) interface virtual [line 42];
+*&amp;$irvar27:java.lang.Object*=n$109 [line 42];
+NULLIFY(&amp;$irvar26); [line 42];
+NULLIFY(&amp;$irvar27); [line 42];
+EXIT_SCOPE(_,n$106,n$108,n$109,$irvar26,$irvar27); [line 42];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:56 succs:58 exn:3 Instructions
+n$110=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 43];
+n$111=_fun_StringBuilder.&lt;init&gt;()(n$110:java.lang.StringBuilder*) [line 43];
+*&amp;$irvar28:java.lang.StringBuilder*=n$110 [line 43];
+EXIT_SCOPE(n$110,n$111); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node58.html"><span class='visited with_tooltip'>I_58<span class='tooltip'>node58 preds:57 succs:59 exn:3 Instructions
+n$112=*&amp;$irvar28:java.lang.StringBuilder* [line 43];
+_=*n$112:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 43];
+n$114=_fun_StringBuilder StringBuilder.append(String)(n$112:java.lang.StringBuilder*,"http://127.0.0.1:":java.lang.Object*) virtual [line 43];
+*&amp;$irvar29:java.lang.StringBuilder*=n$114 [line 43];
+NULLIFY(&amp;$irvar28); [line 43];
+EXIT_SCOPE(_,n$112,n$114,$irvar28); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node59.html"><span class='visited with_tooltip'>I_59<span class='tooltip'>node59 preds:58 succs:60 exn:3 Instructions
+n$115=*&amp;request:javax.servlet.http.HttpServletRequest* [line 43];
+_=*n$115:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 43];
+n$117=_fun_int HttpServletRequest.getServerPort()(n$115:javax.servlet.http.HttpServletRequest*) interface virtual [line 43];
+*&amp;$irvar30:int=n$117 [line 43];
+EXIT_SCOPE(_,n$115,n$117); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node60.html"><span class='visited with_tooltip'>I_60<span class='tooltip'>node60 preds:59 succs:61 exn:3 Instructions
+n$118=*&amp;$irvar29:java.lang.StringBuilder* [line 43];
+_=*n$118:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 43];
+n$120=*&amp;$irvar30:int [line 43];
+n$121=_fun_StringBuilder StringBuilder.append(int)(n$118:java.lang.StringBuilder*,n$120:int) virtual [line 43];
+*&amp;$irvar31:java.lang.StringBuilder*=n$121 [line 43];
+NULLIFY(&amp;$irvar30); [line 43];
+NULLIFY(&amp;$irvar29); [line 43];
+EXIT_SCOPE(_,n$118,n$120,n$121,$irvar30,$irvar29); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node61.html"><span class='visited with_tooltip'>I_61<span class='tooltip'>node61 preds:60 succs:62 exn:3 Instructions
+n$122=*&amp;request:javax.servlet.http.HttpServletRequest* [line 43];
+_=*n$122:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 43];
+n$124=_fun_String HttpServletRequest.getContextPath()(n$122:javax.servlet.http.HttpServletRequest*) interface virtual [line 43];
+*&amp;$irvar32:java.lang.String*=n$124 [line 43];
+EXIT_SCOPE(_,n$122,n$124); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds:61 succs:63 exn:3 Instructions
+n$125=*&amp;$irvar31:java.lang.StringBuilder* [line 43];
+_=*n$125:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 43];
+n$127=*&amp;$irvar32:java.lang.String* [line 43];
+n$128=_fun_StringBuilder StringBuilder.append(String)(n$125:java.lang.StringBuilder*,n$127:java.lang.String*) virtual [line 43];
+*&amp;$irvar33:java.lang.StringBuilder*=n$128 [line 43];
+NULLIFY(&amp;$irvar31); [line 43];
+NULLIFY(&amp;$irvar32); [line 43];
+EXIT_SCOPE(_,n$125,n$127,n$128,$irvar31,$irvar32); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node63.html"><span class='visited with_tooltip'>I_63<span class='tooltip'>node63 preds:62 succs:64 exn:3 Instructions
+n$129=*&amp;$irvar33:java.lang.StringBuilder* [line 43];
+_=*n$129:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 43];
+n$131=_fun_String StringBuilder.toString()(n$129:java.lang.StringBuilder*) virtual [line 43];
+*&amp;$irvar34:java.lang.String*=n$131 [line 43];
+NULLIFY(&amp;$irvar33); [line 43];
+EXIT_SCOPE(_,n$129,n$131,$irvar33); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node64.html"><span class='visited with_tooltip'>I_64<span class='tooltip'>node64 preds:63 succs:65 exn:3 Instructions
+n$132=*&amp;map:java.util.HashMap* [line 43];
+_=*n$132:java.util.HashMap*(root java.util.HashMap) [line 43];
+n$134=*&amp;$irvar34:java.lang.String* [line 43];
+n$135=_fun_Object HashMap.put(Object,Object)(n$132:java.util.HashMap*,"AccessUrl":java.lang.Object*,n$134:java.lang.String*) interface virtual [line 43];
+*&amp;$irvar35:java.lang.Object*=n$135 [line 43];
+NULLIFY(&amp;$irvar35); [line 43];
+NULLIFY(&amp;$irvar34); [line 43];
+EXIT_SCOPE(_,n$132,n$134,n$135,$irvar35,$irvar34); [line 43];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node65.html"><span class='visited with_tooltip'>I_65<span class='tooltip'>node65 preds:64 succs:66 67 exn:3 Instructions
+n$136=*&amp;request:javax.servlet.http.HttpServletRequest* [line 44];
+_=*n$136:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 44];
+n$138=_fun_String HttpServletRequest.getHeader(String)(n$136:javax.servlet.http.HttpServletRequest*,"Content-Type":java.lang.Object*) interface virtual [line 44];
+*&amp;$irvar36:java.lang.String*=n$138 [line 44];
+EXIT_SCOPE(_,n$136,n$138); [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node66.html"><span class='visited with_tooltip'>C_66<span class='tooltip'>node66 preds:65 succs:68 exn:3 Conditional method_body
+n$139=*&amp;$irvar36:java.lang.String* [line 44];
+PRUNE(!(n$139 == null), true); [line 44];
+NULLIFY(&amp;$irvar36); [line 44];
+EXIT_SCOPE(n$139,$irvar36); [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node67.html"><span class='visited with_tooltip'>C_67<span class='tooltip'>node67 preds:65 succs:70 exn:3 Conditional method_body
+n$139=*&amp;$irvar36:java.lang.String* [line 44];
+PRUNE((n$139 == null), false); [line 44];
+NULLIFY(&amp;$irvar36); [line 44];
+EXIT_SCOPE(n$139,$irvar36); [line 44];
+APPLY_ABSTRACTION; [line 44];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node68.html"><span class='visited with_tooltip'>I_68<span class='tooltip'>node68 preds:66 succs:69 exn:3 Instructions
+n$140=*&amp;request:javax.servlet.http.HttpServletRequest* [line 45];
+_=*n$140:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 45];
+n$142=_fun_String HttpServletRequest.getHeader(String)(n$140:javax.servlet.http.HttpServletRequest*,"Content-Type":java.lang.Object*) interface virtual [line 45];
+*&amp;$irvar37:java.lang.String*=n$142 [line 45];
+NULLIFY(&amp;request); [line 45];
+EXIT_SCOPE(_,n$140,n$142,request); [line 45];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node69.html"><span class='visited with_tooltip'>I_69<span class='tooltip'>node69 preds:68 succs:70 exn:3 Instructions
+n$143=*&amp;map:java.util.HashMap* [line 45];
+_=*n$143:java.util.HashMap*(root java.util.HashMap) [line 45];
+n$145=*&amp;$irvar37:java.lang.String* [line 45];
+n$146=_fun_Object HashMap.put(Object,Object)(n$143:java.util.HashMap*,"Content-Type":java.lang.Object*,n$145:java.lang.String*) interface virtual [line 45];
+*&amp;$irvar38:java.lang.Object*=n$146 [line 45];
+NULLIFY(&amp;$irvar38); [line 45];
+NULLIFY(&amp;$irvar37); [line 45];
+EXIT_SCOPE(_,n$143,n$145,n$146,$irvar38,$irvar37); [line 45];
+APPLY_ABSTRACTION; [line 45];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node70.html"><span class='visited with_tooltip'>I_70<span class='tooltip'>node70 preds:69 67 succs:71 exn:3 Instructions
+n$147=*&amp;map:java.util.HashMap* [line 47];
+_=*n$147:java.util.HashMap*(root java.util.HashMap) [line 47];
+n$149=*&amp;fullUrl:java.lang.String* [line 47];
+n$150=_fun_Object HashMap.put(Object,Object)(n$147:java.util.HashMap*,"Full-Url":java.lang.Object*,n$149:java.lang.String*) interface virtual [line 47];
+*&amp;$irvar39:java.lang.Object*=n$150 [line 47];
+NULLIFY(&amp;fullUrl); [line 47];
+NULLIFY(&amp;$irvar39); [line 47];
+EXIT_SCOPE(_,n$147,n$149,n$150,fullUrl,$irvar39); [line 47];
+APPLY_ABSTRACTION; [line 47];
+</span></span></a> <a href="./nodes/com.zrlog.web.util.PluginHelper.genHeaderMapByRequest%28javax.servlet.http.HttpServletRequest%2Ccom.zrlo.08440e4734b3683c859de0fd32dc86cc_node71.html"><span class='visited with_tooltip'>I_71<span class='tooltip'>node71 preds:70 36 succs:2 exn:3 Instructions
+n$151=*&amp;map:java.util.HashMap* [line 49];
+*&amp;return:java.util.Map*=n$151 [line 49];
+NULLIFY(&amp;map); [line 49];
+EXIT_SCOPE(n$151,map); [line 49];
+APPLY_ABSTRACTION; [line 49];
+</span></span></a><br />@
+
+<span class='color_black'>java.util.Map* Map PluginHelper.genHeaderMapByRequest(HttpServletRequest,AdminTokenVO)(javax.servlet.http.HttpServletRequest* request, com.zrlog.common.vo.AdminTokenVO* adminTokenVO)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> (Footprint({ util.BlogBuildInfoUtil.version,
+                                   @val$1.protocol }) + Sanitizers({ StringConcatenation }) ~> ?, *) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= Map PluginHelper.genHeaderMapByRequest(HttpServletRequest,AdminTokenVO)
+; translation_unit= common/src/main/java/com/zrlog/web/util/PluginHelper.java
+; access= Public
+; formals= [(request,javax.servlet.http.HttpServletRequest*);  (adminTokenVO,
+            com.zrlog.common.vo.AdminTokenVO*)]
+; is_defined= true
+; loc= common/src/main/java/com/zrlog/web/util/PluginHelper.java:26
+; locals= [{ name= $irvar39; typ= void; modify_in_block= false }; 
+           { name= $irvar38; typ= void; modify_in_block= false }; 
+           { name= $irvar37; typ= void; modify_in_block= false }; 
+           { name= $irvar36; typ= void; modify_in_block= false }; 
+           { name= $irvar35; typ= void; modify_in_block= false }; 
+           { name= $irvar34; typ= void; modify_in_block= false }; 
+           { name= $irvar33; typ= void; modify_in_block= false }; 
+           { name= $irvar32; typ= void; modify_in_block= false }; 
+           { name= $irvar31; typ= void; modify_in_block= false }; 
+           { name= $irvar30; typ= void; modify_in_block= false }; 
+           { name= $irvar29; typ= void; modify_in_block= false }; 
+           { name= $irvar28; typ= void; modify_in_block= false }; 
+           { name= $irvar27; typ= void; modify_in_block= false }; 
+           { name= $irvar26; typ= void; modify_in_block= false }; 
+           { name= $irvar25; typ= void; modify_in_block= false }; 
+           { name= $irvar24; typ= void; modify_in_block= false }; 
+           { name= $irvar23; typ= void; modify_in_block= false }; 
+           { name= $irvar22; typ= void; modify_in_block= false }; 
+           { name= $irvar21; typ= void; modify_in_block= false }; 
+           { name= $irvar20; typ= void; modify_in_block= false }; 
+           { name= $irvar19; typ= void; modify_in_block= false }; 
+           { name= $irvar18; typ= void; modify_in_block= false }; 
+           { name= $irvar17; typ= void; modify_in_block= false }; 
+           { name= $irvar16; typ= void; modify_in_block= false }; 
+           { name= $irvar15; typ= void; modify_in_block= false }; 
+           { name= $irvar14; typ= void; modify_in_block= false }; 
+           { name= $irvar13; typ= void; modify_in_block= false }; 
+           { name= $irvar12; typ= void; modify_in_block= false }; 
+           { name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $T3_62; typ= void; modify_in_block= false }; 
+           { name= $T2_62; typ= void; modify_in_block= false }; 
+           { name= $T1_62; typ= void; modify_in_block= false }; 
+           { name= $T0_62; typ= void; modify_in_block= false }; 
+           { name= $T2_61; typ= void; modify_in_block= false }; 
+           { name= $T1_61; typ= void; modify_in_block= false }; 
+           { name= $T0_61; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= map; typ= java.util.Map*; modify_in_block= false }; 
+           { name= fullUrl; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= java.util.Map* 
+; proc_id= com.zrlog.web.util.PluginHelper.genHeaderMapByRequest(javax.servlet.http.HttpServletRequest,com.zrlog.common.vo.AdminTokenVO):java.util.Map }</pre>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.util.WebTools.getRealIp(javax.servlet.http.HttpServletRequest):java.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node14</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">14</a></h1></center>PROC: <a href="./../com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f.html">String WebTools.getRealIp(HttpServletRequest)</a> LINE: <a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">25</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node12.html"><span class='visited with_tooltip'>N_12<span class='tooltip'>node12 preds:11 10 7 succs:14 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node15.html"><span class='visited with_tooltip'>N_15<span class='tooltip'>node15 preds:14 succs:17 exn:3 </span></span></a> <a href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node16.html"><span class='visited with_tooltip'>N_16<span class='tooltip'>node16 preds:14 succs:18 19 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$10=*&amp;ip:java.lang.String* [line 25];
+_=*n$10:java.lang.String*(root java.lang.String) [line 25];
+n$12=_fun_int String.length()(n$10:java.lang.String*) virtual [line 25];
+*&amp;$irvar2:int=n$12 [line 25];
+</LISTING>
+<hr width="100%">
+<a name="session110" href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node14.html#session110">node14#session110</a>(<a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">25</a>) [compute pre] liveness 14
+<LISTING class='color_black'>JOIN
+
+LEFT:   { request, $irvar2 }
+RIGHT:  { ip, request, $irvar2 }
+RESULT: { ip, request, $irvar2 }
+
+JOIN
+
+LEFT:   { ip, request, $irvar2 }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session111" href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node14.html#session111">node14#session111</a>(<a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">25</a>) [exec] liveness 14
+<LISTING class='color_black'>PRE STATE:
+{ ip, request, $irvar2 }
+
+INSTR=  *&amp;$irvar2:int=n$12 [line 25]; 
+
+STATE:
+{ n$12, ip, request }
+
+INSTR=  n$12=_fun_int String.length()(n$10:java.lang.String*) virtual [line 25]; 
+
+STATE:
+{ n$10, ip, request }
+
+INSTR=  _=*n$10:java.lang.String*(root java.lang.String) [line 25]; 
+
+STATE UNCHANGED
+
+INSTR=  n$10=*&amp;ip:java.lang.String* [line 25]; 
+
+STATE:
+{ ip, request }
+
+</LISTING>
+<hr width="100%">
+<a name="session153" href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node14.html#session153">node14#session153</a>(<a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">25</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session154" href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node14.html#session154">node14#session154</a>(<a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">25</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ ip },{ n$9 })
+
+INSTR=  n$10=*&amp;ip:java.lang.String* [line 25]; 
+
+STATE:
+({ n$10, ip },{ n$9 })
+
+INSTR=  _=*n$10:java.lang.String*(root java.lang.String) [line 25]; 
+
+STATE:
+({ _, n$10, ip },{ n$9 })
+
+INSTR=  n$12=_fun_int String.length()(n$10:java.lang.String*) virtual [line 25]; 
+
+STATE:
+({ _, n$10, n$12, ip },{ n$9 })
+
+INSTR=  *&amp;$irvar2:int=n$12 [line 25]; 
+
+STATE:
+({ ip, $irvar2 },{ _, n$10, n$12 })
+
+</LISTING>
+<hr width="100%">
+<a name="session22" href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node14.html#session22">node14#session22</a>(<a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">25</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session23" href="./../nodes/com.zrlog.web.util.WebTools.getRealIp%28javax.servlet.http.HttpServletRequest%29%3Ajava.lang.String.4e629d3dd1d66de934fdb5acfdfe042f_node14.html#session23">node14#session23</a>(<a href="./../../WebTools.java.f26e61993c22812d93afdf12d2b86d2d.html#LINE25">25</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$0 -&gt; { }, ip -&gt; { } }
+
+
+
+INSTR=  n$12 := int String.length()({ ip }) [line 25]; 
+
+STATE UNCHANGED
+
+
+
+</LISTING>

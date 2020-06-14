@@ -1,0 +1,149 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_1" [label="1: Start Map Log.findByTypeAlias(int,int,String)\nFormals:  this:com.zrlog.model.Log* page:int pageSize:int typeAlias:java.lang.String*\nLocals:  $irvar14:void $irvar13:void $irvar12:void $irvar11:void $irvar10:void $irvar9:void $irvar8:void $irvar7:void $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void sql:java.lang.String* data:java.util.Map* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_1" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_4" ;
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_2" [label="2: Exit Map Log.findByTypeAlias(int,int,String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 157]\n  NULLIFY(&data); [line 157]\n  NULLIFY(&$irvar5); [line 157]\n  NULLIFY(&$irvar4); [line 157]\n  NULLIFY(&$irvar7); [line 157]\n  NULLIFY(&$irvar12); [line 157]\n  NULLIFY(&sql); [line 157]\n  NULLIFY(&$irvar6); [line 157]\n  NULLIFY(&$irvar0); [line 157]\n  NULLIFY(&$irvar13); [line 157]\n  NULLIFY(&$irvar11); [line 157]\n  NULLIFY(&$irvar10); [line 157]\n  NULLIFY(&$irvar8); [line 157]\n  NULLIFY(&$irvar1); [line 157]\n  NULLIFY(&$irvar2); [line 157]\n  NULLIFY(&$irvar14); [line 157]\n  EXIT_SCOPE($irvar3,data,$irvar5,$irvar4,$irvar7,$irvar12,sql,$irvar6,$irvar0,$irvar13,$irvar11,$irvar10,$irvar8,$irvar1,$irvar2,$irvar14); [line 157]\n  APPLY_ABSTRACTION; [line 157]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_2" ;
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_4" [label="4:  Call HashMap.<init>() \n   n$0=_fun___new(sizeof(t=java.util.HashMap):java.util.HashMap*) [line 150]\n  n$1=_fun_HashMap.<init>()(n$0:java.util.HashMap*) [line 150]\n  *&data:java.util.HashMap*=n$0 [line 150]\n  EXIT_SCOPE(n$0,n$1); [line 150]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_4" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_5" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_4" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_5" [label="5:  method_body \n   *&sql:java.lang.Object*=\"select l.*,t.typeName,t.alias  as typeAlias,(select count(commentId) from comment where logId=l.logId ) commentSize,u.userName from log l inner join user u,type t where rubbish=? and privacy=? and u.userId=l.userId and t.typeId=l.typeId and t.alias=? order by l.logId desc limit ?,?\" [line 151]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_5" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_6" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_5" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_6" [label="6:  method_body \n   n$2=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[5]):java.lang.Object*[_*_](*)) [line 152]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$2 [line 152]\n  EXIT_SCOPE(n$2); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_6" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_7" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_6" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_7" [label="7:  method_body \n   n$3=*&this:com.zrlog.model.Log* [line 152]\n  n$4=*n$3.rubbish:_Bool(root com.zrlog.model.Log) [line 152]\n  *&$irvar1:_Bool=n$4 [line 152]\n  EXIT_SCOPE(n$3,n$4); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_7" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_8" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_7" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_8" [label="8:  Call Boolean Boolean.valueOf(boolean) \n   n$5=*&$irvar1:_Bool [line 152]\n  n$6=_fun_Boolean Boolean.valueOf(boolean)(n$5:_Bool) [line 152]\n  *&$irvar2:java.lang.Boolean*=n$6 [line 152]\n  NULLIFY(&$irvar1); [line 152]\n  EXIT_SCOPE(n$5,n$6,$irvar1); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_8" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_9" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_8" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_9" [label="9:  method_body \n   n$7=*&$irvar0:java.lang.Object*[_*_](*) [line 152]\n  n$8=*&$irvar2:java.lang.Boolean* [line 152]\n  *n$7[0]:java.lang.Boolean*=n$8 [line 152]\n  NULLIFY(&$irvar2); [line 152]\n  EXIT_SCOPE(n$7,n$8,$irvar2); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_9" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_10" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_9" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_10" [label="10:  method_body \n   n$9=*&this:com.zrlog.model.Log* [line 152]\n  n$10=*n$9.privacy:_Bool(root com.zrlog.model.Log) [line 152]\n  *&$irvar3:_Bool=n$10 [line 152]\n  EXIT_SCOPE(n$9,n$10); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_10" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_11" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_10" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_11" [label="11:  Call Boolean Boolean.valueOf(boolean) \n   n$11=*&$irvar3:_Bool [line 152]\n  n$12=_fun_Boolean Boolean.valueOf(boolean)(n$11:_Bool) [line 152]\n  *&$irvar4:java.lang.Boolean*=n$12 [line 152]\n  NULLIFY(&$irvar3); [line 152]\n  EXIT_SCOPE(n$11,n$12,$irvar3); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_11" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_12" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_11" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_12" [label="12:  method_body \n   n$13=*&$irvar0:java.lang.Object*[_*_](*) [line 152]\n  n$14=*&$irvar4:java.lang.Boolean* [line 152]\n  *n$13[1]:java.lang.Boolean*=n$14 [line 152]\n  NULLIFY(&$irvar4); [line 152]\n  EXIT_SCOPE(n$13,n$14,$irvar4); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_12" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_13" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_12" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_13" [label="13:  method_body \n   n$15=*&$irvar0:java.lang.Object*[_*_](*) [line 152]\n  n$16=*&typeAlias:java.lang.String* [line 152]\n  *n$15[2]:java.lang.String*=n$16 [line 152]\n  EXIT_SCOPE(n$15,n$16); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_13" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_14" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_13" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_14" [label="14:  Call int ParseUtil.getFirstRecord(int,int) \n   n$17=*&page:int [line 152]\n  n$18=*&pageSize:int [line 152]\n  n$19=_fun_int ParseUtil.getFirstRecord(int,int)(n$17:int,n$18:int) [line 152]\n  *&$irvar5:int=n$19 [line 152]\n  EXIT_SCOPE(n$17,n$18,n$19); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_14" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_15" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_14" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_15" [label="15:  Call Integer Integer.valueOf(int) \n   n$20=*&$irvar5:int [line 152]\n  n$21=_fun_Integer Integer.valueOf(int)(n$20:int) [line 152]\n  *&$irvar6:java.lang.Integer*=n$21 [line 152]\n  NULLIFY(&$irvar5); [line 152]\n  EXIT_SCOPE(n$20,n$21,$irvar5); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_15" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_16" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_15" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_16" [label="16:  method_body \n   n$22=*&$irvar0:java.lang.Object*[_*_](*) [line 152]\n  n$23=*&$irvar6:java.lang.Integer* [line 152]\n  *n$22[3]:java.lang.Integer*=n$23 [line 152]\n  NULLIFY(&$irvar6); [line 152]\n  EXIT_SCOPE(n$22,n$23,$irvar6); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_16" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_17" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_16" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_17" [label="17:  Call Integer Integer.valueOf(int) \n   n$24=*&pageSize:int [line 152]\n  n$25=_fun_Integer Integer.valueOf(int)(n$24:int) [line 152]\n  *&$irvar7:java.lang.Integer*=n$25 [line 152]\n  EXIT_SCOPE(n$24,n$25); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_17" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_18" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_17" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_18" [label="18:  method_body \n   n$26=*&$irvar0:java.lang.Object*[_*_](*) [line 152]\n  n$27=*&$irvar7:java.lang.Integer* [line 152]\n  *n$26[4]:java.lang.Integer*=n$27 [line 152]\n  NULLIFY(&$irvar7); [line 152]\n  EXIT_SCOPE(n$26,n$27,$irvar7); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_18" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_19" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_18" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_19" [label="19:  Call List Model.find(String,Object[]) \n   n$28=*&this:com.zrlog.model.Log* [line 152]\n  _=*n$28:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 152]\n  n$30=*&sql:java.lang.Object* [line 152]\n  n$31=*&$irvar0:java.lang.Object*[_*_](*) [line 152]\n  n$32=_fun_List Model.find(String,Object[])(n$28:com.zrlog.model.Log*,n$30:java.lang.Object*,n$31:java.lang.Object*[_*_](*)) virtual [line 152]\n  *&$irvar8:java.util.List*=n$32 [line 152]\n  NULLIFY(&sql); [line 152]\n  NULLIFY(&$irvar0); [line 152]\n  EXIT_SCOPE(_,n$28,n$30,n$31,n$32,sql,$irvar0); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_19" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_20" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_19" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_20" [label="20:  Call Object HashMap.put(Object,Object) \n   n$33=*&data:java.util.HashMap* [line 152]\n  _=*n$33:java.util.HashMap*(root java.util.HashMap) [line 152]\n  n$35=*&$irvar8:java.util.List* [line 152]\n  n$36=_fun_Object HashMap.put(Object,Object)(n$33:java.util.HashMap*,\"rows\":java.lang.Object*,n$35:java.util.List*) interface virtual [line 152]\n  *&$irvar9:java.lang.Object*=n$36 [line 152]\n  NULLIFY(&$irvar9); [line 152]\n  NULLIFY(&$irvar8); [line 152]\n  EXIT_SCOPE(_,n$33,n$35,n$36,$irvar9,$irvar8); [line 152]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_20" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_21" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_20" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_21" [label="21:  method_body \n   n$37=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[3]):java.lang.Object*[_*_](*)) [line 154]\n  *&$irvar10:java.lang.Object*[_*_](*)=n$37 [line 154]\n  EXIT_SCOPE(n$37); [line 154]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_21" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_22" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_21" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_22" [label="22:  method_body \n   n$38=*&this:com.zrlog.model.Log* [line 156]\n  n$39=*n$38.rubbish:_Bool(root com.zrlog.model.Log) [line 156]\n  *&$irvar11:_Bool=n$39 [line 156]\n  EXIT_SCOPE(n$38,n$39); [line 156]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_22" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_23" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_22" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_23" [label="23:  Call Boolean Boolean.valueOf(boolean) \n   n$40=*&$irvar11:_Bool [line 156]\n  n$41=_fun_Boolean Boolean.valueOf(boolean)(n$40:_Bool) [line 156]\n  *&$irvar12:java.lang.Boolean*=n$41 [line 156]\n  NULLIFY(&$irvar11); [line 156]\n  EXIT_SCOPE(n$40,n$41,$irvar11); [line 156]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_23" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_24" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_23" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_24" [label="24:  method_body \n   n$42=*&$irvar10:java.lang.Object*[_*_](*) [line 156]\n  n$43=*&$irvar12:java.lang.Boolean* [line 156]\n  *n$42[0]:java.lang.Boolean*=n$43 [line 156]\n  NULLIFY(&$irvar12); [line 156]\n  EXIT_SCOPE(n$42,n$43,$irvar12); [line 156]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_24" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_25" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_24" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_25" [label="25:  method_body \n   n$44=*&this:com.zrlog.model.Log* [line 156]\n  n$45=*n$44.privacy:_Bool(root com.zrlog.model.Log) [line 156]\n  *&$irvar13:_Bool=n$45 [line 156]\n  EXIT_SCOPE(n$44,n$45); [line 156]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_25" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_26" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_25" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_26" [label="26:  Call Boolean Boolean.valueOf(boolean) \n   n$46=*&$irvar13:_Bool [line 156]\n  n$47=_fun_Boolean Boolean.valueOf(boolean)(n$46:_Bool) [line 156]\n  *&$irvar14:java.lang.Boolean*=n$47 [line 156]\n  NULLIFY(&$irvar13); [line 156]\n  EXIT_SCOPE(n$46,n$47,$irvar13); [line 156]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_26" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_27" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_26" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_27" [label="27:  method_body \n   n$48=*&$irvar10:java.lang.Object*[_*_](*) [line 156]\n  n$49=*&$irvar14:java.lang.Boolean* [line 156]\n  *n$48[1]:java.lang.Boolean*=n$49 [line 156]\n  NULLIFY(&$irvar14); [line 156]\n  EXIT_SCOPE(n$48,n$49,$irvar14); [line 156]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_27" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_28" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_27" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_28" [label="28:  method_body \n   n$50=*&$irvar10:java.lang.Object*[_*_](*) [line 156]\n  n$51=*&typeAlias:java.lang.String* [line 156]\n  *n$50[2]:java.lang.String*=n$51 [line 156]\n  NULLIFY(&typeAlias); [line 156]\n  EXIT_SCOPE(n$50,n$51,typeAlias); [line 156]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_28" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_29" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_28" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_29" [label="29:  Call void ModelUtil.fillPageData(Model,int,int,String,Map,Object[]) \n   n$52=*&this:com.zrlog.model.Log* [line 154]\n  n$53=*&page:int [line 154]\n  n$54=*&pageSize:int [line 154]\n  n$55=*&data:java.util.HashMap* [line 154]\n  n$56=*&$irvar10:java.lang.Object*[_*_](*) [line 154]\n  n$57=_fun_void ModelUtil.fillPageData(Model,int,int,String,Map,Object[])(n$52:com.zrlog.model.Log*,n$53:int,n$54:int,\"from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and rubbish=? and privacy=? and t.alias=?\":java.lang.Object*,n$55:java.util.HashMap*,n$56:java.lang.Object*[_*_](*)) [line 154]\n  NULLIFY(&pageSize); [line 154]\n  NULLIFY(&page); [line 154]\n  NULLIFY(&$irvar10); [line 154]\n  NULLIFY(&this); [line 154]\n  EXIT_SCOPE(n$52,n$53,n$54,n$55,n$56,n$57,pageSize,page,$irvar10,this); [line 154]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_29" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_30" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_29" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+"com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_30" [label="30:  method_body \n   n$58=*&data:java.util.HashMap* [line 157]\n  *&return:java.util.Map*=n$58 [line 157]\n  NULLIFY(&data); [line 157]\n  EXIT_SCOPE(n$58,data); [line 157]\n  APPLY_ABSTRACTION; [line 157]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_30" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_2" ;
+	 "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_30" -> "com.zrlog.model.Log.findByTypeAlias(int,int,java.lang.String):java.util.Map.486b82fd1e507cf5224ef3f28139d561_3" [color="red" ];
+}

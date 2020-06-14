@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/interceptor/MyI18nInterceptor.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.interceptor; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.jfinal.aop.Interceptor; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import com.jfinal.aop.Invocation; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import com.jfinal.core.JFinal; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line">import com.jfinal.kit.PathKit; </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import com.zrlog.common.Constants; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import com.zrlog.util.I18nUtil; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line"> * 多语言（国际化）相关的配置，这里并没有直接继承至JFinal提供的I18N方案 </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">public class MyI18nInterceptor implements Interceptor { <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.<init>%28%29.ad94f75b48e8d389b18ee477de5a7c63_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.<init>%28%29.ad94f75b48e8d389b18ee477de5a7c63_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.interceptor.MyI18nInterceptor* [line 13];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.interceptor.MyI18nInterceptor*) [line 13];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.<init>%28%29.ad94f75b48e8d389b18ee477de5a7c63_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.<init>%28%29.ad94f75b48e8d389b18ee477de5a7c63_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.<init>%28%29.ad94f75b48e8d389b18ee477de5a7c63_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/com.zrlog.web.interceptor.MyI18nInterceptor.<init>%28%29.ad94f75b48e8d389b18ee477de5a7c63.html">summary for MyI18nInterceptor.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    public void intercept(Invocation inv) { <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 5 exn:2 Start
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0.html">summary for void MyI18nInterceptor.intercept(Invocation)</a></td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">        if (Constants.IN_JAR) { <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node4.html"><span class='visited with_tooltip'>C_4<span class='tooltip'>node4 preds:1 succs:6 exn:3 Conditional method_body
+n$0=*&amp;#GB<>$com.zrlog.common.Constants.IN_JAR:_Bool(root com.zrlog.common.Constants) [line 17];
+PRUNE(!(n$0 == 0), true); [line 17];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:1 succs:12 exn:3 Conditional method_body
+n$0=*&amp;#GB<>$com.zrlog.common.Constants.IN_JAR:_Bool(root com.zrlog.common.Constants) [line 17];
+PRUNE((n$0 == 0), false); [line 17];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">            I18nUtil.addToRequest(null, inv.getController().getRequest(), JFinal.me().getConstants().getDevMode(), false); <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:4 succs:7 exn:3 Instructions
+n$1=*&amp;inv:com.jfinal.aop.Invocation* [line 18];
+_=*n$1:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 18];
+n$3=_fun_Controller Invocation.getController()(n$1:com.jfinal.aop.Invocation*) virtual [line 18];
+*&amp;$irvar0:com.jfinal.core.Controller*=n$3 [line 18];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:8 exn:3 Instructions
+n$4=*&amp;$irvar0:com.jfinal.core.Controller* [line 18];
+_=*n$4:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 18];
+n$6=_fun_HttpServletRequest Controller.getRequest()(n$4:com.jfinal.core.Controller*) virtual [line 18];
+*&amp;$irvar1:javax.servlet.http.HttpServletRequest*=n$6 [line 18];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$7=_fun_JFinal JFinal.me()() [line 18];
+*&amp;$irvar2:com.jfinal.core.JFinal*=n$7 [line 18];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$8=*&amp;$irvar2:com.jfinal.core.JFinal* [line 18];
+_=*n$8:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 18];
+n$10=_fun_Constants JFinal.getConstants()(n$8:com.jfinal.core.JFinal*) virtual [line 18];
+*&amp;$irvar3:com.jfinal.config.Constants*=n$10 [line 18];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$11=*&amp;$irvar3:com.jfinal.config.Constants* [line 18];
+_=*n$11:com.jfinal.config.Constants*(root com.jfinal.config.Constants) [line 18];
+n$13=_fun_boolean Constants.getDevMode()(n$11:com.jfinal.config.Constants*) virtual [line 18];
+*&amp;$irvar4:_Bool=n$13 [line 18];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:19 exn:3 Instructions
+n$14=*&amp;$irvar1:javax.servlet.http.HttpServletRequest* [line 18];
+n$15=*&amp;$irvar4:_Bool [line 18];
+n$16=_fun_void I18nUtil.addToRequest(String,HttpServletRequest,boolean,boolean)(null:java.lang.Object*,n$14:javax.servlet.http.HttpServletRequest*,n$15:_Bool,0:int) [line 18];
+</span></span></a>
+<div class="msg" style="margin-left:9ex">UNTRUSTED_FILE UserControlledString(Controller.getRequest()) at line 18 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67</div></td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">        } else { </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line">            I18nUtil.addToRequest(PathKit.getRootClassPath(), inv.getController().getRequest(), JFinal.me().getConstants().getDevMode(), false); <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:5 succs:13 exn:3 Instructions
+n$17=_fun_String PathKit.getRootClassPath()() [line 20];
+*&amp;$irvar5:java.lang.String*=n$17 [line 20];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:3 Instructions
+n$18=*&amp;inv:com.jfinal.aop.Invocation* [line 20];
+_=*n$18:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 20];
+n$20=_fun_Controller Invocation.getController()(n$18:com.jfinal.aop.Invocation*) virtual [line 20];
+*&amp;$irvar6:com.jfinal.core.Controller*=n$20 [line 20];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$21=*&amp;$irvar6:com.jfinal.core.Controller* [line 20];
+_=*n$21:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 20];
+n$23=_fun_HttpServletRequest Controller.getRequest()(n$21:com.jfinal.core.Controller*) virtual [line 20];
+*&amp;$irvar7:javax.servlet.http.HttpServletRequest*=n$23 [line 20];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$24=_fun_JFinal JFinal.me()() [line 20];
+*&amp;$irvar8:com.jfinal.core.JFinal*=n$24 [line 20];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$25=*&amp;$irvar8:com.jfinal.core.JFinal* [line 20];
+_=*n$25:com.jfinal.core.JFinal*(root com.jfinal.core.JFinal) [line 20];
+n$27=_fun_Constants JFinal.getConstants()(n$25:com.jfinal.core.JFinal*) virtual [line 20];
+*&amp;$irvar9:com.jfinal.config.Constants*=n$27 [line 20];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$28=*&amp;$irvar9:com.jfinal.config.Constants* [line 20];
+_=*n$28:com.jfinal.config.Constants*(root com.jfinal.config.Constants) [line 20];
+n$30=_fun_boolean Constants.getDevMode()(n$28:com.jfinal.config.Constants*) virtual [line 20];
+*&amp;$irvar10:_Bool=n$30 [line 20];
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$31=*&amp;$irvar5:java.lang.String* [line 20];
+n$32=*&amp;$irvar7:javax.servlet.http.HttpServletRequest* [line 20];
+n$33=*&amp;$irvar10:_Bool [line 20];
+n$34=_fun_void I18nUtil.addToRequest(String,HttpServletRequest,boolean,boolean)(n$31:java.lang.String*,n$32:javax.servlet.http.HttpServletRequest*,n$33:_Bool,0:int) [line 20];
+</span></span></a>
+<div class="msg" style="margin-left:9ex">UNTRUSTED_FILE UserControlledString(Controller.getRequest()) at line 20 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67</div></td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        inv.invoke(); <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 11 succs:20 exn:3 Instructions
+n$35=*&amp;inv:com.jfinal.aop.Invocation* [line 22];
+_=*n$35:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 22];
+n$37=_fun_void Invocation.invoke()(n$35:com.jfinal.aop.Invocation*) virtual [line 22];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    } <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:2 exn:3 Instructions
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:20 3 succs: exn: Exit
+</span></span></a> <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/com.zrlog.web.interceptor.MyI18nInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.32b7e57ac259d1b54f8f78c02972f6a0_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+<br>UNTRUSTED_FILE UserControlledString(Controller.getRequest()) at line 18 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67 <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/node0.html">node0</a>(<a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/../MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4.html#LINE18">18</a>)<br>UNTRUSTED_FILE UserControlledString(Controller.getRequest()) at line 20 ~> CreateFile(File(...)) in procedure I18nUtil.addToRequest(...) at line 67 <a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/nodes/node0.html">node0</a>(<a href="./MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4/../MyI18nInterceptor.java.c0e32aadae41946fc5dbca31669e86d4.html#LINE20">20</a>)
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

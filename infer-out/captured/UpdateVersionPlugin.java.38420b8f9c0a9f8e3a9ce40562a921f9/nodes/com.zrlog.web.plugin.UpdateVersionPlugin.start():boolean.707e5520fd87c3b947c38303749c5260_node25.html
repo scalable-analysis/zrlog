@@ -1,0 +1,255 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.plugin.UpdateVersionPlugin.start():boolean.707e5520fd87c3b947c38303749c5260_node25</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">25</a></h1></center>PROC: <a href="./../com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260.html">boolean UpdateVersionPlugin.start()</a> LINE: <a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">51</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node24.html"><span class='visited with_tooltip'>N_24<span class='tooltip'>node24 preds:23 succs:25 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node26.html"><span class='visited with_tooltip'>N_26<span class='tooltip'>node26 preds:25 18 succs:27 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$37=*&amp;$irvar5:java.util.concurrent.ScheduledExecutorService* [line 51];
+_=*n$37:java.util.concurrent.ScheduledExecutorService*(root java.util.concurrent.ScheduledExecutorService) [line 51];
+n$39=*&amp;$irvar6:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 51];
+n$40=*&amp;$irvar4:int [line 51];
+n$41=*&amp;#GB<>$java.util.concurrent.TimeUnit.SECONDS:java.util.concurrent.TimeUnit*(root java.util.concurrent.TimeUnit) [line 51];
+n$42=_fun_ScheduledFuture ScheduledExecutorService.schedule(Runnable,long,TimeUnit)(n$37:java.util.concurrent.ScheduledExecutorService*,n$39:com.zrlog.web.plugin.UpdateVersionTimerTask*,(long)n$40:long,n$41:java.util.concurrent.TimeUnit*) interface virtual [line 51];
+*&amp;$irvar7:java.util.concurrent.ScheduledFuture*=n$42 [line 51];
+</LISTING>
+<hr width="100%">
+<a name="session24" href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node25.html#session24">node25#session24</a>(<a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">51</a>) [compute pre] liveness 25
+<LISTING class='color_black'>JOIN
+
+LEFT:   { autoUpgradeVersionType, plugin.UpdateVersionPlugin }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session25" href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node25.html#session25">node25#session25</a>(<a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">51</a>) [exec] liveness 25
+<LISTING class='color_black'>PRE STATE:
+{ autoUpgradeVersionType, plugin.UpdateVersionPlugin }
+
+INSTR=  *&amp;$irvar7:java.util.concurrent.ScheduledFuture*=n$42 [line 51]; 
+
+STATE:
+{ n$42, autoUpgradeVersionType, plugin.UpdateVersionPlugin }
+
+INSTR=  n$42=_fun_ScheduledFuture ScheduledExecutorService.schedule(Runnable,long,TimeUnit)(n$37:java.util.concurrent.ScheduledExecutorService*,n$39:com.zrlog.web.plugin.UpdateVersionTimerTask*,(long)n$40:long,n$41:java.util.concurrent.TimeUnit*) interface virtual [line 51]; 
+
+STATE:
+{ n$37,
+  n$39,
+  n$40,
+  n$41,
+  autoUpgradeVersionType,
+  plugin.UpdateVersionPlugin }
+
+INSTR=  n$41=*&amp;#GB&lt;&gt;$java.util.concurrent.TimeUnit.SECONDS:java.util.concurrent.TimeUnit*(root java.util.concurrent.TimeUnit) [line 51]; 
+
+STATE:
+{ n$37,
+  n$39,
+  n$40,
+  autoUpgradeVersionType,
+  plugin.UpdateVersionPlugin,
+  concurrent.TimeUnit }
+
+INSTR=  n$40=*&amp;$irvar4:int [line 51]; 
+
+STATE:
+{ n$37,
+  n$39,
+  autoUpgradeVersionType,
+  $irvar4,
+  plugin.UpdateVersionPlugin,
+  concurrent.TimeUnit }
+
+INSTR=  n$39=*&amp;$irvar6:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 51]; 
+
+STATE:
+{ n$37,
+  autoUpgradeVersionType,
+  $irvar4,
+  $irvar6,
+  plugin.UpdateVersionPlugin,
+  concurrent.TimeUnit }
+
+INSTR=  _=*n$37:java.util.concurrent.ScheduledExecutorService*(root java.util.concurrent.ScheduledExecutorService) [line 51]; 
+
+STATE UNCHANGED
+
+INSTR=  n$37=*&amp;$irvar5:java.util.concurrent.ScheduledExecutorService* [line 51]; 
+
+STATE:
+{ autoUpgradeVersionType,
+  $irvar5,
+  $irvar4,
+  $irvar6,
+  plugin.UpdateVersionPlugin,
+  concurrent.TimeUnit }
+
+</LISTING>
+<hr width="100%">
+<a name="session107" href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node25.html#session107">node25#session107</a>(<a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">51</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session108" href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node25.html#session108">node25#session108</a>(<a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">51</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ autoUpgradeVersionType, $irvar5, $irvar4, $irvar6 },{ _, n$34, n$36 })
+
+INSTR=  n$37=*&amp;$irvar5:java.util.concurrent.ScheduledExecutorService* [line 51]; 
+
+STATE:
+({ n$37, autoUpgradeVersionType, $irvar5, $irvar4, $irvar6 },
+{ _, n$34, n$36 })
+
+INSTR=  _=*n$37:java.util.concurrent.ScheduledExecutorService*(root java.util.concurrent.ScheduledExecutorService) [line 51]; 
+
+STATE:
+({ _, n$37, autoUpgradeVersionType, $irvar5, $irvar4, $irvar6 },
+{ _, n$34, n$36 })
+
+INSTR=  n$39=*&amp;$irvar6:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 51]; 
+
+STATE:
+({ _, n$37, n$39, autoUpgradeVersionType, $irvar5, $irvar4, $irvar6 },
+{ _, n$34, n$36 })
+
+INSTR=  n$40=*&amp;$irvar4:int [line 51]; 
+
+STATE:
+({ _, n$37, n$39, n$40, autoUpgradeVersionType, $irvar5, $irvar4, $irvar6 },
+{ _, n$34, n$36 })
+
+INSTR=  n$41=*&amp;#GB&lt;&gt;$java.util.concurrent.TimeUnit.SECONDS:java.util.concurrent.TimeUnit*(root java.util.concurrent.TimeUnit) [line 51]; 
+
+STATE:
+({ _,
+   n$37,
+   n$39,
+   n$40,
+   n$41,
+   autoUpgradeVersionType,
+   $irvar5,
+   $irvar4,
+   $irvar6 },
+{ _, n$34, n$36 })
+
+INSTR=  n$42=_fun_ScheduledFuture ScheduledExecutorService.schedule(Runnable,long,TimeUnit)(n$37:java.util.concurrent.ScheduledExecutorService*,n$39:com.zrlog.web.plugin.UpdateVersionTimerTask*,(long)n$40:long,n$41:java.util.concurrent.TimeUnit*) interface virtual [line 51]; 
+
+STATE:
+({ _,
+   n$37,
+   n$39,
+   n$40,
+   n$41,
+   n$42,
+   autoUpgradeVersionType,
+   $irvar5,
+   $irvar4,
+   $irvar6 },
+{ _, n$34, n$36 })
+
+INSTR=  *&amp;$irvar7:java.util.concurrent.ScheduledFuture*=n$42 [line 51]; 
+
+STATE:
+({ autoUpgradeVersionType },
+{ _,
+  n$37,
+  n$39,
+  n$40,
+  n$41,
+  n$42,
+  $irvar5,
+  $irvar4,
+  $irvar7,
+  $irvar6,
+  concurrent.TimeUnit })
+
+</LISTING>
+<hr width="100%">
+<a name="session44" href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node25.html#session44">node25#session44</a>(<a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">51</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session45" href="./../nodes/com.zrlog.web.plugin.UpdateVersionPlugin.start%28%29%3Aboolean.707e5520fd87c3b947c38303749c5260_node25.html#session45">node25#session45</a>(<a href="./../../UpdateVersionPlugin.java.38420b8f9c0a9f8e3a9ce40562a921f9.html#LINE51">51</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; *,
+  n$6 -&gt; { },
+  n$14 -&gt; Footprint({ common.Constants.DEFAULT_AUTO_UPGRADE_VERSION_TYPE }) ~&gt; ?,
+  n$25 -&gt; { checkPreview -&gt; { } },
+  n$36 -&gt; { },
+  autoUpgradeVersionType -&gt; Footprint({ common.Constants.DEFAULT_AUTO_UPGRADE_VERSION_TYPE }) ~&gt; ?,
+  value -&gt; *,
+  checkPreview -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { scheduledExecutorService -&gt; Footprint({ @val$0.scheduledExecutorService }) ~&gt; ?,
+                                         updateVersionTimerTask -&gt; { checkPreview -&gt; { } } }) }
+
+
+
+
+
+
+INSTR=  n$42 := ScheduledFuture ScheduledExecutorService.schedule(Runnable,long,TimeUnit)({ this-&gt;scheduledExecutorService,
+                                                                    this-&gt;updateVersionTimerTask,
+                                                                    (long) n$36,
+                                                                    concurrent.TimeUnit.SECONDS }) [line 51]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;$irvar5); [line 51]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar4); [line 51]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar7); [line 51]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar6); [line 51]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$42); [line 51]; 
+
+STATE:
+{ n$4 -&gt; *,
+  n$6 -&gt; { },
+  n$14 -&gt; Footprint({ common.Constants.DEFAULT_AUTO_UPGRADE_VERSION_TYPE }) ~&gt; ?,
+  n$25 -&gt; { checkPreview -&gt; { } },
+  n$36 -&gt; { },
+  autoUpgradeVersionType -&gt; Footprint({ common.Constants.DEFAULT_AUTO_UPGRADE_VERSION_TYPE }) ~&gt; ?,
+  value -&gt; *,
+  checkPreview -&gt; { },
+  this -&gt; (Footprint({ @val$0 }) ~&gt; ?, { scheduledExecutorService -&gt; Footprint({ @val$0.scheduledExecutorService }) ~&gt; ?,
+                                         updateVersionTimerTask -&gt; { checkPreview -&gt; { } } }) }
+
+INSTR=  APPLY_ABSTRACTION; [line 51]; 
+
+STATE UNCHANGED
+
+</LISTING>

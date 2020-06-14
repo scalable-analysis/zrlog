@@ -1,0 +1,60 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_1" [label="1: Start Plugin.<init>()\nFormals:  this:com.zrlog.model.Plugin*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_1" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" ;
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_2" [label="2: Exit Plugin.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_2" ;
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" [label="4:  Call Model.<init>() \n   n$0=*&this:com.zrlog.model.Plugin* [line 10]\n  n$1=_fun_Model.<init>()(n$0:com.zrlog.model.Plugin*) [line 10]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" ;
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" [color="red" ];
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" [label="5:  method_body \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_2" ;
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" [color="red" ];
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_1" [label="1: Start List Plugin.find()\nFormals:  this:com.zrlog.model.Plugin*\nLocals:  $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_1" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_4" ;
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_2" [label="2: Exit List Plugin.find() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_3" [label="3:  exceptions sink \n  " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_3" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_2" ;
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_4" [label="4:  method_body \n   n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 14]\n  *&$irvar0:java.lang.Object*[_*_](*)=n$0 [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_4" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_5" ;
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_4" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_3" [color="red" ];
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_5" [label="5:  Call Integer Integer.valueOf(int) \n   n$1=_fun_Integer Integer.valueOf(int)(0:int) [line 14]\n  *&$irvar1:java.lang.Integer*=n$1 [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_5" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_6" ;
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_5" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_3" [color="red" ];
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_6" [label="6:  method_body \n   n$2=*&$irvar0:java.lang.Object*[_*_](*) [line 14]\n  n$3=*&$irvar1:java.lang.Integer* [line 14]\n  *n$2[0]:java.lang.Integer*=n$3 [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_6" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_7" ;
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_6" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_3" [color="red" ];
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_7" [label="7:  Call List Model.find(String,Object[]) \n   n$4=*&this:com.zrlog.model.Plugin* [line 14]\n  _=*n$4:com.zrlog.model.Plugin*(root com.zrlog.model.Plugin) [line 14]\n  n$6=*&$irvar0:java.lang.Object*[_*_](*) [line 14]\n  n$7=_fun_List Model.find(String,Object[])(n$4:com.zrlog.model.Plugin*,\"select * from plugin where level>?\":java.lang.Object*,n$6:java.lang.Object*[_*_](*)) virtual [line 14]\n  *&$irvar2:java.util.List*=n$7 [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_7" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_8" ;
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_7" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_3" [color="red" ];
+"com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_8" [label="8:  method_body \n   n$8=*&$irvar2:java.util.List* [line 14]\n  *&return:java.util.List*=n$8 [line 14]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_8" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_2" ;
+	 "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_8" -> "com.zrlog.model.Plugin.find():java.util.List.c002856287e83f40761a1fa2877c2bb2_3" [color="red" ];
+}

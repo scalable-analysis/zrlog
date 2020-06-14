@@ -1,0 +1,70 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_1" [label="1: Start void Log.clickAdd(Object)\nFormals:  this:com.zrlog.model.Log* idOrAlias:java.lang.Object*\nLocals:  $irvar6:void $irvar5:void $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void log:com.zrlog.model.Log* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_1" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_4" ;
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_2" [label="2: Exit void Log.clickAdd(Object) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 223]\n  NULLIFY(&$irvar5); [line 223]\n  NULLIFY(&log); [line 223]\n  NULLIFY(&$irvar4); [line 223]\n  NULLIFY(&$irvar0); [line 223]\n  NULLIFY(&$irvar1); [line 223]\n  NULLIFY(&$irvar2); [line 223]\n  EXIT_SCOPE($irvar3,$irvar5,log,$irvar4,$irvar0,$irvar1,$irvar2); [line 223]\n  APPLY_ABSTRACTION; [line 223]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_2" ;
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_4" [label="4:  Call Log Log.findByIdOrAlias(Object) \n   n$0=*&this:com.zrlog.model.Log* [line 219]\n  _=*n$0:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 219]\n  n$2=*&idOrAlias:java.lang.Object* [line 219]\n  n$3=_fun_Log Log.findByIdOrAlias(Object)(n$0:com.zrlog.model.Log*,n$2:java.lang.Object*) virtual [line 219]\n  *&log:com.zrlog.model.Log*=n$3 [line 219]\n  NULLIFY(&idOrAlias); [line 219]\n  NULLIFY(&this); [line 219]\n  EXIT_SCOPE(_,n$0,n$2,n$3,idOrAlias,this); [line 219]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_4" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_5" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_4" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_6" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_4" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_5" [label="5: Prune (true branch, if) \n   n$4=*&log:com.zrlog.model.Log* [line 220]\n  PRUNE(!(n$4 == null), true); [line 220]\n  EXIT_SCOPE(n$4); [line 220]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_5" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_7" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_5" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_6" [label="6: Prune (false branch, if) \n   n$4=*&log:com.zrlog.model.Log* [line 220]\n  PRUNE((n$4 == null), false); [line 220]\n  NULLIFY(&log); [line 220]\n  EXIT_SCOPE(n$4,log); [line 220]\n  APPLY_ABSTRACTION; [line 220]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_6" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_14" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_6" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_7" [label="7:  Call Integer Model.getInt(String) \n   n$5=*&log:com.zrlog.model.Log* [line 221]\n  _=*n$5:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 221]\n  n$7=_fun_Integer Model.getInt(String)(n$5:com.zrlog.model.Log*,\"logId\":java.lang.Object*) virtual [line 221]\n  *&$irvar0:java.lang.Integer*=n$7 [line 221]\n  EXIT_SCOPE(_,n$5,n$7); [line 221]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_7" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_8" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_7" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_8" [label="8:  Call Model Model.set(String,Object) \n   n$8=*&log:com.zrlog.model.Log* [line 221]\n  _=*n$8:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 221]\n  n$10=*&$irvar0:java.lang.Integer* [line 221]\n  n$11=_fun_Model Model.set(String,Object)(n$8:com.zrlog.model.Log*,\"logId\":java.lang.Object*,n$10:java.lang.Integer*) virtual [line 221]\n  *&$irvar1:com.jfinal.plugin.activerecord.Model*=n$11 [line 221]\n  NULLIFY(&$irvar0); [line 221]\n  EXIT_SCOPE(_,n$8,n$10,n$11,$irvar0); [line 221]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_8" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_9" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_8" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_9" [label="9:  Call Integer Model.getInt(String) \n   n$12=*&log:com.zrlog.model.Log* [line 221]\n  _=*n$12:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 221]\n  n$14=_fun_Integer Model.getInt(String)(n$12:com.zrlog.model.Log*,\"click\":java.lang.Object*) virtual [line 221]\n  *&$irvar2:java.lang.Integer*=n$14 [line 221]\n  NULLIFY(&log); [line 221]\n  EXIT_SCOPE(_,n$12,n$14,log); [line 221]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_9" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_10" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_9" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_10" [label="10:  Call int Integer.intValue() \n   n$15=*&$irvar2:java.lang.Integer* [line 221]\n  _=*n$15:java.lang.Integer*(root java.lang.Integer) [line 221]\n  n$17=_fun_int Integer.intValue()(n$15:java.lang.Integer*) virtual [line 221]\n  *&$irvar3:int=n$17 [line 221]\n  NULLIFY(&$irvar2); [line 221]\n  EXIT_SCOPE(_,n$15,n$17,$irvar2); [line 221]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_10" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_11" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_10" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_11" [label="11:  Call Integer Integer.valueOf(int) \n   n$18=*&$irvar3:int [line 221]\n  n$19=_fun_Integer Integer.valueOf(int)((n$18 + 1):int) [line 221]\n  *&$irvar4:java.lang.Integer*=n$19 [line 221]\n  NULLIFY(&$irvar3); [line 221]\n  EXIT_SCOPE(n$18,n$19,$irvar3); [line 221]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_11" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_12" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_11" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_12" [label="12:  Call Model Model.set(String,Object) \n   n$20=*&$irvar1:com.jfinal.plugin.activerecord.Model* [line 221]\n  n$21=_fun___cast(n$20:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 221]\n  _=*n$21:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 221]\n  n$23=*&$irvar4:java.lang.Integer* [line 221]\n  n$24=_fun_Model Model.set(String,Object)(n$21:com.zrlog.model.Log*,\"click\":java.lang.Object*,n$23:java.lang.Integer*) virtual [line 221]\n  *&$irvar5:com.jfinal.plugin.activerecord.Model*=n$24 [line 221]\n  NULLIFY(&$irvar4); [line 221]\n  NULLIFY(&$irvar1); [line 221]\n  EXIT_SCOPE(_,n$20,n$21,n$23,n$24,$irvar4,$irvar1); [line 221]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_12" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_13" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_12" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_13" [label="13:  Call boolean Model.update() \n   n$25=*&$irvar5:com.jfinal.plugin.activerecord.Model* [line 221]\n  n$26=_fun___cast(n$25:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Log;sub_t=( sub )(cast)):void) [line 221]\n  _=*n$26:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 221]\n  n$28=_fun_boolean Model.update()(n$26:com.zrlog.model.Log*) virtual [line 221]\n  *&$irvar6:_Bool=n$28 [line 221]\n  NULLIFY(&$irvar5); [line 221]\n  NULLIFY(&$irvar6); [line 221]\n  EXIT_SCOPE(_,n$25,n$26,n$28,$irvar5,$irvar6); [line 221]\n  APPLY_ABSTRACTION; [line 221]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_13" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_14" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_13" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+"com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_14" [label="14:  method_body \n   APPLY_ABSTRACTION; [line 223]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_14" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_2" ;
+	 "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_14" -> "com.zrlog.model.Log.clickAdd(java.lang.Object):void.1346e62c676bc70b83d7e6af4b9fec40_3" [color="red" ];
+}

@@ -1,0 +1,34 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_1" [label="1: Start void UpdateVersionPlugin.initExecutorService()\nFormals:  this:com.zrlog.web.plugin.UpdateVersionPlugin*\nLocals:  $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_1" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_4" ;
+"com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_2" [label="2: Exit void UpdateVersionPlugin.initExecutorService() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 36]\n  NULLIFY(&$irvar1); [line 36]\n  EXIT_SCOPE($irvar0,$irvar1); [line 36]\n  APPLY_ABSTRACTION; [line 36]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_3" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_2" ;
+"com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_4" [label="4:  Call ThreadFactory UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6() \n   n$0=_fun_ThreadFactory UpdateVersionPlugin.callsite_com.zrlog.web.plugin.UpdateVersionPlugin$Lambda$_5_6()() [line 31]\n  *&$irvar0:java.util.concurrent.ThreadFactory*=n$0 [line 31]\n  EXIT_SCOPE(n$0); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_4" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_5" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_4" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_5" [label="5:  Call ScheduledThreadPoolExecutor.<init>(int,ThreadFactory) \n   n$1=_fun___new(sizeof(t=java.util.concurrent.ScheduledThreadPoolExecutor):java.util.concurrent.ScheduledThreadPoolExecutor*) [line 31]\n  n$2=*&$irvar0:java.util.concurrent.ThreadFactory* [line 31]\n  n$3=_fun_ScheduledThreadPoolExecutor.<init>(int,ThreadFactory)(n$1:java.util.concurrent.ScheduledThreadPoolExecutor*,1:int,n$2:java.util.concurrent.ThreadFactory*) [line 31]\n  *&$irvar1:java.util.concurrent.ScheduledThreadPoolExecutor*=n$1 [line 31]\n  NULLIFY(&$irvar0); [line 31]\n  EXIT_SCOPE(n$1,n$2,n$3,$irvar0); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_5" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_6" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_5" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_6" [label="6:  method_body \n   n$4=*&this:com.zrlog.web.plugin.UpdateVersionPlugin* [line 31]\n  n$5=*&$irvar1:java.util.concurrent.ScheduledThreadPoolExecutor* [line 31]\n  *n$4.scheduledExecutorService:com.zrlog.web.plugin.UpdateVersionPlugin(root com.zrlog.web.plugin.UpdateVersionPlugin)=n$5 [line 31]\n  NULLIFY(&$irvar1); [line 31]\n  NULLIFY(&this); [line 31]\n  EXIT_SCOPE(n$4,n$5,$irvar1,this); [line 31]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_6" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_7" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_6" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_7" [label="7:  method_body \n   APPLY_ABSTRACTION; [line 36]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_7" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_2" ;
+	 "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_7" -> "com.zrlog.web.plugin.UpdateVersionPlugin.initExecutorService():void.510b7229e1073035e1b432e3bf3fca51_3" [color="red" ];
+}

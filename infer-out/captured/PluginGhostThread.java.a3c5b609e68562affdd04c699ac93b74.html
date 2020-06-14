@@ -1,0 +1,219 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/plugin/PluginGhostThread.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.plugin; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import com.hibegin.common.util.IOUtil; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line">import org.slf4j.Logger; </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">import org.slf4j.LoggerFactory; </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line">import java.io.IOException; </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">import java.net.Socket; </td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line"> * 处理由于未知原因插件异常停止后，还可以通过命令重新加载，保证插件的高可用。 </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">class PluginGhostThread extends Thread { </td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    private static final Logger LOGGER = LoggerFactory.getLogger(PluginGhostThread.class); <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<clinit>%28%29%3Avoid.68e49414e128e12ddf352f6eeb363bc4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<clinit>%28%29%3Avoid.68e49414e128e12ddf352f6eeb363bc4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.web.plugin.PluginGhostThread:java.lang.Object*) [line 15];
+*&amp;$irvar0:org.slf4j.Logger*=n$0 [line 15];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<clinit>%28%29%3Avoid.68e49414e128e12ddf352f6eeb363bc4_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:org.slf4j.Logger* [line 15];
+*&amp;#GB<>$com.zrlog.web.plugin.PluginGhostThread.LOGGER:com.zrlog.web.plugin.PluginGhostThread(root com.zrlog.web.plugin.PluginGhostThread)=n$1 [line 15];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<clinit>%28%29%3Avoid.68e49414e128e12ddf352f6eeb363bc4_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<clinit>%28%29%3Avoid.68e49414e128e12ddf352f6eeb363bc4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:6 3 succs: exn: Exit
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<clinit>%28%29%3Avoid.68e49414e128e12ddf352f6eeb363bc4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/com.zrlog.web.plugin.PluginGhostThread.<clinit>%28%29%3Avoid.68e49414e128e12ddf352f6eeb363bc4.html">summary for void PluginGhostThread.&lt;clinit&gt;()</a></td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line">    private int port; </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    private String host; </td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    private boolean stop; </td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    public PluginGhostThread(String host, int port) { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 21];
+n$1=_fun_Thread.&lt;init&gt;()(n$0:com.zrlog.web.plugin.PluginGhostThread*) [line 21];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306.html">summary for PluginGhostThread.&lt;init&gt;(String,int)</a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        this.host = host; <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$2=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 22];
+n$3=*&amp;host:java.lang.String* [line 22];
+*n$2.host:com.zrlog.web.plugin.PluginGhostThread(root com.zrlog.web.plugin.PluginGhostThread)=n$3 [line 22];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">        this.port = port; <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 exn:3 Instructions
+n$4=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 23];
+n$5=*&amp;port:int [line 23];
+*n$4.port:com.zrlog.web.plugin.PluginGhostThread(root com.zrlog.web.plugin.PluginGhostThread)=n$5 [line 23];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line">    } <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:6 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:7 3 succs: exn: Exit
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.<init>%28java.lang.String%2Cint%29.d656c2c43f92b943d829a19839e49306_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">    @Override </td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    public void run() { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993.html">summary for void PluginGhostThread.run()</a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line">        //使用Socket的方式进行监听，如果插件服务停止后，那么SocketServer也会被关闭，方法堵塞结束，标记插件服务停止。 </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">        Socket socket = null; <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+*&amp;socket:java.lang.Object*=null [line 29];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        while (!stop) { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:9 4 succs:7 exn:3 Conditional method_body
+n$0=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 30];
+n$1=*n$0.stop:_Bool(root com.zrlog.web.plugin.PluginGhostThread) [line 30];
+PRUNE(!(n$1 != 0), true); [line 30];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:9 4 succs:10 11 exn:3 Conditional method_body
+n$0=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 30];
+n$1=*n$0.stop:_Bool(root com.zrlog.web.plugin.PluginGhostThread) [line 30];
+PRUNE((n$1 != 0), false); [line 30];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">            try { </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line">                Thread.sleep(1000); <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:8 exn:23 Instructions
+n$2=_fun_void Thread.sleep(long)(1000:long) [line 32];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">                socket = new Socket(host, port); <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:10 11 exn:23 Instructions
+n$3=_fun___new(sizeof(t=java.net.Socket):java.net.Socket*) [line 33];
+n$4=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 33];
+n$5=*n$4.host:java.lang.String*(root com.zrlog.web.plugin.PluginGhostThread) [line 33];
+n$6=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 33];
+n$7=*n$6.port:int(root com.zrlog.web.plugin.PluginGhostThread) [line 33];
+n$8=_fun_Socket.&lt;init&gt;(String,int)(n$3:java.net.Socket*,n$5:java.lang.String*,n$7:int) [line 33];
+n$9=_fun___set_file_attribute(n$3:java.net.Socket*) [line 33];
+*&amp;socket:java.net.Socket*=n$3 [line 33];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">                break; </td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">            } catch (Exception e) { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:21 succs:5 6 exn:3 Instructions
+n$10=*&amp;CatchVar34:java.lang.Object* [line 35];
+*&amp;$bcvar2:java.lang.Object*=n$10 [line 35];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node21.html"><span class='visited with_tooltip'>C_21<span class='tooltip'>node21 preds:23 succs:9 exn:3 Conditional exception handler
+n$26=_fun___instanceof(n$24:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 35];
+PRUNE(n$26, true); [line 35];
+*&amp;CatchVar34:void=n$24 [line 35];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node22.html"><span class='visited with_tooltip'>C_22<span class='tooltip'>node22 preds:23 succs:3 exn:3 Conditional exception handler
+n$26=_fun___instanceof(n$24:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 35];
+PRUNE(!n$26, false); [line 35];
+*&amp;return:void=EXN n$24 [line 35];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds: succs:21 22 exn:3 Instructions
+n$23=*&amp;return:void [line 35];
+*&amp;return:void=null [line 35];
+n$24=_fun___unwrap_exception(n$23:void) [line 35];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">                //LOGGER.warn(&quot;plugin exception stop &quot;, e); </td></tr>
+<tr><td class="num" id="LINE37">37</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE38">38</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE39">39</td><td class="line">        try { </td></tr>
+<tr><td class="num" id="LINE40">40</td><td class="line">            if (socket != null) { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 6 succs:12 exn:20 Conditional method_body
+n$11=*&amp;socket:java.net.Socket* [line 40];
+PRUNE(!(n$11 == null), true); [line 40];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:8 6 succs:14 exn:20 Conditional method_body
+n$11=*&amp;socket:java.net.Socket* [line 40];
+PRUNE((n$11 == null), false); [line 40];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE41">41</td><td class="line">                IOUtil.getByteByInputStream(socket.getInputStream()); <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 exn:20 Instructions
+n$12=*&amp;socket:java.net.Socket* [line 41];
+_=*n$12:java.net.Socket*(root java.net.Socket) [line 41];
+n$14=_fun_InputStream Socket.getInputStream()(n$12:java.net.Socket*) virtual [line 41];
+*&amp;$irvar0:java.io.InputStream*=n$14 [line 41];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 succs:14 exn:20 Instructions
+n$15=*&amp;$irvar0:java.io.InputStream* [line 41];
+n$16=_fun_byte[] IOUtil.getByteByInputStream(InputStream)(n$15:java.io.InputStream*) [line 41];
+*&amp;$irvar1:signed char[_*_](*)=n$16 [line 41];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE42">42</td><td class="line">            } </td></tr>
+<tr><td class="num" id="LINE43">43</td><td class="line">            stop = true; <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 11 succs:17 exn:20 Instructions
+n$17=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 43];
+*n$17.stop:com.zrlog.web.plugin.PluginGhostThread(root com.zrlog.web.plugin.PluginGhostThread)=1 [line 43];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE44">44</td><td class="line">        } catch (IOException e) { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:18 succs:16 exn:3 Instructions
+n$18=*&amp;CatchVar58:java.lang.Object* [line 44];
+*&amp;e:java.lang.Object*=n$18 [line 44];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:20 succs:15 exn:3 Conditional exception handler
+n$25=_fun___instanceof(n$24:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 44];
+PRUNE(n$25, true); [line 44];
+*&amp;CatchVar58:void=n$24 [line 44];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node19.html"><span class='visited with_tooltip'>C_19<span class='tooltip'>node19 preds:20 succs:3 exn:3 Conditional exception handler
+n$25=_fun___instanceof(n$24:java.io.IOException*,sizeof(t=java.io.IOException):void) [line 44];
+PRUNE(!n$25, false); [line 44];
+*&amp;return:void=EXN n$24 [line 44];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds: succs:18 19 exn:3 Instructions
+n$23=*&amp;return:void [line 44];
+*&amp;return:void=null [line 44];
+n$24=_fun___unwrap_exception(n$23:void) [line 44];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE45">45</td><td class="line">            LOGGER.warn(&quot;plugin exception stop &quot;, e); <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$19=*&amp;#GB<>$com.zrlog.web.plugin.PluginGhostThread.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.PluginGhostThread) [line 45];
+_=*n$19:org.slf4j.Logger*(root org.slf4j.Logger) [line 45];
+n$21=*&amp;e:java.lang.Object* [line 45];
+n$22=_fun_void Logger.warn(String,Throwable)(n$19:org.slf4j.Logger*,"plugin exception stop ":java.lang.Object*,n$21:java.lang.Object*) interface virtual [line 45];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE46">46</td><td class="line">        } </td></tr>
+<tr><td class="num" id="LINE47">47</td><td class="line">    } <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 14 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:17 3 succs: exn: Exit
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.run%28%29%3Avoid.cd5c781618f6928bad8865f779d10993_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:22 19 succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE48">48</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE49">49</td><td class="line">    public boolean isStop() { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.isStop%28%29%3Aboolean.6d68945e2d6765af0a69791318249e51_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/com.zrlog.web.plugin.PluginGhostThread.isStop%28%29%3Aboolean.6d68945e2d6765af0a69791318249e51.html">summary for boolean PluginGhostThread.isStop()</a></td></tr>
+<tr><td class="num" id="LINE50">50</td><td class="line">        return stop; <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.isStop%28%29%3Aboolean.6d68945e2d6765af0a69791318249e51_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 50];
+n$1=*n$0.stop:_Bool(root com.zrlog.web.plugin.PluginGhostThread) [line 50];
+*&amp;return:_Bool=n$1 [line 50];
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.isStop%28%29%3Aboolean.6d68945e2d6765af0a69791318249e51_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.isStop%28%29%3Aboolean.6d68945e2d6765af0a69791318249e51_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE51">51</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE52">52</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE53">53</td><td class="line">    public void setStop(boolean stop) { <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.setStop%28boolean%29%3Avoid.2e2f99c95f0c370e90416baaad6364a4_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/com.zrlog.web.plugin.PluginGhostThread.setStop%28boolean%29%3Avoid.2e2f99c95f0c370e90416baaad6364a4.html">summary for void PluginGhostThread.setStop(boolean)</a></td></tr>
+<tr><td class="num" id="LINE54">54</td><td class="line">        this.stop = stop; <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.setStop%28boolean%29%3Avoid.2e2f99c95f0c370e90416baaad6364a4_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.plugin.PluginGhostThread* [line 54];
+n$1=*&amp;stop:_Bool [line 54];
+*n$0.stop:com.zrlog.web.plugin.PluginGhostThread(root com.zrlog.web.plugin.PluginGhostThread)=n$1 [line 54];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE55">55</td><td class="line">    } <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.setStop%28boolean%29%3Avoid.2e2f99c95f0c370e90416baaad6364a4_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.setStop%28boolean%29%3Avoid.2e2f99c95f0c370e90416baaad6364a4_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./PluginGhostThread.java.a3c5b609e68562affdd04c699ac93b74/nodes/com.zrlog.web.plugin.PluginGhostThread.setStop%28boolean%29%3Avoid.2e2f99c95f0c370e90416baaad6364a4_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE56">56</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

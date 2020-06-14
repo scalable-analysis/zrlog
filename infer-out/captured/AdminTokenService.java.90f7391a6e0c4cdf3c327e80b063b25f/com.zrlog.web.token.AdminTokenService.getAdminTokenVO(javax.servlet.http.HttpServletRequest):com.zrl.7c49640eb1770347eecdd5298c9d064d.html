@@ -1,0 +1,507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.token.AdminTokenService.getAdminTokenVO(javax.servlet.http.HttpServletRequest):com.zrl.7c49640eb1770347eecdd5298c9d064d</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE59">AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)</a></h1></center>
+<a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:57 53 36 26 7 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:64 59 succs:2 exn:2 Instructions
+NULLIFY(&amp;$bcvar6); [line 90];
+NULLIFY(&amp;CatchVar202); [line 90];
+NULLIFY(&amp;$bcvar4); [line 90];
+NULLIFY(&amp;$bcvar5); [line 90];
+NULLIFY(&amp;$irvar0); [line 90];
+NULLIFY(&amp;CatchVar207); [line 90];
+NULLIFY(&amp;$irvar1); [line 90];
+NULLIFY(&amp;decTokenString); [line 90];
+NULLIFY(&amp;cookie); [line 90];
+NULLIFY(&amp;$irvar2); [line 90];
+NULLIFY(&amp;cookies); [line 90];
+NULLIFY(&amp;e); [line 90];
+EXIT_SCOPE(n$95,$bcvar6,CatchVar202,$bcvar4,$bcvar5,$irvar0,CatchVar207,$irvar1,decTokenString,cookie,$irvar2,cookies,e); [line 90];
+APPLY_ABSTRACTION; [line 90];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 6 exn:3 Instructions
+n$0=*&amp;request:javax.servlet.http.HttpServletRequest* [line 60];
+_=*n$0:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 60];
+n$2=_fun_Cookie[] HttpServletRequest.getCookies()(n$0:javax.servlet.http.HttpServletRequest*) interface virtual [line 60];
+*&amp;cookies:javax.servlet.http.Cookie*[_*_](*)=n$2 [line 60];
+NULLIFY(&amp;request); [line 60];
+EXIT_SCOPE(_,n$0,n$2,request); [line 60];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node5.html"><span class='visited with_tooltip'>C_5<span class='tooltip'>node5 preds:4 succs:7 exn:3 Conditional method_body
+n$3=*&amp;cookies:javax.servlet.http.Cookie*[_*_](*) [line 61];
+PRUNE(!(n$3 != null), true); [line 61];
+NULLIFY(&amp;cookies); [line 61];
+EXIT_SCOPE(n$3,cookies); [line 61];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:4 succs:8 exn:3 Conditional method_body
+n$3=*&amp;cookies:javax.servlet.http.Cookie*[_*_](*) [line 61];
+PRUNE((n$3 != null), false); [line 61];
+EXIT_SCOPE(n$3); [line 61];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:5 succs:2 exn:3 Instructions
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=null [line 62];
+APPLY_ABSTRACTION; [line 62];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:9 exn:3 Instructions
+*&amp;decTokenString:java.lang.Object*=null [line 64];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:10 exn:3 Instructions
+n$4=*&amp;cookies:javax.servlet.http.Cookie*[_*_](*) [line 65];
+*&amp;$bcvar4:javax.servlet.http.Cookie*[_*_](*)=n$4 [line 65];
+NULLIFY(&amp;cookies); [line 65];
+EXIT_SCOPE(n$4,cookies); [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$5=*&amp;$bcvar4:javax.servlet.http.Cookie*[_*_](*) [line 65];
+_=*n$5:int(root javax.servlet.http.Cookie*[_*_]) [line 65];
+n$7=_fun___get_array_length(n$5:javax.servlet.http.Cookie*[_*_](*)) [line 65];
+*&amp;$bcvar5:int=n$7 [line 65];
+EXIT_SCOPE(_,n$5,n$7); [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:14 exn:3 Instructions
+*&amp;$bcvar6:int=0 [line 65];
+APPLY_ABSTRACTION; [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:14 succs:15 exn:3 Conditional method_body
+n$8=*&amp;$bcvar6:int [line 65];
+n$9=*&amp;$bcvar5:int [line 65];
+PRUNE(!(n$8  &gt;=  n$9), true); [line 65];
+EXIT_SCOPE(n$8,n$9); [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:14 succs:23 exn:3 Conditional method_body
+n$8=*&amp;$bcvar6:int [line 65];
+n$9=*&amp;$bcvar5:int [line 65];
+PRUNE((n$8  &gt;=  n$9), false); [line 65];
+NULLIFY(&amp;$bcvar6); [line 65];
+NULLIFY(&amp;$bcvar4); [line 65];
+NULLIFY(&amp;$bcvar5); [line 65];
+EXIT_SCOPE(n$8,n$9,$bcvar6,$bcvar4,$bcvar5); [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node14.html"><span class='visited with_tooltip'>J_14<span class='tooltip'>node14 preds:22 11 succs:12 13 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:12 succs:16 exn:3 Instructions
+n$10=*&amp;$bcvar4:javax.servlet.http.Cookie*[_*_](*) [line 65];
+_=*n$10:javax.servlet.http.Cookie*(root javax.servlet.http.Cookie*[_*_]) [line 65];
+n$11=*&amp;$bcvar6:int [line 65];
+n$13=*n$10[n$11]:javax.servlet.http.Cookie* [line 65];
+*&amp;cookie:javax.servlet.http.Cookie*=n$13 [line 65];
+EXIT_SCOPE(_,n$10,n$11,n$13); [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$14=*&amp;cookie:javax.servlet.http.Cookie* [line 66];
+_=*n$14:javax.servlet.http.Cookie*(root javax.servlet.http.Cookie) [line 66];
+n$16=_fun_String Cookie.getName()(n$14:javax.servlet.http.Cookie*) virtual [line 66];
+*&amp;$irvar0:java.lang.String*=n$16 [line 66];
+EXIT_SCOPE(_,n$14,n$16); [line 66];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:20 exn:3 Instructions
+n$17=*&amp;$irvar0:java.lang.String* [line 66];
+_=*n$17:java.lang.String*(root java.lang.String) [line 66];
+n$19=_fun_boolean String.equals(Object)(n$17:java.lang.String*,"admin-token":java.lang.Object*) virtual [line 66];
+*&amp;$irvar1:_Bool=n$19 [line 66];
+NULLIFY(&amp;$irvar0); [line 66];
+EXIT_SCOPE(_,n$17,n$19,$irvar0); [line 66];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node18.html"><span class='visited with_tooltip'>C_18<span class='tooltip'>node18 preds:20 succs:21 exn:3 Conditional method_body
+n$20=*&amp;$irvar1:_Bool [line 66];
+PRUNE(!(n$20 == 0), true); [line 66];
+NULLIFY(&amp;$irvar1); [line 66];
+NULLIFY(&amp;decTokenString); [line 66];
+EXIT_SCOPE(n$20,$irvar1,decTokenString); [line 66];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node19.html"><span class='visited with_tooltip'>C_19<span class='tooltip'>node19 preds:20 succs:22 exn:3 Conditional method_body
+n$20=*&amp;$irvar1:_Bool [line 66];
+PRUNE((n$20 == 0), false); [line 66];
+NULLIFY(&amp;$irvar1); [line 66];
+NULLIFY(&amp;cookie); [line 66];
+EXIT_SCOPE(n$20,$irvar1,cookie); [line 66];
+APPLY_ABSTRACTION; [line 66];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node20.html"><span class='visited with_tooltip'>J_20<span class='tooltip'>node20 preds:17 succs:18 19 exn: Join
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:18 succs:22 exn:3 Instructions
+n$21=*&amp;cookie:javax.servlet.http.Cookie* [line 67];
+_=*n$21:javax.servlet.http.Cookie*(root javax.servlet.http.Cookie) [line 67];
+n$23=_fun_String Cookie.getValue()(n$21:javax.servlet.http.Cookie*) virtual [line 67];
+*&amp;decTokenString:java.lang.String*=n$23 [line 67];
+NULLIFY(&amp;cookie); [line 67];
+EXIT_SCOPE(_,n$21,n$23,cookie); [line 67];
+APPLY_ABSTRACTION; [line 67];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node22.html"><span class='visited with_tooltip'>I_22<span class='tooltip'>node22 preds:21 19 succs:14 exn:3 Instructions
+n$24=*&amp;$bcvar6:int [line 65];
+*&amp;$bcvar6:int=(n$24 + 1) [line 65];
+EXIT_SCOPE(n$24); [line 65];
+APPLY_ABSTRACTION; [line 65];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node23.html"><span class='visited with_tooltip'>I_23<span class='tooltip'>node23 preds:13 succs:24 25 exn:3 Instructions
+n$25=*&amp;decTokenString:java.lang.String* [line 70];
+n$26=_fun_boolean StringUtils.isEmpty(String)(n$25:java.lang.String*) [line 70];
+*&amp;$irvar2:_Bool=n$26 [line 70];
+EXIT_SCOPE(n$25,n$26); [line 70];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node24.html"><span class='visited with_tooltip'>C_24<span class='tooltip'>node24 preds:23 succs:26 exn:3 Conditional method_body
+n$27=*&amp;$irvar2:_Bool [line 70];
+PRUNE(!(n$27 == 0), true); [line 70];
+NULLIFY(&amp;decTokenString); [line 70];
+NULLIFY(&amp;$irvar2); [line 70];
+EXIT_SCOPE(n$27,decTokenString,$irvar2); [line 70];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node25.html"><span class='visited with_tooltip'>C_25<span class='tooltip'>node25 preds:23 succs:27 exn:3 Conditional method_body
+n$27=*&amp;$irvar2:_Bool [line 70];
+PRUNE((n$27 == 0), false); [line 70];
+NULLIFY(&amp;$irvar2); [line 70];
+EXIT_SCOPE(n$27,$irvar2); [line 70];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node26.html"><span class='visited with_tooltip'>I_26<span class='tooltip'>node26 preds:24 succs:2 exn:3 Instructions
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=null [line 71];
+APPLY_ABSTRACTION; [line 71];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node27.html"><span class='visited with_tooltip'>I_27<span class='tooltip'>node27 preds:25 succs:28 exn:67 Instructions
+n$28=*&amp;decTokenString:java.lang.String* [line 74];
+_=*n$28:java.lang.String*(root java.lang.String) [line 74];
+n$30=_fun_int String.indexOf(String)(n$28:java.lang.String*,"#":java.lang.Object*) virtual [line 74];
+*&amp;$irvar3:int=n$30 [line 74];
+EXIT_SCOPE(_,n$28,n$30); [line 74];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node28.html"><span class='visited with_tooltip'>I_28<span class='tooltip'>node28 preds:27 succs:29 exn:67 Instructions
+n$31=*&amp;decTokenString:java.lang.String* [line 74];
+_=*n$31:java.lang.String*(root java.lang.String) [line 74];
+n$33=*&amp;$irvar3:int [line 74];
+n$34=_fun_String String.substring(int,int)(n$31:java.lang.String*,0:int,n$33:int) virtual [line 74];
+*&amp;$irvar4:java.lang.String*=n$34 [line 74];
+NULLIFY(&amp;$irvar3); [line 74];
+EXIT_SCOPE(_,n$31,n$33,n$34,$irvar3); [line 74];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node29.html"><span class='visited with_tooltip'>I_29<span class='tooltip'>node29 preds:28 succs:30 exn:67 Instructions
+n$35=*&amp;$irvar4:java.lang.String* [line 74];
+n$36=_fun_int Integer.parseInt(String)(n$35:java.lang.String*) [line 74];
+*&amp;userId:int=n$36 [line 74];
+NULLIFY(&amp;$irvar4); [line 74];
+EXIT_SCOPE(n$35,n$36,$irvar4); [line 74];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node30.html"><span class='visited with_tooltip'>I_30<span class='tooltip'>node30 preds:29 succs:31 exn:67 Instructions
+n$37=_fun___new(sizeof(t=com.zrlog.model.User):com.zrlog.model.User*) [line 75];
+n$38=_fun_User.&lt;init&gt;()(n$37:com.zrlog.model.User*) [line 75];
+*&amp;$irvar5:com.zrlog.model.User*=n$37 [line 75];
+EXIT_SCOPE(n$37,n$38); [line 75];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node31.html"><span class='visited with_tooltip'>I_31<span class='tooltip'>node31 preds:30 succs:32 exn:67 Instructions
+n$39=*&amp;userId:int [line 75];
+n$40=_fun_Integer Integer.valueOf(int)(n$39:int) [line 75];
+*&amp;$irvar6:java.lang.Integer*=n$40 [line 75];
+NULLIFY(&amp;userId); [line 75];
+EXIT_SCOPE(n$39,n$40,userId); [line 75];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node32.html"><span class='visited with_tooltip'>I_32<span class='tooltip'>node32 preds:31 succs:33 exn:67 Instructions
+n$41=*&amp;$irvar5:com.zrlog.model.User* [line 75];
+_=*n$41:com.zrlog.model.User*(root com.zrlog.model.User) [line 75];
+n$43=*&amp;$irvar6:java.lang.Integer* [line 75];
+n$44=_fun_Model Model.findById(Object)(n$41:com.zrlog.model.User*,n$43:java.lang.Integer*) virtual [line 75];
+*&amp;$irvar7:com.jfinal.plugin.activerecord.Model*=n$44 [line 75];
+NULLIFY(&amp;$irvar5); [line 75];
+NULLIFY(&amp;$irvar6); [line 75];
+EXIT_SCOPE(_,n$41,n$43,n$44,$irvar5,$irvar6); [line 75];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node33.html"><span class='visited with_tooltip'>I_33<span class='tooltip'>node33 preds:32 succs:34 35 exn:67 Instructions
+n$45=*&amp;$irvar7:com.jfinal.plugin.activerecord.Model* [line 75];
+n$46=_fun___cast(n$45:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.User;sub_t=( sub )(cast)):void) [line 75];
+*&amp;user:com.zrlog.model.User*=n$46 [line 75];
+NULLIFY(&amp;$irvar7); [line 75];
+EXIT_SCOPE(n$45,n$46,$irvar7); [line 75];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node34.html"><span class='visited with_tooltip'>C_34<span class='tooltip'>node34 preds:33 succs:36 exn:67 Conditional method_body
+n$47=*&amp;user:com.zrlog.model.User* [line 76];
+PRUNE(!(n$47 != null), true); [line 76];
+NULLIFY(&amp;decTokenString); [line 76];
+NULLIFY(&amp;user); [line 76];
+EXIT_SCOPE(n$47,decTokenString,user); [line 76];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node35.html"><span class='visited with_tooltip'>C_35<span class='tooltip'>node35 preds:33 succs:37 exn:67 Conditional method_body
+n$47=*&amp;user:com.zrlog.model.User* [line 76];
+PRUNE((n$47 != null), false); [line 76];
+EXIT_SCOPE(n$47); [line 76];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node36.html"><span class='visited with_tooltip'>I_36<span class='tooltip'>node36 preds:34 succs:2 exn:3 Instructions
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=null [line 77];
+APPLY_ABSTRACTION; [line 77];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node37.html"><span class='visited with_tooltip'>I_37<span class='tooltip'>node37 preds:35 succs:38 exn:62 Instructions
+n$48=*&amp;decTokenString:java.lang.String* [line 79];
+_=*n$48:java.lang.String*(root java.lang.String) [line 79];
+n$50=_fun_int String.indexOf(String)(n$48:java.lang.String*,"#":java.lang.Object*) virtual [line 79];
+*&amp;$irvar8:int=n$50 [line 79];
+EXIT_SCOPE(_,n$48,n$50); [line 79];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node38.html"><span class='visited with_tooltip'>I_38<span class='tooltip'>node38 preds:37 succs:39 exn:62 Instructions
+n$51=*&amp;decTokenString:java.lang.String* [line 79];
+_=*n$51:java.lang.String*(root java.lang.String) [line 79];
+n$53=*&amp;$irvar8:int [line 79];
+n$54=_fun_String String.substring(int)(n$51:java.lang.String*,(n$53 + 1):int) virtual [line 79];
+*&amp;$irvar9:java.lang.String*=n$54 [line 79];
+NULLIFY(&amp;$irvar8); [line 79];
+NULLIFY(&amp;decTokenString); [line 79];
+EXIT_SCOPE(_,n$51,n$53,n$54,$irvar8,decTokenString); [line 79];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node39.html"><span class='visited with_tooltip'>I_39<span class='tooltip'>node39 preds:38 succs:40 exn:62 Instructions
+n$55=*&amp;$irvar9:java.lang.String* [line 79];
+n$56=_fun_byte[] ByteUtils.hexString2Bytes(String)(n$55:java.lang.String*) [line 79];
+*&amp;adminTokenEncryptAfter:signed char[_*_](*)=n$56 [line 79];
+NULLIFY(&amp;$irvar9); [line 79];
+EXIT_SCOPE(n$55,n$56,$irvar9); [line 79];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node40.html"><span class='visited with_tooltip'>I_40<span class='tooltip'>node40 preds:39 succs:41 exn:62 Instructions
+n$57=*&amp;user:com.zrlog.model.User* [line 80];
+_=*n$57:com.zrlog.model.User*(root com.zrlog.model.User) [line 80];
+n$59=_fun_String Model.getStr(String)(n$57:com.zrlog.model.User*,"secretKey":java.lang.Object*) virtual [line 80];
+*&amp;$irvar10:java.lang.String*=n$59 [line 80];
+NULLIFY(&amp;user); [line 80];
+EXIT_SCOPE(_,n$57,n$59,user); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node41.html"><span class='visited with_tooltip'>I_41<span class='tooltip'>node41 preds:40 succs:42 exn:62 Instructions
+n$60=*&amp;adminTokenEncryptAfter:signed char[_*_](*) [line 80];
+n$61=_fun_byte[] Base64.decodeBase64(byte[])(n$60:signed char[_*_](*)) [line 80];
+*&amp;$irvar11:signed char[_*_](*)=n$61 [line 80];
+NULLIFY(&amp;adminTokenEncryptAfter); [line 80];
+EXIT_SCOPE(n$60,n$61,adminTokenEncryptAfter); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node42.html"><span class='visited with_tooltip'>I_42<span class='tooltip'>node42 preds:41 succs:43 exn:62 Instructions
+n$62=*&amp;$irvar10:java.lang.String* [line 80];
+n$63=*&amp;$irvar11:signed char[_*_](*) [line 80];
+n$64=_fun_byte[] AdminTokenService.decrypt(String,byte[])(n$62:java.lang.String*,n$63:signed char[_*_](*)) [line 80];
+*&amp;$irvar12:signed char[_*_](*)=n$64 [line 80];
+NULLIFY(&amp;$irvar11); [line 80];
+NULLIFY(&amp;$irvar10); [line 80];
+EXIT_SCOPE(n$62,n$63,n$64,$irvar11,$irvar10); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node43.html"><span class='visited with_tooltip'>I_43<span class='tooltip'>node43 preds:42 succs:44 exn:62 Instructions
+n$65=_fun___new(sizeof(t=java.lang.String):java.lang.String*) [line 80];
+n$66=*&amp;$irvar12:signed char[_*_](*) [line 80];
+n$67=_fun_String.&lt;init&gt;(byte[])(n$65:java.lang.String*,n$66:signed char[_*_](*)) [line 80];
+*&amp;base64Encode:java.lang.String*=n$65 [line 80];
+NULLIFY(&amp;$irvar12); [line 80];
+EXIT_SCOPE(n$65,n$66,n$67,$irvar12); [line 80];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node44.html"><span class='visited with_tooltip'>I_44<span class='tooltip'>node44 preds:43 succs:45 exn:62 Instructions
+n$68=_fun___new(sizeof(t=com.google.gson.Gson):com.google.gson.Gson*) [line 81];
+n$69=_fun_Gson.&lt;init&gt;()(n$68:com.google.gson.Gson*) [line 81];
+*&amp;$irvar13:com.google.gson.Gson*=n$68 [line 81];
+EXIT_SCOPE(n$68,n$69); [line 81];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html"><span class='visited with_tooltip'>I_45<span class='tooltip'>node45 preds:44 succs:46 exn:62 Instructions
+n$70=*&amp;$irvar13:com.google.gson.Gson* [line 81];
+_=*n$70:com.google.gson.Gson*(root com.google.gson.Gson) [line 81];
+n$72=*&amp;base64Encode:java.lang.String* [line 81];
+n$73=_fun_Object Gson.fromJson(String,Class)(n$70:com.google.gson.Gson*,n$72:java.lang.String*,com.zrlog.common.vo.AdminTokenVO:java.lang.Object*) virtual [line 81];
+*&amp;$irvar14:java.lang.Object*=n$73 [line 81];
+NULLIFY(&amp;$irvar13); [line 81];
+NULLIFY(&amp;base64Encode); [line 81];
+EXIT_SCOPE(_,n$70,n$72,n$73,$irvar13,base64Encode); [line 81];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node46.html"><span class='visited with_tooltip'>I_46<span class='tooltip'>node46 preds:45 succs:47 exn:62 Instructions
+n$74=*&amp;$irvar14:java.lang.Object* [line 81];
+n$75=_fun___cast(n$74:java.lang.Object*,sizeof(t=com.zrlog.common.vo.AdminTokenVO;sub_t=( sub )(cast)):void) [line 81];
+*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO*=n$75 [line 81];
+NULLIFY(&amp;$irvar14); [line 81];
+EXIT_SCOPE(n$74,n$75,$irvar14); [line 81];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node47.html"><span class='visited with_tooltip'>I_47<span class='tooltip'>node47 preds:46 succs:48 exn:62 Instructions
+n$76=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 82];
+_=*n$76:com.zrlog.common.vo.AdminTokenVO*(root com.zrlog.common.vo.AdminTokenVO) [line 82];
+n$78=_fun_long AdminTokenVO.getCreatedDate()(n$76:com.zrlog.common.vo.AdminTokenVO*) virtual [line 82];
+*&amp;$irvar15:long=n$78 [line 82];
+EXIT_SCOPE(_,n$76,n$78); [line 82];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node48.html"><span class='visited with_tooltip'>I_48<span class='tooltip'>node48 preds:47 succs:49 exn:62 Instructions
+n$79=_fun_Long Constants.getSessionTimeout()() [line 82];
+*&amp;$irvar16:java.lang.Long*=n$79 [line 82];
+EXIT_SCOPE(n$79); [line 82];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node49.html"><span class='visited with_tooltip'>I_49<span class='tooltip'>node49 preds:48 succs:50 exn:62 Instructions
+n$80=*&amp;$irvar16:java.lang.Long* [line 82];
+_=*n$80:java.lang.Long*(root java.lang.Long) [line 82];
+n$82=_fun_long Long.longValue()(n$80:java.lang.Long*) virtual [line 82];
+*&amp;$irvar17:long=n$82 [line 82];
+NULLIFY(&amp;$irvar16); [line 82];
+EXIT_SCOPE(_,n$80,n$82,$irvar16); [line 82];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node50.html"><span class='visited with_tooltip'>I_50<span class='tooltip'>node50 preds:49 succs:51 52 exn:62 Instructions
+n$83=_fun_long System.currentTimeMillis()() [line 82];
+*&amp;$irvar18:long=n$83 [line 82];
+EXIT_SCOPE(n$83); [line 82];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node51.html"><span class='visited with_tooltip'>C_51<span class='tooltip'>node51 preds:50 succs:53 exn:62 Conditional method_body
+n$84=*&amp;$irvar15:long [line 82];
+n$85=*&amp;$irvar17:long [line 82];
+n$86=*&amp;$irvar18:long [line 82];
+PRUNE(!((n$84 + n$85)  &lt;=  n$86), true); [line 82];
+NULLIFY(&amp;$irvar17); [line 82];
+NULLIFY(&amp;$irvar18); [line 82];
+NULLIFY(&amp;$irvar15); [line 82];
+EXIT_SCOPE(n$84,n$85,n$86,$irvar17,$irvar18,$irvar15); [line 82];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node52.html"><span class='visited with_tooltip'>C_52<span class='tooltip'>node52 preds:50 succs:57 exn:62 Conditional method_body
+n$84=*&amp;$irvar15:long [line 82];
+n$85=*&amp;$irvar17:long [line 82];
+n$86=*&amp;$irvar18:long [line 82];
+PRUNE(((n$84 + n$85)  &lt;=  n$86), false); [line 82];
+NULLIFY(&amp;adminTokenVO); [line 82];
+NULLIFY(&amp;$irvar17); [line 82];
+NULLIFY(&amp;$irvar18); [line 82];
+NULLIFY(&amp;$irvar15); [line 82];
+EXIT_SCOPE(n$84,n$85,n$86,adminTokenVO,$irvar17,$irvar18,$irvar15); [line 82];
+APPLY_ABSTRACTION; [line 82];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node53.html"><span class='visited with_tooltip'>I_53<span class='tooltip'>node53 preds:51 succs:2 exn:3 Instructions
+n$87=*&amp;adminTokenVO:com.zrlog.common.vo.AdminTokenVO* [line 83];
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=n$87 [line 83];
+NULLIFY(&amp;adminTokenVO); [line 83];
+EXIT_SCOPE(n$87,adminTokenVO); [line 83];
+APPLY_ABSTRACTION; [line 83];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node54.html"><span class='visited with_tooltip'>I_54<span class='tooltip'>node54 preds:65 60 succs:57 exn:3 Instructions
+n$88=*&amp;CatchVar202:java.lang.Object* [line 85];
+*&amp;$bcvar4:java.lang.Object*=n$88 [line 85];
+NULLIFY(&amp;CatchVar202); [line 85];
+NULLIFY(&amp;$bcvar4); [line 85];
+EXIT_SCOPE(n$88,CatchVar202,$bcvar4); [line 85];
+APPLY_ABSTRACTION; [line 85];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node55.html"><span class='visited with_tooltip'>I_55<span class='tooltip'>node55 preds:63 58 succs:56 exn:3 Instructions
+n$89=*&amp;CatchVar207:java.lang.Object* [line 87];
+*&amp;e:java.lang.Object*=n$89 [line 87];
+NULLIFY(&amp;CatchVar207); [line 87];
+EXIT_SCOPE(n$89,CatchVar207); [line 87];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node56.html"><span class='visited with_tooltip'>I_56<span class='tooltip'>node56 preds:55 succs:57 exn:3 Instructions
+n$90=*&amp;#GB<>$com.zrlog.web.token.AdminTokenService.LOGGER:org.slf4j.Logger*(root com.zrlog.web.token.AdminTokenService) [line 88];
+_=*n$90:org.slf4j.Logger*(root org.slf4j.Logger) [line 88];
+n$92=*&amp;e:java.lang.Object* [line 88];
+n$93=_fun_void Logger.info(String,Throwable)(n$90:org.slf4j.Logger*,"error":java.lang.Object*,n$92:java.lang.Object*) interface virtual [line 88];
+NULLIFY(&amp;e); [line 88];
+EXIT_SCOPE(_,n$90,n$92,n$93,e); [line 88];
+APPLY_ABSTRACTION; [line 88];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node57.html"><span class='visited with_tooltip'>I_57<span class='tooltip'>node57 preds:56 54 52 succs:2 exn:3 Instructions
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=null [line 90];
+APPLY_ABSTRACTION; [line 90];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node58.html"><span class='visited with_tooltip'>C_58<span class='tooltip'>node58 preds:61 succs:55 exn:3 Conditional exception handler
+n$96=_fun___instanceof(n$95:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 87];
+PRUNE(n$96, true); [line 87];
+*&amp;CatchVar207:com.zrlog.common.vo.AdminTokenVO*=n$95 [line 87];
+EXIT_SCOPE(n$95,n$96); [line 87];
+APPLY_ABSTRACTION; [line 87];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node59.html"><span class='visited with_tooltip'>C_59<span class='tooltip'>node59 preds:61 succs:3 exn:3 Conditional exception handler
+n$96=_fun___instanceof(n$95:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 87];
+PRUNE(!n$96, false); [line 87];
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=EXN n$95 [line 87];
+EXIT_SCOPE(n$95,n$96); [line 87];
+APPLY_ABSTRACTION; [line 87];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node60.html"><span class='visited with_tooltip'>C_60<span class='tooltip'>node60 preds:62 succs:54 exn:3 Conditional exception handler
+n$97=_fun___instanceof(n$95:javax.crypto.BadPaddingException*,sizeof(t=javax.crypto.BadPaddingException):void) [line 85];
+PRUNE(n$97, true); [line 85];
+*&amp;CatchVar202:com.zrlog.common.vo.AdminTokenVO*=n$95 [line 85];
+EXIT_SCOPE(n$95,n$97); [line 85];
+APPLY_ABSTRACTION; [line 85];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node61.html"><span class='visited with_tooltip'>C_61<span class='tooltip'>node61 preds:62 succs:58 59 exn:3 Conditional exception handler
+n$97=_fun___instanceof(n$95:javax.crypto.BadPaddingException*,sizeof(t=javax.crypto.BadPaddingException):void) [line 85];
+PRUNE(!n$97, false); [line 85];
+EXIT_SCOPE(n$97); [line 85];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node62.html"><span class='visited with_tooltip'>I_62<span class='tooltip'>node62 preds: succs:60 61 exn:3 Instructions
+n$94=*&amp;return:com.zrlog.common.vo.AdminTokenVO* [line 85];
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=null [line 85];
+n$95=_fun___unwrap_exception(n$94:com.zrlog.common.vo.AdminTokenVO*) [line 85];
+NULLIFY(&amp;adminTokenVO); [line 85];
+NULLIFY(&amp;$irvar9); [line 85];
+NULLIFY(&amp;$irvar17); [line 85];
+NULLIFY(&amp;$irvar18); [line 85];
+NULLIFY(&amp;$irvar16); [line 85];
+NULLIFY(&amp;$irvar12); [line 85];
+NULLIFY(&amp;$irvar13); [line 85];
+NULLIFY(&amp;$irvar11); [line 85];
+NULLIFY(&amp;adminTokenEncryptAfter); [line 85];
+NULLIFY(&amp;$irvar10); [line 85];
+NULLIFY(&amp;$irvar8); [line 85];
+NULLIFY(&amp;decTokenString); [line 85];
+NULLIFY(&amp;$irvar15); [line 85];
+NULLIFY(&amp;user); [line 85];
+NULLIFY(&amp;base64Encode); [line 85];
+NULLIFY(&amp;$irvar14); [line 85];
+EXIT_SCOPE(n$94,adminTokenVO,$irvar9,$irvar17,$irvar18,$irvar16,$irvar12,$irvar13,$irvar11,adminTokenEncryptAfter,$irvar10,$irvar8,decTokenString,$irvar15,user,base64Encode,$irvar14); [line 85];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node63.html"><span class='visited with_tooltip'>C_63<span class='tooltip'>node63 preds:66 succs:55 exn:3 Conditional exception handler
+n$98=_fun___instanceof(n$95:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 87];
+PRUNE(n$98, true); [line 87];
+*&amp;CatchVar207:com.zrlog.common.vo.AdminTokenVO*=n$95 [line 87];
+EXIT_SCOPE(n$95,n$98); [line 87];
+APPLY_ABSTRACTION; [line 87];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node64.html"><span class='visited with_tooltip'>C_64<span class='tooltip'>node64 preds:66 succs:3 exn:3 Conditional exception handler
+n$98=_fun___instanceof(n$95:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 87];
+PRUNE(!n$98, false); [line 87];
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=EXN n$95 [line 87];
+EXIT_SCOPE(n$95,n$98); [line 87];
+APPLY_ABSTRACTION; [line 87];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node65.html"><span class='visited with_tooltip'>C_65<span class='tooltip'>node65 preds:67 succs:54 exn:3 Conditional exception handler
+n$99=_fun___instanceof(n$95:javax.crypto.BadPaddingException*,sizeof(t=javax.crypto.BadPaddingException):void) [line 85];
+PRUNE(n$99, true); [line 85];
+*&amp;CatchVar202:com.zrlog.common.vo.AdminTokenVO*=n$95 [line 85];
+EXIT_SCOPE(n$95,n$99); [line 85];
+APPLY_ABSTRACTION; [line 85];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node66.html"><span class='visited with_tooltip'>C_66<span class='tooltip'>node66 preds:67 succs:63 64 exn:3 Conditional exception handler
+n$99=_fun___instanceof(n$95:javax.crypto.BadPaddingException*,sizeof(t=javax.crypto.BadPaddingException):void) [line 85];
+PRUNE(!n$99, false); [line 85];
+EXIT_SCOPE(n$99); [line 85];
+</span></span></a> <a href="./nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node67.html"><span class='visited with_tooltip'>I_67<span class='tooltip'>node67 preds: succs:65 66 exn:3 Instructions
+n$94=*&amp;return:com.zrlog.common.vo.AdminTokenVO* [line 85];
+*&amp;return:com.zrlog.common.vo.AdminTokenVO*=null [line 85];
+n$95=_fun___unwrap_exception(n$94:com.zrlog.common.vo.AdminTokenVO*) [line 85];
+NULLIFY(&amp;$irvar3); [line 85];
+NULLIFY(&amp;$irvar5); [line 85];
+NULLIFY(&amp;$irvar4); [line 85];
+NULLIFY(&amp;$irvar7); [line 85];
+NULLIFY(&amp;$irvar6); [line 85];
+NULLIFY(&amp;decTokenString); [line 85];
+NULLIFY(&amp;user); [line 85];
+NULLIFY(&amp;userId); [line 85];
+EXIT_SCOPE(n$94,$irvar3,$irvar5,$irvar4,$irvar7,$irvar6,decTokenString,user,userId); [line 85];
+</span></span></a><br />@
+
+<span class='color_black'>com.zrlog.common.vo.AdminTokenVO* AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)(com.zrlog.web.token.AdminTokenService* this, javax.servlet.http.HttpServletRequest* request)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { token.AdminTokenService -> (Footprint({ token.AdminTokenService }) ~> ?, { secretKeySpec -> (Footprint({ token.AdminTokenService.secretKeySpec* }) ~> ?, *) }),
+            return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)
+; translation_unit= web/src/main/java/com/zrlog/web/token/AdminTokenService.java
+; access= Public
+; formals= [(this,com.zrlog.web.token.AdminTokenService*);  (request,
+            javax.servlet.http.HttpServletRequest*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/token/AdminTokenService.java:59
+; locals= [{ name= CatchVar207; typ= void; modify_in_block= false }; 
+           { name= CatchVar202; typ= void; modify_in_block= false }; 
+           { name= $irvar18; typ= void; modify_in_block= false }; 
+           { name= $irvar17; typ= void; modify_in_block= false }; 
+           { name= $irvar16; typ= void; modify_in_block= false }; 
+           { name= $irvar15; typ= void; modify_in_block= false }; 
+           { name= $irvar14; typ= void; modify_in_block= false }; 
+           { name= $irvar13; typ= void; modify_in_block= false }; 
+           { name= $irvar12; typ= void; modify_in_block= false }; 
+           { name= $irvar11; typ= void; modify_in_block= false }; 
+           { name= $irvar10; typ= void; modify_in_block= false }; 
+           { name= $irvar9; typ= void; modify_in_block= false }; 
+           { name= $irvar8; typ= void; modify_in_block= false }; 
+           { name= $irvar7; typ= void; modify_in_block= false }; 
+           { name= $irvar6; typ= void; modify_in_block= false }; 
+           { name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= $bcvar6; typ= void; modify_in_block= false }; 
+           { name= $bcvar5; typ= void; modify_in_block= false }; 
+           { name= $bcvar4; typ= void; modify_in_block= false }; 
+           { name= decTokenString; typ= java.lang.String*; modify_in_block= false }; 
+           { name= cookies; typ= javax.servlet.http.Cookie*[_*_](*); modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }; 
+           { name= adminTokenVO; typ= com.zrlog.common.vo.AdminTokenVO*; modify_in_block= false }; 
+           { name= base64Encode; typ= java.lang.String*; modify_in_block= false }; 
+           { name= adminTokenEncryptAfter; typ= signed char[_*_](*); modify_in_block= false }; 
+           { name= user; typ= com.zrlog.model.User*; modify_in_block= false }; 
+           { name= userId; typ= int; modify_in_block= false }; 
+           { name= cookie; typ= javax.servlet.http.Cookie*; modify_in_block= false }]
+; ret_type= com.zrlog.common.vo.AdminTokenVO* 
+; proc_id= com.zrlog.web.token.AdminTokenService.getAdminTokenVO(javax.servlet.http.HttpServletRequest):com.zrlog.common.vo.AdminTokenVO }</pre>
+</body>
+</html>

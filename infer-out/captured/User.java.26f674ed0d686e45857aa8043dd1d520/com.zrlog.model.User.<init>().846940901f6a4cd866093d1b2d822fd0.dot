@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_1" [label="1: Start User.<init>()\nFormals:  this:com.zrlog.model.User*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_1" -> "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_4" ;
+"com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_2" [label="2: Exit User.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_3" -> "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_2" ;
+"com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_4" [label="4:  Call Model.<init>() \n   n$0=*&this:com.zrlog.model.User* [line 9]\n  n$1=_fun_Model.<init>()(n$0:com.zrlog.model.User*) [line 9]\n  NULLIFY(&this); [line 9]\n  EXIT_SCOPE(n$0,n$1,this); [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_4" -> "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_5" ;
+	 "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_4" -> "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_3" [color="red" ];
+"com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_5" [label="5:  method_body \n   APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_5" -> "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_2" ;
+	 "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_5" -> "com.zrlog.model.User.<init>().846940901f6a4cd866093d1b2d822fd0_3" [color="red" ];
+}

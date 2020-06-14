@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.getSqlFileList(java.lang.String):java.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE167">List ZrLogUtil.getSqlFileList(String)</a></h1></center>
+<a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:21 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;fs); [line 177];
+NULLIFY(&amp;$irvar3); [line 177];
+NULLIFY(&amp;fileList); [line 177];
+NULLIFY(&amp;file); [line 177];
+NULLIFY(&amp;$irvar0); [line 177];
+NULLIFY(&amp;$irvar1); [line 177];
+NULLIFY(&amp;$irvar2); [line 177];
+EXIT_SCOPE(fs,$irvar3,fileList,file,$irvar0,$irvar1,$irvar2); [line 177];
+APPLY_ABSTRACTION; [line 177];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new(sizeof(t=java.io.File):java.io.File*) [line 168];
+n$1=*&amp;basePath:java.lang.String* [line 168];
+n$2=_fun_File.&lt;init&gt;(String)(n$0:java.io.File*,n$1:java.lang.String*) [line 168];
+*&amp;file:java.io.File*=n$0 [line 168];
+NULLIFY(&amp;basePath); [line 168];
+EXIT_SCOPE(n$0,n$1,n$2,basePath); [line 168];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$3=_fun___new(sizeof(t=java.util.ArrayList):java.util.ArrayList*) [line 169];
+n$4=_fun_ArrayList.&lt;init&gt;()(n$3:java.util.ArrayList*) [line 169];
+*&amp;fileList:java.util.ArrayList*=n$3 [line 169];
+EXIT_SCOPE(n$3,n$4); [line 169];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:3 Instructions
+n$5=*&amp;file:java.io.File* [line 170];
+_=*n$5:java.io.File*(root java.io.File) [line 170];
+n$7=_fun_boolean File.exists()(n$5:java.io.File*) virtual [line 170];
+*&amp;$irvar0:_Bool=n$7 [line 170];
+EXIT_SCOPE(_,n$5,n$7); [line 170];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:3 Conditional method_body
+n$8=*&amp;$irvar0:_Bool [line 170];
+PRUNE(!(n$8 == 0), true); [line 170];
+NULLIFY(&amp;$irvar0); [line 170];
+EXIT_SCOPE(n$8,$irvar0); [line 170];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:21 exn:3 Conditional method_body
+n$8=*&amp;$irvar0:_Bool [line 170];
+PRUNE((n$8 == 0), false); [line 170];
+NULLIFY(&amp;file); [line 170];
+NULLIFY(&amp;$irvar0); [line 170];
+EXIT_SCOPE(n$8,file,$irvar0); [line 170];
+APPLY_ABSTRACTION; [line 170];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 11 exn:3 Instructions
+n$9=*&amp;file:java.io.File* [line 170];
+_=*n$9:java.io.File*(root java.io.File) [line 170];
+n$11=_fun_boolean File.isDirectory()(n$9:java.io.File*) virtual [line 170];
+*&amp;$irvar1:_Bool=n$11 [line 170];
+EXIT_SCOPE(_,n$9,n$11); [line 170];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:9 succs:12 exn:3 Conditional method_body
+n$12=*&amp;$irvar1:_Bool [line 170];
+PRUNE(!(n$12 == 0), true); [line 170];
+NULLIFY(&amp;$irvar1); [line 170];
+EXIT_SCOPE(n$12,$irvar1); [line 170];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:9 succs:21 exn:3 Conditional method_body
+n$12=*&amp;$irvar1:_Bool [line 170];
+PRUNE((n$12 == 0), false); [line 170];
+NULLIFY(&amp;file); [line 170];
+NULLIFY(&amp;$irvar1); [line 170];
+EXIT_SCOPE(n$12,file,$irvar1); [line 170];
+APPLY_ABSTRACTION; [line 170];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 14 exn:3 Instructions
+n$13=*&amp;file:java.io.File* [line 171];
+_=*n$13:java.io.File*(root java.io.File) [line 171];
+n$15=_fun_File[] File.listFiles()(n$13:java.io.File*) virtual [line 171];
+*&amp;fs:java.io.File*[_*_](*)=n$15 [line 171];
+NULLIFY(&amp;file); [line 171];
+EXIT_SCOPE(_,n$13,n$15,file); [line 171];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:12 succs:15 16 exn:3 Conditional method_body
+n$16=*&amp;fs:java.io.File*[_*_](*) [line 172];
+PRUNE(!(n$16 == null), true); [line 172];
+EXIT_SCOPE(n$16); [line 172];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node14.html"><span class='visited with_tooltip'>C_14<span class='tooltip'>node14 preds:12 succs:21 exn:3 Conditional method_body
+n$16=*&amp;fs:java.io.File*[_*_](*) [line 172];
+PRUNE((n$16 == null), false); [line 172];
+NULLIFY(&amp;fs); [line 172];
+EXIT_SCOPE(n$16,fs); [line 172];
+APPLY_ABSTRACTION; [line 172];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node15.html"><span class='visited with_tooltip'>C_15<span class='tooltip'>node15 preds:13 succs:17 exn:3 Conditional method_body
+n$17=*&amp;fs:java.io.File*[_*_](*) [line 172];
+_=*n$17:int(root java.io.File*[_*_]) [line 172];
+n$19=_fun___get_array_length(n$17:java.io.File*[_*_](*)) [line 172];
+PRUNE(!(n$19  &lt;=  0), true); [line 172];
+NULLIFY(&amp;fileList); [line 172];
+EXIT_SCOPE(_,n$17,n$19,fileList); [line 172];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node16.html"><span class='visited with_tooltip'>C_16<span class='tooltip'>node16 preds:13 succs:21 exn:3 Conditional method_body
+n$17=*&amp;fs:java.io.File*[_*_](*) [line 172];
+_=*n$17:int(root java.io.File*[_*_]) [line 172];
+n$19=_fun___get_array_length(n$17:java.io.File*[_*_](*)) [line 172];
+PRUNE((n$19  &lt;=  0), false); [line 172];
+NULLIFY(&amp;fs); [line 172];
+EXIT_SCOPE(_,n$17,n$19,fs); [line 172];
+APPLY_ABSTRACTION; [line 172];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:15 succs:18 exn:3 Instructions
+n$20=*&amp;fs:java.io.File*[_*_](*) [line 173];
+n$21=_fun_List Arrays.asList(Object[])(n$20:java.io.File*[_*_](*)) [line 173];
+*&amp;fileList:java.util.List*=n$21 [line 173];
+NULLIFY(&amp;fs); [line 173];
+EXIT_SCOPE(n$20,n$21,fs); [line 173];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 succs:19 exn:3 Instructions
+n$22=_fun_ToIntFunction ZrLogUtil.callsite_com.zrlog.util.ZrLogUtil$Lambda$_12_51()() [line 174];
+*&amp;$irvar2:java.util.function.ToIntFunction*=n$22 [line 174];
+EXIT_SCOPE(n$22); [line 174];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node19.html"><span class='visited with_tooltip'>I_19<span class='tooltip'>node19 preds:18 succs:20 exn:3 Instructions
+n$23=*&amp;$irvar2:java.util.function.ToIntFunction* [line 174];
+n$24=_fun_Comparator Comparator.comparingInt(ToIntFunction)(n$23:java.util.function.ToIntFunction*) [line 174];
+*&amp;$irvar3:java.util.Comparator*=n$24 [line 174];
+NULLIFY(&amp;$irvar2); [line 174];
+EXIT_SCOPE(n$23,n$24,$irvar2); [line 174];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node20.html"><span class='visited with_tooltip'>I_20<span class='tooltip'>node20 preds:19 succs:21 exn:3 Instructions
+n$25=*&amp;fileList:java.util.List* [line 174];
+_=*n$25:java.util.List*(root java.util.List) [line 174];
+n$27=*&amp;$irvar3:java.util.Comparator* [line 174];
+n$28=_fun_void List.sort(Comparator)(n$25:java.util.List*,n$27:java.util.Comparator*) interface virtual [line 174];
+NULLIFY(&amp;$irvar3); [line 174];
+EXIT_SCOPE(_,n$25,n$27,n$28,$irvar3); [line 174];
+APPLY_ABSTRACTION; [line 174];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getSqlFileList%28java.lang.String%29%3Ajava.util.List.c4b1ecf70f9e8fb0f0e110f51bfb29fc_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds:20 16 14 11 8 succs:2 exn:3 Instructions
+n$29=*&amp;fileList:java.util.List* [line 177];
+*&amp;return:java.util.List*=n$29 [line 177];
+NULLIFY(&amp;fileList); [line 177];
+EXIT_SCOPE(n$29,fileList); [line 177];
+APPLY_ABSTRACTION; [line 177];
+</span></span></a><br />@
+
+<span class='color_black'>java.util.List* List ZrLogUtil.getSqlFileList(String)(java.lang.String* basePath)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { @val$0 -> (Footprint({ @val$0* }) ~> { CreateFile(File.<init>(String) at line 168) }, *),
+            return -> (Footprint({ @val$0* }) ~> { CreateFile(File.<init>(String) at line 168) }, *) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= List ZrLogUtil.getSqlFileList(String)
+; translation_unit= common/src/main/java/com/zrlog/util/ZrLogUtil.java
+; access= Private
+; formals= [(basePath,java.lang.String*)]
+; is_defined= true
+; loc= common/src/main/java/com/zrlog/util/ZrLogUtil.java:167
+; locals= [{ name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= fileList; typ= java.util.List*; modify_in_block= false }; 
+           { name= file; typ= java.io.File*; modify_in_block= false }; 
+           { name= fs; typ= java.io.File*[_*_](*); modify_in_block= false }]
+; ret_type= java.util.List* 
+; proc_id= com.zrlog.util.ZrLogUtil.getSqlFileList(java.lang.String):java.util.List }</pre>
+</body>
+</html>

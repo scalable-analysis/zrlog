@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_1" [label="1: Start List LogNav.find()\nFormals:  this:com.zrlog.model.LogNav*\nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_1" -> "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_4" ;
+"com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_2" [label="2: Exit List LogNav.find() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 17]\n  EXIT_SCOPE($irvar0); [line 17]\n  APPLY_ABSTRACTION; [line 17]\n " shape="box"]
+	
+
+	 "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_3" -> "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_2" ;
+"com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_4" [label="4:  Call List Model.find(String) \n   n$0=*&this:com.zrlog.model.LogNav* [line 17]\n  _=*n$0:com.zrlog.model.LogNav*(root com.zrlog.model.LogNav) [line 17]\n  n$2=_fun_List Model.find(String)(n$0:com.zrlog.model.LogNav*,\"select l.navId as id,l.navName,l.url,l.sort from lognav l order by sort\":java.lang.Object*) virtual [line 17]\n  *&$irvar0:java.util.List*=n$2 [line 17]\n  NULLIFY(&this); [line 17]\n  EXIT_SCOPE(_,n$0,n$2,this); [line 17]\n " shape="box"]
+	
+
+	 "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_4" -> "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_5" ;
+	 "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_4" -> "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_3" [color="red" ];
+"com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_5" [label="5:  method_body \n   n$3=*&$irvar0:java.util.List* [line 17]\n  *&return:java.util.List*=n$3 [line 17]\n  NULLIFY(&$irvar0); [line 17]\n  EXIT_SCOPE(n$3,$irvar0); [line 17]\n  APPLY_ABSTRACTION; [line 17]\n " shape="box"]
+	
+
+	 "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_5" -> "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_2" ;
+	 "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_5" -> "com.zrlog.model.LogNav.find():java.util.List.c558835a526fe3ad07028c059ae6d434_3" [color="red" ];
+}

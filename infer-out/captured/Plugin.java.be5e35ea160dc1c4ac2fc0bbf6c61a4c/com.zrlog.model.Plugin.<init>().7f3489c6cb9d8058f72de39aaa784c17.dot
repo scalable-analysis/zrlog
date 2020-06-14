@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_1" [label="1: Start Plugin.<init>()\nFormals:  this:com.zrlog.model.Plugin*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_1" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" ;
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_2" [label="2: Exit Plugin.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 10]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_2" ;
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" [label="4:  Call Model.<init>() \n   n$0=*&this:com.zrlog.model.Plugin* [line 10]\n  n$1=_fun_Model.<init>()(n$0:com.zrlog.model.Plugin*) [line 10]\n  NULLIFY(&this); [line 10]\n  EXIT_SCOPE(n$0,n$1,this); [line 10]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" ;
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_4" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" [color="red" ];
+"com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" [label="5:  method_body \n   APPLY_ABSTRACTION; [line 10]\n " shape="box"]
+	
+
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_2" ;
+	 "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_5" -> "com.zrlog.model.Plugin.<init>().7f3489c6cb9d8058f72de39aaa784c17_3" [color="red" ];
+}

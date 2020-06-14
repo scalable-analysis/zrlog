@@ -1,0 +1,93 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_1" [label="1: Start boolean Constants.getBooleanByFromWebSite(String)\nFormals:  key:java.lang.String*\nLocals:  $T0_45:void $irvar1:void $irvar0:void dbSettingSize:java.lang.Object* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_1" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_4" ;
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_2" [label="2: Exit boolean Constants.getBooleanByFromWebSite(String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 129]\n  NULLIFY(&$irvar1); [line 129]\n  NULLIFY(&dbSettingSize); [line 129]\n  NULLIFY(&$T0_45); [line 129]\n  EXIT_SCOPE($irvar0,$irvar1,dbSettingSize,$T0_45); [line 129]\n  APPLY_ABSTRACTION; [line 129]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_2" ;
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_4" [label="4:  Call Object Map.get(Object) \n   n$0=*&#GB<>$com.zrlog.common.Constants.WEB_SITE:java.util.Map*(root com.zrlog.common.Constants) [line 125]\n  _=*n$0:java.util.Map*(root java.util.Map) [line 125]\n  n$2=*&key:java.lang.String* [line 125]\n  n$3=_fun_Object Map.get(Object)(n$0:java.util.Map*,n$2:java.lang.String*) interface virtual [line 125]\n  *&dbSettingSize:java.lang.Object*=n$3 [line 125]\n  NULLIFY(&key); [line 125]\n  EXIT_SCOPE(_,n$0,n$2,n$3,key); [line 125]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_4" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_5" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_4" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_6" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_4" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_5" [label="5: Prune (true branch, if) \n   n$4=*&dbSettingSize:java.lang.Object* [line 126]\n  PRUNE(!(n$4 == null), true); [line 126]\n  EXIT_SCOPE(n$4); [line 126]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_5" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_7" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_5" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_8" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_5" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_6" [label="6: Prune (false branch, if) \n   n$4=*&dbSettingSize:java.lang.Object* [line 126]\n  PRUNE((n$4 == null), false); [line 126]\n  NULLIFY(&dbSettingSize); [line 126]\n  EXIT_SCOPE(n$4,dbSettingSize); [line 126]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_6" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_18" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_6" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_7" [label="7: Prune (true branch, if) \n   n$5=*&dbSettingSize:java.lang.Object* [line 127]\n  n$6=_fun___instanceof(n$5:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(instof)):void) [line 127]\n  PRUNE(!(n$6 == 0), true); [line 127]\n  EXIT_SCOPE(n$5,n$6); [line 127]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_7" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_9" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_7" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_8" [label="8: Prune (false branch, if) \n   n$5=*&dbSettingSize:java.lang.Object* [line 127]\n  n$6=_fun___instanceof(n$5:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(instof)):void) [line 127]\n  PRUNE((n$6 == 0), false); [line 127]\n  NULLIFY(&dbSettingSize); [line 127]\n  EXIT_SCOPE(n$5,n$6,dbSettingSize); [line 127]\n  APPLY_ABSTRACTION; [line 127]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_8" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_16" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_8" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_9" [label="9:  Call boolean String.equals(Object) \n   n$7=*&dbSettingSize:java.lang.Object* [line 127]\n  n$8=_fun_boolean String.equals(Object)(\"1\":java.lang.Object*,n$7:java.lang.Object*) virtual [line 127]\n  *&$irvar0:_Bool=n$8 [line 127]\n  EXIT_SCOPE(n$7,n$8); [line 127]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_9" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_10" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_9" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_11" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_9" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_10" [label="10: Prune (true branch, if) \n   n$9=*&$irvar0:_Bool [line 127]\n  PRUNE(!(n$9 != 0), true); [line 127]\n  NULLIFY(&$irvar0); [line 127]\n  EXIT_SCOPE(n$9,$irvar0); [line 127]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_10" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_12" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_10" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_11" [label="11: Prune (false branch, if) \n   n$9=*&$irvar0:_Bool [line 127]\n  PRUNE((n$9 != 0), false); [line 127]\n  NULLIFY(&$irvar0); [line 127]\n  NULLIFY(&dbSettingSize); [line 127]\n  EXIT_SCOPE(n$9,$irvar0,dbSettingSize); [line 127]\n  APPLY_ABSTRACTION; [line 127]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_11" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_15" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_11" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_12" [label="12:  Call boolean BooleanUtils.isTrue(String) \n   n$10=*&dbSettingSize:java.lang.Object* [line 127]\n  n$11=_fun___cast(n$10:java.lang.Object*,sizeof(t=java.lang.String;sub_t=( sub )(cast)):void) [line 127]\n  n$12=_fun_boolean BooleanUtils.isTrue(String)(n$11:java.lang.String*) [line 127]\n  *&$irvar1:_Bool=n$12 [line 127]\n  NULLIFY(&dbSettingSize); [line 127]\n  EXIT_SCOPE(n$10,n$11,n$12,dbSettingSize); [line 127]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_12" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_13" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_12" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_14" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_12" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_13" [label="13: Prune (true branch, if) \n   n$13=*&$irvar1:_Bool [line 127]\n  PRUNE(!(n$13 == 0), true); [line 127]\n  NULLIFY(&$irvar1); [line 127]\n  EXIT_SCOPE(n$13,$irvar1); [line 127]\n  APPLY_ABSTRACTION; [line 127]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_13" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_15" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_13" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_14" [label="14: Prune (false branch, if) \n   n$13=*&$irvar1:_Bool [line 127]\n  PRUNE((n$13 == 0), false); [line 127]\n  NULLIFY(&$irvar1); [line 127]\n  EXIT_SCOPE(n$13,$irvar1); [line 127]\n  APPLY_ABSTRACTION; [line 127]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_14" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_16" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_14" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_15" [label="15:  method_body \n   *&$T0_45:int=1 [line 127]\n  APPLY_ABSTRACTION; [line 127]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_15" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_17" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_15" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_16" [label="16:  method_body \n   *&$T0_45:int=0 [line 127]\n  APPLY_ABSTRACTION; [line 127]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_16" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_17" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_16" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_17" [label="17:  method_body \n   n$14=*&$T0_45:int [line 127]\n  *&return:_Bool=n$14 [line 127]\n  NULLIFY(&$T0_45); [line 127]\n  EXIT_SCOPE(n$14,$T0_45); [line 127]\n  APPLY_ABSTRACTION; [line 127]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_17" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_2" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_17" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+"com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_18" [label="18:  method_body \n   *&return:_Bool=0 [line 129]\n  APPLY_ABSTRACTION; [line 129]\n " shape="box"]
+	
+
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_18" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_2" ;
+	 "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_18" -> "com.zrlog.common.Constants.getBooleanByFromWebSite(java.lang.String):boolean.479596f3becbd5c7a6a91eaaeed890d4_3" [color="red" ];
+}

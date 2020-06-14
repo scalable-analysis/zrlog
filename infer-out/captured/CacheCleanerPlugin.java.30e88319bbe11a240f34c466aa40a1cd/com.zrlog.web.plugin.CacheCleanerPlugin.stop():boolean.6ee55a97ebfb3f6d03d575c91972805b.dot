@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_1" [label="1: Start boolean CacheCleanerPlugin.stop()\nFormals:  this:com.zrlog.web.plugin.CacheCleanerPlugin*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_1" -> "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_4" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_2" [label="2: Exit boolean CacheCleanerPlugin.stop() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_3" -> "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_2" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_4" [label="4:  Call void ScheduledExecutorService.shutdown() \n   n$0=*&this:com.zrlog.web.plugin.CacheCleanerPlugin* [line 42]\n  n$1=*n$0.scheduledThreadPoolExecutor:java.util.concurrent.ScheduledExecutorService*(root com.zrlog.web.plugin.CacheCleanerPlugin) [line 42]\n  _=*n$1:java.util.concurrent.ScheduledExecutorService*(root java.util.concurrent.ScheduledExecutorService) [line 42]\n  n$3=_fun_void ScheduledExecutorService.shutdown()(n$1:java.util.concurrent.ScheduledExecutorService*) interface virtual [line 42]\n  NULLIFY(&this); [line 42]\n  EXIT_SCOPE(_,n$0,n$1,n$3,this); [line 42]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_5" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_5" [label="5:  method_body \n   *&return:_Bool=1 [line 43]\n  APPLY_ABSTRACTION; [line 43]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_2" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin.stop():boolean.6ee55a97ebfb3f6d03d575c91972805b_3" [color="red" ];
+}

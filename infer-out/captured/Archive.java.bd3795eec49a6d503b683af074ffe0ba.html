@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Archive.java.bd3795eec49a6d503b683af074ffe0ba</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>File web/src/main/java/com/zrlog/web/cache/vo/Archive.java </h1></center>
+<table class="code">
+<tr><td class="num" id="LINE1">1</td><td class="line">package com.zrlog.web.cache.vo; </td></tr>
+<tr><td class="num" id="LINE2">2</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE3">3</td><td class="line">import java.io.Serializable; </td></tr>
+<tr><td class="num" id="LINE4">4</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE5">5</td><td class="line">/** </td></tr>
+<tr><td class="num" id="LINE6">6</td><td class="line"> * 文章存档的值对象，不在数据库中有对应的表记录，通过SQL语言查询完成 </td></tr>
+<tr><td class="num" id="LINE7">7</td><td class="line"> */ </td></tr>
+<tr><td class="num" id="LINE8">8</td><td class="line">public class Archive implements Serializable { <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.<init>%28%29.638a63f860e6e562c4cf4b4f9471cd10_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.<init>%28%29.638a63f860e6e562c4cf4b4f9471cd10_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.Archive* [line 8];
+n$1=_fun_Object.&lt;init&gt;()(n$0:com.zrlog.web.cache.vo.Archive*) [line 8];
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.<init>%28%29.638a63f860e6e562c4cf4b4f9471cd10_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.<init>%28%29.638a63f860e6e562c4cf4b4f9471cd10_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.<init>%28%29.638a63f860e6e562c4cf4b4f9471cd10_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/com.zrlog.web.cache.vo.Archive.<init>%28%29.638a63f860e6e562c4cf4b4f9471cd10.html">summary for Archive.&lt;init&gt;()</a></td></tr>
+<tr><td class="num" id="LINE9">9</td><td class="line">    private String url; </td></tr>
+<tr><td class="num" id="LINE10">10</td><td class="line">    private String text; </td></tr>
+<tr><td class="num" id="LINE11">11</td><td class="line">    private Long count; </td></tr>
+<tr><td class="num" id="LINE12">12</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE13">13</td><td class="line">    public String getUrl() { <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getUrl%28%29%3Ajava.lang.String.22c2639ac93cb66396a01c392c62a9d0_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/com.zrlog.web.cache.vo.Archive.getUrl%28%29%3Ajava.lang.String.22c2639ac93cb66396a01c392c62a9d0.html">summary for String Archive.getUrl()</a></td></tr>
+<tr><td class="num" id="LINE14">14</td><td class="line">        return url; <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getUrl%28%29%3Ajava.lang.String.22c2639ac93cb66396a01c392c62a9d0_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.Archive* [line 14];
+n$1=*n$0.url:java.lang.String*(root com.zrlog.web.cache.vo.Archive) [line 14];
+*&amp;return:java.lang.String*=n$1 [line 14];
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getUrl%28%29%3Ajava.lang.String.22c2639ac93cb66396a01c392c62a9d0_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getUrl%28%29%3Ajava.lang.String.22c2639ac93cb66396a01c392c62a9d0_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE15">15</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE16">16</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE17">17</td><td class="line">    public void setUrl(String url) { <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setUrl%28java.lang.String%29%3Avoid.e5c14e7e4327880e4cbd4c39e791c5b0_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/com.zrlog.web.cache.vo.Archive.setUrl%28java.lang.String%29%3Avoid.e5c14e7e4327880e4cbd4c39e791c5b0.html">summary for void Archive.setUrl(String)</a></td></tr>
+<tr><td class="num" id="LINE18">18</td><td class="line">        this.url = url; <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setUrl%28java.lang.String%29%3Avoid.e5c14e7e4327880e4cbd4c39e791c5b0_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.Archive* [line 18];
+n$1=*&amp;url:java.lang.String* [line 18];
+*n$0.url:com.zrlog.web.cache.vo.Archive(root com.zrlog.web.cache.vo.Archive)=n$1 [line 18];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE19">19</td><td class="line">    } <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setUrl%28java.lang.String%29%3Avoid.e5c14e7e4327880e4cbd4c39e791c5b0_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setUrl%28java.lang.String%29%3Avoid.e5c14e7e4327880e4cbd4c39e791c5b0_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setUrl%28java.lang.String%29%3Avoid.e5c14e7e4327880e4cbd4c39e791c5b0_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE20">20</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE21">21</td><td class="line">    public String getText() { <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getText%28%29%3Ajava.lang.String.dc9ae8958756a48289c26a9d08511d0f_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/com.zrlog.web.cache.vo.Archive.getText%28%29%3Ajava.lang.String.dc9ae8958756a48289c26a9d08511d0f.html">summary for String Archive.getText()</a></td></tr>
+<tr><td class="num" id="LINE22">22</td><td class="line">        return text; <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getText%28%29%3Ajava.lang.String.dc9ae8958756a48289c26a9d08511d0f_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.Archive* [line 22];
+n$1=*n$0.text:java.lang.String*(root com.zrlog.web.cache.vo.Archive) [line 22];
+*&amp;return:java.lang.String*=n$1 [line 22];
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getText%28%29%3Ajava.lang.String.dc9ae8958756a48289c26a9d08511d0f_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getText%28%29%3Ajava.lang.String.dc9ae8958756a48289c26a9d08511d0f_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE23">23</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE24">24</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE25">25</td><td class="line">    public void setText(String text) { <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setText%28java.lang.String%29%3Avoid.ff82cd6a82cfa7fcef14847bd7f48718_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/com.zrlog.web.cache.vo.Archive.setText%28java.lang.String%29%3Avoid.ff82cd6a82cfa7fcef14847bd7f48718.html">summary for void Archive.setText(String)</a></td></tr>
+<tr><td class="num" id="LINE26">26</td><td class="line">        this.text = text; <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setText%28java.lang.String%29%3Avoid.ff82cd6a82cfa7fcef14847bd7f48718_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.Archive* [line 26];
+n$1=*&amp;text:java.lang.String* [line 26];
+*n$0.text:com.zrlog.web.cache.vo.Archive(root com.zrlog.web.cache.vo.Archive)=n$1 [line 26];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE27">27</td><td class="line">    } <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setText%28java.lang.String%29%3Avoid.ff82cd6a82cfa7fcef14847bd7f48718_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setText%28java.lang.String%29%3Avoid.ff82cd6a82cfa7fcef14847bd7f48718_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setText%28java.lang.String%29%3Avoid.ff82cd6a82cfa7fcef14847bd7f48718_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE28">28</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE29">29</td><td class="line">    public Long getCount() { <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getCount%28%29%3Ajava.lang.Long.27fd288a34943a3b30ded3c1f5b63f1d_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/com.zrlog.web.cache.vo.Archive.getCount%28%29%3Ajava.lang.Long.27fd288a34943a3b30ded3c1f5b63f1d.html">summary for Long Archive.getCount()</a></td></tr>
+<tr><td class="num" id="LINE30">30</td><td class="line">        return count; <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getCount%28%29%3Ajava.lang.Long.27fd288a34943a3b30ded3c1f5b63f1d_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:2 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.Archive* [line 30];
+n$1=*n$0.count:java.lang.Long*(root com.zrlog.web.cache.vo.Archive) [line 30];
+*&amp;return:java.lang.Long*=n$1 [line 30];
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getCount%28%29%3Ajava.lang.Long.27fd288a34943a3b30ded3c1f5b63f1d_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:4 3 succs: exn: Exit
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.getCount%28%29%3Ajava.lang.Long.27fd288a34943a3b30ded3c1f5b63f1d_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE31">31</td><td class="line">    } </td></tr>
+<tr><td class="num" id="LINE32">32</td><td class="line"> </td></tr>
+<tr><td class="num" id="LINE33">33</td><td class="line">    public void setCount(Long count) { <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setCount%28java.lang.Long%29%3Avoid.a2a0dd3365e59e5fd9c1b123939c3076_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/com.zrlog.web.cache.vo.Archive.setCount%28java.lang.Long%29%3Avoid.a2a0dd3365e59e5fd9c1b123939c3076.html">summary for void Archive.setCount(Long)</a></td></tr>
+<tr><td class="num" id="LINE34">34</td><td class="line">        this.count = count; <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setCount%28java.lang.Long%29%3Avoid.a2a0dd3365e59e5fd9c1b123939c3076_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=*&amp;this:com.zrlog.web.cache.vo.Archive* [line 34];
+n$1=*&amp;count:java.lang.Long* [line 34];
+*n$0.count:com.zrlog.web.cache.vo.Archive(root com.zrlog.web.cache.vo.Archive)=n$1 [line 34];
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE35">35</td><td class="line">    } <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setCount%28java.lang.Long%29%3Avoid.a2a0dd3365e59e5fd9c1b123939c3076_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:2 exn:3 Instructions
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setCount%28java.lang.Long%29%3Avoid.a2a0dd3365e59e5fd9c1b123939c3076_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:5 3 succs: exn: Exit
+</span></span></a> <a href="./Archive.java.bd3795eec49a6d503b683af074ffe0ba/nodes/com.zrlog.web.cache.vo.Archive.setCount%28java.lang.Long%29%3Avoid.a2a0dd3365e59e5fd9c1b123939c3076_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+</span></span></a></td></tr>
+<tr><td class="num" id="LINE36">36</td><td class="line">} </td></tr>
+</table>
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+</body>
+</html>

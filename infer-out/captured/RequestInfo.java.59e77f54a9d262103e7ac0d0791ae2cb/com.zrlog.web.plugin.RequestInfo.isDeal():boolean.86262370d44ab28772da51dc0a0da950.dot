@@ -1,0 +1,19 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_1" [label="1: Start boolean RequestInfo.isDeal()\nFormals:  this:com.zrlog.web.plugin.RequestInfo*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_1" -> "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_4" ;
+"com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_2" [label="2: Exit boolean RequestInfo.isDeal() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_3" -> "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_2" ;
+"com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_4" [label="4:  method_body \n   n$0=*&this:com.zrlog.web.plugin.RequestInfo* [line 19]\n  n$1=*n$0.deal:_Bool(root com.zrlog.web.plugin.RequestInfo) [line 19]\n  *&return:_Bool=n$1 [line 19]\n  NULLIFY(&this); [line 19]\n  EXIT_SCOPE(n$0,n$1,this); [line 19]\n  APPLY_ABSTRACTION; [line 19]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_4" -> "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_2" ;
+	 "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_4" -> "com.zrlog.web.plugin.RequestInfo.isDeal():boolean.86262370d44ab28772da51dc0a0da950_3" [color="red" ];
+}

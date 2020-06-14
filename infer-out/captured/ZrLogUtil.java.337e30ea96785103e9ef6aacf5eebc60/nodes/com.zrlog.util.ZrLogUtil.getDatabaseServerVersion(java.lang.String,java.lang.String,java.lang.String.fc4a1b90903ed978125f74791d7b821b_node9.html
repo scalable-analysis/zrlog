@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.getDatabaseServerVersion(java.lang.String,java.lang.String,java.lang.String.fc4a1b90903ed978125f74791d7b821b_node9</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">9</a></h1></center>PROC: <a href="./../com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b.html">String ZrLogUtil.getDatabaseServerVersion(String,String,String,String)</a> LINE: <a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node8.html"><span class='visited with_tooltip'>N_8<span class='tooltip'>node8 preds:6 succs:9 exn:120 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node10.html"><span class='visited with_tooltip'>N_10<span class='tooltip'>node10 preds:9 succs:11 exn:120 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node120.html"><span class='dangling with_tooltip'>N_120<span class='tooltip'>node120 preds: succs:118 119 exn:3 
+NOT VISITED</span></span></a><br>
+<LISTING class='color_green'>n$6=*&amp;connect:java.sql.Connection* [line 98];
+_=*n$6:java.sql.Connection*(root java.sql.Connection) [line 98];
+n$8=*&amp;queryVersionSQL:java.lang.Object* [line 98];
+n$9=_fun_PreparedStatement Connection.prepareStatement(String)(n$6:java.sql.Connection*,n$8:java.lang.Object*) interface virtual [line 98];
+*&amp;ps:java.sql.PreparedStatement*=n$9 [line 98];
+</LISTING>
+<hr width="100%">
+<a name="session170" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session170">node9#session170</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [compute pre] liveness 9
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session171" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session171">node9#session171</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [exec] liveness 9
+<LISTING class='color_black'>PRE STATE:
+{ CatchVar228, ps, connect, return, util.ZrLogUtil }
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$9 [line 98]; 
+
+STATE:
+{ n$9, CatchVar228, connect, return, util.ZrLogUtil }
+
+INSTR=  n$9=_fun_PreparedStatement Connection.prepareStatement(String)(n$6:java.sql.Connection*,n$8:java.lang.Object*) interface virtual [line 98]; 
+
+STATE:
+{ n$6, n$8, CatchVar228, connect, return, util.ZrLogUtil }
+
+INSTR=  n$8=*&amp;queryVersionSQL:java.lang.Object* [line 98]; 
+
+STATE:
+{ n$6, CatchVar228, connect, return, queryVersionSQL, util.ZrLogUtil }
+
+INSTR=  _=*n$6:java.sql.Connection*(root java.sql.Connection) [line 98]; 
+
+STATE UNCHANGED
+
+INSTR=  n$6=*&amp;connect:java.sql.Connection* [line 98]; 
+
+STATE:
+{ CatchVar228, connect, return, queryVersionSQL, util.ZrLogUtil }
+
+</LISTING>
+<hr width="100%">
+<a name="session328" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session328">node9#session328</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [compute pre] liveness 9
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session329" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session329">node9#session329</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [exec] liveness 9
+<LISTING class='color_black'>PRE STATE:
+{ CatchVar228, CatchVar323, ps, connect, return, util.ZrLogUtil }
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$9 [line 98]; 
+
+STATE:
+{ n$9, CatchVar228, CatchVar323, connect, return, util.ZrLogUtil }
+
+INSTR=  n$9=_fun_PreparedStatement Connection.prepareStatement(String)(n$6:java.sql.Connection*,n$8:java.lang.Object*) interface virtual [line 98]; 
+
+STATE:
+{ n$6, n$8, CatchVar228, CatchVar323, connect, return, util.ZrLogUtil }
+
+INSTR=  n$8=*&amp;queryVersionSQL:java.lang.Object* [line 98]; 
+
+STATE:
+{ n$6,
+  CatchVar228,
+  CatchVar323,
+  connect,
+  return,
+  queryVersionSQL,
+  util.ZrLogUtil }
+
+INSTR=  _=*n$6:java.sql.Connection*(root java.sql.Connection) [line 98]; 
+
+STATE UNCHANGED
+
+INSTR=  n$6=*&amp;connect:java.sql.Connection* [line 98]; 
+
+STATE:
+{ CatchVar228,
+  CatchVar323,
+  connect,
+  return,
+  queryVersionSQL,
+  util.ZrLogUtil }
+
+</LISTING>
+<hr width="100%">
+<a name="session534" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session534">node9#session534</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [compute pre] liveness 9
+<LISTING class='color_black'>JOIN
+
+LEFT:   { CatchVar228, CatchVar323, ps, connect, return, util.ZrLogUtil }
+RIGHT:  { connect, return, util.ZrLogUtil, CatchVar462, deriveClass }
+RESULT: { CatchVar228,
+          CatchVar323,
+          ps,
+          connect,
+          return,
+          util.ZrLogUtil,
+          CatchVar462,
+          deriveClass }
+
+</LISTING>
+<hr width="100%">
+<a name="session535" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session535">node9#session535</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [exec] liveness 9
+<LISTING class='color_black'>PRE STATE:
+{ CatchVar228,
+  CatchVar323,
+  ps,
+  connect,
+  return,
+  util.ZrLogUtil,
+  CatchVar462,
+  deriveClass }
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$9 [line 98]; 
+
+STATE:
+{ n$9,
+  CatchVar228,
+  CatchVar323,
+  connect,
+  return,
+  util.ZrLogUtil,
+  CatchVar462,
+  deriveClass }
+
+INSTR=  n$9=_fun_PreparedStatement Connection.prepareStatement(String)(n$6:java.sql.Connection*,n$8:java.lang.Object*) interface virtual [line 98]; 
+
+STATE:
+{ n$6,
+  n$8,
+  CatchVar228,
+  CatchVar323,
+  connect,
+  return,
+  util.ZrLogUtil,
+  CatchVar462,
+  deriveClass }
+
+INSTR=  n$8=*&amp;queryVersionSQL:java.lang.Object* [line 98]; 
+
+STATE:
+{ n$6,
+  CatchVar228,
+  CatchVar323,
+  connect,
+  return,
+  queryVersionSQL,
+  util.ZrLogUtil,
+  CatchVar462,
+  deriveClass }
+
+INSTR=  _=*n$6:java.sql.Connection*(root java.sql.Connection) [line 98]; 
+
+STATE UNCHANGED
+
+INSTR=  n$6=*&amp;connect:java.sql.Connection* [line 98]; 
+
+STATE:
+{ CatchVar228,
+  CatchVar323,
+  connect,
+  return,
+  queryVersionSQL,
+  util.ZrLogUtil,
+  CatchVar462,
+  deriveClass }
+
+</LISTING>
+<hr width="100%">
+<a name="session540" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session540">node9#session540</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [compute pre] liveness 9
+<LISTING class='color_black'>JOIN
+
+LEFT:   { CatchVar228,
+          CatchVar323,
+          ps,
+          connect,
+          return,
+          util.ZrLogUtil,
+          CatchVar462,
+          deriveClass }
+RIGHT:  { connect, return, util.ZrLogUtil, CatchVar462, deriveClass }
+RESULT: { CatchVar228,
+          CatchVar323,
+          ps,
+          connect,
+          return,
+          util.ZrLogUtil,
+          CatchVar462,
+          deriveClass }
+
+</LISTING>
+<hr width="100%">
+<a name="session541" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session541">node9#session541</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [exec] liveness 9
+<LISTING class='color_black'>Fixpoint reached.
+
+</LISTING>
+<hr width="100%">
+<a name="session1019" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session1019">node9#session1019</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session1020" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session1020">node9#session1020</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ connect, queryVersionSQL },{ })
+
+INSTR=  n$6=*&amp;connect:java.sql.Connection* [line 98]; 
+
+STATE:
+({ n$6, connect, queryVersionSQL },{ })
+
+INSTR=  _=*n$6:java.sql.Connection*(root java.sql.Connection) [line 98]; 
+
+STATE:
+({ _, n$6, connect, queryVersionSQL },{ })
+
+INSTR=  n$8=*&amp;queryVersionSQL:java.lang.Object* [line 98]; 
+
+STATE:
+({ _, n$6, n$8, connect, queryVersionSQL },{ })
+
+INSTR=  n$9=_fun_PreparedStatement Connection.prepareStatement(String)(n$6:java.sql.Connection*,n$8:java.lang.Object*) interface virtual [line 98]; 
+
+STATE:
+({ _, n$6, n$8, n$9, connect, queryVersionSQL },{ })
+
+INSTR=  *&amp;ps:java.sql.PreparedStatement*=n$9 [line 98]; 
+
+STATE:
+({ ps, connect },{ _, n$6, n$8, n$9, queryVersionSQL })
+
+</LISTING>
+<hr width="100%">
+<a name="session12" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session12">node9#session12</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session13" href="./../nodes/com.zrlog.util.ZrLogUtil.getDatabaseServerVersion%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String.fc4a1b90903ed978125f74791d7b821b_node9.html#session13">node9#session13</a>(<a href="./../../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE98">98</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  connect -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  queryVersionSQL -&gt; { },
+  deriveClass -&gt; (Footprint({ @val$3* }) ~&gt; { ClassLoading(Connection ZrLogUtil.getConnection(String,String,String,String) at line 95) }, *) }
+
+
+
+
+TAINTED_CALL1: (callee="PreparedStatement Connection.prepareStatement(String)", caller="String ZrLogUtil.getDatabaseServerVersion(String,String,String,String)")
+TAINTED_CALL1: (callee="PreparedStatement Connection.prepareStatement(String)", caller="String ZrLogUtil.getDatabaseServerVersion(String,String,String,String)")
+INSTR=  n$9 := PreparedStatement Connection.prepareStatement(String)({ connect,
+                                                                    queryVersionSQL }) [line 98]; 
+
+STATE:
+{ n$4 -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  n$9 -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  connect -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  queryVersionSQL -&gt; { },
+  deriveClass -&gt; (Footprint({ @val$3* }) ~&gt; { ClassLoading(Connection ZrLogUtil.getConnection(String,String,String,String) at line 95) }, *) }
+
+INSTR=  ps := n$9 [line 98]; 
+
+STATE:
+{ n$4 -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  n$9 -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  ps -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  connect -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  queryVersionSQL -&gt; { },
+  deriveClass -&gt; (Footprint({ @val$3* }) ~&gt; { ClassLoading(Connection ZrLogUtil.getConnection(String,String,String,String) at line 95) }, *) }
+
+INSTR=  NULLIFY(&amp;queryVersionSQL); [line 98]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(n$9,queryVersionSQL); [line 98]; 
+
+STATE:
+{ n$4 -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  n$9 -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  ps -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  connect -&gt; (Footprint({ @val$2*, @val$1*, @val$0* }) ~&gt; ?, *),
+  queryVersionSQL -&gt; { },
+  deriveClass -&gt; (Footprint({ @val$3* }) ~&gt; { ClassLoading(Connection ZrLogUtil.getConnection(String,String,String,String) at line 95) }, *) }
+
+</LISTING>

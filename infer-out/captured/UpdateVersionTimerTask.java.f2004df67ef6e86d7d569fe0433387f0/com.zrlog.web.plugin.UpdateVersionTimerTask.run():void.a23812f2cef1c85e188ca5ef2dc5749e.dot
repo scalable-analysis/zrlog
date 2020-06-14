@@ -1,0 +1,55 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_1" [label="1: Start void UpdateVersionTimerTask.run()\nFormals:  this:com.zrlog.web.plugin.UpdateVersionTimerTask*\nLocals:  CatchVar15:void $irvar0:void e:java.lang.Exception* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_1" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_4" ;
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_2" [label="2: Exit void UpdateVersionTimerTask.run() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" [label="3:  exceptions sink \n   NULLIFY(&CatchVar15); [line 40]\n  NULLIFY(&e); [line 40]\n  EXIT_SCOPE(n$13,CatchVar15,e); [line 40]\n  APPLY_ABSTRACTION; [line 40]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_2" ;
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_4" [label="4:  Call Version UpdateVersionTimerTask.fetchLastVersion(boolean) \n   n$0=*&this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 36]\n  _=*n$0:com.zrlog.web.plugin.UpdateVersionTimerTask*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 36]\n  n$2=*&this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 36]\n  n$3=*n$2.checkPreview:_Bool(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 36]\n  n$4=_fun_Version UpdateVersionTimerTask.fetchLastVersion(boolean)(n$0:com.zrlog.web.plugin.UpdateVersionTimerTask*,n$3:_Bool) virtual [line 36]\n  *&$irvar0:com.zrlog.common.vo.Version*=n$4 [line 36]\n  EXIT_SCOPE(_,n$0,n$2,n$3,n$4); [line 36]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_4" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_5" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_4" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_11" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_5" [label="5:  method_body \n   n$5=*&this:com.zrlog.web.plugin.UpdateVersionTimerTask* [line 36]\n  n$6=*&$irvar0:com.zrlog.common.vo.Version* [line 36]\n  *n$5.version:com.zrlog.web.plugin.UpdateVersionTimerTask(root com.zrlog.web.plugin.UpdateVersionTimerTask)=n$6 [line 36]\n  NULLIFY(&$irvar0); [line 36]\n  NULLIFY(&this); [line 36]\n  EXIT_SCOPE(n$5,n$6,$irvar0,this); [line 36]\n  APPLY_ABSTRACTION; [line 36]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_5" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_8" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_5" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_11" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_6" [label="6:  method_body \n   n$7=*&CatchVar15:java.lang.Object* [line 37]\n  *&e:java.lang.Object*=n$7 [line 37]\n  NULLIFY(&CatchVar15); [line 37]\n  EXIT_SCOPE(n$7,CatchVar15); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_6" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_7" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_6" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_7" [label="7:  Call void Logger.error(String,Throwable) \n   n$8=*&#GB<>$com.zrlog.web.plugin.UpdateVersionTimerTask.LOGGER:org.slf4j.Logger*(root com.zrlog.web.plugin.UpdateVersionTimerTask) [line 38]\n  _=*n$8:org.slf4j.Logger*(root org.slf4j.Logger) [line 38]\n  n$10=*&e:java.lang.Object* [line 38]\n  n$11=_fun_void Logger.error(String,Throwable)(n$8:org.slf4j.Logger*,\"\":java.lang.Object*,n$10:java.lang.Object*) interface virtual [line 38]\n  NULLIFY(&e); [line 38]\n  EXIT_SCOPE(_,n$8,n$10,n$11,e); [line 38]\n  APPLY_ABSTRACTION; [line 38]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_7" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_8" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_7" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_8" [label="8:  method_body \n   APPLY_ABSTRACTION; [line 40]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_8" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_2" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_8" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_9" [label="9: Prune (true branch, switch) \n   n$14=_fun___instanceof(n$13:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 37]\n  PRUNE(n$14, true); [line 37]\n  *&CatchVar15:void=n$13 [line 37]\n  EXIT_SCOPE(n$13,n$14); [line 37]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_9" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_6" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_9" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_10" [label="10: Prune (false branch, switch) \n   n$14=_fun___instanceof(n$13:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 37]\n  PRUNE(!n$14, false); [line 37]\n  *&return:void=EXN n$13 [line 37]\n  EXIT_SCOPE(n$13,n$14); [line 37]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_10" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_10" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" [color="red" ];
+"com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_11" [label="11:  exception handler \n   n$12=*&return:void [line 37]\n  *&return:void=null [line 37]\n  n$13=_fun___unwrap_exception(n$12:void) [line 37]\n  NULLIFY(&$irvar0); [line 37]\n  EXIT_SCOPE(n$12,$irvar0); [line 37]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_11" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_9" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_11" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_10" ;
+	 "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_11" -> "com.zrlog.web.plugin.UpdateVersionTimerTask.run():void.a23812f2cef1c85e188ca5ef2dc5749e_3" [color="red" ];
+}

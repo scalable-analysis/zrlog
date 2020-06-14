@@ -1,0 +1,40 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_1" [label="1: Start void PluginCoreProcess.stopPluginCore()\nFormals:  this:com.zrlog.web.plugin.PluginCoreProcess*\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_1" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_4" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_1" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_5" ;
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_2" [label="2: Exit void PluginCoreProcess.stopPluginCore() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 145]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_3" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_2" ;
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_4" [label="4: Prune (true branch, if) \n   n$0=*&this:com.zrlog.web.plugin.PluginCoreProcess* [line 141]\n  n$1=*n$0.pr:java.lang.Process*(root com.zrlog.web.plugin.PluginCoreProcess) [line 141]\n  PRUNE(!(n$1 == null), true); [line 141]\n  EXIT_SCOPE(n$0,n$1); [line 141]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_4" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_6" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_4" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_5" [label="5: Prune (false branch, if) \n   n$0=*&this:com.zrlog.web.plugin.PluginCoreProcess* [line 141]\n  n$1=*n$0.pr:java.lang.Process*(root com.zrlog.web.plugin.PluginCoreProcess) [line 141]\n  PRUNE((n$1 == null), false); [line 141]\n  EXIT_SCOPE(n$0,n$1); [line 141]\n  APPLY_ABSTRACTION; [line 141]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_5" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_7" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_5" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_6" [label="6:  Call void Process.destroy() \n   n$2=*&this:com.zrlog.web.plugin.PluginCoreProcess* [line 142]\n  n$3=*n$2.pr:java.lang.Process*(root com.zrlog.web.plugin.PluginCoreProcess) [line 142]\n  _=*n$3:java.lang.Process*(root java.lang.Process) [line 142]\n  n$5=_fun_void Process.destroy()(n$3:java.lang.Process*) virtual [line 142]\n  EXIT_SCOPE(_,n$2,n$3,n$5); [line 142]\n  APPLY_ABSTRACTION; [line 142]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_6" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_7" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_6" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_7" [label="7:  method_body \n   n$6=*&this:com.zrlog.web.plugin.PluginCoreProcess* [line 144]\n  *n$6.canStart:com.zrlog.web.plugin.PluginCoreProcess(root com.zrlog.web.plugin.PluginCoreProcess)=0 [line 144]\n  NULLIFY(&this); [line 144]\n  EXIT_SCOPE(n$6,this); [line 144]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_7" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_8" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_7" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_3" [color="red" ];
+"com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_8" [label="8:  method_body \n   APPLY_ABSTRACTION; [line 145]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_8" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_2" ;
+	 "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_8" -> "com.zrlog.web.plugin.PluginCoreProcess.stopPluginCore():void.db2f5ef2e9987a97a823973900f634db_3" [color="red" ];
+}

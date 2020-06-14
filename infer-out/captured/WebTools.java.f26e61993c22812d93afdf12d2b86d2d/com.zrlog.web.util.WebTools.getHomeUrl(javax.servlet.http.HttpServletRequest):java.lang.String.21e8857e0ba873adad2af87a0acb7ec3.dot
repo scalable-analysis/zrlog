@@ -1,0 +1,44 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_1" [label="1: Start String WebTools.getHomeUrl(HttpServletRequest)\nFormals:  request:javax.servlet.http.HttpServletRequest*\nLocals:  $irvar4:void $irvar3:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_1" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_4" ;
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_2" [label="2: Exit String WebTools.getHomeUrl(HttpServletRequest) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 55]\n  NULLIFY(&$irvar4); [line 55]\n  NULLIFY(&$irvar0); [line 55]\n  NULLIFY(&$irvar1); [line 55]\n  NULLIFY(&$irvar2); [line 55]\n  EXIT_SCOPE($irvar3,$irvar4,$irvar0,$irvar1,$irvar2); [line 55]\n  APPLY_ABSTRACTION; [line 55]\n " shape="box"]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_2" ;
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_4" [label="4:  Call StringBuilder.<init>() \n   n$0=_fun___new(sizeof(t=java.lang.StringBuilder):java.lang.StringBuilder*) [line 55]\n  n$1=_fun_StringBuilder.<init>()(n$0:java.lang.StringBuilder*) [line 55]\n  *&$irvar0:java.lang.StringBuilder*=n$0 [line 55]\n  EXIT_SCOPE(n$0,n$1); [line 55]\n " shape="box"]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_4" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_5" ;
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_4" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" [color="red" ];
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_5" [label="5:  Call String HttpServletRequest.getContextPath() \n   n$2=*&request:javax.servlet.http.HttpServletRequest* [line 55]\n  _=*n$2:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 55]\n  n$4=_fun_String HttpServletRequest.getContextPath()(n$2:javax.servlet.http.HttpServletRequest*) interface virtual [line 55]\n  *&$irvar1:java.lang.String*=n$4 [line 55]\n  NULLIFY(&request); [line 55]\n  EXIT_SCOPE(_,n$2,n$4,request); [line 55]\n " shape="box"]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_5" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_6" ;
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_5" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" [color="red" ];
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_6" [label="6:  Call StringBuilder StringBuilder.append(String) \n   n$5=*&$irvar0:java.lang.StringBuilder* [line 55]\n  _=*n$5:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 55]\n  n$7=*&$irvar1:java.lang.String* [line 55]\n  n$8=_fun_StringBuilder StringBuilder.append(String)(n$5:java.lang.StringBuilder*,n$7:java.lang.String*) virtual [line 55]\n  *&$irvar2:java.lang.StringBuilder*=n$8 [line 55]\n  NULLIFY(&$irvar0); [line 55]\n  NULLIFY(&$irvar1); [line 55]\n  EXIT_SCOPE(_,n$5,n$7,n$8,$irvar0,$irvar1); [line 55]\n " shape="box"]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_6" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_7" ;
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_6" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" [color="red" ];
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_7" [label="7:  Call StringBuilder StringBuilder.append(String) \n   n$9=*&$irvar2:java.lang.StringBuilder* [line 55]\n  _=*n$9:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 55]\n  n$11=_fun_StringBuilder StringBuilder.append(String)(n$9:java.lang.StringBuilder*,\"/\":java.lang.Object*) virtual [line 55]\n  *&$irvar3:java.lang.StringBuilder*=n$11 [line 55]\n  NULLIFY(&$irvar2); [line 55]\n  EXIT_SCOPE(_,n$9,n$11,$irvar2); [line 55]\n " shape="box"]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_7" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_8" ;
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_7" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" [color="red" ];
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_8" [label="8:  Call String StringBuilder.toString() \n   n$12=*&$irvar3:java.lang.StringBuilder* [line 55]\n  _=*n$12:java.lang.StringBuilder*(root java.lang.StringBuilder) [line 55]\n  n$14=_fun_String StringBuilder.toString()(n$12:java.lang.StringBuilder*) virtual [line 55]\n  *&$irvar4:java.lang.String*=n$14 [line 55]\n  NULLIFY(&$irvar3); [line 55]\n  EXIT_SCOPE(_,n$12,n$14,$irvar3); [line 55]\n " shape="box"]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_8" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_9" ;
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_8" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" [color="red" ];
+"com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_9" [label="9:  method_body \n   n$15=*&$irvar4:java.lang.String* [line 55]\n  *&return:java.lang.String*=n$15 [line 55]\n  NULLIFY(&$irvar4); [line 55]\n  EXIT_SCOPE(n$15,$irvar4); [line 55]\n  APPLY_ABSTRACTION; [line 55]\n " shape="box"]
+	
+
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_9" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_2" ;
+	 "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_9" -> "com.zrlog.web.util.WebTools.getHomeUrl(javax.servlet.http.HttpServletRequest):java.lang.String.21e8857e0ba873adad2af87a0acb7ec3_3" [color="red" ];
+}

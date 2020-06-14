@@ -1,0 +1,66 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_1" [label="1: Start boolean ZrLogUtil.isStaticBlogPlugin(HttpServletRequest)\nFormals:  httpServletRequest:javax.servlet.http.HttpServletRequest*\nLocals:  $T0_32:void $irvar2:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_1" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_4" ;
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_2" [label="2: Exit boolean ZrLogUtil.isStaticBlogPlugin(HttpServletRequest) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [label="3:  exceptions sink \n   NULLIFY(&$T0_32); [line 85]\n  NULLIFY(&$irvar0); [line 85]\n  NULLIFY(&$irvar1); [line 85]\n  NULLIFY(&$irvar2); [line 85]\n  EXIT_SCOPE($T0_32,$irvar0,$irvar1,$irvar2); [line 85]\n  APPLY_ABSTRACTION; [line 85]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_2" ;
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_4" [label="4:  Call String HttpServletRequest.getHeader(String) \n   n$0=*&httpServletRequest:javax.servlet.http.HttpServletRequest* [line 85]\n  _=*n$0:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 85]\n  n$2=_fun_String HttpServletRequest.getHeader(String)(n$0:javax.servlet.http.HttpServletRequest*,\"User-Agent\":java.lang.Object*) interface virtual [line 85]\n  *&$irvar0:java.lang.String*=n$2 [line 85]\n  EXIT_SCOPE(_,n$0,n$2); [line 85]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_4" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_5" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_4" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_6" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_4" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_5" [label="5: Prune (true branch, if) \n   n$3=*&$irvar0:java.lang.String* [line 85]\n  PRUNE(!(n$3 == null), true); [line 85]\n  NULLIFY(&$irvar0); [line 85]\n  EXIT_SCOPE(n$3,$irvar0); [line 85]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_5" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_7" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_5" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_6" [label="6: Prune (false branch, if) \n   n$3=*&$irvar0:java.lang.String* [line 85]\n  PRUNE((n$3 == null), false); [line 85]\n  NULLIFY(&$irvar0); [line 85]\n  EXIT_SCOPE(n$3,$irvar0); [line 85]\n  APPLY_ABSTRACTION; [line 85]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_6" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_12" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_6" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_7" [label="7:  Call String HttpServletRequest.getHeader(String) \n   n$4=*&httpServletRequest:javax.servlet.http.HttpServletRequest* [line 85]\n  _=*n$4:javax.servlet.http.HttpServletRequest*(root javax.servlet.http.HttpServletRequest) [line 85]\n  n$6=_fun_String HttpServletRequest.getHeader(String)(n$4:javax.servlet.http.HttpServletRequest*,\"User-Agent\":java.lang.Object*) interface virtual [line 85]\n  *&$irvar1:java.lang.String*=n$6 [line 85]\n  NULLIFY(&httpServletRequest); [line 85]\n  EXIT_SCOPE(_,n$4,n$6,httpServletRequest); [line 85]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_7" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_8" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_7" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_8" [label="8:  Call boolean String.startsWith(String) \n   n$7=*&$irvar1:java.lang.String* [line 85]\n  _=*n$7:java.lang.String*(root java.lang.String) [line 85]\n  n$9=_fun_boolean String.startsWith(String)(n$7:java.lang.String*,\"Static-Blog-Plugin\":java.lang.Object*) virtual [line 85]\n  *&$irvar2:_Bool=n$9 [line 85]\n  NULLIFY(&$irvar1); [line 85]\n  EXIT_SCOPE(_,n$7,n$9,$irvar1); [line 85]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_8" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_9" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_8" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_10" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_8" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_9" [label="9: Prune (true branch, if) \n   n$10=*&$irvar2:_Bool [line 85]\n  PRUNE(!(n$10 == 0), true); [line 85]\n  NULLIFY(&$irvar2); [line 85]\n  EXIT_SCOPE(n$10,$irvar2); [line 85]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_9" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_11" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_9" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_10" [label="10: Prune (false branch, if) \n   n$10=*&$irvar2:_Bool [line 85]\n  PRUNE((n$10 == 0), false); [line 85]\n  NULLIFY(&$irvar2); [line 85]\n  EXIT_SCOPE(n$10,$irvar2); [line 85]\n  APPLY_ABSTRACTION; [line 85]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_10" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_12" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_10" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_11" [label="11:  method_body \n   *&$T0_32:int=1 [line 85]\n  APPLY_ABSTRACTION; [line 85]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_11" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_13" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_11" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_12" [label="12:  method_body \n   *&$T0_32:int=0 [line 85]\n  APPLY_ABSTRACTION; [line 85]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_12" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_13" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_12" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+"com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_13" [label="13:  method_body \n   n$11=*&$T0_32:int [line 85]\n  *&return:_Bool=n$11 [line 85]\n  NULLIFY(&$T0_32); [line 85]\n  EXIT_SCOPE(n$11,$T0_32); [line 85]\n  APPLY_ABSTRACTION; [line 85]\n " shape="box"]
+	
+
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_13" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_2" ;
+	 "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_13" -> "com.zrlog.util.ZrLogUtil.isStaticBlogPlugin(javax.servlet.http.HttpServletRequest):boolean.19bff0f0a5423985dc8e0738bd60005c_3" [color="red" ];
+}

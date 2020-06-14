@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_1" [label="1: Start void ArticleService.<clinit>()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_1" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_4" ;
+"com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_2" [label="2: Exit void ArticleService.<clinit>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 45]\n  EXIT_SCOPE($irvar0); [line 45]\n  APPLY_ABSTRACTION; [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_3" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_2" ;
+"com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_4" [label="4:  Call Logger LoggerFactory.getLogger(Class) \n   n$0=_fun_Logger LoggerFactory.getLogger(Class)(com.zrlog.service.ArticleService:java.lang.Object*) [line 45]\n  *&$irvar0:org.slf4j.Logger*=n$0 [line 45]\n  EXIT_SCOPE(n$0); [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_4" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_5" ;
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_4" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_3" [color="red" ];
+"com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_5" [label="5:  method_body \n   n$1=*&$irvar0:org.slf4j.Logger* [line 45]\n  *&#GB<>$com.zrlog.service.ArticleService.LOGGER:com.zrlog.service.ArticleService(root com.zrlog.service.ArticleService)=n$1 [line 45]\n  NULLIFY(&$irvar0); [line 45]\n  EXIT_SCOPE(n$1,$irvar0); [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_5" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_6" ;
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_5" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_3" [color="red" ];
+"com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_6" [label="6:  method_body \n   APPLY_ABSTRACTION; [line 45]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_6" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_2" ;
+	 "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_6" -> "com.zrlog.service.ArticleService.<clinit>():void.b916d8d7ecae11435a3be0a9f88772e6_3" [color="red" ];
+}

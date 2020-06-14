@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.model.WebSite.updateByKV(java.lang.String,java.lang.Object):boolean.71209a934eb7dfd65ec50e288c6f2b43</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../WebSite.java.864dd3bb383f6f17f48035b320bdf20d.html#LINE26">boolean WebSite.updateByKV(String,Object)</a></h1></center>
+<a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:17 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds: succs:2 exn:2 Instructions
+NULLIFY(&amp;$irvar4); [line 32];
+NULLIFY(&amp;$irvar0); [line 32];
+NULLIFY(&amp;$irvar1); [line 32];
+NULLIFY(&amp;$irvar2); [line 32];
+EXIT_SCOPE($irvar4,$irvar0,$irvar1,$irvar2); [line 32];
+APPLY_ABSTRACTION; [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:3 Instructions
+n$0=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[1]):java.lang.Object*[_*_](*)) [line 27];
+*&amp;$irvar0:java.lang.Object*[_*_](*)=n$0 [line 27];
+EXIT_SCOPE(n$0); [line 27];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:3 Instructions
+n$1=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 27];
+n$2=*&amp;name:java.lang.String* [line 27];
+*n$1[0]:java.lang.String*=n$2 [line 27];
+EXIT_SCOPE(n$1,n$2); [line 27];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:7 8 exn:3 Instructions
+n$3=*&amp;$irvar0:java.lang.Object*[_*_](*) [line 27];
+n$4=_fun_Integer Db.queryInt(String,Object[])("select siteId from website where name=?":java.lang.Object*,n$3:java.lang.Object*[_*_](*)) [line 27];
+*&amp;$irvar1:java.lang.Integer*=n$4 [line 27];
+NULLIFY(&amp;$irvar0); [line 27];
+EXIT_SCOPE(n$3,n$4,$irvar0); [line 27];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:6 succs:9 exn:3 Conditional method_body
+n$5=*&amp;$irvar1:java.lang.Integer* [line 27];
+PRUNE(!(n$5 == null), true); [line 27];
+NULLIFY(&amp;$irvar1); [line 27];
+EXIT_SCOPE(n$5,$irvar1); [line 27];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node8.html"><span class='visited with_tooltip'>C_8<span class='tooltip'>node8 preds:6 succs:13 exn:3 Conditional method_body
+n$5=*&amp;$irvar1:java.lang.Integer* [line 27];
+PRUNE((n$5 == null), false); [line 27];
+NULLIFY(&amp;$irvar1); [line 27];
+EXIT_SCOPE(n$5,$irvar1); [line 27];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:7 succs:10 exn:3 Instructions
+n$6=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 28];
+*&amp;$irvar2:java.lang.Object*[_*_](*)=n$6 [line 28];
+EXIT_SCOPE(n$6); [line 28];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node10.html"><span class='visited with_tooltip'>I_10<span class='tooltip'>node10 preds:9 succs:11 exn:3 Instructions
+n$7=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 28];
+n$8=*&amp;value:java.lang.Object* [line 28];
+*n$7[0]:java.lang.Object*=n$8 [line 28];
+NULLIFY(&amp;value); [line 28];
+EXIT_SCOPE(n$7,n$8,value); [line 28];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:10 succs:12 exn:3 Instructions
+n$9=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 28];
+n$10=*&amp;name:java.lang.String* [line 28];
+*n$9[1]:java.lang.String*=n$10 [line 28];
+NULLIFY(&amp;name); [line 28];
+EXIT_SCOPE(n$9,n$10,name); [line 28];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:11 succs:17 exn:3 Instructions
+n$11=*&amp;$irvar2:java.lang.Object*[_*_](*) [line 28];
+n$12=_fun_int Db.update(String,Object[])("update website set value=? where name=?":java.lang.Object*,n$11:java.lang.Object*[_*_](*)) [line 28];
+*&amp;$irvar3:int=n$12 [line 28];
+NULLIFY(&amp;$irvar3); [line 28];
+NULLIFY(&amp;$irvar2); [line 28];
+EXIT_SCOPE(n$11,n$12,$irvar3,$irvar2); [line 28];
+APPLY_ABSTRACTION; [line 28];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:8 succs:14 exn:3 Instructions
+n$13=_fun___new_array(sizeof(t=java.lang.Object*[_*_];len=[2]):java.lang.Object*[_*_](*)) [line 30];
+*&amp;$irvar4:java.lang.Object*[_*_](*)=n$13 [line 30];
+EXIT_SCOPE(n$13); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:13 succs:15 exn:3 Instructions
+n$14=*&amp;$irvar4:java.lang.Object*[_*_](*) [line 30];
+n$15=*&amp;value:java.lang.Object* [line 30];
+*n$14[0]:java.lang.Object*=n$15 [line 30];
+NULLIFY(&amp;value); [line 30];
+EXIT_SCOPE(n$14,n$15,value); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$16=*&amp;$irvar4:java.lang.Object*[_*_](*) [line 30];
+n$17=*&amp;name:java.lang.String* [line 30];
+*n$16[1]:java.lang.String*=n$17 [line 30];
+NULLIFY(&amp;name); [line 30];
+EXIT_SCOPE(n$16,n$17,name); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$18=*&amp;$irvar4:java.lang.Object*[_*_](*) [line 30];
+n$19=_fun_int Db.update(String,Object[])("insert website(`value`,`name`) value(?,?)":java.lang.Object*,n$18:java.lang.Object*[_*_](*)) [line 30];
+*&amp;$irvar5:int=n$19 [line 30];
+NULLIFY(&amp;$irvar5); [line 30];
+NULLIFY(&amp;$irvar4); [line 30];
+EXIT_SCOPE(n$18,n$19,$irvar5,$irvar4); [line 30];
+APPLY_ABSTRACTION; [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.model.WebSite.updateByKV%28java.lang.String%2Cjava.lang.Object%29%3Aboolean.71209a934eb7dfd65ec50e288c6f2b43_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 12 succs:2 exn:3 Instructions
+*&amp;return:_Bool=1 [line 32];
+APPLY_ABSTRACTION; [line 32];
+</span></span></a><br />@
+
+<span class='color_black'>_Bool boolean WebSite.updateByKV(String,Object)(com.zrlog.model.WebSite* this, java.lang.String* name, java.lang.Object* value)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { return -> { } }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= boolean WebSite.updateByKV(String,Object)
+; translation_unit= data/src/main/java/com/zrlog/model/WebSite.java
+; access= Public
+; formals= [(this,com.zrlog.model.WebSite*);  (name,java.lang.String*); 
+            (value,java.lang.Object*)]
+; is_defined= true
+; loc= data/src/main/java/com/zrlog/model/WebSite.java:26
+; locals= [{ name= $irvar5; typ= void; modify_in_block= false }; 
+           { name= $irvar4; typ= void; modify_in_block= false }; 
+           { name= $irvar3; typ= void; modify_in_block= false }; 
+           { name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }]
+; ret_type= _Bool 
+; proc_id= com.zrlog.model.WebSite.updateByKV(java.lang.String,java.lang.Object):boolean }</pre>
+</body>
+</html>

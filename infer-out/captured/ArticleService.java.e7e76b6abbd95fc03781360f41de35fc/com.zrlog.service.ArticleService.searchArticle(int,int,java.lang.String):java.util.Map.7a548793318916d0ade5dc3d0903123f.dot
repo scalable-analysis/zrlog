@@ -1,0 +1,34 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_1" [label="1: Start Map ArticleService.searchArticle(int,int,String)\nFormals:  this:com.zrlog.service.ArticleService* page:int row:int keywords:java.lang.String*\nLocals:  $irvar0:void data:java.util.Map* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_1" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_4" ;
+"com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_2" [label="2: Exit Map ArticleService.searchArticle(int,int,String) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_3" [label="3:  exceptions sink \n   NULLIFY(&data); [line 138]\n  NULLIFY(&$irvar0); [line 138]\n  EXIT_SCOPE(data,$irvar0); [line 138]\n  APPLY_ABSTRACTION; [line 138]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_3" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_2" ;
+"com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_4" [label="4:  Call Log.<init>() \n   n$0=_fun___new(sizeof(t=com.zrlog.model.Log):com.zrlog.model.Log*) [line 136]\n  n$1=_fun_Log.<init>()(n$0:com.zrlog.model.Log*) [line 136]\n  *&$irvar0:com.zrlog.model.Log*=n$0 [line 136]\n  EXIT_SCOPE(n$0,n$1); [line 136]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_4" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_5" ;
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_4" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_3" [color="red" ];
+"com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_5" [label="5:  Call Map Log.findByTitleOrPlainContentLike(int,int,String) \n   n$2=*&$irvar0:com.zrlog.model.Log* [line 136]\n  _=*n$2:com.zrlog.model.Log*(root com.zrlog.model.Log) [line 136]\n  n$4=*&page:int [line 136]\n  n$5=*&row:int [line 136]\n  n$6=*&keywords:java.lang.String* [line 136]\n  n$7=_fun_Map Log.findByTitleOrPlainContentLike(int,int,String)(n$2:com.zrlog.model.Log*,n$4:int,n$5:int,n$6:java.lang.String*) virtual [line 136]\n  *&data:java.util.Map*=n$7 [line 136]\n  NULLIFY(&row); [line 136]\n  NULLIFY(&$irvar0); [line 136]\n  NULLIFY(&page); [line 136]\n  EXIT_SCOPE(_,n$2,n$4,n$5,n$6,n$7,row,$irvar0,page); [line 136]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_5" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_6" ;
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_5" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_3" [color="red" ];
+"com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_6" [label="6:  Call void ArticleService.wrapperSearchKeyword(Map,String) \n   n$8=*&this:com.zrlog.service.ArticleService* [line 137]\n  n$9=*&data:java.util.Map* [line 137]\n  n$10=*&keywords:java.lang.String* [line 137]\n  n$11=_fun_void ArticleService.wrapperSearchKeyword(Map,String)(n$8:com.zrlog.service.ArticleService*,n$9:java.util.Map*,n$10:java.lang.String*) [line 137]\n  NULLIFY(&keywords); [line 137]\n  NULLIFY(&this); [line 137]\n  EXIT_SCOPE(n$8,n$9,n$10,n$11,keywords,this); [line 137]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_6" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_7" ;
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_6" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_3" [color="red" ];
+"com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_7" [label="7:  method_body \n   n$12=*&data:java.util.Map* [line 138]\n  *&return:java.util.Map*=n$12 [line 138]\n  NULLIFY(&data); [line 138]\n  EXIT_SCOPE(n$12,data); [line 138]\n  APPLY_ABSTRACTION; [line 138]\n " shape="box"]
+	
+
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_7" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_2" ;
+	 "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_7" -> "com.zrlog.service.ArticleService.searchArticle(int,int,java.lang.String):java.util.Map.7a548793318916d0ade5dc3d0903123f_3" [color="red" ];
+}

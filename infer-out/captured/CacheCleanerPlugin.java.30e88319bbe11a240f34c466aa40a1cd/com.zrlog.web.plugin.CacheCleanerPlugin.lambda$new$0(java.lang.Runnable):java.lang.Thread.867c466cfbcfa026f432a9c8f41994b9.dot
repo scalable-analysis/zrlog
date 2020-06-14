@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_1" [label="1: Start Thread CacheCleanerPlugin.lambda$new$0(Runnable)\nFormals:  r:java.lang.Runnable*\nLocals:  thread:java.lang.Thread* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_1" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_4" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_2" [label="2: Exit Thread CacheCleanerPlugin.lambda$new$0(Runnable) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_3" [label="3:  exceptions sink \n   NULLIFY(&thread); [line 22]\n  EXIT_SCOPE(thread); [line 22]\n  APPLY_ABSTRACTION; [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_3" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_2" ;
+"com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_4" [label="4:  Call Thread.<init>(Runnable) \n   n$0=_fun___new(sizeof(t=java.lang.Thread):java.lang.Thread*) [line 20]\n  n$1=*&r:java.lang.Runnable* [line 20]\n  n$2=_fun_Thread.<init>(Runnable)(n$0:java.lang.Thread*,n$1:java.lang.Runnable*) [line 20]\n  *&thread:java.lang.Thread*=n$0 [line 20]\n  NULLIFY(&r); [line 20]\n  EXIT_SCOPE(n$0,n$1,n$2,r); [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_5" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_4" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_5" [label="5:  Call void Thread.setName(String) \n   n$3=*&thread:java.lang.Thread* [line 21]\n  _=*n$3:java.lang.Thread*(root java.lang.Thread) [line 21]\n  n$5=_fun_void Thread.setName(String)(n$3:java.lang.Thread*,\"cache-clean-plugin-thread\":java.lang.Object*) virtual [line 21]\n  EXIT_SCOPE(_,n$3,n$5); [line 21]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_6" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_5" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_3" [color="red" ];
+"com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_6" [label="6:  method_body \n   n$6=*&thread:java.lang.Thread* [line 22]\n  *&return:java.lang.Thread*=n$6 [line 22]\n  NULLIFY(&thread); [line 22]\n  EXIT_SCOPE(n$6,thread); [line 22]\n  APPLY_ABSTRACTION; [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_6" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_2" ;
+	 "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_6" -> "com.zrlog.web.plugin.CacheCleanerPlugin.lambda$new$0(java.lang.Runnable):java.lang.Thread.867c466cfbcfa026f432a9c8f41994b9_3" [color="red" ];
+}

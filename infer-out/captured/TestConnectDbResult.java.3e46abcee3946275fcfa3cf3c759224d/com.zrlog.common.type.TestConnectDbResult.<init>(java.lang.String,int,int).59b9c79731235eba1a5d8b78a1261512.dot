@@ -1,0 +1,29 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_1" [label="1: Start TestConnectDbResult.<init>(String,int,int)\nFormals:  this:com.zrlog.common.type.TestConnectDbResult* $bcvar1:java.lang.String* $bcvar2:int error:int\nLocals:  \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_1" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_4" ;
+"com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_2" [label="2: Exit TestConnectDbResult.<init>(String,int,int) \n  " color=yellow style=filled]
+	
+
+"com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_3" [label="3:  exceptions sink \n   APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_3" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_2" ;
+"com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_4" [label="4:  Call Enum.<init>(String,int) \n   n$0=*&this:com.zrlog.common.type.TestConnectDbResult* [line 7]\n  n$1=*&$bcvar1:java.lang.String* [line 7]\n  n$2=*&$bcvar2:int [line 7]\n  n$3=_fun_Enum.<init>(String,int)(n$0:com.zrlog.common.type.TestConnectDbResult*,n$1:java.lang.String*,n$2:int) [line 7]\n  NULLIFY(&$bcvar2); [line 7]\n  NULLIFY(&$bcvar1); [line 7]\n  EXIT_SCOPE(n$0,n$1,n$2,n$3,$bcvar2,$bcvar1); [line 7]\n " shape="box"]
+	
+
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_4" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_5" ;
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_4" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_3" [color="red" ];
+"com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_5" [label="5:  method_body \n   n$4=*&this:com.zrlog.common.type.TestConnectDbResult* [line 8]\n  n$5=*&error:int [line 8]\n  *n$4.error:com.zrlog.common.type.TestConnectDbResult(root com.zrlog.common.type.TestConnectDbResult)=n$5 [line 8]\n  NULLIFY(&error); [line 8]\n  NULLIFY(&this); [line 8]\n  EXIT_SCOPE(n$4,n$5,error,this); [line 8]\n " shape="box"]
+	
+
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_5" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_6" ;
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_5" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_3" [color="red" ];
+"com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_6" [label="6:  method_body \n   APPLY_ABSTRACTION; [line 9]\n " shape="box"]
+	
+
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_6" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_2" ;
+	 "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_6" -> "com.zrlog.common.type.TestConnectDbResult.<init>(java.lang.String,int,int).59b9c79731235eba1a5d8b78a1261512_3" [color="red" ];
+}

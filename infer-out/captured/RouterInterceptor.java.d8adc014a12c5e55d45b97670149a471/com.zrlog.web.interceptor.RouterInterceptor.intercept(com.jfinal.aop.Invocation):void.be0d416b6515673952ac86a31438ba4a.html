@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.interceptor.RouterInterceptor.intercept(com.jfinal.aop.Invocation):void.be0d416b6515673952ac86a31438ba4a</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../RouterInterceptor.java.d8adc014a12c5e55d45b97670149a471.html#LINE20">void RouterInterceptor.intercept(Invocation)</a></h1></center>
+<a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:18 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:20 succs:2 exn:2 Instructions
+NULLIFY(&amp;CatchVar50); [line 34];
+NULLIFY(&amp;$irvar2); [line 34];
+NULLIFY(&amp;e); [line 34];
+EXIT_SCOPE(n$34,CatchVar50,$irvar2,e); [line 34];
+APPLY_ABSTRACTION; [line 34];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:21 Instructions
+n$0=*&amp;invocation:com.jfinal.aop.Invocation* [line 22];
+_=*n$0:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 22];
+n$2=_fun_String Invocation.getActionKey()(n$0:com.jfinal.aop.Invocation*) virtual [line 22];
+*&amp;actionKey:java.lang.String*=n$2 [line 22];
+EXIT_SCOPE(_,n$0,n$2); [line 22];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 7 exn:21 Instructions
+n$3=*&amp;actionKey:java.lang.String* [line 24];
+_=*n$3:java.lang.String*(root java.lang.String) [line 24];
+n$5=_fun_boolean String.startsWith(String)(n$3:java.lang.String*,"/admin":java.lang.Object*) virtual [line 24];
+*&amp;$irvar0:_Bool=n$5 [line 24];
+EXIT_SCOPE(_,n$3,n$5); [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node6.html"><span class='visited with_tooltip'>C_6<span class='tooltip'>node6 preds:5 succs:8 exn:21 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 24];
+PRUNE(!(n$6 != 0), true); [line 24];
+NULLIFY(&amp;$irvar0); [line 24];
+EXIT_SCOPE(n$6,$irvar0); [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node7.html"><span class='visited with_tooltip'>C_7<span class='tooltip'>node7 preds:5 succs:11 exn:21 Conditional method_body
+n$6=*&amp;$irvar0:_Bool [line 24];
+PRUNE((n$6 != 0), false); [line 24];
+NULLIFY(&amp;actionKey); [line 24];
+NULLIFY(&amp;$irvar0); [line 24];
+EXIT_SCOPE(n$6,actionKey,$irvar0); [line 24];
+APPLY_ABSTRACTION; [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:6 succs:9 10 exn:21 Instructions
+n$7=*&amp;actionKey:java.lang.String* [line 24];
+_=*n$7:java.lang.String*(root java.lang.String) [line 24];
+n$9=_fun_boolean String.startsWith(String)(n$7:java.lang.String*,"/api/admin":java.lang.Object*) virtual [line 24];
+*&amp;$irvar1:_Bool=n$9 [line 24];
+NULLIFY(&amp;actionKey); [line 24];
+EXIT_SCOPE(_,n$7,n$9,actionKey); [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node9.html"><span class='visited with_tooltip'>C_9<span class='tooltip'>node9 preds:8 succs:11 exn:21 Conditional method_body
+n$10=*&amp;$irvar1:_Bool [line 24];
+PRUNE(!(n$10 == 0), true); [line 24];
+NULLIFY(&amp;$irvar1); [line 24];
+EXIT_SCOPE(n$10,$irvar1); [line 24];
+APPLY_ABSTRACTION; [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:8 succs:12 exn:21 Conditional method_body
+n$10=*&amp;$irvar1:_Bool [line 24];
+PRUNE((n$10 == 0), false); [line 24];
+NULLIFY(&amp;$irvar1); [line 24];
+EXIT_SCOPE(n$10,$irvar1); [line 24];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node11.html"><span class='visited with_tooltip'>I_11<span class='tooltip'>node11 preds:9 7 succs:13 exn:21 Instructions
+n$11=*&amp;this:com.zrlog.web.interceptor.RouterInterceptor* [line 25];
+n$12=*n$11.adminInterceptor:com.zrlog.web.interceptor.AdminInterceptor*(root com.zrlog.web.interceptor.RouterInterceptor) [line 25];
+_=*n$12:com.zrlog.web.interceptor.AdminInterceptor*(root com.zrlog.web.interceptor.AdminInterceptor) [line 25];
+n$14=*&amp;invocation:com.jfinal.aop.Invocation* [line 25];
+n$15=_fun_void AdminInterceptor.intercept(Invocation)(n$12:com.zrlog.web.interceptor.AdminInterceptor*,n$14:com.jfinal.aop.Invocation*) virtual [line 25];
+NULLIFY(&amp;this); [line 25];
+EXIT_SCOPE(_,n$11,n$12,n$14,n$15,this); [line 25];
+APPLY_ABSTRACTION; [line 25];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node12.html"><span class='visited with_tooltip'>I_12<span class='tooltip'>node12 preds:10 succs:13 exn:21 Instructions
+n$16=*&amp;this:com.zrlog.web.interceptor.RouterInterceptor* [line 27];
+n$17=*n$16.visitorInterceptor:com.zrlog.web.interceptor.VisitorInterceptor*(root com.zrlog.web.interceptor.RouterInterceptor) [line 27];
+_=*n$17:com.zrlog.web.interceptor.VisitorInterceptor*(root com.zrlog.web.interceptor.VisitorInterceptor) [line 27];
+n$19=*&amp;invocation:com.jfinal.aop.Invocation* [line 27];
+n$20=_fun_void VisitorInterceptor.intercept(Invocation)(n$17:com.zrlog.web.interceptor.VisitorInterceptor*,n$19:com.jfinal.aop.Invocation*) virtual [line 27];
+NULLIFY(&amp;this); [line 27];
+EXIT_SCOPE(_,n$16,n$17,n$19,n$20,this); [line 27];
+APPLY_ABSTRACTION; [line 27];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node13.html"><span class='visited with_tooltip'>I_13<span class='tooltip'>node13 preds:12 11 succs:18 exn:21 Instructions
+n$21=_fun_void GlobalResourceHandler.printUserTime(String)("Router":java.lang.Object*) [line 29];
+EXIT_SCOPE(n$21); [line 29];
+APPLY_ABSTRACTION; [line 29];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds:19 succs:15 exn:3 Instructions
+n$22=*&amp;CatchVar50:java.lang.Object* [line 30];
+*&amp;e:java.lang.Object*=n$22 [line 30];
+NULLIFY(&amp;CatchVar50); [line 30];
+EXIT_SCOPE(n$22,CatchVar50); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node15.html"><span class='visited with_tooltip'>I_15<span class='tooltip'>node15 preds:14 succs:16 exn:3 Instructions
+n$23=*&amp;#GB<>$com.zrlog.web.interceptor.RouterInterceptor.LOGGER:org.slf4j.Logger*(root com.zrlog.web.interceptor.RouterInterceptor) [line 31];
+_=*n$23:org.slf4j.Logger*(root org.slf4j.Logger) [line 31];
+n$25=*&amp;e:java.lang.Object* [line 31];
+n$26=_fun_void Logger.error(String,Throwable)(n$23:org.slf4j.Logger*,"interceptor exception ":java.lang.Object*,n$25:java.lang.Object*) interface virtual [line 31];
+NULLIFY(&amp;e); [line 31];
+EXIT_SCOPE(_,n$23,n$25,n$26,e); [line 31];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node16.html"><span class='visited with_tooltip'>I_16<span class='tooltip'>node16 preds:15 succs:17 exn:3 Instructions
+n$27=*&amp;invocation:com.jfinal.aop.Invocation* [line 32];
+_=*n$27:com.jfinal.aop.Invocation*(root com.jfinal.aop.Invocation) [line 32];
+n$29=_fun_Controller Invocation.getController()(n$27:com.jfinal.aop.Invocation*) virtual [line 32];
+*&amp;$irvar2:com.jfinal.core.Controller*=n$29 [line 32];
+NULLIFY(&amp;invocation); [line 32];
+EXIT_SCOPE(_,n$27,n$29,invocation); [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node17.html"><span class='visited with_tooltip'>I_17<span class='tooltip'>node17 preds:16 succs:18 exn:3 Instructions
+n$30=*&amp;$irvar2:com.jfinal.core.Controller* [line 32];
+_=*n$30:com.jfinal.core.Controller*(root com.jfinal.core.Controller) [line 32];
+n$32=_fun_void Controller.renderError(int)(n$30:com.jfinal.core.Controller*,500:int) virtual [line 32];
+NULLIFY(&amp;$irvar2); [line 32];
+EXIT_SCOPE(_,n$30,n$32,$irvar2); [line 32];
+APPLY_ABSTRACTION; [line 32];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node18.html"><span class='visited with_tooltip'>I_18<span class='tooltip'>node18 preds:17 13 succs:2 exn:3 Instructions
+APPLY_ABSTRACTION; [line 34];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node19.html"><span class='visited with_tooltip'>C_19<span class='tooltip'>node19 preds:21 succs:14 exn:3 Conditional exception handler
+n$35=_fun___instanceof(n$34:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 30];
+PRUNE(n$35, true); [line 30];
+*&amp;CatchVar50:void=n$34 [line 30];
+EXIT_SCOPE(n$34,n$35); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node20.html"><span class='visited with_tooltip'>C_20<span class='tooltip'>node20 preds:21 succs:3 exn:3 Conditional exception handler
+n$35=_fun___instanceof(n$34:java.lang.Exception*,sizeof(t=java.lang.Exception):void) [line 30];
+PRUNE(!n$35, false); [line 30];
+*&amp;return:void=EXN n$34 [line 30];
+EXIT_SCOPE(n$34,n$35); [line 30];
+</span></span></a> <a href="./nodes/com.zrlog.web.interceptor.RouterInterceptor.intercept%28com.jfinal.aop.Invocation%29%3Avoid.be0d416b6515673952ac86a31438ba4a_node21.html"><span class='visited with_tooltip'>I_21<span class='tooltip'>node21 preds: succs:19 20 exn:3 Instructions
+n$33=*&amp;return:void [line 30];
+*&amp;return:void=null [line 30];
+n$34=_fun___unwrap_exception(n$33:void) [line 30];
+NULLIFY(&amp;actionKey); [line 30];
+NULLIFY(&amp;$irvar0); [line 30];
+NULLIFY(&amp;$irvar1); [line 30];
+EXIT_SCOPE(n$33,actionKey,$irvar0,$irvar1); [line 30];
+</span></span></a><br />@
+
+<span class='color_black'>void void RouterInterceptor.intercept(Invocation)(com.zrlog.web.interceptor.RouterInterceptor* this, com.jfinal.aop.Invocation* invocation)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { handler.GlobalResourceHandler -> (Footprint({ handler.GlobalResourceHandler }) ~> ?, { LOGGER -> (Footprint({ handler.GlobalResourceHandler.LOGGER* }) + Sanitizers({ StringConcatenation }) ~> ?, *) }),
+            util.I18nUtil -> (Footprint({ util.I18nUtil }) ~> ?, { I18N_RES_MAP -> ({ UserControlledString(void AdminInterceptor.intercept(Invocation) at line 25),
+                                                                    UserControlledString(void VisitorInterceptor.intercept(Invocation) at line 27) } + Footprint({ util.I18nUtil.threadLocal*,
+                                                                    util.I18nUtil.I18N_RES_MAP* }) ~> { CreateFile(void AdminInterceptor.intercept(Invocation) at line 25),
+                                                                    CreateFile(void VisitorInterceptor.intercept(Invocation) at line 27) }, *),
+                                                                   threadLocal -> ({ UserControlledString(void AdminInterceptor.intercept(Invocation) at line 25),
+                                                                    UserControlledString(void VisitorInterceptor.intercept(Invocation) at line 27) } + Footprint({ util.I18nUtil.threadLocal*,
+                                                                    util.I18nUtil.I18N_RES_MAP* }) ~> { CreateFile(void AdminInterceptor.intercept(Invocation) at line 25),
+                                                                    CreateFile(void VisitorInterceptor.intercept(Invocation) at line 27) }, *) }),
+            interceptor.AdminInterceptor -> (Footprint({ interceptor.AdminInterceptor }) ~> ?, { LOGGER -> ({ UserControlledString(void AdminInterceptor.intercept(Invocation) at line 25) } + Footprint({ interceptor.AdminInterceptor.LOGGER* }) ~> ?, *) }),
+            token.AdminTokenService -> (Footprint({ token.AdminTokenService }) ~> ?, { secretKeySpec -> (Footprint({ token.AdminTokenService.secretKeySpec* }) ~> ?, *) }),
+            config.ZrLogConfig -> (Footprint({ config.ZrLogConfig }) ~> ?, { jdbcUrl -> (Footprint({ config.ZrLogConfig.jdbcUrl* }) ~> ?, *) }),
+            plugin.UpdateVersionTimerTask -> (Footprint({ plugin.UpdateVersionTimerTask }) ~> ?, { LOGGER -> (Footprint({ plugin.UpdateVersionTimerTask.LOGGER*,
+                                                                    util.BlogBuildInfoUtil.buildId }) + Sanitizers({ StringConcatenation }) ~> ?, *) }),
+            common.Constants -> (Footprint({ common.Constants }) ~> ?, { WEB_SITE -> (Footprint({ common.Constants.WEB_SITE* }) ~> ?, *) }) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= void RouterInterceptor.intercept(Invocation)
+; translation_unit= web/src/main/java/com/zrlog/web/interceptor/RouterInterceptor.java
+; access= Public
+; formals= [(this,com.zrlog.web.interceptor.RouterInterceptor*); 
+            (invocation,com.jfinal.aop.Invocation*)]
+; is_defined= true
+; loc= web/src/main/java/com/zrlog/web/interceptor/RouterInterceptor.java:20
+; locals= [{ name= $irvar2; typ= void; modify_in_block= false }; 
+           { name= CatchVar50; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }; 
+           { name= actionKey; typ= java.lang.String*; modify_in_block= false }]
+; ret_type= void 
+; proc_id= com.zrlog.web.interceptor.RouterInterceptor.intercept(com.jfinal.aop.Invocation):void }</pre>
+</body>
+</html>

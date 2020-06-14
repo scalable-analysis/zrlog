@@ -1,0 +1,74 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_1" [label="1: Start void ZrLogConfig.beforeJFinalStop()\nFormals:  this:com.zrlog.web.config.ZrLogConfig*\nLocals:  $irvar4:void $irvar3:void $irvar2:void $bcvar1:void $irvar1:void $irvar0:void plugin:com.jfinal.plugin.IPlugin* \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_1" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_4" ;
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_2" [label="2: Exit void ZrLogConfig.beforeJFinalStop() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar3); [line 347]\n  NULLIFY(&$irvar0); [line 347]\n  NULLIFY(&$irvar1); [line 347]\n  NULLIFY(&plugin); [line 347]\n  NULLIFY(&$irvar2); [line 347]\n  NULLIFY(&$bcvar1); [line 347]\n  EXIT_SCOPE($irvar3,$irvar0,$irvar1,plugin,$irvar2,$bcvar1); [line 347]\n  APPLY_ABSTRACTION; [line 347]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_2" ;
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_4" [label="4:  Call PluginCoreProcess PluginCoreProcess.getInstance() \n   n$0=_fun_PluginCoreProcess PluginCoreProcess.getInstance()() [line 343]\n  *&$irvar0:com.zrlog.web.plugin.PluginCoreProcess*=n$0 [line 343]\n  EXIT_SCOPE(n$0); [line 343]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_4" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_5" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_4" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_5" [label="5:  Call void PluginCoreProcess.stopPluginCore() \n   n$1=*&$irvar0:com.zrlog.web.plugin.PluginCoreProcess* [line 343]\n  _=*n$1:com.zrlog.web.plugin.PluginCoreProcess*(root com.zrlog.web.plugin.PluginCoreProcess) [line 343]\n  n$3=_fun_void PluginCoreProcess.stopPluginCore()(n$1:com.zrlog.web.plugin.PluginCoreProcess*) virtual [line 343]\n  NULLIFY(&$irvar0); [line 343]\n  EXIT_SCOPE(_,n$1,n$3,$irvar0); [line 343]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_5" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_6" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_5" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_6" [label="6:  Call List Plugins.getPluginList() \n   n$4=*&this:com.zrlog.web.config.ZrLogConfig* [line 344]\n  n$5=*n$4.plugins:com.jfinal.config.Plugins*(root com.zrlog.web.config.ZrLogConfig) [line 344]\n  _=*n$5:com.jfinal.config.Plugins*(root com.jfinal.config.Plugins) [line 344]\n  n$7=_fun_List Plugins.getPluginList()(n$5:com.jfinal.config.Plugins*) virtual [line 344]\n  *&$irvar1:java.util.List*=n$7 [line 344]\n  NULLIFY(&this); [line 344]\n  EXIT_SCOPE(_,n$4,n$5,n$7,this); [line 344]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_6" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_7" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_6" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_7" [label="7:  Call Iterator List.iterator() \n   n$8=*&$irvar1:java.util.List* [line 344]\n  _=*n$8:java.util.List*(root java.util.List) [line 344]\n  n$10=_fun_Iterator List.iterator()(n$8:java.util.List*) interface virtual [line 344]\n  *&$bcvar1:java.util.Iterator*=n$10 [line 344]\n  NULLIFY(&$irvar1); [line 344]\n  EXIT_SCOPE(_,n$8,n$10,$irvar1); [line 344]\n  APPLY_ABSTRACTION; [line 344]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_7" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_8" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_7" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_8" [label="8:  Call boolean Iterator.hasNext() \n   n$11=*&$bcvar1:java.util.Iterator* [line 344]\n  _=*n$11:java.util.Iterator*(root java.util.Iterator) [line 344]\n  n$13=_fun_boolean Iterator.hasNext()(n$11:java.util.Iterator*) interface virtual [line 344]\n  *&$irvar2:_Bool=n$13 [line 344]\n  EXIT_SCOPE(_,n$11,n$13); [line 344]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_8" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_11" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_8" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_9" [label="9: Prune (true branch, if) \n   n$14=*&$irvar2:_Bool [line 344]\n  PRUNE(!(n$14 == 0), true); [line 344]\n  NULLIFY(&$irvar2); [line 344]\n  EXIT_SCOPE(n$14,$irvar2); [line 344]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_9" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_12" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_9" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_10" [label="10: Prune (false branch, if) \n   n$14=*&$irvar2:_Bool [line 344]\n  PRUNE((n$14 == 0), false); [line 344]\n  NULLIFY(&$irvar2); [line 344]\n  NULLIFY(&$bcvar1); [line 344]\n  EXIT_SCOPE(n$14,$irvar2,$bcvar1); [line 344]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_10" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_15" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_10" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_11" [label="11: + \n  " ]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_11" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_9" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_11" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_10" ;
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_12" [label="12:  Call Object Iterator.next() \n   n$15=*&$bcvar1:java.util.Iterator* [line 344]\n  _=*n$15:java.util.Iterator*(root java.util.Iterator) [line 344]\n  n$17=_fun_Object Iterator.next()(n$15:java.util.Iterator*) interface virtual [line 344]\n  *&$irvar3:java.lang.Object*=n$17 [line 344]\n  EXIT_SCOPE(_,n$15,n$17); [line 344]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_12" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_13" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_12" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_13" [label="13:  method_body \n   n$18=*&$irvar3:java.lang.Object* [line 344]\n  n$19=_fun___cast(n$18:java.lang.Object*,sizeof(t=com.jfinal.plugin.IPlugin;sub_t=( sub )(cast)):void) [line 344]\n  *&plugin:com.jfinal.plugin.IPlugin*=n$19 [line 344]\n  NULLIFY(&$irvar3); [line 344]\n  EXIT_SCOPE(n$18,n$19,$irvar3); [line 344]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_13" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_14" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_13" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_14" [label="14:  Call boolean IPlugin.stop() \n   n$20=*&plugin:com.jfinal.plugin.IPlugin* [line 345]\n  _=*n$20:com.jfinal.plugin.IPlugin*(root com.jfinal.plugin.IPlugin) [line 345]\n  n$22=_fun_boolean IPlugin.stop()(n$20:com.jfinal.plugin.IPlugin*) interface virtual [line 345]\n  *&$irvar4:_Bool=n$22 [line 345]\n  NULLIFY(&$irvar4); [line 345]\n  NULLIFY(&plugin); [line 345]\n  EXIT_SCOPE(_,n$20,n$22,$irvar4,plugin); [line 345]\n  APPLY_ABSTRACTION; [line 345]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_14" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_8" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_14" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_15" [label="15:  method_body \n   APPLY_ABSTRACTION; [line 347]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_15" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_2" ;
+	 "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_15" -> "com.zrlog.web.config.ZrLogConfig.beforeJFinalStop():void.0685f8f35456409f7a353722ce97f100_3" [color="red" ];
+}

@@ -1,0 +1,72 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_1" [label="1: Start boolean ZrLogConfig.isPreviewDb()\nFormals: \nLocals:  $T0_32:void $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_1" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_4" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_1" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_5" ;
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_2" [label="2: Exit boolean ZrLogConfig.isPreviewDb() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [label="3:  exceptions sink \n   NULLIFY(&$T0_32); [line 400]\n  NULLIFY(&$irvar0); [line 400]\n  NULLIFY(&$irvar1); [line 400]\n  EXIT_SCOPE($T0_32,$irvar0,$irvar1); [line 400]\n  APPLY_ABSTRACTION; [line 400]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_2" ;
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_4" [label="4: Prune (true branch, if) \n   n$0=*&#GB<>$com.zrlog.web.config.ZrLogConfig.jdbcUrl:java.lang.String*(root com.zrlog.web.config.ZrLogConfig) [line 400]\n  PRUNE(!(n$0 == null), true); [line 400]\n  EXIT_SCOPE(n$0); [line 400]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_4" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_6" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_4" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_5" [label="5: Prune (false branch, if) \n   n$0=*&#GB<>$com.zrlog.web.config.ZrLogConfig.jdbcUrl:java.lang.String*(root com.zrlog.web.config.ZrLogConfig) [line 400]\n  PRUNE((n$0 == null), false); [line 400]\n  EXIT_SCOPE(n$0); [line 400]\n  APPLY_ABSTRACTION; [line 400]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_5" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_13" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_5" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_6" [label="6:  Call boolean String.contains(CharSequence) \n   n$1=*&#GB<>$com.zrlog.web.config.ZrLogConfig.jdbcUrl:java.lang.String*(root com.zrlog.web.config.ZrLogConfig) [line 400]\n  _=*n$1:java.lang.String*(root java.lang.String) [line 400]\n  n$3=_fun_boolean String.contains(CharSequence)(n$1:java.lang.String*,\"demo.blog.zrlog.com\":java.lang.Object*) virtual [line 400]\n  *&$irvar0:_Bool=n$3 [line 400]\n  EXIT_SCOPE(_,n$1,n$3); [line 400]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_6" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_7" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_6" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_8" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_6" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_7" [label="7: Prune (true branch, if) \n   n$4=*&$irvar0:_Bool [line 400]\n  PRUNE(!(n$4 == 0), true); [line 400]\n  NULLIFY(&$irvar0); [line 400]\n  EXIT_SCOPE(n$4,$irvar0); [line 400]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_7" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_9" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_7" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_8" [label="8: Prune (false branch, if) \n   n$4=*&$irvar0:_Bool [line 400]\n  PRUNE((n$4 == 0), false); [line 400]\n  NULLIFY(&$irvar0); [line 400]\n  EXIT_SCOPE(n$4,$irvar0); [line 400]\n  APPLY_ABSTRACTION; [line 400]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_8" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_13" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_8" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_9" [label="9:  Call boolean ZrLogUtil.isInternalHostName(String) \n   n$5=_fun_boolean ZrLogUtil.isInternalHostName(String)(\"demo.blog.zrlog.com\":java.lang.Object*) [line 400]\n  *&$irvar1:_Bool=n$5 [line 400]\n  EXIT_SCOPE(n$5); [line 400]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_9" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_10" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_9" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_11" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_9" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_10" [label="10: Prune (true branch, if) \n   n$6=*&$irvar1:_Bool [line 400]\n  PRUNE(!(n$6 != 0), true); [line 400]\n  NULLIFY(&$irvar1); [line 400]\n  EXIT_SCOPE(n$6,$irvar1); [line 400]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_10" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_12" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_10" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_11" [label="11: Prune (false branch, if) \n   n$6=*&$irvar1:_Bool [line 400]\n  PRUNE((n$6 != 0), false); [line 400]\n  NULLIFY(&$irvar1); [line 400]\n  EXIT_SCOPE(n$6,$irvar1); [line 400]\n  APPLY_ABSTRACTION; [line 400]\n " shape="invhouse"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_11" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_13" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_11" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_12" [label="12:  method_body \n   *&$T0_32:int=1 [line 400]\n  APPLY_ABSTRACTION; [line 400]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_12" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_14" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_12" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_13" [label="13:  method_body \n   *&$T0_32:int=0 [line 400]\n  APPLY_ABSTRACTION; [line 400]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_13" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_14" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_13" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+"com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_14" [label="14:  method_body \n   n$7=*&$T0_32:int [line 400]\n  *&return:_Bool=n$7 [line 400]\n  NULLIFY(&$T0_32); [line 400]\n  EXIT_SCOPE(n$7,$T0_32); [line 400]\n  APPLY_ABSTRACTION; [line 400]\n " shape="box"]
+	
+
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_14" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_2" ;
+	 "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_14" -> "com.zrlog.web.config.ZrLogConfig.isPreviewDb():boolean.721b0d39c5e44430aafb7a4c89be7244_3" [color="red" ];
+}

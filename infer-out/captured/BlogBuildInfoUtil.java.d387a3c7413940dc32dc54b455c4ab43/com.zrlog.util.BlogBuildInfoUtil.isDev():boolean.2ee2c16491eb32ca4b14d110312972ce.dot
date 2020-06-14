@@ -1,0 +1,24 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_1" [label="1: Start boolean BlogBuildInfoUtil.isDev()\nFormals: \nLocals:  $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_1" -> "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_4" ;
+"com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_2" [label="2: Exit boolean BlogBuildInfoUtil.isDev() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 96]\n  EXIT_SCOPE($irvar0); [line 96]\n  APPLY_ABSTRACTION; [line 96]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_3" -> "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_2" ;
+"com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_4" [label="4:  Call boolean String.equalsIgnoreCase(String) \n   n$0=*&#GB<>$com.zrlog.util.BlogBuildInfoUtil.runMode:java.lang.String*(root com.zrlog.util.BlogBuildInfoUtil) [line 96]\n  n$1=_fun_boolean String.equalsIgnoreCase(String)(\"DEV\":java.lang.Object*,n$0:java.lang.String*) virtual [line 96]\n  *&$irvar0:_Bool=n$1 [line 96]\n  EXIT_SCOPE(n$0,n$1); [line 96]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_4" -> "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_5" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_4" -> "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_3" [color="red" ];
+"com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_5" [label="5:  method_body \n   n$2=*&$irvar0:_Bool [line 96]\n  *&return:_Bool=n$2 [line 96]\n  NULLIFY(&$irvar0); [line 96]\n  EXIT_SCOPE(n$2,$irvar0); [line 96]\n  APPLY_ABSTRACTION; [line 96]\n " shape="box"]
+	
+
+	 "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_5" -> "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_2" ;
+	 "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_5" -> "com.zrlog.util.BlogBuildInfoUtil.isDev():boolean.2ee2c16491eb32ca4b14d110312972ce_3" [color="red" ];
+}

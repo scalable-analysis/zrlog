@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.web.token.AdminTokenService.getAdminTokenVO(javax.servlet.http.HttpServletRequest):com.zrl.7c49640eb1770347eecdd5298c9d064d_node45</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">45</a></h1></center>PROC: <a href="./../com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d.html">AdminTokenVO AdminTokenService.getAdminTokenVO(HttpServletRequest)</a> LINE: <a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node44.html"><span class='visited with_tooltip'>N_44<span class='tooltip'>node44 preds:43 succs:45 exn:62 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node46.html"><span class='visited with_tooltip'>N_46<span class='tooltip'>node46 preds:45 succs:47 exn:62 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node62.html"><span class='visited with_tooltip'>N_62<span class='tooltip'>node62 preds: succs:60 61 exn:3 </span></span></a><br>
+<LISTING class='color_green'>n$70=*&amp;$irvar13:com.google.gson.Gson* [line 81];
+_=*n$70:com.google.gson.Gson*(root com.google.gson.Gson) [line 81];
+n$72=*&amp;base64Encode:java.lang.String* [line 81];
+n$73=_fun_Object Gson.fromJson(String,Class)(n$70:com.google.gson.Gson*,n$72:java.lang.String*,com.zrlog.common.vo.AdminTokenVO:java.lang.Object*) virtual [line 81];
+*&amp;$irvar14:java.lang.Object*=n$73 [line 81];
+</LISTING>
+<hr width="100%">
+<a name="session48" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session48">node45#session48</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [compute pre] liveness 45
+<LISTING class='color_black'>JOIN
+
+LEFT:   { token.AdminTokenService, return, $irvar14 }
+RIGHT:  { token.AdminTokenService, return }
+RESULT: { token.AdminTokenService, return, $irvar14 }
+
+</LISTING>
+<hr width="100%">
+<a name="session49" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session49">node45#session49</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [exec] liveness 45
+<LISTING class='color_black'>PRE STATE:
+{ token.AdminTokenService, return, $irvar14 }
+
+INSTR=  *&amp;$irvar14:java.lang.Object*=n$73 [line 81]; 
+
+STATE:
+{ n$73, token.AdminTokenService, return }
+
+INSTR=  n$73=_fun_Object Gson.fromJson(String,Class)(n$70:com.google.gson.Gson*,n$72:java.lang.String*,com.zrlog.common.vo.AdminTokenVO:java.lang.Object*) virtual [line 81]; 
+
+STATE:
+{ n$70, n$72, token.AdminTokenService, return }
+
+INSTR=  n$72=*&amp;base64Encode:java.lang.String* [line 81]; 
+
+STATE:
+{ n$70, token.AdminTokenService, return, base64Encode }
+
+INSTR=  _=*n$70:com.google.gson.Gson*(root com.google.gson.Gson) [line 81]; 
+
+STATE UNCHANGED
+
+INSTR=  n$70=*&amp;$irvar13:com.google.gson.Gson* [line 81]; 
+
+STATE:
+{ token.AdminTokenService, $irvar13, return, base64Encode }
+
+</LISTING>
+<hr width="100%">
+<a name="session275" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session275">node45#session275</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session276" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session276">node45#session276</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ $irvar13, base64Encode },{ n$68, n$69 })
+
+INSTR=  n$70=*&amp;$irvar13:com.google.gson.Gson* [line 81]; 
+
+STATE:
+({ n$70, $irvar13, base64Encode },{ n$68, n$69 })
+
+INSTR=  _=*n$70:com.google.gson.Gson*(root com.google.gson.Gson) [line 81]; 
+
+STATE:
+({ _, n$70, $irvar13, base64Encode },{ n$68, n$69 })
+
+INSTR=  n$72=*&amp;base64Encode:java.lang.String* [line 81]; 
+
+STATE:
+({ _, n$70, n$72, $irvar13, base64Encode },{ n$68, n$69 })
+
+INSTR=  n$73=_fun_Object Gson.fromJson(String,Class)(n$70:com.google.gson.Gson*,n$72:java.lang.String*,com.zrlog.common.vo.AdminTokenVO:java.lang.Object*) virtual [line 81]; 
+
+STATE:
+({ _, n$70, n$72, n$73, $irvar13, base64Encode },{ n$68, n$69 })
+
+INSTR=  *&amp;$irvar14:java.lang.Object*=n$73 [line 81]; 
+
+STATE:
+({ $irvar14 },{ _, n$70, n$72, n$73, $irvar13, base64Encode })
+
+</LISTING>
+<hr width="100%">
+<a name="session84" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session84">node45#session84</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session85" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session85">node45#session85</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$64 -&gt; *,
+  $bcvar6 -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  user -&gt; { },
+  base64Encode -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+
+
+
+INSTR=  n$73 := Object Gson.fromJson(String,Class)({ n$68,
+                                                     base64Encode,
+                                                     com.zrlog.common.vo.AdminTokenVO }) [line 81]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;$irvar13); [line 81]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;base64Encode); [line 81]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(base64Encode); [line 81]; 
+
+STATE:
+{ n$64 -&gt; *,
+  $bcvar6 -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  user -&gt; { },
+  base64Encode -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+</LISTING>
+<hr width="100%">
+<a name="session188" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session188">node45#session188</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session189" href="./../nodes/com.zrlog.web.token.AdminTokenService.getAdminTokenVO%28javax.servlet.http.HttpServletRequest%29%3Acom.zrl.7c49640eb1770347eecdd5298c9d064d_node45.html#session189">node45#session189</a>(<a href="./../../AdminTokenService.java.90f7391a6e0c4cdf3c327e80b063b25f.html#LINE81">81</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$64 -&gt; *,
+  $bcvar6 -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  cookie -&gt; { },
+  user -&gt; { },
+  base64Encode -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+
+
+
+INSTR=  n$73 := Object Gson.fromJson(String,Class)({ n$68,
+                                                     base64Encode,
+                                                     com.zrlog.common.vo.AdminTokenVO }) [line 81]; 
+
+STATE UNCHANGED
+
+
+INSTR=  NULLIFY(&amp;$irvar13); [line 81]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;base64Encode); [line 81]; 
+
+STATE UNCHANGED
+
+INSTR=  EXIT_SCOPE(base64Encode); [line 81]; 
+
+STATE:
+{ n$64 -&gt; *,
+  $bcvar6 -&gt; { },
+  token.AdminTokenService -&gt; (Footprint({ token.AdminTokenService }) ~&gt; ?, { secretKeySpec -&gt; (Footprint({ token.AdminTokenService.secretKeySpec* }) ~&gt; ?, *) }),
+  adminTokenEncryptAfter -&gt; { },
+  decTokenString -&gt; { },
+  cookie -&gt; { },
+  user -&gt; { },
+  base64Encode -&gt; { },
+  userId -&gt; { },
+  cookies -&gt; { } }
+
+</LISTING>

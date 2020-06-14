@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.util.ZrLogUtil.getConnection(java.lang.String,java.lang.String,java.lang.String,java.lang..c3b7df70f3bdbc38af015170c5d14304</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Procedure <a href="./../ZrLogUtil.java.337e30ea96785103e9ef6aacf5eebc60.html#LINE149">Connection ZrLogUtil.getConnection(String,String,String,String)</a></h1></center>
+<a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node1.html"><span class='visited with_tooltip'>S_1<span class='tooltip'>node1 preds: succs:4 exn:2 Start
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node2.html"><span class='visited with_tooltip'>E_2<span class='tooltip'>node2 preds:9 6 3 succs: exn: Exit
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node3.html"><span class='visited with_tooltip'>I_3<span class='tooltip'>node3 preds:11 succs:2 exn:2 Instructions
+NULLIFY(&amp;CatchVar12); [line 156];
+NULLIFY(&amp;e); [line 156];
+EXIT_SCOPE(n$13,CatchVar12,e); [line 156];
+APPLY_ABSTRACTION; [line 156];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node4.html"><span class='visited with_tooltip'>I_4<span class='tooltip'>node4 preds:1 succs:5 exn:14 Instructions
+n$0=*&amp;driverClass:java.lang.String* [line 151];
+n$1=_fun_Class Class.forName(String)(n$0:java.lang.String*) [line 151];
+*&amp;$irvar0:java.lang.Class*=n$1 [line 151];
+NULLIFY(&amp;driverClass); [line 151];
+NULLIFY(&amp;$irvar0); [line 151];
+EXIT_SCOPE(n$0,n$1,driverClass,$irvar0); [line 151];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node5.html"><span class='visited with_tooltip'>I_5<span class='tooltip'>node5 preds:4 succs:6 exn:14 Instructions
+n$2=*&amp;jdbcUrl:java.lang.String* [line 152];
+n$3=*&amp;user:java.lang.String* [line 152];
+n$4=*&amp;password:java.lang.String* [line 152];
+n$5=_fun_Connection DriverManager.getConnection(String,String,String)(n$2:java.lang.String*,n$3:java.lang.String*,n$4:java.lang.String*) [line 152];
+*&amp;$irvar1:java.sql.Connection*=n$5 [line 152];
+NULLIFY(&amp;jdbcUrl); [line 152];
+NULLIFY(&amp;password); [line 152];
+NULLIFY(&amp;user); [line 152];
+EXIT_SCOPE(n$2,n$3,n$4,n$5,jdbcUrl,password,user); [line 152];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node6.html"><span class='visited with_tooltip'>I_6<span class='tooltip'>node6 preds:5 succs:2 exn:3 Instructions
+n$6=*&amp;$irvar1:java.sql.Connection* [line 152];
+*&amp;return:java.sql.Connection*=n$6 [line 152];
+NULLIFY(&amp;$irvar1); [line 152];
+EXIT_SCOPE(n$6,$irvar1); [line 152];
+APPLY_ABSTRACTION; [line 152];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node7.html"><span class='visited with_tooltip'>I_7<span class='tooltip'>node7 preds:12 10 succs:8 exn:3 Instructions
+n$7=*&amp;CatchVar12:java.lang.Object* [line 153];
+*&amp;e:java.lang.Object*=n$7 [line 153];
+NULLIFY(&amp;CatchVar12); [line 153];
+EXIT_SCOPE(n$7,CatchVar12); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node8.html"><span class='visited with_tooltip'>I_8<span class='tooltip'>node8 preds:7 succs:9 exn:3 Instructions
+n$8=*&amp;#GB<>$com.zrlog.util.ZrLogUtil.LOGGER:org.slf4j.Logger*(root com.zrlog.util.ZrLogUtil) [line 154];
+_=*n$8:org.slf4j.Logger*(root org.slf4j.Logger) [line 154];
+n$10=*&amp;e:java.lang.Object* [line 154];
+n$11=_fun_void Logger.error(String,Throwable)(n$8:org.slf4j.Logger*,"":java.lang.Object*,n$10:java.lang.Object*) interface virtual [line 154];
+NULLIFY(&amp;e); [line 154];
+EXIT_SCOPE(_,n$8,n$10,n$11,e); [line 154];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node9.html"><span class='visited with_tooltip'>I_9<span class='tooltip'>node9 preds:8 succs:2 exn:3 Instructions
+*&amp;return:java.sql.Connection*=null [line 156];
+APPLY_ABSTRACTION; [line 156];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node10.html"><span class='visited with_tooltip'>C_10<span class='tooltip'>node10 preds:13 succs:7 exn:3 Conditional exception handler
+n$14=_fun___instanceof(n$13:java.sql.SQLException*,sizeof(t=java.sql.SQLException):void) [line 153];
+PRUNE(n$14, true); [line 153];
+*&amp;CatchVar12:java.sql.Connection*=n$13 [line 153];
+EXIT_SCOPE(n$13,n$14); [line 153];
+APPLY_ABSTRACTION; [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node11.html"><span class='visited with_tooltip'>C_11<span class='tooltip'>node11 preds:13 succs:3 exn:3 Conditional exception handler
+n$14=_fun___instanceof(n$13:java.sql.SQLException*,sizeof(t=java.sql.SQLException):void) [line 153];
+PRUNE(!n$14, false); [line 153];
+*&amp;return:java.sql.Connection*=EXN n$13 [line 153];
+EXIT_SCOPE(n$13,n$14); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node12.html"><span class='visited with_tooltip'>C_12<span class='tooltip'>node12 preds:14 succs:7 exn:3 Conditional exception handler
+n$15=_fun___instanceof(n$13:java.lang.ClassNotFoundException*,sizeof(t=java.lang.ClassNotFoundException):void) [line 153];
+PRUNE(n$15, true); [line 153];
+*&amp;CatchVar12:java.sql.Connection*=n$13 [line 153];
+EXIT_SCOPE(n$13,n$15); [line 153];
+APPLY_ABSTRACTION; [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node13.html"><span class='visited with_tooltip'>C_13<span class='tooltip'>node13 preds:14 succs:10 11 exn:3 Conditional exception handler
+n$15=_fun___instanceof(n$13:java.lang.ClassNotFoundException*,sizeof(t=java.lang.ClassNotFoundException):void) [line 153];
+PRUNE(!n$15, false); [line 153];
+EXIT_SCOPE(n$15); [line 153];
+</span></span></a> <a href="./nodes/com.zrlog.util.ZrLogUtil.getConnection%28java.lang.String%2Cjava.lang.String%2Cjava.lang.String%2Cjava.lang..c3b7df70f3bdbc38af015170c5d14304_node14.html"><span class='visited with_tooltip'>I_14<span class='tooltip'>node14 preds: succs:12 13 exn:3 Instructions
+n$12=*&amp;return:java.sql.Connection* [line 153];
+*&amp;return:java.sql.Connection*=null [line 153];
+n$13=_fun___unwrap_exception(n$12:java.sql.Connection*) [line 153];
+NULLIFY(&amp;$irvar1); [line 153];
+EXIT_SCOPE(n$12,$irvar1); [line 153];
+</span></span></a><br />@
+
+<span class='color_black'>java.sql.Connection* Connection ZrLogUtil.getConnection(String,String,String,String)(java.lang.String* jdbcUrl, java.lang.String* user, java.lang.String* password, java.lang.String* driverClass)
+Analyzed
+</span><br />FAILURE:NONE SYMOPS:0
+<br />
+
+<hr width="100%">
+ADVICE DURING FOOTPRINT
+
+<hr width="100%">
+ERROR DURING FOOTPRINT
+
+<hr width="100%">
+INFO DURING FOOTPRINT
+
+<hr width="100%">
+LIKE DURING FOOTPRINT
+
+<hr width="100%">
+WARNING DURING FOOTPRINT
+
+<hr width="100%">
+<LISTING>
+Quandary: { @val$3 -> (Footprint({ @val$3* }) ~> { ClassLoading(Class Class.forName(String) at line 151) }, *),
+            return -> (Footprint({ @val$2*, @val$1*, @val$0* }) ~> ?, *) }
+</LISTING>
+<hr />
+<pre>
+{ proc_name= Connection ZrLogUtil.getConnection(String,String,String,String)
+; translation_unit= common/src/main/java/com/zrlog/util/ZrLogUtil.java
+; access= Public
+; formals= [(jdbcUrl,java.lang.String*);  (user,java.lang.String*); 
+            (password,java.lang.String*);  (driverClass,java.lang.String*)]
+; is_defined= true
+; loc= common/src/main/java/com/zrlog/util/ZrLogUtil.java:149
+; locals= [{ name= CatchVar12; typ= void; modify_in_block= false }; 
+           { name= $irvar1; typ= void; modify_in_block= false }; 
+           { name= $irvar0; typ= void; modify_in_block= false }; 
+           { name= e; typ= java.lang.Exception*; modify_in_block= false }]
+; ret_type= java.sql.Connection* 
+; proc_id= com.zrlog.util.ZrLogUtil.getConnection(java.lang.String,java.lang.String,java.lang.String,java.lang.String):java.sql.Connection }</pre>
+</body>
+</html>

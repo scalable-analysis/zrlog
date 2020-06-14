@@ -1,0 +1,44 @@
+/* @generated */
+digraph cfg {
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_1" [label="1: Start AdminController.<init>()\nFormals:  this:com.zrlog.web.controller.admin.api.AdminController*\nLocals:  $irvar1:void $irvar0:void \n  " color=yellow style=filled]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_1" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_4" ;
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_2" [label="2: Exit AdminController.<init>() \n  " color=yellow style=filled]
+	
+
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" [label="3:  exceptions sink \n   NULLIFY(&$irvar0); [line 24]\n  NULLIFY(&$irvar1); [line 24]\n  EXIT_SCOPE($irvar0,$irvar1); [line 24]\n  APPLY_ABSTRACTION; [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_2" ;
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_4" [label="4:  Call BaseController.<init>() \n   n$0=*&this:com.zrlog.web.controller.admin.api.AdminController* [line 20]\n  n$1=_fun_BaseController.<init>()(n$0:com.zrlog.web.controller.admin.api.AdminController*) [line 20]\n  EXIT_SCOPE(n$0,n$1); [line 20]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_4" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_5" ;
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_4" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_5" [label="5:  Call UserService.<init>() \n   n$2=_fun___new(sizeof(t=com.zrlog.service.UserService):com.zrlog.service.UserService*) [line 22]\n  n$3=_fun_UserService.<init>()(n$2:com.zrlog.service.UserService*) [line 22]\n  *&$irvar0:com.zrlog.service.UserService*=n$2 [line 22]\n  EXIT_SCOPE(n$2,n$3); [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_5" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_6" ;
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_5" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_6" [label="6:  method_body \n   n$4=*&this:com.zrlog.web.controller.admin.api.AdminController* [line 22]\n  n$5=*&$irvar0:com.zrlog.service.UserService* [line 22]\n  *n$4.userService:com.zrlog.web.controller.admin.api.AdminController(root com.zrlog.web.controller.admin.api.AdminController)=n$5 [line 22]\n  NULLIFY(&$irvar0); [line 22]\n  EXIT_SCOPE(n$4,n$5,$irvar0); [line 22]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_6" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_7" ;
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_6" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_7" [label="7:  Call AdminTokenService.<init>() \n   n$6=_fun___new(sizeof(t=com.zrlog.web.token.AdminTokenService):com.zrlog.web.token.AdminTokenService*) [line 24]\n  n$7=_fun_AdminTokenService.<init>()(n$6:com.zrlog.web.token.AdminTokenService*) [line 24]\n  *&$irvar1:com.zrlog.web.token.AdminTokenService*=n$6 [line 24]\n  EXIT_SCOPE(n$6,n$7); [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_7" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_8" ;
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_7" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_8" [label="8:  method_body \n   n$8=*&this:com.zrlog.web.controller.admin.api.AdminController* [line 24]\n  n$9=*&$irvar1:com.zrlog.web.token.AdminTokenService* [line 24]\n  *n$8.adminTokenService:com.zrlog.web.controller.admin.api.AdminController(root com.zrlog.web.controller.admin.api.AdminController)=n$9 [line 24]\n  NULLIFY(&$irvar1); [line 24]\n  NULLIFY(&this); [line 24]\n  EXIT_SCOPE(n$8,n$9,$irvar1,this); [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_8" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_9" ;
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_8" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" [color="red" ];
+"com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_9" [label="9:  method_body \n   APPLY_ABSTRACTION; [line 24]\n " shape="box"]
+	
+
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_9" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_2" ;
+	 "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_9" -> "com.zrlog.web.controller.admin.api.AdminController.<init>().76fb7b8a67fea6424a06a6db674fa357_3" [color="red" ];
+}

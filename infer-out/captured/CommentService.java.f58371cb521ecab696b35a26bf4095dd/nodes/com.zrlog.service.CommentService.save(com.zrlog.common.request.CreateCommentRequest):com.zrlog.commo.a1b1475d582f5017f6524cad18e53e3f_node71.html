@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>com.zrlog.service.CommentService.save(com.zrlog.common.request.CreateCommentRequest):com.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+body { background-color:#fff; color:#000; font-family:Helvetica, sans-serif; font-size:10pt }
+h1 { font-size:14pt }
+.code { border-collapse:collapse; width:100%; font-family: "Andale Mono", monospace; font-size:10pt; line-height: 1.2em }
+.color_black { color: black }
+.color_blue { color: blue }
+.color_green { color: green }
+.color_orange { color: orange }
+.color_red { color: red }
+.line { border-left: 3px solid #ccc; padding-left: 1ex; white-space: pre; }
+.msg { background-color:#fff8b4; color:#000; float:left; font-family:Helvetica, sans-serif; font-size: smaller; font-weight: bold; margin-bottom:10px; margin-top:10px; max-width:60em; padding:0.5em 1ex 0.5em 1ex; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; white-space: pre-wrap; word-wrap: break-word; }
+.num { background-color:#eee; color:#444; font-size: smaller; padding-right:2ex; text-align:right; width:2.5em; }
+.dangling { background-color:white; color: gray; }
+.visited { background-color:LemonChiffon; color: darkmagenta; }
+.tooltip { display: none; background-color:#FFF0F0; border: 2px solid #F00; font-weight: normal; left:10em; padding: 2px; position: absolute; top: -1em; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px 7px #000; z-index: 1}
+.with_tooltip { position: relative; }
+.with_tooltip:hover .tooltip, .visited:hover .tooltip { display: block; }
+</style>
+</head>
+<body>
+<center><h1>Cfg Node <a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">71</a></h1></center>PROC: <a href="./../com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f.html">CreateCommentResponse CommentService.save(CreateCommentRequest)</a> LINE: <a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>
+<br>PREDS:
+<a href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node70.html"><span class='visited with_tooltip'>N_70<span class='tooltip'>node70 preds:69 succs:71 exn:3 </span></span></a><br>SUCCS:
+<a href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node72.html"><span class='visited with_tooltip'>N_72<span class='tooltip'>node72 preds:71 succs:79 exn:3 </span></span></a><br>EXN:
+<a href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node3.html"><span class='visited with_tooltip'>N_3<span class='tooltip'>node3 preds: succs:2 exn:2 </span></span></a><br>
+<LISTING class='color_green'>n$150=*&amp;$irvar38:com.jfinal.plugin.activerecord.Model* [line 65];
+n$151=_fun___cast(n$150:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Comment;sub_t=( sub )(cast)):void) [line 65];
+_=*n$151:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 65];
+n$153=*&amp;$irvar39:java.lang.Integer* [line 65];
+n$154=_fun_Model Model.set(String,Object)(n$151:com.zrlog.model.Comment*,"hide":java.lang.Object*,n$153:java.lang.Integer*) virtual [line 65];
+*&amp;$irvar40:com.jfinal.plugin.activerecord.Model*=n$154 [line 65];
+</LISTING>
+<hr width="100%">
+<a name="session42" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session42">node71#session42</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [compute pre] liveness 71
+<LISTING class='color_black'>JOIN
+
+LEFT:   { createCommentResponse, $irvar40, createCommentRequest }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session43" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session43">node71#session43</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [exec] liveness 71
+<LISTING class='color_black'>PRE STATE:
+{ createCommentResponse, $irvar40, createCommentRequest }
+
+INSTR=  *&amp;$irvar40:com.jfinal.plugin.activerecord.Model*=n$154 [line 65]; 
+
+STATE:
+{ n$154, createCommentResponse, createCommentRequest }
+
+INSTR=  n$154=_fun_Model Model.set(String,Object)(n$151:com.zrlog.model.Comment*,&quot;hide&quot;:java.lang.Object*,n$153:java.lang.Integer*) virtual [line 65]; 
+
+STATE:
+{ n$151, n$153, createCommentResponse, createCommentRequest }
+
+INSTR=  n$153=*&amp;$irvar39:java.lang.Integer* [line 65]; 
+
+STATE:
+{ n$151, createCommentResponse, $irvar39, createCommentRequest }
+
+INSTR=  _=*n$151:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 65]; 
+
+STATE UNCHANGED
+
+INSTR=  n$151=_fun___cast(n$150:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Comment;sub_t=( sub )(cast)):void) [line 65]; 
+
+STATE:
+{ n$150, createCommentResponse, $irvar39, createCommentRequest }
+
+INSTR=  n$150=*&amp;$irvar38:com.jfinal.plugin.activerecord.Model* [line 65]; 
+
+STATE:
+{ createCommentResponse, $irvar39, $irvar38, createCommentRequest }
+
+</LISTING>
+<hr width="100%">
+<a name="session307" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session307">node71#session307</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session308" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session308">node71#session308</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  n$150=*&amp;$irvar38:com.jfinal.plugin.activerecord.Model* [line 65]; 
+
+STATE:
+({ n$150, createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  n$151=_fun___cast(n$150:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Comment;sub_t=( sub )(cast)):void) [line 65]; 
+
+STATE:
+({ n$150, n$151, createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  _=*n$151:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 65]; 
+
+STATE:
+({ _, n$150, n$151, createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  n$153=*&amp;$irvar39:java.lang.Integer* [line 65]; 
+
+STATE:
+({ _, n$150, n$151, n$153, createCommentResponse, $irvar39, $irvar38 },
+{ n$149 })
+
+INSTR=  n$154=_fun_Model Model.set(String,Object)(n$151:com.zrlog.model.Comment*,&quot;hide&quot;:java.lang.Object*,n$153:java.lang.Integer*) virtual [line 65]; 
+
+STATE:
+({ _, n$150, n$151, n$153, n$154, createCommentResponse, $irvar39, $irvar38 },
+{ n$149 })
+
+INSTR=  *&amp;$irvar40:com.jfinal.plugin.activerecord.Model*=n$154 [line 65]; 
+
+STATE:
+({ createCommentResponse, $irvar40 },
+{ _, n$150, n$151, n$153, n$154, $irvar39, $irvar38 })
+
+</LISTING>
+<hr width="100%">
+<a name="session42" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session42">node71#session42</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [compute pre] liveness 71
+<LISTING class='color_black'>JOIN
+
+LEFT:   { createCommentResponse, $irvar40, createCommentRequest }
+RIGHT:  { }
+RESULT: = LEFT
+
+</LISTING>
+<hr width="100%">
+<a name="session43" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session43">node71#session43</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [exec] liveness 71
+<LISTING class='color_black'>PRE STATE:
+{ createCommentResponse, $irvar40, createCommentRequest }
+
+INSTR=  *&amp;$irvar40:com.jfinal.plugin.activerecord.Model*=n$154 [line 65]; 
+
+STATE:
+{ n$154, createCommentResponse, createCommentRequest }
+
+INSTR=  n$154=_fun_Model Model.set(String,Object)(n$151:com.zrlog.model.Comment*,&quot;hide&quot;:java.lang.Object*,n$153:java.lang.Integer*) virtual [line 65]; 
+
+STATE:
+{ n$151, n$153, createCommentResponse, createCommentRequest }
+
+INSTR=  n$153=*&amp;$irvar39:java.lang.Integer* [line 65]; 
+
+STATE:
+{ n$151, createCommentResponse, $irvar39, createCommentRequest }
+
+INSTR=  _=*n$151:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 65]; 
+
+STATE UNCHANGED
+
+INSTR=  n$151=_fun___cast(n$150:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Comment;sub_t=( sub )(cast)):void) [line 65]; 
+
+STATE:
+{ n$150, createCommentResponse, $irvar39, createCommentRequest }
+
+INSTR=  n$150=*&amp;$irvar38:com.jfinal.plugin.activerecord.Model* [line 65]; 
+
+STATE:
+{ createCommentResponse, $irvar39, $irvar38, createCommentRequest }
+
+</LISTING>
+<hr width="100%">
+<a name="session307" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session307">node71#session307</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [compute pre] nullify
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session308" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session308">node71#session308</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [exec] nullify
+<LISTING class='color_black'>PRE STATE:
+({ createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  n$150=*&amp;$irvar38:com.jfinal.plugin.activerecord.Model* [line 65]; 
+
+STATE:
+({ n$150, createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  n$151=_fun___cast(n$150:com.jfinal.plugin.activerecord.Model*,sizeof(t=com.zrlog.model.Comment;sub_t=( sub )(cast)):void) [line 65]; 
+
+STATE:
+({ n$150, n$151, createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  _=*n$151:com.zrlog.model.Comment*(root com.zrlog.model.Comment) [line 65]; 
+
+STATE:
+({ _, n$150, n$151, createCommentResponse, $irvar39, $irvar38 },{ n$149 })
+
+INSTR=  n$153=*&amp;$irvar39:java.lang.Integer* [line 65]; 
+
+STATE:
+({ _, n$150, n$151, n$153, createCommentResponse, $irvar39, $irvar38 },
+{ n$149 })
+
+INSTR=  n$154=_fun_Model Model.set(String,Object)(n$151:com.zrlog.model.Comment*,&quot;hide&quot;:java.lang.Object*,n$153:java.lang.Integer*) virtual [line 65]; 
+
+STATE:
+({ _, n$150, n$151, n$153, n$154, createCommentResponse, $irvar39, $irvar38 },
+{ n$149 })
+
+INSTR=  *&amp;$irvar40:com.jfinal.plugin.activerecord.Model*=n$154 [line 65]; 
+
+STATE:
+({ createCommentResponse, $irvar40 },
+{ _, n$150, n$151, n$153, n$154, $irvar39, $irvar38 })
+
+</LISTING>
+<hr width="100%">
+<a name="session136" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session136">node71#session136</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session137" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session137">node71#session137</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  n$28 -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  n$33 -&gt; { },
+  n$53 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$62 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$66 -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  n$69 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$75 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$79 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$85 -&gt; { },
+  n$87 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$92 -&gt; (Footprint({ @val$1.userHome, @val$1.mail }) ~&gt; ?, *),
+  n$97 -&gt; (Footprint({ @val$1.userHome, @val$1.mail, @val$1.ip }) ~&gt; ?, *),
+  n$100 -&gt; Footprint({ @val$1.ip }) ~&gt; ?,
+  n$105 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$110 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$113 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$118 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$123 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$126 -&gt; Footprint({ @val$1.userAgent }) ~&gt; ?,
+  n$131 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$134 -&gt; Footprint({ @val$1.replyId }) ~&gt; ?,
+  n$141 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$148 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  nickname -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  userHome -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  email -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+
+
+
+
+TAINTED_CALL1: (callee="Model Model.set(String,Object)", caller="CreateCommentResponse CommentService.save(CreateCommentRequest)")
+TAINTED_CALL1: (callee="Model Model.set(String,Object)", caller="CreateCommentResponse CommentService.save(CreateCommentRequest)")
+INSTR=  n$154 := Model Model.set(String,Object)({ n$148, &quot;hide&quot;, n$149 }) [line 65]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  n$28 -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  n$33 -&gt; { },
+  n$53 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$62 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$66 -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  n$69 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$75 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$79 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$85 -&gt; { },
+  n$87 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$92 -&gt; (Footprint({ @val$1.userHome, @val$1.mail }) ~&gt; ?, *),
+  n$97 -&gt; (Footprint({ @val$1.userHome, @val$1.mail, @val$1.ip }) ~&gt; ?, *),
+  n$100 -&gt; Footprint({ @val$1.ip }) ~&gt; ?,
+  n$105 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$110 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$113 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$118 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$123 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$126 -&gt; Footprint({ @val$1.userAgent }) ~&gt; ?,
+  n$131 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$134 -&gt; Footprint({ @val$1.replyId }) ~&gt; ?,
+  n$141 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$148 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$154 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  nickname -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  userHome -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  email -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+
+INSTR=  NULLIFY(&amp;$irvar39); [line 65]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar38); [line 65]; 
+
+STATE UNCHANGED
+
+
+</LISTING>
+<hr width="100%">
+<a name="session136" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session136">node71#session136</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [compute pre] quandary(java)
+<LISTING class='color_black'></LISTING>
+<hr width="100%">
+<a name="session137" href="./../nodes/com.zrlog.service.CommentService.save%28com.zrlog.common.request.CreateCommentRequest%29%3Acom.zrlog.commo.a1b1475d582f5017f6524cad18e53e3f_node71.html#session137">node71#session137</a>(<a href="./../../CommentService.java.f58371cb521ecab696b35a26bf4095dd.html#LINE65">65</a>) [exec] quandary(java)
+<LISTING class='color_black'>PRE STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  n$28 -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  n$33 -&gt; { },
+  n$53 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$62 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$66 -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  n$69 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$75 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$79 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$85 -&gt; { },
+  n$87 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$92 -&gt; (Footprint({ @val$1.userHome, @val$1.mail }) ~&gt; ?, *),
+  n$97 -&gt; (Footprint({ @val$1.userHome, @val$1.mail, @val$1.ip }) ~&gt; ?, *),
+  n$100 -&gt; Footprint({ @val$1.ip }) ~&gt; ?,
+  n$105 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$110 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$113 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$118 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$123 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$126 -&gt; Footprint({ @val$1.userAgent }) ~&gt; ?,
+  n$131 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$134 -&gt; Footprint({ @val$1.replyId }) ~&gt; ?,
+  n$141 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$148 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  nickname -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  userHome -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  email -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+
+
+
+
+TAINTED_CALL1: (callee="Model Model.set(String,Object)", caller="CreateCommentResponse CommentService.save(CreateCommentRequest)")
+TAINTED_CALL1: (callee="Model Model.set(String,Object)", caller="CreateCommentResponse CommentService.save(CreateCommentRequest)")
+INSTR=  n$154 := Model Model.set(String,Object)({ n$148, &quot;hide&quot;, n$149 }) [line 65]; 
+
+STATE:
+{ n$4 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$8 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$12 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$17 -&gt; { },
+  n$21 -&gt; Footprint({ @val$1.comment }) ~&gt; ?,
+  n$25 -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  n$28 -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  n$33 -&gt; { },
+  n$53 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$62 -&gt; Footprint({ @val$1.userName }) ~&gt; ?,
+  n$66 -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  n$69 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$75 -&gt; Footprint({ @val$1.userHome }) ~&gt; ?,
+  n$79 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$85 -&gt; { },
+  n$87 -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  n$92 -&gt; (Footprint({ @val$1.userHome, @val$1.mail }) ~&gt; ?, *),
+  n$97 -&gt; (Footprint({ @val$1.userHome, @val$1.mail, @val$1.ip }) ~&gt; ?, *),
+  n$100 -&gt; Footprint({ @val$1.ip }) ~&gt; ?,
+  n$105 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$110 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip }) ~&gt; ?, *),
+  n$113 -&gt; Footprint({ @val$1.logId }) ~&gt; ?,
+  n$118 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$123 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$126 -&gt; Footprint({ @val$1.userAgent }) ~&gt; ?,
+  n$131 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$134 -&gt; Footprint({ @val$1.replyId }) ~&gt; ?,
+  n$141 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$148 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  n$154 -&gt; (Footprint({ @val$1.userName,
+                        @val$1.userHome,
+                        @val$1.userAgent,
+                        @val$1.mail,
+                        @val$1.logId,
+                        @val$1.ip,
+                        @val$1.comment }) ~&gt; ?, *),
+  createCommentResponse -&gt; { },
+  comment -&gt; (Footprint({ @val$1.comment }) ~&gt; ?, *),
+  nickname -&gt; (Footprint({ @val$1.userName }) ~&gt; ?, *),
+  userHome -&gt; (Footprint({ @val$1.userHome }) ~&gt; ?, *),
+  email -&gt; Footprint({ @val$1.mail }) ~&gt; ?,
+  common.Constants -&gt; (Footprint({ common.Constants }) ~&gt; ?, { WEB_SITE -&gt; (Footprint({ common.Constants.WEB_SITE* }) ~&gt; ?, *) }) }
+
+
+INSTR=  NULLIFY(&amp;$irvar39); [line 65]; 
+
+STATE UNCHANGED
+
+INSTR=  NULLIFY(&amp;$irvar38); [line 65]; 
+
+STATE UNCHANGED
+
+
+</LISTING>
